@@ -2,7 +2,7 @@
  * File managing constant values for the application
  **/
 var fs = require('fs');
-var cfs = fs.readdirSync('./json');
+var cfs = fs.readdirSync(__dirname + '/json');
 var countries = require('world-countries');
 var constants = {};
 cfs.forEach(function(f)
