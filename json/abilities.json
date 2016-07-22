@@ -39,7 +39,7 @@
       "desc": "For each point of mana missing by the target unit, damage is dealt to it and surrounding enemies.  The main target is also mini-stunned.",
       "notes": "The stun passes through spell immunity.<br />Damage is calculated based on the primary target's mana, but applied to all enemies within the area of effect.",
       "dmg": "",
-      "attrib": "DAMAGE: <span class=\"attribVal\">0.6 / 0.85 / 1.1</span><br />\nSTUN DURATION: <span class=\"attribVal\">0.15</span><br />\nRADIUS: <span class=\"attribVal\">500</span>",
+      "attrib": "DAMAGE: <span class=\"attribVal\">0.6 / 0.85 / 1.1</span><br />\nSTUN DURATION: <span class=\"attribVal\">0.3</span><br />\nRADIUS: <span class=\"attribVal\">500</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 125/200/275</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 70</div><br clear=\"left\" /></div>",
       "lore": "After bringing enemies to their knees, Anti-Mage punishes them for their use of the arcane arts.",
       "hurl": "Anti-Mage"
@@ -106,7 +106,7 @@
       "notes": "",
       "dmg": "DAMAGE: <span class=\"attribVal\">90 / 160 / 230 / 300</span><br />",
       "attrib": "HEAL AMOUNT: <span class=\"attribVal\">90 / 160 / 230 / 300</span>",
-      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 70/100/130/160</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 14</div><br clear=\"left\" /></div>",
+      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 70/100/130/160</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 14/13/12/11</div><br clear=\"left\" /></div>",
       "lore": "Atropos finds no greater pleasure than to harvest the fear he creates.",
       "hurl": "Bane"
     },
@@ -161,7 +161,7 @@
       "notes": "Total time is a 2.6 second delay plus a 0.4 second cast time.",
       "dmg": "",
       "attrib": "RITUAL AREA: <span class=\"attribVal\">600</span><br />\nSILENCE DURATION: <span class=\"attribVal\">3 / 4 / 5 / 6</span><br />\nDAMAGE: <span class=\"attribVal\">120 / 160 / 200 / 240</span>",
-      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 100</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 30/25/20/15</div><br clear=\"left\" /></div>",
+      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 100</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 25/21/17/13</div><br clear=\"left\" /></div>",
       "lore": "The Flayed Twins are ever willing to aid those who spill blood upon the field of battle.",
       "hurl": "Bloodseeker"
     },
@@ -171,7 +171,7 @@
       "desc": "Bloodseeker is invigorated by the wounds of his enemies, gaining bonus movement speed and attack damage whenever an enemy hero's health falls below 75%, with the bonuses increasing as their health falls further. If an enemy hero's health falls below 25%, he will also gain vision and True Sight of that hero. Bonuses stack per hero.",
       "notes": "Not triggered by Illusions.<br />Max movement speed and attack damage bonuses occur when an enemy's health is at or below 25%.",
       "dmg": "",
-      "attrib": "THIRST HEALTH THRESHHOLD: <span class=\"attribVal\">75%</span><br />\nMAX THIRST MOVE SPEED: <span class=\"attribVal\">10% / 20% / 30% / 40%</span><br />\nMAX THIRST DAMAGE: <span class=\"attribVal\">10 / 20 / 30 / 40</span><br />\nVISIBILITY HEALTH THRESHHOLD: <span class=\"attribVal\">25%</span>",
+      "attrib": "THIRST HEALTH THRESHHOLD: <span class=\"attribVal\">75%</span><br />\nMAX THIRST MOVE SPEED: <span class=\"attribVal\">16% / 24% / 32% / 40%</span><br />\nMAX THIRST DAMAGE: <span class=\"attribVal\">16 / 24 / 32 / 40</span><br />\nVISIBILITY HEALTH THRESHHOLD: <span class=\"attribVal\">25%</span>",
       "cmb": "",
       "lore": "Strygwyr becomes frenzied when blood is spilled.",
       "hurl": "Bloodseeker"
@@ -182,7 +182,7 @@
       "desc": "Causes an enemy unit's skin to rupture. If the unit moves, it takes a percentage of the distance traveled as damage.  The damage is dealt through spell immunity.\r\n\r\nUpgradable by Aghanim's Scepter.",
       "notes": "",
       "dmg": "",
-      "attrib": "DURATION: <span class=\"attribVal\">12</span><br />\nMOVE DAMAGE: <span class=\"attribVal\">20% / 40% / 60%</span><br />\nCAST RANGE: <span class=\"attribVal\">1000</span><br />\nSCEPTER CHARGES: <span class=\"attribVal\">2</span><br />\nSCEPTER REPLENISH TIME: <span class=\"attribVal\">40</span>",
+      "attrib": "DURATION: <span class=\"attribVal\">12</span><br />\nMOVE DAMAGE: <span class=\"attribVal\">26% / 42% / 60%</span><br />\nCAST RANGE: <span class=\"attribVal\">1000</span><br />\n<span class=\"scepterVal\">SCEPTER CHARGES:</span> <span class=\"attribVal\">2</span><br />\n<span class=\"scepterVal\">SCEPTER REPLENISH TIME:</span> <span class=\"attribVal\">40</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 150/200/250</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 60</div><br clear=\"left\" /></div>",
       "lore": "When the Bloodseeker hunts you, injuries become fatalities.",
       "hurl": "Bloodseeker"
@@ -193,7 +193,7 @@
       "desc": "A burst of damaging frost slows enemy movement and attack rate in the targeted area.",
       "notes": "",
       "dmg": "DAMAGE: <span class=\"attribVal\">100 / 150 / 200 / 250</span><br />",
-      "attrib": "RADIUS: <span class=\"attribVal\">400</span><br />\nMOVEMENT SLOW: <span class=\"attribVal\">20% / 30% / 40% / 50%</span><br />\nATTACK SLOW: <span class=\"attribVal\">20 / 30 / 40 / 50</span><br />\nDURATION: <span class=\"attribVal\">4.5</span>",
+      "attrib": "RADIUS: <span class=\"attribVal\">425</span><br />\nMOVEMENT SLOW: <span class=\"attribVal\">20% / 30% / 40% / 50%</span><br />\nATTACK SLOW: <span class=\"attribVal\">20 / 30 / 40 / 50</span><br />\nDURATION: <span class=\"attribVal\">4.5</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 100/120/140/160</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 12/11/10/9</div><br clear=\"left\" /></div>",
       "lore": "The air temperature around Rylai drops rapidly, chilling all around her to the core.",
       "hurl": "Crystal_Maiden"
@@ -237,7 +237,7 @@
       "desc": "Adds a freezing effect to Drow's attacks, slowing enemy movement.  Lasts 1.5 seconds on Heroes, and 7 seconds on creeps.\r\n\r\nFrost Arrows is a Unique Attack Modifier, and does not stack with other Unique Attack Modifiers.",
       "notes": "The slow duration is refreshed on successive casts.",
       "dmg": "DAMAGE: <span class=\"attribVal\">0 / 0 / 0 / 0</span><br />",
-      "attrib": "MOVEMENT SLOW: <span class=\"attribVal\">15% / 30% / 45% / 60%</span><br />\nHERO DURATION: <span class=\"attribVal\">1.5</span><br />\nCREEP DURATION: <span class=\"attribVal\">7</span>",
+      "attrib": "MOVEMENT SLOW: <span class=\"attribVal\">16% / 32% / 48% / 64%</span><br />\nHERO DURATION: <span class=\"attribVal\">1.5</span><br />\nCREEP DURATION: <span class=\"attribVal\">7</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 12/12/12/12</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 0</div><br clear=\"left\" /></div>",
       "lore": "Ice-encased arrows pierce the silence, chilling their victims to the core.",
       "hurl": "Drow_Ranger"
@@ -289,10 +289,10 @@
     "earthshaker_enchant_totem": {
       "dname": "Enchant Totem",
       "affects": "ABILITY: <span class=\"attribVal\">No Target</span><br />AFFECTS: <span class=\"attribVal\">Enemy Units</span><br />",
-      "desc": "Empowers Earthshaker's totem, causing it to deal extra damage on the next attack.\r\n\r\nUpgradable by Aghanim's Scepter. Enchant Totem becomes a 900 range ground target ability, causes you to jump in the air and land at the target spot, casting Enchant Totem there.\r\nReduced cast point of Enchant Totem to 0.",
+      "desc": "Empowers Earthshaker's totem, causing it to deal extra damage on the next attack.\r\n\r\nUpgradable by Aghanim's Scepter.",
       "notes": "Bonus damage is based on base damage and that given by primary attribute.<br />Self-cast with Scepter will make it behave in the non-Scepter form, without jumping.",
       "dmg": "DAMAGE: <span class=\"attribVal\">0 / 0 / 0 / 0</span><br />",
-      "attrib": "BONUS: <span class=\"attribVal\">100% / 200% / 300% / 400%</span><br />\nDURATION: <span class=\"attribVal\">14 / 14 / 14 / 14</span><br />\nSCEPTER JUMP DISTANCE: <span class=\"attribVal\">900</span>",
+      "attrib": "BONUS: <span class=\"attribVal\">100% / 200% / 300% / 400%</span><br />\nDURATION: <span class=\"attribVal\">14 / 14 / 14 / 14</span><br />\n<span class=\"scepterVal\">SCEPTER JUMP DISTANCE:</span> <span class=\"attribVal\">900</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 20/30/40/50</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 5</div><br clear=\"left\" /></div>",
       "lore": "Raigor's gorilla strength can destroy mountains.",
       "hurl": "Earthshaker"
@@ -314,7 +314,7 @@
       "desc": "Shockwaves travel through the ground, damaging enemy units.  Each enemy hit causes an echo to damage nearby units.",
       "notes": "Will not damage ethereal units, such as those in Ghost Form.<br />Units creating echoes also take damage from the wave they produced.",
       "dmg": "DAMAGE: <span class=\"attribVal\">160 / 210 / 270</span><br />",
-      "attrib": "RADIUS: <span class=\"attribVal\">575</span><br />\nECHO DAMAGE: <span class=\"attribVal\">40 / 55 / 70</span>",
+      "attrib": "RADIUS: <span class=\"attribVal\">600</span><br />\nECHO DAMAGE: <span class=\"attribVal\">40 / 55 / 70</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 145/205/265</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 150/130/110</div><br clear=\"left\" /></div>",
       "lore": "Tectonic plates crack, mountains fold, and foes are crushed by the Echo Slam.",
       "hurl": "Earthshaker"
@@ -366,10 +366,10 @@
     "mirana_starfall": {
       "dname": "Starstorm",
       "affects": "ABILITY: <span class=\"attribVal\">No Target</span><br />DAMAGE TYPE: <span class=\"attribVal\">Magical</span><br />PIERCES SPELL IMMUNITY: <span class=\"attribVal\">No</span><br />",
-      "desc": "Calls down a wave of meteors to damage nearby enemy units. The closest enemy unit to Mirana in a 425 radius will be struck a second time for 75% of the damage.\r\n\r\nUpgradable by Aghanim's Scepter, causing Starstorm to passively trigger every 8 seconds. Does not trigger if the enemy doesn't see Mirana.",
+      "desc": "Calls down a wave of meteors to damage nearby enemy units. The closest enemy unit to Mirana in a 425 radius will be struck a second time for 75% of the damage.\r\n\r\nUpgradable by Aghanim's Scepter.",
       "notes": "Starstorm is not blocked by Linken's Sphere.<br />Starstorm cannot hit invisible units.<br />Starstorm will choose a new target for the second star if the first died before impact.",
       "dmg": "DAMAGE: <span class=\"attribVal\">75 / 150 / 225 / 300</span><br />",
-      "attrib": "RADIUS: <span class=\"attribVal\">650</span><br />\nSCEPTER INTERVAL: <span class=\"attribVal\">8</span>",
+      "attrib": "RADIUS: <span class=\"attribVal\">650</span><br />\n<span class=\"scepterVal\">SCEPTER INTERVAL:</span> <span class=\"attribVal\">8</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 100/120/140/160</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 12</div><br clear=\"left\" /></div>",
       "lore": "The Goddess breaks the strata to empower her Princess in the time of need.",
       "hurl": "Mirana"
@@ -421,10 +421,10 @@
     "nevermore_necromastery": {
       "dname": "Necromastery",
       "affects": "ABILITY: <span class=\"attribVal\">Passive</span><br />",
-      "desc": "Shadow Fiend steals the soul from units he kills, gaining bonus damage. If the killed unit is a hero, he gains 12 souls.  On death, he releases half of them from bondage.\r\n\r\nUpgradable by Aghanim's Scepter, increasing Necromastery Max Souls to 22.",
+      "desc": "Shadow Fiend steals the soul from units he kills, gaining bonus damage. If the killed unit is a hero, he gains 12 souls.  On death, he releases half of them from bondage.\r\n\r\nUpgradable by Aghanim's Scepter.",
       "notes": "Denies and neutral creeps also provide bonus damage through Necromastery.",
       "dmg": "",
-      "attrib": "DAMAGE PER SOUL: <span class=\"attribVal\">2</span><br />\nMAX SOULS: <span class=\"attribVal\">15 / 22 / 29 / 36</span><br />\n<span class=\"scepterVal\">SCEPTER MAX SOULS:</span> <span class=\"attribVal\">22 / 30 / 38 / 46</span>",
+      "attrib": "DAMAGE PER SOUL: <span class=\"attribVal\">2</span><br />\nMAX SOULS: <span class=\"attribVal\">18 / 24 / 30 / 36</span><br />\n<span class=\"scepterVal\">SCEPTER MAX SOULS:</span> <span class=\"attribVal\">22 / 30 / 38 / 46</span>",
       "cmb": "",
       "lore": "Harvested souls swirl in and out of the Abysm, empowering the Shadow Fiend to increase the size of his collection.",
       "hurl": "Shadow_Fiend"
@@ -446,7 +446,7 @@
       "desc": "Shadow Fiend gathers his captured souls to release them as lines of demonic energy. Units near Shadow Fiend when the souls are released can be damaged by several lines of energy. Any unit damaged by Requiem of Souls will have its movement speed and attack damage reduced. Lines of energy are created for every 2 souls captured through Necromastery. Requiem of Souls is automatically cast whenever Shadow Fiend dies, regardless of its cooldown.\r\n\r\nUpgradable by Aghanim's Scepter.",
       "notes": "One line is generated from Shadow Fiend for every 2 souls in his possession, for a maximum of 18 lines (23 lines with Scepter).<br />The movement and attack damage reductions from Requiem of Souls go through spell immunity.",
       "dmg": "DAMAGE: <span class=\"attribVal\">80 / 120 / 160</span><br />",
-      "attrib": "CAST DELAY: <span class=\"attribVal\">1.67</span><br />\nMOVEMENT REDUCTION: <span class=\"attribVal\">25%</span><br />\nDAMAGE REDUCTION: <span class=\"attribVal\">50%</span><br />\nREDUCTION DURATION: <span class=\"attribVal\">5.000000</span><br />\nSCEPTER DAMAGE ON RETURN: <span class=\"attribVal\">40%</span>",
+      "attrib": "CAST DELAY: <span class=\"attribVal\">1.67</span><br />\nMOVEMENT REDUCTION: <span class=\"attribVal\">25%</span><br />\nDAMAGE REDUCTION: <span class=\"attribVal\">50%</span><br />\nREDUCTION DURATION: <span class=\"attribVal\">5.000000</span><br />\n<span class=\"scepterVal\">SCEPTER HEAL ON RETURN:</span> <span class=\"attribVal\">100%</span><br />\n<span class=\"scepterVal\">SCEPTER DAMAGE ON RETURN:</span> <span class=\"attribVal\">40%</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 150/175/200</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 120/110/100</div><br clear=\"left\" /></div>",
       "lore": "The captured souls of those past slain are released to ravage their former allies.",
       "hurl": "Shadow_Fiend"
@@ -502,14 +502,14 @@
       "notes": "",
       "dmg": "",
       "attrib": "DURATION: <span class=\"attribVal\">20</span>",
-      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 200</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 70</div><br clear=\"left\" /></div>",
+      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 200</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 60</div><br clear=\"left\" /></div>",
       "lore": "",
       "hurl": "Morphling"
     },
     "morphling_replicate": {
       "dname": "Replicate",
       "affects": "ABILITY: <span class=\"attribVal\">Unit Target</span><br />PIERCES SPELL IMMUNITY: <span class=\"attribVal\"><font color=\"#70EA72\">Yes</font></span><br />",
-      "desc": "Morphling replicates any hero, friend or foe, dealing 80% of the original Hero's outgoing damage while taking 100% of any incoming damage.  At any time, Morphling can instantly take the position of the Replicate for 150 mana. If Morphling dies, the Replicate will expire.\r\n\r\nUpgradable by Aghanim's Scepter.",
+      "desc": "Morphling replicates any hero, friend or foe, dealing 80% of the original Hero's outgoing damage while taking 100% of any incoming damage.  At any time, Morphling can instantly take the position of the Replicate for 150 mana. If Morphling dies, the Replicate will expire.",
       "notes": "You can't target yourself with Replicate.",
       "dmg": "",
       "attrib": "DURATION: <span class=\"attribVal\">30 / 45 / 60</span><br />\nREPLICATE DAMAGE: <span class=\"attribVal\">80%</span><br />\nREPLICATE DAMAGE TAKEN: <span class=\"attribVal\">100% / 100% / 100%</span><br />\nCAST RANGE: <span class=\"attribVal\">700 / 1100 / 1500</span>",
@@ -630,7 +630,7 @@
     "pudge_meat_hook": {
       "dname": "Meat Hook",
       "affects": "ABILITY: <span class=\"attribVal\">Point Target</span><br />DAMAGE TYPE: <span class=\"attribVal\"><font color=\"#d61107\">Pure</font></span><br />PIERCES SPELL IMMUNITY: <span class=\"attribVal\"><font color=\"#70EA72\">Yes</font></span><br />",
-      "desc": "Launches a bloody hook toward a unit or location. The hook will snag the first unit it encounters, dragging the unit back to Pudge and dealing damage if it is an enemy.\r\n\r\nUpgradable by Aghanim's Scepter, reducing the cooldown and increasing the damage.",
+      "desc": "Launches a bloody hook toward a unit or location. The hook will snag the first unit it encounters, dragging the unit back to Pudge and dealing damage if it is an enemy.\r\n\r\nUpgradable by Aghanim's Scepter.",
       "notes": "Interrupts channeling spells of the primary target if it's an enemy.<br />Meat Hook hits invisible units.<br />Meat Hook can go through trees, cliffs, buildings, and mechanical units.<br />Meat Hook can drag friendly units, but they won't be damaged.",
       "dmg": "DAMAGE: <span class=\"attribVal\">90 / 180 / 270 / 360</span><br />",
       "attrib": "RANGE: <span class=\"attribVal\">1000 / 1100 / 1200 / 1300</span><br />\n<span class=\"scepterVal\">SCEPTER COOLDOWN:</span> <span class=\"attribVal\">4</span><br />\n<span class=\"scepterVal\">SCEPTER DAMAGE:</span> <span class=\"attribVal\">180 / 270 / 360 / 450</span>",
@@ -644,7 +644,7 @@
       "desc": "A toxic cloud that deals intense damage and slows movement--harming not only enemy units but Pudge himself.",
       "notes": "Using Rot doesn't interrupt channeling.<br />Rot hits invisible units.<br />If Pudge is silenced, he can't deactivate Rot if it's activated.<br />Pudge can deny himself with this ability.",
       "dmg": "DAMAGE: <span class=\"attribVal\">30 / 60 / 90 / 120</span><br />",
-      "attrib": "RADIUS: <span class=\"attribVal\">250</span><br />\nMOVE SLOW: <span class=\"attribVal\">27%</span>",
+      "attrib": "RADIUS: <span class=\"attribVal\">250</span><br />\nMOVE SLOW: <span class=\"attribVal\">30%</span>",
       "cmb": "",
       "lore": "A foul odor precedes a toxic, choking gas, emanating from the Butcher's putrid, ever-swelling mass.",
       "hurl": "Pudge"
@@ -666,8 +666,8 @@
       "desc": "CHANNELED - Pudge chows down on an enemy unit, disabling it and dealing damage over time. Pudge gets healed for the same amount he damages. Lasts 3 seconds on Heroes, 6 seconds on creeps.",
       "notes": "Dismember will disable Spell Immune units, but not damage them.<br />If a unit becomes invisible while Dismembered, it will still be under the effects of Dismember.",
       "dmg": "",
-      "attrib": "DAMAGE PER SECOND: <span class=\"attribVal\">60 / 90 / 120</span><br />\nSTRENGTH MULTIPLIER: <span class=\"attribVal\">0.3 / 0.4 / 0.5</span>",
-      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 100/130/170</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 30</div><br clear=\"left\" /></div>",
+      "attrib": "DAMAGE PER SECOND: <span class=\"attribVal\">60 / 90 / 120</span><br />\nSTRENGTH MULTIPLIER: <span class=\"attribVal\">0.3 / 0.45 / 0.6</span>",
+      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 100/130/170</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 30/25/20</div><br clear=\"left\" /></div>",
       "lore": "'When I'm through with these vermin, they'll be fit for a pie!'",
       "hurl": "Pudge"
     },
@@ -710,7 +710,7 @@
       "desc": "A powerful lightning storm strikes out at enemy units with the lowest health, dealing damage and reducing their armor.\r\n\r\nUpgradable by Aghanim's Scepter.",
       "notes": "Each blast targets the lowest health enemy unit within range.",
       "dmg": "",
-      "attrib": "RADIUS: <span class=\"attribVal\">500 / 500 / 500</span><br />\nDURATION: <span class=\"attribVal\">30</span><br />\nSTRIKE INTERVAL: <span class=\"attribVal\">0.7 / 0.6 / 0.5</span><br />\nARMOR REDUCTION: <span class=\"attribVal\">1 / 1 / 1</span><br />\nDAMAGE: <span class=\"attribVal\">37 / 50 / 63</span><br />\n<span class=\"scepterVal\">SCEPTER STRIKE INTERVAL:</span> <span class=\"attribVal\">0.6 / 0.5 / 0.4</span>",
+      "attrib": "RADIUS: <span class=\"attribVal\">500 / 500 / 500</span><br />\nDURATION: <span class=\"attribVal\">30</span><br />\nSTRIKE INTERVAL: <span class=\"attribVal\">0.7 / 0.6 / 0.5</span><br />\nARMOR REDUCTION: <span class=\"attribVal\">1 / 1 / 1</span><br />\nDAMAGE: <span class=\"attribVal\">40 / 55 / 70</span><br />\n<span class=\"scepterVal\">SCEPTER STRIKE INTERVAL:</span> <span class=\"attribVal\">0.6 / 0.5 / 0.4</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 100/150/200</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 80/70/60</div><br clear=\"left\" /></div>",
       "lore": "Ride the lightning.",
       "hurl": "Razor"
@@ -718,7 +718,7 @@
     "sandking_burrowstrike": {
       "dname": "Burrowstrike",
       "affects": "ABILITY: <span class=\"attribVal\">Unit Target, Point Target</span><br />AFFECTS: <span class=\"attribVal\">Enemy Units</span><br />DAMAGE TYPE: <span class=\"attribVal\">Magical</span><br />PIERCES SPELL IMMUNITY: <span class=\"attribVal\">No</span><br />",
-      "desc": "Sand King burrows into the ground and tunnels forward, damaging and stunning enemy units above him as he resurfaces.\r\n\r\nUpgradable by Aghanim's Scepter, increasing the range and applies Caustic Finale to every heroes hit by Burrowstrike.\r\n\r\nUpgradable by Aghanim's Scepter.",
+      "desc": "Sand King burrows into the ground and tunnels forward, damaging and stunning enemy units above him as he resurfaces.\r\n\r\nUpgradable by Aghanim's Scepter.",
       "notes": "",
       "dmg": "DAMAGE: <span class=\"attribVal\">100 / 160 / 220 / 280</span><br />",
       "attrib": "STUN DURATION: <span class=\"attribVal\">2.17</span><br />\nRANGE: <span class=\"attribVal\">350 / 450 / 550 / 650</span><br />\n<span class=\"scepterVal\">SCEPTER RANGE:</span> <span class=\"attribVal\">700 / 900 / 1100 / 1300</span>",
@@ -733,7 +733,7 @@
       "notes": "Sand Storm can be used to dodge projectiles.",
       "dmg": "DAMAGE: <span class=\"attribVal\">25 / 50 / 75 / 100</span><br />",
       "attrib": "INVISIBILITY DELAY: <span class=\"attribVal\">1.5</span><br />\nRADIUS: <span class=\"attribVal\">525</span><br />\nDURATION: <span class=\"attribVal\">50</span>",
-      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 60/50/40/30</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 40/30/20/10</div><br clear=\"left\" /></div>",
+      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 60/50/40/30</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 34/26/18/10</div><br clear=\"left\" /></div>",
       "lore": "Some say Crixalis is a mirage; his carapace appearing then vanishing between the whirling sands of the Scintillant Waste.",
       "hurl": "Sand_King"
     },
@@ -755,7 +755,7 @@
       "notes": "The pulses are centered on Sand King, not where he first casted the spell.<br />The pulses have gradually inreasing radius: 275 / 325 / 375 / 425 / 475 / 525 / 575 / 650 / 675 / 700.",
       "dmg": "",
       "attrib": "PULSES: <span class=\"attribVal\">6 / 8 / 10</span><br />\nDAMAGE PER PULSE: <span class=\"attribVal\">110 / 110 / 110</span><br />\nMOVEMENT SLOW: <span class=\"attribVal\">30% / 30% / 30%</span><br />\nATTACK SLOW: <span class=\"attribVal\">30</span><br />\nSLOW DURATION: <span class=\"attribVal\">3</span>",
-      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 175/250/325</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 140/120/100</div><br clear=\"left\" /></div>",
+      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 150/225/300</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 120/110/100</div><br clear=\"left\" /></div>",
       "lore": "Many an explorer was lost to the quicksands of the Scintillant Waste.",
       "hurl": "Sand_King"
     },
@@ -773,10 +773,10 @@
     "storm_spirit_electric_vortex": {
       "dname": "Electric Vortex",
       "affects": "ABILITY: <span class=\"attribVal\">Unit Target</span><br />AFFECTS: <span class=\"attribVal\">Enemy Units</span><br />PIERCES SPELL IMMUNITY: <span class=\"attribVal\">No</span><br />",
-      "desc": "A vortex that pulls an enemy unit to Storm Spirit's location, it also slows the Storm Spirit by 50% for 3 seconds.\r\n\r\nUpgradable by Aghanim's Scepter, causing Electric Vortex to be a 475 AoE ability.",
+      "desc": "A vortex that pulls an enemy unit to Storm Spirit's location, it also slows the Storm Spirit by 50% for 3 seconds.\r\n\r\nUpgradable by Aghanim's Scepter.",
       "notes": "",
       "dmg": "",
-      "attrib": "SELF SLOW: <span class=\"attribVal\">50%</span><br />\nSELF SLOW DURATION: <span class=\"attribVal\">3.000000</span><br />\nDURATION: <span class=\"attribVal\">1 / 1.5 / 2 / 2.5</span><br />\nSCEPTER RADIUS: <span class=\"attribVal\">475</span>",
+      "attrib": "SELF SLOW: <span class=\"attribVal\">50%</span><br />\nSELF SLOW DURATION: <span class=\"attribVal\">3.000000</span><br />\nDURATION: <span class=\"attribVal\">1 / 1.5 / 2 / 2.5</span><br />\n<span class=\"scepterVal\">SCEPTER RADIUS:</span> <span class=\"attribVal\">475</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 85</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 21/20/19/18</div><br clear=\"left\" /></div>",
       "lore": "Raijin's thunderous, boisterous energy often draws others into an electrifying situation.",
       "hurl": "Storm_Spirit"
@@ -786,8 +786,8 @@
       "affects": "ABILITY: <span class=\"attribVal\">Passive</span><br />DAMAGE TYPE: <span class=\"attribVal\">Magical</span><br />PIERCES SPELL IMMUNITY: <span class=\"attribVal\">No</span><br />",
       "desc": "Casting a spell creates an electrical charge, which is released in a burst on his next attack, dealing damage and slowing nearby enemies.",
       "notes": "Using items doesn't trigger Overload.",
-      "dmg": "DAMAGE: <span class=\"attribVal\">30 / 50 / 70 / 90</span><br />",
-      "attrib": "RADIUS: <span class=\"attribVal\">275</span><br />\nMOVEMENT SLOW: <span class=\"attribVal\">80%</span><br />\nATTACK SLOW: <span class=\"attribVal\">50</span><br />\nDURATION: <span class=\"attribVal\">0.6 / 0.6 / 0.6 / 0.6</span>",
+      "dmg": "DAMAGE: <span class=\"attribVal\">40 / 60 / 80 / 100</span><br />",
+      "attrib": "RADIUS: <span class=\"attribVal\">300</span><br />\nMOVEMENT SLOW: <span class=\"attribVal\">80%</span><br />\nATTACK SLOW: <span class=\"attribVal\">50</span><br />\nDURATION: <span class=\"attribVal\">0.6 / 0.6 / 0.6 / 0.6</span>",
       "cmb": "",
       "lore": "Pow!  Zip!  Zap!",
       "hurl": "Storm_Spirit"
@@ -842,7 +842,7 @@
       "desc": "Sven channels his rogue strength, granting bonus damage for 25 seconds.\r\n\r\nUpgradable by Aghanim's Scepter.",
       "notes": "The bonus damage is based on base damage and the primary attribute of Sven.",
       "dmg": "",
-      "attrib": "BONUS DAMAGE: <span class=\"attribVal\">100% / 150% / 200%</span><br />\nSCEPTER ALLY AURA RADIUS: <span class=\"attribVal\">900</span><br />\n<span class=\"scepterVal\">SCEPTER ALLY BONUS DAMAGE:</span> <span class=\"attribVal\">75% / 100% / 125%</span>",
+      "attrib": "BONUS DAMAGE: <span class=\"attribVal\">100% / 150% / 200%</span><br />\n<span class=\"scepterVal\">SCEPTER ALLY AURA RADIUS:</span> <span class=\"attribVal\">900</span><br />\n<span class=\"scepterVal\">SCEPTER ALLY BONUS DAMAGE:</span> <span class=\"attribVal\">75% / 100% / 125%</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 100/150/200</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 80</div><br clear=\"left\" /></div>",
       "lore": "With the strength that shattered the Sacred Helm, the Rogue Knight stands unopposed in melee combat.",
       "hurl": "Sven"
@@ -864,8 +864,8 @@
       "desc": "Grabs the nearest unit in a 275 radius around Tiny, ally or enemy, and launches it at the target unit or rune to deal damage where they land.  If the tossed unit is an enemy, it will take an extra 20% damage. Toss does more damage with each level in Grow.",
       "notes": "If a unit is hit by Avalanche then Tossed, it can be hit a second time by Avalanche if it lands in the area of effect before Avalanche ends.<br />You can toss allies, but they don't take damage.<br />Toss deals 33% of its damage to buildings.",
       "dmg": "",
-      "attrib": "RADIUS: <span class=\"attribVal\">275 / 275 / 275 / 275</span><br />\nRANGE: <span class=\"attribVal\">1300</span><br />\nDAMAGE: <span class=\"attribVal\">75 / 150 / 225 / 300</span>",
-      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 120/120/120/120</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 9</div><br clear=\"left\" /></div>",
+      "attrib": "RADIUS: <span class=\"attribVal\">275</span><br />\nRANGE: <span class=\"attribVal\">1300</span><br />\nDAMAGE: <span class=\"attribVal\">75 / 150 / 225 / 300</span>",
+      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 120/120/120/120</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 8</div><br clear=\"left\" /></div>",
       "lore": "Tiny's gargantuan stature allows him to catapult even the sturdiest of warriors.",
       "hurl": "Tiny"
     },
@@ -886,7 +886,7 @@
       "desc": "Tiny gains craggy mass that increases his power at the cost of his attack speed. Increases Tossed unit damage and improves movement speed.\r\n\r\nUpgradable by Aghanim's Scepter.",
       "notes": "Cleave damage is reduced by armor type but not by armor value.<br />Cleave damage goes through spell immunity.",
       "dmg": "",
-      "attrib": "BONUS DAMAGE: <span class=\"attribVal\">50 / 100 / 150</span><br />\nATTACK SPEED LOSS: <span class=\"attribVal\">20 / 35 / 50</span><br />\nADDED MOVE SPEED: <span class=\"attribVal\">40 / 50 / 60</span><br />\nTOSS BONUS: <span class=\"attribVal\">35% / 50% / 65%</span><br />\n<span class=\"scepterVal\">SCEPTER BONUS RANGE:</span> <span class=\"attribVal\">107</span><br />\n<span class=\"scepterVal\">SCEPTER CLEAVE DAMAGE:</span> <span class=\"attribVal\">50%</span><br />\n<span class=\"scepterVal\">SCEPTER BONUS BUILDING DAMAGE:</span> <span class=\"attribVal\">75%</span><br />\n<span class=\"scepterVal\">SCEPTER TOSS BONUS:</span> <span class=\"attribVal\">50% / 65% / 80%</span>",
+      "attrib": "BONUS DAMAGE: <span class=\"attribVal\">50 / 100 / 150</span><br />\nATTACK SPEED LOSS: <span class=\"attribVal\">20 / 35 / 50</span><br />\nADDED MOVE SPEED: <span class=\"attribVal\">40 / 50 / 60</span><br />\nTOSS BONUS: <span class=\"attribVal\">35% / 50% / 65%</span><br />\n<span class=\"scepterVal\">SCEPTER BONUS RANGE:</span> <span class=\"attribVal\">85</span><br />\n<span class=\"scepterVal\">SCEPTER CLEAVE DAMAGE:</span> <span class=\"attribVal\">50%</span><br />\n<span class=\"scepterVal\">SCEPTER BONUS BUILDING DAMAGE:</span> <span class=\"attribVal\">75%</span><br />\n<span class=\"scepterVal\">SCEPTER TOSS BONUS:</span> <span class=\"attribVal\">50% / 65% / 80%</span>",
       "cmb": "",
       "lore": "Watching a hill become a mountain is awe-inspiring - especially if the mountain begins laying waste to adversaries.",
       "hurl": "Tiny"
@@ -964,7 +964,7 @@
       "notes": "The slow will affect enemies with spell immunity.<br />Activating Windrun will evade incoming projectiles.",
       "dmg": "",
       "attrib": "MOVE SPEED BONUS: <span class=\"attribVal\">50% / 50% / 50% / 50%</span><br />\nEVASION: <span class=\"attribVal\">100%</span><br />\nENEMY SLOW: <span class=\"attribVal\">8% / 16% / 24% / 30%</span><br />\nENEMY SLOW RADIUS: <span class=\"attribVal\">300 / 300 / 300 / 300</span><br />\nDURATION: <span class=\"attribVal\">3 / 4 / 5 / 6</span>",
-      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 100/100/100/100</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 15</div><br clear=\"left\" /></div>",
+      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 100/100/100/100</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 14</div><br clear=\"left\" /></div>",
       "lore": "Lyralei enchants gusts of winds to fight incoming attacks.",
       "hurl": "Windranger"
     },
@@ -986,7 +986,7 @@
       "notes": "",
       "dmg": "DAMAGE: <span class=\"attribVal\">85 / 100 / 115 / 145</span><br />",
       "attrib": "JUMPS: <span class=\"attribVal\">5 / 7 / 9 / 15</span>",
-      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 65/70/75/80</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 1.75</div><br clear=\"left\" /></div>",
+      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 65/70/75/80</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 1.60</div><br clear=\"left\" /></div>",
       "lore": "Arc Lightning is Zeus' favorite spell to use against puny mortals.",
       "hurl": "Zeus"
     },
@@ -1029,7 +1029,7 @@
       "desc": "Summons a rising torrent that, after a short delay, hurls enemy units into the sky, stunning, dealing damage and slowing movement speed.",
       "notes": "The initial bubble effect is only visible to allies.<br />Units tossed in the air will be stunned and still able to be attacked.",
       "dmg": "DAMAGE: <span class=\"attribVal\">120 / 180 / 240 / 300</span><br />",
-      "attrib": "RADIUS: <span class=\"attribVal\">225</span><br />\nMOVE SLOW: <span class=\"attribVal\">35%</span><br />\nSLOW DURATION: <span class=\"attribVal\">1 / 2 / 3 / 4</span><br />\nSTUN DURATION: <span class=\"attribVal\">1.6</span><br />\nDELAY: <span class=\"attribVal\">1.6 / 1.6 / 1.6 / 1.6</span>",
+      "attrib": "RADIUS: <span class=\"attribVal\">225</span><br />\nMOVE SLOW: <span class=\"attribVal\">35%</span><br />\nSLOW DURATION: <span class=\"attribVal\">1.75 / 2.5 / 3.25 / 4</span><br />\nSTUN DURATION: <span class=\"attribVal\">1.6</span><br />\nDELAY: <span class=\"attribVal\">1.6 / 1.6 / 1.6 / 1.6</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 90/100/110/120</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 10</div><br clear=\"left\" /></div>",
       "lore": "An ancestral rush of water explodes from the center of the world, called upon by the Admiral.",
       "hurl": "Kunkka"
@@ -1040,7 +1040,7 @@
       "desc": "Kunkka's legendary sword grants increased damage and cleaves a large area of effect in front of him for a single strike.",
       "notes": "Cleave damage is reduced by armor type but not by armor value.<br />Cleave damage goes through spell immunity.",
       "dmg": "",
-      "attrib": "RADIUS: <span class=\"attribVal\">450 / 500 / 550 / 600</span><br />\nDAMAGE BONUS: <span class=\"attribVal\">25 / 40 / 55 / 70</span>",
+      "attrib": "RADIUS: <span class=\"attribVal\">450 / 500 / 550 / 600</span><br />\nDAMAGE BONUS: <span class=\"attribVal\">25 / 45 / 65 / 85</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 13/10/7/4</div><br clear=\"left\" /></div>",
       "lore": "A lost Claddish soul inhabits Kunkka's trusty Tidebringer, empowering it to destroy demons of the Cataract.",
       "hurl": "Kunkka"
@@ -1059,7 +1059,7 @@
     "kunkka_ghostship": {
       "dname": "Ghostship",
       "affects": "ABILITY: <span class=\"attribVal\">Point Target</span><br />DAMAGE TYPE: <span class=\"attribVal\">Magical</span><br />PIERCES SPELL IMMUNITY: <span class=\"attribVal\">No</span><br />",
-      "desc": "Summons a ghostly ship that sails through the battle before smashing apart, damaging and stunning all enemies caught near the wreckage. Allied heroes touched by the Ghostship are given a swig of The Admiral's Rum, receiving bonus movement speed and a delayed reaction to 50% of all incoming damage.",
+      "desc": "Summons a ghostly ship that sails through the battle before smashing apart, damaging and stunning all enemies caught near the wreckage. Allied heroes touched by the Ghostship are given a swig of The Admiral's Rum, receiving bonus movement speed and a delayed reaction to 50% of all incoming damage.\r\n\r\nUpgradeable by Aghanim's Scepter.",
       "notes": "Damage dealt after Rum wears off is non-lethal and can never kill a hero.<br />Actual area of effect of ship's collision is larger than the boat itself.<br />The boat has a movement speed of 650.",
       "dmg": "DAMAGE: <span class=\"attribVal\">400 / 500 / 600</span><br />",
       "attrib": "IMPACT DELAY: <span class=\"attribVal\">2.7</span><br />\nRANGE: <span class=\"attribVal\">1000 / 1000 / 1000</span><br />\nWIDTH: <span class=\"attribVal\">425 / 425 / 425</span><br />\nRUM BONUS SPEED: <span class=\"attribVal\">10% / 10% / 10%</span><br />\nRUM DURATION: <span class=\"attribVal\">10</span><br />\nSTUN DURATION: <span class=\"attribVal\">1.4 / 1.4 / 1.4</span>",
@@ -1085,7 +1085,7 @@
       "notes": "Dragon Slave can hit units up to 1225 units away.",
       "dmg": "DAMAGE: <span class=\"attribVal\">110 / 180 / 250 / 320</span><br />",
       "attrib": "",
-      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 100/115/130/145</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 8.50</div><br clear=\"left\" /></div>",
+      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 100/115/130/145</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 8</div><br clear=\"left\" /></div>",
       "lore": "In the scorched barren of Misrule, Lina learned to manipulate the fiery breath of the Desert Wyrm as a form of entertainment.",
       "hurl": "Lina"
     },
@@ -1139,7 +1139,7 @@
       "desc": "Creates a shield around the target friendly unit or building, which adds armor and slows attacking units. Lasts 40 seconds.",
       "notes": "If autocast is activated, Lich will cast this spell on nearby allies who are attacked.",
       "dmg": "",
-      "attrib": "ALLY ARMOR BONUS: <span class=\"attribVal\">3 / 5 / 7 / 9</span><br />\nENEMY MOVE SLOW: <span class=\"attribVal\">30% / 30% / 30% / 30%</span><br />\nENEMY ATTACK SLOW: <span class=\"attribVal\">20 / 20 / 20 / 20</span><br />\nSLOW DURATION: <span class=\"attribVal\">2 / 2 / 2 / 2</span>",
+      "attrib": "ALLY ARMOR BONUS: <span class=\"attribVal\">3 / 5 / 7 / 9</span><br />\nENEMY MOVE SLOW: <span class=\"attribVal\">30% / 30% / 30% / 30%</span><br />\nENEMY ATTACK SLOW: <span class=\"attribVal\">30</span><br />\nSLOW DURATION: <span class=\"attribVal\">2 / 2 / 2 / 2</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 50/50/50/50</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 5</div><br clear=\"left\" /></div>",
       "lore": "Originally crafted during his ambush for self-defense, the Lich is capable of enchanting others with a formidable defense of frost magic.",
       "hurl": "Lich"
@@ -1150,8 +1150,8 @@
       "desc": "Sacrifices a friendly creep and converts its current hit points into mana for Lich.",
       "notes": "",
       "dmg": "",
-      "attrib": "HEALTH CONVERSION: <span class=\"attribVal\">25% / 40% / 55% / 70%</span>",
-      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 25/25/25/25</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 44/36/28/20</div><br clear=\"left\" /></div>",
+      "attrib": "HEALTH CONVERSION: <span class=\"attribVal\">30% / 50% / 70% / 90%</span>",
+      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 25/25/25/25</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 60/50/40/30</div><br clear=\"left\" /></div>",
       "lore": "It was not unheard of Ethreain to make examples out of those who contested his rule during his human life.",
       "hurl": "Lich"
     },
@@ -1161,7 +1161,7 @@
       "desc": "Releases an orb of frost that bounces between nearby enemy units up to 10 times, slowing and damaging each time it hits.  The first target is mini-stunned.\r\n\r\nUpgradable by Aghanim's Scepter.",
       "notes": "The first target will be immediately interrupted.  This stun goes through spell immunity.<br />Chain Frost cannot be disjointed.<br />Chain Frost has a movement speed of 850.<br />Chain Frost doesn't bounce to Zombies.",
       "dmg": "",
-      "attrib": "DAMAGE EACH BOUNCE: <span class=\"attribVal\">280 / 370 / 460</span><br />\nBOUNCES: <span class=\"attribVal\">10 / 10 / 10</span><br />\nBOUNCE RANGE: <span class=\"attribVal\">575 / 575 / 575</span><br />\nMOVEMENT SLOW: <span class=\"attribVal\">30%</span><br />\nATTACK SLOW: <span class=\"attribVal\">30</span><br />\nSLOW DURATION: <span class=\"attribVal\">4 / 4 / 4</span><br />\n<span class=\"scepterVal\">SCEPTER DAMAGE:</span> <span class=\"attribVal\">370 / 460 / 550</span><br />\n<span class=\"scepterVal\">SCEPTER CAST RANGE:</span> <span class=\"attribVal\">850 / 850 / 850</span>",
+      "attrib": "DAMAGE EACH BOUNCE: <span class=\"attribVal\">280 / 370 / 460</span><br />\nBOUNCES: <span class=\"attribVal\">10 / 10 / 10</span><br />\nBOUNCE RANGE: <span class=\"attribVal\">575 / 575 / 575</span><br />\nMOVEMENT SLOW: <span class=\"attribVal\">30%</span><br />\nATTACK SLOW: <span class=\"attribVal\">30</span><br />\nSLOW DURATION: <span class=\"attribVal\">4 / 4 / 4</span><br />\n<span class=\"scepterVal\">SCEPTER DAMAGE:</span> <span class=\"attribVal\">370 / 460 / 550</span><br />\n<span class=\"scepterVal\">SCEPTER CAST RANGE:</span> <span class=\"attribVal\">850 / 850 / 850</span><br />\n<span class=\"scepterVal\">MOVEMENT SLOW:</span> <span class=\"attribVal\">50%</span><br />\n<span class=\"scepterVal\">ATTACK SLOW:</span> <span class=\"attribVal\">50</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 200/325/500</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 120/90/60</div><br clear=\"left\" /></div>",
       "lore": "Almost universally considered the ultimate in frost magic, Ethreain's orb of frozen death strikes fear into those who dare stand against him.",
       "hurl": "Lich"
@@ -1249,7 +1249,7 @@
       "desc": "Summons 10 serpent wards to attack enemy units and structures. The wards are immune to magic, and have a small area of splash damage. It takes two hits to destroy a single ward.\r\n\r\nUpgradable by Aghanim's Scepter.",
       "notes": "Serpent Wards deal piercing type splash damage.",
       "dmg": "",
-      "attrib": "SPLASH RADIUS: <span class=\"attribVal\">175</span><br />\nSPLASH DAMAGE: <span class=\"attribVal\">75%</span><br />\nATTACK DAMAGE: <span class=\"attribVal\">45 / 60 / 75</span><br />\nDURATION: <span class=\"attribVal\">45 / 45 / 45</span><br />\n<span class=\"scepterVal\">SCEPTER ATTACK DAMAGE:</span> <span class=\"attribVal\">90 / 110 / 130</span>",
+      "attrib": "SPLASH RADIUS: <span class=\"attribVal\">175</span><br />\nSPLASH DAMAGE: <span class=\"attribVal\">100%</span><br />\nATTACK DAMAGE: <span class=\"attribVal\">45 / 65 / 85</span><br />\nDURATION: <span class=\"attribVal\">45 / 45 / 45</span><br />\n<span class=\"scepterVal\">SCEPTER ATTACK DAMAGE:</span> <span class=\"attribVal\">90 / 110 / 130</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 200/350/600</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 120</div><br clear=\"left\" /></div>",
       "lore": "Snake charming was a big part of the Shadow Shaman's act; now Rhasta can empower the snakes to do his bidding.",
       "hurl": "Shadow_Shaman"
@@ -1301,7 +1301,7 @@
     "tidehunter_gush": {
       "dname": "Gush",
       "affects": "ABILITY: <span class=\"attribVal\">Unit Target</span><br />AFFECTS: <span class=\"attribVal\">Enemy Units</span><br />DAMAGE TYPE: <span class=\"attribVal\">Magical</span><br />PIERCES SPELL IMMUNITY: <span class=\"attribVal\">No</span><br />",
-      "desc": "Summons a gush of water to damage an enemy unit, reducing their movement speed and armor.  Lasts 4 seconds.\r\n\r\nUpgradable by Aghanim's Scepter, turning Gush into a ground targeted wave and decreasing cooldown.",
+      "desc": "Summons a gush of water to damage an enemy unit, reducing their movement speed and armor.  Lasts 4 seconds.\r\n\r\nUpgradable by Aghanim's Scepter.",
       "notes": "",
       "dmg": "DAMAGE: <span class=\"attribVal\">110 / 160 / 210 / 260</span><br />",
       "attrib": "SLOW: <span class=\"attribVal\">40% / 40% / 40% / 40%</span><br />\nARMOR REDUCTION: <span class=\"attribVal\">3 / 4 / 5 / 6</span><br />\n<span class=\"scepterVal\">SCEPTER RADIUS:</span> <span class=\"attribVal\">240</span><br />\n<span class=\"scepterVal\">SCEPTER COOLDOWN:</span> <span class=\"attribVal\">7</span><br />\n<span class=\"scepterVal\">SCEPTER RANGE:</span> <span class=\"attribVal\">1800</span>",
@@ -1334,7 +1334,7 @@
     "tidehunter_ravage": {
       "dname": "Ravage",
       "affects": "ABILITY: <span class=\"attribVal\">No Target</span><br />DAMAGE TYPE: <span class=\"attribVal\">Magical</span><br />PIERCES SPELL IMMUNITY: <span class=\"attribVal\">No</span><br />",
-      "desc": "Slams the ground, causing tentacles to erupt in all directions, damaging and stunning all nearby enemy units.\r\n\r\nUpgradable by Aghanim's Scepter.",
+      "desc": "Slams the ground, causing tentacles to erupt in all directions, damaging and stunning all nearby enemy units.",
       "notes": "Ravage will hit invisible units.<br />Ravage waves move outwards at a speed of 775.",
       "dmg": "DAMAGE: <span class=\"attribVal\">200 / 290 / 380</span><br />",
       "attrib": "RADIUS: <span class=\"attribVal\">1025</span><br />\nDURATION: <span class=\"attribVal\">2 / 2.4 / 2.8</span>",
@@ -1381,7 +1381,7 @@
       "desc": "CHANNELED - Summons a deadly ward to attack enemy heroes within 700 range. Lasts a maximum of 8 seconds.\r\n\r\nUpgradable by Aghanim's Scepter.",
       "notes": "The Death Ward is invulnerable, and is only destroyed if Witch Doctor is interrupted or its duration expires.<br />The Death Ward can be controlled, and made to attack a specific target.<br />Death Ward attacks once every 0.22 seconds.",
       "dmg": "",
-      "attrib": "DAMAGE: <span class=\"attribVal\">60 / 105 / 150</span><br />\nSCEPTER BOUNCES: <span class=\"attribVal\">4 / 4 / 4</span>",
+      "attrib": "DAMAGE: <span class=\"attribVal\">60 / 105 / 150</span><br />\n<span class=\"scepterVal\">SCEPTER BOUNCES:</span> <span class=\"attribVal\">4 / 4 / 4</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 200/200/200</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 80</div><br clear=\"left\" /></div>",
       "lore": "Witch Doctor performs a ritualistic dance, one that haunts the dreams of those who live to recount it.",
       "hurl": "Witch_Doctor"
@@ -1393,7 +1393,7 @@
       "notes": "Doesn't prevent the use of active items.",
       "dmg": "",
       "attrib": "RADIUS: <span class=\"attribVal\">250 / 275 / 300 / 325</span><br />\nMISS RATE: <span class=\"attribVal\">40% / 50% / 60% / 70%</span><br />\nMOVEMENT SLOW: <span class=\"attribVal\">25%</span><br />\nDURATION: <span class=\"attribVal\">6</span>",
-      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 75/80/85/90</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 11</div><br clear=\"left\" /></div>",
+      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 90</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 11</div><br clear=\"left\" /></div>",
       "lore": "Since his escape during the night of his betrayal, Riki has valued the use of a simple smoke screen to confuse his opponents.",
       "hurl": "Riki"
     },
@@ -1403,7 +1403,7 @@
       "desc": "Teleports behind the target unit, striking for bonus damage if it is an enemy.",
       "notes": "Riki's first attack after Blink Strike will be a backstab.<br />Blink Strike's damage is dealt before the next attack.<br />You can Blink Strike to allies, but no damage is dealt.",
       "dmg": "",
-      "attrib": "RANGE: <span class=\"attribVal\">700</span><br />\nBONUS DAMAGE: <span class=\"attribVal\">60 / 80 / 100 / 120</span>",
+      "attrib": "RANGE: <span class=\"attribVal\">700</span><br />\nBONUS DAMAGE: <span class=\"attribVal\">55 / 70 / 85 / 100</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 50</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 16/12/8/4</div><br clear=\"left\" /></div>",
       "lore": "The Stealth Assassin's agile movement makes him impossible to escape.",
       "hurl": "Riki"
@@ -1465,11 +1465,11 @@
     },
     "enigma_black_hole": {
       "dname": "Black Hole",
-      "affects": "ABILITY: <span class=\"attribVal\">Channeled, Point Target</span><br />DAMAGE TYPE: <span class=\"attribVal\">Magical</span><br />PIERCES SPELL IMMUNITY: <span class=\"attribVal\"><font color=\"#70EA72\">Yes</font></span><br />",
+      "affects": "ABILITY: <span class=\"attribVal\">Channeled, Point Target</span><br />DAMAGE TYPE: <span class=\"attribVal\"><font color=\"#d61107\">Pure</font></span><br />PIERCES SPELL IMMUNITY: <span class=\"attribVal\"><font color=\"#70EA72\">Yes</font></span><br />",
       "desc": "CHANNELED - Summons a vortex that sucks in nearby enemy units.  Enemies affected by Black Hole cannot move, attack, or cast spells.\r\n\r\nUpgradable by Aghanim's Scepter.",
       "notes": "Disables enemies through spell immunity.",
       "dmg": "",
-      "attrib": "DAMAGE PER SECOND: <span class=\"attribVal\">55 / 110 / 165</span><br />\nRADIUS: <span class=\"attribVal\">420</span><br />\nDURATION: <span class=\"attribVal\">4 / 4 / 4</span>",
+      "attrib": "DAMAGE PER SECOND: <span class=\"attribVal\">50 / 100 / 150</span><br />\nRADIUS: <span class=\"attribVal\">420</span><br />\nDURATION: <span class=\"attribVal\">4 / 4 / 4</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 275/325/375</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 200/180/160</div><br clear=\"left\" /></div>",
       "lore": "The ground trembles as Enigma channels his ultimate vortex of destruction, a singularity with the power to end worlds.",
       "hurl": "Enigma"
@@ -1477,10 +1477,10 @@
     "tinker_laser": {
       "dname": "Laser",
       "affects": "ABILITY: <span class=\"attribVal\">Unit Target</span><br />AFFECTS: <span class=\"attribVal\">Enemy Units</span><br />DAMAGE TYPE: <span class=\"attribVal\"><font color=\"#d61107\">Pure</font></span><br />PIERCES SPELL IMMUNITY: <span class=\"attribVal\">No</span><br />",
-      "desc": "Fires an intense energy beam, dealing damage and blinding the target, causing it to miss all physical attacks. \r\n\r\nUpgradable by Aghanim's Scepter, causing the laser to refract between all visible enemy heroes in a 650 range.",
+      "desc": "Fires an intense energy beam, dealing damage and blinding the target, causing it to miss all physical attacks. \r\n\r\nUpgradable by Aghanim's Scepter.",
       "notes": "",
       "dmg": "DAMAGE: <span class=\"attribVal\">80 / 160 / 240 / 320</span><br />",
-      "attrib": "BLIND MISS RATE: <span class=\"attribVal\">100% / 100% / 100% / 100%</span><br />\nHERO BLIND DURATION: <span class=\"attribVal\">3 / 3.5 / 4 / 4.5</span><br />\nCREEP BLIND DURATION: <span class=\"attribVal\">6 / 6 / 6 / 6</span><br />\nCAST RANGE: <span class=\"attribVal\">650</span>",
+      "attrib": "BLIND MISS RATE: <span class=\"attribVal\">100% / 100% / 100% / 100%</span><br />\nHERO BLIND DURATION: <span class=\"attribVal\">3 / 3.5 / 4 / 4.5</span><br />\nCREEP BLIND DURATION: <span class=\"attribVal\">6 / 6 / 6 / 6</span><br />\nCAST RANGE: <span class=\"attribVal\">650</span><br />\n<span class=\"scepterVal\">SCEPTER REFRACT RADIUS:</span> <span class=\"attribVal\">650</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 95/120/145/170</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 14</div><br clear=\"left\" /></div>",
       "lore": "Boush perfected this rock cutting laser in his subterranean laboratory, never considering its combat utility.",
       "hurl": "Tinker"
@@ -1488,10 +1488,10 @@
     "tinker_heat_seeking_missile": {
       "dname": "Heat-Seeking Missile",
       "affects": "ABILITY: <span class=\"attribVal\">No Target</span><br />DAMAGE TYPE: <span class=\"attribVal\">Magical</span><br />PIERCES SPELL IMMUNITY: <span class=\"attribVal\">No</span><br />",
-      "desc": "Launches a pair of rockets at the nearest visible enemy heroes within 2500 range. The number of missile targets is doubled with Aghanim's Scepter.",
+      "desc": "Launches a pair of rockets at the nearest visible enemy heroes within 2500 range. \r\n\r\nUpgradable by Aghanim's Scepter.",
       "notes": "",
       "dmg": "DAMAGE: <span class=\"attribVal\">125 / 200 / 275 / 350</span><br />",
-      "attrib": "TARGETS: <span class=\"attribVal\">2 / 2 / 2 / 2</span>",
+      "attrib": "TARGETS: <span class=\"attribVal\">2 / 2 / 2 / 2</span><br />\n<span class=\"scepterVal\">SCEPTER TARGETS:</span> <span class=\"attribVal\">4 / 4 / 4 / 4</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 120/140/160/180</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 25</div><br clear=\"left\" /></div>",
       "lore": "The last contraption Boush was able to save was a retrofitted rocket launcher with a homing mechanism.",
       "hurl": "Tinker"
@@ -1523,7 +1523,7 @@
       "affects": "ABILITY: <span class=\"attribVal\">Point Target</span><br />DAMAGE TYPE: <span class=\"attribVal\">Magical</span><br />PIERCES SPELL IMMUNITY: <span class=\"attribVal\">No</span><br />",
       "desc": "Consumes a charge to launch a ball of shrapnel that showers the target area in explosive pellets. Enemies are subject to damage and slowed movement. Reveals the targeted area. Shrapnel charges restore every 55 seconds.",
       "notes": "Damage is dealt 11 times, immediately at spell effect then every second.<br />Does not damage buildings.<br />Provides vision in the targeted area.",
-      "dmg": "DAMAGE: <span class=\"attribVal\">15 / 30 / 45 / 60</span><br />",
+      "dmg": "DAMAGE: <span class=\"attribVal\">15 / 35 / 55 / 75</span><br />",
       "attrib": "MOVEMENT SLOW: <span class=\"attribVal\">15% / 20% / 25% / 30%</span><br />\nRADIUS: <span class=\"attribVal\">450</span><br />\nDURATION: <span class=\"attribVal\">10</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 50</div><br clear=\"left\" /></div>",
       "lore": "Kardel's modular rifle also fires incendiary rounds, useful for assaulting entrenched locations.",
@@ -1579,7 +1579,7 @@
       "desc": "Necrophos stills the hearts of his opponents, causing nearby enemy units to lose a percentage of their max health over time.",
       "notes": "Damage won't disable items like Blink Dagger.<br />Does not affect ancient creeps.",
       "dmg": "",
-      "attrib": "RADIUS: <span class=\"attribVal\">1200</span><br />\nHEALTH DECAY: <span class=\"attribVal\">0.6% / 0.9% / 1.2% / 1.5%</span>",
+      "attrib": "RADIUS: <span class=\"attribVal\">900</span><br />\nHEALTH DECAY: <span class=\"attribVal\">0.6% / 1% / 1.4% / 1.8%</span>",
       "cmb": "",
       "lore": "Those who come within a short distance of Necrophos can feel pestilence and plague in the air.",
       "hurl": "Necrophos"
@@ -1668,18 +1668,7 @@
       "notes": "",
       "dmg": "",
       "attrib": "HAWK HEALTH: <span class=\"attribVal\">40 / 60 / 80 / 100</span><br />\nHAWK MOVEMENT SPEED: <span class=\"attribVal\">250 / 275 / 300 / 325</span><br />\nHAWK DAY SIGHT RANGE: <span class=\"attribVal\">500 / 750 / 1000 / 1250</span><br />\nHAWK NIGHT SIGHT RANGE: <span class=\"attribVal\">500 / 650 / 800 / 950</span><br />\nHAWK DURATION: <span class=\"attribVal\">60 / 60 / 60 / 60</span>",
-      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 15</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 42/38/34/30</div><br clear=\"left\" /></div>",
-      "lore": "After befriending the strange beast of his childhood, Beastmaster has learned to call to animals in times of need.",
-      "hurl": "Beastmaster"
-    },
-    "beastmaster_call_of_the_wild_boar": {
-      "dname": "Call of the Wild: Boar",
-      "affects": "ABILITY: <span class=\"attribVal\">No Target</span><br />",
-      "desc": "Beastmaster calls a powerful Boar to stalk the battlefield, capable of spitting poison at enemies to slow their movement and attack speed.",
-      "notes": "",
-      "dmg": "",
-      "attrib": "BOAR HEALTH: <span class=\"attribVal\">200 / 300 / 400 / 500</span><br />\nBOAR ATTACK DAMAGE: <span class=\"attribVal\">15 / 30 / 45 / 60</span><br />\nBOAR MOVEMENT SLOW: <span class=\"attribVal\">10% / 20% / 30% / 40%</span><br />\nBOAR ATTACK SLOW: <span class=\"attribVal\">10 / 20 / 30 / 40</span><br />\nBOAR POISON DURATION: <span class=\"attribVal\">3</span><br />\nBOAR DURATION: <span class=\"attribVal\">60 / 60 / 60 / 60</span>",
-      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 15</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 42/38/34/30</div><br clear=\"left\" /></div>",
+      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 25</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 42/38/34/30</div><br clear=\"left\" /></div>",
       "lore": "After befriending the strange beast of his childhood, Beastmaster has learned to call to animals in times of need.",
       "hurl": "Beastmaster"
     },
@@ -1700,7 +1689,7 @@
       "desc": "Beastmaster lets loose a deafening roar that stuns, and shoves open, a path to its target. All units in the path of the roar are damaged, while units shoved aside by the roar have their movement and attack speed slowed.\r\n\r\nUpgradable by Aghanim's Scepter.",
       "notes": "The stun will hit Spell Immune units. The damage will not.",
       "dmg": "",
-      "attrib": "STUN DURATION: <span class=\"attribVal\">3 / 3.5 / 4</span><br />\nDAMAGE: <span class=\"attribVal\">200 / 250 / 300</span><br />\nSHOUT WIDTH: <span class=\"attribVal\">300</span><br />\nMOVEMENT SLOW: <span class=\"attribVal\">50% / 50% / 50%</span><br />\nATTACK SLOW: <span class=\"attribVal\">50 / 50 / 50</span><br />\nSLOW DURATION: <span class=\"attribVal\">2 / 3 / 4</span><br />\n<span class=\"scepterVal\">SCEPTER CAST RANGE:</span> <span class=\"attribVal\">950 / 950 / 950</span><br />\n<span class=\"scepterVal\">SCEPTER COOLDOWN:</span> <span class=\"attribVal\">45 / 45 / 45</span>",
+      "attrib": "STUN DURATION: <span class=\"attribVal\">3 / 3.5 / 4</span><br />\nDAMAGE: <span class=\"attribVal\">150 / 225 / 300</span><br />\nSHOUT WIDTH: <span class=\"attribVal\">300</span><br />\nMOVEMENT SLOW: <span class=\"attribVal\">50% / 50% / 50%</span><br />\nATTACK SLOW: <span class=\"attribVal\">50 / 50 / 50</span><br />\nSLOW DURATION: <span class=\"attribVal\">2 / 3 / 4</span><br />\n<span class=\"scepterVal\">SCEPTER CAST RANGE:</span> <span class=\"attribVal\">950 / 950 / 950</span><br />\n<span class=\"scepterVal\">SCEPTER COOLDOWN:</span> <span class=\"attribVal\">45 / 45 / 45</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 150/175/200</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 80/75/70</div><br clear=\"left\" /></div>",
       "lore": "The Beastmaster has learned to channel his primal instincts into an animalistic roar, causing devastation in the ranks of enemies.",
       "hurl": "Beastmaster"
@@ -1777,7 +1766,7 @@
       "desc": "Summons a plague ward to attack enemy units and structures. The ward is immune to magic. Wards gain the Poison Sting level from Venomancer, dealing 50% of the full damage.",
       "notes": "",
       "dmg": "",
-      "attrib": "DURATION: <span class=\"attribVal\">40</span><br />\nWARD HP: <span class=\"attribVal\">75 / 200 / 325 / 450</span><br />\nWARD DAMAGE: <span class=\"attribVal\">10 / 19 / 29 / 38</span>",
+      "attrib": "DURATION: <span class=\"attribVal\">40</span><br />\nWARD HP: <span class=\"attribVal\">75 / 200 / 325 / 450</span><br />\nWARD DAMAGE: <span class=\"attribVal\">13 / 22 / 31 / 40</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 20/20/20/20</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 5</div><br clear=\"left\" /></div>",
       "lore": "A mixture of his old herbalist talents and newfound toxic mastery creates a living embodiment of plague.",
       "hurl": "Venomancer"
@@ -1811,7 +1800,7 @@
       "notes": "",
       "dmg": "",
       "attrib": "RADIUS: <span class=\"attribVal\">725</span><br />\nDURATION: <span class=\"attribVal\">6 / 8 / 10 / 12</span><br />\nSLOW PER COOLDOWN: <span class=\"attribVal\">8%</span>",
-      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 50</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 40/34/28/22</div><br clear=\"left\" /></div>",
+      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 75</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 40/34/28/22</div><br clear=\"left\" /></div>",
       "lore": "",
       "hurl": "Faceless_Void"
     },
@@ -1843,7 +1832,7 @@
       "desc": "Wraith King sears an enemy unit with spectral fire, dealing damage and stunning, then dealing damage over time and slowing the target.",
       "notes": "Deals 80 / 160 / 230 / 300 total damage.",
       "dmg": "DAMAGE: <span class=\"attribVal\">50 / 100 / 150 / 200</span><br />",
-      "attrib": "STUN DURATION: <span class=\"attribVal\">2</span><br />\nSLOW DURATION: <span class=\"attribVal\">2</span><br />\nMOVEMENT SLOW: <span class=\"attribVal\">20%</span><br />\nDAMAGE PER SECOND: <span class=\"attribVal\">15 / 30 / 40 / 50</span>",
+      "attrib": "STUN DURATION: <span class=\"attribVal\">2</span><br />\nSLOW DURATION: <span class=\"attribVal\">2</span><br />\nMOVEMENT SLOW: <span class=\"attribVal\">20%</span><br />\nDAMAGE PER SECOND: <span class=\"attribVal\">20 / 35 / 50 / 65</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 140</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 8</div><br clear=\"left\" /></div>",
       "lore": "Ostarion calls on his damned lineage, laying waste to his opponents.",
       "hurl": "Wraith_King"
@@ -1906,10 +1895,10 @@
     "death_prophet_spirit_siphon": {
       "dname": "Spirit Siphon",
       "affects": "ABILITY: <span class=\"attribVal\">Unit Target</span><br />AFFECTS: <span class=\"attribVal\">Enemy Units</span><br />DAMAGE TYPE: <span class=\"attribVal\">Magical</span><br />PIERCES SPELL IMMUNITY: <span class=\"attribVal\">No</span><br />",
-      "desc": "Creates a spirit link between Death Prophet and an enemy unit, draining 25 + 1% Max HP per second and slowing the enemy's movement speed by 5%.",
+      "desc": "Creates a spirit link between Death Prophet and an enemy unit, draining 14 + 1% Max HP per second and slowing the enemy's movement speed by 5%.",
       "notes": "Cannot cast multiple on same target.",
       "dmg": "",
-      "attrib": "BASE DAMAGE: <span class=\"attribVal\">25</span><br />\nMAX HP AS DAMAGE: <span class=\"attribVal\">1% / 2.5% / 4% / 5.5%</span><br />\nDURATION: <span class=\"attribVal\">6</span><br />\nENEMY SLOW: <span class=\"attribVal\">5% / 10% / 15% / 20%</span><br />\nMAX CHARGES: <span class=\"attribVal\">1 / 2 / 3 / 4</span><br />\nCHARGE RESTORE TIME: <span class=\"attribVal\">45</span>",
+      "attrib": "BASE DAMAGE: <span class=\"attribVal\">14</span><br />\nMAX HP AS DAMAGE: <span class=\"attribVal\">1% / 2.5% / 4% / 5.5%</span><br />\nDURATION: <span class=\"attribVal\">6</span><br />\nENEMY SLOW: <span class=\"attribVal\">5% / 10% / 15% / 20%</span><br />\nMAX CHARGES: <span class=\"attribVal\">1 / 2 / 3 / 4</span><br />\nCHARGE RESTORE TIME: <span class=\"attribVal\">45</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 70/65/60/55</div><br clear=\"left\" /></div>",
       "lore": "",
       "hurl": "Death_Prophet"
@@ -1928,17 +1917,17 @@
     "phantom_assassin_stifling_dagger": {
       "dname": "Stifling Dagger",
       "affects": "ABILITY: <span class=\"attribVal\">Unit Target</span><br />AFFECTS: <span class=\"attribVal\">Enemy Units</span><br />DAMAGE TYPE: <span class=\"attribVal\"><font color=\"#71a9ea\">Physical</font></span><br />PIERCES SPELL IMMUNITY: <span class=\"attribVal\">No</span><br />",
-      "desc": "Throws a dagger slowing the enemy unit's movement speed, dealing 60+25% of Phantom Assassin's attack damage as physical damage and applying attack effects from items and abilities.",
+      "desc": "Throws a dagger slowing the enemy unit's movement speed, dealing 75+25% of Phantom Assassin's attack damage as physical damage and applying attack effects from items and abilities.",
       "notes": "If an attack effect is chance-based, the chance of its application will be the same as its chance to occur.",
       "dmg": "",
-      "attrib": "MOVE SLOW: <span class=\"attribVal\">50%</span><br />\nSLOW DURATION: <span class=\"attribVal\">1 / 2 / 3 / 4</span><br />\nBASE DAMAGE: <span class=\"attribVal\">60</span><br />\nATTACK DAMAGE: <span class=\"attribVal\">25% / 40% / 55% / 70%</span>",
+      "attrib": "MOVE SLOW: <span class=\"attribVal\">50%</span><br />\nSLOW DURATION: <span class=\"attribVal\">1 / 2 / 3 / 4</span><br />\nBASE DAMAGE: <span class=\"attribVal\">75</span><br />\nATTACK DAMAGE: <span class=\"attribVal\">25% / 40% / 55% / 70%</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 30/25/20/15</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 6</div><br clear=\"left\" /></div>",
       "lore": "The first skill learned by the Sisters of the Veil often signals an incoming hit.",
       "hurl": "Phantom_Assassin"
     },
     "phantom_assassin_phantom_strike": {
       "dname": "Phantom Strike",
-      "affects": "ABILITY: <span class=\"attribVal\">Unit Target</span><br />PIERCES SPELL IMMUNITY: <span class=\"attribVal\">No</span><br />",
+      "affects": "ABILITY: <span class=\"attribVal\">Unit Target</span><br />PIERCES SPELL IMMUNITY: <span class=\"attribVal\"><font color=\"#70EA72\">Yes</font></span><br />",
       "desc": "Teleports to a unit, friendly or enemy, and grants bonus attack speed while attacking if it's an enemy unit.",
       "notes": "",
       "dmg": "",
@@ -1976,7 +1965,7 @@
       "notes": "Damage is delayed by 0.9 seconds.",
       "dmg": "DAMAGE: <span class=\"attribVal\">100 / 175 / 250 / 325</span><br />",
       "attrib": "BLAST DELAY: <span class=\"attribVal\">0.9 / 0.9 / 0.9 / 0.9</span><br />\nRADIUS: <span class=\"attribVal\">400 / 400 / 400 / 400</span>",
-      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 85/105/125/145</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 5.50</div><br clear=\"left\" /></div>",
+      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 85/105/125/145</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 5</div><br clear=\"left\" /></div>",
       "lore": "The Arts of Oblivion include a deafening blast of emerald flames from the Nether Reaches.",
       "hurl": "Pugna"
     },
@@ -2063,7 +2052,7 @@
       "desc": "Templar Assassin places mystical traps that invisibly monitor enemy movement. When sprung at her command, they exert a slowing influence of 30% in the area. Traps charge up to slow an additional 5% every second, up to 50%.",
       "notes": "Traps last indefinitely.<br />They have invisibility that fades in over 2 seconds, spell immunity, and 100 HP.<br />Traps have 400/400 vision range and don't prevent neutral camps from spawning.",
       "dmg": "",
-      "attrib": "MAX TRAPS: <span class=\"attribVal\">5 / 8 / 11</span><br />\nMIN MOVEMENT SLOW: <span class=\"attribVal\">30%</span><br />\nMAX MOVEMENT SLOW: <span class=\"attribVal\">50%</span><br />\nSLOW DURATION: <span class=\"attribVal\">5</span>",
+      "attrib": "MAX TRAPS: <span class=\"attribVal\">5 / 8 / 11</span><br />\nMIN MOVEMENT SLOW: <span class=\"attribVal\">30%</span><br />\nMAX MOVEMENT SLOW: <span class=\"attribVal\">60%</span><br />\nSLOW DURATION: <span class=\"attribVal\">5</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 15/15/15</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 11/8/5</div><br clear=\"left\" /></div>",
       "lore": "Calling upon the reach of the Hidden Temple, none escape the eye of the Templar.",
       "hurl": "Templar_Assassin"
@@ -2107,7 +2096,7 @@
       "desc": "Viper slows the targeted enemy unit's movement and attack speed while also dealing poison damage over time.  The slowing effect reduces over the duration of the poison.\r\n\r\nUpgradable by Aghanim's Scepter.",
       "notes": "Slow works on spell immune units.<br />Units afflicted by Viper Strike can be denied when their HP drops below 25%.",
       "dmg": "",
-      "attrib": "DURATION: <span class=\"attribVal\">5.1 / 5.1 / 5.1</span><br />\nDAMAGE PER SECOND: <span class=\"attribVal\">60 / 100 / 145</span><br />\nMOVE SLOW: <span class=\"attribVal\">40% / 60% / 80%</span><br />\nATTACK SLOW: <span class=\"attribVal\">40 / 60 / 80</span><br />\n<span class=\"scepterVal\">SCEPTER MANA COST:</span> <span class=\"attribVal\">125 / 125 / 125</span><br />\n<span class=\"scepterVal\">SCEPTER COOLDOWN:</span> <span class=\"attribVal\">12</span><br />\n<span class=\"scepterVal\">SCEPTER CAST RANGE:</span> <span class=\"attribVal\">900</span>",
+      "attrib": "DURATION: <span class=\"attribVal\">5.1 / 5.1 / 5.1</span><br />\nDAMAGE PER SECOND: <span class=\"attribVal\">60 / 100 / 145</span><br />\nMOVE SLOW: <span class=\"attribVal\">40% / 60% / 80%</span><br />\nATTACK SLOW: <span class=\"attribVal\">40 / 60 / 80</span><br />\n<span class=\"scepterVal\">SCEPTER MANA COST:</span> <span class=\"attribVal\">125 / 125 / 125</span><br />\n<span class=\"scepterVal\">SCEPTER COOLDOWN:</span> <span class=\"attribVal\">10</span><br />\n<span class=\"scepterVal\">SCEPTER CAST RANGE:</span> <span class=\"attribVal\">900</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 125/175/250</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 70/50/30</div><br clear=\"left\" /></div>",
       "lore": "Once used to slay his sadistic summoner, the most powerful of Netherdrake infections spreads through the veins of those foolish enough to cross Viper.",
       "hurl": "Viper"
@@ -2118,7 +2107,7 @@
       "desc": "Calls a beam of lunar energy down upon an enemy, damaging and briefly stunning them.",
       "notes": "",
       "dmg": "DAMAGE: <span class=\"attribVal\">75 / 150 / 225 / 300</span><br />",
-      "attrib": "STUN DURATION: <span class=\"attribVal\">0.6 / 0.6 / 0.6 / 0.6</span>",
+      "attrib": "STUN DURATION: <span class=\"attribVal\">0.8</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 90/100/110/120</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 6</div><br clear=\"left\" /></div>",
       "lore": "Selemene smites those who encroach upon the Nightsilver Woods.",
       "hurl": "Luna"
@@ -2195,7 +2184,7 @@
       "desc": "Dragon Knight takes the form of one of three powerful elder dragons, increasing his speed, and Dragon Tail's range, while granting him new powers.\r\n<font color=\"#9acd32\">LEVEL 1 Green Dragon</font> - Corrosive Breath: attacks deal 20 poison damage per second for 5 seconds. Works on structures.\r\n<font color=\"#ff0000\">LEVEL 2 Red Dragon</font> - Splash Attack: attacks damage all enemy units in a 300 radius, with Corrosive Breath added to the primary target.\r\n<font color=\"#87ceeb\">LEVEL 3 Blue Dragon</font> - Frost Breath: slows movement speed by 30% and attack speed by 20 of enemy units in Splash Attack range for 3 seconds, with Corrosive Breath added to the primary target.",
       "notes": "Corrosive Breath poison damage is lethal.<br />Splash Attack deals 100/75/50% damage in a 150/225/300 radius. Splash damage does not affect buildings.<br />Frost Breath stacks with Unique Attack Modifiers.<br />Manta Style's cooldown time will be based on whether Dragon Knight was in his ranged or melee form when the item was used.",
       "dmg": "",
-      "attrib": "DURATION: <span class=\"attribVal\">60 / 60 / 60</span><br />\nBONUS MOVE SPEED: <span class=\"attribVal\">25 / 25 / 25</span><br />\nBONUS ATTACK RANGE: <span class=\"attribVal\">372 / 372 / 372</span>",
+      "attrib": "DURATION: <span class=\"attribVal\">60 / 60 / 60</span><br />\nBONUS MOVE SPEED: <span class=\"attribVal\">25 / 25 / 25</span><br />\nBONUS ATTACK RANGE: <span class=\"attribVal\">350</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 50/50/50</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 115</div><br clear=\"left\" /></div>",
       "lore": "The dormant dragon power springs forth from within Davion, combining the powers of a legendary knight with a legendary Eldwurm.",
       "hurl": "Dragon_Knight"
@@ -2272,7 +2261,7 @@
       "desc": "Fires a global range flare that explodes over a given area, damaging enemies and providing vision for 10 seconds.",
       "notes": "",
       "dmg": "DAMAGE: <span class=\"attribVal\">80 / 120 / 160 / 200</span><br />",
-      "attrib": "RADIUS: <span class=\"attribVal\">575 / 575 / 575 / 575</span>",
+      "attrib": "RADIUS: <span class=\"attribVal\">600</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 50/50/50/50</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 20/18/16/14</div><br clear=\"left\" /></div>",
       "lore": "What started as a festive display has become a useful scouting and bombardment tool.",
       "hurl": "Clockwerk"
@@ -2434,7 +2423,7 @@
     "life_stealer_infest": {
       "dname": "Infest",
       "affects": "ABILITY: <span class=\"attribVal\">Unit Target</span><br />DAMAGE TYPE: <span class=\"attribVal\">Magical</span><br />PIERCES SPELL IMMUNITY: <span class=\"attribVal\"><font color=\"#70EA72\">Yes</font></span><br />",
-      "desc": "Lifestealer infests the body of a target unit, becoming undetectable inside. He can then explode from the host body, dealing damage to nearby enemies. If the infested unit is an enemy creep or a neutral creep, he can take control of the unit's ability to move and attack, and when consumed the creep will heal Lifestealer's health equal to the creep's current health.  Does not work on enemy heroes.\r\n\r\nUpgradable by Aghanim's Scepter.",
+      "desc": "Lifestealer infests the body of a target unit, becoming undetectable inside. He can then explode from the host body, dealing damage to nearby enemies. If the infested unit is an enemy creep or a neutral creep, he can take control of the unit's ability to move and attack, and when consumed the creep will heal Lifestealer's health equal to the creep's current health.  Does not work on enemy heroes.",
       "notes": "If the infested unit dies before Lifestealer consumes it, no health is gained.<br />Lifestealer gains experience while under the effects of Infest.<br />Creeps that are controlled while Infested share Lifestealer's movement speed.<br />Infest Level 2 and 3 can be used on Ancient creeps.",
       "dmg": "",
       "attrib": "DAMAGE RADIUS: <span class=\"attribVal\">700 / 700 / 700</span><br />\nDAMAGE: <span class=\"attribVal\">150 / 275 / 400</span>",
@@ -2789,7 +2778,7 @@
       "desc": "Bounty Hunter plans his next hit, passively adding a critical strike and maim to his next attack.",
       "notes": "",
       "dmg": "",
-      "attrib": "CRITICAL DAMAGE: <span class=\"attribVal\">150% / 175% / 200% / 225%</span><br />\nMOVE SLOW: <span class=\"attribVal\">25% / 27% / 29% / 31%</span><br />\nATTACK SLOW: <span class=\"attribVal\">25 / 27 / 29 / 31</span><br />\nDURATION: <span class=\"attribVal\">3 / 3 / 3 / 3</span>",
+      "attrib": "CRITICAL DAMAGE: <span class=\"attribVal\">150% / 175% / 200% / 225%</span><br />\nMOVE SLOW: <span class=\"attribVal\">15% / 20% / 25% / 30%</span><br />\nATTACK SLOW: <span class=\"attribVal\">15 / 20 / 25 / 30</span><br />\nDURATION: <span class=\"attribVal\">3 / 3 / 3 / 3</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 12/10/8/6</div><br clear=\"left\" /></div>",
       "lore": "Whispering an enchantment he learned from Soruq to his faithful blades, Gondar targets vital tendons and joints to disable his opponents.",
       "hurl": "Bounty_Hunter"
@@ -2811,7 +2800,7 @@
       "desc": "Tracks an enemy hero, granting True Sight of the target, and information on how much gold it is carrying. Allies near the hunted are granted bonus movement speed. If the target dies, Bounty Hunter and nearby heroes collect a bonus bounty of gold.",
       "notes": "Bounty Hunter will get the bonus gold if the target dies while Track is active, regardless of how it died.<br />Track's effect is only visible to allies.<br />The allies that are receiving the bonus speed from Track are the ones that will receive the bonus gold.<br />Bonus gold is reliable gold.",
       "dmg": "",
-      "attrib": "SPEED RADIUS: <span class=\"attribVal\">900 / 900 / 900</span><br />\nBONUS SPEED: <span class=\"attribVal\">20% / 20% / 20%</span><br />\nBONUS GOLD FOR SELF: <span class=\"attribVal\">200 / 275 / 350</span><br />\nBONUS GOLD FOR ALLIES: <span class=\"attribVal\">40 / 80 / 120</span><br />\nDURATION: <span class=\"attribVal\">30 / 30 / 30</span><br />\nCAST RANGE: <span class=\"attribVal\">1200</span>",
+      "attrib": "SPEED RADIUS: <span class=\"attribVal\">900 / 900 / 900</span><br />\nBONUS SPEED: <span class=\"attribVal\">20% / 20% / 20%</span><br />\nBONUS GOLD FOR SELF: <span class=\"attribVal\">150 / 250 / 350</span><br />\nBONUS GOLD FOR ALLIES: <span class=\"attribVal\">40 / 80 / 120</span><br />\nDURATION: <span class=\"attribVal\">30 / 30 / 30</span><br />\nCAST RANGE: <span class=\"attribVal\">1200</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 50</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 4</div><br clear=\"left\" /></div>",
       "lore": "Using his elevated senses of sight and smell, Gondar's hits have quite a good chance of success.",
       "hurl": "Bounty_Hunter"
@@ -2877,7 +2866,7 @@
       "desc": "Creates a path of ice that stuns and damages enemies that touch it.",
       "notes": "It takes 0.5 seconds for the path to reach its full extent.",
       "dmg": "",
-      "attrib": "FORMATION DELAY: <span class=\"attribVal\">0.5</span><br />\nDURATION: <span class=\"attribVal\">1 / 1.4 / 1.8 / 2.2</span><br />\nRADIUS: <span class=\"attribVal\">150</span><br />\nDAMAGE: <span class=\"attribVal\">50</span>",
+      "attrib": "FORMATION DELAY: <span class=\"attribVal\">0.5</span><br />\nDURATION: <span class=\"attribVal\">1 / 1.5 / 2 / 2.5</span><br />\nRADIUS: <span class=\"attribVal\">150</span><br />\nDAMAGE: <span class=\"attribVal\">50</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 90</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 12/11/10/9</div><br clear=\"left\" /></div>",
       "lore": "Jakiro's cunning right head calls upon its frozen heritage, glazing the earth with blistering cold.",
       "hurl": "Jakiro"
@@ -2943,7 +2932,7 @@
       "desc": "Lassoes an enemy and drags them in Batrider's wake.  Victims cannot be dragged over impassable terrain. Dragged units cannot move, attack, or use abilities.  Teleporting or blinking will break the lasso.\r\n\r\nUpgradable by Aghanim's Scepter.",
       "notes": "Killing the target or the Batrider will break the lasso before its expiration.<br />If Batrider moves more than 400 units in 0.05 seconds the lasso breaks.<br />Disable works on Spell Immune units.<br />Batrider cannot attack while using Flaming Lasso.",
       "dmg": "",
-      "attrib": "DURATION: <span class=\"attribVal\">3 / 3.5 / 4</span><br />\n<span class=\"scepterVal\">SCEPTER TETHER RANGE:</span> <span class=\"attribVal\">400</span><br />\nSCEPTER DAMAGE PER SECOND: <span class=\"attribVal\">100</span>",
+      "attrib": "DURATION: <span class=\"attribVal\">3 / 3.5 / 4</span><br />\n<span class=\"scepterVal\">SCEPTER TETHER RANGE:</span> <span class=\"attribVal\">400</span><br />\n<span class=\"scepterVal\">SCEPTER DAMAGE PER SECOND:</span> <span class=\"attribVal\">100</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 225</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 90/75/60</div><br clear=\"left\" /></div>",
       "lore": "Few dare to ask to ride on the bat, as Batrider gives them free of charge.",
       "hurl": "Batrider"
@@ -3083,10 +3072,10 @@
     "doom_bringer_infernal_blade": {
       "dname": "Infernal Blade",
       "affects": "ABILITY: <span class=\"attribVal\">Auto-Cast, Unit Target</span><br />AFFECTS: <span class=\"attribVal\">Enemy Units</span><br />DAMAGE TYPE: <span class=\"attribVal\">Magical</span><br />PIERCES SPELL IMMUNITY: <span class=\"attribVal\">No</span><br />",
-      "desc": "Doom swings his burning sword, igniting the enemy. Stuns for 0.3 seconds and applies a 4 second burn that deals 40 + 1.25% of the target's Max HP as damage per second.",
+      "desc": "Doom swings his burning sword, igniting the enemy. Stuns for 0.3 seconds and applies a 4 second burn that deals 25 + 1.25% of the target's Max HP as damage per second.",
       "notes": "Interrupts channeling abilities.",
       "dmg": "",
-      "attrib": "BASE BURN DAMAGE: <span class=\"attribVal\">40</span><br />\nMAX HP AS DAMAGE: <span class=\"attribVal\">1.25% / 2.5% / 3.75% / 5%</span><br />\nBURN DURATION: <span class=\"attribVal\">4</span><br />\nSTUN DURATION: <span class=\"attribVal\">0.3</span>",
+      "attrib": "BASE BURN DAMAGE: <span class=\"attribVal\">25 / 30 / 35 / 40</span><br />\nMAX HP AS DAMAGE: <span class=\"attribVal\">1.25% / 2.5% / 3.75% / 5%</span><br />\nBURN DURATION: <span class=\"attribVal\">4</span><br />\nSTUN DURATION: <span class=\"attribVal\">0.3</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 40</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 16/12/8/4</div><br clear=\"left\" /></div>",
       "lore": "Lucifer shares the fire branding bestowed upon him at the time of his exile.",
       "hurl": "Doom"
@@ -3098,7 +3087,7 @@
       "notes": "Units afflicted by Doom can be denied when their HP drops below 25%.",
       "dmg": "",
       "attrib": "DURATION: <span class=\"attribVal\">15</span><br />\nDAMAGE PER SECOND: <span class=\"attribVal\">20 / 35 / 50</span><br />\n<span class=\"scepterVal\">SCEPTER DURATION:</span> <span class=\"attribVal\">16</span>",
-      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 150/200/250</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 125</div><br clear=\"left\" /></div>",
+      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 150/200/250</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 145</div><br clear=\"left\" /></div>",
       "lore": "When a name is tolled from the bell of Vashundol, doom is sure to follow.",
       "hurl": "Doom"
     },
@@ -3185,7 +3174,7 @@
       "desc": "Ursa's claws dig deeper wounds in the enemy, causing consecutive attacks to the same enemy to deal more damage.  If the same target is not attacked after 15 seconds, the bonus damage is lost.",
       "notes": "",
       "dmg": "",
-      "attrib": "RESET TIME: <span class=\"attribVal\">15</span><br />\nRESET TIME (ROSHAN): <span class=\"attribVal\">6</span><br />\nDAMAGE PER ATTACK: <span class=\"attribVal\">15 / 20 / 25 / 30</span>",
+      "attrib": "RESET TIME: <span class=\"attribVal\">20</span><br />\nRESET TIME (ROSHAN): <span class=\"attribVal\">6</span><br />\nDAMAGE PER ATTACK: <span class=\"attribVal\">15 / 20 / 25 / 30</span>",
       "cmb": "",
       "lore": "In nature, the wounded rarely survive the attacks of hungry predators.",
       "hurl": "Ursa"
@@ -3229,7 +3218,7 @@
       "desc": "Gives a chance to stun and knockback an enemy unit on an attack, as well as gaining bonus movement speed after a bash occurs. Deals a percentage of movement speed as damage.",
       "notes": "Does not stack with Skull Basher.",
       "dmg": "",
-      "attrib": "CHANCE TO BASH: <span class=\"attribVal\">17% / 17% / 17% / 17%</span><br />\nMOVESPEED AS DAMAGE: <span class=\"attribVal\">22% / 28% / 34% / 40%</span><br />\nSTUN DURATION: <span class=\"attribVal\">1 / 1.2 / 1.4 / 1.6</span><br />\nKNOCKBACK DURATION: <span class=\"attribVal\">0.5 / 0.5 / 0.5 / 0.5</span><br />\nBONUS MOVE SPEED: <span class=\"attribVal\">15% / 15% / 15% / 15%</span><br />\nSPEED DURATION: <span class=\"attribVal\">3 / 3 / 3 / 3</span>",
+      "attrib": "CHANCE TO BASH: <span class=\"attribVal\">17% / 17% / 17% / 17%</span><br />\nMOVESPEED AS DAMAGE: <span class=\"attribVal\">22% / 30% / 38% / 46%</span><br />\nSTUN DURATION: <span class=\"attribVal\">1 / 1.2 / 1.4 / 1.6</span><br />\nKNOCKBACK DURATION: <span class=\"attribVal\">0.5 / 0.5 / 0.5 / 0.5</span><br />\nBONUS MOVE SPEED: <span class=\"attribVal\">15% / 15% / 15% / 15%</span><br />\nSPEED DURATION: <span class=\"attribVal\">3 / 3 / 3 / 3</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 1.50</div><br clear=\"left\" /></div>",
       "lore": "The signature strike of Barathrum's ghostly ball and chain.",
       "hurl": "Spirit_Breaker"
@@ -3498,24 +3487,13 @@
       "lore": "Buluphont's Aureal Incapacitator.",
       "hurl": "Invoker"
     },
-    "invoker_attribute_bonus": {
-      "dname": "invoker_attribute_bonus",
-      "affects": "ABILITY: <span class=\"attribVal\">Passive</span><br />",
-      "desc": "DOTA_Tooltip_ability_invoker_attribute_bonus_Description",
-      "notes": "",
-      "dmg": "",
-      "attrib": "",
-      "cmb": "",
-      "lore": "",
-      "hurl": "Invoker"
-    },
     "silencer_curse_of_the_silent": {
       "dname": "Arcane Curse",
       "affects": "ABILITY: <span class=\"attribVal\">Point Target</span><br />DAMAGE TYPE: <span class=\"attribVal\">Magical</span><br />PIERCES SPELL IMMUNITY: <span class=\"attribVal\">No</span><br />",
       "desc": "Curses the target area, causing enemy heroes to take damage and slowing their movement speed. Anytime affected enemies cast a spell, the duration is increased.",
       "notes": "If an enemy hero affected by Arcane Curse is silenced, Arcane Curse will pause damage, slow and duration.<br />Affects creeps.",
       "dmg": "",
-      "attrib": "DAMAGE: <span class=\"attribVal\">14 / 21 / 28 / 35</span><br />\nRADIUS: <span class=\"attribVal\">425</span><br />\nBASE DURATION: <span class=\"attribVal\">6</span><br />\nPENALTY DURATION: <span class=\"attribVal\">4</span><br />\nMOVEMENT SLOW: <span class=\"attribVal\">9% / 12% / 15% / 18%</span>",
+      "attrib": "DAMAGE: <span class=\"attribVal\">14 / 22 / 30 / 38</span><br />\nRADIUS: <span class=\"attribVal\">425</span><br />\nBASE DURATION: <span class=\"attribVal\">6</span><br />\nPENALTY DURATION: <span class=\"attribVal\">4</span><br />\nMOVEMENT SLOW: <span class=\"attribVal\">9% / 12% / 15% / 18%</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 75/95/115/135</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 20/18/16/14</div><br clear=\"left\" /></div>",
       "lore": "Nortrom's lack of incantations is less of a problem for him than it is for his adversaries.",
       "hurl": "Silencer"
@@ -3556,10 +3534,10 @@
     "obsidian_destroyer_arcane_orb": {
       "dname": "Arcane Orb",
       "affects": "ABILITY: <span class=\"attribVal\">Auto-Cast, Unit Target</span><br />AFFECTS: <span class=\"attribVal\">Enemy Units</span><br />DAMAGE TYPE: <span class=\"attribVal\"><font color=\"#d61107\">Pure</font></span><br />PIERCES SPELL IMMUNITY: <span class=\"attribVal\">No</span><br />",
-      "desc": "Adds extra pure damage to Outworld Devourer's attacks, based on his remaining mana pool. Steals 1 intelligence for 50 seconds per hit when attacking an enemy hero. Arcane Orb also does bonus damage to summoned units and illusions.\r\n\r\nArcane Orb is a Unique Attack Modifier, and does not stack with other Unique Attack Modifiers.",
+      "desc": "Adds extra pure damage to Outworld Devourer's attacks, based on his remaining mana pool. Steals 1 intelligence for 80 seconds per hit when attacking an enemy hero. Arcane Orb also does bonus damage to summoned units and illusions.\r\n\r\nArcane Orb is a Unique Attack Modifier, and does not stack with other Unique Attack Modifiers.",
       "notes": "The damage is calculated after the mana cost is spent.",
       "dmg": "",
-      "attrib": "MANA POOL TO DAMAGE: <span class=\"attribVal\">6% / 7% / 8% / 9%</span><br />\nINTELLIGENCE STEAL: <span class=\"attribVal\">1 / 2 / 3 / 4</span><br />\nSTEAL DURATION: <span class=\"attribVal\">50</span>",
+      "attrib": "MANA POOL TO DAMAGE: <span class=\"attribVal\">6% / 7% / 8% / 9%</span><br />\nILLUSION DAMAGE: <span class=\"attribVal\">100 / 200 / 300 / 400</span><br />\nINTELLIGENCE STEAL: <span class=\"attribVal\">1 / 2 / 3 / 4</span><br />\nSTEAL DURATION: <span class=\"attribVal\">80</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 100/120/140/160</div><br clear=\"left\" /></div>",
       "lore": "Harbinger's outworldly knowledge allows it to tap into the ebb and flow of all spiritual energy, infusing it into his being.",
       "hurl": "Outworld_Devourer"
@@ -3567,10 +3545,10 @@
     "obsidian_destroyer_astral_imprisonment": {
       "dname": "Astral Imprisonment",
       "affects": "ABILITY: <span class=\"attribVal\">Unit Target</span><br />DAMAGE TYPE: <span class=\"attribVal\">Magical</span><br />PIERCES SPELL IMMUNITY: <span class=\"attribVal\">No</span><br />",
-      "desc": "Places a target unit into an astral prison. The hidden unit is invulnerable and disabled. When the astral prison implodes, it deals 75 damage to enemies in a 400 radius around the target.",
+      "desc": "Places a target unit into an astral prison. The hidden unit is invulnerable and disabled. When the astral prison implodes, it deals 100 damage to enemies in a 400 radius around the target.",
       "notes": "Imprisoned units are hidden and invulnerable.<br />Imprisoned units can still be hit by Sanity's Eclipse.",
       "dmg": "",
-      "attrib": "PRISON DURATION: <span class=\"attribVal\">4</span><br />\nRADIUS: <span class=\"attribVal\">400</span><br />\nDAMAGE: <span class=\"attribVal\">75 / 150 / 225 / 300</span>",
+      "attrib": "PRISON DURATION: <span class=\"attribVal\">4</span><br />\nRADIUS: <span class=\"attribVal\">400</span><br />\nDAMAGE: <span class=\"attribVal\">100 / 175 / 250 / 325</span><br />\nCAST RANGE: <span class=\"attribVal\">225 / 350 / 475 / 600</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 120/140/160/180</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 22/18/14/10</div><br clear=\"left\" /></div>",
       "lore": "Locked away in the pocket between this world and the Outworld, victims realize their infantile knowledge and mortality.",
       "hurl": "Outworld_Devourer"
@@ -3581,7 +3559,7 @@
       "desc": "Whenever nearby allied Heroes or Outworld Devourer itself casts a spell, it gains a chance to restore a percentage of its mana pool.  Outworld Devourer also passively gains a bonus to its base mana pool.  Several skills with no cooldown and toggled spells cannot trigger Essence Aura.",
       "notes": "Other than Arcane Orb, most skills without cooldowns cannot trigger Essence Aura.",
       "dmg": "",
-      "attrib": "RADIUS: <span class=\"attribVal\">900</span><br />\nBASE MANA: <span class=\"attribVal\">75 / 150 / 225 / 300</span><br />\nRESTORED MANA: <span class=\"attribVal\">10% / 15% / 20% / 25%</span><br />\nRESTORE CHANCE: <span class=\"attribVal\">40%</span>",
+      "attrib": "RADIUS: <span class=\"attribVal\">900</span><br />\nBASE MANA: <span class=\"attribVal\">125 / 200 / 275 / 350</span><br />\nRESTORED MANA: <span class=\"attribVal\">10% / 15% / 20% / 25%</span><br />\nRESTORE CHANCE: <span class=\"attribVal\">40%</span>",
       "cmb": "",
       "lore": "The crystals of the Outworld produce arcane power, and the Harbinger channels it into the world of mortals.",
       "hurl": "Outworld_Devourer"
@@ -3680,7 +3658,7 @@
       "desc": "Splits Brewmaster into elements, forming 3 specialized warriors, adept at survival. If any of them survive until the end of their summoned timer, the Brewmaster is reborn.\r\n\r\nUpgradable by Aghanim's Scepter.",
       "notes": "The Earth Element will carry all auras that the Brewmaster has, as well as True Sight.<br />The Fire Element has phased movement.<br />When the spell ends, Brewmaster will take the place of an element in this order, assuming they are alive: Earth, Storm, Fire.",
       "dmg": "",
-      "attrib": "DURATION: <span class=\"attribVal\">15 / 17 / 19</span>",
+      "attrib": "DURATION: <span class=\"attribVal\">16 / 18 / 20</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 125/150/175</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 140/120/100</div><br clear=\"left\" /></div>",
       "lore": "It isn't clear whether Mangix is consciously aware of his potent bond with nature, as it often occurs in the midst of a drunken stupor.",
       "hurl": "Brewmaster"
@@ -3691,7 +3669,7 @@
       "desc": "Banishes the targeted unit from the battlefield for a short duration.  Upon returning, two illusions of the banished unit are created under Shadow Demon's control.",
       "notes": "",
       "dmg": "",
-      "attrib": "BANISH DURATION: <span class=\"attribVal\">2.5 / 2.5 / 2.5 / 2.5</span><br />\nILLUSION DURATION: <span class=\"attribVal\">6 / 8 / 10 / 12</span><br />\nILLUSION DAMAGE: <span class=\"attribVal\">30% / 45% / 60% / 75%</span><br />\nILLUSION DAMAGE TAKEN: <span class=\"attribVal\">150% / 150% / 150% / 150%</span>",
+      "attrib": "BANISH DURATION: <span class=\"attribVal\">2.5 / 2.5 / 2.5 / 2.5</span><br />\nILLUSION DURATION: <span class=\"attribVal\">8 / 10 / 12 / 14</span><br />\nILLUSION DAMAGE: <span class=\"attribVal\">30% / 45% / 60% / 75%</span><br />\nILLUSION DAMAGE TAKEN: <span class=\"attribVal\">150% / 150% / 150% / 150%</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 120/120/120/120</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 25/22/19/16</div><br clear=\"left\" /></div>",
       "lore": "The pain of deception comes not while it happens, but when it is revealed.",
       "hurl": "Shadow_Demon"
@@ -3743,7 +3721,7 @@
     "lone_druid_spirit_bear": {
       "dname": "Summon Spirit Bear",
       "affects": "ABILITY: <span class=\"attribVal\">No Target</span><br />",
-      "desc": "Summons a powerful Spirit Bear companion that can equip items.  If the bear moves 1100 distance away from the Lone Druid, it cannot attack.  Lone Druid suffers 10% of his max health as backlash damage if the Spirit Bear dies.  As the bear increases in levels, it can learn the Return, Entangling Claws, and Demolish abilities.  Spirit Bear does not benefit from attributes.\r\n\r\nUpgradable by Aghanim's Scepter, allowing Spirit Bear to attack at any range from Lone Druid, and to survive if Lone Druid dies.",
+      "desc": "Summons a powerful Spirit Bear companion that can equip items.  If the bear moves 1100 distance away from the Lone Druid, it cannot attack.  Lone Druid suffers 10% of his max health as backlash damage if the Spirit Bear dies.  As the bear increases in levels, it can learn the Return, Entangling Claws, and Demolish abilities.  Spirit Bear does not benefit from attributes.\r\n\r\nUpgradable by Aghanim's Scepter.",
       "notes": "Most spells interact with the Spirit Bear in the same way as they do with heroes.<br />You can't resummon the bear if it has taken damage in the past 3 seconds.<br />Using Hand of Midas from Spirit Bear grants the earned XP to Lone Druid.",
       "dmg": "",
       "attrib": "BEAR HP: <span class=\"attribVal\">1400 / 1800 / 2300 / 2700</span><br />\nBEAR HP REGEN: <span class=\"attribVal\">2 / 3 / 4 / 5</span><br />\nBEAR BASE ATTACK TIME: <span class=\"attribVal\">1.75 / 1.65 / 1.55 / 1.45</span><br />\nBEAR ARMOR: <span class=\"attribVal\">3 / 4 / 5 / 6</span><br />\nBACKLASH PURE DAMAGE: <span class=\"attribVal\">10%</span>",
@@ -3846,7 +3824,7 @@
       "notes": "Removes most negative buffs from Chaos Knight.<br />Chaos Knight is invulnerable for 0.5 seconds when casting, allowing him to dodge stuns and damage.",
       "dmg": "",
       "attrib": "NUMBER OF PHANTASMS: <span class=\"attribVal\">1 / 2 / 3</span><br />\nEXTRA PHANTASM CHANCE: <span class=\"attribVal\">50%</span><br />\nPHANTASM DURATION: <span class=\"attribVal\">42</span><br />\nPHANTASM DAMAGE: <span class=\"attribVal\">100% / 100% / 100%</span><br />\nPHANTASM DAMAGE TAKEN: <span class=\"attribVal\">200%</span>",
-      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 125/200/275</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 140</div><br clear=\"left\" /></div>",
+      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 125/200/275</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 130</div><br clear=\"left\" /></div>",
       "lore": "Drawing on his battles fought across many worlds and many times, phantasms of the Chaos Knight rise up to quell all who oppose him.",
       "hurl": "Chaos_Knight"
     },
@@ -3877,7 +3855,7 @@
       "affects": "ABILITY: <span class=\"attribVal\">Passive</span><br />PIERCES SPELL IMMUNITY: <span class=\"attribVal\"><font color=\"#70EA72\">Yes</font></span><br />",
       "desc": "Meepo enchants his weapon to deal damage per second, as well as slow the movement speed of the attacked unit.  Geostrikes from multiple Meepos stack.",
       "notes": "Slows Spell Immune units.",
-      "dmg": "DAMAGE: <span class=\"attribVal\">8 / 16 / 24 / 32</span><br />",
+      "dmg": "DAMAGE: <span class=\"attribVal\">10 / 20 / 30 / 40</span><br />",
       "attrib": "MOVE SLOW: <span class=\"attribVal\">5% / 10% / 15% / 20%</span><br />\nDURATION: <span class=\"attribVal\">2</span>",
       "cmb": "",
       "lore": "Keeping your pack light and having few but versatile tools is the best bet for survival.",
@@ -3923,14 +3901,14 @@
       "notes": "Can be cast through the minimap.",
       "dmg": "",
       "attrib": "DAMAGE INSTANCES: <span class=\"attribVal\">4 / 5 / 6 / 7</span><br />\nREGEN: <span class=\"attribVal\">4 / 7 / 10 / 13</span><br />\nBLOCK: <span class=\"attribVal\">20 / 40 / 60 / 80</span><br />\nDURATION: <span class=\"attribVal\">15</span>",
-      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 50</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 32/26/20/14</div><br clear=\"left\" /></div>",
+      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 50</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 30/24/18/12</div><br clear=\"left\" /></div>",
       "lore": "The roots and tendrils of the Treant Protectors are far-reaching, stimulating the growth and rejuvenation of all of nature.",
       "hurl": "Treant_Protector"
     },
     "treant_eyes_in_the_forest": {
       "dname": "Eyes In The Forest",
       "affects": "ABILITY: <span class=\"attribVal\">Unit Target</span><br />",
-      "desc": "Treant Protector enchants a tree, which grants him unobstructed vision in that location. If Overgrowth is cast, units within a 800 radius of an enchanted tree will be entangled and damaged.",
+      "desc": "Treant Protector enchants a tree, which grants him unobstructed vision in that location. If Overgrowth is cast, units within a radius of an enchanted tree will be entangled and damaged.",
       "notes": "Being entangled by Overgrowth through enchanted trees from Eyes of the Forest does damage. Being entangled by Overgrowth directly from Treant Protector does not.<br />If the enemy has True Sight, they will be able to see which trees are enchanted.",
       "dmg": "",
       "attrib": "TREE VISION RADIUS: <span class=\"attribVal\">800</span><br />\nOVERGROWTH RADIUS: <span class=\"attribVal\">800</span><br />\nOVERGROWTH DAMAGE PER SEC: <span class=\"attribVal\">175</span>",
@@ -3941,7 +3919,7 @@
     "treant_overgrowth": {
       "dname": "Overgrowth",
       "affects": "ABILITY: <span class=\"attribVal\">No Target</span><br />DAMAGE TYPE: <span class=\"attribVal\">Magical</span><br />PIERCES SPELL IMMUNITY: <span class=\"attribVal\"><font color=\"#70EA72\">Yes</font></span><br />",
-      "desc": "Summons an overgrowth of vines and branches around Treant that prevent afflicted enemies from moving, blinking, going invisible, or attacking.\r\n\r\nUpgradable by Aghanim's Scepter.",
+      "desc": "Summons an overgrowth of vines and branches around Treant that prevent afflicted enemies from moving, blinking, going invisible, or attacking.",
       "notes": "Works on Spell Immune units, but if units gain spell immunity after the effect starts, they'll break free.<br />Being entangled by Overgrowth through enchanted trees from Eyes of the Forest does damage. Being entangled by Overgrowth directly from Treant Protector does not.",
       "dmg": "",
       "attrib": "DURATION: <span class=\"attribVal\">3 / 3.75 / 4.5</span><br />\nRADIUS: <span class=\"attribVal\">800</span>",
@@ -3967,7 +3945,7 @@
       "notes": "Multicast makes this spell have an area of effect (150/300/450 based on Multicast level).<br />Multicast makes this spell have 150 additional cast range for every Multicast level.<br />Multicast makes this spell have a chance to cast multiple times at random enemy units with 1400 area of effect.",
       "dmg": "",
       "attrib": "DURATION: <span class=\"attribVal\">5 / 6 / 7 / 8</span><br />\nBURN DAMAGE: <span class=\"attribVal\">26 / 34 / 42 / 50</span><br />\nSLOW: <span class=\"attribVal\">20% / 22% / 24% / 26%</span>",
-      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 95/105/115/125</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 15</div><br clear=\"left\" /></div>",
+      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 90</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 15</div><br clear=\"left\" /></div>",
       "lore": "Batter up!",
       "hurl": "Ogre_Magi"
     },
@@ -3978,14 +3956,14 @@
       "notes": "When multicast, nearby allies will be selected randomly in an 575 area of effect to receive Bloodlust.<br />Can affect siege units.<br />Can be cast on Spell Immune allies.",
       "dmg": "",
       "attrib": "BONUS MOVE SPEED: <span class=\"attribVal\">10% / 12% / 14% / 16%</span><br />\nBONUS ATTACK SPEED: <span class=\"attribVal\">30 / 40 / 50 / 60</span><br />\nDURATION: <span class=\"attribVal\">30</span>",
-      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 75</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 20</div><br clear=\"left\" /></div>",
+      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 50</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 20</div><br clear=\"left\" /></div>",
       "lore": "'Running's not as fun as hitting... Not one bit fun.'",
       "hurl": "Ogre_Magi"
     },
     "ogre_magi_unrefined_fireblast": {
       "dname": "Unrefined Fireblast",
       "affects": "ABILITY: <span class=\"attribVal\">Unit Target</span><br />AFFECTS: <span class=\"attribVal\">Enemy Units</span><br />DAMAGE TYPE: <span class=\"attribVal\">Magical</span><br />PIERCES SPELL IMMUNITY: <span class=\"attribVal\">No</span><br />",
-      "desc": "Blasts an enemy unit with a wave of fire, dealing damage and stunning the target. Its mana cost is 60% of the hero's current mana.",
+      "desc": "Blasts an enemy unit with a wave of fire, dealing damage and stunning the target. Its mana cost is 60% of Ogre Magi's current mana.",
       "notes": "",
       "dmg": "DAMAGE: <span class=\"attribVal\">275</span><br />",
       "attrib": "STUN DURATION: <span class=\"attribVal\">1.5</span>",
@@ -3996,7 +3974,7 @@
     "ogre_magi_multicast": {
       "dname": "Multicast",
       "affects": "ABILITY: <span class=\"attribVal\">Passive</span><br />",
-      "desc": "Enables Ogre Magi to cast his spells multiple times with each use, while also granting his spells greater potency:\r\n<font color=\"#EEF10D\">Fireblast</font> has its cooldown decreased, its range increased, and its mana cost increased.\r\n<font color=\"#DE8930\">Ignite</font> hits enemies in an area, its range is increased, and it may be cast onto random nearby enemies when used.\r\n<font color=\"#E34F4F\">Bloodlust</font> has its cooldown reduced, and may be cast on random nearby allies when used.\r\n\r\nUpgradable by Aghanim's Scepter.",
+      "desc": "Enables Ogre Magi to cast his spells multiple times with each use, while also granting his spells greater potency:\r\n<font color=\"#EEF10D\">Fireblast</font> has its cooldown decreased, its range increased, and its mana cost increased.\r\n<font color=\"#DE8930\">Ignite</font> hits enemies in an area, its range is increased, and it may be cast onto random nearby enemies when used.\r\n<font color=\"#E34F4F\">Bloodlust</font> has its cooldown reduced, and may be cast on random nearby allies when used.",
       "notes": "",
       "dmg": "",
       "attrib": "FIREBLAST MANA INCREASE: <span class=\"attribVal\">20 / 40 / 60</span><br />\nFIREBLAST COOLDOWN REDUCTION: <span class=\"attribVal\">2 / 4 / 6</span><br />\nIGNITE RADIUS: <span class=\"attribVal\">150 / 300 / 450</span><br />\nIGNITE CAST RANGE INCREASE: <span class=\"attribVal\">150 / 300 / 450</span><br />\nBLOODLUST RADIUS: <span class=\"attribVal\">575</span><br />\nBLOODLUST COOLDOWN REDUCTION: <span class=\"attribVal\">5 / 10 / 15</span><br />\n2X CAST CHANCE: <span class=\"attribVal\">40% / 50% / 60%</span><br />\n3X CAST CHANCE: <span class=\"attribVal\">0% / 20% / 25%</span><br />\n4X CAST CHANCE: <span class=\"attribVal\">0% / 0% / 12.5%</span>",
@@ -4007,10 +3985,10 @@
     "undying_decay": {
       "dname": "Decay",
       "affects": "ABILITY: <span class=\"attribVal\">Point Target</span><br />DAMAGE TYPE: <span class=\"attribVal\">Magical</span><br />PIERCES SPELL IMMUNITY: <span class=\"attribVal\">No</span><br />",
-      "desc": "Undying steals strength from all enemy heroes in an area, dealing base damage as he claims the enemy's strength for himself.\r\n\r\nUpgradable by Aghanim's Scepter, increasing Decay's strength steal.",
+      "desc": "Undying steals strength from all enemy heroes in an area, dealing base damage as he claims the enemy's strength for himself.\r\n\r\nUpgradable by Aghanim's Scepter.",
       "notes": "The strength stolen stacks, but can't cause a hero to have strength below 1.<br />The strength steal takes effect before the damage is dealt.<br />Affects invisible units.",
       "dmg": "",
-      "attrib": "BASE DAMAGE: <span class=\"attribVal\">20 / 60 / 100 / 140</span><br />\nSTRENGTH STEAL: <span class=\"attribVal\">4</span><br />\nSTEAL DURATION: <span class=\"attribVal\">40</span><br />\nRADIUS: <span class=\"attribVal\">325</span><br />\n<span class=\"scepterVal\">SCEPTER STRENGTH STEAL:</span> <span class=\"attribVal\">10</span>",
+      "attrib": "BASE DAMAGE: <span class=\"attribVal\">20 / 60 / 100 / 140</span><br />\nSTRENGTH STEAL: <span class=\"attribVal\">4</span><br />\nSTEAL DURATION: <span class=\"attribVal\">45</span><br />\nRADIUS: <span class=\"attribVal\">325</span><br />\n<span class=\"scepterVal\">SCEPTER STRENGTH STEAL:</span> <span class=\"attribVal\">10</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 70/90/110/130</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 10/8/6/4</div><br clear=\"left\" /></div>",
       "lore": "The strength of the living is simply borrowed from the strength of the dead.",
       "hurl": "Undying"
@@ -4183,7 +4161,7 @@
     "nyx_assassin_burrow": {
       "dname": "Burrow",
       "affects": "ABILITY: <span class=\"attribVal\">No Target</span><br />",
-      "desc": "Nyx Assassin buries himself beneath the battlefield over 1 second. Once burrowed, Spiked Carapace instantly stuns nearby enemies when cast, the range of Mana Burn and Impale is increased by 75%, and Impale's cooldown is decreased. While burrowed, Nyx Assassin is stationary, unable to attack, and invisible. His health and mana regeneration are also increased, and he gains 40% damage reduction.",
+      "desc": "Nyx Assassin buries himself beneath the battlefield over a short duration. Once burrowed, Spiked Carapace instantly stuns nearby enemies when cast, the range of Mana Burn and Impale is increased, and Impale's cooldown is decreased. While burrowed, Nyx Assassin is stationary, unable to attack, and invisible. His health and mana regeneration are also increased, and he gains damage reduction from all damage sources.",
       "notes": "Casting Vendetta will cancel burrow.",
       "dmg": "",
       "attrib": "BURROW HEALTH/MANA REGEN: <span class=\"attribVal\">1.5%</span><br />\nBURROW DAMAGE REDUCTION: <span class=\"attribVal\">40%</span><br />\nBURROW MANA BURN RANGE: <span class=\"attribVal\">1050</span><br />\nBURROW IMPALE RANGE: <span class=\"attribVal\">1225</span><br />\nBURROW IMPALE COOLDOWN: <span class=\"attribVal\">7</span><br />\nBURROW SPIKED CARAPACE RANGE: <span class=\"attribVal\">300</span>",
@@ -4205,7 +4183,7 @@
     "nyx_assassin_vendetta": {
       "dname": "Vendetta",
       "affects": "ABILITY: <span class=\"attribVal\">No Target</span><br />DAMAGE TYPE: <span class=\"attribVal\"><font color=\"#71a9ea\">Physical</font></span><br />PIERCES SPELL IMMUNITY: <span class=\"attribVal\"><font color=\"#70EA72\">Yes</font></span><br />",
-      "desc": "Allows Nyx Assassin to become invisible and gain a speed bonus.  If Nyx Assassin attacks to break the invisibility, massive bonus damage is dealt with the attack.\r\n\r\nUpgradable by Aghanim's Scepter.",
+      "desc": "Allows Nyx Assassin to become invisible and gain a speed bonus.  If Nyx Assassin attacks to break the invisibility, massive bonus damage is dealt with the attack.",
       "notes": "Has a 0 second fadetime.<br />If a spell is used to break the invisibility, or the invisibility expires, the bonus damage is lost.",
       "dmg": "",
       "attrib": "DURATION: <span class=\"attribVal\">40 / 50 / 60</span><br />\nMOVEMENT SPEED: <span class=\"attribVal\">16% / 18% / 20%</span><br />\nBONUS DAMAGE: <span class=\"attribVal\">250 / 400 / 550</span>",
@@ -4271,7 +4249,7 @@
     "keeper_of_the_light_illuminate": {
       "dname": "Illuminate",
       "affects": "ABILITY: <span class=\"attribVal\">Channeled, Point Target</span><br />DAMAGE TYPE: <span class=\"attribVal\">Magical</span><br />PIERCES SPELL IMMUNITY: <span class=\"attribVal\">No</span><br />",
-      "desc": "Channels light energy, building power the longer it's channeled.  Once released, a wave is sent forth that deals damage and gives vision in its path.  The longer it is channeled, the more damage is dealt.\r\n\r\nUpgradable by Aghanim's Scepter, allowing Illuminate to heal allies and harm enemies during daytime. The heal and damage amounts are the same.",
+      "desc": "Channels light energy, building power the longer it's channeled.  Once released, a wave is sent forth that deals damage and gives vision in its path.  The longer it is channeled, the more damage is dealt.\r\n\r\nUpgradable by Aghanim's Scepter.",
       "notes": "Gives increasing vision over the channeling time.<br />Damages mechanical units.",
       "dmg": "",
       "attrib": "DAMAGE PER SECOND CHANNELED: <span class=\"attribVal\">100 / 100 / 100 / 100</span><br />\nMAX CHANNEL TIME: <span class=\"attribVal\">2 / 3 / 4 / 5</span><br />\nWIDTH: <span class=\"attribVal\">350 / 350 / 350 / 350</span><br />\nRANGE: <span class=\"attribVal\">1550</span>",
@@ -4297,7 +4275,7 @@
       "notes": "",
       "dmg": "",
       "attrib": "MANA RESTORE: <span class=\"attribVal\">75 / 150 / 225 / 300</span><br />\nALLY COOLDOWN REDUCTION: <span class=\"attribVal\">3 / 4 / 5 / 6</span><br />\nCOOLDOWN REDUCTION DURATION: <span class=\"attribVal\">15</span>",
-      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 25/35/45/55</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 19/18/17/16</div><br clear=\"left\" /></div>",
+      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 25/35/45/55</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 17/16/15/14</div><br clear=\"left\" /></div>",
       "lore": "In the same vein, Ezalor bestows his harmony among others.",
       "hurl": "Keeper_of_the_Light"
     },
@@ -4348,7 +4326,7 @@
     "keeper_of_the_light_spirit_form_illuminate": {
       "dname": "Illuminate",
       "affects": "ABILITY: <span class=\"attribVal\">Point Target</span><br />DAMAGE TYPE: <span class=\"attribVal\">Magical</span><br />PIERCES SPELL IMMUNITY: <span class=\"attribVal\">No</span><br />",
-      "desc": "Channels light energy, building power the longer it's channeled.  Once released, a wave is sent forth that deals damage and gives vision in its path.  The longer it is channeled, the more damage is dealt.\r\n\r\nUpgradable by Aghanim's Scepter, allowing Illuminate to heal allies and harm enemies during daytime. The heal and damage amounts are the same.",
+      "desc": "Channels light energy, building power the longer it's channeled.  Once released, a wave is sent forth that deals damage and gives vision in its path.  The longer it is channeled, the more damage is dealt.\r\n\r\nUpgradable by Aghanim's Scepter.",
       "notes": "Gives increasing vision over the channeling time.<br />Damages mechanical units.",
       "dmg": "",
       "attrib": "DAMAGE PER SECOND CHANNELED: <span class=\"attribVal\">100 / 100 / 100 / 100</span><br />\nMAX CHANNEL TIME: <span class=\"attribVal\">2 / 3 / 4 / 5</span><br />\nWIDTH: <span class=\"attribVal\">350 / 350 / 350 / 350</span><br />\nRANGE: <span class=\"attribVal\">1550</span>",
@@ -4362,7 +4340,7 @@
       "desc": "Tethers Io to an allied unit, granting bonus movement speed to both. When Io restores health or mana, tethered units target gain 1.5x the amount. Any enemy unit that crosses the tether is slowed. The tether breaks when the allied unit moves too far away, or Io cancels the tether.",
       "notes": "If you try to tether a unit that is 700 distance or further away from Io, he will latch on and pull himself closer to the tethered unit (to a distance of 300).<br />The tethered unit will heal 50% faster.",
       "dmg": "",
-      "attrib": "MAX TETHER DISTANCE: <span class=\"attribVal\">900 / 900 / 900 / 900</span><br />\nMOVEMENT SPEED BONUS: <span class=\"attribVal\">14% / 15% / 16% / 17%</span><br />\nTETHER DURATION: <span class=\"attribVal\">12 / 12 / 12 / 12</span><br />\nENEMY MOVEMENT SLOW: <span class=\"attribVal\">100%</span><br />\nENEMY ATTACK SLOW: <span class=\"attribVal\">100</span><br />\nENEMY SLOW DURATION: <span class=\"attribVal\">0.75 / 1.25 / 1.75 / 2.25</span>",
+      "attrib": "MAX TETHER DISTANCE: <span class=\"attribVal\">900 / 900 / 900 / 900</span><br />\nMOVEMENT SPEED BONUS: <span class=\"attribVal\">13% / 14% / 15% / 16%</span><br />\nTETHER DURATION: <span class=\"attribVal\">12 / 12 / 12 / 12</span><br />\nENEMY MOVEMENT SLOW: <span class=\"attribVal\">100%</span><br />\nENEMY ATTACK SLOW: <span class=\"attribVal\">100</span><br />\nENEMY SLOW DURATION: <span class=\"attribVal\">0.75 / 1.25 / 1.75 / 2.25</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 40/40/40/40</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 12</div><br clear=\"left\" /></div>",
       "lore": "The benevolent touch of Io brings strength from between the planes.",
       "hurl": "Io"
@@ -4461,7 +4439,7 @@
       "desc": "Visage generates a layered barrier that protects him from physical and magical attacks.  If he receives damage from a player, one layer is removed, and takes time to recover.",
       "notes": "Each time Visage receives damage greater than 15 that was not self-inflicted and was from a player owned source, a layer is removed.",
       "dmg": "",
-      "attrib": "ARMOR PER LAYER: <span class=\"attribVal\">1 / 2 / 4 / 5</span><br />\nRESIST PER LAYER: <span class=\"attribVal\">3% / 6% / 12% / 16%</span><br />\nMAX LAYERS: <span class=\"attribVal\">4</span><br />\nLAYER RECOVERY TIME: <span class=\"attribVal\">3</span>",
+      "attrib": "ARMOR PER LAYER: <span class=\"attribVal\">1.5 / 3 / 4.5 / 6</span><br />\nRESIST PER LAYER: <span class=\"attribVal\">5% / 10% / 15% / 20%</span><br />\nMAX LAYERS: <span class=\"attribVal\">4</span><br />\nLAYER RECOVERY TIME: <span class=\"attribVal\">3</span>",
       "cmb": "",
       "lore": "Visage's tough scales share equal properties of ghost and stone, making it nearly impervious to blade and magical assault.",
       "hurl": "Visage"
@@ -4494,7 +4472,7 @@
       "desc": "Slark leaps forward, grabbing the first hero he connects with.  That unit takes damage and is leashed to Slark, and can only move a limited distance away from Slark's landing position.",
       "notes": "On cast, Slark leaps forward at a speed of 933.33, stopping when he latches onto an enemy hero or has traveled 700 distance.<br />Spell Immune units cannot be leashed.<br />Trees will be destroyed around Slark's landing location.<br />Blinking or teleporting can break the leash.",
       "dmg": "",
-      "attrib": "DISTANCE: <span class=\"attribVal\">700</span><br />\nPOUNCE DAMAGE: <span class=\"attribVal\">50 / 100 / 150 / 200</span><br />\nLEASH DURATION: <span class=\"attribVal\">3.5</span><br />\nLEASH RADIUS: <span class=\"attribVal\">325</span>",
+      "attrib": "DISTANCE: <span class=\"attribVal\">700</span><br />\nPOUNCE DAMAGE: <span class=\"attribVal\">40 / 80 / 120 / 160</span><br />\nLEASH DURATION: <span class=\"attribVal\">3.5</span><br />\nLEASH RADIUS: <span class=\"attribVal\">325</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 75/75/75/75</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 20/16/12/8</div><br clear=\"left\" /></div>",
       "lore": "Time in the Dark Reef made Slark a dangerous assassin; aggressive and fearless.",
       "hurl": "Slark"
@@ -4571,7 +4549,7 @@
       "desc": "While active, Troll Warlord swaps from using ranged to melee attacks. Melee attacks have a chance to bash, dealing bonus damage and stunning the target. Berserker's Rage also grants additional health, movement speed, armor, and increased attack speed.\r\n\r\nWhirling Axes has different functionality while Berserker's Rage is active.",
       "notes": "The bash stun goes through spell immunity.<br />Doesn't stack with Skull Basher.<br />Manta Style's cooldown time will be based on whether Troll Warlord was in his ranged or melee form when the item was used.",
       "dmg": "",
-      "attrib": "BONUS HEALTH: <span class=\"attribVal\">100</span><br />\nBONUS MOVE SPEED: <span class=\"attribVal\">10 / 20 / 30 / 40</span><br />\nBONUS ARMOR: <span class=\"attribVal\">3</span><br />\nMELEE BASE ATTACK TIME: <span class=\"attribVal\">1.55</span><br />\nBASH CHANCE: <span class=\"attribVal\">10%</span><br />\nBASH STUN DURATION: <span class=\"attribVal\">0.8 / 1.2 / 1.6 / 2</span><br />\nBASH BONUS DAMAGE: <span class=\"attribVal\">20 / 30 / 40 / 50</span>",
+      "attrib": "BONUS MOVE SPEED: <span class=\"attribVal\">10 / 20 / 30 / 40</span><br />\nBONUS ARMOR: <span class=\"attribVal\">6</span><br />\nMELEE BASE ATTACK TIME: <span class=\"attribVal\">1.5</span><br />\nBASH CHANCE: <span class=\"attribVal\">10%</span><br />\nBASH STUN DURATION: <span class=\"attribVal\">0.8 / 1.2 / 1.6 / 2</span><br />\nBASH BONUS DAMAGE: <span class=\"attribVal\">20 / 30 / 40 / 50</span>",
       "cmb": "",
       "lore": "Like his anger, Troll Warlord's supply of axes is infinite.",
       "hurl": "Troll_Warlord"
@@ -4638,7 +4616,7 @@
       "notes": "Double Edge deals magic type damage to both the targets and himself.",
       "dmg": "",
       "attrib": "DAMAGE: <span class=\"attribVal\">175 / 250 / 325 / 400</span>",
-      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 0/0/0/0</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 6</div><br clear=\"left\" /></div>",
+      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 0/0/0/0</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 5</div><br clear=\"left\" /></div>",
       "lore": "In the spurs of combat, Bradwarden's vicious strikes sometimes cause self-inflicted collateral damage.",
       "hurl": "Centaur_Warrunner"
     },
@@ -4659,7 +4637,7 @@
       "desc": "Centaur leads all allies into a vicious charge causing them to move through units at max speed and stop any enemy units they trample. Trampled enemies take damage based on Centaur Warrunner's strength. Each enemy can be trampled once.\r\n\r\nUpgradable by Aghanim's Scepter.",
       "notes": "Doesn't affect Spell Immune units.",
       "dmg": "",
-      "attrib": "STAMPEDE DURATION: <span class=\"attribVal\">4</span><br />\nSTRENGTH MULTIPLIER DAMAGE: <span class=\"attribVal\">1 / 2 / 3</span><br />\nSTOP DURATION: <span class=\"attribVal\">1.5</span><br />\nTRAMPLE RADIUS: <span class=\"attribVal\">105</span><br />\n<span class=\"scepterVal\">SCEPTER DAMAGE REDUCTION:</span> <span class=\"attribVal\">60%</span>",
+      "attrib": "STAMPEDE DURATION: <span class=\"attribVal\">4</span><br />\nSTRENGTH MULTIPLIER DAMAGE: <span class=\"attribVal\">1 / 2 / 3</span><br />\nSTOP DURATION: <span class=\"attribVal\">1.8</span><br />\nTRAMPLE RADIUS: <span class=\"attribVal\">105</span><br />\n<span class=\"scepterVal\">SCEPTER DAMAGE REDUCTION:</span> <span class=\"attribVal\">60%</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 100</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 90/75/60</div><br clear=\"left\" /></div>",
       "lore": "The great belt of Omexe, which labels Bradwarden as the greatest warrior of his kind, incites his fellow gladiators to follow him into barbarous combat.",
       "hurl": "Centaur_Warrunner"
@@ -4678,10 +4656,10 @@
     "magnataur_empower": {
       "dname": "Empower",
       "affects": "ABILITY: <span class=\"attribVal\">Unit Target</span><br />AFFECTS: <span class=\"attribVal\">Allied Units</span><br />PIERCES SPELL IMMUNITY: <span class=\"attribVal\"><font color=\"#70EA72\">Yes</font></span><br />",
-      "desc": "Gives an allied unit bonus damage and cleave on attack.\r\n\r\nUpgradable by Aghanim's Scepter, changing Empower to be an allied hero aura. Affects ranged heroes for half values and causes them to splash around the target. Can still be cast on units, but doesn't stack.",
+      "desc": "Gives an allied unit bonus damage and cleave on attack.\r\n\r\nUpgradable by Aghanim's Scepter.",
       "notes": "The bonus damage is based only on base damage and damage from primary attributes.<br />Cleave damage is reduced by armor type but not by armor value.<br />Cleave damage goes through spell immunity.<br />Ranged units cannot Cleave.",
       "dmg": "",
-      "attrib": "DURATION: <span class=\"attribVal\">40 / 40 / 40 / 40</span><br />\nBONUS DAMAGE: <span class=\"attribVal\">20% / 30% / 40% / 50%</span><br />\nCLEAVE DAMAGE: <span class=\"attribVal\">20% / 30% / 40% / 50%</span><br />\nCLEAVE RADIUS: <span class=\"attribVal\">200</span>",
+      "attrib": "DURATION: <span class=\"attribVal\">40 / 40 / 40 / 40</span><br />\nBONUS DAMAGE: <span class=\"attribVal\">20% / 30% / 40% / 50%</span><br />\nCLEAVE DAMAGE: <span class=\"attribVal\">20% / 30% / 40% / 50%</span><br />\nCLEAVE RADIUS: <span class=\"attribVal\">240</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 30/40/50/60</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 8</div><br clear=\"left\" /></div>",
       "lore": "With a deep bellow, Magnus displays his true power.",
       "hurl": "Magnus"
@@ -4700,7 +4678,7 @@
     "magnataur_reverse_polarity": {
       "dname": "Reverse Polarity",
       "affects": "ABILITY: <span class=\"attribVal\">No Target</span><br />DAMAGE TYPE: <span class=\"attribVal\">Magical</span><br />PIERCES SPELL IMMUNITY: <span class=\"attribVal\"><font color=\"#70EA72\">Yes</font></span><br />",
-      "desc": "Magnus changes properties of matter, sucking all nearby enemies in front of him and stunning them with a powerful slam and dealing damage.\r\n\r\nUpgradable by Aghanim's Scepter.",
+      "desc": "Magnus changes properties of matter, sucking all nearby enemies in front of him and stunning them with a powerful slam and dealing damage.",
       "notes": "Disable and pull work through spell immunity.",
       "dmg": "",
       "attrib": "PULL RADIUS: <span class=\"attribVal\">410</span><br />\nDAMAGE: <span class=\"attribVal\">50 / 125 / 200</span><br />\nHERO STUN DURATION: <span class=\"attribVal\">2.25 / 3 / 3.75</span><br />\nCREEP STUN DURATION: <span class=\"attribVal\">3 / 4 / 5</span>",
@@ -4744,7 +4722,7 @@
     "shredder_chakram_2": {
       "dname": "Chakram",
       "affects": "ABILITY: <span class=\"attribVal\">Point Target</span><br />DAMAGE TYPE: <span class=\"attribVal\"><font color=\"#d61107\">Pure</font></span><br />PIERCES SPELL IMMUNITY: <span class=\"attribVal\">No</span><br />",
-      "desc": "Fires your main saw blade at the target location where it will spin in place, dealing damage in an area around it.  Additionally, for each 5% of health missing, enemies caught in the saw blade move more slowly. The blade deals damage and cuts down trees in its path when fired and retracted.  While active the ability costs mana, and you lose the ability to attack.",
+      "desc": "Fires a secondary saw blade at the target location where it will spin in place, dealing damage in an area around it.  Additionally, for each 5% of health missing, enemies caught in the saw blade move more slowly. The blade deals damage and cuts down trees in its path when fired and retracted.  While active the ability costs mana, and you lose the ability to attack.",
       "notes": "The Chakram will return if Timbersaw runs out of mana or moves over 2000 distance away.",
       "dmg": "",
       "attrib": "RADIUS: <span class=\"attribVal\">200</span><br />\nPASS DAMAGE: <span class=\"attribVal\">100 / 140 / 180</span><br />\nDAMAGE PER SECOND: <span class=\"attribVal\">50 / 75 / 100</span><br />\nSLOW: <span class=\"attribVal\">5%</span><br />\nMANA COST PER SECOND: <span class=\"attribVal\">20 / 25 / 30</span>",
@@ -4788,10 +4766,10 @@
     "bristleback_viscous_nasal_goo": {
       "dname": "Viscous Nasal Goo",
       "affects": "ABILITY: <span class=\"attribVal\">Unit Target</span><br />AFFECTS: <span class=\"attribVal\">Enemy Units</span><br />PIERCES SPELL IMMUNITY: <span class=\"attribVal\">No</span><br />",
-      "desc": "Covers a target in snot, causing it to have reduced armor and movement speed.  Multiple casts stack and refresh the duration.\r\n\r\nUpgradable by Aghanim's Scepter, making Goo an AoE ability that applies Goo to all enemies around you in a 700 radius.",
+      "desc": "Covers a target in snot, causing it to have reduced armor and movement speed.  Multiple casts stack and refresh the duration.\r\n\r\nUpgradable by Aghanim's Scepter.",
       "notes": "",
       "dmg": "",
-      "attrib": "DURATION: <span class=\"attribVal\">5</span><br />\nARMOR LOSS: <span class=\"attribVal\">1 / 1.4 / 1.8 / 2.2</span><br />\nBASE MOVEMENT SLOW: <span class=\"attribVal\">20%</span><br />\nMOVE SLOW PER STACK: <span class=\"attribVal\">3% / 6% / 9% / 12%</span><br />\nSTACK LIMIT: <span class=\"attribVal\">4</span><br />\nSCEPTER RADIUS: <span class=\"attribVal\">700</span>",
+      "attrib": "DURATION: <span class=\"attribVal\">5</span><br />\nARMOR LOSS: <span class=\"attribVal\">1 / 1.4 / 1.8 / 2.2</span><br />\nBASE MOVEMENT SLOW: <span class=\"attribVal\">20%</span><br />\nMOVE SLOW PER STACK: <span class=\"attribVal\">3% / 6% / 9% / 12%</span><br />\nSTACK LIMIT: <span class=\"attribVal\">4</span><br />\n<span class=\"scepterVal\">SCEPTER RADIUS:</span> <span class=\"attribVal\">700</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 25</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 1.50</div><br clear=\"left\" /></div>",
       "lore": "Having caught a cold while stuck in the snow, Bristleback turns it to his advantage.",
       "hurl": "Bristleback"
@@ -4876,7 +4854,7 @@
     "tusk_walrus_kick": {
       "dname": "Walrus Kick",
       "affects": "ABILITY: <span class=\"attribVal\">Unit Target</span><br />AFFECTS: <span class=\"attribVal\">Enemy Units</span><br />PIERCES SPELL IMMUNITY: <span class=\"attribVal\"><font color=\"#70EA72\">Yes</font></span><br />",
-      "desc": "Kicks the target unit back 900 units, damaging them and slowing their movement by 40% for 4 seconds.",
+      "desc": "Kicks the target unit back, damaging them and slowing their movement speed.",
       "notes": "",
       "dmg": "",
       "attrib": "KICK PUSH DISTANCE: <span class=\"attribVal\">900</span><br />\nMOVE SLOW: <span class=\"attribVal\">40%</span><br />\nSLOW DURATION: <span class=\"attribVal\">4</span><br />\nDAMAGE: <span class=\"attribVal\">350</span>",
@@ -4887,8 +4865,8 @@
     "tusk_walrus_punch": {
       "dname": "Walrus PUNCH!",
       "affects": "ABILITY: <span class=\"attribVal\">Auto-Cast, Unit Target</span><br />AFFECTS: <span class=\"attribVal\">Enemy Units</span><br />PIERCES SPELL IMMUNITY: <span class=\"attribVal\"><font color=\"#70EA72\">Yes</font></span><br />",
-      "desc": "Tusk connects with his mighty Walrus Punch, a critical strike so powerful it launches its victim into the air. The victim is slowed upon landing.\r\n\r\nUpgradable by Aghanim's Scepter.",
-      "notes": "Walrus Punch cannot miss.<br />Works fully on Spell Immune units.",
+      "desc": "Tusk connects with his mighty Walrus Punch, a critical strike so powerful it launches its victim into the air. The victim is slowed upon landing.",
+      "notes": "Works fully on Spell Immune units.",
       "dmg": "",
       "attrib": "CRIT MULTIPLIER: <span class=\"attribVal\">350%</span><br />\nAIR TIME: <span class=\"attribVal\">1</span><br />\nSLOW DURATION: <span class=\"attribVal\">2 / 3 / 4</span><br />\nMOVEMENT SLOW: <span class=\"attribVal\">40%</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 50/75/100</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 36/24/12</div><br clear=\"left\" /></div>",
@@ -4912,7 +4890,7 @@
       "desc": "Skywrath Mage sets off a long range shot that hits the closest hero within a long range.  Upon impact, it deals damage and slows in an area of effect.",
       "notes": "Does not work when no heroes are in range or heroes are in fog.<br />Damages creeps around the impact area.<br />Provides 400 vision around the projectile, and reveals the target area for 3.34 seconds upon impact.",
       "dmg": "",
-      "attrib": "SHOT RANGE: <span class=\"attribVal\">1600</span><br />\nDAMAGE RADIUS: <span class=\"attribVal\">200</span><br />\nDAMAGE: <span class=\"attribVal\">60 / 120 / 180 / 240</span><br />\nSLOW DURATION: <span class=\"attribVal\">4</span><br />\nSLOW: <span class=\"attribVal\">30% / 35% / 40% / 45%</span>",
+      "attrib": "SHOT RANGE: <span class=\"attribVal\">1600</span><br />\nDAMAGE RADIUS: <span class=\"attribVal\">250</span><br />\nDAMAGE: <span class=\"attribVal\">60 / 120 / 180 / 240</span><br />\nSLOW DURATION: <span class=\"attribVal\">4</span><br />\nSLOW: <span class=\"attribVal\">30% / 35% / 40% / 45%</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 95</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 18/16/14/12</div><br clear=\"left\" /></div>",
       "lore": "Those who serve the court of the Ghastly Eyrie are ever locked in covert war. One must always know where danger lurks nearest.",
       "hurl": "Skywrath_Mage"
@@ -4934,7 +4912,7 @@
       "desc": "Skywrath Mage uses his ultimate magical ability to conjure a precise and violent mystical field that lays waste to his adversaries. Deals massive damage distributed evenly among any Heroes in the area over 2.4 seconds.\r\n\r\nUpgradable by Aghanim's Scepter.",
       "notes": "Mystic Flare only affects Heroes; it does not damage illusions or creep heroes.<br />Spell immune enemies do not count toward the damage distribution.",
       "dmg": "",
-      "attrib": "RADIUS: <span class=\"attribVal\">170</span><br />\nDURATION: <span class=\"attribVal\">2.4</span><br />\nDAMAGE: <span class=\"attribVal\">600 / 1000 / 1400</span><br />\nSCEPTER COOLDOWN: <span class=\"attribVal\">20 / 10 / 5</span><br />\nSCEPTER DURATION: <span class=\"attribVal\">12</span>",
+      "attrib": "RADIUS: <span class=\"attribVal\">170</span><br />\nDURATION: <span class=\"attribVal\">2.4</span><br />\nDAMAGE: <span class=\"attribVal\">600 / 1000 / 1400</span><br />\n<span class=\"scepterVal\">SCEPTER COOLDOWN:</span> <span class=\"attribVal\">20 / 10 / 5</span><br />\n<span class=\"scepterVal\">SCEPTER DURATION:</span> <span class=\"attribVal\">12</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 350/575/800</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 60/40/20</div><br clear=\"left\" /></div>",
       "lore": "Only the most practiced of Skywrath sorcerers could hope to shape the skies into such a storm.",
       "hurl": "Skywrath_Mage"
@@ -5044,7 +5022,7 @@
       "desc": "Turns the enemies' numbers against them, dealing damage and granting you bonus movement speed per unit or per hero.  Deals bonus damage to illusions and summoned units as a percent of their current health.",
       "notes": "",
       "dmg": "",
-      "attrib": "BASE DAMAGE: <span class=\"attribVal\">40 / 80 / 120 / 160</span><br />\nDAMAGE PER CREEP: <span class=\"attribVal\">14 / 16 / 18 / 20</span><br />\nDAMAGE PER HERO: <span class=\"attribVal\">20 / 35 / 50 / 65</span><br />\nILLUSION DAMAGE: <span class=\"attribVal\">25%</span><br />\nBONUS SPEED (CREEPS): <span class=\"attribVal\">3%</span><br />\nBONUS SPEED (HEROES): <span class=\"attribVal\">9%</span><br />\nSPEED DURATION: <span class=\"attribVal\">7</span><br />\nRADIUS: <span class=\"attribVal\">330</span>",
+      "attrib": "BASE DAMAGE: <span class=\"attribVal\">40 / 80 / 120 / 160</span><br />\nDAMAGE PER CREEP: <span class=\"attribVal\">14 / 16 / 18 / 20</span><br />\nDAMAGE PER HERO: <span class=\"attribVal\">20 / 40 / 60 / 80</span><br />\nILLUSION DAMAGE: <span class=\"attribVal\">25%</span><br />\nBONUS SPEED (CREEPS): <span class=\"attribVal\">3%</span><br />\nBONUS SPEED (HEROES): <span class=\"attribVal\">9%</span><br />\nSPEED DURATION: <span class=\"attribVal\">7</span><br />\nRADIUS: <span class=\"attribVal\">330</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 100/100/100/100</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 15</div><br clear=\"left\" /></div>",
       "lore": "The archers of Stonehall are ready at Tresdin's command.",
       "hurl": "Legion_Commander"
@@ -5055,7 +5033,7 @@
       "desc": "Removes debuffs and disables from the target friendly unit, and grants bonus attack speed and health regen for a short time.",
       "notes": "",
       "dmg": "",
-      "attrib": "DURATION: <span class=\"attribVal\">5</span><br />\nBONUS ATTACK SPEED: <span class=\"attribVal\">60 / 80 / 100 / 120</span><br />\nHP REGEN: <span class=\"attribVal\">30 / 40 / 50 / 60</span>",
+      "attrib": "DURATION: <span class=\"attribVal\">5</span><br />\nBONUS ATTACK SPEED: <span class=\"attribVal\">65 / 90 / 115 / 140</span><br />\nHP REGEN: <span class=\"attribVal\">30 / 40 / 50 / 60</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 110</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 16/15/14/13</div><br clear=\"left\" /></div>",
       "lore": "The rallying horn of the Bronze Legion is able to inspire any heart.",
       "hurl": "Legion_Commander"
@@ -5067,7 +5045,7 @@
       "notes": "",
       "dmg": "",
       "attrib": "COUNTERATTACK CHANCE: <span class=\"attribVal\">25%</span><br />\nLIFESTEAL: <span class=\"attribVal\">55% / 65% / 75% / 85%</span>",
-      "cmb": "<div class=\"cooldownMana\"><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 2.60/2/1.40/0.80</div><br clear=\"left\" /></div>",
+      "cmb": "<div class=\"cooldownMana\"><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 2.30/1.80/1.30/0.80</div><br clear=\"left\" /></div>",
       "lore": "Tresdin knows that an enemy's most vulnerable moment often follows their fiercest stroke.",
       "hurl": "Legion_Commander"
     },
@@ -5077,7 +5055,7 @@
       "desc": "Legion Commander and the target enemy hero are forced to attack each other for a short duration.  Neither hero can use items or abilities.  If either hero dies during the duration, the hero winning the Duel gains permanent bonus damage.\r\n\r\nUpgradable by Aghanim's Scepter.",
       "notes": "Duels will end if the units are pushed 2000 units apart.",
       "dmg": "",
-      "attrib": "DURATION: <span class=\"attribVal\">4 / 4.75 / 5.5</span><br />\nBONUS DAMAGE: <span class=\"attribVal\">10 / 14 / 18</span>",
+      "attrib": "DURATION: <span class=\"attribVal\">4 / 4.75 / 5.5</span><br />\n<span class=\"scepterVal\">SCEPTER DURATION:</span> <span class=\"attribVal\">6 / 7 / 8</span><br />\nBONUS DAMAGE: <span class=\"attribVal\">10 / 14 / 18</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 75/75/75</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 50</div><br clear=\"left\" /></div>",
       "lore": "To face a soldier of Stonehall in single combat is a challenge few can resist.",
       "hurl": "Legion_Commander"
@@ -5154,7 +5132,7 @@
       "desc": "Earth Spirit gathers himself into a boulder and, after a 0.6s delay, rolls toward the target location, damaging enemy units. He will stop if he collides with an enemy hero or is stunned. If he rolls over a Stone Remnant, he will travel further and faster, and enemies hit by the boulder will have their movement speed slowed.",
       "notes": "Rolling over a Stone Remnant will destroy the Remnant.<br />The boulder has a radius of 150.",
       "dmg": "",
-      "attrib": "SPEED: <span class=\"attribVal\">800</span><br />\nSPEED (REMNANT): <span class=\"attribVal\">1600</span><br />\nDISTANCE: <span class=\"attribVal\">800</span><br />\nDISTANCE (REMNANT): <span class=\"attribVal\">1600</span><br />\nDAMAGE: <span class=\"attribVal\">100</span><br />\nMOVEMENT SLOW: <span class=\"attribVal\">80%</span><br />\nSLOW DURATION: <span class=\"attribVal\">2</span>",
+      "attrib": "SPEED: <span class=\"attribVal\">800</span><br />\nSPEED (REMNANT): <span class=\"attribVal\">1600</span><br />\nDISTANCE: <span class=\"attribVal\">800</span><br />\nDISTANCE (REMNANT): <span class=\"attribVal\">1600</span><br />\nDAMAGE: <span class=\"attribVal\">100</span><br />\nMOVEMENT SLOW: <span class=\"attribVal\">80%</span><br />\nSLOW DURATION: <span class=\"attribVal\">1.4 / 1.6 / 1.8 / 2</span>",
       "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 50</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 16/12/8/4</div><br clear=\"left\" /></div>",
       "lore": "Calling upon his connection to the land, the Earth Spirit draws loose stone to him, which forms a protective ball that he can use to roll short distances.",
       "hurl": "Earth_Spirit"
@@ -5162,7 +5140,7 @@
     "earth_spirit_geomagnetic_grip": {
       "dname": "Geomagnetic Grip",
       "affects": "ABILITY: <span class=\"attribVal\">Unit Target, Point Target</span><br />AFFECTS: <span class=\"attribVal\">Allied Units</span><br />DAMAGE TYPE: <span class=\"attribVal\">Magical</span><br />PIERCES SPELL IMMUNITY: <span class=\"attribVal\">No</span><br />",
-      "desc": "Earth Spirit pulls the target Stone Remnant. Enemies struck by the gripped target will be silenced, and take damage if the gripped target is a Stone Remnant.",
+      "desc": "Earth Spirit pulls the target Stone Remnant. Enemies struck by the gripped target will be silenced, and take damage if the gripped target is a Stone Remnant.\r\n\r\nUpgradable by Aghanim's Scepter.",
       "notes": "Will not work on a unit inside Chronosphere, Duel, or Black Hole.<br />Can pull allied heroes with Scepter.",
       "dmg": "",
       "attrib": "SILENCE DURATION: <span class=\"attribVal\">2.5 / 3 / 3.5 / 4</span><br />\nHERO PULL SPEED: <span class=\"attribVal\">600</span><br />\nREMNANT DAMAGE: <span class=\"attribVal\">50 / 100 / 150 / 200</span><br />\nREMNANT PULL SPEED: <span class=\"attribVal\">1000</span>",
@@ -5184,7 +5162,7 @@
     "earth_spirit_petrify": {
       "dname": "Enchant Remnant",
       "affects": "ABILITY: <span class=\"attribVal\">Unit Target</span><br />DAMAGE TYPE: <span class=\"attribVal\">Magical</span><br />PIERCES SPELL IMMUNITY: <span class=\"attribVal\">No</span><br />",
-      "desc": "Earth Spirit temporarily enchants a hero, granting them the properties of a Stone Remnant. After 3 seconds the remnant shatters, releasing the hero and damaging nearby enemies.",
+      "desc": "Earth Spirit temporarily enchants a hero, granting them the properties of a Stone Remnant. After a short duration the remnant shatters, releasing the hero and damaging nearby enemies.",
       "notes": "",
       "dmg": "",
       "attrib": "REMNANT DURATION: <span class=\"attribVal\">3</span><br />\nSHATTER DAMAGE: <span class=\"attribVal\">300</span><br />\nSHATTER RADIUS: <span class=\"attribVal\">300</span>",
@@ -5195,11 +5173,11 @@
     "earth_spirit_magnetize": {
       "dname": "Magnetize",
       "affects": "ABILITY: <span class=\"attribVal\">No Target</span><br />DAMAGE TYPE: <span class=\"attribVal\">Magical</span><br />PIERCES SPELL IMMUNITY: <span class=\"attribVal\">No</span><br />",
-      "desc": "Magnetizes units in a small nearby area, causing them to take damage for a short duration. Magnetized heroes cause nearby Stone Remnants to explode, destroying the remnant and refreshing Magnetize's duration on all nearby enemies. This process can repeat multiple times. If an enemy hero is affected by silence or slows as a result of Geomagnetic Grip or Rolling Boulder, all magnetized heroes share the effects.\r\n\r\nUpgradable by Aghanim's Scepter.",
+      "desc": "Magnetizes units in a small nearby area, causing them to take damage for a short duration. Magnetized heroes cause nearby Stone Remnants to explode, destroying the remnant and refreshing Magnetize's duration on all nearby enemies. This process can repeat multiple times. If an enemy hero is affected by silence or slows as a result of Geomagnetic Grip or Rolling Boulder, all magnetized heroes share the effects.",
       "notes": "",
       "dmg": "",
       "attrib": "RADIUS: <span class=\"attribVal\">300</span><br />\nDAMAGE PER SECOND: <span class=\"attribVal\">50 / 75 / 100</span><br />\nMAGNETIZE DURATION: <span class=\"attribVal\">6</span><br />\nREMNANT REFRESH RADIUS: <span class=\"attribVal\">400</span><br />\nREMNANT EXPLOSION RADIUS: <span class=\"attribVal\">600</span>",
-      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 100.000000</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 80</div><br clear=\"left\" /></div>",
+      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 100.000000</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 100/90/80</div><br clear=\"left\" /></div>",
       "lore": "At the Earth Spirit's call, the minerals in the blood and bones of his enemies rebel against the bodies they find themselves in.",
       "hurl": "Earth_Spirit"
     },
@@ -5220,8 +5198,8 @@
       "desc": "Creates an illusion of Terrorblade that deals damage.",
       "notes": "",
       "dmg": "",
-      "attrib": "ILLUSION DURATION: <span class=\"attribVal\">32</span><br />\nILLUSION DAMAGE: <span class=\"attribVal\">30% / 40% / 50% / 60%</span><br />\nILLUSION DAMAGE TAKEN: <span class=\"attribVal\">425%</span>",
-      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 80</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 16</div><br clear=\"left\" /></div>",
+      "attrib": "ILLUSION DURATION: <span class=\"attribVal\">34</span><br />\nILLUSION DAMAGE: <span class=\"attribVal\">30% / 40% / 50% / 60%</span><br />\nILLUSION DAMAGE TAKEN: <span class=\"attribVal\">400%</span>",
+      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 70</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 16</div><br clear=\"left\" /></div>",
       "lore": "There's only one thing more dangerous than facing Terrorblade.  Facing MORE Terrrorblades!",
       "hurl": "Terrorblade"
     },
@@ -5231,8 +5209,8 @@
       "desc": "Terrorblade transforms into a powerful demon with a ranged attack. Any of Terrorblade's illusions that are within 900 range will also be transformed by Metamorphosis.",
       "notes": "Manta Style's cooldown time will be based on whether Terrorblade was in his ranged or melee form when the item was used.",
       "dmg": "",
-      "attrib": "DURATION: <span class=\"attribVal\">40 / 44 / 48 / 52</span><br />\nTRANSFORMATION TIME: <span class=\"attribVal\">0.35</span><br />\nBASE ATTACK TIME: <span class=\"attribVal\">1.6</span><br />\nATTACK RANGE: <span class=\"attribVal\">550</span><br />\nBONUS DAMAGE: <span class=\"attribVal\">20 / 40 / 60 / 80</span><br />\nMOVEMENT SPEED LOSS: <span class=\"attribVal\">25</span><br />\nILLUSION AURA RADIUS: <span class=\"attribVal\">900</span>",
-      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 50</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 140</div><br clear=\"left\" /></div>",
+      "attrib": "DURATION: <span class=\"attribVal\">40 / 44 / 48 / 52</span><br />\nTRANSFORMATION TIME: <span class=\"attribVal\">0.35</span><br />\nBASE ATTACK TIME: <span class=\"attribVal\">1.5</span><br />\nATTACK RANGE: <span class=\"attribVal\">550</span><br />\nBONUS DAMAGE: <span class=\"attribVal\">20 / 40 / 60 / 80</span><br />\nMOVEMENT SPEED LOSS: <span class=\"attribVal\">25</span><br />\nILLUSION AURA RADIUS: <span class=\"attribVal\">900</span>",
+      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 100</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 140</div><br clear=\"left\" /></div>",
       "lore": "Temper, temper. The rage rises up and takes control.  Meet Terrorblade's own worst self.",
       "hurl": "Terrorblade"
     },
@@ -5275,8 +5253,8 @@
       "desc": "Phoenix expels a beam of light at the cost of its own health. The beam damages enemies and heals allies for a base amount plus a percentage of their health. The percentage increases as the beam continues to fire.",
       "notes": "Sun Ray has a width of 130 units, and a length of 1300 units.",
       "dmg": "",
-      "attrib": "HEALTH COST PER SECOND: <span class=\"attribVal\">6%</span><br />\nBASE DAMAGE PER SECOND: <span class=\"attribVal\">15 / 20 / 25 / 30</span><br />\nMAX DAMAGE: <span class=\"attribVal\">1.25% / 2.5% / 3.75% / 5%</span><br />\nBASE HEAL PER SECOND: <span class=\"attribVal\">7 / 10 / 13 / 16</span><br />\nMAX HEAL: <span class=\"attribVal\">0.625% / 1.25% / 1.875% / 2.5%</span><br />\nDURATION: <span class=\"attribVal\">6</span>",
-      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 100</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 20</div><br clear=\"left\" /></div>",
+      "attrib": "HEALTH COST PER SECOND: <span class=\"attribVal\">6%</span><br />\nBASE DAMAGE PER SECOND: <span class=\"attribVal\">10 / 15 / 20 / 25</span><br />\nMAX DAMAGE: <span class=\"attribVal\">1.25% / 2.5% / 3.75% / 5%</span><br />\nBASE HEAL PER SECOND: <span class=\"attribVal\">7 / 10 / 13 / 16</span><br />\nMAX HEAL: <span class=\"attribVal\">0.625% / 1.25% / 1.875% / 2.5%</span><br />\nDURATION: <span class=\"attribVal\">6</span>",
+      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 100</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 26</div><br clear=\"left\" /></div>",
       "lore": "The vent through which such stellar energy flows is mere atoms wide.",
       "hurl": "Phoenix"
     },
@@ -5360,7 +5338,7 @@
     "oracle_purifying_flames": {
       "dname": "Purifying Flames",
       "affects": "ABILITY: <span class=\"attribVal\">Unit Target</span><br />DAMAGE TYPE: <span class=\"attribVal\">Magical</span><br />PIERCES SPELL IMMUNITY: <span class=\"attribVal\">No</span><br />",
-      "desc": "Burns away impurities, dealing heavy magic damage to the target before causing them to regenerate health over time. The amount of health regenerated over its duration exceeds the amount of initial damage. Can be cast on enemies and allies.\r\n\r\nUpgradable by Aghanim's Scepter, reducing cooldown and improves cast point.",
+      "desc": "Burns away impurities, dealing heavy magic damage to the target before causing them to regenerate health over time. The amount of health regenerated over its duration exceeds the amount of initial damage. Can be cast on enemies and allies.\r\n\r\nUpgradable by Aghanim's Scepter.",
       "notes": "The healing from Purifying Flames can be stacked with itself.",
       "dmg": "",
       "attrib": "DAMAGE: <span class=\"attribVal\">90 / 180 / 270 / 360</span><br />\nHEAL PER SECOND: <span class=\"attribVal\">11 / 22 / 33 / 44</span><br />\nTOTAL HEAL: <span class=\"attribVal\">99 / 198 / 297 / 396</span><br />\nDURATION: <span class=\"attribVal\">9</span><br />\n<span class=\"scepterVal\">SCEPTER COOLDOWN:</span> <span class=\"attribVal\">1</span>",
@@ -5426,7 +5404,7 @@
     "techies_minefield_sign": {
       "dname": "Minefield Sign",
       "affects": "ABILITY: <span class=\"attribVal\">Point Target</span><br />DAMAGE TYPE: <span class=\"attribVal\">DOTA_ToolTip_Damage_None</span><br />",
-      "desc": "Plant a warning sign to remind enemies to step lightly. Only one sign can exist at a time. Lasts 180 seconds.\r\n\r\nUpgradable by Aghanim's Scepter, allowing Minefield Sign to hide any Land Mines, Stasis Traps, and Remote Mines in a 125 radius from True Sight.",
+      "desc": "Plant a warning sign to remind enemies to step lightly. Only one sign can exist at a time. Lasts 180 seconds.\r\n\r\nUpgradable by Aghanim's Scepter.",
       "notes": "",
       "dmg": "",
       "attrib": "SIGN DURATION: <span class=\"attribVal\">180</span>",
@@ -5448,7 +5426,7 @@
     "winter_wyvern_arctic_burn": {
       "dname": "Arctic Burn",
       "affects": "ABILITY: <span class=\"attribVal\">No Target</span><br />DAMAGE TYPE: <span class=\"attribVal\">Magical</span><br />PIERCES SPELL IMMUNITY: <span class=\"attribVal\">No</span><br />",
-      "desc": "Winter Wyvern soars upon an arctic wind, granting her unobstructed movement and allowing her to exhale a blistering chill into each attack. While soaring, her attacks travel further and faster, and slow enemies with a magical freeze that strips them of 8% of their current health each second. Her sight is also hardened against night's chill, granting her 400 additional vision range at night while soaring.\r\n\r\nUpgradable by Aghanim's Scepter, causing Arctic Burn to be a toggle ability, draining 40 mana per second when active. Removes limit on number of attacks per target.",
+      "desc": "Winter Wyvern soars upon an arctic wind, granting her unobstructed movement and allowing her to exhale a blistering chill into each attack. While soaring, her attacks travel further and faster, and slow enemies with a magical freeze that strips them of 8% of their current health each second. Her sight is also hardened against night's chill, granting her 400 additional vision range at night while soaring.\r\n\r\nUpgradable by Aghanim's Scepter.",
       "notes": "Enemy units can only receive the Arctic Burn debuff once per cast.<br />This ability does not affect Roshan.<br />Reduces Winter Wyvern's attack point to 0.1.",
       "dmg": "",
       "attrib": "FLIGHT DURATION: <span class=\"attribVal\">6</span><br />\nBONUS ATTACK RANGE: <span class=\"attribVal\">275 / 375 / 475 / 575</span><br />\nHEALTH BURN: <span class=\"attribVal\">8%</span><br />\nBURN DURATION: <span class=\"attribVal\">5</span><br />\nMOVEMENT SLOW: <span class=\"attribVal\">19% / 26% / 33% / 40%</span><br />\nADDED NIGHT VISION RANGE: <span class=\"attribVal\">400</span><br />\n<span class=\"scepterVal\">SCEPTER MANA PER SECOND:</span> <span class=\"attribVal\">40</span>",
@@ -5485,7 +5463,7 @@
       "notes": "If the target dies to its allies, Winter Wyvern will receive credit for the kill.<br />Will only pierce the spell immunity of the primary target, not the target's surrounding allies.",
       "dmg": "",
       "attrib": "CURSE RADIUS: <span class=\"attribVal\">500</span><br />\nCURSE DAMAGE REDUCTION: <span class=\"attribVal\">100%</span><br />\nCURSE ATTACK SPEED: <span class=\"attribVal\">70</span><br />\nCURSE DURATION: <span class=\"attribVal\">3.25 / 4 / 4.75</span>",
-      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 250</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 90</div><br clear=\"left\" /></div>",
+      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 250</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 80</div><br clear=\"left\" /></div>",
       "lore": "The oldest of the bookwurm’s spells, this curse lends truth to the old saw: sometimes the enemy of my enemy is my enemy still.",
       "hurl": "Winter_Wyvern"
     },
@@ -5496,7 +5474,7 @@
       "notes": "",
       "dmg": "",
       "attrib": "DURATION: <span class=\"attribVal\">6</span><br />\nDAMAGE PER SECOND: <span class=\"attribVal\">15 / 30 / 45 / 60</span><br />\nALLY SEARCH RADIUS: <span class=\"attribVal\">225</span><br />\nMOVEMENT SPEED SLOW: <span class=\"attribVal\">35% / 40% / 45% / 50%</span><br />\nCAST RANGE: <span class=\"attribVal\">600 / 700 / 800 / 900</span>",
-      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 75</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 20</div><br clear=\"left\" /></div>",
+      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 75</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 18</div><br clear=\"left\" /></div>",
       "lore": "An infinitesimal fraction of the power which imprisoned the Ancients.",
       "hurl": "Arc_Warden"
     },
@@ -5528,8 +5506,8 @@
       "desc": "Briefly refocusing its fractured elements into a single form, the Arc Warden is able to create a perfect electrical duplication of itself. The duplicate can use all of Arc Warden's current items and spells, except items that drop on death. The duplicate has seperate item and ability cooldowns.",
       "notes": "",
       "dmg": "",
-      "attrib": "DURATION: <span class=\"attribVal\">12 / 13 / 14</span>",
-      "cmb": "<div class=\"cooldownMana\"><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 50/40/30</div><br clear=\"left\" /></div>",
+      "attrib": "DURATION: <span class=\"attribVal\">12 / 14 / 16</span>",
+      "cmb": "<div class=\"cooldownMana\"><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 40/35/30</div><br clear=\"left\" /></div>",
       "lore": "Warped by the power of its peers, Arc Warden becomes what it despises most: disharmony.",
       "hurl": "Arc_Warden"
     }
