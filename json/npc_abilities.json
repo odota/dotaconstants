@@ -435,7 +435,6 @@
       "AbilityUnitTargetType": "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP",
       "AbilityUnitTargetFlags": "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES",
       "SpellImmunityType": "SPELL_IMMUNITY_ENEMIES_YES",
-      "AbilityUnitDamageType": "DAMAGE_TYPE_MAGICAL",
       "FightRecapLevel": "1",
       "AbilityCastPoint": "0.2",
       "AbilityCooldown": "12 10 8 6",
@@ -17403,7 +17402,7 @@
           ]
         },
         {
-          "damage_radius": [
+          "radius": [
             225,
             225,
             225,
@@ -19504,7 +19503,7 @@
           ]
         },
         {
-          "dps": [
+          "damage_per_second": [
             10,
             30,
             50,
@@ -19535,7 +19534,7 @@
           "hp_cost_perc_per_second": 6
         },
         {
-          "base_dmg": [
+          "base_damage": [
             10,
             15,
             20,
@@ -19543,7 +19542,7 @@
           ]
         },
         {
-          "hp_perc_dmg": [
+          "hp_perc_damage": [
             1.25,
             2.5,
             3.75,
@@ -19714,7 +19713,7 @@
           ]
         },
         {
-          "dps": [
+          "damage_per_second": [
             10,
             30,
             50,
