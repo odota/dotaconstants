@@ -1,5 +1,9 @@
 var countries = require('world-countries');
 var constants = {};
+for (var key in require(__dirname + '/manifest.json'))
+{
+  constants[key] = require(__dirname + '/json/' + key + ".json");
+}
 var heroes = constants.heroes.result.heroes;
 //key heroes by id
 constants.heroes = {};
@@ -162,8 +166,4 @@ constants.region = region;
 constants.anonymous_account_id = 4294967295;
 constants.map_url = '/public/images/map.png';
 constants.ICON_PATH = '/public/images/yasp-icon.svg'; //path to the icon
-for (var key in require(__dirname + '/manifest.json'))
-{
-  constants[key] = require(__dirname + '/json/' + key + ".json");
-}
 module.exports = constants;
