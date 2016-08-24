@@ -4,7 +4,7 @@ for (var key in require(__dirname + '/manifest.json'))
 {
   constants[key] = require(__dirname + '/json/' + key + ".json");
 }
-var heroes = constants.heroes.result.heroes;
+var heroes = constants.heroes;
 //key heroes by id
 constants.heroes = {};
 //key heroes by name

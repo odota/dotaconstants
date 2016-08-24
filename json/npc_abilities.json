@@ -570,8 +570,8 @@
         },
         {
           "movement_damage_pct": [
-            26,
-            42,
+            30,
+            45,
             60
           ]
         },
@@ -628,7 +628,7 @@
       "FightRecapLevel": "1",
       "AbilityCastRange": "900",
       "AbilityCastPoint": "0.4 0.4 0.4 0.4",
-      "AbilityCooldown": "13",
+      "AbilityCooldown": "16 15 14 13",
       "AbilityDuration": "3.0 4.0 5.0 6.0",
       "AbilityDamage": "0 0 0 0",
       "AbilityManaCost": "90 90 90 90",
@@ -653,7 +653,7 @@
       "FightRecapLevel": "1",
       "AbilityCastRange": "900",
       "AbilityCastPoint": "0.25",
-      "AbilityCooldown": "13",
+      "AbilityCooldown": "16 15 14 13",
       "AbilityManaCost": "90",
       "AbilitySpecial": [
         {
@@ -6898,7 +6898,7 @@
       "HasScepterUpgrade": "1",
       "AbilityCastRange": "600",
       "AbilityCastPoint": "0.35 0.35 0.35",
-      "AbilityCooldown": "130.0 115.0 100.0",
+      "AbilityCooldown": "140.0 125.0 110.0",
       "AbilityManaCost": "150 225 300",
       "AbilityModifierSupportBonus": "50",
       "AbilitySpecial": [
@@ -13909,20 +13909,10 @@
           ]
         },
         {
-          "illusion_incoming_damage": [
-            50,
-            50,
-            50,
-            50
-          ]
+          "illusion_incoming_damage": 100
         },
         {
-          "tooltip_total_illusion_incoming_damage": [
-            150,
-            150,
-            150,
-            150
-          ]
+          "tooltip_total_illusion_incoming_damage": 200
         }
       ]
     },
@@ -14439,9 +14429,9 @@
         {
           "health_regen": [
             4,
-            7,
-            10,
-            13
+            8,
+            12,
+            16
           ]
         },
         {
@@ -16247,7 +16237,7 @@
           "stun_radius": 350
         },
         {
-          "stun_delay": 0.85
+          "stun_delay": 0.55
         },
         {
           "stun_damage": [
@@ -17382,7 +17372,7 @@
       "FightRecapLevel": "1",
       "AbilityCastPoint": "0.3 0.3 0.3 0.3",
       "AbilityCastRange": "850 1050 1250 1450",
-      "AbilityCooldown": "4.0 4.0 4.0 4.0",
+      "AbilityCooldown": "4",
       "AbilityManaCost": "60 70 80 90",
       "AbilitySpecial": [
         {
@@ -17457,10 +17447,10 @@
         },
         {
           "stack_duration": [
-            14,
+            10,
+            13,
             16,
-            18,
-            20
+            19
           ]
         }
       ]
@@ -18314,9 +18304,9 @@
         },
         {
           "stomp_damage": [
-            85,
-            110,
-            135,
+            70,
+            100,
+            130,
             160
           ]
         },
@@ -18357,9 +18347,9 @@
         },
         {
           "stomp_damage": [
-            85,
-            110,
-            135,
+            70,
+            100,
+            130,
             160
           ]
         },
@@ -19125,10 +19115,11 @@
       "ID": "5613",
       "AbilityBehavior": "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE",
       "AbilityUnitDamageType": "DAMAGE_TYPE_MAGICAL",
+      "SpellImmunityType": "SPELL_IMMUNITY_ENEMIES_NO",
       "AbilityCastRange": "750",
       "AbilityCastPoint": "0.6",
       "FightRecapLevel": "1",
-      "AbilityCooldown": "14.0",
+      "AbilityCooldown": "12.0",
       "AbilityManaCost": "100 110 120 130",
       "AbilitySpecial": [
         {
@@ -19153,10 +19144,10 @@
         },
         {
           "burn_damage": [
-            5,
-            10,
-            15,
-            20
+            0.75,
+            1.5,
+            2.25,
+            3
           ]
         },
         {
@@ -19166,7 +19157,7 @@
           "burn_duration": 2
         },
         {
-          "first_wave_delay": 0.9
+          "first_wave_delay": 0
         }
       ]
     },
@@ -19174,10 +19165,11 @@
       "ID": "5614",
       "AbilityBehavior": "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE",
       "AbilityUnitDamageType": "DAMAGE_TYPE_MAGICAL",
+      "SpellImmunityType": "SPELL_IMMUNITY_ENEMIES_YES",
       "AbilityCastRange": "750",
       "AbilityCastPoint": "0.6",
       "FightRecapLevel": "1",
-      "AbilityCooldown": "24.0 21.0 18.0 15.0",
+      "AbilityCooldown": "21 18 15 12",
       "AbilityManaCost": "100 115 130 145",
       "AbilitySpecial": [
         {
@@ -19223,28 +19215,33 @@
           "bonus_damage_from_creep": 5
         },
         {
-          "bonus_damage_from_hero": 30
-        },
-        {
-          "bonus_damage_duration": [
+          "bonus_damage_from_hero": [
             30,
             35,
             40,
             45
+          ]
+        },
+        {
+          "bonus_damage_duration": [
+            30,
+            40,
+            50,
+            60
           ]
         }
       ]
     },
     "abyssal_underlord_dark_rift": {
       "ID": "5616",
-      "AbilityBehavior": "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET",
       "AbilityType": "DOTA_ABILITY_TYPE_ULTIMATE",
+      "AbilityBehavior": "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET",
       "AbilityUnitTargetTeam": "DOTA_UNIT_TARGET_TEAM_FRIENDLY",
-      "AbilityUnitTargetType": "DOTA_UNIT_TARGET_BUILDING",
+      "AbilityUnitTargetType": "DOTA_UNIT_TARGET_BUILDING | DOTA_UNIT_TARGET_CREEP",
       "AbilityUnitTargetFlags": "DOTA_UNIT_TARGET_FLAG_INVULNERABLE",
       "AbilityCastRange": "0",
       "AbilityCastPoint": "0.6",
-      "AbilityCooldown": "130.0",
+      "AbilityCooldown": "130 120 110",
       "AbilityManaCost": "75 150 225",
       "AbilitySpecial": [
         {
@@ -19854,7 +19851,7 @@
       "AbilityUnitTargetType": "DOTA_UNIT_TARGET_HERO",
       "AbilityCastRange": "1000",
       "AbilityCastPoint": "0.3",
-      "AbilityCooldown": "90 60 30",
+      "AbilityCooldown": "100 65 30",
       "AbilityManaCost": "100",
       "AbilitySpecial": [
         {
