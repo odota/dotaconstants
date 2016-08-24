@@ -7,13 +7,8 @@ var urls = {
     "abilities": "http://www.dota2.com/jsfeed/abilitydata?l=english",
     "heropickerdata": "http://www.dota2.com/jsfeed/heropickerdata?l=english",
     "heropediadata": "http://www.dota2.com/jsfeed/heropediadata?feeds=herodata",
-    /*
-    "heroes": utility.generateJob("api_heroes",
-    {
-        language: "en-us"
-    }).url,
-    */
-    //"leagues": utility.generateJob("api_leagues").url,
+    "heroes": "https://yasp.co/api/heroes",
+    //"leagues": "https://yasp.co/api/leagues",
     "regions": "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/regions.json",
     "npc_abilities": "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_abilities.json"
 };
