@@ -249,7 +249,7 @@
       "notes": "",
       "dmg": "",
       "attrib": "RANGE: <span class=\"attribVal\">900</span><br />\nWIDTH: <span class=\"attribVal\">250</span><br />\nSILENCE DURATION: <span class=\"attribVal\">3 / 4 / 5 / 6</span><br />\nKNOCKBACK DURATION: <span class=\"attribVal\">0.6 / 0.7 / 0.8 / 0.9</span>",
-      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 90</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 13</div><br clear=\"left\" /></div>",
+      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 90</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 16/15/14/13</div><br clear=\"left\" /></div>",
       "lore": "Traxex is rather fond of the tranquility of physical combat, calling on her Drow heritage to end the incantations of opposing magi.",
       "hurl": "Drow_Ranger"
     },
@@ -5510,6 +5510,61 @@
       "cmb": "<div class=\"cooldownMana\"><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 40/35/30</div><br clear=\"left\" /></div>",
       "lore": "Warped by the power of its peers, Arc Warden becomes what it despises most: disharmony.",
       "hurl": "Arc_Warden"
+    },
+    "abyssal_underlord_firestorm": {
+      "dname": "Firestorm",
+      "affects": "ABILITY: <span class=\"attribVal\">Point Target</span><br />DAMAGE TYPE: <span class=\"attribVal\">Magical</span><br />PIERCES SPELL IMMUNITY: <span class=\"attribVal\">No</span><br />",
+      "desc": "Calls down waves of fire that damage enemy units in the target area, burning for additional damage over time.",
+      "notes": "",
+      "dmg": "",
+      "attrib": "RADIUS: <span class=\"attribVal\">400</span><br />\nWAVE COUNT: <span class=\"attribVal\">6</span><br />\nWAVE DAMAGE: <span class=\"attribVal\">25 / 40 / 55 / 70</span><br />\nWAVE INTERVAL <span class=\"attribVal\">1</span><br />\nMAX HP BURN DAMAGE: <span class=\"attribVal\">0.75% / 1.5% / 2.25% / 3%</span><br />\nBURN DURATION: <span class=\"attribVal\">2</span>",
+      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 100/110/120/130</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 12</div><br clear=\"left\" /></div>",
+      "lore": "The flames of conquest blaze forth from the darkest depths of the abyss.",
+      "hurl": "Underlord"
+    },
+    "abyssal_underlord_pit_of_malice": {
+      "dname": "Pit of Malice",
+      "affects": "ABILITY: <span class=\"attribVal\">Point Target</span><br />DAMAGE TYPE: <span class=\"attribVal\">Magical</span><br />PIERCES SPELL IMMUNITY: <span class=\"attribVal\"><font color=\"#70EA72\">Yes</font></span><br />",
+      "desc": "A deadly pit is conjured at the target location; any unit that enters is unable to move for some time and takes damage. Each enemy unit can only be affected once.",
+      "notes": "",
+      "dmg": "",
+      "attrib": "RADIUS: <span class=\"attribVal\">275</span><br />\nPIT DURATION: <span class=\"attribVal\">7</span><br />\nPIT DAMAGE: <span class=\"attribVal\">100</span><br />\nDISABLE DURATION: <span class=\"attribVal\">1 / 1.5 / 2 / 2.5</span>",
+      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 100/115/130/145</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 21/18/15/12</div><br clear=\"left\" /></div>",
+      "lore": "Twisting into the seams of reality itself, Vrogros' manifest hatred paralyzes those who defy his will.",
+      "hurl": "Underlord"
+    },
+    "abyssal_underlord_atrophy_aura": {
+      "dname": "Atrophy Aura",
+      "affects": "ABILITY: <span class=\"attribVal\">Passive, Aura</span><br />AFFECTS: <span class=\"attribVal\">Enemies</span><br />",
+      "desc": "Nearby enemy units are weakened, losing a portion of their base damage. If a unit dies while under this effect, Underlord gains bonus damage.",
+      "notes": "",
+      "dmg": "",
+      "attrib": "RADIUS: <span class=\"attribVal\">900</span><br />\nDAMAGE REDUCTION: <span class=\"attribVal\">18% / 26% / 34% / 42%</span><br />\nBONUS DAMAGE(CREEP): <span class=\"attribVal\">5</span><br />\nBONUS DAMAGE(HERO): <span class=\"attribVal\">30 / 35 / 40 / 45</span><br />\nDURATION: <span class=\"attribVal\">30 / 40 / 50 / 60</span>",
+      "cmb": "",
+      "lore": "To merely stand in the presence of the Underlord is to feel the conviction of battle sapped from one's soul.",
+      "hurl": "Underlord"
+    },
+    "abyssal_underlord_dark_rift": {
+      "dname": "Dark Rift",
+      "affects": "ABILITY: <span class=\"attribVal\">Unit Target, Point Target</span><br />AFFECTS: <span class=\"attribVal\">Allied Creeps</span><br />",
+      "desc": "Opens a dark rift at the targeted friendly unit's position.  After a short delay, Underlord and all nearby friendly heroes are teleported to that unit's location.  Dark Rift can be cancelled at anytime during the cast.  If it is cancelled in this way or the target unit dies before the spell becomes active, Dark Rift goes into cooldown.",
+      "notes": "",
+      "dmg": "",
+      "attrib": "TELEPORT RADIUS: <span class=\"attribVal\">450</span><br />\nTELEPORT DELAY: <span class=\"attribVal\">5 / 4 / 3</span>",
+      "cmb": "<div class=\"cooldownMana\"><div class=\"mana\"><img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" /> 75/150/225</div><div class=\"cooldown\"><img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" /> 130/120/110</div><br clear=\"left\" /></div>",
+      "lore": "They come without warning, leaving fire and blood where kingdoms once flourished.",
+      "hurl": "Underlord"
+    },
+    "abyssal_underlord_cancel_dark_rift": {
+      "dname": "Cancel Dark Rift",
+      "affects": "ABILITY: <span class=\"attribVal\">No Target</span><br />",
+      "desc": "Stop the teleport.",
+      "notes": "",
+      "dmg": "",
+      "attrib": "",
+      "cmb": "",
+      "lore": "",
+      "hurl": "Underlord"
     }
   }
 }
