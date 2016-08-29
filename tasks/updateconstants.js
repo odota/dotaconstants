@@ -10,7 +10,8 @@ var urls = {
     "heroes": "https://yasp.co/api/heroes",
     //"leagues": "https://yasp.co/api/leagues",
     "regions": "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/regions.json",
-    "npc_abilities": "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_abilities.json"
+    "npc_abilities": "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_abilities.json",
+    "countries": "https://raw.githubusercontent.com/mledoze/countries/master/countries.json",
 };
 async.each(Object.keys(urls), function (key, cb)
 {

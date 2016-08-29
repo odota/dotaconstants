@@ -1,4 +1,3 @@
-var countries = require('world-countries');
 var constants = {};
 for (var key in require(__dirname + '/manifest.json'))
 {
@@ -62,11 +61,12 @@ function expandItemGroup(key)
     return base;
   }
 }
-constants.countries = {};
-countries.forEach(function (c)
+var countries = {};
+constants.countries.forEach(function (c)
 {
-  constants.countries[c.cca2] = c;
+  countries[c.cca2] = c;
 });
+constants.countries = countries;
 //console.log(constants.item_groups);
 constants.items = items;
 //abilities, already keyed by name
