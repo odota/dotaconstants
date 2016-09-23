@@ -92,16 +92,6 @@ for (var key2 in abilities)
   abilities[key2].cmb = abilities[key2].cmb.replace("http://cdn.dota2.com", "");
 }
 constants.abilities = abilities;
-var ability_ids = {};
-for (var key in constants.npc_abilities.DOTAAbilities)
-{
-  var block = constants.npc_abilities.DOTAAbilities[key];
-  if (block && block.ID)
-  {
-    ability_ids[block.ID] = key;
-  }
-}
-constants.ability_ids = ability_ids;
 constants.lanes = [];
 for (var i = 0; i < 128; i++)
 {
