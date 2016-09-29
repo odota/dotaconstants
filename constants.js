@@ -86,6 +86,16 @@ if (!abilities.nevermore_shadowraze3)
   // Find and replace short raze range with long raze range
   abilities.nevermore_shadowraze3.attrib = abilities.nevermore_shadowraze3.attrib.replace(/\d{3}/, 700);
 }
+if (!abilities.beastmaster_call_of_the_wild_boar)
+{
+  abilities.beastmaster_call_of_the_wild_boar = Object.assign(
+  {}, abilities.beastmaster_call_of_the_wild);
+  // Find and replace wild hawk with wild boar decription
+  abilities.beastmaster_call_of_the_wild_boar.dname = "Call of the Wild: Boar";
+  abilities.beastmaster_call_of_the_wild_boar.affects = "ABILITY: <span class=\"attribVal\">No Target</span><br />DAMAGE TYPE: <span class=\"attribVal\"><font color=\"#71a9ea\">Physical</font></span><br />";
+  abilities.beastmaster_call_of_the_wild_boar.desc = "Beastmaster calls a powerful Boar to stalk the battlefield, capable of spitting poison at enemies to slow their movement and attack speed.";
+  abilities.beastmaster_call_of_the_wild_boar.attrib = "BOAR HEALTH: <span class=\"attribVal\">200 / 300 / 400 / 500</span><br />\nBOAR ATTACK DAMAGE: <span class=\"attribVal\">10 / 25 / 40 / 55</span><br />\nBOAR BOAR MOVEMENT SLOW: <span class=\"attribVal\">10% / 20% / 30% / 40%</span><br />\nBOAR ATTACK SLOW: <span class=\"attribVal\">10 / 20 / 30 / 40</span><br />\nBOAR POISON DURATION: <span class=\"attribVal\">3</span><br />\nBOAR DURATION: <span class=\"attribVal\">60 / 60 / 60 / 60</span>";
+}
 for (var key2 in abilities)
 {
   abilities[key2].img = "/apps/dota2/images/abilities/" + key2 + "_md.png";
