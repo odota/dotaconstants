@@ -175,8 +175,12 @@ async.each(sources, function (s, cb) {
       throw err;
     }
     const cfs = fs.readdirSync(__dirname + '/../json');
-    const exports = cfs.map((filename) => `export const ${filename.split('.')[0]} = require(__dirname + '/json/${filename.split('.')[0]}.json');`);
-    fs.writeFileSync('./index.js', exports.join('\n'));
+    // Exports aren't supported in Node yet, so use old export syntax for now
+    // const code = cfs.map((filename) => `export const ${filename.split('.')[0]} = require(__dirname + '/json/${filename.split('.')[0]}.json');`).join('\n';
+    const code = `module.exports = {
+${cfs.map((filename) => `${filename.split('.')[0]}: require(__dirname + '/json/${filename.split('.')[0]}.json')`).join(',\n')}
+};`;
+    fs.writeFileSync('./index.js', code);
     process.exit(0);
   });
 
