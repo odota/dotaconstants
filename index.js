@@ -1,5 +1,6 @@
 export const abilities = require(__dirname + '/json/abilities.json');
 export const ability_ids = require(__dirname + '/json/ability_ids.json');
+export const ability_keys = require(__dirname + '/json/ability_keys.json');
 export const ancients = require(__dirname + '/json/ancients.json');
 export const barracks_value = require(__dirname + '/json/barracks_value.json');
 export const cluster = require(__dirname + '/json/cluster.json');

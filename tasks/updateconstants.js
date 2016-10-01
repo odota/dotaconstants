@@ -28,10 +28,10 @@ const sources = [{
   transform: respObj => {
     const items = respObj.itemdata;
     const itemGroups = [];
-    for (var key in items) {
+    for (const key in items) {
       if (items[key].components) {
-        var arr = expandItemGroup(key, items);
-        var obj = {};
+        const arr = expandItemGroup(key, items);
+        const obj = {};
         arr.forEach(function (e) {
           obj[e] = 1;
         });
@@ -56,24 +56,35 @@ const sources = [{
       // Find and replace short raze range with long raze range
       abilities.nevermore_shadowraze3.attrib = abilities.nevermore_shadowraze3.attrib.replace(/\d{3}/, 700);
     }
-    for (var key2 in abilities) {
-      abilities[key2].img = "/apps/dota2/images/abilities/" + key2 + "_md.png";
-      abilities[key2].cmb = abilities[key2].cmb.replace("http://cdn.dota2.com", "");
+    for (const key in abilities) {
+      abilities[key].img = "/apps/dota2/images/abilities/" + key + "_md.png";
+      abilities[key].cmb = abilities[key].cmb.replace("http://cdn.dota2.com", "");
     }
     return abilities;
+  },
+}, {
+  key: "ability_keys",
+  url: "http://www.dota2.com/jsfeed/abilitydata?l=english",
+  transform: respObj => {
+    const abilityKeys = {};
+    const abilities = respObj.abilitydata;
+    for (const key in abilities) {
+      abilityKeys[key] = 1;
+    }
+    return abilityKeys;
   },
 }, {
   key: "ability_ids",
   url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_abilities.json",
   transform: respObj => {
-    const ability_ids = {};
-    for (var key2 in respObj.DOTAAbilities) {
-      const block = respObj.DOTAAbilities[key2];
+    const abilityIds = {};
+    for (const key in respObj.DOTAAbilities) {
+      const block = respObj.DOTAAbilities[key];
       if (block && block.ID) {
-        ability_ids[block.ID] = key2;
+        abilityIds[block.ID] = key;
       }
     }
-    return ability_ids;
+    return abilityIds;
   },
 }, {
   key: "heroes",
@@ -101,9 +112,9 @@ const sources = [{
   key: "region",
   url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/regions.json",
   transform: respObj => {
-    var region = {};
-    var regions = respObj.regions;
-    for (var key in regions) {
+    const region = {};
+    const regions = respObj.regions;
+    for (const key in regions) {
       region[regions[key].region] = regions[key].display_name.slice("#dota_region_".length).split("_").map(s => s.toUpperCase()).join(" ");
     }
     return region;
@@ -112,9 +123,9 @@ const sources = [{
   key: "cluster",
   url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/regions.json",
   transform: respObj => {
-    var cluster = {};
-    var regions = respObj.regions;
-    for (var key in regions) {
+    const cluster = {};
+    const regions = respObj.regions;
+    for (const key in regions) {
       if (regions[key].clusters) {
         regions[key].clusters.forEach(function (c) {
           cluster[c] = Number(regions[key].region);
@@ -170,7 +181,7 @@ async.each(sources, function (s, cb) {
   });
 
 function expandItemGroup(key, items) {
-  var base = [key];
+  let base = [key];
   if (items[key] && items[key].components) {
     return [].concat.apply(base, items[key].components.map(function (c) {
       return expandItemGroup(c, items);
