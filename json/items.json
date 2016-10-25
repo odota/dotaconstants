@@ -175,7 +175,7 @@
     "attrib": "+ <span class=\"attribVal\">2</span> <span class=\"attribValText\">Damage</span><br />\nHEALTH RESTORED: <span class=\"attribVal\">75</span>",
     "mc": false,
     "cd": 5,
-    "lore": "",
+    "lore": "The ethereal flames from the ever-burning ruins of Kindertree ignite across realities.",
     "components": null,
     "created": false
   },
@@ -185,12 +185,12 @@
     "dname": "Infused Raindrop",
     "qual": "component",
     "cost": 225,
-    "desc": "Passive: Consumes a charge to block 120 magic damage from damage instances over 50 damage. Comes with 5 charges. When the charges are gone, the item disappear.",
+    "desc": "Passive: Consumes a charge to block 120 magic damage from damage instances over 50 damage. Comes with 5 charges. When the charges are gone, the item disappears.",
     "notes": "Uses at most one charge per damage instance.",
     "attrib": "MANA REGEN: <span class=\"attribVal\">0.85</span><br />\nMAGIC DAMAGE BLOCK: <span class=\"attribVal\">120</span><br />\nINITIAL CHARGES: <span class=\"attribVal\">5</span>",
     "mc": false,
-    "cd": 4,
-    "lore": "",
+    "cd": 6,
+    "lore": "Elemental protection from magical assaults.",
     "components": null,
     "created": false
   },
@@ -205,7 +205,7 @@
     "attrib": "+ <span class=\"attribVal\">20</span> <span class=\"attribValText\">Movement Speed</span>",
     "mc": false,
     "cd": false,
-    "lore": "",
+    "lore": "Hasten to battle on wind-touched heels",
     "components": null,
     "created": false
   },
@@ -678,7 +678,7 @@
     "attrib": "DURATION: <span class=\"attribVal\">12</span><br />\nRADIUS: <span class=\"attribVal\">1050</span><br />\nSLOW: <span class=\"attribVal\">20%</span>",
     "mc": 5,
     "cd": 30,
-    "lore": "",
+    "lore": "One may hide visage, but never volume.",
     "components": null,
     "created": false
   },
@@ -801,7 +801,7 @@
     "attrib": "",
     "mc": 75,
     "cd": 70,
-    "lore": "",
+    "lore": "What a hero truly needs.",
     "components": null,
     "created": false
   },
@@ -833,7 +833,7 @@
     "attrib": "+ <span class=\"attribVal\">100</span> <span class=\"attribValText\">Movement Speed</span>",
     "mc": 75,
     "cd": 45,
-    "lore": "",
+    "lore": "Winged boots that grant omnipresence.",
     "components": [
       "travel_boots",
       "recipe_travel_boots"
@@ -1233,7 +1233,7 @@
     "attrib": "",
     "mc": false,
     "cd": false,
-    "lore": "",
+    "lore": "The faithful mount upon which soar the fortunes of battle.",
     "components": null,
     "created": false
   },
@@ -1369,14 +1369,14 @@
     "id": 250,
     "img": "/apps/dota2/images/items/bloodthorn_lg.png?3",
     "dname": "Bloodthorn",
-    "qual": "rare",
+    "qual": "epic",
     "cost": 7195,
     "desc": "Active: Silences a target for 5.0 seconds and amplifies the damage it takes by 30.0%. All attacks on the silenced target will have True Strike and land a crit on impact.<br />\r\nPassive: Critical Strike - Grants each attack a chance to deal additional damage. Critical Strike does not work against buildings.",
     "notes": "Amplified damage is dealt at the end of the duration as magical damage.",
     "attrib": "+ <span class=\"attribVal\">25</span> <span class=\"attribValText\">Intelligence</span><br />\n+ <span class=\"attribVal\">30</span> <span class=\"attribValText\">Attack Speed</span><br />\n+ <span class=\"attribVal\">60</span> <span class=\"attribValText\">Damage</span><br />\n+ <span class=\"attribVal\">150%</span> <span class=\"attribValText\">Mana Regeneration</span><br />\nCRITICAL CHANCE: <span class=\"attribVal\">20%</span><br />\nCRITICAL DAMAGE: <span class=\"attribVal\">175%</span><br />\nSILENCE INCREASED DAMAGE: <span class=\"attribVal\">30%</span><br />\nSILENCE DURATION: <span class=\"attribVal\">5</span><br />\nSILENCE CRITICAL DAMAGE: <span class=\"attribVal\">145%</span>",
     "mc": 100,
     "cd": 11,
-    "lore": "",
+    "lore": "A reviled blade that bites deeper with each wriggle of its victim's final throes.",
     "components": [
       "orchid",
       "lesser_crit"
@@ -1387,14 +1387,14 @@
     "id": 252,
     "img": "/apps/dota2/images/items/echo_sabre_lg.png?3",
     "dname": "Echo Sabre",
-    "qual": "rare",
+    "qual": "artifact",
     "cost": 2650,
     "desc": "Passive: Causes melee attacks to attack twice in quick succession. The double attacks apply a 0.6 second 100% movement and attack speed slow on each strike.",
     "notes": "",
     "attrib": "+ <span class=\"attribVal\">10</span> <span class=\"attribValText\">Intelligence</span><br />\n+ <span class=\"attribVal\">10</span> <span class=\"attribValText\">Strength</span><br />\n+ <span class=\"attribVal\">10</span> <span class=\"attribValText\">Attack Speed</span><br />\n+ <span class=\"attribVal\">15</span> <span class=\"attribValText\">Damage</span><br />\n+ <span class=\"attribVal\">75%</span> <span class=\"attribValText\">Mana Regeneration</span><br />\nMOVEMENT SLOW: <span class=\"attribVal\">100%</span><br />\nATTACK SLOW: <span class=\"attribVal\">100</span><br />\nSLOW DURATION: <span class=\"attribVal\">0.6</span>",
     "mc": false,
     "cd": 5,
-    "lore": "",
+    "lore": "A deceptively swift blade imbued with resonant magic.",
     "components": [
       "ogre_axe",
       "oblivion_staff"
@@ -1431,7 +1431,7 @@
     "attrib": "+ <span class=\"attribVal\">250</span> <span class=\"attribValText\">Mana</span><br />\n+ <span class=\"attribVal\">8</span> <span class=\"attribValText\">HP Regeneration</span><br />\n+ <span class=\"attribVal\">200</span> <span class=\"attribValText\">Cast Range</span><br />\nSPELL DAMAGE AMP: <span class=\"attribVal\">5%</span>",
     "mc": false,
     "cd": false,
-    "lore": "",
+    "lore": "Polished with the incantation of his final breath, the gift of a dying mage to his sickly son.",
     "components": [
       "energy_booster",
       "ring_of_health"
@@ -1460,14 +1460,14 @@
     "id": 263,
     "img": "/apps/dota2/images/items/hurricane_pike_lg.png?3",
     "dname": "Hurricane Pike",
-    "qual": "rare",
+    "qual": "epic",
     "cost": 4375,
     "desc": "Active: When used on an enemy, it pushes you both away from each other 450 units each, and allows you to attack the target without range restrictions for 4 attacks for a maximum of 5.0 seconds. Grants 100 Attack Speed during the attacks. Works like Force Staff when used on self or allies.<br />\r\nPassive: Increases attack range of ranged heroes by 140.",
-    "notes": "Self-cast will use Hurricane Pike on yourself.<br />Hurricane Pike doesn't interrupt the target's actions.<br />Will not work on a unit inside Chronosphere, Duel or Black Hole.",
+    "notes": "Self-cast will use Hurricane Pike on yourself.<br />Hurricane Pike doesn't interrupt the target's actions.<br />Will not work on a unit inside Chronosphere, Duel, or Black Hole.",
     "attrib": "+ <span class=\"attribVal\">10</span> <span class=\"attribValText\">Intelligence</span><br />\n+ <span class=\"attribVal\">4</span> <span class=\"attribValText\">HP Regeneration</span><br />\n+ <span class=\"attribVal\">20</span> <span class=\"attribValText\">Agility</span><br />\n+ <span class=\"attribVal\">15</span> <span class=\"attribValText\">Strength</span><br />\n+ <span class=\"attribVal\">140</span> <span class=\"attribValText\">Attack Range <font color='#7d7d7d'>(Ranged Only)</font></span><br />\nUNLIMITED RANGE DURATION: <span class=\"attribVal\">5</span><br />\nCAST RANGE ON ENEMY: <span class=\"attribVal\">400</span><br />\nUNLIMITED RANGE ATTACKS: <span class=\"attribVal\">4</span>",
     "mc": 25,
     "cd": 14,
-    "lore": "",
+    "lore": "A legendary pike once held as royal sigil of the ancient wyvern riders.",
     "components": [
       "force_staff",
       "dragon_lance"
@@ -2062,14 +2062,14 @@
     "id": 236,
     "img": "/apps/dota2/images/items/dragon_lance_lg.png?3",
     "dname": "Dragon Lance",
-    "qual": "epic",
+    "qual": "artifact",
     "cost": 1900,
     "desc": "Passive: Increases attack range of ranged heroes by 140.",
     "notes": "Multiple instances do not stack.",
-    "attrib": "+ <span class=\"attribVal\">14</span> <span class=\"attribValText\">Agility</span><br />\n+ <span class=\"attribVal\">14</span> <span class=\"attribValText\">Strength</span><br />\n+ <span class=\"attribVal\">140</span> <span class=\"attribValText\">Attack Range <font color='#7d7d7d'>(Ranged Only)</font></span>",
+    "attrib": "+ <span class=\"attribVal\">14</span> <span class=\"attribValText\">Agility</span><br />\n+ <span class=\"attribVal\">13</span> <span class=\"attribValText\">Strength</span><br />\n+ <span class=\"attribVal\">140</span> <span class=\"attribValText\">Attack Range <font color='#7d7d7d'>(Ranged Only)</font></span>",
     "mc": false,
     "cd": false,
-    "lore": "",
+    "lore": "The forward charge of the wyvern host grants no quarter.",
     "components": [
       "ogre_axe",
       "boots_of_elves",
@@ -2324,7 +2324,7 @@
     "notes": "",
     "attrib": "+ <span class=\"attribVal\">25</span>/35 <span class=\"attribValText\">Agility</span><br />\n+ <span class=\"attribVal\">10</span>/15 <span class=\"attribValText\">Intelligence</span><br />\nPURGE SLOW DURATION: <span class=\"attribVal\"><span class=\"attribVal\">4</span></span><br />\nPURGE CAST RANGE: <span class=\"attribVal\"><span class=\"attribVal\">600</span></span>",
     "mc": false,
-    "cd": 2,
+    "cd": 4,
     "lore": "An enchanted blade that allows the user to cut straight into the enemy's soul.",
     "components": [
       "blade_of_alacrity",
@@ -2343,7 +2343,7 @@
     "notes": "",
     "attrib": "+ 25/<span class=\"attribVal\">35</span> <span class=\"attribValText\">Agility</span><br />\n+ 10/<span class=\"attribVal\">15</span> <span class=\"attribValText\">Intelligence</span><br />\nPURGE SLOW DURATION: <span class=\"attribVal\">4</span><br />\nPURGE CAST RANGE: <span class=\"attribVal\">600</span>",
     "mc": false,
-    "cd": 2,
+    "cd": 4,
     "lore": "An enchanted blade that allows the user to cut straight into the enemy's soul.",
     "components": [
       "diffusal_blade",
@@ -2449,7 +2449,7 @@
     "attrib": "ARMOR REDUCTION: <span class=\"attribVal\">2</span><br />\nDURATION: <span class=\"attribVal\">8</span>",
     "mc": false,
     "cd": false,
-    "lore": "",
+    "lore": "An unnerving stone unearthed beneath the Fields of Endless Carnage.",
     "components": null,
     "created": false
   },
@@ -2520,7 +2520,7 @@
     "attrib": "BONUS SPEED: <span class=\"attribVal\">15%</span><br />\nDURATION: <span class=\"attribVal\">35</span>",
     "mc": false,
     "cd": 1,
-    "lore": "",
+    "lore": "The charlatan wizard Myrddin's only true contribution to the arcane arts.",
     "components": null,
     "created": false
   },
@@ -2535,7 +2535,7 @@
     "attrib": "XP BONUS: <span class=\"attribVal\">425</span>",
     "mc": false,
     "cd": 0,
-    "lore": "",
+    "lore": "That which raises beast to man and man to god.",
     "components": null,
     "created": false
   },
@@ -2606,7 +2606,7 @@
     "attrib": "QUELL MELEE DAMAGE: <span class=\"attribVal\">140%</span><br />\nQUELL RANGED DAMAGE: <span class=\"attribVal\">115%</span><br />\nCAST RANGE: <span class=\"attribVal\">350</span><br />\nCAST RANGE ON WARDS: <span class=\"attribVal\">450</span><br />\n+ <span class=\"attribVal\">2</span> <span class=\"attribValText\">Armor</span>",
     "mc": false,
     "cd": 14,
-    "lore": "",
+    "lore": "A simple but effective weapon devised to quell a great Hellbear uprising.",
     "components": [
       "quelling_blade",
       "ring_of_protection"
@@ -2697,7 +2697,7 @@
     "attrib": "+ <span class=\"attribVal\">20</span> <span class=\"attribValText\">Attack Speed</span><br />\nFADE TIME: <span class=\"attribVal\">1.5</span>",
     "mc": false,
     "cd": 10,
-    "lore": "",
+    "lore": "A small talisman that clouds the senses of one's enemies when held perfectly still.",
     "components": null,
     "created": false
   },
