@@ -58,7 +58,6 @@ const sources = [{
     }
     for (const key in abilities) {
       abilities[key].img = "/apps/dota2/images/abilities/" + key + "_md.png";
-      abilities[key].cmb = abilities[key].cmb.replace(/http:\/\/cdn\.dota2\.com/g, "");
     }
     return abilities;
   },
