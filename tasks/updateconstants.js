@@ -92,6 +92,7 @@ const sources = [{
     const heroes = {};
     respObj.forEach(function (h) {
       h.img = "/apps/dota2/images/heroes/" + h.name.replace("npc_dota_hero_", "") + "_full.png";
+      h.icon = "/apps/dota2/images/heroes/" + h.name.replace("npc_dota_hero_", "") + "_icon.png";
       heroes[h.id] = h;
     });
     return heroes;
@@ -103,6 +104,7 @@ const sources = [{
     const heroNames = {};
     respObj.forEach(function (h) {
       h.img = "/apps/dota2/images/heroes/" + h.name.replace("npc_dota_hero_", "") + "_full.png";
+      h.icon = "/apps/dota2/images/heroes/" + h.name.replace("npc_dota_hero_", "") + "_icon.png";
       heroNames[h.name] = h;
     });
     return heroNames;
