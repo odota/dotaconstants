@@ -32,7 +32,7 @@ const sources = [{
       if (items[key].components) {
         const arr = expandItemGroup(key, items);
         const obj = {};
-        arr.forEach(function (e) {
+        arr.forEach(function(e) {
           obj[e] = 1;
         });
         itemGroups.push(obj);
@@ -42,9 +42,10 @@ const sources = [{
   },
 }, {
   key: "abilities",
-  url: "http://www.dota2.com/jsfeed/abilitydata?l=english",
+  url: ['http://www.dota2.com/jsfeed/abilitydata?l=english', 'https://raw.githubusercontent.com/dotabuff/d2vpkr/test-client-20161211/dota/resource/dota_english.json'],
   transform: respObj => {
-    const abilities = respObj.abilitydata;
+    const abilities = respObj[0].abilitydata;
+    const strings = respObj[1].lang.Tokens;
     // Add missing Shadow Fiend raze abilities by copying the shortest raze
     if (!abilities.nevermore_shadowraze2) {
       abilities.nevermore_shadowraze2 = Object.assign({}, abilities.nevermore_shadowraze1);
@@ -56,9 +57,17 @@ const sources = [{
       // Find and replace short raze range with long raze range
       abilities.nevermore_shadowraze3.attrib = abilities.nevermore_shadowraze3.attrib.replace(/\d{3}/, 700);
     }
-    for (const key in abilities) {
+    // Add talents
+    Object.keys(strings).forEach(key => {
+      if (key.indexOf('DOTA_Tooltip_Ability_special') === 0) {
+        abilities[key.substring('DOTA_Tooltip_Ability_'.length)] = {
+          desc: strings[key],
+        };
+      }
+    });
+    Object.keys(abilities).forEach(key => {
       abilities[key].img = "/apps/dota2/images/abilities/" + key + "_md.png";
-    }
+    });
     return abilities;
   },
 }, {
@@ -90,7 +99,7 @@ const sources = [{
   url: "https://api.opendota.com/api/heroes",
   transform: respObj => {
     const heroes = {};
-    respObj.forEach(function (h) {
+    respObj.forEach(function(h) {
       h.img = "/apps/dota2/images/heroes/" + h.name.replace("npc_dota_hero_", "") + "_full.png";
       h.icon = "/apps/dota2/images/heroes/" + h.name.replace("npc_dota_hero_", "") + "_icon.png";
       heroes[h.id] = h;
@@ -102,7 +111,7 @@ const sources = [{
   url: "https://api.opendota.com/api/heroes",
   transform: respObj => {
     const heroNames = {};
-    respObj.forEach(function (h) {
+    respObj.forEach(function(h) {
       h.img = "/apps/dota2/images/heroes/" + h.name.replace("npc_dota_hero_", "") + "_full.png";
       h.icon = "/apps/dota2/images/heroes/" + h.name.replace("npc_dota_hero_", "") + "_icon.png";
       heroNames[h.name] = h;
@@ -128,7 +137,7 @@ const sources = [{
     const regions = respObj.regions;
     for (const key in regions) {
       if (regions[key].clusters) {
-        regions[key].clusters.forEach(function (c) {
+        regions[key].clusters.forEach(function(c) {
           cluster[c] = Number(regions[key].region);
         });
       }
@@ -155,30 +164,45 @@ const sources = [{
 // "heropickerdata": "http://www.dota2.com/jsfeed/heropickerdata?l=english",
 // "heropediadata": "http://www.dota2.com/jsfeed/heropediadata?feeds=herodata",
 // "leagues": "https://api.opendota.com/api/leagues",
-async.each(sources, function (s, cb) {
-    const url = s.url;
-    //grab raw data from each url and save
-    console.error(url);
-    request(url, function (err, resp, body) {
-      if (err || resp.statusCode !== 200) {
-        return cb(err);
+async.each(sources, function(s, cb) {
+      const url = s.url;
+      //grab raw data from each url and save
+      console.log(url);
+      if (typeof url === 'object') {
+        async.map(url, (urlString, cb) => {
+          request(urlString, (err, resp, body) => {
+            cb(err, JSON.parse(body));
+          });
+        }, (err, resultArr) => {
+          handleResponse(err, {
+            statusCode: 200
+          }, JSON.stringify(resultArr));
+        });
       }
-      body = JSON.parse(body);
-      if (s.transform) {
-        body = s.transform(body);
+      else {
+        request(url, handleResponse);
       }
-      fs.writeFileSync('./json/' + s.key + ".json", JSON.stringify(body, null, 2));
-      cb(err);
-    });
-  },
-  function (err) {
-    if (err) {
-      throw err;
-    }
-    const cfs = fs.readdirSync(__dirname + '/../json');
-    // Exports aren't supported in Node yet, so use old export syntax for now
-    // const code = cfs.map((filename) => `export const ${filename.split('.')[0]} = require(__dirname + '/json/${filename.split('.')[0]}.json');`).join('\n';
-    const code = `module.exports = {
+
+      function handleResponse(err, resp, body) {
+        if (err || resp.statusCode !== 200) {
+          return cb(err);
+        }
+        body = JSON.parse(body);
+        if (s.transform) {
+          body = s.transform(body);
+        }
+        fs.writeFileSync('./json/' + s.key + ".json", JSON.stringify(body, null, 2));
+        cb(err);
+      }
+    },
+    function(err) {
+      if (err) {
+        throw err;
+      }
+      const cfs = fs.readdirSync(__dirname + '/../json');
+      // Exports aren't supported in Node yet, so use old export syntax for now
+      // const code = cfs.map((filename) => `export const ${filename.split('.')[0]} = require(__dirname + '/json/${filename.split('.')[0]}.json');`).join('\n';
+      const code = `module.exports = {
 ${cfs.map((filename) => `${filename.split('.')[0]}: require(__dirname + '/json/${filename.split('.')[0]}.json')`).join(',\n')}
 };`;
     fs.writeFileSync('./index.js', code);
