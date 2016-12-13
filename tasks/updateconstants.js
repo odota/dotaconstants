@@ -63,6 +63,10 @@ const sources = [
       }
       Object.keys(abilities).forEach(key => {
         abilities[key].img = "/apps/dota2/images/abilities/" + key + "_md.png";
+        if (abilities[key].cmb) {
+          abilities[key].cmb = replaceRepeatedNumbersWithSlashes(abilities[key].cmb);
+          abilities[key].cmb = replaceUselessDecimals(abilities[key].cmb);
+        }
       });
       // Add talents
       Object.keys(strings).forEach(key => {
@@ -223,4 +227,12 @@ function expandItemGroup(key, items) {
   } else {
     return base;
   }
+}
+
+function replaceRepeatedNumbersWithSlashes(strToReplace) {
+  return strToReplace.replace(/(\d{1,3})\/(\1\/){1,2}\1/, '$1');
+}
+
+function replaceUselessDecimals(strToReplace) {
+  return strToReplace.replace(/\.0+(\D)/, '$1');
 }
