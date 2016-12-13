@@ -2,6 +2,7 @@ const request = require('request');
 const async = require('async');
 const fs = require('fs');
 const sources = [
+  // TODO jsfeed is broken for some items right now
   /*{
     key: "items",
     url: "http://www.dota2.com/jsfeed/itemdata?l=english",
@@ -44,6 +45,7 @@ const sources = [
     },
   }, {
     key: "abilities",
+    // TODO replace with master
     url: ['http://www.dota2.com/jsfeed/abilitydata?l=english', 'https://raw.githubusercontent.com/dotabuff/d2vpkr/test-client-20161211/dota/resource/dota_english.json'],
     transform: respObj => {
       const abilities = respObj[0].abilitydata;
@@ -85,7 +87,8 @@ const sources = [
     },
   }, {
     key: "ability_ids",
-    url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_abilities.json",
+    // TODO replace with master
+    url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/test-client-20161211/dota/scripts/npc/npc_abilities.json",
     transform: respObj => {
       const abilityIds = {};
       for (const key in respObj.DOTAAbilities) {
