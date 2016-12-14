@@ -13,7 +13,7 @@ const sources = [
       }
       return items;
     },
-  }, */
+  }, 
   {
     key: "item_ids",
     url: "http://www.dota2.com/jsfeed/itemdata?l=english",
@@ -43,10 +43,10 @@ const sources = [
       }
       return itemGroups;
     },
-  }, {
+  }, */
+  {
     key: "abilities",
-    // TODO replace with master
-    url: ['http://www.dota2.com/jsfeed/abilitydata?l=english', 'https://raw.githubusercontent.com/dotabuff/d2vpkr/test-client-20161211/dota/resource/dota_english.json'],
+    url: ['http://www.dota2.com/jsfeed/abilitydata?l=english', 'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/dota_english.json'],
     transform: respObj => {
       const abilities = respObj[0].abilitydata;
       const strings = respObj[1].lang.Tokens;
@@ -87,8 +87,7 @@ const sources = [
     },
   }, {
     key: "ability_ids",
-    // TODO replace with master
-    url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/test-client-20161211/dota/scripts/npc/npc_abilities.json",
+    url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_abilities.json",
     transform: respObj => {
       const abilityIds = {};
       for (const key in respObj.DOTAAbilities) {
