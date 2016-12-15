@@ -61,6 +61,10 @@ const sources = [
         // Find and replace short raze range with long raze range
         abilities.nevermore_shadowraze3.attrib = abilities.nevermore_shadowraze3.attrib.replace(/\d{3}/, 700);
       }
+      // Add missing Keeper of the Light missing ability
+      if (!abilities.keeper_of_the_light_spirit_form_illuminate_end) {
+        abilities.keeper_of_the_light_spirit_form_illuminate_end = Object.assign({}, abilities.keeper_of_the_light_illuminate_end);
+      }
       Object.keys(abilities).forEach(key => {
         abilities[key].img = "/apps/dota2/images/abilities/" + key + "_md.png";
         if (abilities[key].cmb) {
