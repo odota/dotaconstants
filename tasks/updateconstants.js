@@ -2,8 +2,7 @@ const request = require('request');
 const async = require('async');
 const fs = require('fs');
 const sources = [
-  // TODO jsfeed is broken for some items right now
-  /*{
+  {
     key: "items",
     url: "http://www.dota2.com/jsfeed/itemdata?l=english",
     transform: respObj => {
@@ -43,7 +42,7 @@ const sources = [
       }
       return itemGroups;
     },
-  }, */
+  }, 
   {
     key: "abilities",
     url: ['http://www.dota2.com/jsfeed/abilitydata?l=english', 'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/dota_english.json'],
@@ -68,7 +67,6 @@ const sources = [
       Object.keys(abilities).forEach(key => {
         abilities[key].img = "/apps/dota2/images/abilities/" + key + "_md.png";
         if (abilities[key].cmb) {
-          abilities[key].cmb = replaceRepeatedNumbersWithSlashes(abilities[key].cmb);
           abilities[key].cmb = replaceUselessDecimals(abilities[key].cmb);
         }
       });
@@ -231,10 +229,6 @@ function expandItemGroup(key, items) {
   } else {
     return base;
   }
-}
-
-function replaceRepeatedNumbersWithSlashes(strToReplace) {
-  return strToReplace.replace(/(\d{1,3})\/(\1\/){1,2}\1/, '$1');
 }
 
 function replaceUselessDecimals(strToReplace) {
