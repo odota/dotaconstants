@@ -2,8 +2,7 @@ const request = require('request');
 const async = require('async');
 const fs = require('fs');
 const sources = [
-  // TODO jsfeed is broken for some items right now
-  /*{
+  {
     key: "items",
     url: "http://www.dota2.com/jsfeed/itemdata?l=english",
     transform: respObj => {
@@ -13,7 +12,7 @@ const sources = [
       }
       return items;
     },
-  }, */
+  }, 
   {
     key: "item_ids",
     url: "http://www.dota2.com/jsfeed/itemdata?l=english",
@@ -43,10 +42,10 @@ const sources = [
       }
       return itemGroups;
     },
-  }, {
+  }, 
+  {
     key: "abilities",
-    // TODO replace with master
-    url: ['http://www.dota2.com/jsfeed/abilitydata?l=english', 'https://raw.githubusercontent.com/dotabuff/d2vpkr/test-client-20161211/dota/resource/dota_english.json'],
+    url: ['http://www.dota2.com/jsfeed/abilitydata?l=english', 'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/dota_english.json'],
     transform: respObj => {
       const abilities = respObj[0].abilitydata;
       const strings = respObj[1].lang.Tokens;
@@ -61,8 +60,15 @@ const sources = [
         // Find and replace short raze range with long raze range
         abilities.nevermore_shadowraze3.attrib = abilities.nevermore_shadowraze3.attrib.replace(/\d{3}/, 700);
       }
+      // Add missing Keeper of the Light missing ability
+      if (!abilities.keeper_of_the_light_spirit_form_illuminate_end) {
+        abilities.keeper_of_the_light_spirit_form_illuminate_end = Object.assign({}, abilities.keeper_of_the_light_illuminate_end);
+      }
       Object.keys(abilities).forEach(key => {
         abilities[key].img = "/apps/dota2/images/abilities/" + key + "_md.png";
+        if (abilities[key].cmb) {
+          abilities[key].cmb = replaceUselessDecimals(abilities[key].cmb);
+        }
       });
       // Add talents
       Object.keys(strings).forEach(key => {
@@ -87,8 +93,7 @@ const sources = [
     },
   }, {
     key: "ability_ids",
-    // TODO replace with master
-    url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/test-client-20161211/dota/scripts/npc/npc_abilities.json",
+    url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_abilities.json",
     transform: respObj => {
       const abilityIds = {};
       for (const key in respObj.DOTAAbilities) {
@@ -224,4 +229,8 @@ function expandItemGroup(key, items) {
   } else {
     return base;
   }
+}
+
+function replaceUselessDecimals(strToReplace) {
+  return strToReplace.replace(/\.0+(\D)/, '$1');
 }
