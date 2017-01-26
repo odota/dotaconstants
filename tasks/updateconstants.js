@@ -217,9 +217,9 @@ async.each(sources, function(s, cb) {
         throw err;
       }
       // Copy manual json files to build
-      const jsons = fs.readdirSync(__dirname + '/../json');
+      const jsons = fs.readdirSync('./json');
       jsons.forEach((filename) => {
-        fs.createReadStream('./json/' + filename).pipe(fs.createWriteStream('./build/' + filename));
+        fs.writeFileSync('./build/' + filename, fs.readFileSync('./json/' + filename, 'utf-8'));
       });
       // Reference built files in index.js
       const cfs = fs.readdirSync('./build');
