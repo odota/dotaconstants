@@ -2,6 +2,8 @@ const request = require('request');
 const async = require('async');
 const fs = require('fs');
 const sources = [
+  // As of 2017-01-25 seems like all the numeric values are missing from the descriptions
+  /*
   {
     key: "items",
     url: "http://www.dota2.com/jsfeed/itemdata?l=english",
@@ -12,7 +14,8 @@ const sources = [
       }
       return items;
     },
-  }, 
+  },
+  */
   {
     key: "item_ids",
     url: "http://www.dota2.com/jsfeed/itemdata?l=english",
@@ -45,7 +48,10 @@ const sources = [
   }, 
   {
     key: "abilities",
-    url: ['http://www.dota2.com/jsfeed/abilitydata?l=english', 'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/dota_english.json'],
+    url: [
+      'http://www.dota2.com/jsfeed/abilitydata?l=english', 
+      'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/dota_english.json'
+    ],
     transform: respObj => {
       const abilities = respObj[0].abilitydata;
       const strings = respObj[1].lang.Tokens;
@@ -202,7 +208,7 @@ async.each(sources, function(s, cb) {
         if (s.transform) {
           body = s.transform(body);
         }
-        fs.writeFileSync('./json/' + s.key + ".json", JSON.stringify(body, null, 2));
+        fs.writeFileSync('./build/' + s.key + '.json', JSON.stringify(body, null, 2));
         cb(err);
       }
     },
@@ -210,11 +216,17 @@ async.each(sources, function(s, cb) {
       if (err) {
         throw err;
       }
-      const cfs = fs.readdirSync(__dirname + '/../json');
+      // Copy manual json files to build
+      const jsons = fs.readdirSync(__dirname + '/../json');
+      jsons.forEach((filename) => {
+        fs.createReadStream('./json/' + filename).pipe(fs.createWriteStream('./build/' + filename));
+      });
+      // Reference built files in index.js
+      const cfs = fs.readdirSync('./build');
       // Exports aren't supported in Node yet, so use old export syntax for now
       // const code = cfs.map((filename) => `export const ${filename.split('.')[0]} = require(__dirname + '/json/${filename.split('.')[0]}.json');`).join('\n';
       const code = `module.exports = {
-${cfs.map((filename) => `${filename.split('.')[0]}: require(__dirname + '/json/${filename.split('.')[0]}.json')`).join(',\n')}
+${cfs.map((filename) => `${filename.split('.')[0]}: require(__dirname + '/build/${filename.split('.')[0]}.json')`).join(',\n')}
 };`;
     fs.writeFileSync('./index.js', code);
     process.exit(0);
