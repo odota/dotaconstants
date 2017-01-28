@@ -75,8 +75,13 @@ const sources = [
         if (abilities[key].cmb) {
           abilities[key].cmb = replaceUselessDecimals(abilities[key].cmb);
         }
+        if (key.indexOf('special_bonus') === 0) {
+          abilities[key] = {
+            dname: abilities[key].dname,
+          };
+        }
       });
-      // Add talents
+      /*
       Object.keys(strings).forEach(key => {
         if (key.indexOf('DOTA_Tooltip_Ability_special') === 0 || key === 'DOTA_Tooltip_ability_attribute_bonus') {
           abilities[key.substring('DOTA_Tooltip_Ability_'.length)] = {
@@ -84,6 +89,7 @@ const sources = [
           };
         }
       });
+      */
       return abilities;
     },
   }, {
