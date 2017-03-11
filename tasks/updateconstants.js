@@ -80,6 +80,10 @@ const sources = [
             dname: abilities[key].dname,
           };
         }
+        delete abilities[key].lore;
+        delete abilities[key].notes;
+        delete abilities[key].affects;
+        delete abilities[key].hurl;
       });
       /*
       Object.keys(strings).forEach(key => {
@@ -122,7 +126,7 @@ const sources = [
     transform: respObj => {
       const heroes = {};
       respObj.forEach(function(h) {
-        h.img = "/apps/dota2/images/heroes/" + h.name.replace("npc_dota_hero_", "") + "_full.png";
+        h.img = "/apps/dota2/images/heroes/" + h.name.replace("npc_dota_hero_", "") + "_full.png?";
         h.icon = "/apps/dota2/images/heroes/" + h.name.replace("npc_dota_hero_", "") + "_icon.png";
         heroes[h.id] = h;
       });
@@ -134,7 +138,7 @@ const sources = [
     transform: respObj => {
       const heroNames = {};
       respObj.forEach(function(h) {
-        h.img = "/apps/dota2/images/heroes/" + h.name.replace("npc_dota_hero_", "") + "_full.png";
+        h.img = "/apps/dota2/images/heroes/" + h.name.replace("npc_dota_hero_", "") + "_full.png?";
         h.icon = "/apps/dota2/images/heroes/" + h.name.replace("npc_dota_hero_", "") + "_icon.png";
         heroNames[h.name] = h;
       });
