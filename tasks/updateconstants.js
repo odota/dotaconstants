@@ -151,7 +151,9 @@ const sources = [
       const region = {};
       const regions = respObj.regions;
       for (const key in regions) {
-        region[regions[key].region] = regions[key].display_name.slice("#dota_region_".length).split("_").map(s => s.toUpperCase()).join(" ");
+        if (Number(regions[key].region) > 0) {
+          region[regions[key].region] = regions[key].display_name.slice("#dota_region_".length).split("_").map(s => s.toUpperCase()).join(" ");
+        }
       }
       return region;
     },
