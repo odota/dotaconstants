@@ -50,11 +50,13 @@ const sources = [
     key: "abilities",
     url: [
       'http://www.dota2.com/jsfeed/abilitydata?l=english', 
-      'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/dota_english.json'
+      'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/dota_english.json',
+      'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_abilities.json'
     ],
     transform: respObj => {
       const abilities = respObj[0].abilitydata;
       const strings = respObj[1].lang.Tokens;
+      const abilities_data = respObj[2].DOTAAbilities;
       // Add missing Shadow Fiend raze abilities by copying the shortest raze
       if (!abilities.nevermore_shadowraze2) {
         abilities.nevermore_shadowraze2 = Object.assign({}, abilities.nevermore_shadowraze1);
@@ -84,6 +86,10 @@ const sources = [
         delete abilities[key].notes;
         delete abilities[key].affects;
         delete abilities[key].hurl;
+
+
+        abilities[key].dname = strings[`DOTA_Tooltip_ability_${key}`];
+        abilities[key].desc = replaceSpecialAttribs(strings[`DOTA_Tooltip_ability_${key}_Description`], abilities_data[key].AbilitySpecial);
       });
       /*
       Object.keys(strings).forEach(key => {
@@ -257,4 +263,29 @@ function expandItemGroup(key, items) {
 
 function replaceUselessDecimals(strToReplace) {
   return strToReplace.replace(/\.0+(\D)/, '$1');
+}
+
+function replaceSpecialAttribs(template, attribs) {
+  if(!template) { 
+    return template; 
+  }
+  if(attribs) {
+    template = template.replace(/%([^%]*)%/g, function(str, name) {
+      if(name == "") {
+        return "%";
+      }
+      var attr = attribs.find(attr => name in attr);
+      if (!attr && name[0] == "d"){ // Because someone at valve messed up in 4 places
+        name = name.substr(1);
+        attr = attribs.find(attr => name in attr);
+      } 
+      if (!attr){
+        console.log(`cant find attribute %${name}%`);
+        return `%${name}%`;
+      }
+      return attr[name];
+    });
+  }
+  template = template.replace(/\\n/g, "\r\n");
+  return template;
 }
