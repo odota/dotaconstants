@@ -78,7 +78,7 @@ const sources = [
             header = header.substr(1);
           }
           return `${header} <span class=\"attribVal\">${formatValues(attr[attr_key], percent)}</span>`;
-        }).filter(a => a).join("<br />\n");
+        }).filter(a => a).join("\n");
 
         ability.cmb = "";
         if(scripts[key].AbilityManaCost || scripts[key].AbilityCooldown) {
@@ -276,6 +276,8 @@ function formatValues(value, percent=false, separator=" / ") {
   return values.join(separator).replace(/\.0+(\D|$)/g, '$1');
 }
 
+// Formats templates like "Storm's movement speed is %storm_move_speed%" with "Storm's movement speed is 32"
+// args are the template, and a list of attribute dictionaries, like the ones in AbilitySpecial for each ability in the npc_abilities.json from the vpk
 function replaceSpecialAttribs(template, attribs) {
   if (!template) { 
     return template; 
@@ -286,7 +288,7 @@ function replaceSpecialAttribs(template, attribs) {
         return "%";
       }
       var attr = attribs.find(attr => name in attr);
-      if (!attr && name[0] == "d") { // Because someone at valve messed up in 4 places
+      if (!attr && name[0] === "d") { // Because someone at valve messed up in 4 places
         name = name.substr(1);
         attr = attribs.find(attr => name in attr);
       } 
