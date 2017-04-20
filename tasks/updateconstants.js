@@ -2,20 +2,75 @@ const request = require('request');
 const async = require('async');
 const fs = require('fs');
 const sources = [
-  // As of 2017-01-25 seems like all the numeric values are missing from the descriptions
-  /*
   {
     key: "items",
-    url: "http://www.dota2.com/jsfeed/itemdata?l=english",
+    url: [
+      'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/dota_english.json',
+      'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/items.json',
+      "http://www.dota2.com/jsfeed/itemdata?l=english"
+    ],
     transform: respObj => {
-      const items = respObj.itemdata;
-      for (const key in items) {
-        items[key].img = "/apps/dota2/images/items/" + items[key].img;
-      }
+      const strings = respObj[0].lang.Tokens;
+      const scripts = respObj[1].DOTAAbilities;
+      const items_data = respObj.itemdata;
+
+      // Fix places where valve doesnt care about correct case
+      Object.keys(strings).forEach(key => {
+        if (key.includes("DOTA_Tooltip_Ability_")) {
+          strings[key.replace("DOTA_Tooltip_Ability_", "DOTA_Tooltip_ability_")] = strings[key];
+        }
+      })
+
+      var not_items = [ "Version" ];
+
+      var items = {};
+
+      Object.keys(scripts).filter(key => {
+        return !(key.includes("item_recipe") && scripts[key].ItemCost === "0") && key !== "Version";
+      }).forEach(key => {
+        var item = {};
+
+        item.id = parseInt(scripts[key].ID);
+        item.img = `/apps/dota2/images/items/${key.replace(/^item_/, '')}_lg.png?3`;
+        if (key.includes("item_recipe")) {
+          item.img = "/apps/dota2/images/items/recipe_lg.png?3";
+        }
+
+        item.dname = strings[`DOTA_Tooltip_ability_${key}`];
+        item.qual = scripts[key].ItemQuality;
+        item.cost = parseInt(scripts[key].ItemCost);
+
+        item.desc = replaceSpecialAttribs(strings[`DOTA_Tooltip_ability_${key}_Description`], scripts[key].AbilitySpecial) || "";
+        var notes = [];
+        for (let i = 0; strings[`DOTA_Tooltip_ability_${key}_Note${i}`]; i++) {
+          notes.push(strings[`DOTA_Tooltip_ability_${key}_Note${i}`]);
+        }
+
+        item.notes = notes.join("<br />");
+
+        item.attrib = formatAttrib(scripts[key].AbilitySpecial, strings, `DOTA_Tooltip_ability_${key}_`);
+
+        item.mc = parseInt(scripts[key].AbilityManaCost) || false;
+        item.cd = parseInt(scripts[key].AbilityCooldown) || false;
+
+        item.lore = replaceSpecialAttribs(strings[`DOTA_Tooltip_ability_${key}_Lore`], scripts[key].AbilitySpecial) || "";
+
+        item.components = null;
+        item.created = false;
+
+        items[key.replace(/^item_/, '')] = item;
+      });
+
+      // Load recipes
+      Object.keys(scripts).filter(key => scripts[key].ItemRequirements && scripts[key].ItemResult).forEach(key => {
+        result_key = scripts[key].ItemResult.replace(/^item_/, '');
+        items[result_key].components = scripts[key].ItemRequirements[0].split(";").map(item => item.replace(/^item_/, ''));
+        items[result_key].created = true;
+      });
+
       return items;
     },
   },
-  */
   {
     key: "item_ids",
     url: "http://www.dota2.com/jsfeed/itemdata?l=english",
@@ -276,6 +331,27 @@ function formatValues(value, percent=false, separator=" / ") {
   return values.join(separator).replace(/\.0+(\D|$)/g, '$1');
 }
 
+// Formats AbilitySpecial for the attrib value for abilities and items
+function formatAttrib(attributes, strings, strings_prefix) {
+  return (attributes || []).map(attr => {
+    let key = Object.keys(attr).find(key => `${strings_prefix}${key}` in strings);
+    if (!key){
+      return null;
+    }
+    let header = strings[`${strings_prefix}${key}`];
+    let match = header.match(/(%)?(\+\$)?(.*)/);
+    header = match[3];
+    if (match[2]) {
+      let val = `${match[2][0]} <span class=\"attribVal\">${formatValues(attr[key], match[1])}</span>`;
+      let valText = `<span class=\"attribValText\">${strings[`dota_ability_variable_${header}`]}</span>`;
+      return `${val} ${valText}`;
+    }
+    else {
+      return `${header} <span class=\"attribVal\">${formatValues(attr[key], match[1])}</span>`;
+    }
+  }).filter(a => a).join("<br />\n");
+}
+
 // Formats templates like "Storm's movement speed is %storm_move_speed%" with "Storm's movement speed is 32"
 // args are the template, and a list of attribute dictionaries, like the ones in AbilitySpecial for each ability in the npc_abilities.json from the vpk
 function replaceSpecialAttribs(template, attribs) {
@@ -299,6 +375,6 @@ function replaceSpecialAttribs(template, attribs) {
       return attr[name];
     });
   }
-  template = template.replace(/\\n/g, "\r\n");
+  template = template.replace(/\\n/g, "<br />\r\n");
   return template;
 }
