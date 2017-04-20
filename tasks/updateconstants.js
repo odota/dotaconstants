@@ -122,8 +122,8 @@ const sources = [
 
         ability.cmb = "";
         if(scripts[key].AbilityManaCost || scripts[key].AbilityCooldown) {
-          let manacost_img = "<img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" />";
-          let cooldown_img = "<img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" />";
+          let manacost_img = "<img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"https://api.opendota.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" />";
+          let cooldown_img = "<img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"https://api.opendota.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" />";
           if(scripts[key].AbilityManaCost) {
             ability.cmb += `<div class="mana">${manacost_img} ${formatValues(scripts[key].AbilityManaCost, false, "/")}</div>`;
           } 
