@@ -49,57 +49,56 @@ const sources = [
   {
     key: "abilities",
     url: [
-      'http://www.dota2.com/jsfeed/abilitydata?l=english', 
       'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/dota_english.json',
       'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_abilities.json'
     ],
     transform: respObj => {
-      const abilities = respObj[0].abilitydata;
-      const strings = respObj[1].lang.Tokens;
-      const abilities_data = respObj[2].DOTAAbilities;
-      // Add missing Shadow Fiend raze abilities by copying the shortest raze
-      if (!abilities.nevermore_shadowraze2) {
-        abilities.nevermore_shadowraze2 = Object.assign({}, abilities.nevermore_shadowraze1);
-        // Find and replace short raze range with medium raze range
-        abilities.nevermore_shadowraze2.attrib = abilities.nevermore_shadowraze2.attrib.replace(/\d{3}/, 450);
-      }
-      if (!abilities.nevermore_shadowraze3) {
-        abilities.nevermore_shadowraze3 = Object.assign({}, abilities.nevermore_shadowraze1);
-        // Find and replace short raze range with long raze range
-        abilities.nevermore_shadowraze3.attrib = abilities.nevermore_shadowraze3.attrib.replace(/\d{3}/, 700);
-      }
-      // Add missing Keeper of the Light missing ability
-      if (!abilities.keeper_of_the_light_spirit_form_illuminate_end) {
-        abilities.keeper_of_the_light_spirit_form_illuminate_end = Object.assign({}, abilities.keeper_of_the_light_illuminate_end);
-      }
-      Object.keys(abilities).forEach(key => {
-        abilities[key].img = "/apps/dota2/images/abilities/" + key + "_md.png";
-        if (abilities[key].cmb) {
-          abilities[key].cmb = replaceUselessDecimals(abilities[key].cmb);
+      const strings = respObj[0].lang.Tokens;
+      const scripts = respObj[1].DOTAAbilities;
+
+      var not_abilities = [ "Version", "ability_base", "default_attack", "attribute_bonus", "ability_deward" ];
+
+      var abilities = {};
+
+      Object.keys(scripts).filter(key => !not_abilities.includes(key)).forEach(key => {
+        var ability = {};
+
+        ability.dname = strings[`DOTA_Tooltip_ability_${key}`];
+        ability.desc = replaceSpecialAttribs(strings[`DOTA_Tooltip_ability_${key}_Description`], scripts[key].AbilitySpecial);
+        ability.dmg = scripts[key].AbilityDamage ? `DAMAGE: <span class=\"attribVal\">${formatValues(scripts[key].AbilityDamage)}</span><br />` : "";
+
+        ability.attrib = (scripts[key].AbilitySpecial || []).map(attr => {
+          let attr_key = Object.keys(attr).find(attr_key => `DOTA_Tooltip_ability_${key}_${attr_key}` in strings);
+          if (!attr_key){
+            return null;
+          }
+          let header = strings[`DOTA_Tooltip_ability_${key}_${attr_key}`];
+          let percent = header[0] === "%";
+          if(percent) {
+            header = header.substr(1);
+          }
+          return `${header} <span class=\"attribVal\">${formatValues(attr[attr_key], percent)}</span>`;
+        }).filter(a => a).join("<br />\n");
+
+        ability.cmb = "";
+        if(scripts[key].AbilityManaCost || scripts[key].AbilityCooldown) {
+          let manacost_img = "<img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" />";
+          let cooldown_img = "<img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"http://cdn.dota2.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" />";
+          if(scripts[key].AbilityManaCost) {
+            ability.cmb += `<div class="mana">${manacost_img} ${formatValues(scripts[key].AbilityManaCost, false, "/")}</div>`;
+          } 
+          if(scripts[key].AbilityCooldown) {
+            ability.cmb += `<div class="cooldown">${cooldown_img} ${formatValues(scripts[key].AbilityCooldown, false, "/")}</div>`;
+          }
+          ability.cmb = `<div class="cooldownMana">${ability.cmb}<br clear="left" /></div>`;
         }
+
+        ability.img = `/apps/dota2/images/abilities/${key}_md.png`;
         if (key.indexOf('special_bonus') === 0) {
-          abilities[key] = {
-            dname: abilities[key].dname,
-          };
+          ability = { dname: ability.dname };
         }
-        delete abilities[key].lore;
-        delete abilities[key].notes;
-        delete abilities[key].affects;
-        delete abilities[key].hurl;
-
-
-        abilities[key].dname = strings[`DOTA_Tooltip_ability_${key}`];
-        abilities[key].desc = replaceSpecialAttribs(strings[`DOTA_Tooltip_ability_${key}_Description`], abilities_data[key].AbilitySpecial);
+        abilities[key] = ability;
       });
-      /*
-      Object.keys(strings).forEach(key => {
-        if (key.indexOf('DOTA_Tooltip_Ability_special') === 0 || key === 'DOTA_Tooltip_ability_attribute_bonus') {
-          abilities[key.substring('DOTA_Tooltip_Ability_'.length)] = {
-            dname: strings[key],
-          };
-        }
-      });
-      */
       return abilities;
     },
   }, {
@@ -265,21 +264,33 @@ function replaceUselessDecimals(strToReplace) {
   return strToReplace.replace(/\.0+(\D)/, '$1');
 }
 
+// Formats something like "20 21 22" or [ 20, 21, 22 ] to be "20 / 21 / 22"
+function formatValues(value, percent=false, separator=" / ") {
+  var values = Array.isArray(value) ? value : String(value).split(" ");
+  if (values.every(v => v == values[0])) {
+    values = [ values[0] ];
+  }
+  if(percent){
+    values = values.map(v => v + "%");
+  }
+  return values.join(separator).replace(/\.0+(\D|$)/g, '$1');
+}
+
 function replaceSpecialAttribs(template, attribs) {
-  if(!template) { 
+  if (!template) { 
     return template; 
   }
-  if(attribs) {
+  if (attribs) {
     template = template.replace(/%([^%]*)%/g, function(str, name) {
-      if(name == "") {
+      if (name == "") {
         return "%";
       }
       var attr = attribs.find(attr => name in attr);
-      if (!attr && name[0] == "d"){ // Because someone at valve messed up in 4 places
+      if (!attr && name[0] == "d") { // Because someone at valve messed up in 4 places
         name = name.substr(1);
         attr = attribs.find(attr => name in attr);
       } 
-      if (!attr){
+      if (!attr) {
         console.log(`cant find attribute %${name}%`);
         return `%${name}%`;
       }
