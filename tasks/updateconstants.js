@@ -6,13 +6,11 @@ const sources = [
     key: "items",
     url: [
       'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/dota_english.json',
-      'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/items.json',
-      "http://www.dota2.com/jsfeed/itemdata?l=english"
+      'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/items.json'
     ],
     transform: respObj => {
       const strings = respObj[0].lang.Tokens;
       const scripts = respObj[1].DOTAAbilities;
-      const items_data = respObj.itemdata;
 
       // Fix places where valve doesnt care about correct case
       Object.keys(strings).forEach(key => {
@@ -20,8 +18,6 @@ const sources = [
           strings[key.replace("DOTA_Tooltip_Ability_", "DOTA_Tooltip_ability_")] = strings[key];
         }
       })
-
-      var not_items = [ "Version" ];
 
       var items = {};
 
