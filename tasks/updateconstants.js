@@ -46,14 +46,14 @@ const sources = [
           notes.push(strings[`DOTA_Tooltip_ability_${key}_Note${i}`]);
         }
 
-        item.notes = notes.join("<br />");
+        item.notes = notes.join("\n");
 
         item.attrib = formatAttrib(scripts[key].AbilitySpecial, strings, `DOTA_Tooltip_ability_${key}_`);
 
         item.mc = parseInt(scripts[key].AbilityManaCost) || false;
         item.cd = parseInt(scripts[key].AbilityCooldown) || false;
 
-        item.lore = replaceSpecialAttribs(strings[`DOTA_Tooltip_ability_${key}_Lore`], scripts[key].AbilitySpecial) || "";
+        item.lore = (strings[`DOTA_Tooltip_ability_${key}_Lore`] || "").replace(/\\n/g, "\r\n");
 
         item.components = null;
         item.created = false;
@@ -120,20 +120,9 @@ const sources = [
 
         ability.dname = strings[`DOTA_Tooltip_ability_${key}`];
         ability.desc = replaceSpecialAttribs(strings[`DOTA_Tooltip_ability_${key}_Description`], scripts[key].AbilitySpecial);
-        ability.dmg = scripts[key].AbilityDamage ? `DAMAGE: <span class=\"attribVal\">${formatValues(scripts[key].AbilityDamage)}</span><br />` : "";
+        ability.dmg = scripts[key].AbilityDamage ? `DAMAGE: <span class=\"attribVal\">${formatValues(scripts[key].AbilityDamage)}</span>\n` : "";
 
-        ability.attrib = (scripts[key].AbilitySpecial || []).map(attr => {
-          let attr_key = Object.keys(attr).find(attr_key => `DOTA_Tooltip_ability_${key}_${attr_key}` in strings);
-          if (!attr_key){
-            return null;
-          }
-          let header = strings[`DOTA_Tooltip_ability_${key}_${attr_key}`];
-          let percent = header[0] === "%";
-          if(percent) {
-            header = header.substr(1);
-          }
-          return `${header} <span class=\"attribVal\">${formatValues(attr[attr_key], percent)}</span>`;
-        }).filter(a => a).join("\n");
+        ability.attrib = formatAttrib(scripts[key].AbilitySpecial, strings, `DOTA_Tooltip_ability_${key}_`);
 
         ability.cmb = "";
         if(scripts[key].AbilityManaCost || scripts[key].AbilityCooldown) {
@@ -145,7 +134,7 @@ const sources = [
           if(scripts[key].AbilityCooldown) {
             ability.cmb += `<div class="cooldown">${cooldown_img} ${formatValues(scripts[key].AbilityCooldown, false, "/")}</div>`;
           }
-          ability.cmb = `<div class="cooldownMana">${ability.cmb}<br clear="left" /></div>`;
+          ability.cmb = `<div class="cooldownMana">${ability.cmb}</div>`;
         }
 
         ability.img = `/apps/dota2/images/abilities/${key}_md.png`;
@@ -349,7 +338,7 @@ function formatAttrib(attributes, strings, strings_prefix) {
     else {
       return `${header} <span class=\"attribVal\">${formatValues(attr[key], match[1])}</span>`;
     }
-  }).filter(a => a).join("<br />\n");
+  }).filter(a => a).join("\n");
 }
 
 // Formats templates like "Storm's movement speed is %storm_move_speed%" with "Storm's movement speed is 32"
@@ -375,6 +364,6 @@ function replaceSpecialAttribs(template, attribs) {
       return attr[name];
     });
   }
-  template = template.replace(/\\n/g, "<br />\r\n");
+  template = template.replace(/\\n/g, "\r\n");
   return template;
 }
