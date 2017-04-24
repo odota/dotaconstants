@@ -328,7 +328,7 @@ function formatAttrib(attributes, strings, strings_prefix) {
     header = match[3];
 
     if (match[2]) {
-      final.heaer = "+"
+      final.header = "+"
       final.value = formatValues(attr[key], match[1]);
       final.footer = strings[`dota_ability_variable_${header}`];
     } else {
