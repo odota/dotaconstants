@@ -318,8 +318,14 @@ function formatValues(value, percent=false, separator=" / ") {
 function formatAttrib(attributes, strings, strings_prefix) {
   return (attributes || []).map(attr => {
     let key = Object.keys(attr).find(key => `${strings_prefix}${key}` in strings);
-    if (!key){
-      return null;
+    if (!key) {
+      for (item in attr) { key = item; break; }
+      return {
+        key: key,
+        header: `${key.replace(/_/g, " ").toUpperCase()}:`,
+        value: formatValues(attr[key]),
+        generated: true
+      };
     }
 
     let final = { key: key };
