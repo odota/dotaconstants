@@ -116,21 +116,17 @@ const sources = [
 
         ability.dname = strings[`DOTA_Tooltip_ability_${key}`];
         ability.desc = replaceSpecialAttribs(strings[`DOTA_Tooltip_ability_${key}_Description`], scripts[key].AbilitySpecial);
-        ability.dmg = scripts[key].AbilityDamage ? `DAMAGE: <span class=\"attribVal\">${formatValues(scripts[key].AbilityDamage)}</span>\n` : "";
+        ability.dmg = scripts[key].AbilityDamage && formatValues(scripts[key].AbilityDamage);
 
         ability.attrib = formatAttrib(scripts[key].AbilitySpecial, strings, `DOTA_Tooltip_ability_${key}_`);
 
-        ability.cmb = "";
         if(scripts[key].AbilityManaCost || scripts[key].AbilityCooldown) {
-          let manacost_img = "<img alt=\"Mana Cost\" title=\"Mana Cost\" class=\"manaImg\" src=\"https://api.opendota.com/apps/dota2/images/tooltips/mana.png\" width=\"16\" height=\"16\" border=\"0\" />";
-          let cooldown_img = "<img alt=\"Cooldown\" title=\"Cooldown\" class=\"cooldownImg\" src=\"https://api.opendota.com/apps/dota2/images/tooltips/cooldown.png\" width=\"16\" height=\"16\" border=\"0\" />";
           if(scripts[key].AbilityManaCost) {
-            ability.cmb += `<div class="mana">${manacost_img} ${formatValues(scripts[key].AbilityManaCost, false, "/")}</div>`;
+            ability.mc = formatValues(scripts[key].AbilityManaCost, false, "/");
           } 
           if(scripts[key].AbilityCooldown) {
-            ability.cmb += `<div class="cooldown">${cooldown_img} ${formatValues(scripts[key].AbilityCooldown, false, "/")}</div>`;
+            ability.cd = formatValues(scripts[key].AbilityCooldown, false, "/");
           }
-          ability.cmb = `<div class="cooldownMana">${ability.cmb}</div>`;
         }
 
         ability.img = `/apps/dota2/images/abilities/${key}_md.png`;
@@ -310,31 +306,44 @@ function formatValues(value, percent=false, separator=" / ") {
   if (values.every(v => v == values[0])) {
     values = [ values[0] ];
   }
-  if(percent){
+  if (percent){
     values = values.map(v => v + "%");
   }
-  return values.join(separator).replace(/\.0+(\D|$)/g, '$1');
+  let len = values.length;
+  let res = values.join(separator).replace(/\.0+(\D|$)/g, '$1');
+  return len > 1 ? res.split(separator) : res;
 }
 
 // Formats AbilitySpecial for the attrib value for abilities and items
 function formatAttrib(attributes, strings, strings_prefix) {
   return (attributes || []).map(attr => {
     let key = Object.keys(attr).find(key => `${strings_prefix}${key}` in strings);
-    if (!key){
-      return null;
+    if (!key) {
+      for (item in attr) { key = item; break; }
+      return {
+        key: key,
+        header: `${key.replace(/_/g, " ").toUpperCase()}:`,
+        value: formatValues(attr[key]),
+        generated: true
+      };
     }
+
+    let final = { key: key };
     let header = strings[`${strings_prefix}${key}`];
     let match = header.match(/(%)?(\+\$)?(.*)/);
     header = match[3];
+
     if (match[2]) {
-      let val = `${match[2][0]} <span class=\"attribVal\">${formatValues(attr[key], match[1])}</span>`;
-      let valText = `<span class=\"attribValText\">${strings[`dota_ability_variable_${header}`]}</span>`;
-      return `${val} ${valText}`;
+      final.header = "+"
+      final.value = formatValues(attr[key], match[1]);
+      final.footer = strings[`dota_ability_variable_${header}`];
+    } else {
+      final.header = header;
+      final.value = formatValues(attr[key], match[1]);
     }
-    else {
-      return `${header} <span class=\"attribVal\">${formatValues(attr[key], match[1])}</span>`;
-    }
-  }).filter(a => a).join("\n");
+
+    return final;
+  }).filter(a => a);
 }
 
 // Formats templates like "Storm's movement speed is %storm_move_speed%" with "Storm's movement speed is 32"
@@ -360,6 +369,6 @@ function replaceSpecialAttribs(template, attribs) {
       return attr[name];
     });
   }
-  template = template.replace(/\\n/g, "\r\n");
+  template = template.replace(/\\n/g, "\n");
   return template;
 }
