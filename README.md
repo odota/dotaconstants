@@ -1,4 +1,6 @@
 # dotaconstants
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/odota/dotaconstants.svg)](https://greenkeeper.io/)
 Constant data for Dota 2 applications
 
 Notes
