@@ -1,6 +1,36 @@
 const request = require('request');
 const async = require('async');
 const fs = require('fs');
+
+const extraStrings = {
+  DOTA_ABILITY_BEHAVIOR_NONE: "None",
+  DOTA_ABILITY_BEHAVIOR_PASSIVE: "Passive",
+  DOTA_ABILITY_BEHAVIOR_UNIT_TARGET: "Unit Target",
+  DOTA_ABILITY_BEHAVIOR_CHANNELLED: "Channeled",
+  DOTA_ABILITY_BEHAVIOR_POINT: "Point Target",
+  DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES: "Root",
+  DOTA_ABILITY_BEHAVIOR_AOE: "AOE",
+  DOTA_ABILITY_BEHAVIOR_NO_TARGET: "No Target",
+  DOTA_ABILITY_BEHAVIOR_AUTOCAST: "Autocast",
+  DOTA_ABILITY_BEHAVIOR_ATTACK: "Attack Modifier",
+  DOTA_ABILITY_BEHAVIOR_IMMEDIATE: "Instant Cast",
+  DAMAGE_TYPE_PHYSICAL: "Physical",
+  DAMAGE_TYPE_MAGICAL: "Magical",
+  DAMAGE_TYPE_PURE: "Pure",
+  SPELL_IMMUNITY_ENEMIES_YES: "Yes",
+  SPELL_IMMUNITY_ENEMIES_NO: "No",
+  DOTA_ABILITY_BEHAVIOR_HIDDEN: "Hidden"
+}
+
+const ignoreStrings = [
+  "DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES",
+  "DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK",
+  "DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT",
+  "DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING",
+  "DOTA_ABILITY_BEHAVIOR_TOGGLE",
+  "DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+]
+
 const sources = [
   {
     key: "items",
@@ -115,6 +145,12 @@ const sources = [
         var ability = {};
 
         ability.dname = strings[`DOTA_Tooltip_ability_${key}`];
+
+        ability.behavior = formatBehavior(scripts[key].AbilityBehavior) || undefined;
+        ability.dmg_type = formatBehavior(scripts[key].AbilityUnitDamageType) || undefined;
+        ability.bkbpierce = formatBehavior(scripts[key].SpellImmunityType) || undefined;
+        item.target_type = formatBehavior(scripts[key].AbilityUnitTargetTeam) || undefined;
+
         ability.desc = replaceSpecialAttribs(strings[`DOTA_Tooltip_ability_${key}_Description`], scripts[key].AbilitySpecial);
         ability.dmg = scripts[key].AbilityDamage && formatValues(scripts[key].AbilityDamage);
 
@@ -372,4 +408,25 @@ function replaceSpecialAttribs(template, attribs) {
   }
   template = template.replace(/\\n/g, "\n");
   return template;
+}
+
+function formatBehavior(string) {
+  if (!string) return false;
+
+  let split = string
+    .split(" | ")
+    .map((item) => {
+      if (!~ignoreStrings.indexOf(item)) {
+        return extraStrings[item];
+      } else {
+        return null;
+      }
+    })
+    .filter((a) => a !== null);
+
+  if (split.length === 1) {
+    return split[0];
+  } else {
+    return split;
+  }
 }
