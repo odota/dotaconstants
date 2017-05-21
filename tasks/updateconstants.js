@@ -222,6 +222,33 @@ const sources = [
       return heroNames;
     },
   }, {
+    key: "hero_abilities",
+    url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.json",
+    transform: respObj => {
+      var DOTAHeroes = respObj.DOTAHeroes;
+      const heroAbilities = {};
+      Object.keys(DOTAHeroes).forEach(function(heroKey){
+        if (heroKey != "Version" && heroKey != "npc_dota_hero_base" && heroKey != "npc_dota_hero_target_dummy"){
+          const newHero = {"abilities": [], "talents": []};
+          Object.keys(DOTAHeroes[heroKey]).forEach(function(key){
+            var abilityRegexMatch = key.match(/Ability([0-9]+)/);
+            if (abilityRegexMatch){ 
+              var abilityNum = parseInt(abilityRegexMatch[1]); 
+              if (abilityNum < 10){
+                newHero["abilities"].push(DOTAHeroes[heroKey][key]); 
+              }
+              else{
+                // -8 not -10 because going from 0-based index -> 1 and flooring divison result 
+                newHero["talents"].push({"name": DOTAHeroes[heroKey][key], "level": Math.floor((abilityNum - 8) / 2)});
+              }
+            }
+          });
+          heroAbilities[heroKey] = newHero;
+        }
+      }); 
+      return heroAbilities;
+    },
+  }, {
     key: "region",
     url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/regions.json",
     transform: respObj => {
