@@ -149,7 +149,7 @@ const sources = [
         ability.behavior = formatBehavior(scripts[key].AbilityBehavior) || undefined;
         ability.dmg_type = formatBehavior(scripts[key].AbilityUnitDamageType) || undefined;
         ability.bkbpierce = formatBehavior(scripts[key].SpellImmunityType) || undefined;
-        item.target_type = formatBehavior(scripts[key].AbilityUnitTargetTeam) || undefined;
+        ability.target_type = formatBehavior(scripts[key].AbilityUnitTargetTeam) || undefined;
 
         ability.desc = replaceSpecialAttribs(strings[`DOTA_Tooltip_ability_${key}_Description`], scripts[key].AbilitySpecial);
         ability.dmg = scripts[key].AbilityDamage && formatValues(scripts[key].AbilityDamage);
@@ -199,12 +199,39 @@ const sources = [
     },
   }, {
     key: "heroes",
-    url: "https://api.opendota.com/api/heroes",
+    url: [
+      "https://api.opendota.com/api/heroes",
+      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.json"
+    ],
     transform: respObj => {
       const heroes = {};
-      respObj.forEach(function(h) {
+      let baseHero = respObj[1].DOTAHeroes.npc_dota_hero_base;
+      respObj[0].forEach(function(h) {
+        let vpkrh = respObj[1].DOTAHeroes[h.name];
+
         h.img = "/apps/dota2/images/heroes/" + h.name.replace("npc_dota_hero_", "") + "_full.png?";
         h.icon = "/apps/dota2/images/heroes/" + h.name.replace("npc_dota_hero_", "") + "_icon.png";
+        h.url = vpkrh.url;
+
+        h.base_armor = vpkrh.ArmorPhysical;
+        h.base_mr = vpkrh.MagicalResistance || baseHero.MagicalResistance;
+
+        h.base_str = vpkrh.AttributeBaseStrength;
+        h.base_agi = vpkrh.AttributeBaseAgility;
+        h.base_int = vpkrh.AttributeBaseIntelligence;
+
+        h.str_gain = vpkrh.AttributeStrengthGain;
+        h.agi_gain = vpkrh.AttributeAgilityGain;
+        h.int_gain = vpkrh.AttributeIntelligenceGain;
+
+        h.attack_range = vpkrh.AttackRange;
+
+        h.move_speed = vpkrh.MovementSpeed;
+        h.turn_rate = vpkrh.MovementTurnRate;
+
+        h.cm_enabled = vpkrh.CMEnabled ? true : false;
+        h.legs = vpkrh.Legs || baseHero.Legs;
+
         heroes[h.id] = h;
       });
       return heroes;
@@ -433,7 +460,7 @@ function replaceSpecialAttribs(template, attribs) {
       return attr[name];
     });
   }
-  template = template.replace(/\\n/g, "\n");
+  template = template.replace(/\\n/g, "\n").replace(/<[^>]*>/g, "");
   return template;
 }
 

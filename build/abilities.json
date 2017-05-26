@@ -4491,9 +4491,9 @@
         "key": "gods_strength_bonus_str",
         "header": "BONUS STRENGTH:",
         "value": [
-          "16",
-          "28",
-          "40"
+          "12",
+          "24",
+          "36"
         ]
       },
       {
@@ -10345,7 +10345,7 @@
     "dname": "Elder Dragon Form",
     "behavior": "No Target",
     "bkbpierce": "Yes",
-    "desc": "Dragon Knight takes the form of one of three powerful elder dragons, increasing his speed, and Dragon Tail's range, while granting him new powers.\n<font color=\\\"#9acd32\\\">LEVEL 1 Green Dragon</font> - Corrosive Breath: attacks deal 20 poison damage per second for 5 seconds. Works on structures.\n<font color=\\\"#ff0000\\\">LEVEL 2 Red Dragon</font> - Splash Attack: attacks damage all enemy units in a 300 radius, with Corrosive Breath added to the targets.\n<font color=\\\"#87ceeb\\\">LEVEL 3 Blue Dragon</font> - Frost Breath: slows movement speed by 30% and attack speed by 30 of enemy units in Splash Attack range for 3 seconds, with Corrosive Breath added to the targets.",
+    "desc": "Dragon Knight takes the form of one of three powerful elder dragons, increasing his speed, and Dragon Tail's range, while granting him new powers.\nLEVEL 1 Green Dragon - Corrosive Breath: attacks deal 20 poison damage per second for 5 seconds. Works on structures.\nLEVEL 2 Red Dragon - Splash Attack: attacks damage all enemy units in a 300 radius, with Corrosive Breath added to the targets.\nLEVEL 3 Blue Dragon - Frost Breath: slows movement speed by 30% and attack speed by 30 of enemy units in Splash Attack range for 3 seconds, with Corrosive Breath added to the targets.",
     "attrib": [
       {
         "key": "duration",
@@ -10459,7 +10459,7 @@
     "behavior": "Unit Target",
     "dmg_type": "Physical",
     "bkbpierce": "No",
-    "desc": "Casts a poisonous spell on an enemy unit, gradually slowing movement, and causing damage over time.\n<font color=\\\"#ffb2ff\\\">LEVEL 1</font> - Slows the target by 33% for 3 seconds.\n<font color=\\\"#ff99ff\\\">LEVEL 2</font> - Slows the target by 33% for 2 seconds, then by 66% for 1 second.\n<font color=\\\"#ff66ff\\\">LEVEL 3</font> - Slows the target by 33%, 66%, and 100%, for 1 second each.\n<font color=\\\"#ff33ff\\\">LEVEL 4</font> - Slows the target by 33% for 1 second, then 66% for 1 second, then stuns for 1 second.",
+    "desc": "Casts a poisonous spell on an enemy unit, gradually slowing movement, and causing damage over time.\nLEVEL 1 - Slows the target by 33% for 3 seconds.\nLEVEL 2 - Slows the target by 33% for 2 seconds, then by 66% for 1 second.\nLEVEL 3 - Slows the target by 33%, 66%, and 100%, for 1 second each.\nLEVEL 4 - Slows the target by 33% for 1 second, then 66% for 1 second, then stuns for 1 second.",
     "dmg": [
       "14",
       "20",
@@ -12768,10 +12768,10 @@
         "key": "heath_regen",
         "header": "HEALTH REGEN:",
         "value": [
-          "2",
-          "4",
-          "6",
-          "8"
+          "3",
+          "5",
+          "7",
+          "9"
         ]
       },
       {
@@ -15596,7 +15596,7 @@
       "No Target",
       "Instant Cast"
     ],
-    "desc": "Allows manipulation of ice elements. Each <font color='#7998b5'>Quas</font> instance provides increased health regeneration.\n",
+    "desc": "Allows manipulation of ice elements. Each Quas instance provides increased health regeneration.\n",
     "attrib": [
       {
         "key": "health_regen_per_instance",
@@ -15622,7 +15622,7 @@
       "No Target",
       "Instant Cast"
     ],
-    "desc": "Allows manipulation of storm elements. Each <font color='#d671a9'>Wex</font> instance provides increased attack speed and movement speed.",
+    "desc": "Allows manipulation of storm elements. Each Wex instance provides increased attack speed and movement speed.",
     "attrib": [
       {
         "key": "attack_speed_per_instance",
@@ -15661,7 +15661,7 @@
       "No Target",
       "Instant Cast"
     ],
-    "desc": "Allows manipulation of fire elements. Each <font color='#cabe68'>Exort</font> instance provides increased attack damage.",
+    "desc": "Allows manipulation of fire elements. Each Exort instance provides increased attack damage.",
     "attrib": [
       {
         "key": "bonus_damage_per_instance",
@@ -15687,7 +15687,7 @@
       "Passive",
       null
     ],
-    "desc": "Casting Invoke will replace this slot with one of ten unique spells based on Invoker's currently active <font color='#7998b5'>Quas</font>, <font color='#d671a9'>Wex</font>, and <font color='#cabe68'>Exort</font> buffs.",
+    "desc": "Casting Invoke will replace this slot with one of ten unique spells based on Invoker's currently active Quas, Wex, and Exort buffs.",
     "attrib": [],
     "img": "/apps/dota2/images/abilities/invoker_empty1_md.png"
   },
@@ -15697,7 +15697,7 @@
       "Passive",
       null
     ],
-    "desc": "Casting Invoke will replace this slot with one of ten unique spells based on Invoker's currently active <font color='#7998b5'>Quas</font>, <font color='#d671a9'>Wex</font>, and <font color='#cabe68'>Exort</font> buffs.",
+    "desc": "Casting Invoke will replace this slot with one of ten unique spells based on Invoker's currently active Quas, Wex, and Exort buffs.",
     "attrib": [],
     "img": "/apps/dota2/images/abilities/invoker_empty2_md.png"
   },
@@ -15750,7 +15750,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Invoker draws the heat from an enemy, chilling them to their very core for a duration based on the level of <font color='#7998b5'>Quas</font>. The enemy will take damage and be briefly frozen. Further damage taken in this state will freeze the enemy again, dealing bonus damage. The enemy can only be frozen so often, but the freeze cooldown decreases based on the level of <font color='#7998b5'>Quas</font>.",
+    "desc": "Invoker draws the heat from an enemy, chilling them to their very core for a duration based on the level of Quas. The enemy will take damage and be briefly frozen. Further damage taken in this state will freeze the enemy again, dealing bonus damage. The enemy can only be frozen so often, but the freeze cooldown decreases based on the level of Quas.",
     "attrib": [
       {
         "key": "duration",
@@ -15820,7 +15820,7 @@
       null
     ],
     "bkbpierce": "No",
-    "desc": "Invoker manipulates the ice and electrical energies around him, rendering his body invisible. The elemental imbalance created as a consequence slows nearby enemies based on the level of <font color='#7998b5'>Quas</font>, and slows Invoker as well based on the level of <font color='#d671a9'>Wex</font>.",
+    "desc": "Invoker manipulates the ice and electrical energies around him, rendering his body invisible. The elemental imbalance created as a consequence slows nearby enemies based on the level of Quas, and slows Invoker as well based on the level of Wex.",
     "attrib": [
       {
         "key": "duration",
@@ -15880,7 +15880,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Unleashes a fast moving tornado that picks up enemy units in its path, suspending them helplessly in the air shortly before allowing them to plummet to their doom. Travels further based on the level of <font color='#d671a9'>Wex</font>. Holds enemies in the air for a duration based on the level of <font color='#7998b5'>Quas</font>. Deals base damage plus added damage based on levels in <font color='#d671a9'>Wex</font>.\n\nDISPEL TYPE: Basic Dispel",
+    "desc": "Unleashes a fast moving tornado that picks up enemy units in its path, suspending them helplessly in the air shortly before allowing them to plummet to their doom. Travels further based on the level of Wex. Holds enemies in the air for a duration based on the level of Quas. Deals base damage plus added damage based on levels in Wex.\n\nDISPEL TYPE: Basic Dispel",
     "attrib": [
       {
         "key": "travel_distance",
@@ -15973,7 +15973,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Invoker builds up a charge of electromagnetic energy at a targeted location which automatically detonates after 2.9 seconds. The detonation covers an area, draining mana based on the level of <font color='#d671a9'>Wex</font>. Deals damage for each point of mana drained.  If EMP drains mana from an enemy hero, Invoker gains 50% of the mana drained.",
+    "desc": "Invoker builds up a charge of electromagnetic energy at a targeted location which automatically detonates after 2.9 seconds. The detonation covers an area, draining mana based on the level of Wex. Deals damage for each point of mana drained.  If EMP drains mana from an enemy hero, Invoker gains 50% of the mana drained.",
     "attrib": [
       {
         "key": "delay",
@@ -16016,7 +16016,7 @@
       "Hidden",
       null
     ],
-    "desc": "Invoker infuses an ally with an immense surge of energy, increasing their attack speed based on the level of <font color='#d671a9'>Wex</font> and their damage based on the level of <font color='#cabe68'>Exort</font>.",
+    "desc": "Invoker infuses an ally with an immense surge of energy, increasing their attack speed based on the level of Wex and their damage based on the level of Exort.",
     "attrib": [
       {
         "key": "bonus_attack_speed",
@@ -16065,7 +16065,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Invoker pulls a flaming meteor from space onto the targeted location. Upon landing, the meteor rolls forward, constantly dealing damage based on the level of <font color='#cabe68'>Exort</font>, and rolling further based on the level of <font color='#d671a9'>Wex</font>. Units hit by the meteor will also be set on fire for a short time, receiving additional damage based on the level of <font color='#cabe68'>Exort</font>.",
+    "desc": "Invoker pulls a flaming meteor from space onto the targeted location. Upon landing, the meteor rolls forward, constantly dealing damage based on the level of Exort, and rolling further based on the level of Wex. Units hit by the meteor will also be set on fire for a short time, receiving additional damage based on the level of Exort.",
     "attrib": [
       {
         "key": "land_time",
@@ -16162,7 +16162,7 @@
     ],
     "dmg_type": "Pure",
     "bkbpierce": "Yes",
-    "desc": "Sends a catastrophic ray of fierce energy from the sun at any targeted location, incinerating all enemies standing beneath it once it reaches the earth. Deals damage based on the level of <font color='#cabe68'>Exort</font>, however this damage is spread evenly over all enemies hit.",
+    "desc": "Sends a catastrophic ray of fierce energy from the sun at any targeted location, incinerating all enemies standing beneath it once it reaches the earth. Deals damage based on the level of Exort, however this damage is spread evenly over all enemies hit.",
     "attrib": [
       {
         "key": "delay",
@@ -16213,7 +16213,7 @@
       null
     ],
     "bkbpierce": "No",
-    "desc": "Invoker forges a spirit embodying the strength of fire and fortitude of ice. Damage, mana, and armor are based on the level of <font color='#cabe68'>Exort</font> while attack range, health, and duration are based on the level of <font color='#7998b5'>Quas</font>. The elemental's scorching attack is capable of melting the armor of enemy heroes.",
+    "desc": "Invoker forges a spirit embodying the strength of fire and fortitude of ice. Damage, mana, and armor are based on the level of Exort while attack range, health, and duration are based on the level of Quas. The elemental's scorching attack is capable of melting the armor of enemy heroes.",
     "attrib": [
       {
         "key": "spirit_damage",
@@ -16341,7 +16341,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Generates a wall of solid ice directly in front of Invoker for a duration based on the level of <font color='#7998b5'>Quas</font>. The bitter cold emanating from it greatly slows nearby enemies based on the level of <font color='#7998b5'>Quas</font> and deals damage each second based on the level of <font color='#cabe68'>Exort</font>.",
+    "desc": "Generates a wall of solid ice directly in front of Invoker for a duration based on the level of Quas. The bitter cold emanating from it greatly slows nearby enemies based on the level of Quas and deals damage each second based on the level of Exort.",
     "attrib": [
       {
         "key": "duration",
@@ -16428,7 +16428,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Invoker unleashes a mighty sonic wave in front of him, dealing damage to any enemy unit it collides with based on the level of <font color='#cabe68'>Exort</font>. The sheer impact from the blast is enough to knock those enemy units back for a duration based on the level of <font color='#7998b5'>Quas</font>, then disarm their attacks for a duration based on the level of <font color='#d671a9'>Wex</font>.",
+    "desc": "Invoker unleashes a mighty sonic wave in front of him, dealing damage to any enemy unit it collides with based on the level of Exort. The sheer impact from the blast is enough to knock those enemy units back for a duration based on the level of Quas, then disarm their attacks for a duration based on the level of Wex.",
     "attrib": [
       {
         "key": "travel_distance",
@@ -16724,6 +16724,10 @@
     "behavior": "Unit Target",
     "dmg_type": "Magical",
     "bkbpierce": "No",
+    "target_type": [
+      null,
+      null
+    ],
     "desc": "Places a target unit into an astral prison. The hidden unit is invulnerable and disabled. When the astral prison implodes, it deals 100,175,250,325 damage to enemies in a 400 radius around the target.\n\nUpgradable by Aghanim's Scepter.",
     "attrib": [
       {
@@ -17890,6 +17894,10 @@
     "dname": "Disruption",
     "behavior": "Unit Target",
     "bkbpierce": "No",
+    "target_type": [
+      null,
+      null
+    ],
     "desc": "Banishes the targeted unit from the battlefield for a short duration.  Upon returning, two illusions of the banished unit are created under Shadow Demon's control.",
     "attrib": [
       {
@@ -18872,7 +18880,7 @@
   "ogre_magi_multicast": {
     "dname": "Multicast",
     "behavior": "Passive",
-    "desc": "Enables Ogre Magi to cast his spells multiple times with each use, while also granting his spells greater potency:\n<font color=\\\"#EEF10D\\\">Fireblast</font> has its cooldown decreased, its range increased, and its mana cost increased.\n<font color=\\\"#DE8930\\\">Ignite</font> hits enemies in an area, its range is increased, and it may be cast onto random nearby enemies when used.\n<font color=\\\"#E34F4F\\\">Bloodlust</font> has its cooldown reduced, and may be cast on random nearby allies when used.",
+    "desc": "Enables Ogre Magi to cast his spells multiple times with each use, while also granting his spells greater potency:\nFireblast has its cooldown decreased, its range increased, and its mana cost increased.\nIgnite hits enemies in an area, its range is increased, and it may be cast onto random nearby enemies when used.\nBloodlust has its cooldown reduced, and may be cast on random nearby allies when used.",
     "attrib": [
       {
         "key": "multicast_2_times",
@@ -21237,7 +21245,7 @@
     "dname": "Spirits In",
     "behavior": [
       "No Target",
-      "Hidden"
+      null
     ],
     "desc": "Calls the spirits closer to you. Can be toggled on and off.",
     "attrib": [],
@@ -21247,31 +21255,11 @@
     "dname": "Spirits Out",
     "behavior": [
       "No Target",
-      "Hidden"
+      null
     ],
     "desc": "Sends the spirits farther away from you. Can be toggled on and off.",
     "attrib": [],
     "img": "/apps/dota2/images/abilities/wisp_spirits_out_md.png"
-  },
-  "wisp_empty1": {
-    "dname": "Spirits In",
-    "behavior": [
-      "Passive",
-      null
-    ],
-    "desc": "Calls the spirits closer to you. Can be toggled on and off. Only available while Spirits is active.",
-    "attrib": [],
-    "img": "/apps/dota2/images/abilities/wisp_empty1_md.png"
-  },
-  "wisp_empty2": {
-    "dname": "Spirits Out",
-    "behavior": [
-      "Passive",
-      null
-    ],
-    "desc": "Sends the spirits farther away from you. Can be toggled on and off. Only available while Spirits is active.",
-    "attrib": [],
-    "img": "/apps/dota2/images/abilities/wisp_empty2_md.png"
   },
   "slark_dark_pact": {
     "dname": "Dark Pact",
@@ -25632,22 +25620,11 @@
     "behavior": [
       "No Target",
       null,
-      "Hidden",
       "Instant Cast"
     ],
     "desc": "Toggles slow forward movement during Sun Ray firing.",
     "attrib": [],
     "img": "/apps/dota2/images/abilities/phoenix_sun_ray_toggle_move_md.png"
-  },
-  "phoenix_sun_ray_toggle_move_empty": {
-    "dname": "",
-    "behavior": [
-      "Passive",
-      null
-    ],
-    "desc": "",
-    "attrib": [],
-    "img": "/apps/dota2/images/abilities/phoenix_sun_ray_toggle_move_empty_md.png"
   },
   "phoenix_supernova": {
     "dname": "Supernova",
@@ -25848,6 +25825,10 @@
   "oracle_fates_edict": {
     "dname": "Fate's Edict",
     "behavior": "Unit Target",
+    "target_type": [
+      null,
+      null
+    ],
     "desc": "Oracle enraptures a target, disarming them and granting them 100% magic damage resistance. Can be cast on allies and enemies.",
     "attrib": [
       {
@@ -25881,6 +25862,10 @@
     "behavior": "Unit Target",
     "dmg_type": "Magical",
     "bkbpierce": "No",
+    "target_type": [
+      null,
+      null
+    ],
     "desc": "Burns away impurities, dealing heavy magic damage to the target before causing them to regenerate health over time. The amount of health regenerated over its duration exceeds the amount of initial damage. Can be cast on enemies and allies.\n\nUpgradable by Aghanim's Scepter.",
     "attrib": [
       {
@@ -26288,7 +26273,7 @@
       {
         "key": "attack_speed",
         "header": "SOLDIER ATK SPEED:",
-        "value": "1.7"
+        "value": "1.6"
       },
       {
         "key": "duration",
