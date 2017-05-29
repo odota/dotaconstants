@@ -7239,7 +7239,7 @@
     "dname": "Solar Crest",
     "qual": "rare",
     "cost": 2625,
-    "desc": "Active: Shine - Temporarily removes the armor and evasion from Solar Crest. When cast on an ally it grants them 10 armor and 25% evasion. When cast on an enemy, it removes 10 of their armor and grants your allies to have 25% True Strike chance on the target. Cannot target magic immune enemies.",
+    "desc": "Active: Shine - Temporarily removes the armor and evasion from Solar Crest. When cast on an ally it grants them 10 armor and 20% evasion. When cast on an enemy, it removes 10 of their armor and grants your allies to have 35% Accuracy on the target. Cannot target magic immune enemies.",
     "notes": "",
     "attrib": [
       {
@@ -7257,13 +7257,13 @@
       {
         "key": "bonus_evasion",
         "header": "+",
-        "value": "25%",
+        "value": "20%",
         "footer": "Evasion"
       },
       {
         "key": "truestrike_chance",
-        "header": "TRUE STRIKE CHANCE:",
-        "value": "25%"
+        "header": "ACCURACY:",
+        "value": "35%"
       },
       {
         "key": "duration",
@@ -7545,6 +7545,7 @@
   "recipe_rod_of_atos": {
     "id": 205,
     "img": "/apps/dota2/images/items/recipe_lg.png?3",
+    "dname": "Rod of Atos Recipe",
     "cost": 1100,
     "desc": "",
     "notes": "",
