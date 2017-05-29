@@ -31,6 +31,8 @@ const ignoreStrings = [
   "DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
 ]
 
+const badNames = ["Version", "npc_dota_hero_base", "npc_dota_hero_target_dummy"];
+
 const sources = [
   {
     key: "items",
@@ -200,53 +202,42 @@ const sources = [
   }, {
     key: "heroes",
     url: [
-      "https://api.opendota.com/api/heroes",
-      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.json"
+      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/dota_english.json",
+      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.json",
     ],
     transform: respObj => {
-      const heroes = {};
-      let baseHero = respObj[1].DOTAHeroes.npc_dota_hero_base;
-      respObj[0].forEach(function(h) {
-        let vpkrh = respObj[1].DOTAHeroes[h.name];
-
-        h.img = "/apps/dota2/images/heroes/" + h.name.replace("npc_dota_hero_", "") + "_full.png?";
-        h.icon = "/apps/dota2/images/heroes/" + h.name.replace("npc_dota_hero_", "") + "_icon.png";
-        h.url = vpkrh.url;
-
-        h.base_armor = vpkrh.ArmorPhysical;
-        h.base_mr = vpkrh.MagicalResistance || baseHero.MagicalResistance;
-
-        h.base_str = vpkrh.AttributeBaseStrength;
-        h.base_agi = vpkrh.AttributeBaseAgility;
-        h.base_int = vpkrh.AttributeBaseIntelligence;
-
-        h.str_gain = vpkrh.AttributeStrengthGain;
-        h.agi_gain = vpkrh.AttributeAgilityGain;
-        h.int_gain = vpkrh.AttributeIntelligenceGain;
-
-        h.attack_range = vpkrh.AttackRange;
-
-        h.move_speed = vpkrh.MovementSpeed;
-        h.turn_rate = vpkrh.MovementTurnRate;
-
-        h.cm_enabled = vpkrh.CMEnabled ? true : false;
-        h.legs = vpkrh.Legs || baseHero.Legs;
-
-        heroes[h.id] = h;
+      let heroes = [];
+      let keys = Object.keys(respObj[1].DOTAHeroes).filter((name) => !badNames.includes(name));
+      keys.forEach((name) => {
+        let h = formatVpkHero(name, respObj[1], respObj[0].lang.Tokens[name]);
+        heroes.push(h);
       });
-      return heroes;
+      heroes = heroes.sort((a, b) => a.id - b.id);
+      let heroesObj = {};
+      for (hero of heroes) {
+        heroesObj[hero.id] = hero
+      }
+      return heroesObj;
     },
   }, {
     key: "hero_names",
-    url: "https://api.opendota.com/api/heroes",
+    url: [
+      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/dota_english.json",
+      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.json",
+    ],
     transform: respObj => {
-      const heroNames = {};
-      respObj.forEach(function(h) {
-        h.img = "/apps/dota2/images/heroes/" + h.name.replace("npc_dota_hero_", "") + "_full.png?";
-        h.icon = "/apps/dota2/images/heroes/" + h.name.replace("npc_dota_hero_", "") + "_icon.png";
-        heroNames[h.name] = h;
+      let heroes = [];
+      let keys = Object.keys(respObj[1].DOTAHeroes).filter((name) => !badNames.includes(name));
+      keys.forEach((name) => {
+        let h = formatVpkHero(name, respObj[1], respObj[0].lang.Tokens[name]);
+        heroes.push(h);
       });
-      return heroNames;
+      heroes = heroes.sort((a, b) => a.id - b.id);
+      let heroesObj = {};
+      for (hero of heroes) {
+        heroesObj[hero.name] = hero
+      }
+      return heroesObj;
     },
   }, {
     key: "hero_abilities",
@@ -483,4 +474,47 @@ function formatBehavior(string) {
   } else {
     return split;
   }
+}
+
+function formatVpkHero(key, vpkr, localized_name) {
+  let h = {};
+
+  let vpkrh = vpkr.DOTAHeroes[key];
+  let baseHero = vpkr.DOTAHeroes.npc_dota_hero_base;
+
+  h.id = vpkrh.HeroID;
+  h.name = key;
+  h.localized_name = localized_name;
+
+  h.primary_attr = vpkrh.AttributePrimary.replace("DOTA_ATTRIBUTE_", "").slice(0, 3).toLowerCase();
+  h.attack_type = vpkrh.AttackCapabilities == "DOTA_UNIT_CAP_MELEE_ATTACK" ? "Melee" : "Ranged";
+  h.roles = vpkrh.Role.split(",");
+
+  h.img = "/apps/dota2/images/heroes/" + key.replace("npc_dota_hero_", "") + "_full.png?";
+  h.icon = "/apps/dota2/images/heroes/" + key.replace("npc_dota_hero_", "") + "_icon.png";
+  h.url = vpkrh.url;
+
+  h.base_health = Number(baseHero.StatusHealth);
+  h.base_health_regen = Number(vpkrh.StatusHealthRegen || baseHero.StatusHealthRegen);
+  h.base_armor = Number(vpkrh.ArmorPhysical || baseHero.ArmorPhysical);
+  h.base_mr = Number(vpkrh.MagicalResistance || baseHero.MagicalResistance);
+
+  h.base_str = Number(vpkrh.AttributeBaseStrength);
+  h.base_agi = Number(vpkrh.AttributeBaseAgility);
+  h.base_int = Number(vpkrh.AttributeBaseIntelligence);
+
+  h.str_gain = Number(vpkrh.AttributeStrengthGain);
+  h.agi_gain = Number(vpkrh.AttributeAgilityGain);
+  h.int_gain = Number(vpkrh.AttributeIntelligenceGain);
+
+  h.attack_range = Number(vpkrh.AttackRange);
+  h.projectile_speed = Number(vpkrh.ProjectileSpeed || baseHero.ProjectileSpeed)
+
+  h.move_speed = Number(vpkrh.MovementSpeed);
+  h.turn_rate = Number(vpkrh.MovementTurnRate);
+
+  h.cm_enabled = vpkrh.CMEnabled ? true : false;
+  h.legs = Number(vpkrh.Legs || baseHero.Legs);
+
+  return h;
 }
