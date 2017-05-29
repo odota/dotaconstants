@@ -496,8 +496,10 @@ function formatVpkHero(key, vpkr, localized_name) {
   h.icon = "/apps/dota2/images/heroes/" + key.replace("npc_dota_hero_", "") + "_icon.png";
   h.url = vpkrh.url;
 
-  h.base_health = Number(baseHero.StatusHealth);
+  h.base_health = Number(vpkrh.StatusHealth || baseHero.StatusHealth);
   h.base_health_regen = Number(vpkrh.StatusHealthRegen || baseHero.StatusHealthRegen);
+  h.base_mana = Number(vpkrh.StatusMana || baseHero.StatusMana);
+  h.base_mana_regen = Number(vpkrh.StatusManaRegen || baseHero.StatusManaRegen);
   h.base_armor = Number(vpkrh.ArmorPhysical || baseHero.ArmorPhysical);
   h.base_mr = Number(vpkrh.MagicalResistance || baseHero.MagicalResistance);
 
@@ -514,7 +516,7 @@ function formatVpkHero(key, vpkr, localized_name) {
 
   h.attack_range = Number(vpkrh.AttackRange);
   h.projectile_speed = Number(vpkrh.ProjectileSpeed || baseHero.ProjectileSpeed);
-  h.attack_raate = Number(vpkrh.AttackRate || baseHero.AttackRate);
+  h.attack_rate = Number(vpkrh.AttackRate || baseHero.AttackRate);
 
   h.move_speed = Number(vpkrh.MovementSpeed);
   h.turn_rate = Number(vpkrh.MovementTurnRate);
