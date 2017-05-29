@@ -215,6 +215,7 @@ const sources = [
       heroes = heroes.sort((a, b) => a.id - b.id);
       let heroesObj = {};
       for (hero of heroes) {
+        hero.id = Number(hero.id);
         heroesObj[hero.id] = hero
       }
       return heroesObj;
@@ -235,6 +236,7 @@ const sources = [
       heroes = heroes.sort((a, b) => a.id - b.id);
       let heroesObj = {};
       for (hero of heroes) {
+        hero.id = Number(hero.id);
         heroesObj[hero.name] = hero
       }
       return heroesObj;
