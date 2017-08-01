@@ -5,7 +5,7 @@
     "dname": "Blink Dagger",
     "qual": "component",
     "cost": 2250,
-    "desc": "Active: Blink - Teleport to a target point up to 1200 units away.  If damage is taken, Blink Dagger cannot be used for 3 seconds.",
+    "desc": "Active: Blink Teleport to a target point up to 1200 units away. Blink Dagger cannot be used for 3 seconds after taking damage from an enemy hero or Roshan.",
     "notes": "Self-casting will cause you to teleport in the direction of your team's fountain.\nIf you used Blink to teleport to a distance over the maximum range, you'll be teleported 4/5 of the maximum range instead.",
     "attrib": [
       {
@@ -155,7 +155,7 @@
     "dname": "Javelin",
     "qual": "component",
     "cost": 1500,
-    "desc": "Passive: Pierce - Grants each attack a chance to deal bonus damage.",
+    "desc": "Passive: PierceGrants each attack a 25% chance to deal 85 bonus damage.",
     "notes": "",
     "attrib": [
       {
@@ -166,13 +166,15 @@
       },
       {
         "key": "bonus_chance",
-        "header": "CHANCE TO PIERCE:",
-        "value": "25%"
+        "header": "BONUS CHANCE:",
+        "value": "25",
+        "generated": true
       },
       {
         "key": "bonus_chance_damage",
-        "header": "PIERCE DAMAGE:",
-        "value": "85"
+        "header": "BONUS CHANCE DAMAGE:",
+        "value": "85",
+        "generated": true
       }
     ],
     "mc": false,
@@ -259,28 +261,32 @@
     "dname": "Quelling Blade",
     "qual": "component",
     "cost": 200,
-    "desc": "Active: Chop Tree/Ward - Destroy a target tree or ward. Chop cast range is increased when targetting wards.\nPassive: Quell - Increases attack damage against non-hero units, based on whether the equipped hero is ranged or melee.",
+    "desc": "Active: Chop Tree/Ward Destroy a target tree or ward. Chop cast range is increased when targeting wards.Tree Range: 350Ward Range: 450\nPassive: Quell Increases attack damage against non-hero units by 24 for melee heroes, and 7 for ranged.",
     "notes": "Cannot carry more than one.\nChop can be used to destroy Techies' Remote Mines.",
     "attrib": [
       {
         "key": "damage_bonus",
-        "header": "QUELL MELEE DAMAGE:",
-        "value": "24"
+        "header": "DAMAGE BONUS:",
+        "value": "24",
+        "generated": true
       },
       {
         "key": "damage_bonus_ranged",
-        "header": "QUELL RANGED DAMAGE:",
-        "value": "7"
+        "header": "DAMAGE BONUS RANGED:",
+        "value": "7",
+        "generated": true
       },
       {
         "key": "quelling_range_tooltip",
-        "header": "CHOP TREE CAST RANGE:",
-        "value": "350"
+        "header": "QUELLING RANGE TOOLTIP:",
+        "value": "350",
+        "generated": true
       },
       {
         "key": "cast_range_ward",
-        "header": "CHOP WARD CAST RANGE:",
-        "value": "450"
+        "header": "CAST RANGE WARD:",
+        "value": "450",
+        "generated": true
       }
     ],
     "mc": false,
@@ -295,7 +301,7 @@
     "dname": "Faerie Fire",
     "qual": "consumable",
     "cost": 70,
-    "desc": "Use: Consume the Faerie Fire to instantly restore 75 HP",
+    "desc": "Use: Imbue Instantly restores 75 HP.",
     "notes": "",
     "attrib": [
       {
@@ -306,8 +312,9 @@
       },
       {
         "key": "hp_restore",
-        "header": "HEALTH RESTORED:",
-        "value": "75"
+        "header": "HP RESTORE:",
+        "value": "75",
+        "generated": true
       }
     ],
     "mc": false,
@@ -322,13 +329,14 @@
     "dname": "Infused Raindrop",
     "qual": "component",
     "cost": 225,
-    "desc": "Passive: Consumes a charge to block 120 magic damage from damage instances over 50 damage. Comes with 5 charges. When the charges are gone, the item disappears.",
+    "desc": "Passive: Magical Damage Block Consumes a charge to block 120 magic damage from damage instances over 50 damage. Comes with 5 charges. When the charges are gone, the item disappears.",
     "notes": "Uses at most one charge per damage instance.",
     "attrib": [
       {
         "key": "mana_regen",
-        "header": "MANA REGEN:",
-        "value": "0.85"
+        "header": "+",
+        "value": "0.85",
+        "footer": "Mana Regeneration"
       },
       {
         "key": "bonus_armor",
@@ -345,7 +353,8 @@
       {
         "key": "magic_damage_block",
         "header": "MAGIC DAMAGE BLOCK:",
-        "value": "120"
+        "value": "120",
+        "generated": true
       },
       {
         "key": "min_damage",
@@ -356,7 +365,8 @@
       {
         "key": "initial_charges",
         "header": "INITIAL CHARGES:",
-        "value": "5"
+        "value": "5",
+        "generated": true
       }
     ],
     "mc": false,
@@ -371,8 +381,8 @@
     "dname": "Wind Lace",
     "qual": "component",
     "cost": 250,
-    "desc": "Passive: Gives increased movement speed.",
-    "notes": "Multiple instances do not stack.",
+    "desc": "Bonuses from multiple Wind Laces do not stack.",
+    "notes": "",
     "attrib": [
       {
         "key": "movement_speed",
@@ -427,23 +437,26 @@
     "dname": "Stout Shield",
     "qual": "component",
     "cost": 200,
-    "desc": "Passive: Damage Block - Gives a chance to block damage based on whether the equipped hero is melee or ranged.",
+    "desc": "Passive: Damage BlockGives a 50% chance to block 16 damage on melee heroes, and 8 damage on ranged.",
     "notes": "Multiple sources of damage block don't stack.",
     "attrib": [
       {
         "key": "damage_block_melee",
-        "header": "MELEE DAMAGE BLOCK:",
-        "value": "16"
+        "header": "DAMAGE BLOCK MELEE:",
+        "value": "16",
+        "generated": true
       },
       {
         "key": "damage_block_ranged",
-        "header": "RANGED DAMAGE BLOCK:",
-        "value": "8"
+        "header": "DAMAGE BLOCK RANGED:",
+        "value": "8",
+        "generated": true
       },
       {
         "key": "block_chance",
         "header": "BLOCK CHANCE:",
-        "value": "50%"
+        "value": "50",
+        "generated": true
       }
     ],
     "mc": false,
@@ -458,7 +471,7 @@
     "dname": "Moon Shard",
     "qual": "common",
     "cost": 4000,
-    "desc": "Use: Consume the Moon Shard to permanently gain 60 attack speed and 150 bonus night vision. Does not stack.\nPassive: Shade Sight - Grants 300 bonus night vision.",
+    "desc": "Use: Consume Consume the Moon Shard to permanently gain 60 attack speed and 150 bonus night vision. Max 1 use.\nPassive: Shade SightGrants 300 bonus night vision.",
     "notes": "The bonus night vision works during Night Stalker's Darkness ability.",
     "attrib": [
       {
@@ -469,18 +482,21 @@
       },
       {
         "key": "bonus_night_vision",
-        "header": "SHADE BONUS NIGHT VISION:",
-        "value": "300"
+        "header": "BONUS NIGHT VISION:",
+        "value": "300",
+        "generated": true
       },
       {
         "key": "consumed_bonus",
-        "header": "CONSUME ATTACK SPEED:",
-        "value": "60"
+        "header": "CONSUMED BONUS:",
+        "value": "60",
+        "generated": true
       },
       {
         "key": "consumed_bonus_night_vision",
-        "header": "CONSUME NIGHT VISION:",
-        "value": "150"
+        "header": "CONSUMED BONUS NIGHT VISION:",
+        "value": "150",
+        "generated": true
       }
     ],
     "mc": false,
@@ -562,9 +578,9 @@
     "id": 16,
     "img": "/apps/dota2/images/items/branches_lg.png?3",
     "dname": "Iron Branch",
-    "qual": "component",
+    "qual": "consumable",
     "cost": 50,
-    "desc": "Active: Targets the ground to plant a happy little tree that lasts for 20 seconds.",
+    "desc": "Use: Plant Tree Targets the ground to plant a happy little tree that lasts for 20 seconds.Range: 200",
     "notes": "",
     "attrib": [
       {
@@ -576,7 +592,14 @@
       {
         "key": "tree_duration",
         "header": "TREE DURATION:",
-        "value": "20"
+        "value": "20",
+        "generated": true
+      },
+      {
+        "key": "range_tooltip",
+        "header": "RANGE TOOLTIP:",
+        "value": "200",
+        "generated": true
       }
     ],
     "mc": false,
@@ -789,7 +812,7 @@
     "dname": "Morbid Mask",
     "qual": "component",
     "cost": 1100,
-    "desc": "Passive: Lifesteal - Heals the attacker for a percentage of attack damage dealt.\n\nMorbid Mask is a Unique Attack Modifier, and does not stack with other Unique Attack Modifiers.",
+    "desc": "Passive: LifestealHeals the attacker for 15% of attack damage dealt. Morbid Mask is a Unique Attack Modifier, and does not stack with other Unique Attack Modifiers.",
     "notes": "",
     "attrib": [
       {
@@ -800,8 +823,9 @@
       },
       {
         "key": "lifesteal_percent",
-        "header": "LIFESTEAL:",
-        "value": "15%"
+        "header": "LIFESTEAL PERCENT:",
+        "value": "15",
+        "generated": true
       }
     ],
     "mc": false,
@@ -882,13 +906,14 @@
     "dname": "Gem of True Sight",
     "qual": "component",
     "cost": 900,
-    "desc": "Passive: True Sight - Adds the ability to see invisible units and wards to any allied vision within its carrier's range.\nDropped on death, and cannot be destroyed.",
+    "desc": "Passive: True Sight Grants the ability to see invisible units and wards to any allied vision within 900 range of its carrier. \nPassive: EverlastingDropped on death, and cannot be destroyed.",
     "notes": "Disabled while on a courier.",
     "attrib": [
       {
         "key": "radius",
-        "header": "TRUE SIGHT RADIUS:",
-        "value": "900"
+        "header": "RADIUS:",
+        "value": "900",
+        "generated": true
       }
     ],
     "mc": false,
@@ -931,8 +956,8 @@
     "dname": "Talisman of Evasion",
     "qual": "secret_shop",
     "cost": 1450,
-    "desc": "Stacks diminishingly with other sources of Evasion.",
-    "notes": "",
+    "desc": "",
+    "notes": "Stacks diminishingly with other sources of Evasion.",
     "attrib": [
       {
         "key": "bonus_evasion",
@@ -953,18 +978,20 @@
     "dname": "Cheese",
     "qual": "epic",
     "cost": 1000,
-    "desc": "Use: Consume to instantly restore health and mana.",
+    "desc": "Use: Fondue Instantly restores 2500 health and 1500 mana.",
     "notes": "Cheese is shareable.",
     "attrib": [
       {
         "key": "health_restore",
-        "header": "HEALTH RESTORED:",
-        "value": "2500"
+        "header": "HEALTH RESTORE:",
+        "value": "2500",
+        "generated": true
       },
       {
         "key": "mana_restore",
-        "header": "MANA RESTORED:",
-        "value": "1500"
+        "header": "MANA RESTORE:",
+        "value": "1500",
+        "generated": true
       }
     ],
     "mc": false,
@@ -979,7 +1006,7 @@
     "dname": "Magic Stick",
     "qual": "component",
     "cost": 200,
-    "desc": "Active: Energy Charge - Instantly restores health and mana based on the number of charges stored. Gains a charge (max 10) whenever a nearby visible enemy uses an ability.",
+    "desc": "Active: Energy Charge Instantly restores 15 health and mana per charge stored. Max 10 charges. Gains a charge whenever a visible enemy within 1200 range uses an ability.",
     "notes": "Gains charges for spells cast by visible enemies in 1200 range.\nCertain abilities and item abilities will not add charges.",
     "attrib": [
       {
@@ -996,8 +1023,9 @@
       },
       {
         "key": "restore_per_charge",
-        "header": "HEALTH/MANA PER CHARGE:",
-        "value": "15"
+        "header": "RESTORE PER CHARGE:",
+        "value": "15",
+        "generated": true
       }
     ],
     "mc": false,
@@ -1012,7 +1040,7 @@
     "dname": "Magic Wand",
     "qual": "common",
     "cost": 465,
-    "desc": "Active: Energy Charge - Instantly restores health and mana based on the number of charges stored. Gains a charge (max 17) whenever a nearby visible enemy uses an ability.",
+    "desc": "Active: Energy ChargeInstantly restores 15 health and mana per charge stored. Max 17 charges. Gains a charge whenever a visible enemy within 1200 range uses an ability.",
     "notes": "Gains charges for spells cast by visible enemies in 1200 range.\nCertain abilities and item abilities will not add charges.",
     "attrib": [
       {
@@ -1035,8 +1063,9 @@
       },
       {
         "key": "restore_per_charge",
-        "header": "HEALTH/MANA PER CHARGE:",
-        "value": "15"
+        "header": "RESTORE PER CHARGE:",
+        "value": "15",
+        "generated": true
       }
     ],
     "mc": false,
@@ -1056,7 +1085,7 @@
     "dname": "Ghost Scepter",
     "qual": "component",
     "cost": 1500,
-    "desc": "Active: Ghost Form - Enter ghost form, becoming immune to physical damage, yet unable to attack and taking 40% extra magic damage.\nUsing a Town Portal Scroll or Boots of Travel  will not dispel Ghost Form.",
+    "desc": "Active: Ghost Form You enter ghost form for 4 seconds, becoming immune to physical damage, but are unable to attack and -40% more vulnerable to magic damage.",
     "notes": "Ends if you become Spell Immune, and will have no effect if you are already Spell Immune.\nShares cooldown with Ethereal Blade.",
     "attrib": [
       {
@@ -1067,13 +1096,15 @@
       },
       {
         "key": "duration",
-        "header": "GHOST DURATION:",
-        "value": "4"
+        "header": "DURATION:",
+        "value": "4",
+        "generated": true
       },
       {
         "key": "extra_spell_damage_percent",
-        "header": "GHOST ADDED MAGIC DAMAGE:",
-        "value": "-40%"
+        "header": "EXTRA SPELL DAMAGE PERCENT:",
+        "value": "-40",
+        "generated": true
       }
     ],
     "mc": false,
@@ -1088,18 +1119,26 @@
     "dname": "Clarity",
     "qual": "consumable",
     "cost": 50,
-    "desc": "Use: Restores mana to the target unit over time.  If the unit is attacked by an enemy hero or Roshan, the effect is lost.",
+    "desc": "Use: Replenish Restores 190 mana to the target unit over 50 seconds.If the unit is attacked by an enemy hero or Roshan, the effect is lost.Range: 250",
     "notes": "",
     "attrib": [
       {
         "key": "total_mana",
-        "header": "TOTAL MANA RESTORED:",
-        "value": "190"
+        "header": "TOTAL MANA:",
+        "value": "190",
+        "generated": true
       },
       {
         "key": "buff_duration",
-        "header": "DURATION:",
-        "value": "50"
+        "header": "BUFF DURATION:",
+        "value": "50",
+        "generated": true
+      },
+      {
+        "key": "range_tooltip",
+        "header": "RANGE TOOLTIP:",
+        "value": "250",
+        "generated": true
       }
     ],
     "mc": false,
@@ -1114,8 +1153,8 @@
     "dname": "Enchanted Mango",
     "qual": "consumable",
     "cost": 100,
-    "desc": "Use: Consume the mango to instantly restore 150 mana.\n\nHold Control to use Enchanted Mango on an allied hero.",
-    "notes": "",
+    "desc": "Use: Eat Mango Instantly restore 150 mana.Range: 400",
+    "notes": "Hold Control to use on a neaby allied hero.",
     "attrib": [
       {
         "key": "hp_regen",
@@ -1125,8 +1164,15 @@
       },
       {
         "key": "replenish_amount",
-        "header": "MANA RESTORED:",
-        "value": "150"
+        "header": "REPLENISH AMOUNT:",
+        "value": "150",
+        "generated": true
+      },
+      {
+        "key": "range_tooltip",
+        "header": "RANGE TOOLTIP:",
+        "value": "400",
+        "generated": true
       }
     ],
     "mc": false,
@@ -1141,18 +1187,26 @@
     "dname": "Healing Salve",
     "qual": "consumable",
     "cost": 110,
-    "desc": "Use: Restores health to the target unit over time.  If the unit is attacked by an enemy hero or Roshan, the effect is lost.",
+    "desc": "Use: Salve Restores 400 health to the target unit over 8 seconds.If the unit is attacked by an enemy hero or Roshan, the effect is lost.Range: 250",
     "notes": "",
     "attrib": [
       {
         "key": "buff_duration",
-        "header": "DURATION:",
-        "value": "8"
+        "header": "BUFF DURATION:",
+        "value": "8",
+        "generated": true
       },
       {
         "key": "total_health",
-        "header": "HEALTH RESTORED:",
-        "value": "400"
+        "header": "TOTAL HEALTH:",
+        "value": "400",
+        "generated": true
+      },
+      {
+        "key": "tooltip_range",
+        "header": "TOOLTIP RANGE:",
+        "value": "250",
+        "generated": true
       }
     ],
     "mc": false,
@@ -1167,23 +1221,26 @@
     "dname": "Dust of Appearance",
     "qual": "consumable",
     "cost": 180,
-    "desc": "Use: Reveals and slows invisible Heroes in a nearby area.",
+    "desc": "Use: RevealReveals and slows invisible Heroes by -20 in a 1050 radius around the caster for 12 seconds.",
     "notes": "Places a buff on enemy units in the area that prevents them from becoming invisible.",
     "attrib": [
       {
         "key": "duration",
         "header": "DURATION:",
-        "value": "12"
+        "value": "12",
+        "generated": true
       },
       {
         "key": "radius",
         "header": "RADIUS:",
-        "value": "1050"
+        "value": "1050",
+        "generated": true
       },
       {
         "key": "movespeed",
-        "header": "SLOW:",
-        "value": "-20%"
+        "header": "MOVESPEED:",
+        "value": "-20",
+        "generated": true
       }
     ],
     "mc": false,
@@ -1196,30 +1253,39 @@
     "id": 41,
     "img": "/apps/dota2/images/items/bottle_lg.png?3",
     "dname": "Bottle",
-    "qual": "consumable",
+    "qual": "common",
     "cost": 650,
-    "desc": "Use: Regenerate - Consumes a charge to restore Health and Mana over time. Healing stops if attacked.  Bottle can be refilled at your team's fountain.  Runes can be stored in the Bottle for later use, and are activated automatically after 2 minutes.  If Bottle does not have full charges and is placed on a courier, the courier will move 30% slower.\n\nHold Control to use Regenerate on an allied hero.  Stored runes cannot be shared.",
-    "notes": "Bottle is shareable.\nBounty runes replenish 2/3 charges.",
+    "desc": "Active: RegenerateConsumes a charge to restore 90 health and 60 mana over 2.5 seconds.Range: 350Healing stops if attacked by an enemy hero or Roshan.  Bottle can be refilled at your team's fountain. Runes can be stored in the Bottle for later use, and are activated automatically after 2 minutes.",
+    "notes": "Bottle is shareable. Stored runes cannot be shared. Hold Control to use Regenerate on an allied hero.\nBounty runes replenish 2/3 charges.\nIf Bottle does not have full charges and is placed on a courier, the courier will move 30% slower.",
     "attrib": [
       {
         "key": "health_restore",
-        "header": "HEALTH RESTORED:",
-        "value": "90"
+        "header": "HEALTH RESTORE:",
+        "value": "90",
+        "generated": true
       },
       {
         "key": "mana_restore",
-        "header": "MANA RESTORED:",
-        "value": "60"
+        "header": "MANA RESTORE:",
+        "value": "60",
+        "generated": true
       },
       {
         "key": "restore_time",
-        "header": "DURATION:",
-        "value": "2.5"
+        "header": "RESTORE TIME:",
+        "value": "2.5",
+        "generated": true
       },
       {
         "key": "movement_speed_percent_bonus",
         "header": "MOVEMENT SPEED PERCENT BONUS:",
         "value": "-30",
+        "generated": true
+      },
+      {
+        "key": "tooltip_range",
+        "header": "TOOLTIP RANGE:",
+        "value": "350",
         "generated": true
       }
     ],
@@ -1235,7 +1301,7 @@
     "dname": "Observer Ward",
     "qual": "consumable",
     "cost": 60,
-    "desc": "Use: Plants an Observer Ward, an invisible watcher that gives vision of its surrounding area to your team. Lasts 6 minutes.\n\nHold Control to give one Observer Ward to an allied hero.",
+    "desc": "Use: PlantPlants an Observer Ward, an invisible watcher that gives ground vision in a 1600 radius to your team. Lasts 6 minutes.Hold Control to give one Observer Ward to an allied hero.Range: 500",
     "notes": "",
     "attrib": [
       {
@@ -1247,7 +1313,8 @@
       {
         "key": "vision_range",
         "header": "VISION RANGE:",
-        "value": "1600"
+        "value": "1600",
+        "generated": true
       },
       {
         "key": "health",
@@ -1257,8 +1324,15 @@
       },
       {
         "key": "duration_minutes_tooltip",
-        "header": "DURATION (MINUTES):",
-        "value": "6"
+        "header": "DURATION MINUTES TOOLTIP:",
+        "value": "6",
+        "generated": true
+      },
+      {
+        "key": "tooltip_range",
+        "header": "TOOLTIP RANGE:",
+        "value": "500",
+        "generated": true
       }
     ],
     "mc": false,
@@ -1273,7 +1347,7 @@
     "dname": "Sentry Ward",
     "qual": "consumable",
     "cost": 100,
-    "desc": "Use: Plants a Sentry Ward, an invisible watcher that grants True Sight, the ability to see invisible enemy units and wards, to any existing allied vision within its range. Lasts 4 minutes.\n\nHold Control to give one Sentry Ward to an allied hero.",
+    "desc": "Use: Plant Plants a Sentry Ward, an invisible watcher that grants True Sight, the ability to see invisible enemy units and wards, to any existing allied vision within a 850 radius.Duration: 4 minutes.Does not grant ground vision.Hold Control to give one Sentry Ward to an allied hero.Range: 500",
     "notes": "",
     "attrib": [
       {
@@ -1291,7 +1365,8 @@
       {
         "key": "true_sight_range",
         "header": "TRUE SIGHT RANGE:",
-        "value": "850"
+        "value": "850",
+        "generated": true
       },
       {
         "key": "health",
@@ -1301,8 +1376,15 @@
       },
       {
         "key": "duration_minutes_tooltip",
-        "header": "DURATION (MINUTES):",
-        "value": "4"
+        "header": "DURATION MINUTES TOOLTIP:",
+        "value": "4",
+        "generated": true
+      },
+      {
+        "key": "tooltip_range",
+        "header": "TOOLTIP RANGE:",
+        "value": "500",
+        "generated": true
       }
     ],
     "mc": false,
@@ -1317,7 +1399,7 @@
     "dname": "Observer and Sentry Wards",
     "qual": "common",
     "cost": 160,
-    "desc": "Double-Click to switch the currently active ward.\n\nUse: Plant the currently active ward to keep watch over an area. Observer Wards reveal their surrounding area to your team. Sentry Wards grant True Sight, the ability to see invisible enemy units and wards, to any existing allied vision within its range.",
+    "desc": "Use: Plant Plant the currently active ward.  Double-Click to switch the currently active ward.Range: 500",
     "notes": "",
     "attrib": [
       {
@@ -1364,7 +1446,7 @@
       {
         "key": "observer_duration_minutes_tooltip",
         "header": "OBSERVER DURATION (MINUTES):",
-        "value": "8"
+        "value": "6"
       },
       {
         "key": "true_sight_range",
@@ -1375,6 +1457,12 @@
         "key": "sentry_duration_minutes_tooltip",
         "header": "SENTRY DURATION (MINUTES):",
         "value": "4"
+      },
+      {
+        "key": "tooltip_range",
+        "header": "TOOLTIP RANGE:",
+        "value": "500",
+        "generated": true
       }
     ],
     "mc": false,
@@ -1392,28 +1480,44 @@
     "dname": "Tango",
     "qual": "consumable",
     "cost": 125,
-    "desc": "Use: Eat a Tree or Ward - Consume a target tree or ward to gradually restore health.\n\nComes with 4 charges.  Can be used on an allied hero to give them one Tango.",
-    "notes": "Heals for double duration when used on a Ironwood Tree or Wards.",
+    "desc": "Use: Devour Consume a target tree to restore 115 health over 16 seconds. Consuming a ward or Ironwood Tree doubles the heal amount.Comes with 4 charges.  Can be used on an allied hero to give them one Tango.Range: 165Ward Range: 450",
+    "notes": "",
     "attrib": [
       {
         "key": "total_heal",
-        "header": "EAT TREE HEALTH RESTORED:",
-        "value": "115"
+        "header": "TOTAL HEAL:",
+        "value": "115",
+        "generated": true
       },
       {
         "key": "total_heal_ward_tooltip",
-        "header": "EAT WARD HEALTH RESTORED:",
-        "value": "230"
+        "header": "TOTAL HEAL WARD TOOLTIP:",
+        "value": "230",
+        "generated": true
       },
       {
         "key": "cast_range_ward",
-        "header": "EAT WARD CAST RANGE:",
-        "value": "450"
+        "header": "CAST RANGE WARD:",
+        "value": "450",
+        "generated": true
       },
       {
         "key": "buff_duration",
-        "header": "HEAL DURATION:",
-        "value": "16"
+        "header": "BUFF DURATION:",
+        "value": "16",
+        "generated": true
+      },
+      {
+        "key": "tooltip_charges",
+        "header": "TOOLTIP CHARGES:",
+        "value": "4",
+        "generated": true
+      },
+      {
+        "key": "tooltip_range",
+        "header": "TOOLTIP RANGE:",
+        "value": "165",
+        "generated": true
       }
     ],
     "mc": false,
@@ -1428,28 +1532,32 @@
     "dname": "Tango (Shared)",
     "qual": "consumable",
     "cost": 30,
-    "desc": "Use: Eat a Tree or Ward - Consume a target tree or ward to gradually restore health.",
-    "notes": "Heals for double duration when used on a Ironwood Tree or Wards.",
+    "desc": "Use: Eat a Tree or Ward Consume a target tree or ward to gradually restore 115 health. Heals for double when used on a ward or Ironwood Tree.",
+    "notes": "",
     "attrib": [
       {
         "key": "total_heal",
-        "header": "EAT TREE HEALTH RESTORED:",
-        "value": "115"
+        "header": "TOTAL HEAL:",
+        "value": "115",
+        "generated": true
       },
       {
         "key": "total_heal_ward_tooltip",
-        "header": "EAT WARD HEALTH RESTORED:",
-        "value": "230"
+        "header": "TOTAL HEAL WARD TOOLTIP:",
+        "value": "230",
+        "generated": true
       },
       {
         "key": "cast_range_ward",
-        "header": "EAT WARD CAST RANGE:",
-        "value": "450"
+        "header": "CAST RANGE WARD:",
+        "value": "450",
+        "generated": true
       },
       {
         "key": "buff_duration",
-        "header": "HEAL DURATION:",
-        "value": "16"
+        "header": "BUFF DURATION:",
+        "value": "16",
+        "generated": true
       }
     ],
     "mc": false,
@@ -1464,7 +1572,7 @@
     "dname": "Animal Courier",
     "qual": "consumable",
     "cost": 100,
-    "desc": "Use: Deploy Courier - Deploys a creature to carry items to and from your team's base.",
+    "desc": "Use: Deploy Courier Deploys a creature to carry items to and from your team's base.",
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -1479,7 +1587,7 @@
     "dname": "Town Portal Scroll",
     "qual": "consumable",
     "cost": 50,
-    "desc": "Use: Teleport - Teleports you to a target friendly building. Double-click to teleport to your team's base fountain.",
+    "desc": "Use: TeleportAfter channeling for 3 seconds, teleports you to a target friendly building. Double-click to teleport to your team's base fountain.",
     "notes": "If multiple heroes teleport to the same location in succession, the channeling time will be increased for each successive hero.",
     "attrib": [
       {
@@ -1498,6 +1606,12 @@
         "key": "vision_radius",
         "header": "VISION RADIUS:",
         "value": "200",
+        "generated": true
+      },
+      {
+        "key": "tooltip_channel_time",
+        "header": "TOOLTIP CHANNEL TIME:",
+        "value": "3",
         "generated": true
       }
     ],
@@ -1527,8 +1641,8 @@
     "dname": "Boots of Travel",
     "qual": "common",
     "cost": 2400,
-    "desc": "Active: Teleport - Teleports you to an allied non-hero unit or structure. Double-click to teleport to your team's base fountain. Upgradable to allow you to teleport to allied heroes.\n\nFlat movement speed bonuses from multiple pairs of boots do not stack.",
-    "notes": "Shares cooldown with Town Portal Scrolls.",
+    "desc": "Active: TeleportTeleports you to an allied non-hero unit or structure. Teleporting to a unit is interrupted if the target unit dies.Shares a cooldown with Town Portal Scroll.Flat movement speed bonuses from multiple pairs of boots do not stack.",
+    "notes": "",
     "attrib": [
       {
         "key": "bonus_movement_speed",
@@ -1563,8 +1677,8 @@
     "dname": "Boots of Travel",
     "qual": "common",
     "cost": 4400,
-    "desc": "Active: Teleport - Teleports you to any allied structure or unit, including heroes. Double-click to teleport to your team's base fountain.\n\nFlat movement speed bonuses from multiple pairs of boots do not stack.",
-    "notes": "Shares cooldown with Town Portal Scrolls.",
+    "desc": "Active: Teleport Teleports you to any allied structure or unit, including heroes. Teleporting to a unit is interrupted if the target unit dies.Shares a cooldown with Town Portal Scroll.Flat movement speed bonuses from multiple pairs of boots do not stack.",
+    "notes": "",
     "attrib": [
       {
         "key": "bonus_movement_speed",
@@ -1600,7 +1714,7 @@
     "dname": "Phase Boots",
     "qual": "common",
     "cost": 1240,
-    "desc": "Active: Phase - Gives increased movement speed and lets you move through units.  The increased movement speed is based on whether the equipped hero is melee or ranged.\n\nFlat movement speed bonuses from multiple pairs of boots do not stack.",
+    "desc": "Active: Phase Gives 24% increased movement speed on melee heroes, and 20% on ranged heroes, and lets you move through units for 2.5 seconds.Flat movement speed bonuses from multiple pairs of boots do not stack.",
     "notes": "",
     "attrib": [
       {
@@ -1635,18 +1749,21 @@
       },
       {
         "key": "phase_movement_speed",
-        "header": "PHASE MOVE BOOST MELEE:",
-        "value": "24%"
+        "header": "PHASE MOVEMENT SPEED:",
+        "value": "24",
+        "generated": true
       },
       {
         "key": "phase_movement_speed_range",
-        "header": "PHASE MOVE BOOST RANGED:",
-        "value": "20%"
+        "header": "PHASE MOVEMENT SPEED RANGE:",
+        "value": "20",
+        "generated": true
       },
       {
         "key": "phase_duration",
         "header": "PHASE DURATION:",
-        "value": "2.5"
+        "value": "2.5",
+        "generated": true
       },
       {
         "key": "bonus_attack_speed",
@@ -1925,8 +2042,8 @@
     "dname": "Power Treads",
     "qual": "common",
     "cost": 1350,
-    "desc": "Active: Switch Attribute - Changes selected attribute between Strength, Agility and Intelligence.\n\nPower Treads can be built using a Belt of Strength, Band of Elvenskin, or a Robe of the Magi.  Flat movement speed bonuses from multiple pairs of boots do not stack, nor does the attack speed bonus from multiple Power Treads.",
-    "notes": "",
+    "desc": "Active: Switch AttributeSwitches between +10 Strength, +10 Agility, or +10 Intelligence.Flat movement speed bonuses from multiple pairs of boots do not stack.",
+    "notes": "Power Treads can be built using a Belt of Strength, Band of Elvenskin, or a Robe of the Magi.\nThe attack speed bonus from multiple Power Treads does not stack.",
     "attrib": [
       {
         "key": "bonus_movement_speed",
@@ -1983,7 +2100,7 @@
     "dname": "Hand of Midas",
     "qual": "common",
     "cost": 2150,
-    "desc": "Active: Transmute - Kills a non-hero target for 200 gold and 1.85x experience.  Cannot be used on Ancient Creeps.",
+    "desc": "Active: Transmute Kills a non-hero target for 200 gold and 1.85x experience.  Cannot be used on Ancient Creeps.Range: 600",
     "notes": "The gold given is reliable gold (you do not get the normal creep bounty).\nExperience gained by using Transmute is not shared.",
     "attrib": [
       {
@@ -2006,8 +2123,9 @@
       },
       {
         "key": "transmute_cast_range_tooltip",
-        "header": "TRANSMUTE CAST RANGE:",
-        "value": "600"
+        "header": "TRANSMUTE CAST RANGE TOOLTIP:",
+        "value": "600",
+        "generated": true
       }
     ],
     "mc": false,
@@ -2105,7 +2223,7 @@
     "dname": "Poor Man's Shield",
     "qual": "common",
     "cost": 500,
-    "desc": "Passive: Damage Block - Blocks physical attack damage based on whether the equipped hero is ranged or melee.  Poor Man's Shield will always block attacks from enemy Heroes, but has a 50% chance to block damage from creeps.",
+    "desc": "Passive: Damage BlockGrants a 100% chance for melee heroes to block 20 damage from enemy heroes.  Blocks 10 damage on ranged heroes.Has a 50% chance to block damage from creeps.",
     "notes": "Multiple sources of damage block don't stack.",
     "attrib": [
       {
@@ -2116,18 +2234,21 @@
       },
       {
         "key": "damage_block_melee",
-        "header": "MELEE DAMAGE BLOCK:",
-        "value": "20"
+        "header": "DAMAGE BLOCK MELEE:",
+        "value": "20",
+        "generated": true
       },
       {
         "key": "damage_block_ranged",
-        "header": "RANGED DAMAGE BLOCK:",
-        "value": "10"
+        "header": "DAMAGE BLOCK RANGED:",
+        "value": "10",
+        "generated": true
       },
       {
         "key": "block_chance",
-        "header": "CREEP BLOCK CHANCE:",
-        "value": "50%"
+        "header": "BLOCK CHANCE:",
+        "value": "50",
+        "generated": true
       },
       {
         "key": "block_chance_hero",
@@ -2337,8 +2458,8 @@
     "dname": "Mekansm",
     "qual": "rare",
     "cost": 2375,
-    "desc": "Active: Restore - Heals 250 health and gives +2 armor to allied units in a 900 radius.\nPassive: Mekansm Aura - Grants 4 health regeneration to allied units in a 900 radius.\n\nMultiple instances of Mekansm Aura do not stack.",
-    "notes": "Restore does not affect units that have been affected by Restore in the last 25 seconds.",
+    "desc": "Active: RestoreHeals 250 health and gives +2 armor to allied units in a 900 radius.\nPassive: Mekansm AuraGrants 4 health regeneration to allied units in a 900 radius.",
+    "notes": "Restore does not affect units that have been affected by Restore in the last 25 seconds.\nMultiple instances of Mekansm Aura do not stack.",
     "attrib": [
       {
         "key": "bonus_all_stats",
@@ -2361,27 +2482,32 @@
       {
         "key": "aura_health_regen",
         "header": "AURA HEALTH REGEN:",
-        "value": "4"
+        "value": "4",
+        "generated": true
       },
       {
         "key": "heal_amount",
-        "header": "RESTORE HEAL:",
-        "value": "250"
+        "header": "HEAL AMOUNT:",
+        "value": "250",
+        "generated": true
       },
       {
         "key": "heal_bonus_armor",
-        "header": "RESTORE ARMOR:",
-        "value": "2"
+        "header": "HEAL BONUS ARMOR:",
+        "value": "2",
+        "generated": true
       },
       {
         "key": "heal_armor_duration",
-        "header": "RESTORE ARMOR DURATION:",
-        "value": "25"
+        "header": "HEAL ARMOR DURATION:",
+        "value": "25",
+        "generated": true
       },
       {
         "key": "heal_radius",
-        "header": "AURA/RESTORE RADIUS:",
-        "value": "900"
+        "header": "HEAL RADIUS:",
+        "value": "900",
+        "generated": true
       }
     ],
     "mc": 225,
@@ -2399,8 +2525,8 @@
     "dname": "Vladmir's Offering",
     "qual": "rare",
     "cost": 2275,
-    "desc": "Passive: Vladmir's Aura - Grants lifesteal, health regeneration, mana regeneration, bonus attack damage, and armor to allies in a 900 radius.  The lifesteal percentage is based on whether the hero affected by the aura is melee or ranged.\n\nMultiple instances of Vladmir's Aura do not stack.",
-    "notes": "Does not stack with armor auras from Ring of Basilius, Ring of Aquila, or Vladmir's Offering.",
+    "desc": "Passive: Vladmir's AuraGrants lifesteal (15% for melee heroes, 10% for ranged), 3 health regeneration, 0.8 mana regeneration, 15% bonus attack damage, and 4 armor to nearby allies. Radius: 900",
+    "notes": "Does not stack with armor auras from Ring of Basilius, Ring of Aquila, or Vladmir's Offering.\nMultiple instances of Vladmir's Aura do not stack.",
     "attrib": [
       {
         "key": "bonus_all_stats",
@@ -2410,38 +2536,45 @@
       },
       {
         "key": "hp_regen",
-        "header": "AURA HEALTH REGEN:",
-        "value": "3"
+        "header": "HP REGEN:",
+        "value": "3",
+        "generated": true
       },
       {
         "key": "mana_regen_aura",
-        "header": "AURA MANA REGEN:",
-        "value": "0.8"
+        "header": "MANA REGEN AURA:",
+        "value": "0.8",
+        "generated": true
       },
       {
         "key": "armor_aura",
-        "header": "AURA BONUS ARMOR:",
-        "value": "4"
+        "header": "ARMOR AURA:",
+        "value": "4",
+        "generated": true
       },
       {
         "key": "damage_aura",
-        "header": "AURA BONUS ATTACK DAMAGE:",
-        "value": "15%"
+        "header": "DAMAGE AURA:",
+        "value": "15",
+        "generated": true
       },
       {
         "key": "vampiric_aura",
-        "header": "AURA MELEE LIFESTEAL:",
-        "value": "15%"
+        "header": "VAMPIRIC AURA:",
+        "value": "15",
+        "generated": true
       },
       {
         "key": "vampiric_aura_ranged",
-        "header": "AURA RANGED LIFESTEAL:",
-        "value": "10%"
+        "header": "VAMPIRIC AURA RANGED:",
+        "value": "10",
+        "generated": true
       },
       {
         "key": "aura_radius",
         "header": "AURA RADIUS:",
-        "value": "900"
+        "value": "900",
+        "generated": true
       }
     ],
     "mc": false,
@@ -2460,7 +2593,7 @@
     "dname": "Flying Courier",
     "qual": "consumable",
     "cost": 150,
-    "desc": "Upgrades your team's Animal Courier to a Flying Courier, granting it swift, unobstructed movement to carry items to and from your team's base.\n\nRequires a deployed Animal Courier.",
+    "desc": "Use: Upgrade CourierUpgrades your team's Animal Courier to a Flying Courier, granting it swift, unobstructed movement to carry items to and from your team's base. Requires a deployed Animal Courier.",
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -2489,7 +2622,7 @@
     "dname": "Buckler",
     "qual": "rare",
     "cost": 800,
-    "desc": "Active: Armor Bonus - Gives +2 armor to all allied units in a 900 radius.  Lasts 25 seconds on heroes, 30 seconds on units.",
+    "desc": "Active: Armor Bonus Gives +2 armor to all allied units.  Lasts 25 seconds on heroes, 30 seconds on units.Radius: 900",
     "notes": "",
     "attrib": [
       {
@@ -2506,8 +2639,9 @@
       },
       {
         "key": "bonus_aoe_radius",
-        "header": "ARMOR CAST RADIUS:",
-        "value": "900"
+        "header": "BONUS AOE RADIUS:",
+        "value": "900",
+        "generated": true
       },
       {
         "key": "bonus_aoe_armor",
@@ -2543,8 +2677,8 @@
     "dname": "Ring of Basilius",
     "qual": "rare",
     "cost": 500,
-    "desc": "Passive: Basilius Aura - Grants mana regeneration and armor in a 900 area of effect.\nActive: Toggle whether the aura affects other non-hero units.\n\nMultiple instances of Basilius Aura do not stack.",
-    "notes": "Does not stack with armor auras from Ring of Basilius, Ring of Aquila, or Vladmir's Offering.",
+    "desc": "Passive: Basilius AuraGrants 0.65 mana regeneration and 2 armor in a 900 radius.\nToggle: AuraDeactivate aura to stop effecting non-hero units.",
+    "notes": "Does not stack with armor auras from Ring of Basilius, Ring of Aquila, or Vladmir's Offering.\nMultiple instances of Basilius Aura do not stack.",
     "attrib": [
       {
         "key": "bonus_damage",
@@ -2567,12 +2701,14 @@
       {
         "key": "aura_mana_regen",
         "header": "AURA MANA REGEN:",
-        "value": "0.65"
+        "value": "0.65",
+        "generated": true
       },
       {
         "key": "aura_bonus_armor",
         "header": "AURA BONUS ARMOR:",
-        "value": "2"
+        "value": "2",
+        "generated": true
       }
     ],
     "mc": false,
@@ -2604,7 +2740,7 @@
     "dname": "Pipe of Insight",
     "qual": "rare",
     "cost": 3200,
-    "desc": "Active: Barrier - Gives a shield that blocks 400 spell damage to all allies in a 900 radius.\nPassive: Insight Aura - Gives allied units 4 health regeneration and 10% magic resistance in a 900 radius.",
+    "desc": "Active: BarrierGives a shield that blocks 400 spell damage to all nearby allies. Lasts 12 seconds.Radius: 900\nPassive: Insight Aura Gives allied units 4 health regeneration and 10% magic resistance.Radius: 900",
     "notes": "Multiple instances of Barrier do not stack.\nStacks multiplicatively with other sources of spell resistance.",
     "attrib": [
       {
@@ -2634,32 +2770,38 @@
       {
         "key": "aura_health_regen",
         "header": "AURA HEALTH REGEN:",
-        "value": "4"
+        "value": "4",
+        "generated": true
       },
       {
         "key": "magic_resistance_aura",
-        "header": "AURA MAGIC RESISTANCE:",
-        "value": "10%"
+        "header": "MAGIC RESISTANCE AURA:",
+        "value": "10",
+        "generated": true
       },
       {
         "key": "aura_radius",
         "header": "AURA RADIUS:",
-        "value": "900"
+        "value": "900",
+        "generated": true
       },
       {
         "key": "barrier_block",
-        "header": "BARRIER SPELL BLOCK:",
-        "value": "400"
+        "header": "BARRIER BLOCK:",
+        "value": "400",
+        "generated": true
       },
       {
         "key": "barrier_duration",
         "header": "BARRIER DURATION:",
-        "value": "12"
+        "value": "12",
+        "generated": true
       },
       {
         "key": "barrier_radius",
-        "header": "BARRIER CAST RADIUS:",
-        "value": "900"
+        "header": "BARRIER RADIUS:",
+        "value": "900",
+        "generated": true
       },
       {
         "key": "bonus_all_stats",
@@ -2703,13 +2845,14 @@
     "dname": "Urn of Shadows",
     "qual": "rare",
     "cost": 875,
-    "desc": "Active: Soul Release - Heals health over time to friendly units, but deals pure damage over time to enemy units.  The healing effect is lost if the affected ally takes damage from an enemy hero or tower.\nGains charges every time an enemy hero dies within 1400 units.  Only the closest Urn to the dying hero will gain a charge.",
+    "desc": "Active: Soul Release Heals 400 health over 8 seconds when cast on allies, and deals 150 pure damage over 8 seconds when cast on enemies.  The healing effect is lost if the affected ally takes damage from an enemy hero or tower. Gains charges every time an enemy hero dies within 1400 units.  Only the closest Urn to the dying hero will gain a charge.Range: 950",
     "notes": "Empty urns gain 2 charges.\nIf used on a hero with Soul Release already active on them, it will refresh its duration.",
     "attrib": [
       {
         "key": "mana_regen",
-        "header": "MANA REGEN:",
-        "value": "1"
+        "header": "+",
+        "value": "1",
+        "footer": "Mana Regeneration"
       },
       {
         "key": "bonus_all_stats",
@@ -2749,18 +2892,21 @@
       },
       {
         "key": "soul_heal_amount",
-        "header": "RELEASE ALLY TOTAL HEAL:",
-        "value": "400"
+        "header": "SOUL HEAL AMOUNT:",
+        "value": "400",
+        "generated": true
       },
       {
         "key": "soul_damage_amount",
-        "header": "RELEASE ENEMY TOTAL DAMAGE:",
-        "value": "150"
+        "header": "SOUL DAMAGE AMOUNT:",
+        "value": "150",
+        "generated": true
       },
       {
         "key": "soul_heal_duration",
-        "header": "SOUL RELEASE DURATION:",
-        "value": "8"
+        "header": "SOUL HEAL DURATION:",
+        "value": "8",
+        "generated": true
       },
       {
         "key": "soul_damage_duration",
@@ -2770,8 +2916,9 @@
       },
       {
         "key": "soul_release_range_tooltip",
-        "header": "SOUL RELEASE CAST RANGE:",
-        "value": "950"
+        "header": "SOUL RELEASE RANGE TOOLTIP:",
+        "value": "950",
+        "generated": true
       }
     ],
     "mc": false,
@@ -2804,8 +2951,8 @@
     "dname": "Headdress",
     "qual": "rare",
     "cost": 675,
-    "desc": "Passive: Regeneration Aura - Restores health to allies in a 900 unit radius.\n\nMultiple instances of Regeneration Aura do not stack.",
-    "notes": "",
+    "desc": "Passive: Regeneration AuraGrants 3 health regeneration to allies.Radius: 900",
+    "notes": "Multiple instances of Regeneration Aura do not stack.",
     "attrib": [
       {
         "key": "bonus_all_stats",
@@ -2816,12 +2963,14 @@
       {
         "key": "aura_health_regen",
         "header": "AURA HEALTH REGEN:",
-        "value": "3"
+        "value": "3",
+        "generated": true
       },
       {
         "key": "aura_radius",
-        "header": "AURA REGEN RADIUS:",
-        "value": "900"
+        "header": "AURA RADIUS:",
+        "value": "900",
+        "generated": true
       }
     ],
     "mc": false,
@@ -2839,7 +2988,7 @@
     "dname": "Scythe of Vyse",
     "qual": "rare",
     "cost": 5700,
-    "desc": "Active: Hex - Turns a target unit into a harmless critter for 3.5 seconds. Instantly destroys illusions.",
+    "desc": "Active: HexTurns a target unit into a harmless critter for 3.5 seconds. The target has a base movement speed of 140 and will be silenced, muted, and disarmed.Instantly destroys illusions.Range: 800",
     "notes": "The target will have a base movement speed of 140, but buffs granting maximum movement speed won't be disabled.",
     "attrib": [
       {
@@ -2868,13 +3017,20 @@
       },
       {
         "key": "sheep_duration",
-        "header": "HEX DURATION:",
-        "value": "3.5"
+        "header": "SHEEP DURATION:",
+        "value": "3.5",
+        "generated": true
       },
       {
         "key": "sheep_movement_speed",
         "header": "SHEEP MOVEMENT SPEED:",
         "value": "140",
+        "generated": true
+      },
+      {
+        "key": "tooltip_range",
+        "header": "TOOLTIP RANGE:",
+        "value": "800",
         "generated": true
       }
     ],
@@ -2908,7 +3064,7 @@
     "dname": "Orchid Malevolence",
     "qual": "rare",
     "cost": 4075,
-    "desc": "Active: Soul Burn - Silences the target unit for 5 seconds. At the end of the silence, 30% of the damage received while silenced is inflicted as bonus magical damage.",
+    "desc": "Active: Soul BurnSilences the target unit for 5 seconds. At the end of the silence, 30% of the damage received while silenced is inflicted as bonus magical damage.Range: 900",
     "notes": "",
     "attrib": [
       {
@@ -2937,13 +3093,21 @@
       },
       {
         "key": "silence_damage_percent",
-        "header": "SOUL BURN INCREASED DAMAGE:",
-        "value": "30%"
+        "header": "SILENCE DAMAGE PERCENT:",
+        "value": "30",
+        "generated": true
       },
       {
         "key": "silence_duration",
-        "header": "SOUL BURN DURATION:",
-        "value": "5"
+        "header": "SILENCE DURATION:",
+        "value": "5",
+        "generated": true
+      },
+      {
+        "key": "tooltip_range",
+        "header": "TOOLTIP RANGE:",
+        "value": "900",
+        "generated": true
       }
     ],
     "mc": 100,
@@ -2975,8 +3139,8 @@
     "dname": "Bloodthorn",
     "qual": "epic",
     "cost": 7195,
-    "desc": "Active: Silences a target for 5 seconds and amplifies the damage it takes by 30%. All attacks on the silenced target will have True Strike and land a crit on impact.\nPassive: Critical Strike - Grants each attack a chance to deal additional damage. Critical Strike does not work against buildings.",
-    "notes": "Amplified damage is dealt at the end of the duration as magical damage.",
+    "desc": "Active: Soul Rend Silences a target for 5 seconds. At the end of the silence, an additional 30% of all damage taken during the silence will be dealt to the target as magic damage.Range: 900All attacks on the silenced target will have True Strike and 100% chance to crit for 140% more damage.\nPassive: Critical Strike Grants a 20% chance for attacks to inflict 175% more damage.",
+    "notes": "Critical Strike does not work against buildings.",
     "attrib": [
       {
         "key": "bonus_intellect",
@@ -3004,28 +3168,45 @@
       },
       {
         "key": "crit_chance",
-        "header": "CRITICAL CHANCE:",
-        "value": "20%"
+        "header": "CRIT CHANCE:",
+        "value": "20",
+        "generated": true
       },
       {
         "key": "crit_multiplier",
-        "header": "CRITICAL DAMAGE:",
-        "value": "175%"
+        "header": "CRIT MULTIPLIER:",
+        "value": "175",
+        "generated": true
       },
       {
         "key": "silence_damage_percent",
-        "header": "SILENCE INCREASED DAMAGE:",
-        "value": "30%"
+        "header": "SILENCE DAMAGE PERCENT:",
+        "value": "30",
+        "generated": true
       },
       {
         "key": "silence_duration",
         "header": "SILENCE DURATION:",
-        "value": "5"
+        "value": "5",
+        "generated": true
       },
       {
         "key": "target_crit_multiplier",
-        "header": "SILENCE CRITICAL DAMAGE:",
-        "value": "145%"
+        "header": "TARGET CRIT MULTIPLIER:",
+        "value": "140",
+        "generated": true
+      },
+      {
+        "key": "tooltip_range",
+        "header": "TOOLTIP RANGE:",
+        "value": "900",
+        "generated": true
+      },
+      {
+        "key": "tooltip_crit_chance",
+        "header": "TOOLTIP CRIT CHANCE:",
+        "value": "100",
+        "generated": true
       }
     ],
     "mc": 100,
@@ -3043,7 +3224,7 @@
     "dname": "Echo Sabre",
     "qual": "artifact",
     "cost": 2650,
-    "desc": "Passive: Causes melee attacks to attack twice in quick succession. The double attacks apply a 0.6 second 100% movement slow on each strike.",
+    "desc": "Passive: Echo Strike Causes melee attacks to attack twice in quick succession. The double attacks apply a 100% movement slow for %slow_duration% seconds on each strike.",
     "notes": "",
     "attrib": [
       {
@@ -3085,7 +3266,8 @@
       {
         "key": "movement_slow",
         "header": "MOVEMENT SLOW:",
-        "value": "100%"
+        "value": "100",
+        "generated": true
       },
       {
         "key": "attack_speed_slow",
@@ -3096,7 +3278,8 @@
       {
         "key": "slow_duration",
         "header": "SLOW DURATION:",
-        "value": "0.6"
+        "value": "0.7",
+        "generated": true
       }
     ],
     "mc": false,
@@ -3128,7 +3311,7 @@
     "dname": "Eul's Scepter of Divinity",
     "qual": "rare",
     "cost": 2750,
-    "desc": "Active: Cyclone - Sweeps a target unit up into cyclone, making them invulnerable for 2.5 seconds. Cyclone can be cast on yourself. Enemy units take 50 magical damage upon landing.\n\nDISPEL TYPE: Basic Dispel",
+    "desc": "Active: Cyclone Sweeps a target unit up into a cyclone, making them invulnerable for 2.5 seconds. Cyclone can only be cast on enemy units or yourself.Enemy units take 50 magical damage upon landing.Range: 575Dispel Type: Basic Dispel",
     "notes": "You cannot cyclone allies.\nCyclones cast on yourself go through spell immunity.\nCyclone can purge some buffs and debuffs.",
     "attrib": [
       {
@@ -3152,12 +3335,20 @@
       {
         "key": "cyclone_duration",
         "header": "CYCLONE DURATION:",
-        "value": "2.5"
+        "value": "2.5",
+        "generated": true
       },
       {
         "key": "cast_range_tooltip",
-        "header": "CYCLONE CAST RANGE:",
-        "value": "575"
+        "header": "CAST RANGE TOOLTIP:",
+        "value": "575",
+        "generated": true
+      },
+      {
+        "key": "tooltip_drop_damage",
+        "header": "TOOLTIP DROP DAMAGE:",
+        "value": "50",
+        "generated": true
       }
     ],
     "mc": 175,
@@ -3190,8 +3381,8 @@
     "dname": "Aether Lens",
     "qual": "rare",
     "cost": 2350,
-    "desc": "Passive: Increases spell cast range by 220 and spell damage output by 6%",
-    "notes": "",
+    "desc": "Passive: Aethereal Focus Increases targeted spell and item cast range by 220.",
+    "notes": "Passive does not stack.",
     "attrib": [
       {
         "key": "bonus_mana",
@@ -3207,14 +3398,15 @@
       },
       {
         "key": "cast_range_bonus",
-        "header": "+",
+        "header": "CAST RANGE BONUS:",
         "value": "220",
-        "footer": "Cast Range"
+        "generated": true
       },
       {
         "key": "spell_amp",
-        "header": "SPELL DAMAGE AMP:",
-        "value": "6%"
+        "header": "+",
+        "value": "6%",
+        "footer": "Spell Damage"
       }
     ],
     "mc": false,
@@ -3246,7 +3438,7 @@
     "dname": "Force Staff",
     "qual": "rare",
     "cost": 2250,
-    "desc": "Active: Force - Pushes any target unit 600 units in the direction it is facing.  Double click to instantly cast Force on yourself.",
+    "desc": "Active: ForcePushes any target unit 600 units in the direction it is facing.Range: 800",
     "notes": "Self-cast will cause you to use Force on yourself.\nForce Staff doesn't interrupt the target's actions.\nWill not work on a unit inside Chronosphere, Duel, or Black Hole.",
     "attrib": [
       {
@@ -3265,6 +3457,12 @@
         "key": "push_length",
         "header": "PUSH LENGTH:",
         "value": "600",
+        "generated": true
+      },
+      {
+        "key": "tooltip_range",
+        "header": "TOOLTIP RANGE:",
+        "value": "800",
         "generated": true
       }
     ],
@@ -3297,7 +3495,7 @@
     "dname": "Hurricane Pike",
     "qual": "epic",
     "cost": 4650,
-    "desc": "Active: When used on an enemy, it pushes you both away from each other 450 units each, and allows you to attack the target without range restrictions for 4 attacks for a maximum of 5 seconds. Grants 100 Attack Speed during the attacks. Works like Force Staff when used on self or allies.\nPassive: Increases attack range of ranged heroes by 140.",
+    "desc": "Active: Hurricane Thrust Pushes you and target enemy 450 units away from each other, and for 5 seconds, allows you to make 4 attacks against the target without range restrictions and with +100 attack speed.Works like Force Staff when used on self or allies.Allied Range: 800Enemy Range: 400\nPassive:  Dragon's Reach Increases attack range of ranged heroes by 140.",
     "notes": "Self-cast will use Hurricane Pike on yourself.\nHurricane Pike doesn't interrupt the target's actions.\nWill not work on a unit inside Chronosphere, Duel, or Black Hole.",
     "attrib": [
       {
@@ -3326,9 +3524,9 @@
       },
       {
         "key": "base_attack_range",
-        "header": "+",
+        "header": "BASE ATTACK RANGE:",
         "value": "140",
-        "footer": "Attack Range (Ranged Only)"
+        "generated": true
       },
       {
         "key": "push_length",
@@ -3344,23 +3542,32 @@
       },
       {
         "key": "range_duration",
-        "header": "UNLIMITED RANGE DURATION:",
-        "value": "5"
+        "header": "RANGE DURATION:",
+        "value": "5",
+        "generated": true
       },
       {
         "key": "cast_range_enemy",
-        "header": "CAST RANGE ON ENEMY:",
-        "value": "400"
+        "header": "CAST RANGE ENEMY:",
+        "value": "400",
+        "generated": true
       },
       {
         "key": "max_attacks",
-        "header": "UNLIMITED RANGE ATTACKS:",
-        "value": "4"
+        "header": "MAX ATTACKS:",
+        "value": "4",
+        "generated": true
       },
       {
         "key": "bonus_attack_speed",
         "header": "BONUS ATTACK SPEED:",
         "value": "100",
+        "generated": true
+      },
+      {
+        "key": "tooltip_range",
+        "header": "TOOLTIP RANGE:",
+        "value": "800",
         "generated": true
       }
     ],
@@ -3393,7 +3600,7 @@
     "dname": "Dagon",
     "qual": "rare",
     "cost": 2720,
-    "desc": "Active: Energy Burst - Emits a powerful burst of magical damage upon a targeted enemy unit. Upgradable.",
+    "desc": "Active: Energy Burst Emits a powerful burst of magical damage upon a targeted enemy unit. Upgradable.Damage: 400,500,600,700,800Range: 600,650,700,750,800Mana Cost: 180",
     "notes": "Instantly kills illusions.",
     "attrib": [
       {
@@ -3422,30 +3629,38 @@
       },
       {
         "key": "damage",
-        "header": "BURST DAMAGE:",
+        "header": "DAMAGE:",
         "value": [
           "400",
           "500",
           "600",
           "700",
           "800"
-        ]
+        ],
+        "generated": true
       },
       {
         "key": "range_tooltip",
-        "header": "CAST RANGE:",
+        "header": "RANGE TOOLTIP:",
         "value": [
           "600",
           "650",
           "700",
           "750",
           "800"
-        ]
+        ],
+        "generated": true
       },
       {
         "key": "damage_delay",
         "header": "DAMAGE DELAY:",
         "value": "0",
+        "generated": true
+      },
+      {
+        "key": "mana_cost_tooltip",
+        "header": "MANA COST TOOLTIP:",
+        "value": "180",
         "generated": true
       }
     ],
@@ -3464,7 +3679,7 @@
     "dname": "Dagon",
     "qual": "rare",
     "cost": 3970,
-    "desc": "Active: Energy Burst - Emits a powerful burst of magical damage upon a targeted enemy unit. Upgradable.",
+    "desc": "Active: Energy Burst Emits a powerful burst of magical damage upon a targeted enemy unit. Upgradable.Damage: 400,500,600,700,800Range: 600,650,700,750,800Mana Cost: 180",
     "notes": "Instantly kills illusions.",
     "attrib": [
       {
@@ -3493,30 +3708,38 @@
       },
       {
         "key": "damage",
-        "header": "BURST DAMAGE:",
+        "header": "DAMAGE:",
         "value": [
           "400",
           "500",
           "600",
           "700",
           "800"
-        ]
+        ],
+        "generated": true
       },
       {
         "key": "range_tooltip",
-        "header": "CAST RANGE:",
+        "header": "RANGE TOOLTIP:",
         "value": [
           "600",
           "650",
           "700",
           "750",
           "800"
-        ]
+        ],
+        "generated": true
       },
       {
         "key": "damage_delay",
         "header": "DAMAGE DELAY:",
         "value": "0",
+        "generated": true
+      },
+      {
+        "key": "mana_cost_tooltip",
+        "header": "MANA COST TOOLTIP:",
+        "value": "180",
         "generated": true
       }
     ],
@@ -3535,7 +3758,7 @@
     "dname": "Dagon",
     "qual": "rare",
     "cost": 5220,
-    "desc": "Active: Energy Burst - Emits a powerful burst of magical damage upon a targeted enemy unit. Upgradable.",
+    "desc": "Active: Energy Burst Emits a powerful burst of magical damage upon a targeted enemy unit. Upgradable.Damage: 400,500,600,700,800Range: 600,650,700,750,800Mana Cost: 180",
     "notes": "Instantly kills illusions.",
     "attrib": [
       {
@@ -3564,30 +3787,38 @@
       },
       {
         "key": "damage",
-        "header": "BURST DAMAGE:",
+        "header": "DAMAGE:",
         "value": [
           "400",
           "500",
           "600",
           "700",
           "800"
-        ]
+        ],
+        "generated": true
       },
       {
         "key": "range_tooltip",
-        "header": "CAST RANGE:",
+        "header": "RANGE TOOLTIP:",
         "value": [
           "600",
           "650",
           "700",
           "750",
           "800"
-        ]
+        ],
+        "generated": true
       },
       {
         "key": "damage_delay",
         "header": "DAMAGE DELAY:",
         "value": "0",
+        "generated": true
+      },
+      {
+        "key": "mana_cost_tooltip",
+        "header": "MANA COST TOOLTIP:",
+        "value": "180",
         "generated": true
       }
     ],
@@ -3606,7 +3837,7 @@
     "dname": "Dagon",
     "qual": "rare",
     "cost": 6470,
-    "desc": "Active: Energy Burst - Emits a powerful burst of magical damage upon a targeted enemy unit. Upgradable.",
+    "desc": "Active: Energy Burst Emits a powerful burst of magical damage upon a targeted enemy unit. Upgradable.Damage: 400,500,600,700,800Range: 600,650,700,750,800Mana Cost: 180",
     "notes": "Instantly kills illusions.",
     "attrib": [
       {
@@ -3635,30 +3866,38 @@
       },
       {
         "key": "damage",
-        "header": "BURST DAMAGE:",
+        "header": "DAMAGE:",
         "value": [
           "400",
           "500",
           "600",
           "700",
           "800"
-        ]
+        ],
+        "generated": true
       },
       {
         "key": "range_tooltip",
-        "header": "CAST RANGE:",
+        "header": "RANGE TOOLTIP:",
         "value": [
           "600",
           "650",
           "700",
           "750",
           "800"
-        ]
+        ],
+        "generated": true
       },
       {
         "key": "damage_delay",
         "header": "DAMAGE DELAY:",
         "value": "0",
+        "generated": true
+      },
+      {
+        "key": "mana_cost_tooltip",
+        "header": "MANA COST TOOLTIP:",
+        "value": "180",
         "generated": true
       }
     ],
@@ -3677,7 +3916,7 @@
     "dname": "Dagon",
     "qual": "rare",
     "cost": 7720,
-    "desc": "Active: Energy Burst - Emits a powerful burst of magical damage upon a targeted enemy unit.",
+    "desc": "Active: Energy Burst Emits a powerful burst of magical damage upon a targeted enemy unit. Upgradable.Damage: 400,500,600,700,800Range: 600,650,700,750,800Mana Cost: 180",
     "notes": "Instantly kills illusions.",
     "attrib": [
       {
@@ -3706,30 +3945,38 @@
       },
       {
         "key": "damage",
-        "header": "BURST DAMAGE:",
+        "header": "DAMAGE:",
         "value": [
           "400",
           "500",
           "600",
           "700",
           "800"
-        ]
+        ],
+        "generated": true
       },
       {
         "key": "range_tooltip",
-        "header": "CAST RANGE:",
+        "header": "RANGE TOOLTIP:",
         "value": [
           "600",
           "650",
           "700",
           "750",
           "800"
-        ]
+        ],
+        "generated": true
       },
       {
         "key": "damage_delay",
         "header": "DAMAGE DELAY:",
         "value": "0",
+        "generated": true
+      },
+      {
+        "key": "mana_cost_tooltip",
+        "header": "MANA COST TOOLTIP:",
+        "value": "180",
         "generated": true
       }
     ],
@@ -3762,7 +4009,7 @@
     "dname": "Necronomicon",
     "qual": "rare",
     "cost": 2650,
-    "desc": "Active: Demonic Summoning - Summons a Warrior and an Archer to fight for you for 45 seconds, whose strength and abilities increase as Necronomicon is upgraded. Warrior gains True Sight at level 3. Upgradable.",
+    "desc": "Active: Demonic SummoningSummons a Warrior and an Archer to fight for you for 50 seconds.Warrior:Burns mana every hit, and deals magical damage to whoever kills it.  Gains True Sight at level 3.Health: 700,800,900Damage: 75,100,125Mana Break Damage: 20,30,40Last Will Damage: 550,675,800Archer:Has an activated mana burn ability, and a passive movement and attack speed aura.Health: 700,800,900Damage: 60,90,120Mana Burn Damage: 125,175,225Aura Move Speed: 5,7,9Aura Attack Speed: 5,10,15Aura Radius: 900",
     "notes": "",
     "attrib": [
       {
@@ -3788,26 +4035,28 @@
       {
         "key": "summon_duration",
         "header": "SUMMON DURATION:",
-        "value": "45",
+        "value": "50",
         "generated": true
       },
       {
         "key": "warrior_health_tooltip",
-        "header": "WARRIOR HEALTH:",
+        "header": "WARRIOR HEALTH TOOLTIP:",
         "value": [
           "700",
           "800",
           "900"
-        ]
+        ],
+        "generated": true
       },
       {
         "key": "warrior_damage_tooltip",
-        "header": "WARRIOR DAMAGE:",
+        "header": "WARRIOR DAMAGE TOOLTIP:",
         "value": [
           "75",
           "100",
           "125"
-        ]
+        ],
+        "generated": true
       },
       {
         "key": "warrior_mana_feedback",
@@ -3821,21 +4070,23 @@
       },
       {
         "key": "warrior_mana_break_tooltip",
-        "header": "WARRIOR MANA BREAK:",
+        "header": "WARRIOR MANA BREAK TOOLTIP:",
         "value": [
           "20",
           "30",
           "40"
-        ]
+        ],
+        "generated": true
       },
       {
         "key": "explosion",
-        "header": "WARRIOR LAST WILL DMG:",
+        "header": "EXPLOSION:",
         "value": [
           "550",
           "675",
           "800"
-        ]
+        ],
+        "generated": true
       },
       {
         "key": "warrior_truesight",
@@ -3845,30 +4096,33 @@
       },
       {
         "key": "archer_health_tooltip",
-        "header": "ARCHER HEALTH:",
+        "header": "ARCHER HEALTH TOOLTIP:",
         "value": [
           "700",
           "800",
           "900"
-        ]
+        ],
+        "generated": true
       },
       {
         "key": "archer_damage_tooltip",
-        "header": "ARCHER DAMAGE:",
+        "header": "ARCHER DAMAGE TOOLTIP:",
         "value": [
           "60",
           "90",
           "120"
-        ]
+        ],
+        "generated": true
       },
       {
         "key": "archer_mana_burn",
         "header": "ARCHER MANA BURN:",
         "value": [
-          "200",
-          "300",
-          "400"
-        ]
+          "125",
+          "175",
+          "225"
+        ],
+        "generated": true
       },
       {
         "key": "archer_aura_radius_tooltip",
@@ -3878,21 +4132,23 @@
       },
       {
         "key": "archer_move_speed",
-        "header": "ARCHER AURA MOVE SPEED:",
+        "header": "ARCHER MOVE SPEED:",
         "value": [
-          "5%",
-          "7%",
-          "9%"
-        ]
+          "5",
+          "7",
+          "9"
+        ],
+        "generated": true
       },
       {
         "key": "archer_attack_speed",
-        "header": "ARCHER AURA ATTACK SPEED:",
+        "header": "ARCHER ATTACK SPEED:",
         "value": [
           "5",
           "10",
           "15"
-        ]
+        ],
+        "generated": true
       }
     ],
     "mc": 50,
@@ -3910,7 +4166,7 @@
     "dname": "Necronomicon",
     "qual": "rare",
     "cost": 3850,
-    "desc": "Active: Demonic Summoning - Summons a Warrior and an Archer to fight for you for 45 seconds, whose strength and abilities increase as Necronomicon is upgraded. Warrior gains True Sight at level 3. Upgradable.",
+    "desc": "Active: Demonic SummoningSummons a Warrior and an Archer to fight for you for 50 seconds.Warrior:Burns mana every hit, and deals magical damage to whoever kills it.  Gains True Sight at level 3.Health: 700,800,900Damage: 75,100,125Mana Break Damage: 20,30,40Last Will Damage: 550,675,800Archer:Has an activated mana burn ability, and a passive movement and attack speed aura.Health: 700,800,900Damage: 60,90,120Mana Burn Damage: 125,175,225Aura Move Speed: 5,7,9Aura Attack Speed: 5,10,15Aura Radius: 900",
     "notes": "",
     "attrib": [
       {
@@ -3936,26 +4192,28 @@
       {
         "key": "summon_duration",
         "header": "SUMMON DURATION:",
-        "value": "45",
+        "value": "50",
         "generated": true
       },
       {
         "key": "warrior_health_tooltip",
-        "header": "WARRIOR HEALTH:",
+        "header": "WARRIOR HEALTH TOOLTIP:",
         "value": [
           "700",
           "800",
           "900"
-        ]
+        ],
+        "generated": true
       },
       {
         "key": "warrior_damage_tooltip",
-        "header": "WARRIOR DAMAGE:",
+        "header": "WARRIOR DAMAGE TOOLTIP:",
         "value": [
           "75",
           "100",
           "125"
-        ]
+        ],
+        "generated": true
       },
       {
         "key": "warrior_mana_feedback",
@@ -3969,21 +4227,23 @@
       },
       {
         "key": "warrior_mana_break_tooltip",
-        "header": "WARRIOR MANA BREAK:",
+        "header": "WARRIOR MANA BREAK TOOLTIP:",
         "value": [
           "20",
           "30",
           "40"
-        ]
+        ],
+        "generated": true
       },
       {
         "key": "explosion",
-        "header": "WARRIOR LAST WILL DMG:",
+        "header": "EXPLOSION:",
         "value": [
           "550",
           "675",
           "800"
-        ]
+        ],
+        "generated": true
       },
       {
         "key": "warrior_truesight",
@@ -3993,30 +4253,33 @@
       },
       {
         "key": "archer_health_tooltip",
-        "header": "ARCHER HEALTH:",
+        "header": "ARCHER HEALTH TOOLTIP:",
         "value": [
           "700",
           "800",
           "900"
-        ]
+        ],
+        "generated": true
       },
       {
         "key": "archer_damage_tooltip",
-        "header": "ARCHER DAMAGE:",
+        "header": "ARCHER DAMAGE TOOLTIP:",
         "value": [
           "60",
           "90",
           "120"
-        ]
+        ],
+        "generated": true
       },
       {
         "key": "archer_mana_burn",
         "header": "ARCHER MANA BURN:",
         "value": [
-          "200",
-          "300",
-          "400"
-        ]
+          "125",
+          "175",
+          "225"
+        ],
+        "generated": true
       },
       {
         "key": "archer_aura_radius_tooltip",
@@ -4036,12 +4299,13 @@
       },
       {
         "key": "archer_attack_speed",
-        "header": "ARCHER AURA SPEED:",
+        "header": "ARCHER ATTACK SPEED:",
         "value": [
-          "5%",
-          "10%",
-          "15%"
-        ]
+          "5",
+          "10",
+          "15"
+        ],
+        "generated": true
       }
     ],
     "mc": 50,
@@ -4059,7 +4323,7 @@
     "dname": "Necronomicon",
     "qual": "rare",
     "cost": 5050,
-    "desc": "Active: Demonic Summoning - Summons a Warrior and an Archer to fight for you for 45 seconds, whose strength and abilities increase as Necronomicon is upgraded. Warrior gains True Sight at level 3.",
+    "desc": "Active: Demonic SummoningSummons a Warrior and an Archer to fight for you for 50 seconds.Warrior:Burns mana every hit, and deals magical damage to whoever kills it.  Gains True Sight at level 3.Health: 700,800,900Damage: 75,100,125Mana Break Damage: 20,30,40Last Will Damage: 550,675,800Archer:Has an activated mana burn ability, and a passive movement and attack speed aura.Health: 700,800,900Damage: 60,90,120Mana Burn Damage: 125,175,225Aura Move Speed: 5,7,9Aura Attack Speed: 5,10,15Aura Radius: 900",
     "notes": "",
     "attrib": [
       {
@@ -4085,26 +4349,28 @@
       {
         "key": "summon_duration",
         "header": "SUMMON DURATION:",
-        "value": "45",
+        "value": "50",
         "generated": true
       },
       {
         "key": "warrior_health_tooltip",
-        "header": "WARRIOR HEALTH:",
+        "header": "WARRIOR HEALTH TOOLTIP:",
         "value": [
           "700",
           "800",
           "900"
-        ]
+        ],
+        "generated": true
       },
       {
         "key": "warrior_damage_tooltip",
-        "header": "WARRIOR DAMAGE:",
+        "header": "WARRIOR DAMAGE TOOLTIP:",
         "value": [
           "75",
           "100",
           "125"
-        ]
+        ],
+        "generated": true
       },
       {
         "key": "warrior_mana_feedback",
@@ -4118,21 +4384,23 @@
       },
       {
         "key": "warrior_mana_break_tooltip",
-        "header": "WARRIOR MANA BREAK:",
+        "header": "WARRIOR MANA BREAK TOOLTIP:",
         "value": [
           "20",
           "30",
           "40"
-        ]
+        ],
+        "generated": true
       },
       {
         "key": "explosion",
-        "header": "WARRIOR LAST WILL DMG:",
+        "header": "EXPLOSION:",
         "value": [
           "550",
           "675",
           "800"
-        ]
+        ],
+        "generated": true
       },
       {
         "key": "warrior_truesight",
@@ -4142,30 +4410,33 @@
       },
       {
         "key": "archer_health_tooltip",
-        "header": "ARCHER HEALTH:",
+        "header": "ARCHER HEALTH TOOLTIP:",
         "value": [
           "700",
           "800",
           "900"
-        ]
+        ],
+        "generated": true
       },
       {
         "key": "archer_damage_tooltip",
-        "header": "ARCHER DAMAGE:",
+        "header": "ARCHER DAMAGE TOOLTIP:",
         "value": [
           "60",
           "90",
           "120"
-        ]
+        ],
+        "generated": true
       },
       {
         "key": "archer_mana_burn",
         "header": "ARCHER MANA BURN:",
         "value": [
-          "200",
-          "300",
-          "400"
-        ]
+          "125",
+          "175",
+          "225"
+        ],
+        "generated": true
       },
       {
         "key": "archer_aura_radius_tooltip",
@@ -4185,12 +4456,13 @@
       },
       {
         "key": "archer_attack_speed",
-        "header": "ARCHER AURA SPEED:",
+        "header": "ARCHER ATTACK SPEED:",
         "value": [
-          "5%",
-          "10%",
-          "15%"
-        ]
+          "5",
+          "10",
+          "15"
+        ],
+        "generated": true
       }
     ],
     "mc": 50,
@@ -4208,7 +4480,7 @@
     "dname": "Aghanim's Scepter",
     "qual": "rare",
     "cost": 4200,
-    "desc": "Passive: Ultimate Upgrade - Upgrades the ultimate, and some abilities, of certain heroes.",
+    "desc": "Passive: Ultimate UpgradeUpgrades the ultimate, and some abilities, of certain heroes.",
     "notes": "",
     "attrib": [
       {
@@ -4261,7 +4533,7 @@
     "dname": "Refresher Orb",
     "qual": "rare",
     "cost": 5200,
-    "desc": "Active: Reset Cooldowns - Resets the cooldowns of all your items and abilities.",
+    "desc": "Active: Reset CooldownsResets the cooldowns of all your items and abilities.",
     "notes": "",
     "attrib": [
       {
@@ -4312,8 +4584,8 @@
     "dname": "Assault Cuirass",
     "qual": "epic",
     "cost": 5250,
-    "desc": "Passive: Assault Aura - Grants attack speed and armor to nearby allied units and structures, and decreases the armor of nearby enemies.\n\nMultiple instances of Assault Aura do not stack.",
-    "notes": "",
+    "desc": "Passive: Assault Aura Grants 25 attack speed and 5 armor to nearby allied units and structures, and decreases nearby enemy unit and structure armor by -5.Radius: 900",
+    "notes": "Multiple instances of Assault Aura do not stack.",
     "attrib": [
       {
         "key": "bonus_attack_speed",
@@ -4336,17 +4608,20 @@
       {
         "key": "aura_attack_speed",
         "header": "AURA ATTACK SPEED:",
-        "value": "25"
+        "value": "25",
+        "generated": true
       },
       {
         "key": "aura_positive_armor",
-        "header": "AURA ALLY BONUS ARMOR:",
-        "value": "5"
+        "header": "AURA POSITIVE ARMOR:",
+        "value": "5",
+        "generated": true
       },
       {
         "key": "aura_negative_armor",
-        "header": "AURA ENEMY ARMOR REDUCTION:",
-        "value": "-5"
+        "header": "AURA NEGATIVE ARMOR:",
+        "value": "-5",
+        "generated": true
       }
     ],
     "mc": false,
@@ -4365,7 +4640,7 @@
     "dname": "Heart of Tarrasque",
     "qual": "epic",
     "cost": 5200,
-    "desc": "Passive: Health Regeneration - Restores a percentage of max health per second. If damage is taken from an enemy hero or Roshan, this ability is disabled for 5 seconds for melee heroes, or 7 seconds for ranged heroes.",
+    "desc": "Passive: Health RegenerationRestores 7% of max health per second. If damage is taken from an enemy hero or Roshan, this ability is disabled for 5 seconds for melee heroes, or 7 seconds for ranged heroes.",
     "notes": "",
     "attrib": [
       {
@@ -4382,8 +4657,9 @@
       },
       {
         "key": "health_regen_rate",
-        "header": "HEALTH RESTORED PER SECOND:",
-        "value": "7%"
+        "header": "HEALTH REGEN RATE:",
+        "value": "7",
+        "generated": true
       },
       {
         "key": "cooldown_melee",
@@ -4428,7 +4704,7 @@
     "dname": "Black King Bar",
     "qual": "epic",
     "cost": 3975,
-    "desc": "Active: Avatar - Grants Spell Immunity and 100% Magic Damage Resistance.  Duration and cooldown decrease with each use.  Some abilities are able to disable through Avatar.\n\nDISPEL TYPE: Basic Dispel",
+    "desc": "Active: Avatar Grants Spell Immunity and 100% Magic Damage Resistance.  Duration and cooldown decrease with each use. Duration: 10,9,8,7,6,5 Dispel Type: Basic Dispel",
     "notes": "Purchasing another Black King Bar will not reset its immunity duration.\nUsing Black King Bar may remove some positive buffs.",
     "attrib": [
       {
@@ -4445,7 +4721,7 @@
       },
       {
         "key": "duration",
-        "header": "AVATAR DURATION:",
+        "header": "DURATION:",
         "value": [
           "10",
           "9",
@@ -4453,7 +4729,8 @@
           "7",
           "6",
           "5"
-        ]
+        ],
+        "generated": true
       },
       {
         "key": "max_level",
@@ -4483,7 +4760,7 @@
     "dname": "Aegis of the Immortal",
     "qual": "artifact",
     "cost": 0,
-    "desc": "Passive: Reincarnation - Brings you to life with full health and mana 5 seconds after you die, at the location where you died. Reincarnation must be used within 5 minutes or Aegis of the Immortal disappears. If it expires, it will heal you over 5 seconds (dispels on damage).",
+    "desc": "Passive: Reincarnation Brings you to life with full health and mana 5 seconds after you die, at the location where you died. Reincarnation must be used within 5 minutes or Aegis of the Immortal disappears. If it expires, it will heal you over 5 seconds (dispels on damage).",
     "notes": "",
     "attrib": [
       {
@@ -4531,8 +4808,8 @@
     "dname": "Shiva's Guard",
     "qual": "epic",
     "cost": 4750,
-    "desc": "Active: Arctic Blast - Emits a freezing wave that deals 200 magical damage to enemies and slows their movement by -40% for 4 seconds.\nPassive: Freezing Aura - Reduces the attack speed of all enemies in a 900 radius.\n\nMultiple instances of Freezing Aura do not stack.",
-    "notes": "The wave extends at a speed of 350 to a max size of 900.\nThe Arctic Blast follows its caster.",
+    "desc": "Active: Arctic Blast Emits a freezing wave that deals 200 magical damage to enemies and slows their movement by -40% for 4 seconds.Radius: 900\nPassive: Freezing Aura Reduces the attack speed of all enemies by -45. Radius: 900",
+    "notes": "The wave extends at a speed of 350 to a max size of 900.\nThe Arctic Blast follows its caster.\nMultiple instances of Freezing Aura do not stack.",
     "attrib": [
       {
         "key": "bonus_intellect",
@@ -4554,28 +4831,33 @@
       },
       {
         "key": "aura_attack_speed",
-        "header": "AURA ATTACK SLOW:",
-        "value": "-45"
+        "header": "AURA ATTACK SPEED:",
+        "value": "-45",
+        "generated": true
       },
       {
         "key": "blast_damage",
         "header": "BLAST DAMAGE:",
-        "value": "200"
+        "value": "200",
+        "generated": true
       },
       {
         "key": "blast_movement_speed",
-        "header": "BLAST MOVEMENT SLOW:",
-        "value": "-40%"
+        "header": "BLAST MOVEMENT SPEED:",
+        "value": "-40",
+        "generated": true
       },
       {
         "key": "blast_debuff_duration",
-        "header": "BLAST SLOW DURATION:",
-        "value": "4"
+        "header": "BLAST DEBUFF DURATION:",
+        "value": "4",
+        "generated": true
       },
       {
         "key": "blast_radius",
         "header": "BLAST RADIUS:",
-        "value": "900"
+        "value": "900",
+        "generated": true
       },
       {
         "key": "blast_speed",
@@ -4613,7 +4895,7 @@
     "dname": "Bloodstone",
     "qual": "epic",
     "cost": 4850,
-    "desc": "Active: Pocket Deny - Instantly causes you to die.\nPassive: Bloodpact - Begins with 12 charges, and gains a charge each time an enemy hero dies within 1675 range. Each charge grants 1 mana regeneration per second, and reduces respawn time by 3 seconds. If the bearer dies, 500 + 30 health per charge is restored to all allies within a 1675 radius, while the Bloodstone loses a third of its charges.",
+    "desc": "Active: Pocket DenyInstantly causes you to die.Must ground target to cast.  Cannot self cast.\nPassive: BloodpactBegins with 12 charges, and gains a charge each time an enemy hero dies within 1600 range. Each charge grants 1 mana regeneration per second, and reduces respawn time by 3 seconds. If the bearer dies, 500 + 30 health per charge is restored to all nearby allies, while the Bloodstone loses a third of its charges. Heal Radius: 1675",
     "notes": "Only the first Bloodstone will gain charges.",
     "attrib": [
       {
@@ -4687,6 +4969,18 @@
         "header": "BONUS DAMAGE:",
         "value": "0",
         "generated": true
+      },
+      {
+        "key": "tooltip_charges",
+        "header": "TOOLTIP CHARGES:",
+        "value": "12",
+        "generated": true
+      },
+      {
+        "key": "var_Type",
+        "header": "VAR TYPE:",
+        "value": "FIELD_FLOAT",
+        "generated": true
       }
     ],
     "mc": false,
@@ -4718,7 +5012,7 @@
     "dname": "Linken's Sphere",
     "qual": "epic",
     "cost": 4850,
-    "desc": "Passive: Spellblock - Blocks most targeted spells once every 13 seconds.\nActive: Transfer Spellblock - Temporarily removes Spellblock from the item's owner and transfers it to an allied unit.",
+    "desc": "Passive: SpellblockBlocks most targeted spells once every 13 seconds.\nActive: Transfer SpellblockTemporarily removes Spellblock from the item's owner and transfers it to an allied unit for 13 seconds.Range: 700",
     "notes": "",
     "attrib": [
       {
@@ -4750,6 +5044,12 @@
         "header": "BLOCK COOLDOWN:",
         "value": "13",
         "generated": true
+      },
+      {
+        "key": "cast_range_tooltip",
+        "header": "CAST RANGE TOOLTIP:",
+        "value": "700",
+        "generated": true
       }
     ],
     "mc": false,
@@ -4767,7 +5067,7 @@
     "dname": "Lotus Orb",
     "qual": "epic",
     "cost": 4000,
-    "desc": "Active: Echo Shell - Applies a shield to the target unit which re-casts most targeted spells back to their caster. The shielded unit will still take damage from the spell. Dispels negative buffs when applied.\n\nDISPEL TYPE: Basic Dispel",
+    "desc": "Active: Echo ShellApplies a shield to the target unit for 6 seconds which re-casts most targeted spells back to their caster.The shielded unit will still take damage from the spell. Range: 900Dispel Type: Basic Dispel",
     "notes": "",
     "attrib": [
       {
@@ -4802,13 +5102,15 @@
       },
       {
         "key": "active_duration",
-        "header": "ECHO DURATION:",
-        "value": "6"
+        "header": "ACTIVE DURATION:",
+        "value": "6",
+        "generated": true
       },
       {
         "key": "cast_range_tooltip",
-        "header": "ECHO CAST RANGE:",
-        "value": "900"
+        "header": "CAST RANGE TOOLTIP:",
+        "value": "900",
+        "generated": true
       }
     ],
     "mc": 75,
@@ -4827,7 +5129,7 @@
     "dname": "Vanguard",
     "qual": "epic",
     "cost": 2150,
-    "desc": "Passive: Damage Block - Grants the wielder a 50% chance to block damage from incoming attacks based on whether the equipped hero is melee or ranged.",
+    "desc": "Passive: Damage Block Grants a 50% chance to block 70 damage from incoming attacks on melee heroes, and 35 damage on ranged.",
     "notes": "Multiple sources of damage block don't stack.",
     "attrib": [
       {
@@ -4845,17 +5147,20 @@
       {
         "key": "block_damage_melee",
         "header": "BLOCK DAMAGE MELEE:",
-        "value": "70"
+        "value": "70",
+        "generated": true
       },
       {
         "key": "block_damage_ranged",
         "header": "BLOCK DAMAGE RANGED:",
-        "value": "35"
+        "value": "35",
+        "generated": true
       },
       {
         "key": "block_chance",
         "header": "BLOCK CHANCE:",
-        "value": "50"
+        "value": "50",
+        "generated": true
       }
     ],
     "mc": false,
@@ -4888,8 +5193,8 @@
     "dname": "Crimson Guard",
     "qual": "epic",
     "cost": 3550,
-    "desc": "Active: Guard - Grant nearby allied heroes and buildings a 100% chance to block 60 damage from each incoming attack, along with 2 armor. Lasts 12 seconds.\nPassive: Damage Block - Grants the wielder a 50% chance to block damage from incoming attacks based on whether the equipped hero is melee or ranged.",
-    "notes": "Multiple sources of damage block don't stack.\nGuard does not affect units that have been affected by Guard in the last 46 seconds.",
+    "desc": "Active: Guard For 12 seconds, grant nearby allied heroes and buildings +2 armor, and a 100% chance to block 60 damage from each incoming attack.Units may only be affected by Guard once every 46 seconds.Radius: 900\nPassive: Damage Block Grants a 50% chance to block 70 damage on melee heroes, and 35 damage on ranged.",
+    "notes": "Multiple sources of damage block don't stack.",
     "attrib": [
       {
         "key": "bonus_health",
@@ -4918,37 +5223,44 @@
       {
         "key": "block_damage_melee",
         "header": "BLOCK DAMAGE MELEE:",
-        "value": "70"
+        "value": "70",
+        "generated": true
       },
       {
         "key": "block_damage_ranged",
         "header": "BLOCK DAMAGE RANGED:",
-        "value": "35"
+        "value": "35",
+        "generated": true
       },
       {
         "key": "block_chance",
         "header": "BLOCK CHANCE:",
-        "value": "50"
+        "value": "50",
+        "generated": true
       },
       {
         "key": "bonus_aoe_armor",
-        "header": "GUARD ARMOR:",
-        "value": "2"
+        "header": "BONUS AOE ARMOR:",
+        "value": "2",
+        "generated": true
       },
       {
         "key": "duration",
-        "header": "GUARD DURATION:",
-        "value": "12"
+        "header": "DURATION:",
+        "value": "12",
+        "generated": true
       },
       {
         "key": "bonus_aoe_radius",
-        "header": "GUARD RADIUS:",
-        "value": "900"
+        "header": "BONUS AOE RADIUS:",
+        "value": "900",
+        "generated": true
       },
       {
         "key": "block_damage_melee_active",
-        "header": "GUARD DAMAGE BLOCK:",
-        "value": "60"
+        "header": "BLOCK DAMAGE MELEE ACTIVE:",
+        "value": "60",
+        "generated": true
       },
       {
         "key": "block_damage_ranged_active",
@@ -4960,6 +5272,12 @@
         "key": "block_chance_active",
         "header": "BLOCK CHANCE ACTIVE:",
         "value": "100",
+        "generated": true
+      },
+      {
+        "key": "tooltip_reapply_time",
+        "header": "TOOLTIP REAPPLY TIME:",
+        "value": "46",
         "generated": true
       }
     ],
@@ -4978,7 +5296,7 @@
     "dname": "Blade Mail",
     "qual": "epic",
     "cost": 2200,
-    "desc": "Active: Damage Return - Reflects any damage taken back to the unit that dealt the damage.  Lasts 4.5 seconds.",
+    "desc": "Active: Damage ReturnFor 4.5 seconds, duplicates any damage taken back to the unit that dealt the damage.",
     "notes": "Damage Return is calculated before any kind of reduction.\nDamage Return doesn't reflect damage from other forms of Blademail.\nReturned damage type is the same as it was received.\nCan pierce Spell Immunity if the original damage type does.",
     "attrib": [
       {
@@ -5001,8 +5319,9 @@
       },
       {
         "key": "duration",
-        "header": "DAMAGE RETURN DURATION:",
-        "value": "4.5"
+        "header": "DURATION:",
+        "value": "4.5",
+        "generated": true
       }
     ],
     "mc": 25,
@@ -5053,7 +5372,7 @@
     "dname": "Hood of Defiance",
     "qual": "epic",
     "cost": 1725,
-    "desc": "Active: Creates a spell shield that absorbs up to 325 magical damage.",
+    "desc": "Active: Barrier Creates a spell shield that absorbs up to 325 magical damage.  Lasts 12 seconds.",
     "notes": "Stacks multiplicatively with other sources of spell resistance.",
     "attrib": [
       {
@@ -5077,12 +5396,14 @@
       {
         "key": "barrier_block",
         "header": "BARRIER BLOCK:",
-        "value": "325"
+        "value": "325",
+        "generated": true
       },
       {
         "key": "barrier_duration",
         "header": "BARRIER DURATION:",
-        "value": "12"
+        "value": "12",
+        "generated": true
       }
     ],
     "mc": 75,
@@ -5101,7 +5422,7 @@
     "dname": "Divine Rapier",
     "qual": "epic",
     "cost": 6000,
-    "desc": "Drops on death.  Becomes unusable if picked up by an ally of its owner until it is returned to its owner. It is immediately usable by anybody if an enemy of the owner picks it up. A dropped Rapier cannot be picked up by a courier.",
+    "desc": "Passive: Everlasting Dropped on death, and cannot be destroyed. Becomes unusable if picked up by an ally of its owner until it is returned to its owner. It is immediately usable by anybody if an enemy of the owner picks it up and is killed. A dropped Rapier cannot be picked up by a courier.",
     "notes": "If Divine Rapier is dropped and picked up by an enemy of its original owner, it cannot be dropped again except by death.",
     "attrib": [
       {
@@ -5126,8 +5447,8 @@
     "dname": "Monkey King Bar",
     "qual": "epic",
     "cost": 5200,
-    "desc": "Passive: Mini-Bash - Grants each attack a chance to deal bonus damage and deal a mini-stun.\nPassive: True Strike - Prevents your attacks from missing. True Strike does not work when attacking enemy structures.",
-    "notes": "",
+    "desc": "Passive: Mini-BashGrants each attack a 35% chance to mini-stun and deal 160 bonus damage.\nPassive: True StrikePrevents your attacks from missing enemy units.",
+    "notes": "True Strike does not work when attacking enemy structures.",
     "attrib": [
       {
         "key": "bonus_damage",
@@ -5137,13 +5458,15 @@
       },
       {
         "key": "bash_chance",
-        "header": "MINI-BASH CHANCE:",
-        "value": "35%"
+        "header": "BASH CHANCE:",
+        "value": "35",
+        "generated": true
       },
       {
         "key": "bash_damage",
-        "header": "MINI-BASH DAMAGE:",
-        "value": "160"
+        "header": "BASH DAMAGE:",
+        "value": "160",
+        "generated": true
       },
       {
         "key": "bash_stun",
@@ -5182,7 +5505,7 @@
     "dname": "Radiance",
     "qual": "epic",
     "cost": 5150,
-    "desc": "Active: Toggle Burn - When active, scorches nearby enemies for 60 damage per second and blinds them, causing them to miss 17% of their attacks.",
+    "desc": "Toggle: Burn When active, scorches enemies for 60 damage per second, and causes them to miss 17% of their attacks.Radius: 700",
     "notes": "",
     "attrib": [
       {
@@ -5193,8 +5516,9 @@
       },
       {
         "key": "aura_damage",
-        "header": "BURN DAMAGE PER SECOND:",
-        "value": "60"
+        "header": "AURA DAMAGE:",
+        "value": "60",
+        "generated": true
       },
       {
         "key": "aura_damage_illusions",
@@ -5204,13 +5528,15 @@
       },
       {
         "key": "blind_pct",
-        "header": "BURN MISS CHANCE:",
-        "value": "17%"
+        "header": "BLIND PCT:",
+        "value": "17",
+        "generated": true
       },
       {
         "key": "aura_radius",
-        "header": "BURN RADIUS:",
-        "value": "700"
+        "header": "AURA RADIUS:",
+        "value": "700",
+        "generated": true
       }
     ],
     "mc": false,
@@ -5227,8 +5553,8 @@
     "dname": "Butterfly",
     "qual": "epic",
     "cost": 5525,
-    "desc": "Active: Flutter - Trade evasion for 35% additional movement speed for 4 seconds.\n\nStacks diminishingly with other sources of Evasion.",
-    "notes": "",
+    "desc": "Active: Flutter Trades the 35% evasion for 35% additional movement speed for 4 seconds.",
+    "notes": "Stacks diminishingly with other sources of Evasion.",
     "attrib": [
       {
         "key": "bonus_agility",
@@ -5256,13 +5582,15 @@
       },
       {
         "key": "bonus_move_speed",
-        "header": "FLUTTER BONUS MOVE SPEED:",
-        "value": "35%"
+        "header": "BONUS MOVE SPEED:",
+        "value": "35",
+        "generated": true
       },
       {
         "key": "duration",
-        "header": "FLUTTER DURATION:",
-        "value": "4"
+        "header": "DURATION:",
+        "value": "4",
+        "generated": true
       }
     ],
     "mc": false,
@@ -5295,8 +5623,8 @@
     "dname": "Daedalus",
     "qual": "epic",
     "cost": 5320,
-    "desc": "Passive: Critical Strike - Grants each attack a chance to deal additional damage. Critical Strike does not work against buildings.",
-    "notes": "",
+    "desc": "Passive: Critical StrikeGrants each attack a 30% chance to deal %crit_multiplier%% additional damage.",
+    "notes": "Critical Strike does not work against buildings.",
     "attrib": [
       {
         "key": "bonus_damage",
@@ -5306,13 +5634,15 @@
       },
       {
         "key": "crit_chance",
-        "header": "CRITICAL CHANCE:",
-        "value": "30%"
+        "header": "CRIT CHANCE:",
+        "value": "30",
+        "generated": true
       },
       {
         "key": "crit_multiplier",
-        "header": "CRITICAL DAMAGE:",
-        "value": "235%"
+        "header": "CRIT MULTIPLIER:",
+        "value": "235",
+        "generated": true
       }
     ],
     "mc": false,
@@ -5344,7 +5674,7 @@
     "dname": "Skull Basher",
     "qual": "epic",
     "cost": 2700,
-    "desc": "Passive: Bash - Grants each attack a chance to stun the target for 1.4 seconds and deal 85 bonus damage, based on whether the equipped hero is ranged or melee.",
+    "desc": "Passive: Bash Grants melee heroes a 25% chance on hit to stun the target for 1.4 seconds and deal 85 bonus damage.  Bash chance for ranged heroes is 10%.",
     "notes": "Does not stack with other sources of Bash, however it will stack with Mini-Bash (e.g. Monkey King Bar).\nThe following heroes cannot trigger Bash on this item: Spirit Breaker, Faceless Void, Slardar, and Troll Warlord.",
     "attrib": [
       {
@@ -5361,18 +5691,21 @@
       },
       {
         "key": "bash_chance_melee",
-        "header": "BASH MELEE CHANCE:",
-        "value": "25%"
+        "header": "BASH CHANCE MELEE:",
+        "value": "25",
+        "generated": true
       },
       {
         "key": "bash_chance_ranged",
-        "header": "BASH RANGED CHANCE:",
-        "value": "10%"
+        "header": "BASH CHANCE RANGED:",
+        "value": "10",
+        "generated": true
       },
       {
         "key": "bash_duration",
-        "header": "BASH STUN DURATION:",
-        "value": "1.4"
+        "header": "BASH DURATION:",
+        "value": "1.4",
+        "generated": true
       },
       {
         "key": "bash_cooldown",
@@ -5382,8 +5715,9 @@
       },
       {
         "key": "bonus_chance_damage",
-        "header": "BASH BONUS DAMAGE:",
-        "value": "85"
+        "header": "BONUS CHANCE DAMAGE:",
+        "value": "85",
+        "generated": true
       }
     ],
     "mc": false,
@@ -5401,7 +5735,7 @@
     "dname": "Battle Fury",
     "qual": "epic",
     "cost": 4500,
-    "desc": "Active: Chop Tree/Ward - Destroy a target tree or ward. Chop cast range is increased when targetting wards.\nPassive: Quell - Increases attack damage against non-hero units, based on whether the equipped hero is ranged or melee. Does not provide bonus damage against Roshan.\nPassive: Cleave - Deals a percent of attack damage in an area around the target. Ranged units cannot Cleave.",
+    "desc": "Active: Chop Tree/Ward Destroy a target tree or ward.Tree Cast Range: 350Ward Cast Range: 450 \nPassive: Quell Increases attack damage against non-hero units by 60% for melee heroes, and 25% for ranged. \nPassive: Cleave Deals 40% of attack damage in a cone up to 570 around the target. (Melee Only)",
     "notes": "Cleave damage is reduced by armor type but not by armor value.\nCleave damage goes through spell immunity.\nIf multiple sources of Cleave are present, each Cleave's damage is applied separately.\nChop can be used to destroy Techies' Remote Mines.",
     "attrib": [
       {
@@ -5424,18 +5758,21 @@
       },
       {
         "key": "cleave_damage_percent",
-        "header": "CLEAVE DAMAGE:",
-        "value": "40%"
+        "header": "CLEAVE DAMAGE PERCENT:",
+        "value": "40",
+        "generated": true
       },
       {
         "key": "quelling_bonus",
-        "header": "QUELL MELEE DAMAGE:",
-        "value": "160%"
+        "header": "QUELLING BONUS:",
+        "value": "160",
+        "generated": true
       },
       {
         "key": "quelling_bonus_ranged",
-        "header": "QUELL RANGED DAMAGE:",
-        "value": "125%"
+        "header": "QUELLING BONUS RANGED:",
+        "value": "125",
+        "generated": true
       },
       {
         "key": "cleave_starting_width",
@@ -5457,13 +5794,27 @@
       },
       {
         "key": "cast_range_tooltip",
-        "header": "CHOP TREE CAST RANGE:",
-        "value": "350"
+        "header": "CAST RANGE TOOLTIP:",
+        "value": "350",
+        "generated": true
       },
       {
         "key": "cast_range_ward",
-        "header": "CHOP WARD CAST RANGE:",
-        "value": "450"
+        "header": "CAST RANGE WARD:",
+        "value": "450",
+        "generated": true
+      },
+      {
+        "key": "tooltip_quelling_bonus",
+        "header": "TOOLTIP QUELLING BONUS:",
+        "value": "60",
+        "generated": true
+      },
+      {
+        "key": "tooltip_quelling_bonus_ranged",
+        "header": "TOOLTIP QUELLING BONUS RANGED:",
+        "value": "25",
+        "generated": true
       }
     ],
     "mc": false,
@@ -5497,8 +5848,8 @@
     "dname": "Manta Style",
     "qual": "epic",
     "cost": 5000,
-    "desc": "Active: Mirror Image - Creates 2 images of your hero that last 20 seconds. Melee heroes have a 30 second cooldown on this ability, while for Ranged heroes the cooldown is 45 seconds.\n\nMelee images deal 33% damage and take 350% damage, while Ranged images deal 28% and take 400% damage.\n\nYasha-based movement speed bonuses from multiple items do not stack.\n\nDISPEL TYPE: Basic Dispel",
-    "notes": "Has a 0.1 second cast time during which you are invulnerable.\nMany effects are removed upon using Manta.",
+    "desc": "Active: Mirror ImageCreates 2 images of your hero that last 20 seconds. Melee images deal 33% damage and take 350% damage, while Ranged images deal 28% and take 400% damage. Cooldown increased by 15 seconds on ranged heroes.Dispel Type: Basic Dispel",
+    "notes": "Has a 0.1 second cast time during which you are invulnerable.\nMany effects are removed upon using Manta.\nYasha based movement speed bonuses from multiple items do not stack.",
     "attrib": [
       {
         "key": "bonus_strength",
@@ -5532,13 +5883,15 @@
       },
       {
         "key": "images_count",
-        "header": "NUMBER OF IMAGES:",
-        "value": "2"
+        "header": "IMAGES COUNT:",
+        "value": "2",
+        "generated": true
       },
       {
         "key": "tooltip_illusion_duration",
-        "header": "IMAGE DURATION:",
-        "value": "20"
+        "header": "TOOLTIP ILLUSION DURATION:",
+        "value": "20",
+        "generated": true
       },
       {
         "key": "images_do_damage_percent_melee",
@@ -5548,8 +5901,9 @@
       },
       {
         "key": "tooltip_damage_outgoing_melee",
-        "header": "MELEE IMAGE DAMAGE:",
-        "value": "33%"
+        "header": "TOOLTIP DAMAGE OUTGOING MELEE:",
+        "value": "33",
+        "generated": true
       },
       {
         "key": "images_take_damage_percent_melee",
@@ -5559,8 +5913,9 @@
       },
       {
         "key": "tooltip_damage_incoming_melee_total_pct",
-        "header": "MELEE IMAGE DAMAGE TAKEN:",
-        "value": "350%"
+        "header": "TOOLTIP DAMAGE INCOMING MELEE TOTAL PCT:",
+        "value": "350",
+        "generated": true
       },
       {
         "key": "images_do_damage_percent_ranged",
@@ -5570,8 +5925,9 @@
       },
       {
         "key": "tooltip_damage_outgoing_ranged",
-        "header": "RANGED IMAGE DAMAGE:",
-        "value": "28%"
+        "header": "TOOLTIP DAMAGE OUTGOING RANGED:",
+        "value": "28",
+        "generated": true
       },
       {
         "key": "images_take_damage_percent_ranged",
@@ -5581,8 +5937,9 @@
       },
       {
         "key": "tooltip_damage_incoming_ranged_total_pct",
-        "header": "RANGED IMAGE DAMAGE TAKEN:",
-        "value": "400%"
+        "header": "TOOLTIP DAMAGE INCOMING RANGED TOTAL PCT:",
+        "value": "400",
+        "generated": true
       },
       {
         "key": "cooldown_melee",
@@ -5606,6 +5963,12 @@
         "key": "vision_radius",
         "header": "VISION RADIUS:",
         "value": "1000",
+        "generated": true
+      },
+      {
+        "key": "tooltip_ranged_cooldown_increase",
+        "header": "TOOLTIP RANGED COOLDOWN INCREASE:",
+        "value": "15",
         "generated": true
       }
     ],
@@ -5638,7 +6001,7 @@
     "dname": "Crystalys",
     "qual": "epic",
     "cost": 2120,
-    "desc": "Passive: Critical Strike - Grants each attack a chance to deal additional damage. Critical Strike does not work against buildings.",
+    "desc": "Passive: Critical StrikeGrants each attack a 20% chance to deal %crit_multiplier%% damage. Critical Strike does not work against buildings.",
     "notes": "",
     "attrib": [
       {
@@ -5649,13 +6012,15 @@
       },
       {
         "key": "crit_chance",
-        "header": "CRITICAL CHANCE:",
-        "value": "20%"
+        "header": "CRIT CHANCE:",
+        "value": "20",
+        "generated": true
       },
       {
         "key": "crit_multiplier",
-        "header": "CRITICAL DAMAGE:",
-        "value": "175%"
+        "header": "CRIT MULTIPLIER:",
+        "value": "175",
+        "generated": true
       }
     ],
     "mc": false,
@@ -5673,8 +6038,8 @@
     "dname": "Dragon Lance",
     "qual": "artifact",
     "cost": 1900,
-    "desc": "Passive: Increases attack range of ranged heroes by 140.",
-    "notes": "Multiple instances do not stack.",
+    "desc": "Passive: Dragon's Reach Increases attack range of ranged heroes by 140.",
+    "notes": "Passive does not stack.",
     "attrib": [
       {
         "key": "bonus_agility",
@@ -5690,9 +6055,9 @@
       },
       {
         "key": "base_attack_range",
-        "header": "+",
+        "header": "BASE ATTACK RANGE:",
         "value": "140",
-        "footer": "Attack Range (Ranged Only)"
+        "generated": true
       }
     ],
     "mc": false,
@@ -5725,7 +6090,7 @@
     "dname": "Armlet of Mordiggian",
     "qual": "epic",
     "cost": 2370,
-    "desc": "Active: Toggle Unholy Strength - When active, Unholy Strength grants +31 damage, +25 strength and +4 armor, but drains 45 health per second.  You cannot die from the health drain when Unholy Strength is activated, nor from the strength loss when Unholy Strength is deactivated.",
+    "desc": "Toggle: Unholy StrengthWhen active, Unholy Strength grants +31 damage, +25 strength and +4 armor, but drains 45 health per second. You cannot die from the health drain when Unholy Strength is activated, nor from the strength loss when Unholy Strength is deactivated.",
     "notes": "The strength change will affect both maximum and current HP, but you cannot die from the change.\nThe strength change occurs over 0.6 seconds.\nActivating or deactiving Unholy Strength does not interrupt channeling.",
     "attrib": [
       {
@@ -5811,7 +6176,7 @@
     "dname": "Shadow Blade",
     "qual": "epic",
     "cost": 2700,
-    "desc": "Active: Shadow Walk - Makes you invisible until the duration ends, or until you attack or cast a spell.  While Shadow Walk is active, you move 20% faster and can move through units.  If attacking to end the invisibility, you gain 175 bonus damage on that attack.  Lasts 14 seconds.",
+    "desc": "Active: Shadow WalkMakes you invisible for 14 seconds, or until you attack or cast a spell.  While Shadow Walk is active, you move 20% faster and can move through units.  If attacking to end the invisibility, you gain 175 bonus damage on that attack.",
     "notes": "Has a 0.3 second fade time.\nIf the invisibility ends without attacking, the bonus damage is lost.",
     "attrib": [
       {
@@ -5828,8 +6193,9 @@
       },
       {
         "key": "windwalk_duration",
-        "header": "SHADOW WALK DURATION:",
-        "value": "14"
+        "header": "WINDWALK DURATION:",
+        "value": "14",
+        "generated": true
       },
       {
         "key": "windwalk_movement_speed",
@@ -5845,8 +6211,9 @@
       },
       {
         "key": "windwalk_bonus_damage",
-        "header": "SHADOW WALK DAMAGE:",
-        "value": "175"
+        "header": "WINDWALK BONUS DAMAGE:",
+        "value": "175",
+        "generated": true
       }
     ],
     "mc": 75,
@@ -5878,7 +6245,7 @@
     "dname": "Silver Edge",
     "qual": "epic",
     "cost": 5550,
-    "desc": "Active: Shadow Walk - Makes you invisible until the duration ends, or until you attack or cast a spell.  While invisible, you move 20% faster and can move through units.  Attacking to end the invisibility will deal 175 bonus damage to the target, disable their passive abilities, and reduce their damage output.",
+    "desc": "Active: Shadow WalkMakes you invisible for 14 seconds, or until you attack or cast a spell.  While invisible, you move 20% faster and can move through units.  Attacking to end the invisibility will deal 175 bonus damage to the target, and for 5 seconds, disable their passive abilities, and reduce their damage output by -50%.",
     "notes": "Backstab cannot miss.\nBackstab does not pierce spell immunity.",
     "attrib": [
       {
@@ -5901,8 +6268,9 @@
       },
       {
         "key": "windwalk_duration",
-        "header": "SHADOW WALK DURATION:",
-        "value": "14"
+        "header": "WINDWALK DURATION:",
+        "value": "14",
+        "generated": true
       },
       {
         "key": "windwalk_movement_speed",
@@ -5918,18 +6286,21 @@
       },
       {
         "key": "windwalk_bonus_damage",
-        "header": "BONUS ATTACK DAMAGE:",
-        "value": "175"
+        "header": "WINDWALK BONUS DAMAGE:",
+        "value": "175",
+        "generated": true
       },
       {
         "key": "backstab_reduction",
-        "header": "ENEMY DAMAGE REDUCTION:",
-        "value": "-50%"
+        "header": "BACKSTAB REDUCTION:",
+        "value": "-50",
+        "generated": true
       },
       {
         "key": "backstab_duration",
-        "header": "REDUCTION DURATION:",
-        "value": "5"
+        "header": "BACKSTAB DURATION:",
+        "value": "5",
+        "generated": true
       }
     ],
     "mc": 75,
@@ -5947,8 +6318,8 @@
     "dname": "Sange and Yasha",
     "qual": "artifact",
     "cost": 3900,
-    "desc": "Passive: Greater Maim - Each attack has a chance to slow the enemy's movement and attack speed for 5 seconds.\n\nYasha-based movement speed bonuses from multiple items do not stack.",
-    "notes": "",
+    "desc": "Passive: Greater MaimEach attack has a 40% chance to reduce enemy hero movement speed by -26% and attack speed by -26 when used by a melee hero. Reduces enemy hero movement by -13% and attack speed by -13 when used by a ranged hero. Effect lasts 5 seconds.",
+    "notes": "Yasha-based movement speed bonuses from multiple items do not stack.",
     "attrib": [
       {
         "key": "bonus_damage",
@@ -5983,32 +6354,38 @@
       {
         "key": "maim_chance",
         "header": "MAIM CHANCE:",
-        "value": "40%"
+        "value": "40",
+        "generated": true
       },
       {
         "key": "maim_slow_movement",
-        "header": "MOVEMENT SLOW MELEE:",
-        "value": "-26%"
+        "header": "MAIM SLOW MOVEMENT:",
+        "value": "-26",
+        "generated": true
       },
       {
         "key": "maim_slow_attack",
-        "header": "ATTACK SLOW MELEE:",
-        "value": "-26"
+        "header": "MAIM SLOW ATTACK:",
+        "value": "-26",
+        "generated": true
       },
       {
         "key": "maim_slow_movement_range",
-        "header": "MOVEMENT SLOW RANGED:",
-        "value": "-13%"
+        "header": "MAIM SLOW MOVEMENT RANGE:",
+        "value": "-13",
+        "generated": true
       },
       {
         "key": "maim_slow_attack_range",
-        "header": "ATTACK SLOW RANGED:",
-        "value": "-13"
+        "header": "MAIM SLOW ATTACK RANGE:",
+        "value": "-13",
+        "generated": true
       },
       {
         "key": "maim_duration",
         "header": "MAIM DURATION:",
-        "value": "5"
+        "value": "5",
+        "generated": true
       }
     ],
     "mc": false,
@@ -6026,7 +6403,7 @@
     "dname": "Satanic",
     "qual": "artifact",
     "cost": 5700,
-    "desc": "Active: Unholy Rage - Increases Lifesteal percentage to 200% for 4.5 seconds.\nPassive: Lifesteal - Heals the attacker for a percentage of attack damage dealt.\n\nSatanic is a Unique Attack Modifier, and does not stack with other Unique Attack Modifiers.",
+    "desc": "Active: Unholy RageIncreases Lifesteal percentage to 200% for 4.5 seconds. \nPassive: LifestealHeals the attacker for 25% of attack damage dealt. Satanic is a Unique Attack Modifier, and does not stack with other Unique Attack Modifiers.",
     "notes": "",
     "attrib": [
       {
@@ -6043,8 +6420,9 @@
       },
       {
         "key": "lifesteal_percent",
-        "header": "LIFESTEAL:",
-        "value": "25%"
+        "header": "LIFESTEAL PERCENT:",
+        "value": "25",
+        "generated": true
       },
       {
         "key": "unholy_lifesteal_percent",
@@ -6054,13 +6432,15 @@
       },
       {
         "key": "unholy_lifesteal_total_tooltip",
-        "header": "UNHOLY RAGE LIFESTEAL:",
-        "value": "200%"
+        "header": "UNHOLY LIFESTEAL TOTAL TOOLTIP:",
+        "value": "200",
+        "generated": true
       },
       {
         "key": "unholy_duration",
-        "header": "UNHOLY RAGE DURATION:",
-        "value": "4.5"
+        "header": "UNHOLY DURATION:",
+        "value": "4.5",
+        "generated": true
       }
     ],
     "mc": false,
@@ -6093,7 +6473,7 @@
     "dname": "Mjollnir",
     "qual": "artifact",
     "cost": 5700,
-    "desc": "Active: Static Charge - Places a charged shield on a target unit which has a 20% chance to release a shocking bolt at a nearby attacker and 4 additional enemies.\nPassive: Chain Lightning - Grants a chance on attack to release a bolt of electricity that leaps between 12 targets, dealing 150 magical damage to each.",
+    "desc": "Active: Static ChargePlaces a charged shield on a target unit for 15 seconds which has a 20% chance to release a 200 damage shocking bolt at a nearby attacker and 4 additional enemies.Range: 800\nPassive: Chain LightningGrants a 25 chance on attack to release a bolt of electricity that leaps between 12 targets within a 900 radius, dealing 150 magical damage to each.",
     "notes": "Static Charge cannot trigger more than once per second.\nStatic Charge's shock deals magical damage centered on hero with the Static Charge. Static Charge's targets cannot be more than 900 range away.\nStatic Charge procs will not bounce to heroes that are invisible or hidden by Fog of War.",
     "attrib": [
       {
@@ -6111,12 +6491,14 @@
       {
         "key": "static_duration",
         "header": "STATIC DURATION:",
-        "value": "15"
+        "value": "15",
+        "generated": true
       },
       {
         "key": "static_chance",
         "header": "STATIC CHANCE:",
-        "value": "20%"
+        "value": "20",
+        "generated": true
       },
       {
         "key": "static_strikes",
@@ -6127,7 +6509,8 @@
       {
         "key": "static_damage",
         "header": "STATIC DAMAGE:",
-        "value": "200"
+        "value": "200",
+        "generated": true
       },
       {
         "key": "static_primary_radius",
@@ -6143,8 +6526,9 @@
       },
       {
         "key": "static_radius",
-        "header": "STATIC RELEASE RADIUS:",
-        "value": "900"
+        "header": "STATIC RADIUS:",
+        "value": "900",
+        "generated": true
       },
       {
         "key": "static_cooldown",
@@ -6155,22 +6539,26 @@
       {
         "key": "chain_chance",
         "header": "CHAIN CHANCE:",
-        "value": "25%"
+        "value": "25",
+        "generated": true
       },
       {
         "key": "chain_damage",
         "header": "CHAIN DAMAGE:",
-        "value": "150"
+        "value": "150",
+        "generated": true
       },
       {
         "key": "chain_strikes",
-        "header": "CHAIN TARGETS:",
-        "value": "12"
+        "header": "CHAIN STRIKES:",
+        "value": "12",
+        "generated": true
       },
       {
         "key": "chain_radius",
-        "header": "CHAIN LEAP RADIUS:",
-        "value": "900"
+        "header": "CHAIN RADIUS:",
+        "value": "900",
+        "generated": true
       },
       {
         "key": "chain_delay",
@@ -6182,6 +6570,12 @@
         "key": "chain_cooldown",
         "header": "CHAIN COOLDOWN:",
         "value": "0.2",
+        "generated": true
+      },
+      {
+        "key": "tooltip_range",
+        "header": "TOOLTIP RANGE:",
+        "value": "800",
         "generated": true
       }
     ],
@@ -6200,7 +6594,7 @@
     "dname": "Eye of Skadi",
     "qual": "artifact",
     "cost": 5775,
-    "desc": "Passive: Cold Attack - Each attack slows the movement and attack speed of the target. The duration of the slow is based on whether the equipped hero is melee or ranged.",
+    "desc": "Passive: Cold Attack Attacks lower enemy attack speed by -45 and movement speed by -35%. Lasts 5 seconds when used by melee heroes, and 2.5 seconds when used by ranged.",
     "notes": "Lasts 5 seconds with melee Eye of Skadi, 2.5 seconds with ranged Eye of Skadi.",
     "attrib": [
       {
@@ -6223,23 +6617,27 @@
       },
       {
         "key": "cold_movement_speed",
-        "header": "COLD MOVE SLOW:",
-        "value": "-35%"
+        "header": "COLD MOVEMENT SPEED:",
+        "value": "-35",
+        "generated": true
       },
       {
         "key": "cold_attack_speed",
-        "header": "COLD ATTACK SLOW:",
-        "value": "-45"
+        "header": "COLD ATTACK SPEED:",
+        "value": "-45",
+        "generated": true
       },
       {
         "key": "cold_duration_melee",
-        "header": "COLD MELEE DURATION:",
-        "value": "5"
+        "header": "COLD DURATION MELEE:",
+        "value": "5",
+        "generated": true
       },
       {
         "key": "cold_duration_ranged",
-        "header": "COLD RANGED DURATION:",
-        "value": "2.5"
+        "header": "COLD DURATION RANGED:",
+        "value": "2.5",
+        "generated": true
       }
     ],
     "mc": false,
@@ -6273,7 +6671,7 @@
     "dname": "Sange",
     "qual": "artifact",
     "cost": 1950,
-    "desc": "Passive: Lesser Maim - Each attack has a chance to slow the enemy's movement and attack speed for 5 seconds.",
+    "desc": "Passive: Lesser MaimEach attack has a 30% chance to reduce enemy hero movement speed by -20% and attack speed by -20 when used by a melee hero. Reduces enemy hero movement by -10% and attack speed by -10 when used by a ranged hero. Effect lasts 5 seconds.",
     "notes": "",
     "attrib": [
       {
@@ -6291,32 +6689,38 @@
       {
         "key": "maim_chance",
         "header": "MAIM CHANCE:",
-        "value": "30%"
+        "value": "30",
+        "generated": true
       },
       {
         "key": "maim_slow_movement",
-        "header": "MOVEMENT SLOW MELEE:",
-        "value": "-20%"
+        "header": "MAIM SLOW MOVEMENT:",
+        "value": "-20",
+        "generated": true
       },
       {
         "key": "maim_slow_attack",
-        "header": "ATTACK SLOW MELEE:",
-        "value": "-20"
+        "header": "MAIM SLOW ATTACK:",
+        "value": "-20",
+        "generated": true
       },
       {
         "key": "maim_slow_movement_range",
-        "header": "MOVEMENT SLOW RANGED:",
-        "value": "-10%"
+        "header": "MAIM SLOW MOVEMENT RANGE:",
+        "value": "-10",
+        "generated": true
       },
       {
         "key": "maim_slow_attack_range",
-        "header": "ATTACK SLOW RANGED:",
-        "value": "-10"
+        "header": "MAIM SLOW ATTACK RANGE:",
+        "value": "-10",
+        "generated": true
       },
       {
         "key": "maim_duration",
         "header": "MAIM DURATION:",
-        "value": "5"
+        "value": "5",
+        "generated": true
       }
     ],
     "mc": false,
@@ -6334,7 +6738,7 @@
     "dname": "Helm of the Dominator",
     "qual": "artifact",
     "cost": 2025,
-    "desc": "Active: Dominate - Take control of a non-hero, non-ancient target unit and sets its movement speed to 425. If a dominated creep's base health is naturally below the health minimum, its base health will be raised to the health minimum.",
+    "desc": "Active: DominateTakes control of one neutral, non-ancient target unit and sets its movement speed to 425 and max health to a minimum of 1500.Dominated units with a max health of greater than 1500 retain their original max health.  Dominated unit's bounty is set to %tooltip_bounty% gold.Range: 700\nPassive: Dominator Aura Increases nearby allies' attack speed by 10 and health regen by 10.Radius: 900",
     "notes": "Cannot dominate more than one unit at a time.  If a new unit is dominated, the old one will die.\nSelling or upgrading Helm of the Dominator will cause dominated units to die.",
     "attrib": [
       {
@@ -6351,13 +6755,15 @@
       },
       {
         "key": "attack_speed_aura",
-        "header": "AURA ATTACK SPEED:",
-        "value": "10"
+        "header": "ATTACK SPEED AURA:",
+        "value": "10",
+        "generated": true
       },
       {
         "key": "hp_regen_aura",
-        "header": "AURA HEALTH REGEN:",
-        "value": "10"
+        "header": "HP REGEN AURA:",
+        "value": "10",
+        "generated": true
       },
       {
         "key": "aura_radius",
@@ -6367,13 +6773,27 @@
       },
       {
         "key": "health_min",
-        "header": "DOMINATED HEALTH MINIMUM:",
-        "value": "1400"
+        "header": "HEALTH MIN:",
+        "value": "1500",
+        "generated": true
       },
       {
         "key": "speed_base",
-        "header": "CREEP MOVEMENT SPEED:",
-        "value": "425"
+        "header": "SPEED BASE:",
+        "value": "425",
+        "generated": true
+      },
+      {
+        "key": "tooltip_range",
+        "header": "TOOLTIP RANGE:",
+        "value": "700",
+        "generated": true
+      },
+      {
+        "key": "tootip_bounty",
+        "header": "TOOTIP BOUNTY:",
+        "value": "125",
+        "generated": true
       }
     ],
     "mc": false,
@@ -6406,7 +6826,7 @@
     "dname": "Maelstrom",
     "qual": "artifact",
     "cost": 2800,
-    "desc": "Passive: Chain Lightning - Grants a chance on attack to release a bolt of electricity that leaps between 4 targets, dealing 120 magical damage to each.",
+    "desc": "Passive: Chain LightningGrants a 25% chance on attack to release a bolt of electricity that leaps between 4 targets within a 900 radius, dealing 120 magical damage to each.",
     "notes": "",
     "attrib": [
       {
@@ -6424,22 +6844,26 @@
       {
         "key": "chain_chance",
         "header": "CHAIN CHANCE:",
-        "value": "25%"
+        "value": "25",
+        "generated": true
       },
       {
         "key": "chain_damage",
         "header": "CHAIN DAMAGE:",
-        "value": "120"
+        "value": "120",
+        "generated": true
       },
       {
         "key": "chain_strikes",
-        "header": "CHAIN TARGETS:",
-        "value": "4"
+        "header": "CHAIN STRIKES:",
+        "value": "4",
+        "generated": true
       },
       {
         "key": "chain_radius",
-        "header": "CHAIN LEAP RADIUS:",
-        "value": "900"
+        "header": "CHAIN RADIUS:",
+        "value": "900",
+        "generated": true
       },
       {
         "key": "chain_delay",
@@ -6469,7 +6893,7 @@
     "dname": "Desolator",
     "qual": "artifact",
     "cost": 3500,
-    "desc": "Passive: Corruption - Your attacks reduce target's armor for 15 seconds.",
+    "desc": "Passive: Corruption Your attacks reduce the target's armor by -7 for 15 seconds.",
     "notes": "Armor reduction works on buildings.",
     "attrib": [
       {
@@ -6480,8 +6904,9 @@
       },
       {
         "key": "corruption_armor",
-        "header": "ARMOR REDUCTION:",
-        "value": "-7"
+        "header": "CORRUPTION ARMOR:",
+        "value": "-7",
+        "generated": true
       },
       {
         "key": "corruption_duration",
@@ -6520,8 +6945,8 @@
     "dname": "Yasha",
     "qual": "artifact",
     "cost": 1950,
-    "desc": "Yasha-based movement speed bonuses from multiple items do not stack.",
-    "notes": "",
+    "desc": "",
+    "notes": "Yasha-based movement speed bonuses from multiple items do not stack.",
     "attrib": [
       {
         "key": "bonus_agility",
@@ -6557,7 +6982,7 @@
     "dname": "Mask of Madness",
     "qual": "artifact",
     "cost": 1975,
-    "desc": "Active: Berserk - Gives 110 attack speed and 17% movement speed, but reduces your armor by 5 and silences you.  Lasts 8 seconds.\nPassive: Lifesteal - Heals the attacker for a percentage of attack damage dealt.\n\nMask of Madness is a Unique Attack Modifier, and does not stack with other Unique Attack Modifiers.",
+    "desc": "Active: BerserkGives 110 attack speed and 17% movement speed, but reduces your armor by 5 and silences you.  Lasts 8 seconds.\nPassive: LifestealHeals the attacker for 15% of attack damage dealt. Mask of Madness is a Unique Attack Modifier, and does not stack with other Unique Attack Modifiers.",
     "notes": "",
     "attrib": [
       {
@@ -6574,28 +6999,33 @@
       },
       {
         "key": "lifesteal_percent",
-        "header": "LIFESTEAL:",
-        "value": "15%"
+        "header": "LIFESTEAL PERCENT:",
+        "value": "15",
+        "generated": true
       },
       {
         "key": "berserk_bonus_attack_speed",
-        "header": "BERSERK ATTACK SPEED:",
-        "value": "110"
+        "header": "BERSERK BONUS ATTACK SPEED:",
+        "value": "110",
+        "generated": true
       },
       {
         "key": "berserk_bonus_movement_speed",
-        "header": "BERSERK MOVE SPEED:",
-        "value": "17%"
+        "header": "BERSERK BONUS MOVEMENT SPEED:",
+        "value": "17",
+        "generated": true
       },
       {
         "key": "berserk_armor_reduction",
         "header": "BERSERK ARMOR REDUCTION:",
-        "value": "5"
+        "value": "5",
+        "generated": true
       },
       {
         "key": "berserk_duration",
         "header": "BERSERK DURATION:",
-        "value": "8"
+        "value": "8",
+        "generated": true
       }
     ],
     "mc": 25,
@@ -6627,8 +7057,8 @@
     "dname": "Diffusal Blade",
     "qual": "artifact",
     "cost": 3150,
-    "desc": "Active: Purge - Targets an enemy, removing buffs from the target and slowing it for 4 seconds.\nPassive: Manabreak - Each attack burns 50 mana from the target, and deals 0.8 physical damage per burned mana. Burns 16 mana per attack from melee illusions and 8 mana per attack from ranged illusions. Does not stack with other manabreak abilities.\n\nUpgradable.\n\nDISPEL TYPE: Basic Dispel",
-    "notes": "",
+    "desc": "Active: Purge Targets an enemy, removing buffs from the target and slowing it for 4 seconds.Range: 600\nPassive: ManabreakEach attack burns 50 mana from the target, and deals 0.8 physical damage per burned mana. Burns 16 mana per attack from melee illusions and 8 mana per attack from ranged illusions. Dispel Type: Basic Dispel",
+    "notes": "Does not stack with other manabreak abilities.",
     "attrib": [
       {
         "key": "bonus_agility",
@@ -6693,7 +7123,8 @@
       {
         "key": "purge_slow_duration",
         "header": "PURGE SLOW DURATION:",
-        "value": "4"
+        "value": "4",
+        "generated": true
       },
       {
         "key": "damage_per_burn",
@@ -6703,8 +7134,9 @@
       },
       {
         "key": "cast_range_tooltip",
-        "header": "PURGE CAST RANGE:",
-        "value": "600"
+        "header": "CAST RANGE TOOLTIP:",
+        "value": "600",
+        "generated": true
       }
     ],
     "mc": false,
@@ -6723,8 +7155,8 @@
     "dname": "Diffusal Blade",
     "qual": "artifact",
     "cost": 3850,
-    "desc": "Active: Purge - Targets an enemy, removing buffs from the target and slowing it for 4 seconds.\nPassive: Manabreak - Each attack burns 50 mana from the target, and deals 0.8 physical damage per burned mana. Burns 16 mana per attack from melee illusions and 8 mana per attack from ranged illusions. Does not stack with other manabreak abilities.\n\nDISPEL TYPE: Basic Dispel",
-    "notes": "",
+    "desc": "Active: Purge Targets an enemy, removing buffs from the target and slowing it for 4 seconds.Range: 600\nPassive: ManabreakEach attack burns 50 mana from the target, and deals 0.8 physical damage per burned mana. Burns 16 mana per attack from melee illusions and 8 mana per attack from ranged illusions. Dispel Type: Basic Dispel",
+    "notes": "Does not stack with other manabreak abilities.",
     "attrib": [
       {
         "key": "bonus_agility",
@@ -6789,7 +7221,8 @@
       {
         "key": "purge_slow_duration",
         "header": "PURGE SLOW DURATION:",
-        "value": "4"
+        "value": "4",
+        "generated": true
       },
       {
         "key": "damage_per_burn",
@@ -6799,8 +7232,9 @@
       },
       {
         "key": "cast_range_tooltip",
-        "header": "PURGE CAST RANGE:",
-        "value": "600"
+        "header": "CAST RANGE TOOLTIP:",
+        "value": "600",
+        "generated": true
       }
     ],
     "mc": false,
@@ -6818,8 +7252,8 @@
     "dname": "Ethereal Blade",
     "qual": "epic",
     "cost": 4700,
-    "desc": "Active: Ether Blast - Launches a projectile which converts the target to ethereal form, increasing any incoming magic damage they take, while rendering them immune to physical damage and unable to attack.  Can be cast on self.  If the target is an enemy, it is also slowed, and takes 2x your primary attribute + 75 as magical damage.\nUsing a Town Portal Scroll or Boots of Travel will not dispel Ethereal Form.",
-    "notes": "Shares cooldown with Ghost Scepter.\nEthereal units take 40% bonus magic damage.\nLasts an extra second on Self or Allied cast.",
+    "desc": "Active: Ether BlastConverts the target unit to ethereal form, rendering them immune to physical damage, but unable to attack and -40% more vulnerable to magic damage.  Lasts for %duration_ally% seconds on allies and %duration% seconds on enemies.  Enemy targets are also slowed by %blast_movement_slow%%, and take %blast_agility_multiplier%x your primary attribute + %blast_damage_base% as magical damage.Range: %tooltip_range%",
+    "notes": "Shares cooldown with Ghost Scepter.\nEthereal units take 40% bonus magic damage.\nLasts an extra second on Self or Allied cast.\nUsing a Town Portal Scroll or Boots of Travel will not dispel Ethereal Form.",
     "attrib": [
       {
         "key": "bonus_agility",
@@ -6841,13 +7275,15 @@
       },
       {
         "key": "blast_movement_slow",
-        "header": "BLAST ENEMY MOVE SLOW:",
-        "value": "-80%"
+        "header": "BLAST MOVEMENT SLOW:",
+        "value": "-80",
+        "generated": true
       },
       {
         "key": "duration",
-        "header": "BLAST ENEMY DURATION:",
-        "value": "3"
+        "header": "DURATION:",
+        "value": "3",
+        "generated": true
       },
       {
         "key": "blast_agility_multiplier",
@@ -6863,18 +7299,26 @@
       },
       {
         "key": "duration_ally",
-        "header": "BLAST ALLY/SELF DURATION:",
-        "value": "4"
+        "header": "DURATION ALLY:",
+        "value": "4",
+        "generated": true
       },
       {
         "key": "ethereal_damage_bonus",
-        "header": "INCREASED MAGIC DAMAGE:",
-        "value": "-40%"
+        "header": "ETHEREAL DAMAGE BONUS:",
+        "value": "-40",
+        "generated": true
       },
       {
         "key": "projectile_speed",
         "header": "PROJECTILE SPEED:",
         "value": "1200",
+        "generated": true
+      },
+      {
+        "key": "tooltip_range",
+        "header": "TOOLTIP RANGE:",
+        "value": "800",
         "generated": true
       }
     ],
@@ -6893,8 +7337,8 @@
     "dname": "Soul Ring",
     "qual": "common",
     "cost": 750,
-    "desc": "Active: Sacrifice - Consume 150 health to temporarily gain 150 mana.  Lasts 10 seconds.",
-    "notes": "If the mana gain cannot fit in your mana pool, it creates a buffer of mana that will be used before your mana pool.  If this mana is not used before the duration ends, the extra mana is lost.",
+    "desc": "Active: Sacrifice Consume 150 health to temporarily gain 150 mana.  Lasts 10 seconds.If the mana gained cannot fit in your mana pool, it creates a buffer of mana that will be used before your mana pool.",
+    "notes": "If this mana is not used before the duration ends, the extra mana is lost.",
     "attrib": [
       {
         "key": "health_regen",
@@ -6922,8 +7366,9 @@
       },
       {
         "key": "duration",
-        "header": "SACRIFICE DURATION:",
-        "value": "10"
+        "header": "DURATION:",
+        "value": "10",
+        "generated": true
       }
     ],
     "mc": false,
@@ -6942,7 +7387,7 @@
     "dname": "Arcane Boots",
     "qual": "rare",
     "cost": 1300,
-    "desc": "Active: Replenish Mana - Restores mana to all allies in a 900 area around the hero.\n\nFlat movement speed bonuses from multiple pairs of boots do not stack.",
+    "desc": "Active: Replenish ManaRestores 135 mana to all nearby allies.Flat movement speed bonuses from multiple pairs of boots do not stack.Radius: 900",
     "notes": "Does not work on Meepo clones.",
     "attrib": [
       {
@@ -6959,13 +7404,15 @@
       },
       {
         "key": "replenish_amount",
-        "header": "REPLENISH MANA RESTORE:",
-        "value": "135"
+        "header": "REPLENISH AMOUNT:",
+        "value": "135",
+        "generated": true
       },
       {
         "key": "replenish_radius",
-        "header": "REPLENISH CAST RADIUS:",
-        "value": "900"
+        "header": "REPLENISH RADIUS:",
+        "value": "900",
+        "generated": true
       }
     ],
     "mc": false,
@@ -6983,7 +7430,7 @@
     "dname": "Octarine Core",
     "qual": "rare",
     "cost": 5900,
-    "desc": "Passive: Cooldown Reduction - Reduces the cooldown time of all spells and items by 25%.\nPassive: Spell Lifesteal - A percentage of damage caused by spells is returned to the caster as health.",
+    "desc": "Passive: Cooldown ReductionReduces the cooldown time of all spells and items by 25%.\nPassive: Spell Lifesteal25% of spell damage dealt to enemy heroes is returned to the caster as health, regardless of spell damage type.  Lifesteal reduced to 5% against creeps.",
     "notes": "",
     "attrib": [
       {
@@ -7006,18 +7453,21 @@
       },
       {
         "key": "bonus_cooldown",
-        "header": "COOLDOWN REDUCTION:",
-        "value": "25%"
+        "header": "BONUS COOLDOWN:",
+        "value": "25",
+        "generated": true
       },
       {
         "key": "hero_lifesteal",
-        "header": "HERO SPELL LIFESTEAL:",
-        "value": "25%"
+        "header": "HERO LIFESTEAL:",
+        "value": "25",
+        "generated": true
       },
       {
         "key": "creep_lifesteal",
-        "header": "CREEP SPELL LIFESTEAL:",
-        "value": "5%"
+        "header": "CREEP LIFESTEAL:",
+        "value": "5",
+        "generated": true
       },
       {
         "key": "active_duration",
@@ -7041,28 +7491,32 @@
     "dname": "Orb of Venom",
     "qual": "component",
     "cost": 275,
-    "desc": "Passive: Poison Attack - Poisons the target, dealing damage over time and slowing movement based on whether the equipped hero is melee or ranged.",
+    "desc": "Passive: Poison AttackPoisons the target, dealing 5 damage per second for 3 seconds and slowing movement -12% if the equipped hero is melee, or -4% if they are ranged.",
     "notes": "",
     "attrib": [
       {
         "key": "poison_damage",
-        "header": "POISON DAMAGE PER SECOND:",
-        "value": "5"
+        "header": "POISON DAMAGE:",
+        "value": "5",
+        "generated": true
       },
       {
         "key": "poison_movement_speed_melee",
-        "header": "POISON MELEE SLOW:",
-        "value": "-12%"
+        "header": "POISON MOVEMENT SPEED MELEE:",
+        "value": "-12",
+        "generated": true
       },
       {
         "key": "poison_movement_speed_range",
-        "header": "POISON RANGED SLOW:",
-        "value": "-4%"
+        "header": "POISON MOVEMENT SPEED RANGE:",
+        "value": "-4",
+        "generated": true
       },
       {
         "key": "poison_duration",
         "header": "POISON DURATION:",
-        "value": "3"
+        "value": "3",
+        "generated": true
       }
     ],
     "mc": false,
@@ -7077,18 +7531,20 @@
     "dname": "Blight Stone",
     "qual": "component",
     "cost": 300,
-    "desc": "Passive: Your attacks reduce target's armor for 8 seconds.",
+    "desc": "Passive: Lesser Corruption Your attacks reduce the target's armor by -2 for 8 seconds.",
     "notes": "",
     "attrib": [
       {
         "key": "corruption_armor",
-        "header": "ARMOR REDUCTION:",
-        "value": "-2"
+        "header": "CORRUPTION ARMOR:",
+        "value": "-2",
+        "generated": true
       },
       {
         "key": "corruption_duration",
-        "header": "DURATION:",
-        "value": "8"
+        "header": "CORRUPTION DURATION:",
+        "value": "8",
+        "generated": true
       }
     ],
     "mc": false,
@@ -7117,8 +7573,8 @@
     "dname": "Drum of Endurance",
     "qual": "rare",
     "cost": 1640,
-    "desc": "Active: Endurance - Gives bonus +25 attack speed and +13% movement speed to allies in a 900 radius.\nPassive: Swiftness Aura - Gives bonus movement speed to allies in a 900 radius.\n\nMultiple instances of Swiftness Aura do not stack.",
-    "notes": "Re-purchasing the Drum of Endurance recipe will refresh its charges.",
+    "desc": "Active: Endurance Gives +25 attack speed and +13% movement speed to nearby allies for 6 seconds. Radius: 900\nPassive: Swiftness AuraGives 20 movement speed to nearby allies. Radius: 900",
+    "notes": "Re-purchasing the Drum of Endurance recipe will refresh its charges.\nMultiple instances of Swiftness Aura do not stack.",
     "attrib": [
       {
         "key": "bonus_int",
@@ -7152,28 +7608,33 @@
       },
       {
         "key": "bonus_aura_movement_speed",
-        "header": "AURA MOVE SPEED:",
-        "value": "20"
+        "header": "BONUS AURA MOVEMENT SPEED:",
+        "value": "20",
+        "generated": true
       },
       {
         "key": "bonus_attack_speed_pct",
-        "header": "ENDURANCE ATTACK SPEED:",
-        "value": "25"
+        "header": "BONUS ATTACK SPEED PCT:",
+        "value": "25",
+        "generated": true
       },
       {
         "key": "bonus_movement_speed_pct",
-        "header": "ENDURANCE MOVE SPEED:",
-        "value": "13%"
+        "header": "BONUS MOVEMENT SPEED PCT:",
+        "value": "13",
+        "generated": true
       },
       {
         "key": "duration",
-        "header": "ENDURANCE DURATION:",
-        "value": "6"
+        "header": "DURATION:",
+        "value": "6",
+        "generated": true
       },
       {
         "key": "radius",
-        "header": "AURA/ENDURANCE RADIUS:",
-        "value": "900"
+        "header": "RADIUS:",
+        "value": "900",
+        "generated": true
       }
     ],
     "mc": false,
@@ -7192,7 +7653,7 @@
     "dname": "Medallion of Courage",
     "qual": "rare",
     "cost": 1175,
-    "desc": "Active: Valor - If cast on an ally, increases their armor while reducing the caster's. If cast on an enemy, reduces the armor of both the enemy and the caster. Cannot target magic immune enemies.",
+    "desc": "Active: Valor If cast on an ally, grants them the 7 armor, and removing it from the caster. If cast on an enemy, reduces 7 armor on both the enemy and the caster. Cannot target magic immune enemies.Range: 1000",
     "notes": "",
     "attrib": [
       {
@@ -7209,18 +7670,21 @@
       },
       {
         "key": "armor_reduction",
-        "header": "VALOR ARMOR REDUCTION:",
-        "value": "-7"
+        "header": "ARMOR REDUCTION:",
+        "value": "-7",
+        "generated": true
       },
       {
         "key": "duration",
-        "header": "VALOR DURATION:",
-        "value": "7"
+        "header": "DURATION:",
+        "value": "7",
+        "generated": true
       },
       {
         "key": "valor_cast_range_tooltip",
-        "header": "VALOR CAST RANGE:",
-        "value": "1000"
+        "header": "VALOR CAST RANGE TOOLTIP:",
+        "value": "1000",
+        "generated": true
       }
     ],
     "mc": false,
@@ -7239,7 +7703,7 @@
     "dname": "Solar Crest",
     "qual": "rare",
     "cost": 2625,
-    "desc": "Active: Shine - Temporarily removes the armor and evasion from Solar Crest. When cast on an ally it grants them 10 armor and 20% evasion. When cast on an enemy, it removes 10 of their armor and grants your allies to have 35% Accuracy on the target. Cannot target magic immune enemies.",
+    "desc": "Active: ShineWhen cast on an ally, grants them 10 armor and 20% evasion. When cast on an enemy, removes 10 of their armor and grants your allies 35% Accuracy on the target. Removes the armor and evasion from the caster when used.  Cannot target magic immune enemies.Range: 1000",
     "notes": "",
     "attrib": [
       {
@@ -7262,18 +7726,21 @@
       },
       {
         "key": "truestrike_chance",
-        "header": "ACCURACY:",
-        "value": "35%"
+        "header": "TRUESTRIKE CHANCE:",
+        "value": "35",
+        "generated": true
       },
       {
         "key": "duration",
-        "header": "SHINE DURATION:",
-        "value": "7"
+        "header": "DURATION:",
+        "value": "7",
+        "generated": true
       },
       {
         "key": "valor_cast_range_tooltip",
-        "header": "SHINE CAST RANGE:",
-        "value": "1000"
+        "header": "VALOR CAST RANGE TOOLTIP:",
+        "value": "1000",
+        "generated": true
       }
     ],
     "mc": false,
@@ -7291,7 +7758,7 @@
     "dname": "Smoke of Deceit",
     "qual": "consumable",
     "cost": 50,
-    "desc": "Use: Upon activation, the user and all nearby allied player-controlled units gain invisibility and bonus movement speed for a brief time.  Minimap icons will also be hidden.  Attacking, or moving within 1025 range of an enemy hero or tower, will break the invisibility.",
+    "desc": "Use: Disguise The user and all nearby allied player-controlled units in a 1025 radius gain Deceit and 15% bonus movement speed for 35 seconds. Attacking, or moving within 1025 range of an enemy hero or tower, will break the invisibility. Disguise grants invisibility that is immune to True Sight.",
     "notes": "",
     "attrib": [
       {
@@ -7308,13 +7775,15 @@
       },
       {
         "key": "bonus_movement_speed",
-        "header": "BONUS SPEED:",
-        "value": "15%"
+        "header": "BONUS MOVEMENT SPEED:",
+        "value": "15",
+        "generated": true
       },
       {
         "key": "duration",
         "header": "DURATION:",
-        "value": "35"
+        "value": "35",
+        "generated": true
       }
     ],
     "mc": false,
@@ -7329,23 +7798,26 @@
     "dname": "Tome of Knowledge",
     "qual": "consumable",
     "cost": 150,
-    "desc": "Use: Grants you 500 experience plus 135 per tome consumed by your team.",
+    "desc": "Use: EnlightenGrants you 500 experience plus 135 per tome consumed by your team.Tomes Used By Team: 0",
     "notes": "",
     "attrib": [
       {
         "key": "xp_bonus",
-        "header": "XP BONUS BASE:",
-        "value": "500"
+        "header": "XP BONUS:",
+        "value": "500",
+        "generated": true
       },
       {
         "key": "xp_per_use",
-        "header": "XP BONUS PER USE:",
-        "value": "135"
+        "header": "XP PER USE:",
+        "value": "135",
+        "generated": true
       },
       {
         "key": "customval_team_tomes_used",
-        "header": "Tomes Used by Owner's Team:",
-        "value": "0"
+        "header": "CUSTOMVAL TEAM TOMES USED:",
+        "value": "0",
+        "generated": true
       }
     ],
     "mc": false,
@@ -7358,7 +7830,7 @@
     "id": 189,
     "img": "/apps/dota2/images/items/recipe_lg.png?3",
     "dname": "Veil of Discord Recipe",
-    "cost": 400,
+    "cost": 500,
     "desc": "",
     "notes": "",
     "attrib": [],
@@ -7373,9 +7845,9 @@
     "img": "/apps/dota2/images/items/veil_of_discord_lg.png?3",
     "dname": "Veil of Discord",
     "qual": "rare",
-    "cost": 2240,
-    "desc": "Active: Magic Weakness - Emits a weakening blast that increases the magic damage enemies take. Lasts 16 seconds.",
-    "notes": "Can be dispelled.",
+    "cost": 2340,
+    "desc": "Active: Magic Weakness Cast a 600 radius blast that decreases enemy magic resistance by -25%.Range: 1000Duration: 16 seconds.",
+    "notes": "",
     "attrib": [
       {
         "key": "bonus_health_regen",
@@ -7415,18 +7887,27 @@
       },
       {
         "key": "resist_debuff",
-        "header": "INCREASED MAGIC DAMAGE:",
-        "value": "-25%"
+        "header": "RESIST DEBUFF:",
+        "value": "-25",
+        "generated": true
       },
       {
         "key": "debuff_radius",
-        "header": "MAGIC WEAKNESS RADIUS:",
-        "value": "600"
+        "header": "DEBUFF RADIUS:",
+        "value": "600",
+        "generated": true
       },
       {
         "key": "resist_debuff_duration",
-        "header": "MAGIC WEAKNESS DURATION:",
-        "value": "16"
+        "header": "RESIST DEBUFF DURATION:",
+        "value": "16",
+        "generated": true
+      },
+      {
+        "key": "tooltip_range",
+        "header": "TOOLTIP RANGE:",
+        "value": "1000",
+        "generated": true
       }
     ],
     "mc": 50,
@@ -7459,7 +7940,7 @@
     "dname": "Guardian Greaves",
     "qual": "rare",
     "cost": 5375,
-    "desc": "Active: Mend - Restores 250 health and 160 mana to nearby allies, and removes most negative buffs from the caster.\nPassive: Guardian Aura - Provides nearby allies with 4 health regeneration and 2 bonus armor. If an allied hero's health falls below 20%, they receive 15 health regeneration and 15 armor.\n\nDISPEL TYPE: Basic Dispel",
+    "desc": "Active: MendRestores 250 health and 160 mana to nearby allies, and removes most negative effects from the caster.Radius: 900Dispel Type: Basic Dispel\nPassive: Guardian Aura Provides nearby allies with 4 health regeneration and 2 bonus armor. If an allied hero's health falls below 20%, they receive 15 health regeneration and 15 armor.\nFlat movement speed bonuses from multiple pairs of boots do not stack.",
     "notes": "The aura boost only applies to heroes.",
     "attrib": [
       {
@@ -7489,27 +7970,32 @@
       {
         "key": "aura_health_regen",
         "header": "AURA HEALTH REGEN:",
-        "value": "4"
+        "value": "4",
+        "generated": true
       },
       {
         "key": "aura_armor",
         "header": "AURA ARMOR:",
-        "value": "2"
+        "value": "2",
+        "generated": true
       },
       {
         "key": "aura_health_regen_bonus",
-        "header": "AURA BOOST HEALTH REGEN:",
-        "value": "15"
+        "header": "AURA HEALTH REGEN BONUS:",
+        "value": "15",
+        "generated": true
       },
       {
         "key": "aura_armor_bonus",
-        "header": "AURA BOOST ARMOR:",
-        "value": "15"
+        "header": "AURA ARMOR BONUS:",
+        "value": "15",
+        "generated": true
       },
       {
         "key": "aura_bonus_threshold",
-        "header": "AURA BOOST THRESHOLD:",
-        "value": "20%"
+        "header": "AURA BONUS THRESHOLD:",
+        "value": "20",
+        "generated": true
       },
       {
         "key": "aura_radius",
@@ -7519,18 +8005,21 @@
       },
       {
         "key": "replenish_health",
-        "header": "MEND HEAL:",
-        "value": "250"
+        "header": "REPLENISH HEALTH:",
+        "value": "250",
+        "generated": true
       },
       {
         "key": "replenish_mana",
-        "header": "MEND MANA RESTORE:",
-        "value": "160"
+        "header": "REPLENISH MANA:",
+        "value": "160",
+        "generated": true
       },
       {
         "key": "replenish_radius",
-        "header": "AURA/MEND RADIUS:",
-        "value": "900"
+        "header": "REPLENISH RADIUS:",
+        "value": "900",
+        "generated": true
       }
     ],
     "mc": false,
@@ -7562,7 +8051,7 @@
     "dname": "Rod of Atos",
     "qual": "rare",
     "cost": 3080,
-    "desc": "Active: Cripple - Roots the target for 2 seconds.",
+    "desc": "Active: CrippleRoots the target for 2 seconds.Range: 1150",
     "notes": "",
     "attrib": [
       {
@@ -7591,8 +8080,15 @@
       },
       {
         "key": "duration",
-        "header": "CRIPPLE DURATION:",
-        "value": "2"
+        "header": "DURATION:",
+        "value": "2",
+        "generated": true
+      },
+      {
+        "key": "tooltip_range",
+        "header": "TOOLTIP RANGE:",
+        "value": "1150",
+        "generated": true
       }
     ],
     "mc": 50,
@@ -7625,28 +8121,32 @@
     "dname": "Iron Talon",
     "qual": "common",
     "cost": 500,
-    "desc": "Active: Targets a non-player enemy unit to remove 40% of its current HP.\nPassive: Quell - Increases attack damage against non-hero units, based on whether the equipped hero is ranged or melee.",
+    "desc": "Active: ChopTargets a non-player enemy unit to remove 40% of its current HP.If cast on a tree or ward, instantly destroys it.Unit Range: 350Tree Range: 350Ward Range: 450\nPassive: QuellIncreases attack damage against non-hero units by 24 for melee heroes, and 7 for ranged.",
     "notes": "Has a 4 second cooldown on Trees.\nCannot target ancients.",
     "attrib": [
       {
         "key": "damage_bonus",
-        "header": "QUELL MELEE DAMAGE:",
-        "value": "24"
+        "header": "DAMAGE BONUS:",
+        "value": "24",
+        "generated": true
       },
       {
         "key": "damage_bonus_ranged",
-        "header": "QUELL RANGED DAMAGE:",
-        "value": "7"
+        "header": "DAMAGE BONUS RANGED:",
+        "value": "7",
+        "generated": true
       },
       {
         "key": "quelling_range_tooltip",
-        "header": "CAST RANGE:",
-        "value": "350"
+        "header": "QUELLING RANGE TOOLTIP:",
+        "value": "350",
+        "generated": true
       },
       {
         "key": "cast_range_ward",
-        "header": "CAST RANGE ON WARDS:",
-        "value": "450"
+        "header": "CAST RANGE WARD:",
+        "value": "450",
+        "generated": true
       },
       {
         "key": "creep_damage_pct",
@@ -7664,6 +8164,12 @@
         "key": "alternative_cooldown",
         "header": "ALTERNATIVE COOLDOWN:",
         "value": "4",
+        "generated": true
+      },
+      {
+        "key": "tooltip_range",
+        "header": "TOOLTIP RANGE:",
+        "value": "350",
         "generated": true
       }
     ],
@@ -7696,8 +8202,8 @@
     "dname": "Abyssal Blade",
     "qual": "epic",
     "cost": 6400,
-    "desc": "Active: Overwhelm - Stuns a target enemy unit for 2 seconds. Pierces Spell Immunity.\nPassive: Bash - Grants each attack a chance to stun the target for 1.4 seconds and deal 85 bonus damage, based on whether the equipped hero is ranged or melee.\nPassive: Damage Block - Grants the wielder a 50% chance to block damage from incoming attacks based on whether the equipped hero is melee or ranged.",
-    "notes": "The stun is melee range.\nDoesn't stack with other bashes.\nThe following heroes cannot trigger Bash on this item: Spirit Breaker, Faceless Void, Slardar, and Troll Warlord.",
+    "desc": "Active: Overwhelm Stuns a target enemy unit for 2 seconds. Pierces Spell Immunity.\nPassive: Bash Grants melee heroes a 25% chance on hit to stun the target for %bash_duration% seconds and deal %bonus_chance_damage% bonus damage.  Bash chance for ranged heroes is %bash_chance_ranged%. \nPassive: Damage BlockGrants a 50% chance to block 70 damage on melee heroes, and 35 damage on ranged.",
+    "notes": "The stun is melee range.\nDoes not stack with other bashes.\nThe following heroes cannot trigger Bash on this item: Spirit Breaker, Faceless Void, Slardar, and Troll Warlord.",
     "attrib": [
       {
         "key": "bonus_health",
@@ -7714,17 +8220,20 @@
       {
         "key": "block_damage_melee",
         "header": "BLOCK DAMAGE MELEE:",
-        "value": "70"
+        "value": "70",
+        "generated": true
       },
       {
         "key": "block_damage_ranged",
         "header": "BLOCK DAMAGE RANGED:",
-        "value": "35"
+        "value": "35",
+        "generated": true
       },
       {
         "key": "block_chance",
         "header": "BLOCK CHANCE:",
-        "value": "50"
+        "value": "50",
+        "generated": true
       },
       {
         "key": "bonus_damage",
@@ -7740,23 +8249,27 @@
       },
       {
         "key": "bash_chance_melee",
-        "header": "BASH MELEE CHANCE:",
-        "value": "25%"
+        "header": "BASH CHANCE MELEE:",
+        "value": "25",
+        "generated": true
       },
       {
         "key": "bash_chance_ranged",
-        "header": "BASH RANGED CHANCE:",
-        "value": "10%"
+        "header": "BASH CHANCE RANGED:",
+        "value": "10",
+        "generated": true
       },
       {
         "key": "bash_duration",
-        "header": "BASH STUN DURATION:",
-        "value": "1.4"
+        "header": "BASH DURATION:",
+        "value": "1.4",
+        "generated": true
       },
       {
         "key": "bonus_chance_damage",
-        "header": "BASH BONUS DAMAGE:",
-        "value": "85"
+        "header": "BONUS CHANCE DAMAGE:",
+        "value": "85",
+        "generated": true
       },
       {
         "key": "bash_cooldown",
@@ -7766,8 +8279,9 @@
       },
       {
         "key": "stun_duration",
-        "header": "OVERWHELM STUN DURATION:",
-        "value": "2"
+        "header": "STUN DURATION:",
+        "value": "2",
+        "generated": true
       }
     ],
     "mc": 75,
@@ -7785,7 +8299,7 @@
     "dname": "Heaven's Halberd",
     "qual": "artifact",
     "cost": 3400,
-    "desc": "Active: Disarm - Prevents a target from attacking. Lasts 3 seconds on melee targets, and 5.5 seconds on ranged targets.\nPassive: Lesser Maim - Each attack has a chance to slow the enemy's movement and attack speed for 5 seconds.\n\nStacks diminishingly with other sources of Evasion.",
+    "desc": "Active: DisarmPrevents a target from attacking for 3 seconds on melee targets, and 5 seconds on ranged targets.Range: 600 \nPassive: Lesser MaimEach attack has a 35% chance to reduce enemy hero movement speed by -20% and attack speed by -20 if the user is melee. Reduces enemy hero movement by -10% and attack speed by -10 if the user is ranged. Effect lasts 5 seconds.",
     "notes": "",
     "attrib": [
       {
@@ -7809,47 +8323,56 @@
       {
         "key": "maim_chance",
         "header": "MAIM CHANCE:",
-        "value": "35%"
+        "value": "35",
+        "generated": true
       },
       {
         "key": "maim_slow_movement",
-        "header": "MOVEMENT SLOW MELEE:",
-        "value": "-20%"
+        "header": "MAIM SLOW MOVEMENT:",
+        "value": "-20",
+        "generated": true
       },
       {
         "key": "maim_slow_attack",
-        "header": "ATTACK SLOW MELEE:",
-        "value": "-20"
+        "header": "MAIM SLOW ATTACK:",
+        "value": "-20",
+        "generated": true
       },
       {
         "key": "maim_slow_movement_range",
-        "header": "MOVEMENT SLOW RANGED:",
-        "value": "-10%"
+        "header": "MAIM SLOW MOVEMENT RANGE:",
+        "value": "-10",
+        "generated": true
       },
       {
         "key": "maim_slow_attack_range",
-        "header": "ATTACK SLOW RANGED:",
-        "value": "-10"
+        "header": "MAIM SLOW ATTACK RANGE:",
+        "value": "-10",
+        "generated": true
       },
       {
         "key": "maim_duration",
         "header": "MAIM DURATION:",
-        "value": "5"
+        "value": "5",
+        "generated": true
       },
       {
         "key": "disarm_range",
-        "header": "DISARM RANGED DURATION:",
-        "value": "5.5"
+        "header": "DISARM RANGE:",
+        "value": "5",
+        "generated": true
       },
       {
         "key": "disarm_melee",
-        "header": "DISARM MELEE DURATION:",
-        "value": "3"
+        "header": "DISARM MELEE:",
+        "value": "3",
+        "generated": true
       },
       {
         "key": "disarm_cast_range_tooltip",
-        "header": "DISARM CAST RANGE:",
-        "value": "600"
+        "header": "DISARM CAST RANGE TOOLTIP:",
+        "value": "600",
+        "generated": true
       }
     ],
     "mc": 100,
@@ -7867,8 +8390,8 @@
     "dname": "Ring of Aquila",
     "qual": "rare",
     "cost": 985,
-    "desc": "Passive: Aquila Aura - Grants mana regeneration and armor in a 900 area of effect.\nActive: Toggle whether the aura affects other non-hero units.\n\nMultiple instances of Aquila Aura do not stack.",
-    "notes": "Does not stack with armor auras from Ring of Basilius, Ring of Aquila, or Vladmir's Offering.",
+    "desc": "Passive: Aquila AuraGrants 0.65 mana regeneration and 2 armor to nearby allies.Radius: 900\nToggle: Aura Deactivate to stop affecting non-hero units.",
+    "notes": "Does not stack with armor auras from Ring of Basilius, Ring of Aquila, or Vladmir's Offering.\nMultiple instances of Aquila Aura do not stack.",
     "attrib": [
       {
         "key": "bonus_damage",
@@ -7909,12 +8432,14 @@
       {
         "key": "aura_mana_regen",
         "header": "AURA MANA REGEN:",
-        "value": "0.65"
+        "value": "0.65",
+        "generated": true
       },
       {
         "key": "aura_bonus_armor",
         "header": "AURA BONUS ARMOR:",
-        "value": "2"
+        "value": "2",
+        "generated": true
       }
     ],
     "mc": false,
@@ -7932,7 +8457,7 @@
     "dname": "Tranquil Boots",
     "qual": "rare",
     "cost": 975,
-    "desc": "Passive: Break - Whenever you attack or are attacked, the health regeneration and 25 Movement Speed are lost for 13 seconds.",
+    "desc": "Passive: Break Whenever you attack or are attacked, the bonus %bonus_health_health% HP regen is lost and the movement speed bonus is reduced to 65 for 13 seconds.Flat movement speed bonuses from multiple pairs of boots do not stack.",
     "notes": "",
     "attrib": [
       {
@@ -8011,7 +8536,7 @@
     "img": "/apps/dota2/images/items/shadow_amulet_lg.png?3",
     "dname": "Shadow Amulet",
     "cost": 1300,
-    "desc": "Active: Fade - Grants invisibility to you or a target allied hero after a 1.25 second fade time. Moving breaks the invisibility. There is no cooldown when using this item on yourself.",
+    "desc": "Active: FadeGrants invisibility to you or a target allied hero as long as target unit remains still.  Has a 1.25 second fade time, and breaks instantly upon moving. There is no cooldown when using this item on yourself.",
     "notes": "",
     "attrib": [
       {
@@ -8023,7 +8548,8 @@
       {
         "key": "fade_time",
         "header": "FADE TIME:",
-        "value": "1.25"
+        "value": "1.25",
+        "generated": true
       }
     ],
     "mc": false,
@@ -8038,7 +8564,7 @@
     "dname": "Glimmer Cape",
     "qual": "rare",
     "cost": 1850,
-    "desc": "Active: Glimmer - After a 0.6 second delay, grants invisibility and 45% magic resistance to you or a target allied unit. Can be cast while channelling.",
+    "desc": "Active: Glimmer After a 0.6 second delay, grants invisibility and 45% magic resistance to you or a target allied unit for 5 seconds.Range: 800Can be cast while channelling.",
     "notes": "",
     "attrib": [
       {
@@ -8055,18 +8581,27 @@
       },
       {
         "key": "fade_delay",
-        "header": "GLIMMER FADE TIME:",
-        "value": "0.6"
+        "header": "FADE DELAY:",
+        "value": "0.6",
+        "generated": true
       },
       {
         "key": "active_magical_armor",
-        "header": "GLIMMER MAGIC RESISTANCE:",
-        "value": "45%"
+        "header": "ACTIVE MAGICAL ARMOR:",
+        "value": "45",
+        "generated": true
       },
       {
         "key": "duration",
-        "header": "GLIMMER DURATION:",
-        "value": "5"
+        "header": "DURATION:",
+        "value": "5",
+        "generated": true
+      },
+      {
+        "key": "tooltip_range",
+        "header": "TOOLTIP RANGE:",
+        "value": "800",
+        "generated": true
       }
     ],
     "mc": 90,
