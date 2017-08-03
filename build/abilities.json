@@ -1542,10 +1542,10 @@
     "bkbpierce": "No",
     "desc": "Lina channels the breath of a dragon, sending out a wave of fire that scorches every enemy in its path.",
     "dmg": [
-      "110",
-      "180",
-      "250",
-      "320"
+      "85",
+      "160",
+      "235",
+      "310"
     ],
     "attrib": [
       {
@@ -4466,10 +4466,10 @@
     ],
     "mc": "25",
     "cd": [
-      "32",
-      "26",
-      "20",
-      "14"
+      "34",
+      "28",
+      "22",
+      "16"
     ],
     "img": "/apps/dota2/images/abilities/sven_warcry_md.png"
   },
@@ -4853,7 +4853,7 @@
     "behavior": "Passive",
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Sand King's attacks inject a venom that causes enemy units to violently explode when its timer expires, or when the unit dies, damaging and slowing nearby enemies. Deals 50% damage if its timer expires.",
+    "desc": "Sand King's attacks inject a venom that causes enemy units to violently explode when its timer expires, or when the unit dies, damaging and slowing nearby enemies. Deals less damage if its timer expires.",
     "attrib": [
       {
         "key": "caustic_finale_radius",
@@ -4871,20 +4871,14 @@
         ]
       },
       {
-        "key": "caustic_finale_damage_expire_tooltip",
+        "key": "caustic_finale_damage_expire",
         "header": "EXPLODE TIMER DAMAGE:",
         "value": [
-          "45",
-          "65",
-          "85",
+          "20",
+          "50",
+          "80",
           "110"
         ]
-      },
-      {
-        "key": "caustic_finale_damage_reduced",
-        "header": "CAUSTIC FINALE DAMAGE REDUCED:",
-        "value": "50",
-        "generated": true
       },
       {
         "key": "caustic_finale_duration",
@@ -5136,10 +5130,10 @@
         "key": "damage",
         "header": "DAMAGE:",
         "value": [
-          "40",
-          "50",
           "60",
-          "70"
+          "80",
+          "100",
+          "120"
         ]
       },
       {
@@ -6084,10 +6078,10 @@
       }
     ],
     "mc": [
-      "115",
-      "125",
       "140",
-      "150"
+      "145",
+      "150",
+      "155"
     ],
     "cd": [
       "9",
@@ -6365,9 +6359,9 @@
         "key": "enemy_movespeed_bonus_pct",
         "header": "ENEMY SLOW:",
         "value": [
-          "-8%",
-          "-16%",
-          "-24%",
+          "-15%",
+          "-20%",
+          "-25%",
           "-30%"
         ]
       },
@@ -6387,7 +6381,7 @@
         ]
       }
     ],
-    "mc": "75",
+    "mc": "60",
     "cd": "12",
     "img": "/apps/dota2/images/abilities/windrunner_windrun_md.png"
   },
@@ -6587,7 +6581,7 @@
       {
         "key": "jump_range",
         "header": "BOUNCE RANGE:",
-        "value": "575"
+        "value": "600"
       },
       {
         "key": "slow_movement_speed",
@@ -7873,8 +7867,8 @@
       "500"
     ],
     "cd": [
-      "100",
-      "85",
+      "90",
+      "80",
       "70"
     ],
     "img": "/apps/dota2/images/abilities/necrolyte_reapers_scythe_md.png"
@@ -10013,8 +10007,8 @@
       "250"
     ],
     "cd": [
-      "60",
-      "45",
+      "50",
+      "40",
       "30"
     ],
     "img": "/apps/dota2/images/abilities/viper_viper_strike_md.png"
@@ -10704,7 +10698,7 @@
         "value": "0.7"
       }
     ],
-    "mc": "75",
+    "mc": "100",
     "cd": [
       "32",
       "28",
@@ -10890,9 +10884,9 @@
         "key": "damage",
         "header": "DAMAGE:",
         "value": [
-          "100",
-          "200",
-          "300"
+          "75",
+          "175",
+          "275"
         ]
       },
       {
@@ -11098,8 +11092,8 @@
         "header": "DAMAGE:",
         "value": [
           "100",
-          "130",
-          "160"
+          "140",
+          "180"
         ]
       },
       {
@@ -11248,7 +11242,7 @@
       {
         "key": "treant_damage_bonus",
         "header": "TREANT DAMAGE BONUS:",
-        "value": "32",
+        "value": "36",
         "generated": true
       },
       {
@@ -11737,10 +11731,10 @@
     ],
     "mc": "50",
     "cd": [
+      "13",
       "12",
       "11",
-      "10",
-      "9"
+      "10"
     ],
     "img": "/apps/dota2/images/abilities/dark_seer_surge_md.png"
   },
@@ -11835,8 +11829,8 @@
         "key": "slow_duration",
         "header": "SLOW DURATION:",
         "value": [
-          "0.6",
-          "0.8",
+          "0.5",
+          "0.75",
           "1"
         ]
       }
@@ -12217,12 +12211,7 @@
         ]
       }
     ],
-    "mc": [
-      "125",
-      "140",
-      "155",
-      "170"
-    ],
+    "mc": "125",
     "cd": "45",
     "img": "/apps/dota2/images/abilities/enchantress_natures_attendants_md.png"
   },
@@ -12500,7 +12489,7 @@
       {
         "key": "duration_day",
         "header": "DAY DURATION:",
-        "value": "2"
+        "value": "1.25"
       },
       {
         "key": "duration_night",
@@ -12600,12 +12589,12 @@
         "generated": true
       }
     ],
-    "mc": "50",
+    "mc": "80",
     "cd": [
+      "30",
       "26",
       "22",
-      "18",
-      "14"
+      "18"
     ],
     "img": "/apps/dota2/images/abilities/night_stalker_hunter_in_the_night_md.png"
   },
@@ -13775,8 +13764,8 @@
     ],
     "mc": "225",
     "cd": [
-      "90",
-      "75",
+      "100",
+      "80",
       "60"
     ],
     "img": "/apps/dota2/images/abilities/batrider_flaming_lasso_md.png"
@@ -13924,9 +13913,9 @@
         "key": "heal_amount",
         "header": "HEAL:",
         "value": [
-          "200",
-          "300",
-          "400"
+          "225",
+          "350",
+          "475"
         ]
       },
       {
@@ -14299,7 +14288,7 @@
       {
         "key": "duration",
         "header": "DURATION:",
-        "value": "15"
+        "value": "16"
       },
       {
         "key": "damage",
@@ -15488,7 +15477,7 @@
   "alchemist_goblins_greed": {
     "dname": "Greevil's Greed",
     "behavior": "Passive",
-    "desc": "Alchemist synthesizes additional gold from his enemies and bounty runes. With each kill, Alchemist earns base bonus gold and extra bonus gold. If Alchemist kills another unit which yields gold within the next 30 seconds, an additional instance of Extra Bonus Gold is added to the total. Additionally, causes bounty runes to yield 2 times their normal gold.",
+    "desc": "Alchemist synthesizes additional gold from his enemies and bounty runes. With each kill, Alchemist earns base bonus gold and extra bonus gold. If Alchemist kills another unit which yields gold within the next 30 seconds, an additional instance of Extra Bonus Gold is added to the total. Additionally, causes bounty runes to yield 2.5 times their normal gold.",
     "attrib": [
       {
         "key": "duration",
@@ -15518,7 +15507,7 @@
       {
         "key": "bounty_multiplier_tooltip",
         "header": "BOUNTY RUNE MULTIPLIER:",
-        "value": "2"
+        "value": "2.5"
       }
     ],
     "img": "/apps/dota2/images/abilities/alchemist_goblins_greed_md.png"
@@ -15576,8 +15565,8 @@
         "key": "bonus_movespeed",
         "header": "BONUS MOVE SPEED:",
         "value": [
-          "30",
           "40",
+          "50",
           "60"
         ]
       }
@@ -16053,7 +16042,7 @@
       }
     ],
     "mc": "60",
-    "cd": "15",
+    "cd": "17",
     "img": "/apps/dota2/images/abilities/invoker_alacrity_md.png"
   },
   "invoker_chaos_meteor": {
@@ -17071,10 +17060,10 @@
     ],
     "mc": "40",
     "cd": [
+      "60",
       "55",
       "50",
-      "45",
-      "40"
+      "45"
     ],
     "img": "/apps/dota2/images/abilities/lycan_howl_md.png"
   },
@@ -18127,7 +18116,7 @@
       }
     ],
     "mc": "200",
-    "cd": "50",
+    "cd": "40",
     "img": "/apps/dota2/images/abilities/shadow_demon_demonic_purge_md.png"
   },
   "chaos_knight_chaos_bolt": {
@@ -18480,7 +18469,7 @@
   "treant_natures_guise": {
     "dname": "Nature's Guise",
     "behavior": "Passive",
-    "desc": "Turns you invis when you are within 265 radius of a tree for 7,6,5,3 seconds. Increasing movement speed by 10,18,26,34 while invisible, and causes a 0.4,1,1.6,2.2 seconds disarming root when attacking out of invisibility.",
+    "desc": "Turns Treant invisible when he is within 265 radius of a tree for 7,6,5,3 seconds. Increases movement speed by 10,18,26,34 while invisible, and causes a 0.4,1,1.6,2.2 seconds disarming root when attacking out of invisibility.",
     "attrib": [
       {
         "key": "fade_time",
@@ -18515,7 +18504,7 @@
       },
       {
         "key": "bash_duration",
-        "header": "BASH DURATION:",
+        "header": "ROOT DURATION:",
         "value": [
           "0.4",
           "1",
@@ -20743,7 +20732,7 @@
         "value": "64"
       }
     ],
-    "mc": "100",
+    "mc": "90",
     "cd": [
       "16",
       "14",
@@ -20930,11 +20919,7 @@
       }
     ],
     "mc": "150",
-    "cd": [
-      "160",
-      "145",
-      "130"
-    ],
+    "cd": "130",
     "img": "/apps/dota2/images/abilities/visage_summon_familiars_md.png"
   },
   "visage_summon_familiars_stone_form": {
@@ -21009,9 +20994,9 @@
         "key": "movespeed",
         "header": "MOVEMENT SPEED BONUS:",
         "value": [
-          "13%",
+          "10%",
+          "12%",
           "14%",
-          "15%",
           "16%"
         ]
       },
@@ -21142,12 +21127,7 @@
         "value": "19"
       }
     ],
-    "mc": [
-      "120",
-      "130",
-      "140",
-      "150"
-    ],
+    "mc": "150",
     "cd": [
       "20",
       "18",
@@ -21606,7 +21586,7 @@
       {
         "key": "stone_form_scepter_increment",
         "header": "SCEPTER DURATION BOUNCE INCREASE:",
-        "value": "0.2"
+        "value": "0.3"
       }
     ],
     "mc": [
@@ -21704,7 +21684,7 @@
       "No Target",
       "Instant Cast"
     ],
-    "desc": "While active, Troll Warlord swaps from using ranged to melee attacks. Melee attacks have a chance to bash, dealing bonus damage and stunning the target. Berserker's Rage also grants additional health, movement speed, armor, and increased attack speed.\n\nWhirling Axes has different functionality while Berserker's Rage is active.",
+    "desc": "While active, Troll Warlord swaps from using ranged to melee attacks. Melee attacks have a chance to bash, dealing bonus damage and stunning the target. Berserker's Rage also grants additional movement speed, armor, and increased attack speed.\n\nWhirling Axes has different functionality while Berserker's Rage is active.",
     "attrib": [
       {
         "key": "bonus_hp",
@@ -22019,7 +21999,7 @@
     "behavior": "Passive",
     "dmg_type": "Physical",
     "bkbpierce": "Yes",
-    "desc": "Centaur applies an aura to nearby allied units. Causes allies to counters every attack, damaging the attacker based on a percentage of Centaur's strength.",
+    "desc": "Centaur applies an aura to nearby allied units. Causes allies to counter every attack, damaging the attacker based on a percentage of Centaur's strength.",
     "attrib": [
       {
         "key": "return_damage",
@@ -22899,8 +22879,8 @@
         "key": "base_damage",
         "header": "BASE DAMAGE:",
         "value": [
-          "20",
-          "25",
+          "18",
+          "24",
           "30"
         ],
         "generated": true
@@ -22909,8 +22889,8 @@
         "key": "damage_per_stack",
         "header": "DAMAGE PER STACK:",
         "value": [
-          "20",
-          "25",
+          "18",
+          "24",
           "30"
         ]
       },
@@ -23363,10 +23343,10 @@
         "key": "damage",
         "header": "DAMAGE:",
         "value": [
-          "60",
-          "120",
-          "180",
-          "240"
+          "70",
+          "140",
+          "210",
+          "280"
         ]
       },
       {
@@ -24717,7 +24697,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Earth Spirit pulls the target Stone Remnant. Enemies struck by the gripped target will be silenced, and take damage if the gripped target is a Stone Remnant.\n\nUpgradable by Aghanim's Scepter.",
+    "desc": "Earth Spirit pulls the target Stone Remnant. Enemies struck by the gripped target will be silenced, and take damage if the gripped target is a Stone Remnant.",
     "attrib": [
       {
         "key": "radius",
@@ -24950,10 +24930,10 @@
         "key": "burn_damage",
         "header": "MAX HP BURN DAMAGE:",
         "value": [
-          "0.8%",
-          "1.6%",
-          "2.4%",
-          "3.2%"
+          "1%",
+          "2%",
+          "3%",
+          "4%"
         ]
       },
       {
@@ -24997,7 +24977,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "A deadly pit is conjured at the target location; any unit that enters will be rooted for 0.9,1.2,1.5,1.8 seconds. Each enemy unit within the pit are affected every 3.6 seconds.",
+    "desc": "A deadly pit is conjured at the target location; any unit that enters will be rooted. Each enemy unit within the pit are affected every 3.6 seconds.",
     "attrib": [
       {
         "key": "radius",
@@ -25995,10 +25975,10 @@
         "key": "strike_crit_mult",
         "header": "CRIT MULTIPLIER:",
         "value": [
-          "140%",
-          "160%",
-          "180%",
-          "200%"
+          "150%",
+          "175%",
+          "200%",
+          "225%"
         ]
       },
       {
@@ -26014,7 +25994,7 @@
       }
     ],
     "mc": "100",
-    "cd": "25",
+    "cd": "22",
     "img": "/apps/dota2/images/abilities/monkey_king_boundless_strike_md.png"
   },
   "monkey_king_mischief": {
@@ -26127,10 +26107,10 @@
         "key": "impact_damage_tooltip",
         "header": "PRIMAL SPRING DAMAGE:",
         "value": [
-          "100",
-          "180",
-          "260",
-          "340"
+          "140",
+          "210",
+          "280",
+          "350"
         ]
       },
       {
@@ -26164,10 +26144,10 @@
         "key": "impact_damage",
         "header": "DAMAGE:",
         "value": [
-          "100",
-          "180",
-          "260",
-          "340"
+          "140",
+          "210",
+          "280",
+          "350"
         ]
       },
       {
@@ -26273,7 +26253,7 @@
       {
         "key": "attack_speed",
         "header": "SOLDIER ATK SPEED:",
-        "value": "1.6"
+        "value": "1.4"
       },
       {
         "key": "duration",
@@ -30372,7 +30352,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Winter Wyvern soars upon an arctic wind, granting her unobstructed movement and allowing her to exhale a blistering chill into each attack. While soaring, her attacks travel further and faster, and slow enemies with a magical freeze that strips them of 8% of their current health each second. Her sight is also hardened against night's chill, granting her 400 additional vision range at night while soaring.\n\nUpgradable by Aghanim's Scepter.",
+    "desc": "Winter Wyvern soars upon an arctic wind, granting her unobstructed movement and allowing her to exhale a blistering chill into each attack. While soaring, her attacks travel further and faster, and slow enemies with a magical freeze that strips them of 9% of their current health each second. Her sight is also hardened against night's chill, granting her 400 additional vision range at night while soaring.\n\nUpgradable by Aghanim's Scepter.",
     "attrib": [
       {
         "key": "duration",
@@ -30392,7 +30372,7 @@
       {
         "key": "percent_damage",
         "header": "HEALTH BURN:",
-        "value": "8%"
+        "value": "9%"
       },
       {
         "key": "tick_rate",
@@ -30409,9 +30389,9 @@
         "key": "move_slow",
         "header": "MOVEMENT SLOW:",
         "value": [
-          "19%",
-          "26%",
-          "33%",
+          "22%",
+          "28%",
+          "34%",
           "40%"
         ]
       },
@@ -30542,7 +30522,7 @@
       {
         "key": "heal_additive",
         "header": "BASE HEALTH REGEN:",
-        "value": "20"
+        "value": "25"
       },
       {
         "key": "heal_percentage",
@@ -30959,6 +30939,9 @@
   "special_bonus_attack_speed_100": {
     "dname": "+100 Attack Speed"
   },
+  "special_bonus_attack_speed_140": {
+    "dname": "+140 Attack Speed"
+  },
   "special_bonus_hp_regen_4": {
     "dname": "+4 Health Regen"
   },
@@ -31124,6 +31107,9 @@
   "special_bonus_intelligence_13": {
     "dname": "+13 Intelligence"
   },
+  "special_bonus_intelligence_14": {
+    "dname": "+14 Intelligence"
+  },
   "special_bonus_intelligence_15": {
     "dname": "+15 Intelligence"
   },
@@ -31142,6 +31128,9 @@
   "special_bonus_intelligence_35": {
     "dname": "+35 Intelligence"
   },
+  "special_bonus_spell_lifesteal_8": {
+    "dname": "8% Spell Lifesteal"
+  },
   "special_bonus_spell_lifesteal_10": {
     "dname": "10% Spell Lifesteal"
   },
@@ -31156,6 +31145,9 @@
   },
   "special_bonus_spell_lifesteal_30": {
     "dname": "30% Spell Lifesteal"
+  },
+  "special_bonus_spell_lifesteal_60": {
+    "dname": "60% Spell Lifesteal"
   },
   "special_bonus_spell_lifesteal_70": {
     "dname": "70% Spell Lifesteal"
@@ -31818,7 +31810,7 @@
     "dname": "+75 Thunder Clap Damage"
   },
   "special_bonus_unique_brewmaster_3": {
-    "dname": "+2s Thunderlap Slow"
+    "dname": "+2s Thunder Clap Slow"
   },
   "special_bonus_unique_bristleback": {
     "dname": "+4 Max Goo Stacks"
@@ -31899,7 +31891,7 @@
     "dname": "-5 Acid Spray Armor"
   },
   "special_bonus_unique_alchemist_2": {
-    "dname": "+80 Unstable Concoction Damage"
+    "dname": "+100 Unstable Concoction Damage"
   },
   "special_bonus_unique_axe": {
     "dname": "+100 Battle Hunger DPS"
@@ -32167,7 +32159,7 @@
     "dname": "-4s Dragon Slave Cooldown"
   },
   "special_bonus_unique_lina_2": {
-    "dname": "+40/4% Fiery Soul Per Stack"
+    "dname": "+35/3% Fiery Soul Per Stack"
   },
   "special_bonus_unique_lina_3": {
     "dname": "+80 Light Strike Array Damage"
@@ -32230,7 +32222,7 @@
     "dname": "+50% Life Drain Heal"
   },
   "special_bonus_unique_pugna_2": {
-    "dname": "+150 Nether Blast Damage"
+    "dname": "+200 Nether Blast Damage"
   },
   "special_bonus_unique_pugna_3": {
     "dname": "+0.75 Netherward Damage Per Mana"
@@ -32263,7 +32255,7 @@
     "dname": "+60 Spawn Spiderling Damage"
   },
   "special_bonus_unique_broodmother_4": {
-    "dname": "+12 Spiders Attack Damage"
+    "dname": "+14 Spiders Attack Damage"
   },
   "special_bonus_unique_chen_1": {
     "dname": "+2 Holy Persuasion Max Count"
