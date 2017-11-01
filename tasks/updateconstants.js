@@ -281,7 +281,7 @@ const sources = [
       }
       return region;
     },
-  }, {
+  }, /* {
     key: "cluster",
     url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/regions.json",
     transform: respObj => {
@@ -297,7 +297,7 @@ const sources = [
       cluster["121"] = Number(regions['USEast'].region);
       return cluster;
     },
-  }, {
+  }, */ {
     key: "countries",
     url: "https://raw.githubusercontent.com/mledoze/countries/master/countries.json",
     transform: respObj => {
