@@ -2013,7 +2013,7 @@
   "mirana_leap": {
     "dname": "Leap",
     "behavior": "No Target",
-    "desc": "Mirana leaps forward into battle, empowering allied units with a ferocious roar that grants bonus attack and movement speed. Speed bonus lasts 2 seconds.",
+    "desc": "Mirana leaps forward into battle, empowering herself with a ferocious roar that grants bonus attack and movement speed. Speed bonus lasts 2 seconds.",
     "attrib": [
       {
         "key": "leap_distance",
@@ -5339,13 +5339,17 @@
     "dmg_type": "Magical",
     "bkbpierce": "No",
     "desc": "Hurls a bolt of lightning that leaps through nearby enemy units.",
-    "dmg": [
-      "85",
-      "100",
-      "115",
-      "145"
-    ],
     "attrib": [
+      {
+        "key": "arc_damage",
+        "header": "DAMAGE:",
+        "value": [
+          "85",
+          "100",
+          "115",
+          "145"
+        ]
+      },
       {
         "key": "radius",
         "header": "RADIUS:",
@@ -8318,7 +8322,7 @@
     "behavior": "Point Target",
     "dmg_type": "Physical",
     "bkbpierce": "Yes",
-    "desc": "Beastmaster sends his axes flying and calls them home again, slicing through enemy units and trees along their path.  Each axe can hit an enemy once.",
+    "desc": "Beastmaster sends his axes flying and calls them home again, slicing through enemy units and trees along their path.  Each axe can hit an enemy once, and amplifies subsequent damage from Beastmaster and his units.",
     "attrib": [
       {
         "key": "radius",
@@ -8547,7 +8551,7 @@
     "behavior": "Unit Target",
     "dmg_type": "Magical",
     "bkbpierce": "Yes",
-    "desc": "Beastmaster lets loose a deafening roar that stuns, and shoves open a path to its target. All units in the path of the roar are damaged, while units shoved aside by the roar have their movement and attack speed slowed.\n\nUpgradable by Aghanim's Scepter.",
+    "desc": "Beastmaster lets loose a deafening roar that stuns, and shoves open a path to its target. All units in the path of the roar are damaged, while units shoved aside by the roar have their movement and attack speed slowed. Additionally, Beastmaster and his units gain 30% movement speed for 3 seconds.\n\nUpgradable by Aghanim's Scepter.",
     "attrib": [
       {
         "key": "duration",
@@ -19733,7 +19737,7 @@
       "No Target",
       "Instant Cast"
     ],
-    "desc": "Rubick's mastery of the arcane nullifies nearby enemy senses, reducing their magic resistance.",
+    "desc": "Rubick's mastery of the arcane creates an aura that nullifies nearby enemy senses or increases his own. Can be toggled offensively or defensively to reduce enemy magic resistance or increase allied magic resistance.",
     "attrib": [
       {
         "key": "magic_damage_reduction_pct",
