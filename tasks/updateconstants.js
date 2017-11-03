@@ -101,12 +101,15 @@ const sources = [
   },
   {
     key: "item_ids",
-    url: "http://www.dota2.com/jsfeed/itemdata?l=english",
+    url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/items.json",
     transform: respObj => {
-      const items = respObj.itemdata;
+      const items = respObj.DOTAAbilities;
       const itemIds = {};
       for (const key in items) {
-        itemIds[items[key].id] = key;
+        const item = items[key];
+        if (typeof item === 'object' && 'ID' in item) {
+          itemIds[item.ID] = key.replace('item_', '');
+        }
       }
       return itemIds;
     },
