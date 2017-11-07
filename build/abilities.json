@@ -1,4 +1,8 @@
 {
+  "dota_base_ability": {
+    "attrib": [],
+    "img": "/apps/dota2/images/abilities/dota_base_ability_md.png"
+  },
   "antimage_mana_break": {
     "dname": "Mana Break",
     "behavior": "Passive",
@@ -65,9 +69,9 @@
         "key": "spell_shield_resistance",
         "header": "RESISTANCE:",
         "value": [
-          "26%",
-          "34%",
-          "42%",
+          "20%",
+          "30%",
+          "40%",
           "50%"
         ]
       },
@@ -852,10 +856,10 @@
         "key": "trueshot_ranged_damage",
         "header": "RANGE DAMAGE BONUS:",
         "value": [
-          "20%",
-          "26%",
-          "32%",
-          "38%"
+          "16%",
+          "22%",
+          "28%",
+          "34%"
         ]
       }
     ],
@@ -2141,6 +2145,12 @@
         "header": "WIDTH:",
         "value": "200",
         "generated": true
+      },
+      {
+        "key": "charge_restore_time",
+        "header": "CHARGE RESTORE TIME:",
+        "value": "11",
+        "generated": true
       }
     ],
     "mc": [
@@ -2167,16 +2177,16 @@
       {
         "key": "damage_min",
         "header": "DAMAGE MIN AGI MULTIPLIER:",
-        "value": "0.25"
+        "value": "0.5"
       },
       {
         "key": "damage_max",
         "header": "DAMAGE MAX AGI MULTIPLIER:",
         "value": [
-          "0.5",
           "1",
           "1.5",
-          "2"
+          "2",
+          "2.5"
         ]
       },
       {
@@ -2216,7 +2226,7 @@
       {
         "key": "stun_min",
         "header": "STUN MIN:",
-        "value": "0.25"
+        "value": "0.5"
       },
       {
         "key": "stun_max",
@@ -2272,10 +2282,10 @@
         "key": "bonus_attributes",
         "header": "BONUS ATTRIBUTES:",
         "value": [
-          "3",
           "4",
           "5",
-          "6"
+          "6",
+          "7"
         ],
         "generated": true
       }
@@ -4579,9 +4589,9 @@
         "key": "gods_strength_bonus_str",
         "header": "BONUS STRENGTH:",
         "value": [
-          "12",
-          "24",
-          "36"
+          "10",
+          "20",
+          "30"
         ]
       },
       {
@@ -5153,7 +5163,7 @@
       {
         "key": "bonus_damage_pct",
         "header": "BONUS DAMAGE PCT:",
-        "value": "20",
+        "value": "30",
         "generated": true
       },
       {
@@ -5201,13 +5211,13 @@
           "2",
           "3",
           "4",
-          "5"
+          "6"
         ]
       },
       {
         "key": "bonus_damage",
         "header": "BONUS DAMAGE:",
-        "value": "25%"
+        "value": "30%"
       },
       {
         "key": "bonus_damage_buildings",
@@ -5228,13 +5238,13 @@
       {
         "key": "splash_range",
         "header": "SPLASH RANGE:",
-        "value": "375",
+        "value": "400",
         "generated": true
       },
       {
         "key": "splash_pct",
         "header": "SPLASH PCT:",
-        "value": "70",
+        "value": "100",
         "generated": true
       }
     ],
@@ -5244,12 +5254,7 @@
       "40",
       "50"
     ],
-    "cd": [
-      "40",
-      "32",
-      "24",
-      "16"
-    ],
+    "cd": "15",
     "img": "/apps/dota2/images/abilities/tiny_craggy_exterior_md.png"
   },
   "tiny_toss_tree": {
@@ -5276,18 +5281,18 @@
       {
         "key": "bonus_damage",
         "header": "BONUS DAMAGE:",
-        "value": "25",
+        "value": "30",
         "generated": true
       },
       {
         "key": "splash_radius",
         "header": "SPLASH RADIUS:",
-        "value": "250"
+        "value": "275"
       },
       {
         "key": "splash_pct",
         "header": "SPLASH DAMAGE:",
-        "value": "70%"
+        "value": "100%"
       }
     ],
     "img": "/apps/dota2/images/abilities/tiny_toss_tree_md.png"
@@ -5318,7 +5323,11 @@
       {
         "key": "attack_speed_reduction",
         "header": "ATTACK SPEED REDUCTION:",
-        "value": "30"
+        "value": [
+          "20",
+          "25",
+          "30"
+        ]
       },
       {
         "key": "movement_speed",
@@ -5963,7 +5972,7 @@
       {
         "key": "aura_radius",
         "header": "RADIUS:",
-        "value": "900"
+        "value": "1200"
       },
       {
         "key": "images_do_damage_percent",
@@ -5991,7 +6000,7 @@
       {
         "key": "illusion_duration",
         "header": "IMAGE DURATION:",
-        "value": "7"
+        "value": "6"
       }
     ],
     "img": "/apps/dota2/images/abilities/vengefulspirit_command_aura_md.png"
@@ -8367,12 +8376,7 @@
         ]
       }
     ],
-    "mc": [
-      "60",
-      "65",
-      "70",
-      "75"
-    ],
+    "mc": "80",
     "cd": "8",
     "img": "/apps/dota2/images/abilities/beastmaster_wild_axes_md.png"
   },
@@ -8401,10 +8405,10 @@
         "key": "boar_damage_tooltip",
         "header": "BOAR ATTACK DAMAGE:",
         "value": [
-          "20",
-          "30",
-          "40",
-          "50"
+          "16",
+          "24",
+          "32",
+          "40"
         ]
       },
       {
@@ -9799,9 +9803,9 @@
         "key": "trap_bonus_damage",
         "header": "BONUS DAMAGE:",
         "value": [
-          "100",
-          "125",
-          "150"
+          "175",
+          "250",
+          "325"
         ]
       }
     ],
@@ -9852,9 +9856,9 @@
         "key": "trap_bonus_damage",
         "header": "TRAP BONUS DAMAGE:",
         "value": [
-          "100",
-          "125",
-          "150"
+          "175",
+          "250",
+          "325"
         ],
         "generated": true
       }
@@ -9901,9 +9905,9 @@
         "key": "trap_bonus_damage",
         "header": "TRAP BONUS DAMAGE:",
         "value": [
-          "100",
-          "125",
-          "150"
+          "175",
+          "250",
+          "325"
         ],
         "generated": true
       }
@@ -15024,8 +15028,8 @@
       "175"
     ],
     "cd": [
+      "100",
       "80",
-      "70",
       "60"
     ],
     "img": "/apps/dota2/images/abilities/spirit_breaker_nether_strike_md.png"
@@ -17422,10 +17426,10 @@
         "key": "bear_regen_tooltip",
         "header": "BEAR HP REGEN:",
         "value": [
-          "2",
-          "3",
           "4",
-          "5"
+          "5",
+          "6",
+          "7"
         ]
       },
       {
@@ -18981,7 +18985,6 @@
     "dmg_type": "Magical",
     "bkbpierce": "No",
     "desc": "Blasts an enemy unit with a wave of fire, dealing damage and stunning the target. Its mana cost is 60% of Ogre Magi's current mana.",
-    "dmg": "275",
     "attrib": [
       {
         "key": "stun_duration",
@@ -18999,6 +19002,11 @@
         "header": "SCEPTER MANA:",
         "value": "0.6",
         "generated": true
+      },
+      {
+        "key": "fireblast_damage",
+        "header": "FIREBLAST DAMAGE:",
+        "value": "275"
       }
     ],
     "mc": "400",
@@ -21147,9 +21155,9 @@
         "key": "familiar_attack_damage",
         "header": "FAMILIAR ATTACK DAMAGE:",
         "value": [
-          "20",
-          "35",
-          "50"
+          "30",
+          "45",
+          "60"
         ]
       }
     ],
@@ -21703,10 +21711,10 @@
         "key": "damage_modifier",
         "header": "DAMAGE MODIFIER:",
         "value": [
-          "-65",
-          "-50",
-          "-35",
-          "-20"
+          "-70",
+          "-55",
+          "-40",
+          "-25"
         ],
         "generated": true
       },
@@ -21714,10 +21722,10 @@
         "key": "damage_modifier_tooltip",
         "header": "OUTGOING DAMAGE:",
         "value": [
-          "35%",
-          "50%",
-          "65%",
-          "80%"
+          "30%",
+          "45%",
+          "60%",
+          "75%"
         ]
       },
       {
@@ -26609,17 +26617,6 @@
         "key": "strikes",
         "header": "STRIKES:",
         "value": "4"
-      },
-      {
-        "key": "charge_restore_time",
-        "header": "CHARGE RESTORE TIME:",
-        "value": [
-          "15",
-          "12",
-          "9",
-          "6"
-        ],
-        "generated": true
       }
     ],
     "mc": [
@@ -26638,7 +26635,10 @@
   },
   "pangolier_shield_crash": {
     "dname": "Shield Crash",
-    "behavior": "No Target",
+    "behavior": [
+      "No Target",
+      "Instant Cast"
+    ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
     "desc": "Pangolier jumps in the air and slams back to the ground, damaging all enemies in a radius. For each enemy hero hit, he gains a percentage of incoming damage reduction for a short time.\n\nForward movement is maintained if Shield Crash is used while Rolling Thunder is active, and allows Rolling Thunder to clear walls or cliffs.",
@@ -26657,10 +26657,10 @@
         "key": "hero_stacks",
         "header": "REDUCTION PER HERO:",
         "value": [
-          "8%",
-          "10%",
+          "9%",
           "12%",
-          "14%"
+          "15%",
+          "18%"
         ]
       },
       {
@@ -26696,6 +26696,12 @@
         "key": "jump_height_gyroshell",
         "header": "JUMP HEIGHT GYROSHELL:",
         "value": "350",
+        "generated": true
+      },
+      {
+        "key": "jump_horizontal_distance",
+        "header": "JUMP HORIZONTAL DISTANCE:",
+        "value": "225",
         "generated": true
       }
     ],
@@ -26748,17 +26754,14 @@
   },
   "pangolier_gyroshell": {
     "dname": "Rolling Thunder",
-    "behavior": [
-      "No Target",
-      "Channeled"
-    ],
+    "behavior": "No Target",
     "dmg_type": "Magical",
     "bkbpierce": "No",
     "desc": "Pangolier curls into a magic-immune ball and rolls out. When rolling, he moves at an increased speed and can move through trees, but has a decreased ability to turn. Striking enemies knocks them back, inflicting damage and stunning them when they land. \n\nColliding with walls or cliffs will cause a temporary pause while Pangolier reverses in direction.",
     "dmg": [
       "200",
-      "250",
-      "300"
+      "275",
+      "350"
     ],
     "attrib": [
       {
@@ -26775,11 +26778,7 @@
       {
         "key": "forward_move_speed",
         "header": "ROLL SPEED:",
-        "value": [
-          "550",
-          "575",
-          "600"
-        ]
+        "value": "600"
       },
       {
         "key": "turn_rate_boosted",
@@ -26790,11 +26789,7 @@
       {
         "key": "turn_rate",
         "header": "TURN RATE:",
-        "value": [
-          "105",
-          "110",
-          "115"
-        ],
+        "value": "120",
         "generated": true
       },
       {
@@ -26872,7 +26867,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Dark Willow creates a maze of brambles in the target area.  Enemies that walk into a bramble take damage and are rooted.",
+    "desc": "Dark Willow creates a maze of brambles in the target area.  Enemies that walk into a bramble are rooted and take damage over time.",
     "attrib": [
       {
         "key": "placement_range",
@@ -26964,9 +26959,9 @@
         "key": "attack_damage",
         "header": "ATTACK DAMAGE:",
         "value": [
-          "75",
-          "150",
-          "225"
+          "60",
+          "140",
+          "220"
         ]
       },
       {
@@ -27006,7 +27001,11 @@
       "150",
       "200"
     ],
-    "cd": "20",
+    "cd": [
+      "40",
+      "30",
+      "20"
+    ],
     "img": "/apps/dota2/images/abilities/dark_willow_bedlam_md.png"
   },
   "dark_willow_terrorize": {
@@ -32616,7 +32615,7 @@
     "dname": "+300 Blink Cast Range"
   },
   "special_bonus_unique_antimage_4": {
-    "dname": "+30% Spell Shield"
+    "dname": "+25% Spell Shield"
   },
   "special_bonus_unique_antimage_5": {
     "dname": "Blink Uncontrollable Illusion"
@@ -32748,7 +32747,7 @@
     "dname": "+75% Spell Amp For Stolen Spells"
   },
   "special_bonus_unique_sven": {
-    "dname": "-8s Storm Hammer Cooldown"
+    "dname": "-9s Storm Hammer Cooldown"
   },
   "special_bonus_unique_sven_2": {
     "dname": "+40 STR God's Strength"
@@ -32850,7 +32849,7 @@
     "dname": "+600 Poison Nova AoE"
   },
   "special_bonus_unique_morphling_1": {
-    "dname": "+800 Waveform Range"
+    "dname": "+300 Waveform Range"
   },
   "special_bonus_unique_morphling_2": {
     "dname": "-25s Morph Cooldown"
@@ -32863,6 +32862,9 @@
   },
   "special_bonus_unique_morphling_5": {
     "dname": "Morph Targets Allies"
+  },
+  "special_bonus_unique_morphling_6": {
+    "dname": "2 Waveform Charges"
   },
   "special_bonus_unique_leshrac_1": {
     "dname": "+50 Diabolic Edict Explosions"
@@ -33123,7 +33125,7 @@
     "dname": "Attacking Procs Counter Helix"
   },
   "special_bonus_unique_beastmaster": {
-    "dname": "+120 Wild Axes Damage"
+    "dname": "+100 Wild Axes Damage"
   },
   "special_bonus_unique_beastmaster_2": {
     "dname": "+40 Boar Damage"
@@ -33180,7 +33182,7 @@
     "dname": "-2s Lucent Beam Cooldown"
   },
   "special_bonus_unique_luna_3": {
-    "dname": "+24 Luna Blessing Damage"
+    "dname": "+24 Lunar Blessing Damage"
   },
   "special_bonus_unique_luna_4": {
     "dname": "+0.25s Lucent Beam Ministun"
@@ -33369,7 +33371,7 @@
     "dname": "+0.3s Heat Seeking Missile Ministun"
   },
   "special_bonus_unique_tiny": {
-    "dname": "+75 Avalanche Damage"
+    "dname": "+125 Avalanche Damage"
   },
   "special_bonus_unique_tiny_2": {
     "dname": "3 Toss Charges"
@@ -33495,13 +33497,13 @@
     "dname": "+600 Mystic Flare Damage"
   },
   "special_bonus_unique_medusa": {
-    "dname": "+2s Stone Gaze Duration"
+    "dname": "+2.5s Stone Gaze Duration"
   },
   "special_bonus_unique_medusa_2": {
     "dname": "+7 Split Shot target"
   },
   "special_bonus_unique_medusa_3": {
-    "dname": "+10% Mystic Snake Mana Steal"
+    "dname": "+15% Mystic Snake Mana Steal"
   },
   "special_bonus_unique_medusa_4": {
     "dname": "Split Shot Uses Modifiers"
@@ -33553,7 +33555,7 @@
     "dname": "+0.20 Backstab Multiplier"
   },
   "special_bonus_unique_riki_2": {
-    "dname": "-4s Smokescreen Cooldown"
+    "dname": "-5s Smokescreen Cooldown"
   },
   "special_bonus_unique_riki_3": {
     "dname": "+900 Blink Strike Cast Range"
@@ -33616,7 +33618,7 @@
     "dname": "+20 Marksmanship Agility"
   },
   "special_bonus_unique_drow_ranger_4": {
-    "dname": "+1.5s Gust Duration"
+    "dname": "+2s Gust Duration"
   },
   "special_bonus_unique_earth_spirit": {
     "dname": "+200 Rolling Boulder Damage"
@@ -33946,7 +33948,7 @@
     "dname": "-3s Swashbuckle Cooldown"
   },
   "special_bonus_unique_pangolier_5": {
-    "dname": "-12s Rolling Thunder"
+    "dname": "-16s Rolling Thunder"
   },
   "special_bonus_unique_dark_willow_1": {
     "dname": "+300 Shadow Realm Max Damage"
@@ -33956,5 +33958,22 @@
   },
   "special_bonus_unique_dark_willow_2": {
     "dname": "+1 Terrorize Duration"
+  },
+  "generic_hidden": {
+    "behavior": [
+      "Hidden",
+      null
+    ],
+    "attrib": [],
+    "img": "/apps/dota2/images/abilities/generic_hidden_md.png"
+  },
+  "bear_empty": {
+    "dname": "Empty",
+    "behavior": [
+      "Passive",
+      null
+    ],
+    "attrib": [],
+    "img": "/apps/dota2/images/abilities/bear_empty_md.png"
   }
 }

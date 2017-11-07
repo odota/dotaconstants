@@ -4970,7 +4970,7 @@
     "dname": "Meteor Hammer",
     "qual": "epic",
     "cost": 2625,
-    "desc": "Active: Meteor Hammer CHANNELED - After a succesful channel, summons a meteor that strikes a 300 AoE, stunning enemies for 1.75 seconds. Deals damage over time to enemies units and buildings for 6 seconds.Building DPS: 60 Non-Building DPS: 115 Channel Duration: 3 seconds.Landing Time: 0.5 seconds.",
+    "desc": "Active: Meteor Hammer CHANNELED - After a succesful channel, summons a meteor that strikes a 300 AoE, stunning enemies for 1.75 seconds and dealing impact damage. Continues to deal damage over time to enemies units and buildings for 6 seconds.Building Impact Damage: 75 Building Over Time Damage: 60 Non-Building Impact Damage: 150 Non-Building Over Time Damage: 115 Channel Duration: 3 seconds.Landing Time: 0.5 seconds.",
     "notes": "",
     "attrib": [
       {
@@ -5043,6 +5043,18 @@
         "key": "max_duration",
         "header": "MAX DURATION:",
         "value": "3",
+        "generated": true
+      },
+      {
+        "key": "impact_damage_buildings",
+        "header": "IMPACT DAMAGE BUILDINGS:",
+        "value": "75",
+        "generated": true
+      },
+      {
+        "key": "impact_damage_units",
+        "header": "IMPACT DAMAGE UNITS:",
+        "value": "150",
         "generated": true
       }
     ],
@@ -5122,7 +5134,7 @@
     "id": 255,
     "img": "/apps/dota2/images/items/recipe_lg.png?3",
     "dname": "Aeon Disk Recipe",
-    "cost": 1750,
+    "cost": 1675,
     "desc": "",
     "notes": "",
     "attrib": [],
@@ -5137,7 +5149,7 @@
     "img": "/apps/dota2/images/items/combo_breaker_lg.png?3",
     "dname": "Aeon Disk",
     "qual": "epic",
-    "cost": 3750,
+    "cost": 3675,
     "desc": "Passive: Combo Breaker When you take damage and your health falls below 80%, a strong dispel is applied and you gain a 2.5 second buff that causes all damage you deal and are dealt to be reduced to zero. Only triggers on player based damage. \n\nPassive: Status Resistance Reduces status effect durations by 25%. ",
     "notes": "",
     "attrib": [
@@ -5985,7 +5997,7 @@
       {
         "key": "bonus_damage",
         "header": "+",
-        "value": "50",
+        "value": "45",
         "footer": "Damage"
       },
       {
@@ -7230,7 +7242,7 @@
     "dname": "Mask of Madness",
     "qual": "artifact",
     "cost": 1975,
-    "desc": "Active: BerserkGives 110 attack speed and 17% movement speed, but reduces your armor by 6 and silences you.  Lasts 8 seconds.\nPassive: LifestealHeals the attacker for 15% of attack damage dealt.",
+    "desc": "Active: BerserkGives 110 attack speed and 17% movement speed, but reduces your armor by 7 and silences you.  Lasts 8 seconds.\nPassive: LifestealHeals the attacker for 15% of attack damage dealt.",
     "notes": "",
     "attrib": [
       {
@@ -7266,7 +7278,7 @@
       {
         "key": "berserk_armor_reduction",
         "header": "BERSERK ARMOR REDUCTION:",
-        "value": "6",
+        "value": "7",
         "generated": true
       },
       {
