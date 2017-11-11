@@ -2318,10 +2318,10 @@
         "key": "bonus_attributes",
         "header": "BONUS AGILITY:",
         "value": [
-          "3",
           "4",
           "5",
-          "6"
+          "6",
+          "7"
         ]
       },
       {
@@ -2364,10 +2364,10 @@
         "key": "bonus_attributes",
         "header": "BONUS STRENGTH:",
         "value": [
-          "3",
           "4",
           "5",
-          "6"
+          "6",
+          "7"
         ]
       },
       {
@@ -5261,6 +5261,7 @@
     "dname": "Tree Throw",
     "behavior": [
       "Unit Target",
+      "Point Target",
       "Hidden"
     ],
     "dmg_type": "Physical",
@@ -5276,7 +5277,7 @@
       {
         "key": "range",
         "header": "CAST RANGE:",
-        "value": "1000"
+        "value": "1300"
       },
       {
         "key": "bonus_damage",
@@ -7509,10 +7510,10 @@
         "key": "damage",
         "header": "DAMAGE:",
         "value": [
-          "120",
+          "125",
           "200",
-          "280",
-          "360"
+          "275",
+          "350"
         ]
       },
       {
@@ -8107,6 +8108,16 @@
         "header": "TICK INTERVAL:",
         "value": "1",
         "generated": true
+      },
+      {
+        "key": "range_tooltip",
+        "header": "RANGE:",
+        "value": [
+          "525",
+          "600",
+          "675",
+          "750"
+        ]
       }
     ],
     "mc": [
@@ -10604,7 +10615,7 @@
     "behavior": "Unit Target",
     "dmg_type": "Physical",
     "bkbpierce": "No",
-    "desc": "Releases a cone of poisonous magic that strikes multiple enemy units. Deals damage over time and slows the targets. Anytime the targets get attacked, the debuff duration is refreshed ",
+    "desc": "Releases a cone of poisonous magic that strikes multiple enemy units. Deals damage over time and slows the targets. Anytime the targets get attacked, the debuff duration is refreshed.",
     "attrib": [
       {
         "key": "start_radius",
@@ -10648,10 +10659,10 @@
         "key": "slow",
         "header": "SLOW:",
         "value": [
-          "-14",
-          "-16",
-          "-18",
-          "-20"
+          "-14%",
+          "-16%",
+          "-18%",
+          "-20%"
         ]
       },
       {
@@ -10668,6 +10679,16 @@
           "5",
           "6",
           "7"
+        ]
+      },
+      {
+        "key": "range_tooltip",
+        "header": "RANGE:",
+        "value": [
+          "600",
+          "700",
+          "800",
+          "900"
         ]
       }
     ],
@@ -17635,7 +17656,7 @@
       {
         "key": "transformation_time",
         "header": "TRANSFORM TIME:",
-        "value": "1.933"
+        "value": "0.8"
       }
     ],
     "mc": "25",
@@ -20670,10 +20691,10 @@
         "key": "cast_range_tooltip",
         "header": "CAST RANGE:",
         "value": [
-          "550",
-          "700",
-          "850",
-          "1000"
+          "400",
+          "500",
+          "600",
+          "700"
         ]
       }
     ],
@@ -21809,13 +21830,15 @@
       },
       {
         "key": "stone_form_scepter_base",
-        "header": "SCEPTER BASE DURATION:",
-        "value": "1"
+        "header": "STONE FORM SCEPTER BASE:",
+        "value": "1",
+        "generated": true
       },
       {
         "key": "stone_form_scepter_increment",
-        "header": "SCEPTER DURATION BOUNCE INCREASE:",
-        "value": "0.3"
+        "header": "STONE FORM SCEPTER INCREMENT:",
+        "value": "0.3",
+        "generated": true
       }
     ],
     "mc": [
@@ -25913,7 +25936,7 @@
       {
         "key": "spirit_duration",
         "header": "SPIRIT DURATION:",
-        "value": "16"
+        "value": "20"
       },
       {
         "key": "spirit_speed",
@@ -26051,6 +26074,16 @@
         "header": "MAGIC DAMAGE RESISTANCE PCT TOOLTIP:",
         "value": "100",
         "generated": true
+      },
+      {
+        "key": "range_tooltip",
+        "header": "RANGE:",
+        "value": [
+          "500",
+          "600",
+          "700",
+          "800"
+        ]
       }
     ],
     "mc": "50",
@@ -31616,7 +31649,7 @@
       },
       {
         "key": "ministun_duration",
-        "header": "PURGE DURATION:",
+        "header": "SLOW DURATION:",
         "value": [
           "0.4",
           "0.5",
@@ -33936,7 +33969,7 @@
     "dname": "150 Tree Dance Vision AoE"
   },
   "special_bonus_unique_monkey_king_6": {
-    "dname": "+1 Wukong Command Ring"
+    "dname": "+1 Wukong's Command Ring"
   },
   "special_bonus_unique_pangolier_2": {
     "dname": "2s Shield Crash CD in Ball"
@@ -33967,13 +34000,22 @@
     "attrib": [],
     "img": "/apps/dota2/images/abilities/generic_hidden_md.png"
   },
-  "bear_empty": {
+  "bear_empty1": {
     "dname": "Empty",
     "behavior": [
       "Passive",
       null
     ],
     "attrib": [],
-    "img": "/apps/dota2/images/abilities/bear_empty_md.png"
+    "img": "/apps/dota2/images/abilities/bear_empty1_md.png"
+  },
+  "bear_empty2": {
+    "dname": "Empty",
+    "behavior": [
+      "Passive",
+      null
+    ],
+    "attrib": [],
+    "img": "/apps/dota2/images/abilities/bear_empty2_md.png"
   }
 }
