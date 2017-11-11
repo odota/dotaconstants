@@ -89,12 +89,19 @@ const sources = [
         items[key.replace(/^item_/, '')] = item;
       });
 
-      // Load recipes
+    // Load recipes
       Object.keys(scripts).filter(key => scripts[key].ItemRequirements && scripts[key].ItemResult).forEach(key => {
         result_key = scripts[key].ItemResult.replace(/^item_/, '');
         items[result_key].components = scripts[key].ItemRequirements[0].split(";").map(item => item.replace(/^item_/, ''));
         items[result_key].created = true;
       });
+
+      //Manually Adding DiffBlade2
+      var manualDiffBlade2 = {};
+      manualDiffBlade2.id = 196;
+      manualDiffBlade2.dname = 'Diffusal Blade';
+      manualDiffBlade2.img = '/apps/dota2/images/items/diffusal_blade_2_lg.png?3'
+      items['diffusal_blade_2'] = manualDiffBlade2
 
       return items;
     },
@@ -111,6 +118,9 @@ const sources = [
           itemIds[item.ID] = key.replace('item_', '');
         }
       }
+      //manually adding DiffBlade2
+      itemIds[196] = 'diffusal_blade_2'
+
       return itemIds;
     },
   }, {
