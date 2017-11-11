@@ -96,12 +96,120 @@ const sources = [
         items[result_key].created = true;
       });
 
-      //Manually Adding DiffBlade2
-      var manualDiffBlade2 = {};
-      manualDiffBlade2.id = 196;
-      manualDiffBlade2.dname = 'Diffusal Blade';
-      manualDiffBlade2.img = '/apps/dota2/images/items/diffusal_blade_2_lg.png?3'
-      items['diffusal_blade_2'] = manualDiffBlade2
+      //Manually Adding DiffBlade2 for match data prior to 7.07
+      items['diffusal_blade_2'] = {
+              "id": 196,
+              "img": "/apps/dota2/images/items/diffusal_blade_2_lg.png?3",
+              "dname": "Diffusal Blade",
+              "qual": "artifact",
+              "cost": 3850,
+              "desc": "Active: Purge Targets an enemy, removing buffs from the target and slowing it for 4 seconds.Range: 600\nPassive: ManabreakEach attack burns 50 mana from the target, and deals 0.8 physical damage per burned mana. Burns 16 mana per attack from melee illusions and 8 mana per attack from ranged illusions. Dispel Type: Basic Dispel",
+              "notes": "Does not stack with other manabreak abilities.",
+              "attrib": [
+                  {
+                      "key": "bonus_agility",
+                      "header": "",
+                      "value": [
+                          "25",
+                          "35"
+                      ],
+                      "footer": "Agility"
+                  },
+                  {
+                      "key": "bonus_intellect",
+                      "header": "",
+                      "value": [
+                          "10",
+                          "15"
+                      ],
+                      "footer": "Intelligence"
+                  },
+                  {
+                      "key": "initial_charges",
+                      "header": "INITIAL CHARGES:",
+                      "value": "8",
+                      "generated": true
+                  },
+                  {
+                      "key": "feedback_mana_burn",
+                      "header": "FEEDBACK MANA BURN:",
+                      "value": "50",
+                      "generated": true
+                  },
+                  {
+                      "key": "feedback_mana_burn_illusion_melee",
+                      "header": "FEEDBACK MANA BURN ILLUSION MELEE:",
+                      "value": "16",
+                      "generated": true
+                  },
+                  {
+                      "key": "feedback_mana_burn_illusion_ranged",
+                      "header": "FEEDBACK MANA BURN ILLUSION RANGED:",
+                      "value": "8",
+                      "generated": true
+                  },
+                  {
+                      "key": "purge_summoned_damage",
+                      "header": "PURGE SUMMONED DAMAGE:",
+                      "value": "99999",
+                      "generated": true
+                  },
+                  {
+                      "key": "purge_rate",
+                      "header": "PURGE RATE:",
+                      "value": "5",
+                      "generated": true
+                  },
+                  {
+                      "key": "purge_root_duration",
+                      "header": "PURGE ROOT DURATION:",
+                      "value": "3",
+                      "generated": true
+                  },
+                  {
+                      "key": "purge_slow_duration",
+                      "header": "PURGE SLOW DURATION:",
+                      "value": "4",
+                      "generated": true
+                  },
+                  {
+                      "key": "damage_per_burn",
+                      "header": "DAMAGE PER BURN:",
+                      "value": "0.8",
+                      "generated": true
+                  },
+                  {
+                      "key": "cast_range_tooltip",
+                      "header": "CAST RANGE TOOLTIP:",
+                      "value": "600",
+                      "generated": true
+                  }
+              ],
+              "mc": false,
+              "cd": 4,
+              "lore": "An enchanted blade that allows the user to cut straight into the enemy's soul.",
+              "components": [
+                  "diffusal_blade",
+                  "recipe_diffusal_blade"
+              ],
+              "created": true
+      };
+
+      //Manually added for match data prior to 7.07
+      items['recipe_iron_talon'] = {
+            "id": 238,
+            "img": "/apps/dota2/images/items/recipe_lg.png?3",
+            "dname": "Iron Talon Recipe",
+            "cost": 125,
+            "desc": "",
+            "notes": "",
+            "attrib": [],
+            "mc": false,
+            "cd": false,
+            "lore": "",
+            "components": null,
+            "created": false
+      };
 
       return items;
     },
