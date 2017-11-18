@@ -520,6 +520,7 @@ function formatValues(value, percent=false, separator=" / ") {
 
 // Formats AbilitySpecial for the attrib value for abilities and items
 function formatAttrib(attributes, strings, strings_prefix) {
+  if (attributes && !(Array.isArray(attributes))) attributes = Object.values(attributes);
   return (attributes || []).map(attr => {
     let key = Object.keys(attr).find(key => `${strings_prefix}${key}` in strings);
     if (!key) {
@@ -562,6 +563,7 @@ function replaceSpecialAttribs(template, attribs) {
       if (name == "") {
         return "%";
       }
+      if (!Array.isArray(attribs)) attribs = Object.values(attribs);
       var attr = attribs.find(attr => name in attr);
       if (!attr && name[0] === "d") { // Because someone at valve messed up in 4 places
         name = name.substr(1);
