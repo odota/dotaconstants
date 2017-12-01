@@ -1089,11 +1089,6 @@
     "desc": "Gives Juggernaut a chance to deal double damage on each attack.",
     "attrib": [
       {
-        "key": "blade_dance_crit_mult",
-        "header": "CRITICAL DAMAGE:",
-        "value": "200%"
-      },
-      {
         "key": "blade_dance_crit_chance",
         "header": "CRITICAL CHANCE:",
         "value": [
@@ -1102,6 +1097,11 @@
           "30%",
           "35%"
         ]
+      },
+      {
+        "key": "blade_dance_crit_mult",
+        "header": "CRITICAL DAMAGE:",
+        "value": "200%"
       }
     ],
     "img": "/apps/dota2/images/abilities/juggernaut_blade_dance_md.png"
@@ -4019,7 +4019,7 @@
       },
       {
         "key": "crit_chance",
-        "header": "CHANCE:",
+        "header": "CRITICAL CHANCE:",
         "value": [
           "9%",
           "11%",
@@ -9657,6 +9657,11 @@
     "desc": "Phantom Assassin refines her combat abilities, gaining a chance of delivering a devastating critical strike to enemy units. Stifling Dagger shares the same critical strike chance.",
     "attrib": [
       {
+        "key": "crit_chance",
+        "header": "CRITICAL CHANCE:",
+        "value": "15%"
+      },
+      {
         "key": "crit_bonus",
         "header": "CRITICAL DAMAGE:",
         "value": [
@@ -9664,11 +9669,6 @@
           "340%",
           "450%"
         ]
-      },
-      {
-        "key": "crit_chance",
-        "header": "CRITICAL CHANCE:",
-        "value": "15%"
       }
     ],
     "img": "/apps/dota2/images/abilities/phantom_assassin_coup_de_grace_md.png"
@@ -12069,9 +12069,8 @@
       },
       {
         "key": "disjoint_count",
-        "header": "DISJOINT COUNT:",
-        "value": "3",
-        "generated": true
+        "header": "DODGE STACKS:",
+        "value": "3"
       }
     ],
     "mc": "90",
@@ -17929,7 +17928,7 @@
       },
       {
         "key": "crit_chance",
-        "header": "CRIT CHANCE:",
+        "header": "CRITICAL CHANCE:",
         "value": [
           "10%",
           "15%",
@@ -17939,7 +17938,7 @@
       },
       {
         "key": "crit_multiplier",
-        "header": "CRIT DAMAGE:",
+        "header": "CRITICAL DAMAGE:",
         "value": "230%"
       },
       {
@@ -18777,7 +18776,7 @@
   "treant_natures_guise": {
     "dname": "Nature's Guise",
     "behavior": "Passive",
-    "desc": "Turns Treant invisible when he is within 265 radius of a tree for 7,6,5,3 seconds. Increases movement speed by 10,18,26,34 while invisible, and causes a 0.4,1,1.6,2.2 seconds disarming root when attacking out of invisibility.",
+    "desc": "Turns Treant invisible after a short delay when he is within close radius of a tree. Increases movement speed while invisible, and causes a disarming root when attacking out of invisibility.",
     "attrib": [
       {
         "key": "fade_time",
@@ -18796,7 +18795,7 @@
       },
       {
         "key": "bonus_move_speed",
-        "header": "MOVEMENT SPEED:",
+        "header": "BONUS MOVE SPEED:",
         "value": [
           "10%",
           "18%",
@@ -23433,7 +23432,7 @@
     "attrib": [
       {
         "key": "crit_multiplier",
-        "header": "CRIT MULTIPLIER:",
+        "header": "CRITICAL DAMAGE:",
         "value": "350%"
       },
       {
@@ -26278,7 +26277,7 @@
       },
       {
         "key": "strike_crit_mult",
-        "header": "CRIT MULTIPLIER:",
+        "header": "CRITICAL DAMAGE:",
         "value": [
           "150%",
           "175%",
@@ -27033,7 +27032,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Dark Willow's pet wisp roams around her for the duraton, rapidly attacking nearby enemies.  Bedlam cannot be used while Terrorize is active.",
+    "desc": "Dark Willow's pet wisp roams around her for the duration, rapidly attacking nearby enemies.  Bedlam cannot be used while Terrorize is active.",
     "attrib": [
       {
         "key": "attack_damage",
@@ -28103,7 +28102,7 @@
     "attrib": [
       {
         "key": "crit_chance",
-        "header": "CHANCE:",
+        "header": "CRITICAL CHANCE:",
         "value": "20%"
       },
       {

@@ -399,7 +399,7 @@
     ],
     "mc": false,
     "cd": false,
-    "lore": "Hasten to battle on wind-touched heels",
+    "lore": "Hasten to battle on wind-touched heels.",
     "components": null,
     "created": false
   },
@@ -3090,7 +3090,7 @@
     "dname": "Bloodthorn",
     "qual": "epic",
     "cost": 7195,
-    "desc": "Active: Soul Rend Silences a target for 5 seconds. At the end of the silence, an additional 30% of all damage taken during the silence will be dealt to the target as magic damage.Range: 900All attacks on the silenced target will have True Strike and 100% chance to crit for 140% more damage.\nPassive: Critical Strike Grants a 20% chance for attacks to inflict 175% more damage.",
+    "desc": "Active: Soul Rend Silences a target for 5 seconds. At the end of the silence, an additional 30% of all damage taken during the silence will be dealt to the target as magic damage.Range: 900All attacks on the silenced target will have True Strike and 100% chance to crit for 140% damage.\nPassive: Critical Strike Grants a 20% chance for attacks to inflict 175% damage.",
     "notes": "Critical Strike does not work against buildings.",
     "attrib": [
       {
@@ -4778,7 +4778,7 @@
     "dname": "Bloodstone",
     "qual": "epic",
     "cost": 4900,
-    "desc": "Active: Pocket DenyInstantly causes you to die.Must ground target to cast.  Cannot self cast.\nPassive: BloodpactBegins with 16 charges, and gains a charge each time an enemy hero dies within 1600 range. Each charge grants 0.35 mana regeneration per second, and reduces respawn time by 3 seconds. If the bearer dies, the Bloodstone loses a third of its charges.",
+    "desc": "Active: Pocket DenyInstantly causes you to die.Must ground target to cast.  Cannot self cast.\nPassive: BloodpactBegins with 14 charges, and gains a charge each time an enemy hero dies within 1600 range. Each charge grants 0.35 mana regeneration per second, and reduces respawn time by 3 seconds. If the bearer dies, the Bloodstone loses a third of its charges.",
     "notes": "Only the first Bloodstone will gain charges.",
     "attrib": [
       {
@@ -4826,7 +4826,7 @@
       {
         "key": "tooltip_charges",
         "header": "TOOLTIP CHARGES:",
-        "value": "16",
+        "value": "14",
         "generated": true
       },
       {
@@ -5130,7 +5130,7 @@
     ],
     "created": true
   },
-  "recipe_combo_breaker": {
+  "recipe_aeon_disk": {
     "id": 255,
     "img": "/apps/dota2/images/items/recipe_lg.png?3",
     "dname": "Aeon Disk Recipe",
@@ -5144,9 +5144,9 @@
     "components": null,
     "created": false
   },
-  "combo_breaker": {
+  "aeon_disk": {
     "id": 256,
-    "img": "/apps/dota2/images/items/combo_breaker_lg.png?3",
+    "img": "/apps/dota2/images/items/aeon_disk_lg.png?3",
     "dname": "Aeon Disk",
     "qual": "epic",
     "cost": 3600,
@@ -5193,7 +5193,7 @@
     ],
     "created": true
   },
-  "recipe_trident": {
+  "recipe_kaya": {
     "id": 258,
     "img": "/apps/dota2/images/items/recipe_lg.png?3",
     "cost": 500,
@@ -5206,9 +5206,9 @@
     "components": null,
     "created": false
   },
-  "trident": {
+  "kaya": {
     "id": 259,
-    "img": "/apps/dota2/images/items/trident_lg.png?3",
+    "img": "/apps/dota2/images/items/kaya_lg.png?3",
     "dname": "Kaya",
     "qual": "epic",
     "cost": 1950,
@@ -5240,6 +5240,32 @@
       "robe"
     ],
     "created": true
+  },
+  "trident": {
+    "id": 275,
+    "img": "/apps/dota2/images/items/trident_lg.png?3",
+    "cost": null,
+    "desc": "",
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": false,
+    "lore": "",
+    "components": null,
+    "created": false
+  },
+  "combo_breaker": {
+    "id": 276,
+    "img": "/apps/dota2/images/items/combo_breaker_lg.png?3",
+    "cost": null,
+    "desc": "",
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": false,
+    "lore": "",
+    "components": null,
+    "created": false
   },
   "refresher_shard": {
     "id": 260,
@@ -5879,7 +5905,7 @@
     "dname": "Daedalus",
     "qual": "epic",
     "cost": 5320,
-    "desc": "Passive: Critical StrikeGrants each attack a 30% chance to deal 135% additional damage.",
+    "desc": "Passive: Critical StrikeGrants each attack a 30% chance to deal 235% damage.",
     "notes": "Critical Strike does not work against buildings.",
     "attrib": [
       {
@@ -5937,7 +5963,7 @@
     "qual": "epic",
     "cost": 2700,
     "desc": "Passive: Bash Grants melee heroes a 25% chance on hit to stun the target for 1.4 seconds and deal 100 bonus damage.  Bash pierces evasion. Bash chance for ranged heroes is 10%.",
-    "notes": "Does not stack with other sources of Bash, however it will stack with Mini-Bash (e.g. Monkey King Bar).\nThe following heroes cannot trigger Bash on this item: Spirit Breaker, Faceless Void, Slardar, and Troll Warlord.",
+    "notes": "Does not stack with other sources of Bash, however it will stack with Mini-Bash.\nThe following heroes cannot trigger Bash on this item: Spirit Breaker, Faceless Void, Slardar, and Troll Warlord.",
     "attrib": [
       {
         "key": "bonus_strength",
@@ -6256,7 +6282,7 @@
     "dname": "Crystalys",
     "qual": "epic",
     "cost": 2120,
-    "desc": "Passive: Critical StrikeGrants each attack a 20% chance to deal 75% additional damage.",
+    "desc": "Passive: Critical StrikeGrants each attack a 20% chance to deal 175% damage.",
     "notes": "Critical Strike does not work against buildings.",
     "attrib": [
       {
