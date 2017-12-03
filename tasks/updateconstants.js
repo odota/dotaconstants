@@ -644,7 +644,7 @@ function formatVpkHero(key, vpkr, localized_name) {
   h.move_speed = Number(vpkrh.MovementSpeed);
   h.turn_rate = Number(vpkrh.MovementTurnRate);
 
-  h.cm_enabled = vpkrh.CMEnabled ? true : false;
+  h.cm_enabled = vpkrh.CMEnabled == "1" ? true : false;
   h.legs = Number(vpkrh.Legs || baseHero.Legs);
 
   return h;
