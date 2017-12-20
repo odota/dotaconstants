@@ -350,9 +350,9 @@
         "key": "brain_sap_damage",
         "header": "DAMAGE:",
         "value": [
-          "90",
-          "160",
-          "230",
+          "75",
+          "150",
+          "225",
           "300"
         ]
       },
@@ -360,9 +360,9 @@
         "key": "tooltip_brain_sap_heal_amt",
         "header": "HEAL AMOUNT:",
         "value": [
-          "90",
-          "160",
-          "230",
+          "75",
+          "150",
+          "225",
           "300"
         ]
       },
@@ -2128,10 +2128,10 @@
     "bkbpierce": "No",
     "desc": "Morphling dissolves into liquid and surges forward, damaging enemy units in his path.  Morphling is invulnerable during Waveform.",
     "dmg": [
-      "100",
-      "175",
-      "250",
-      "325"
+      "75",
+      "150",
+      "225",
+      "300"
     ],
     "attrib": [
       {
@@ -3405,12 +3405,7 @@
         ]
       }
     ],
-    "mc": [
-      "110",
-      "120",
-      "130",
-      "140"
-    ],
+    "mc": "140",
     "cd": [
       "14",
       "13",
@@ -3796,10 +3791,10 @@
     ],
     "mc": "50",
     "cd": [
-      "32",
+      "40",
+      "35",
       "30",
-      "28",
-      "26"
+      "25"
     ],
     "img": "/apps/dota2/images/abilities/razor_static_link_md.png"
   },
@@ -4785,11 +4780,7 @@
       {
         "key": "ball_lightning_aoe",
         "header": "RADIUS:",
-        "value": [
-          "125",
-          "200",
-          "275"
-        ]
+        "value": "200"
       },
       {
         "key": "ball_lightning_travel_cost_base",
@@ -4834,9 +4825,9 @@
     "bkbpierce": "No",
     "desc": "Sand King burrows into the ground and tunnels forward, damaging and stunning enemy units above him as he resurfaces.\n\nUpgradable by Aghanim's Scepter.",
     "dmg": [
-      "100",
-      "160",
-      "220",
+      "85",
+      "150",
+      "215",
       "280"
     ],
     "attrib": [
@@ -5354,8 +5345,8 @@
         "header": "ATTACK SPEED REDUCTION:",
         "value": [
           "20",
-          "30",
-          "40"
+          "35",
+          "50"
         ]
       }
     ],
@@ -7023,7 +7014,7 @@
     ],
     "dmg_type": "Physical",
     "bkbpierce": "Yes",
-    "desc": "CHANNELED - Summons a deadly ward with true strike to attack enemy heroes within 700 range. Lasts a maximum of 8 seconds.\n\nUpgradable by Aghanim's Scepter.",
+    "desc": "CHANNELED - Summons a deadly ward to attack enemy heroes within 700 range. Lasts a maximum of 8 seconds.\n\nUpgradable by Aghanim's Scepter.",
     "attrib": [
       {
         "key": "damage",
@@ -7191,7 +7182,7 @@
       "No Target",
       "Channeled"
     ],
-    "desc": "CHANNELED - Phases out of the world while striking every enemy from behind in a 500 AoE once per second.\n\nUpgradable by Aghanim's Scepter.",
+    "desc": "CHANNELED - Riki phases out of the world while striking every enemy from behind in an area around him once per second.\n\nUpgradable by Aghanim's Scepter.",
     "attrib": [
       {
         "key": "range",
@@ -7515,7 +7506,12 @@
       "145",
       "170"
     ],
-    "cd": "14",
+    "cd": [
+      "20",
+      "18",
+      "16",
+      "14"
+    ],
     "img": "/apps/dota2/images/abilities/tinker_laser_md.png"
   },
   "tinker_heat_seeking_missile": {
@@ -7793,7 +7789,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "Yes",
-    "desc": "Sniper locks onto a target enemy unit and, after 2 seconds, fires a devastating shot that deals damage at long range, and mini-stuns the target.\n\nUpgradable by Aghanim's Scepter.",
+    "desc": "Sniper locks onto a target enemy unit and, after a short aiming duration, fires a devastating shot that deals damage at long range and mini-stuns the target.\n\nUpgradable by Aghanim's Scepter.",
     "dmg": [
       "320",
       "485",
@@ -7817,9 +7813,8 @@
       },
       {
         "key": "total_cast_time_tooltip",
-        "header": "TOTAL CAST TIME TOOLTIP:",
-        "value": "2",
-        "generated": true
+        "header": "AIM DURATION:",
+        "value": "2"
       },
       {
         "key": "scepter_radius",
@@ -12321,7 +12316,11 @@
       "175",
       "250"
     ],
-    "cd": "160",
+    "cd": [
+      "180",
+      "170",
+      "160"
+    ],
     "img": "/apps/dota2/images/abilities/omniknight_guardian_angel_md.png"
   },
   "enchantress_untouchable": {
@@ -12785,9 +12784,9 @@
         "key": "bonus_attack_speed_night",
         "header": "ATTACK SPEED:",
         "value": [
-          "45",
-          "60",
-          "75",
+          "30",
+          "50",
+          "70",
           "90"
         ]
       },
@@ -13425,6 +13424,11 @@
         "header": "DELAY:",
         "value": "0.25",
         "generated": true
+      },
+      {
+        "key": "tooltip_attack",
+        "header": "GEMINATE ATTACK COUNT:",
+        "value": "1"
       }
     ],
     "cd": [
@@ -15643,10 +15647,10 @@
         "key": "max_damage",
         "header": "MAX DAMAGE:",
         "value": [
-          "150",
-          "220",
-          "290",
-          "360"
+          "160",
+          "240",
+          "320",
+          "400"
         ]
       },
       {
@@ -17904,9 +17908,9 @@
     ],
     "mc": "25",
     "cd": [
-      "8",
+      "11",
+      "9",
       "7",
-      "6",
       "5"
     ],
     "img": "/apps/dota2/images/abilities/brewmaster_drunken_haze_md.png"
@@ -20386,7 +20390,7 @@
   "naga_siren_mirror_image": {
     "dname": "Mirror Image",
     "behavior": "No Target",
-    "desc": "Creates three images of Naga Siren under her control.\n\nDISPEL TYPE: Basic Dispel",
+    "desc": "Creates multiple images of Naga Siren under her control.\n\nDISPEL TYPE: Basic Dispel",
     "attrib": [
       {
         "key": "illusion_duration",
@@ -20437,9 +20441,8 @@
       },
       {
         "key": "images_count",
-        "header": "IMAGES COUNT:",
-        "value": "3",
-        "generated": true
+        "header": "IMAGE COUNT:",
+        "value": "3"
       },
       {
         "key": "invuln_duration",
@@ -24866,10 +24869,10 @@
         "key": "stun_duration",
         "header": "STUN DURATION:",
         "value": [
-          "0.75",
-          "1.25",
-          "1.75",
-          "2.25"
+          "0.5",
+          "1",
+          "1.5",
+          "2"
         ]
       },
       {
@@ -27373,15 +27376,15 @@
         "key": "burn_amount",
         "header": "MANA BURN PER HIT:",
         "value": [
-          "20",
           "30",
-          "40"
+          "40",
+          "50"
         ]
       },
       {
         "key": "burn_damage_conversion",
         "header": "CONVERTED TO DAMAGE:",
-        "value": "60%"
+        "value": "50%"
       }
     ],
     "img": "/apps/dota2/images/abilities/necronomicon_warrior_mana_burn_md.png"
@@ -31266,7 +31269,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Winter Wyvern soars upon an arctic wind, granting her unobstructed movement and allowing her to exhale a blistering chill into each attack. While soaring, her attacks travel further and faster, and slow enemies with a magical freeze that strips them of 7.5,8,8.5,9% of their current health each second. Her sight is also hardened against night's chill, granting her 400 additional vision range at night while soaring.\n\nUpgradable by Aghanim's Scepter.",
+    "desc": "Winter Wyvern soars upon an arctic wind, granting her unobstructed movement and allowing her to exhale a blistering chill into each attack. While soaring, her attacks travel further and faster, and slow enemies with a magical freeze that strips them of 6,7,8,9% of their current health each second. Her sight is also hardened against night's chill, granting her 400 additional vision range at night while soaring.\n\nUpgradable by Aghanim's Scepter.",
     "attrib": [
       {
         "key": "duration",
@@ -31287,9 +31290,9 @@
         "key": "percent_damage",
         "header": "HEALTH BURN:",
         "value": [
-          "7.5%",
+          "6%",
+          "7%",
           "8%",
-          "8.5%",
           "9%"
         ]
       },
@@ -31441,7 +31444,7 @@
       {
         "key": "heal_additive",
         "header": "BASE HEALTH REGEN:",
-        "value": "15"
+        "value": "10"
       },
       {
         "key": "heal_percentage",
@@ -33787,6 +33790,9 @@
   },
   "special_bonus_unique_shadow_demon_5": {
     "dname": "+5s Disruption Banish Duration"
+  },
+  "special_bonus_unique_shadow_demon_6": {
+    "dname": "Soul Catcher Creates Illusion On Death"
   },
   "special_bonus_unique_slardar": {
     "dname": "+15% Bash Chance"
