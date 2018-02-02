@@ -440,7 +440,7 @@ const patches = JSON.parse(fs.readFileSync('./json/patch.json'))
 const lastPatch = patches[patches.length - 1]
 const today = new Date()
 const dayDifference = Math.ceil(Math.abs(today.getTime() - new Date(lastPatch.date).getTime()) / (1000 * 3600 * 24));
-if (dayDifference >= 14) {
+if (dayDifference > 14) {
   const n = Math.floor(dayDifference / 14)
   for (let i = 0; i < n; i += 1) {
     const versionNum = parseFloat(patches[patches.length - 1].name, 10) + 0.01
