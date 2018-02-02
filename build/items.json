@@ -28,7 +28,7 @@
       }
     ],
     "mc": false,
-    "cd": 12,
+    "cd": 14,
     "lore": "The fabled dagger used by the fastest assassin ever to walk the lands.",
     "components": null,
     "created": false
@@ -155,7 +155,7 @@
     "dname": "Javelin",
     "qual": "component",
     "cost": 1100,
-    "desc": "Passive: PierceGrants each attack a 25% chance to pierce through evasion and deal 100 bonus damage.",
+    "desc": "Passive: PierceGrants each attack a 25% chance to pierce through evasion and deal 100 bonus magical damage.",
     "notes": "",
     "attrib": [
       {
@@ -256,7 +256,7 @@
     "qual": "component",
     "cost": 200,
     "desc": "Active: Chop Tree/Ward Destroy a target tree or ward. Chop cast range is increased when targeting wards.Tree Range: 350Ward Range: 450\nPassive: Quell Increases attack damage against non-hero units by 24 for melee heroes, and 7 for ranged.",
-    "notes": "Cannot carry more than one.\nChop can be used to destroy Techies' Remote Mines.",
+    "notes": "Effects of multiple quelling blades do not stack.\nChop can be used to destroy Techies' Remote Mines.",
     "attrib": [
       {
         "key": "damage_bonus",
@@ -295,7 +295,7 @@
     "dname": "Faerie Fire",
     "qual": "consumable",
     "cost": 70,
-    "desc": "Use: Imbue Instantly restores 75 HP.",
+    "desc": "Use: Imbue Instantly restores 85 health.",
     "notes": "",
     "attrib": [
       {
@@ -307,7 +307,7 @@
       {
         "key": "hp_restore",
         "header": "HP RESTORE:",
-        "value": "75",
+        "value": "85",
         "generated": true
       }
     ],
@@ -431,8 +431,8 @@
     "dname": "Stout Shield",
     "qual": "component",
     "cost": 200,
-    "desc": "Passive: Damage BlockGives a 50% chance to block 18 damage on melee heroes, and 9 damage on ranged.",
-    "notes": "Multiple sources of damage block don't stack.",
+    "desc": "Passive: Damage BlockGrants a 50% chance to block 18 damage from incoming attacks on melee heroes, and 9 damage on ranged.",
+    "notes": "Multiple sources of damage block do not stack.",
     "attrib": [
       {
         "key": "damage_block_melee",
@@ -1153,7 +1153,7 @@
     "dname": "Enchanted Mango",
     "qual": "consumable",
     "cost": 100,
-    "desc": "Use: Eat Mango Instantly restore 150 mana.Range: 400",
+    "desc": "Use: Eat Mango Instantly restores 175 mana.Range: 400",
     "notes": "Hold Control to use on a nearby allied hero.",
     "attrib": [
       {
@@ -1165,7 +1165,7 @@
       {
         "key": "replenish_amount",
         "header": "REPLENISH AMOUNT:",
-        "value": "150",
+        "value": "175",
         "generated": true
       },
       {
@@ -1221,8 +1221,8 @@
     "dname": "Dust of Appearance",
     "qual": "consumable",
     "cost": 180,
-    "desc": "Use: RevealReveals and slows invisible Heroes by -20 in a 1050 radius around the caster for 12 seconds.",
-    "notes": "Places a buff on enemy units in the area that prevents them from becoming invisible.",
+    "desc": "Use: RevealReveals and slows invisible heroes by -20% in a 1050 radius around the caster for 12 seconds.",
+    "notes": "Places a debuff on enemy units in the area that reveals them when they are invisible.",
     "attrib": [
       {
         "key": "duration",
@@ -1255,8 +1255,8 @@
     "dname": "Bottle",
     "qual": "common",
     "cost": 650,
-    "desc": "Active: RegenerateConsumes a charge to restore 80 health and 40 mana over 2.5 seconds.Range: 350Healing stops if attacked by an enemy hero or Roshan.  Bottle can be refilled at your team's fountain. Runes can be stored in the Bottle for later use, and are activated automatically after 2 minutes.",
-    "notes": "Bottle is shareable. Stored runes cannot be shared. Hold Control to use Regenerate on an allied hero.\nBounty runes replenish 2/3 charges.\nIf Bottle does not have full charges and is placed on a courier, the courier will move 30% slower.",
+    "desc": "Active: RegenerateConsumes a charge to restore 80 health and 40 mana over 2.5 seconds. If the hero is attacked by an enemy hero or Roshan, the effect is lost.The Bottle automatically refills at the fountain.Hold Control to use on an allied hero.Range: 350\nPassive:  Store RuneRunes can be stored in the bottle for later use by right-clicking them. Unused runes will automatically activate after 2 minutes.Using a stored rune fully refills the Bottle. Stored Bounty Runes replenish 2/3 charges.",
+    "notes": "Bottle is shareable. Stored runes cannot be shared.\nIf Bottle does not have full charges and is placed on a courier, the courier's movespeed will be slowed by 30%.",
     "attrib": [
       {
         "key": "health_restore",
@@ -1280,6 +1280,12 @@
         "key": "tooltip_range",
         "header": "TOOLTIP RANGE:",
         "value": "350",
+        "generated": true
+      },
+      {
+        "key": "max_charges",
+        "header": "MAX CHARGES:",
+        "value": "3",
         "generated": true
       }
     ],
@@ -1341,7 +1347,7 @@
     "dname": "Sentry Ward",
     "qual": "consumable",
     "cost": 100,
-    "desc": "Use: Plant Plants a Sentry Ward, an invisible watcher that grants True Sight, the ability to see invisible enemy units and wards, to any existing allied vision within a 850 radius.Duration: 4 minutes.Does not grant ground vision.Hold Control to give one Sentry Ward to an allied hero.Range: 500",
+    "desc": "Use: Plant Plants a Sentry Ward, an invisible watcher that grants True Sight, the ability to see invisible enemy units and wards, to any existing allied vision within a 850 radius.Lasts 4 minutes.Does not grant ground vision.Hold Control to give one Sentry Ward to an allied hero.Range: 500",
     "notes": "",
     "attrib": [
       {
@@ -1394,7 +1400,7 @@
     "qual": "common",
     "cost": 180,
     "desc": "Use: Plant Plant the currently active ward.  Double-Click to switch the currently active ward.Range: 500",
-    "notes": "",
+    "notes": "Hold Control to give one ward to an allied hero.",
     "attrib": [
       {
         "key": "bonus_health",
@@ -1474,7 +1480,7 @@
     "dname": "Tango",
     "qual": "consumable",
     "cost": 150,
-    "desc": "Use: Devour Consume a target tree to gain 7 health regeneration for 16 seconds. Consuming a ward or Ironwood Tree doubles the heal amount.Comes with 5 charges.  Can be used on an allied hero to give them one Tango.Range: 165Ward Range: 450",
+    "desc": "Use: Devour Consumes a target tree to gain 7 health regeneration for 16 seconds. Consuming a ward or Ironwood Tree doubles the heal amount.Comes with 5 charges.  Can be used on an allied hero to give them one Tango.Range: 165Ward Range: 450",
     "notes": "",
     "attrib": [
       {
@@ -1520,7 +1526,7 @@
     "dname": "Tango (Shared)",
     "qual": "consumable",
     "cost": 30,
-    "desc": "Use: Devour Consume a target tree to gain 7 health regeneration for 16 seconds. Consuming a ward or Ironwood Tree doubles the heal amount.Range: 165Ward Range: 450",
+    "desc": "Use: Devour Consumes a target tree to gain 7 health regeneration for 16 seconds. Consuming a ward or Ironwood Tree doubles the heal amount.Range: 165Ward Range: 450",
     "notes": "",
     "attrib": [
       {
@@ -1629,7 +1635,7 @@
     "dname": "Boots of Travel",
     "qual": "common",
     "cost": 2400,
-    "desc": "Active: TeleportTeleports you to an allied non-hero unit or structure. Teleporting to a unit is interrupted if the target unit dies.Shares a cooldown with Town Portal Scroll.Flat movement speed bonuses from multiple pairs of boots do not stack.",
+    "desc": "Active: TeleportTeleports you to an allied non-hero unit or structure. Teleporting to a unit is interrupted if the target unit dies.Shares a cooldown with Town Portal Scroll.\nFlat movement speed bonuses from multiple pairs of boots do not stack.",
     "notes": "",
     "attrib": [
       {
@@ -1665,7 +1671,7 @@
     "dname": "Boots of Travel",
     "qual": "common",
     "cost": 4400,
-    "desc": "Active: Teleport Teleports you to any allied structure or unit, including heroes. Teleporting to a unit is interrupted if the target unit dies.Shares a cooldown with Town Portal Scroll.Flat movement speed bonuses from multiple pairs of boots do not stack.",
+    "desc": "Active: Teleport Teleports you to any allied structure or unit, including heroes. Teleporting to a unit is interrupted if the target unit dies.Shares a cooldown with Town Portal Scroll.\nFlat movement speed bonuses from multiple pairs of boots do not stack.",
     "notes": "",
     "attrib": [
       {
@@ -1702,7 +1708,7 @@
     "dname": "Phase Boots",
     "qual": "common",
     "cost": 1240,
-    "desc": "Active: Phase Gives 24% increased movement speed on melee heroes, and 20% on ranged heroes, and lets you move through units for 2.5 seconds.Flat movement speed bonuses from multiple pairs of boots do not stack.",
+    "desc": "Active: Phase Gives 24% increased movement speed on melee heroes, and 20% on ranged heroes, and lets you move through units for 2.5 seconds.\nFlat movement speed bonuses from multiple pairs of boots do not stack.",
     "notes": "",
     "attrib": [
       {
@@ -2030,7 +2036,7 @@
     "dname": "Power Treads",
     "qual": "common",
     "cost": 1350,
-    "desc": "Active: Switch AttributeSwitches between +10 Strength, +10 Agility, or +10 Intelligence.Flat movement speed bonuses from multiple pairs of boots do not stack.",
+    "desc": "Active: Switch AttributeSwitches between +10 Strength, +10 Agility, or +10 Intelligence.\nFlat movement speed bonuses from multiple pairs of boots do not stack.",
     "notes": "Power Treads can be built using a Belt of Strength, Band of Elvenskin, or a Robe of the Magi.\nThe attack speed bonus from multiple Power Treads does not stack.",
     "attrib": [
       {
@@ -2205,8 +2211,8 @@
     "dname": "Poor Man's Shield",
     "qual": "common",
     "cost": 0,
-    "desc": "Passive: Damage BlockWhen cooldown is ready, blocks 30 damage on melee heroes and 15 on ranged heroes. Only triggers on attacks from heroes. Gives a 50% chance to block 18 damage on melee heroes, and 9 damage on ranged.",
-    "notes": "Multiple sources of damage block don't stack.",
+    "desc": "Passive: Damage BlockWhen cooldown is ready, blocks 30 damage on melee heroes and 15 on ranged heroes. Only triggers on attacks from heroes. Gives a 50% chance to block 18 damage from incoming attacks on melee heroes, and 9 damage on ranged.",
+    "notes": "Multiple sources of damage block do not stack.",
     "attrib": [
       {
         "key": "bonus_agility",
@@ -2640,7 +2646,7 @@
     "dname": "Ring of Basilius",
     "qual": "rare",
     "cost": 500,
-    "desc": "Passive: Basilius AuraGrants 0.5 mana regeneration and 2 armor in a 900 radius.\nToggle: AuraDeactivate aura to stop effecting non-hero units.",
+    "desc": "Passive: Basilius AuraGrants 0.5 mana regeneration and 2 armor in a 900 radius.\nToggle: AuraDeactivate aura to stop affecting non-hero units.",
     "notes": "Does not stack with armor auras from Ring of Basilius or Ring of Aquila.\nMultiple instances of Basilius Aura do not stack.",
     "attrib": [
       {
@@ -3090,7 +3096,7 @@
     "dname": "Bloodthorn",
     "qual": "epic",
     "cost": 7195,
-    "desc": "Active: Soul Rend Silences a target for 5 seconds. At the end of the silence, an additional 30% of all damage taken during the silence will be dealt to the target as magic damage.Range: 900All attacks on the silenced target will have True Strike and 100% chance to crit for 140% damage.\nPassive: Critical Strike Grants a 20% chance for attacks to inflict 175% damage.",
+    "desc": "Active: Soul Rend Silences a target for 5 seconds. At the end of the silence, an additional 30% of all damage taken during the silence will be dealt to the target as magical damage.All attacks on the silenced target will have True Strike and 100% chance to crit for 140% damage.Range: 900\nPassive: Critical Strike Grants a 20% chance for attacks to inflict 175% damage.",
     "notes": "Critical Strike does not work against buildings.",
     "attrib": [
       {
@@ -3383,7 +3389,7 @@
     "dname": "Force Staff",
     "qual": "rare",
     "cost": 2250,
-    "desc": "Active: ForcePushes any target unit 600 units in the direction it is facing.Range: 800",
+    "desc": "Active: ForcePushes any target unit 600 units in the direction it is facing.Range: 750",
     "notes": "Self-cast will cause you to use Force on yourself.\nForce Staff doesn't interrupt the target's actions.\nWill not work on a unit inside Chronosphere, Duel, or Black Hole.",
     "attrib": [
       {
@@ -3407,7 +3413,7 @@
       {
         "key": "tooltip_range",
         "header": "TOOLTIP RANGE:",
-        "value": "800",
+        "value": "750",
         "generated": true
       }
     ],
@@ -3503,7 +3509,7 @@
       }
     ],
     "mc": 25,
-    "cd": 18,
+    "cd": 23,
     "lore": "A legendary pike once held as royal sigil of the ancient wyvern riders.",
     "components": [
       "wraith_band",
@@ -3911,7 +3917,7 @@
     "dname": "Necronomicon",
     "qual": "rare",
     "cost": 2400,
-    "desc": "Active: Demonic SummoningSummons a Warrior and an Archer to fight for you for 50 seconds.Warrior:Burns mana every hit, and deals magical damage to whoever kills it.  Gains True Sight at level 3.Health: 700,800,900Damage: 75,100,125Mana Break Damage: 30,40,50Last Will Damage: 550,675,800Archer:Has a passive movement and attack speed aura. Gains Purge at Level 3.Health: 700,800,900Damage: 60,90,120Aura Move Speed: 5,7,9Aura Attack Speed: 5,10,15Aura Radius: 900",
+    "desc": "Active: Demonic SummoningSummons a Warrior and an Archer to fight for you for 50 seconds.Warrior:Burns mana every hit, and deals magical damage to whoever kills it.  Gains True Sight at level 3.Health: 700,800,900Damage: 75,100,125Mana Break Damage: 30,40,50Last Will Damage: 550,675,800Archer:Has a passive movement and attack speed aura. Gains Purge at Level 3.Health: 700,800,900Damage: 60,90,120Aura Move Speed: 5,7,9Aura Attack Speed: 5,7,9Aura Radius: 900",
     "notes": "",
     "attrib": [
       {
@@ -4047,8 +4053,8 @@
         "header": "ARCHER ATTACK SPEED:",
         "value": [
           "5",
-          "10",
-          "15"
+          "7",
+          "9"
         ],
         "generated": true
       }
@@ -4643,7 +4649,7 @@
       }
     ],
     "mc": false,
-    "cd": 80,
+    "cd": 70,
     "lore": "A powerful staff imbued with the strength of giants.",
     "components": [
       "ogre_axe",
@@ -5059,7 +5065,7 @@
       }
     ],
     "mc": 125,
-    "cd": 40,
+    "cd": 28,
     "lore": "",
     "components": [
       "ogre_axe",
@@ -5075,7 +5081,7 @@
     "dname": "Nullifier",
     "qual": "epic",
     "cost": 4700,
-    "desc": "Active: Nullify Dispels the target and mutes them for 5 seconds. Anytime the muted target is attacked, it will be slowed by 100% for 0.4 seconds.",
+    "desc": "Active: Nullify Dispels the target and mutes them for 5 seconds. Anytime the muted target is attacked, it will be slowed by 100% for 0.4 seconds.Dispel Type: Basic Dispel",
     "notes": "",
     "attrib": [
       {
@@ -5150,7 +5156,7 @@
     "dname": "Aeon Disk",
     "qual": "epic",
     "cost": 3350,
-    "desc": "Passive: Combo Breaker When you take damage and your health falls below 80%, a strong dispel is applied and you gain a 2.5 second buff that causes all damage you deal and are dealt to be reduced to zero. Only triggers on player based damage. \n\nPassive: Status Resistance Reduces status effect durations by 25%. ",
+    "desc": "Passive: Combo Breaker When you take damage and your health falls below 70%, a strong dispel is applied and you gain a 2.5 second buff that causes all damage you deal and are dealt to be reduced to zero. Only triggers on player based damage. \n\nPassive: Status Resistance Reduces status effect durations by 25%.",
     "notes": "",
     "attrib": [
       {
@@ -5168,7 +5174,7 @@
       {
         "key": "health_threshold_pct",
         "header": "HEALTH THRESHOLD PCT:",
-        "value": "80",
+        "value": "70",
         "generated": true
       },
       {
@@ -5285,7 +5291,7 @@
   "recipe_spirit_vessel": {
     "id": 266,
     "img": "/apps/dota2/images/items/recipe_lg.png?3",
-    "cost": 600,
+    "cost": 750,
     "desc": "",
     "notes": "",
     "attrib": [],
@@ -5300,7 +5306,7 @@
     "img": "/apps/dota2/images/items/spirit_vessel_lg.png?3",
     "dname": "Spirit Vessel",
     "qual": "rare",
-    "cost": 2825,
+    "cost": 2975,
     "desc": "Active: Soul Release When used against enemies, it reduces health by 3% of current health per second, and reduces HP regeneration and healing by 70%. Deals 20 damage per second. When used on allies, it increases health by 1% of current health per second, and increases HP regeneration and healing by 20%. Provides 35 health regeneration per second. Lasts 8 seconds.  Gains charges every time an enemy hero dies within 1400 units.  Only the closest Spirit Vessel to the dying hero will gain a charge.Cast Range: 950 ",
     "notes": "",
     "attrib": [
@@ -5418,7 +5424,7 @@
     "qual": "epic",
     "cost": 2150,
     "desc": "Passive: Damage Block Grants a 50% chance to block 70 damage from incoming attacks on melee heroes, and 35 damage on ranged.",
-    "notes": "Multiple sources of damage block don't stack.",
+    "notes": "Multiple sources of damage block do not stack.",
     "attrib": [
       {
         "key": "bonus_health",
@@ -5481,8 +5487,8 @@
     "dname": "Crimson Guard",
     "qual": "epic",
     "cost": 3550,
-    "desc": "Active: Guard For 12 seconds, grant nearby allied heroes and buildings +2 armor, and a 100% chance to block 60 damage from each incoming attack.Units may only be affected by Guard once every 46 seconds.Radius: 900\nPassive: Damage Block Grants a 50% chance to block 70 damage on melee heroes, and 35 damage on ranged.",
-    "notes": "Multiple sources of damage block don't stack.",
+    "desc": "Active: Guard For 12 seconds, grant nearby allied heroes and buildings +2 armor, and a 100% chance to block 60 damage from each incoming attack.Units may only be affected by Guard once every 46 seconds.Radius: 900\nPassive: Damage Block Grants a 50% chance to block 70 damage from incoming attacks on melee heroes, and 35 damage on ranged.",
+    "notes": "Multiple sources of damage block do not stack.",
     "attrib": [
       {
         "key": "bonus_health",
@@ -5585,7 +5591,7 @@
     "qual": "epic",
     "cost": 2200,
     "desc": "Active: Damage ReturnFor 4.5 seconds, duplicates any damage taken back to the unit that dealt the damage.",
-    "notes": "Damage Return is calculated before any kind of reduction.\nDamage Return doesn't reflect damage from other forms of Blademail.\nReturned damage type is the same as it was received.\nCan pierce Spell Immunity if the original damage type does.",
+    "notes": "Damage Return is calculated before any kind of reduction.\nDamage Return doesn't reflect damage from other forms of Blade Mail.\nReturned damage type is the same as it was received.\nCan pierce Spell Immunity if the original damage type does.",
     "attrib": [
       {
         "key": "bonus_damage",
@@ -5787,7 +5793,7 @@
     "dname": "Radiance",
     "qual": "epic",
     "cost": 5150,
-    "desc": "Toggle: Burn When active, scorches enemies for 60 damage per second, and causes them to miss 17% of their attacks.Radius: 700",
+    "desc": "Toggle: Burn When active, scorches enemies for 60 magical damage per second, and causes them to miss 17% of their attacks.Radius: 700",
     "notes": "",
     "attrib": [
       {
@@ -5962,7 +5968,7 @@
     "dname": "Skull Basher",
     "qual": "epic",
     "cost": 2700,
-    "desc": "Passive: Bash Grants melee heroes a 25% chance on hit to stun the target for 1.4 seconds and deal 100 bonus damage.  Bash pierces evasion. Bash chance for ranged heroes is 10%.",
+    "desc": "Passive: Bash Grants melee heroes a 25% chance on hit to stun the target for 1.4 seconds and deal 100 bonus magical damage.  Bash pierces evasion. Bash chance for ranged heroes is 10%.",
     "notes": "Does not stack with other sources of Bash, however it will stack with Mini-Bash.\nThe following heroes cannot trigger Bash on this item: Spirit Breaker, Faceless Void, Slardar, and Troll Warlord.",
     "attrib": [
       {
@@ -6017,7 +6023,7 @@
     "dname": "Battle Fury",
     "qual": "epic",
     "cost": 4100,
-    "desc": "Active: Chop Tree/Ward Destroy a target tree or ward.Tree Cast Range: 350Ward Cast Range: 450 \nPassive: Quell Increases attack damage against non-hero units by 60% for melee heroes, and 25% for ranged. \nPassive: Cleave Deals 40% of attack damage in a cone up to 625 around the target. (Melee Only)",
+    "desc": "Active: Chop Tree/Ward Destroy a target tree or ward.Tree Cast Range: 350Ward Cast Range: 450 \nPassive: Quell Increases attack damage against non-hero units by 60% for melee heroes, and 25% for ranged. \nPassive: Cleave Deals 40% of attack damage as physical damage in a cone up to 625 around the target. (Melee Only)",
     "notes": "Cleave damage is reduced by armor type but not by armor value.\nCleave damage goes through spell immunity.\nIf multiple sources of Cleave are present, each Cleave's damage is applied separately.\nChop can be used to destroy Techies' Remote Mines.",
     "attrib": [
       {
@@ -6047,7 +6053,7 @@
       {
         "key": "quelling_bonus",
         "header": "QUELLING BONUS:",
-        "value": "160",
+        "value": "150",
         "generated": true
       },
       {
@@ -6378,7 +6384,7 @@
     "qual": "epic",
     "cost": 2370,
     "desc": "Toggle: Unholy StrengthWhen active, Unholy Strength grants +31 damage, +25 strength and +4 armor, but drains 54 health per second. You cannot die from the health drain when Unholy Strength is activated, nor from the strength loss when Unholy Strength is deactivated.",
-    "notes": "The strength change will affect both maximum and current HP, but you cannot die from the change.\nThe strength change occurs over 0.6 seconds.\nActivating or deactiving Unholy Strength does not interrupt channeling.",
+    "notes": "The strength change will affect both maximum and current HP, but you cannot die from the change.\nThe strength change occurs over 0.6 seconds.\nActivating or deactivating Unholy Strength does not interrupt channeling.",
     "attrib": [
       {
         "key": "bonus_damage",
@@ -6463,7 +6469,7 @@
     "dname": "Shadow Blade",
     "qual": "epic",
     "cost": 2700,
-    "desc": "Active: Shadow WalkMakes you invisible for 14 seconds, or until you attack or cast a spell.  While Shadow Walk is active, you move 20% faster and can move through units.  If attacking to end the invisibility, you gain 175 bonus damage on that attack.",
+    "desc": "Active: Shadow WalkMakes you invisible for 14 seconds, or until you attack or cast a spell.  While Shadow Walk is active, you move 20% faster and can move through units.  If attacking to end the invisibility, you gain 175 bonus physical damage on that attack.",
     "notes": "Has a 0.3 second fade time.\nIf the invisibility ends without attacking, the bonus damage is lost.",
     "attrib": [
       {
@@ -6532,7 +6538,7 @@
     "dname": "Silver Edge",
     "qual": "epic",
     "cost": 5550,
-    "desc": "Active: Shadow WalkMakes you invisible for 14 seconds, or until you attack or cast a spell.  While invisible, you move 25% faster and can move through units.  Attacking to end the invisibility will deal 175 bonus damage to the target, and for 5 seconds, disable their passive abilities.",
+    "desc": "Active: Shadow WalkMakes you invisible for 14 seconds, or until you attack or cast a spell.  While invisible, you move 25% faster and can move through units.  Attacking to end the invisibility will deal 175 bonus physical damage to the target, and for 5 seconds, disable their passive abilities.",
     "notes": "Backstab cannot miss.\nBackstab does not pierce spell immunity.",
     "attrib": [
       {
@@ -6760,7 +6766,7 @@
     "dname": "Mjollnir",
     "qual": "artifact",
     "cost": 5700,
-    "desc": "Active: Static ChargePlaces a charged shield on a target unit for 15 seconds which has a 20% chance to release a 200 damage shocking bolt at a nearby attacker and 4 additional enemies.Range: 800\nPassive: Chain LightningGrants a 25% chance on attack to release a bolt of electricity that leaps between 12 targets within a 900 radius, dealing 150 magical damage to each.",
+    "desc": "Active: Static ChargePlaces a charged shield on a target unit for 15 seconds which has a 20% chance to release a 200 magical damage shocking bolt at a nearby attacker and 4 additional enemies.Range: 800\nPassive: Chain LightningGrants a 25% chance on attack to release a bolt of electricity that leaps between 12 targets within a 900 radius, dealing 150 magical damage to each.",
     "notes": "Static Charge cannot trigger more than once per second.\nStatic Charge's shock deals magical damage centered on hero with the Static Charge. Static Charge's targets cannot be more than 900 range away.\nStatic Charge procs will not bounce to heroes that are invisible or hidden by Fog of War.",
     "attrib": [
       {
@@ -7024,8 +7030,8 @@
     "dname": "Helm of the Dominator",
     "qual": "artifact",
     "cost": 2000,
-    "desc": "Active: DominateTakes control of one neutral, non-ancient target unit and sets its movement speed to 425 and max health to a minimum of 1500.Dominated units with a max health of greater than 1500 retain their original max health.  Dominated unit's bounty is set to %tooltip_bounty% gold.Range: 700\nPassive: Dominator Aura Increases nearby allies' attack speed by 20 and health regen by 8.Radius: 900",
-    "notes": "Cannot dominate more than one unit at a time.  If a new unit is dominated, the old one will die.\nSelling or upgrading Helm of the Dominator will cause dominated units to die.",
+    "desc": "Active: DominateTakes control of one neutral, non-ancient target unit and sets its movement speed to 425 and max health to a minimum of 1500.Dominated units with a max health of greater than 1500 retain their original max health.  Dominated unit's bounty is set to 125 gold.Range: 700\nPassive: Dominator Aura Increases nearby allies' attack speed by 20 and health regen by 8.Radius: 900",
+    "notes": "Cannot dominate more than one unit at a time.  If a new unit is dominated, the old one will die.\nCan also Dominate enemy lane creeps and summoned units.\nSelling or upgrading Helm of the Dominator will cause dominated units to die.",
     "attrib": [
       {
         "key": "bonus_stats",
@@ -7076,8 +7082,8 @@
         "generated": true
       },
       {
-        "key": "tootip_bounty",
-        "header": "TOOTIP BOUNTY:",
+        "key": "tooltip_bounty",
+        "header": "TOOLTIP BOUNTY:",
         "value": "125",
         "generated": true
       }
@@ -7506,7 +7512,7 @@
     "id": 177,
     "img": "/apps/dota2/images/items/recipe_lg.png?3",
     "dname": "Soul Ring Recipe",
-    "cost": 185,
+    "cost": 200,
     "desc": "",
     "notes": "",
     "attrib": [],
@@ -7521,7 +7527,7 @@
     "img": "/apps/dota2/images/items/soul_ring_lg.png?3",
     "dname": "Soul Ring",
     "qual": "common",
-    "cost": 755,
+    "cost": 770,
     "desc": "Active: Sacrifice Consume 150 health to temporarily gain 150 mana.  Lasts 10 seconds.If the mana gained cannot fit in your mana pool, it creates a buffer of mana that will be used before your mana pool.",
     "notes": "If this mana is not used before the duration ends, the extra mana is lost.",
     "attrib": [
@@ -7572,7 +7578,7 @@
     "dname": "Arcane Boots",
     "qual": "rare",
     "cost": 1300,
-    "desc": "Active: Replenish ManaRestores 135 mana to all nearby allies.Flat movement speed bonuses from multiple pairs of boots do not stack.Radius: 900",
+    "desc": "Active: Replenish ManaRestores 135 mana to all nearby allies.Radius: 900\nFlat movement speed bonuses from multiple pairs of boots do not stack.",
     "notes": "Does not work on Meepo clones.",
     "attrib": [
       {
@@ -7676,7 +7682,7 @@
     "dname": "Orb of Venom",
     "qual": "component",
     "cost": 275,
-    "desc": "Passive: Poison AttackPoisons the target, dealing 5 damage per second for 3 seconds and slowing movement -12% if the equipped hero is melee, or -4% if they are ranged.",
+    "desc": "Passive: Poison AttackPoisons the target, dealing 5 magical damage per second for 3 seconds and slowing movement by -12% if the equipped hero is melee, or -4% if they are ranged.",
     "notes": "",
     "attrib": [
       {
@@ -7937,7 +7943,7 @@
     "dname": "Smoke of Deceit",
     "qual": "consumable",
     "cost": 80,
-    "desc": "Use: Disguise The user and all nearby allied player-controlled units in a 1025 radius gain Deceit and 15% bonus movement speed for 35 seconds. Attacking, or moving within 1025 range of an enemy hero or tower, will break the invisibility. Disguise grants invisibility that is immune to True Sight.",
+    "desc": "Use: Disguise Turns the caster and all allied player-controlled units in a 1200 radius invisible, and grants 15% bonus movement speed for 35 seconds. Attacking, or moving within 1025 range of an enemy hero or tower, will break the invisibility. Disguise grants invisibility that is immune to True Sight.",
     "notes": "",
     "attrib": [
       {
@@ -8346,8 +8352,8 @@
     "dname": "Abyssal Blade",
     "qual": "epic",
     "cost": 6400,
-    "desc": "Active: Overwhelm Stuns a target enemy unit for 2 seconds. Pierces Spell Immunity.\nPassive: Bash Grants melee heroes a 25% chance on hit to stun the target for 1.4 seconds and deal 100 bonus damage.  Bash pierces evasion. Bash chance for ranged heroes is 10%.\nPassive: Damage Block Grants a 50% chance to block 70 damage from incoming attacks on melee heroes, and 35 damage on ranged.",
-    "notes": "The stun is melee range.\nDoes not stack with other bashes.\nThe following heroes cannot trigger Bash on this item: Spirit Breaker, Faceless Void, Slardar, and Troll Warlord.",
+    "desc": "Active: Overwhelm Stuns a target enemy unit for 2 seconds. Pierces Spell Immunity.Range: 140\nPassive: Bash Grants melee heroes a 25% chance on hit to stun the target for 1.4 seconds and deal 100 bonus magical damage.  Bash pierces evasion. Bash chance for ranged heroes is 10%.\nPassive: Damage Block Grants a 50% chance to block 70 damage from incoming attacks on melee heroes, and 35 damage on ranged.",
+    "notes": "The stun is melee range.\nDoes not stack with other bashes.\nThe following heroes cannot trigger Bash on this item: Spirit Breaker, Faceless Void, Slardar, and Troll Warlord.\nMultiple sources of damage block do not stack.",
     "attrib": [
       {
         "key": "bonus_health",
@@ -8419,6 +8425,12 @@
         "key": "stun_duration",
         "header": "STUN DURATION:",
         "value": "2",
+        "generated": true
+      },
+      {
+        "key": "tooltip_range",
+        "header": "TOOLTIP RANGE:",
+        "value": "140",
         "generated": true
       }
     ],
@@ -8595,7 +8607,7 @@
     "dname": "Tranquil Boots",
     "qual": "rare",
     "cost": 950,
-    "desc": "Passive: Break Whenever you attack or are attacked, the bonus %bonus_health_health% HP regen is lost and the movement speed bonus is reduced to 65 for 13 seconds.Flat movement speed bonuses from multiple pairs of boots do not stack.",
+    "desc": "Passive: Break Whenever you attack or are attacked, the bonus 13 HP regen is lost and the movement speed bonus is reduced to 65 for 13 seconds.\nFlat movement speed bonuses from multiple pairs of boots do not stack.",
     "notes": "",
     "attrib": [
       {
@@ -8674,7 +8686,7 @@
     "img": "/apps/dota2/images/items/shadow_amulet_lg.png?3",
     "dname": "Shadow Amulet",
     "cost": 1300,
-    "desc": "Active: FadeGrants invisibility to you or a target allied hero as long as target unit remains still.  Has a 1.25 second fade time, and breaks instantly upon moving. There is no cooldown when using this item on yourself.",
+    "desc": "Active: FadeGrants invisibility to you or a target allied hero as long as the target unit remains still.  Has a 1.25 second fade time, and breaks instantly upon moving. There is no cooldown when using this item on yourself.Range: 600",
     "notes": "",
     "attrib": [
       {
@@ -8687,6 +8699,12 @@
         "key": "fade_time",
         "header": "FADE TIME:",
         "value": "1.25",
+        "generated": true
+      },
+      {
+        "key": "tooltip_range",
+        "header": "TOOLTIP RANGE:",
+        "value": "600",
         "generated": true
       }
     ],

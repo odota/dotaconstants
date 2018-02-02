@@ -322,7 +322,7 @@
     "dname": "Enfeeble",
     "behavior": "Unit Target",
     "bkbpierce": "No",
-    "desc": "Weakens an enemy unit, reducing its physical damage.  Lasts 20 seconds.",
+    "desc": "Weakens an enemy unit, reducing its physical damage.",
     "attrib": [
       {
         "key": "enfeeble_attack_reduction",
@@ -332,6 +332,16 @@
           "60",
           "90",
           "120"
+        ]
+      },
+      {
+        "key": "enfeeble_tooltip_duration",
+        "header": "DURATION:",
+        "value": [
+          "14",
+          "16",
+          "18",
+          "20"
         ]
       }
     ],
@@ -1101,7 +1111,7 @@
       {
         "key": "blade_dance_crit_mult",
         "header": "CRITICAL DAMAGE:",
-        "value": "200%"
+        "value": "180%"
       }
     ],
     "img": "/apps/dota2/images/abilities/juggernaut_blade_dance_md.png"
@@ -1304,7 +1314,7 @@
       },
       {
         "key": "torrent_damage",
-        "header": "TORRENT DAMAGE:",
+        "header": "DAMAGE:",
         "value": [
           "75",
           "150",
@@ -1469,7 +1479,7 @@
       {
         "key": "tooltip_delay",
         "header": "IMPACT DELAY:",
-        "value": "2.7"
+        "value": "3.1"
       },
       {
         "key": "ghostship_distance",
@@ -1840,6 +1850,16 @@
         "header": "TICK INTERVAL:",
         "value": "0.1",
         "generated": true
+      },
+      {
+        "key": "movespeed",
+        "header": "MOVEMENT SLOW:",
+        "value": [
+          "14%",
+          "16%",
+          "18%",
+          "20%"
+        ]
       }
     ],
     "mc": "10",
@@ -2221,7 +2241,7 @@
     "behavior": "Unit Target",
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Launches a surge of water toward an enemy unit, stunning and knocking back the target based on Morphling's strength. If his strength is 50% higher than his agility, the maximum stun is dealt.",
+    "desc": "Launches a surge of water toward an enemy unit, stunning and knocking back the target based on Morphling's strength. If his strength is 50% higher than his agility, the maximum stun/knockback is dealt.",
     "attrib": [
       {
         "key": "stun_min",
@@ -2388,7 +2408,7 @@
     "dname": "Morph",
     "behavior": "Unit Target",
     "bkbpierce": "Yes",
-    "desc": "Morphling changes his form to match the targeted enemy, gaining their basic abilities.",
+    "desc": "Morphling changes his form to match the targeted enemy, gaining their basic abilities.\n\nDISPEL TYPE: Basic Dispel",
     "attrib": [
       {
         "key": "duration",
@@ -2396,11 +2416,7 @@
         "value": "20"
       }
     ],
-    "mc": [
-      "75",
-      "100",
-      "125"
-    ],
+    "mc": "50",
     "cd": [
       "160",
       "100",
@@ -2412,7 +2428,8 @@
     "dname": "Morph Replicate",
     "behavior": [
       "No Target",
-      "Hidden"
+      "Hidden",
+      "Instant Cast"
     ],
     "desc": "Morphling switches into his replication, instantly taking its position.",
     "attrib": [],
@@ -2634,9 +2651,9 @@
         "key": "necromastery_max_souls",
         "header": "MAX SOULS:",
         "value": [
-          "18",
-          "24",
-          "30",
+          "12",
+          "20",
+          "28",
           "36"
         ]
       },
@@ -3438,7 +3455,12 @@
       {
         "key": "rot_slow",
         "header": "MOVE SLOW:",
-        "value": "-30%"
+        "value": [
+          "-20%",
+          "-24%",
+          "-28%",
+          "-32%"
+        ]
       },
       {
         "key": "rot_damage",
@@ -3564,7 +3586,12 @@
       "135",
       "160"
     ],
-    "cd": "8",
+    "cd": [
+      "14",
+      "12",
+      "10",
+      "8"
+    ],
     "img": "/apps/dota2/images/abilities/shadow_shaman_ether_shock_md.png"
   },
   "shadow_shaman_voodoo": {
@@ -3619,9 +3646,9 @@
         "key": "total_damage",
         "header": "TOTAL DAMAGE:",
         "value": [
-          "120",
-          "200",
-          "280",
+          "60",
+          "160",
+          "260",
           "360"
         ]
       },
@@ -4922,7 +4949,7 @@
       },
       {
         "key": "sand_storm_damage",
-        "header": "SANDSTORM DAMAGE:",
+        "header": "SAND STORM DAMAGE:",
         "value": [
           "40",
           "60",
@@ -5136,7 +5163,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "Yes",
-    "desc": "Grabs the nearest unit in a 275 radius around Tiny, ally or enemy, and launches it at the target unit or rune to deal damage where they land.  If the tossed unit is an enemy, it will take an extra 20% damage.",
+    "desc": "Grabs the nearest unit in a 275 radius around Tiny, ally or enemy, and launches it at the target unit or rune to deal damage where they land.  If the tossed unit is an enemy, it will take an extra 30% damage.",
     "attrib": [
       {
         "key": "duration",
@@ -5189,7 +5216,7 @@
       "110",
       "120"
     ],
-    "cd": "8",
+    "cd": "11",
     "img": "/apps/dota2/images/abilities/tiny_toss_md.png"
   },
   "tiny_craggy_exterior": {
@@ -5267,7 +5294,8 @@
     "behavior": [
       "Unit Target",
       "Point Target",
-      "Hidden"
+      "Hidden",
+      null
     ],
     "dmg_type": "Physical",
     "bkbpierce": "No",
@@ -5311,7 +5339,7 @@
   "tiny_grow": {
     "dname": "Grow",
     "behavior": "Passive",
-    "desc": "Tiny gains craggy mass, increases his power and causes his to shrug off debuffs.",
+    "desc": "Tiny gains craggy mass, increases his power and causes him to shrug off debuffs.",
     "attrib": [
       {
         "key": "status_resistance",
@@ -5460,7 +5488,8 @@
     "behavior": [
       "Point Target",
       "AOE",
-      "Hidden"
+      "Hidden",
+      null
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
@@ -5732,7 +5761,7 @@
     "attrib": [
       {
         "key": "gush_damage",
-        "header": "GUSH DAMAGE:",
+        "header": "DAMAGE:",
         "value": [
           "110",
           "160",
@@ -6435,7 +6464,7 @@
     "attrib": [
       {
         "key": "powershot_damage",
-        "header": "POWERSHOT DAMAGE:",
+        "header": "DAMAGE:",
         "value": [
           "180",
           "260",
@@ -6544,7 +6573,7 @@
         ]
       }
     ],
-    "mc": "60",
+    "mc": "50",
     "cd": "12",
     "img": "/apps/dota2/images/abilities/windrunner_windrun_md.png"
   },
@@ -9471,8 +9500,8 @@
         "header": "DRAIN PER SECOND:",
         "value": [
           "150",
-          "200",
-          "250"
+          "225",
+          "300"
         ]
       },
       {
@@ -9484,15 +9513,6 @@
         "key": "duration_tooltip",
         "header": "MAX DURATION:",
         "value": "10"
-      },
-      {
-        "key": "health_drain_scepter",
-        "header": "SCEPTER DRAIN PER SECOND:",
-        "value": [
-          "180",
-          "240",
-          "300"
-        ]
       },
       {
         "key": "scepter_cooldown",
@@ -9573,6 +9593,16 @@
           "40%",
           "55%",
           "70%"
+        ]
+      },
+      {
+        "key": "tooltip_range",
+        "header": "RANGE:",
+        "value": [
+          "525",
+          "750",
+          "975",
+          "1200"
         ]
       }
     ],
@@ -11136,10 +11166,10 @@
       }
     ],
     "mc": [
+      "80",
       "100",
-      "125",
-      "140",
-      "160"
+      "120",
+      "140"
     ],
     "cd": "9",
     "img": "/apps/dota2/images/abilities/leshrac_split_earth_md.png"
@@ -11449,7 +11479,7 @@
       {
         "key": "treant_large_damage_bonus",
         "header": "TREANT LARGE DAMAGE BONUS:",
-        "value": "96",
+        "value": "108",
         "generated": true
       }
     ],
@@ -11524,8 +11554,8 @@
       "275"
     ],
     "cd": [
-      "90",
-      "75",
+      "70",
+      "65",
       "60"
     ],
     "img": "/apps/dota2/images/abilities/furion_wrath_of_nature_md.png"
@@ -12351,7 +12381,7 @@
   "enchantress_enchant": {
     "dname": "Enchant",
     "behavior": "Unit Target",
-    "desc": "Enchantress charms an enemy. If the enemy is a hero, they are slowed. If the enemy is a creep, she brings it under her control. If cast on a creep already under her control, she refreshes its enchant duration.",
+    "desc": "Enchantress charms an enemy. If the enemy is a hero, they are slowed. If the enemy is a creep, she brings it under her control. If cast on a creep already under her control, she refreshes its enchant duration.\n\nDISPEL TYPE: Basic Dispel",
     "attrib": [
       {
         "key": "dominate_duration",
@@ -12596,7 +12626,7 @@
     "behavior": "Unit Target",
     "dmg_type": "Magical",
     "bkbpierce": "Yes",
-    "desc": "Huskar draws upon his health to break an enemy's life, leaping at a target within attack range to shatter a percentage of that hero's current health, and slowing them.  While leaping, Huskar is Spell Immune.\n\nUpgradable by Aghanim's Scepter.",
+    "desc": "Huskar draws upon his health to break an enemy's life, leaping at a target within attack range to shatter a percentage of that hero's current health, and slowing them.  While leaping, Huskar is Spell Immune.\n\nDISPEL TYPE: Basic Dispel\n\nUpgradable by Aghanim's Scepter.",
     "attrib": [
       {
         "key": "health_cost_percent",
@@ -12809,7 +12839,7 @@
   "night_stalker_darkness": {
     "dname": "Darkness",
     "behavior": "No Target",
-    "desc": "Night Stalker smothers the sun and summons instant darkness, so that he might use his powers at their fullest. While Darkness is in effect, enemy heroes, units, wards and buildings have their vision range reduced to 675. \n\nUpgradable by Aghanim's Scepter.",
+    "desc": "Night Stalker smothers the sun and summons instant darkness, so that he might use his powers at their fullest. While Darkness is in effect, enemy heroes, units, wards, and buildings have their vision range reduced. \n\nUpgradable by Aghanim's Scepter.",
     "attrib": [
       {
         "key": "duration",
@@ -12833,9 +12863,8 @@
       },
       {
         "key": "fixed_vision_others",
-        "header": "FIXED VISION OTHERS:",
-        "value": "800",
-        "generated": true
+        "header": "BUILDING AND WARD VISION RANGE:",
+        "value": "800"
       }
     ],
     "mc": "0",
@@ -14092,7 +14121,8 @@
   "chen_holy_persuasion": {
     "dname": "Holy Persuasion",
     "behavior": "Unit Target",
-    "desc": "Chen takes control of an enemy or neutral creep. If the persuaded creep's base health is naturally below the health minimum, its base health will be raised to the health minimum.\n\nCan be cast on allies to teleport them back to base. If cast on Chen, all units controlled by Chen through Holy Persuasion will be teleported to him.  \n\nUpgradable by Aghanim's Scepter, allowing Chen to persuade Ancient Creeps. The number of Ancient Creeps that can be persuaded is based on the level of Hand of God.",
+    "bkbpierce": "Yes",
+    "desc": "Chen takes control of an enemy or neutral creep. If the persuaded creep's base health is naturally below the health minimum, its base health will be raised to the health minimum.\n\nCan be cast on allies to teleport them back to base. If cast on Chen, all units controlled by Chen will be teleported to him.  \n\nUpgradable by Aghanim's Scepter.",
     "attrib": [
       {
         "key": "max_units",
@@ -14137,7 +14167,7 @@
   "chen_hand_of_god": {
     "dname": "Hand of God",
     "behavior": "No Target",
-    "desc": "Heals all allied heroes on the map as well as all units under Chen's control.\n\nUpgradable by Aghanim's Scepter.",
+    "desc": "Heals all allied heroes on the map as well as all units under Chen's control.",
     "attrib": [
       {
         "key": "heal_amount",
@@ -14675,7 +14705,7 @@
       "Point Target"
     ],
     "bkbpierce": "No",
-    "desc": "Creates a vortex of icy energy that slows movement speed and increases magic damage done in its range. Lasts 16 seconds.",
+    "desc": "Creates a vortex of icy energy that slows movement speed and increases magic damage done in its range.",
     "attrib": [
       {
         "key": "radius",
@@ -14707,6 +14737,11 @@
         "header": "VISION AOE:",
         "value": "200",
         "generated": true
+      },
+      {
+        "key": "vortex_duration",
+        "header": "DURATION:",
+        "value": "16"
       }
     ],
     "mc": [
@@ -14726,7 +14761,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "Yes",
-    "desc": "A frigid gust enchants allied heroes, granting them bonus magical damage for a given number of physical attacks. Each attack slows the enemy movement speed.  Ancient Apparition always receives the buff. Lasts 30 seconds.",
+    "desc": "A frigid gust enchants allied heroes, granting them bonus magical damage for a given number of physical attacks. Each attack slows the enemy movement speed.  Ancient Apparition always receives the buff.",
     "attrib": [
       {
         "key": "radius",
@@ -14762,6 +14797,16 @@
         "key": "move_speed_duration",
         "header": "SLOW DURATION:",
         "value": "0.3"
+      },
+      {
+        "key": "buff_duration",
+        "header": "BUFF DURATION:",
+        "value": [
+          "20",
+          "24",
+          "28",
+          "32"
+        ]
       }
     ],
     "mc": [
@@ -15210,7 +15255,7 @@
       "Instant Cast"
     ],
     "bkbpierce": "Yes",
-    "desc": "Ursa goes into a frenzy, multiplying his Fury Swipes damage and causing him to take 80% less damage. Removes any existing debuffs.\n\nUpgradable by Aghanim's Scepter.",
+    "desc": "Ursa goes into a frenzy, multiplying his Fury Swipes damage and causing him to take 80% less damage. Removes any existing debuffs.\n\nUpgradable by Aghanim's Scepter.\n\nDISPEL TYPE: Strong Dispel",
     "attrib": [
       {
         "key": "enrage_multiplier",
@@ -15362,7 +15407,7 @@
           "34",
           "34",
           "26",
-          "21"
+          "26"
         ],
         "generated": true
       },
@@ -15803,8 +15848,8 @@
         "key": "base_attack_time",
         "header": "BASE ATTACK TIME:",
         "value": [
-          "1.4",
-          "1.2",
+          "1.3",
+          "1.15",
           "1"
         ]
       },
@@ -15965,7 +16010,8 @@
     "dname": "Invoke",
     "behavior": [
       "No Target",
-      "Instant Cast"
+      "Instant Cast",
+      null
     ],
     "desc": "Combines the properties of the elements currently being manipulated to create a new spell for Invoker to use.  Click the help button to see the list of possible spells.\n\nUpgradable by Aghanim's Scepter.",
     "attrib": [
@@ -16006,6 +16052,7 @@
     "behavior": [
       "Unit Target",
       "Hidden",
+      null,
       null
     ],
     "dmg_type": "Magical",
@@ -16077,6 +16124,7 @@
       "Instant Cast",
       "Hidden",
       null,
+      null,
       null
     ],
     "bkbpierce": "No",
@@ -16136,6 +16184,7 @@
     "behavior": [
       "Point Target",
       "Hidden",
+      null,
       null
     ],
     "dmg_type": "Magical",
@@ -16229,7 +16278,8 @@
       "Point Target",
       "Hidden",
       null,
-      "AOE"
+      "AOE",
+      null
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
@@ -16274,6 +16324,7 @@
     "behavior": [
       "Unit Target",
       "Hidden",
+      null,
       null
     ],
     "desc": "Invoker infuses an ally with an immense surge of energy, increasing their attack speed based on the level of Wex and their damage based on the level of Exort.",
@@ -16321,6 +16372,7 @@
     "behavior": [
       "Point Target",
       "Hidden",
+      null,
       null
     ],
     "dmg_type": "Magical",
@@ -16418,7 +16470,8 @@
       "Point Target",
       "Hidden",
       null,
-      "AOE"
+      "AOE",
+      null
     ],
     "dmg_type": "Pure",
     "bkbpierce": "Yes",
@@ -16470,6 +16523,7 @@
     "behavior": [
       "No Target",
       "Hidden",
+      null,
       null
     ],
     "bkbpierce": "No",
@@ -16597,6 +16651,7 @@
     "behavior": [
       "No Target",
       "Hidden",
+      null,
       null
     ],
     "dmg_type": "Magical",
@@ -16684,6 +16739,7 @@
     "behavior": [
       "Point Target",
       "Hidden",
+      null,
       null
     ],
     "dmg_type": "Magical",
@@ -17418,9 +17474,9 @@
     ],
     "mc": "100",
     "cd": [
-      "120",
-      "90",
-      "60"
+      "130",
+      "105",
+      "80"
     ],
     "img": "/apps/dota2/images/abilities/lycan_shapeshift_md.png"
   },
@@ -17699,7 +17755,8 @@
     "dname": "Druid Form",
     "behavior": [
       "No Target",
-      "Hidden"
+      "Hidden",
+      null
     ],
     "desc": "Return to Druid form.\n\nUpgradable by Aghanim's Scepter.",
     "attrib": [
@@ -17719,6 +17776,7 @@
       "No Target",
       null,
       "Hidden",
+      null,
       null
     ],
     "desc": "Adds attack damage and armor to the Lone Druid as well as any nearby units under his control.",
@@ -17918,7 +17976,7 @@
   "brewmaster_drunken_brawler": {
     "dname": "Drunken Brawler",
     "behavior": "Passive",
-    "desc": "Gives a chance to avoid attacks and to deal critical damage. Drunken Brawler will always trigger if you have not attacked, or have not been attacked, in the last several seconds.\n\nStacks diminishingly with other sources of Evasion.",
+    "desc": "Gives a chance to avoid attacks and to deal critical damage. Drunken Brawler will always trigger if you have not attacked, or have not been attacked, in the last several seconds.",
     "attrib": [
       {
         "key": "dodge_chance",
@@ -18229,7 +18287,7 @@
     ],
     "dmg_type": "Pure",
     "bkbpierce": "No",
-    "desc": "Captures the soul of a random enemy in an area, amplifies all damage they take. Units under the effect of Disruption can still be affected by Soul Catcher. If the unit dies under the effect of Soul Catcher, an illusions of that unit is created under your control until the enemy respawns.",
+    "desc": "Captures the soul of a random enemy in an area, amplifies all damage they take. Units under the effect of Disruption can still be affected by Soul Catcher.",
     "attrib": [
       {
         "key": "bonus_damage_taken",
@@ -18987,7 +19045,8 @@
     "dname": "Eyes In The Forest",
     "behavior": [
       "Unit Target",
-      "Hidden"
+      "Hidden",
+      null
     ],
     "dmg_type": "Magical",
     "desc": "Treant Protector enchants a tree, which grants him unobstructed vision in that location. If Overgrowth is cast, units within a radius of an enchanted tree will be entangled and damaged.",
@@ -19813,7 +19872,8 @@
     "dname": "Null Field",
     "behavior": [
       "No Target",
-      "Instant Cast"
+      "Instant Cast",
+      null
     ],
     "desc": "Rubick's mastery of the arcane creates an aura that nullifies nearby enemy senses or increases his own. Can be toggled offensively or defensively to reduce enemy magic resistance or increase allied magic resistance.",
     "attrib": [
@@ -20326,7 +20386,8 @@
     "dname": "Burrow",
     "behavior": [
       "No Target",
-      "Hidden"
+      "Hidden",
+      null
     ],
     "desc": "Nyx Assassin buries himself beneath the battlefield over a short duration. Once burrowed, Spiked Carapace instantly stuns nearby enemies when cast, the range of Mana Burn and Impale is increased, and Impale's cooldown is decreased. While burrowed, Nyx Assassin is stationary, unable to attack, and invisible. His health and mana regeneration are also increased, and he gains damage reduction from all damage sources.",
     "attrib": [
@@ -20847,6 +20908,7 @@
       "Channeled",
       "Unit Target",
       "No Target",
+      null,
       null
     ],
     "desc": "After a short delay, teleports the targeted friendly hero to your location.  If the targeted friendly hero takes player based damage during this time, the ability is interrupted.",
@@ -20870,6 +20932,7 @@
     "behavior": [
       "AOE",
       "Point Target",
+      null,
       null
     ],
     "bkbpierce": "No",
@@ -20935,7 +20998,8 @@
     "dname": "Illuminate",
     "behavior": [
       "Point Target",
-      "Hidden"
+      "Hidden",
+      null
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
@@ -21538,6 +21602,7 @@
     "dname": "Spirits In",
     "behavior": [
       "No Target",
+      null,
       null
     ],
     "desc": "Calls the spirits closer to you. Can be toggled on and off.",
@@ -21548,6 +21613,7 @@
     "dname": "Spirits Out",
     "behavior": [
       "No Target",
+      null,
       null
     ],
     "desc": "Sends the spirits farther away from you. Can be toggled on and off.",
@@ -21775,7 +21841,7 @@
     "dname": "Split Shot",
     "behavior": "Passive",
     "bkbpierce": "Yes",
-    "desc": "Medusa magically splits her shot into several arrows. These arrows deal a lower percent of her normal damage.\n\nThe extra targets will not receive other attack effects (such as critical strike) and Unique Attack Modifiers.",
+    "desc": "Medusa magically splits her shot into several arrows. These arrows deal a lower percent of her normal damage.\n\nThe extra targets will not receive other attack effects (such as critical strike).",
     "attrib": [
       {
         "key": "damage_modifier",
@@ -22892,7 +22958,8 @@
       "Point Target",
       "AOE",
       null,
-      "Hidden"
+      "Hidden",
+      null
     ],
     "dmg_type": "Pure",
     "bkbpierce": "No",
@@ -23480,7 +23547,8 @@
     "dname": "Walrus Kick",
     "behavior": [
       "Unit Target",
-      "Hidden"
+      "Hidden",
+      null
     ],
     "dmg_type": "Magical",
     "bkbpierce": "Yes",
@@ -24009,14 +24077,13 @@
       },
       {
         "key": "wake_damage_limit",
-        "header": "WAKE DAMAGE LIMIT:",
+        "header": "WAKEUP DAMAGE THRESHOLD:",
         "value": [
           "50",
           "100",
           "150",
           "200"
-        ],
-        "generated": true
+        ]
       }
     ],
     "mc": "100",
@@ -24637,10 +24704,10 @@
         "key": "bonus_hero_damage",
         "header": "BONUS HERO DAMAGE:",
         "value": [
-          "20",
-          "40",
-          "60",
-          "80"
+          "25",
+          "50",
+          "75",
+          "100"
         ]
       },
       {
@@ -24783,6 +24850,7 @@
     "dname": "Activate Fire Remnant",
     "behavior": [
       "Point Target",
+      null,
       null
     ],
     "dmg_type": "Magical",
@@ -24847,7 +24915,7 @@
       {
         "key": "radius",
         "header": "RADIUS:",
-        "value": "160",
+        "value": "180",
         "generated": true
       },
       {
@@ -25053,6 +25121,7 @@
     "dname": "Stone Remnant",
     "behavior": [
       "Point Target",
+      null,
       null
     ],
     "desc": "Call a Stone Remnant to the target location.  Stone Remnants have no vision and are invulnerable, and can be used with Earth Spirit's abilities.  Calling a Stone Remnant consumes a charge, which recharge over time.",
@@ -25081,7 +25150,8 @@
     "dname": "Enchant Remnant",
     "behavior": [
       "Unit Target",
-      "Hidden"
+      "Hidden",
+      null
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
@@ -26050,7 +26120,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "CHANNELED - Gathers Oracle's power into a bolt of scouring energy that, when released, damages, roots, and purges enemies of buffs in an area around the target. If target is an ally it will only purge. Can be channeled for up to 2.5 seconds. The stop duration is equal to the time spent channeling.\n\nDISPEL TYPE: Basic Dispel",
+    "desc": "CHANNELED - Gathers Oracle's power into a bolt of scouring energy that, when released, damages, roots, and purges enemies of buffs in an area around the target. If target is an ally it will only purge. Can be channeled for up to 2.5 seconds. The root duration is equal to the time spent channeling.\n\nDISPEL TYPE: Basic Dispel",
     "attrib": [
       {
         "key": "damage",
@@ -26090,7 +26160,7 @@
         "generated": true
       }
     ],
-    "mc": "110",
+    "mc": "75",
     "cd": [
       "15",
       "12",
@@ -26516,7 +26586,7 @@
       null
     ],
     "dmg_type": "Physical",
-    "desc": "Monkey King creates a circular formation of soldiers that spread out from his position. If Monkey King leaves the area his soldiers disperse. The soldiers have Monkey King's attack and only target heroes. Monkey King grants bonus armor for the spell's duration.",
+    "desc": "Monkey King creates a circular formation of soldiers that spread out from his position. If Monkey King leaves the area his soldiers disperse. The soldiers have Monkey King's attack and only target heroes. Monkey King is granted bonus armor for the spell's duration.",
     "attrib": [
       {
         "key": "first_radius",
@@ -26649,6 +26719,7 @@
     "dname": "Swashbuckle",
     "behavior": "Point Target",
     "dmg_type": "Physical",
+    "bkbpierce": "Yes",
     "desc": "Vector Targeted. Pangolier dashes along the target line, then slashes all enemies in the drawn direction with several quick swipes.\n\nHeartpiercer has a chance to activate from this damage.",
     "attrib": [
       {
@@ -26685,9 +26756,8 @@
       },
       {
         "key": "start_radius",
-        "header": "START RADIUS:",
-        "value": "125",
-        "generated": true
+        "header": "SLASH WIDTH:",
+        "value": "125"
       },
       {
         "key": "end_radius",
@@ -26723,7 +26793,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Pangolier jumps in the air and slams back to the ground, damaging all enemies in a radius. For each enemy hero hit, he gains a percentage of incoming damage reduction for a short time.\n\nForward movement is maintained if Shield Crash is used while Rolling Thunder is active, and allows Rolling Thunder to clear walls or cliffs.",
+    "desc": "Pangolier jumps in the air and slams back to the ground, damaging all enemies in a radius. For each enemy hero hit, he gains a percentage of incoming damage reduction for a short time.\n\nForward movement is maintained if Shield Crash is used while Rolling Thunder is active, and allows Rolling Thunder to clear walls or cliffs.\n\nDISPEL TYPE: Basic Dispel",
     "attrib": [
       {
         "key": "damage",
@@ -26799,6 +26869,7 @@
   "pangolier_heartpiercer": {
     "dname": "Heartpiercer",
     "behavior": "Passive",
+    "bkbpierce": "No",
     "desc": "Pangolier reads his enemies perfectly, deftly slipping his blade past defenses. Each attack has a chance to negate enemy armor and slow the target for a duration, activating after a short delay.",
     "attrib": [
       {
@@ -26923,9 +26994,9 @@
     ],
     "mc": "100",
     "cd": [
-      "50",
-      "45",
-      "40"
+      "70",
+      "65",
+      "60"
     ],
     "img": "/apps/dota2/images/abilities/pangolier_gyroshell_md.png"
   },
@@ -26949,17 +27020,16 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Dark Willow creates a maze of brambles in the target area.  Enemies that walk into a bramble are rooted and take damage over time.",
+    "desc": "Dark Willow creates a maze of brambles that grow in the target area after 0.5 seconds.  Enemies that walk into a bramble are rooted and take damage over time.",
     "attrib": [
       {
         "key": "placement_range",
-        "header": "PLACEMENT RANGE:",
-        "value": "500",
-        "generated": true
+        "header": "MAZE RADIUS:",
+        "value": "500"
       },
       {
         "key": "placement_count",
-        "header": "COUNT:",
+        "header": "BRAMBLE COUNT:",
         "value": "8"
       },
       {
@@ -26979,9 +27049,8 @@
       },
       {
         "key": "latch_range",
-        "header": "LATCH RANGE:",
-        "value": "90",
-        "generated": true
+        "header": "BRAMBLE LATCH RADIUS:",
+        "value": "90"
       },
       {
         "key": "latch_damage",
@@ -27030,8 +27099,7 @@
     "dname": "Bedlam",
     "behavior": [
       "No Target",
-      "Instant Cast",
-      null
+      "Instant Cast"
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
@@ -27197,7 +27265,6 @@
   "dark_willow_cursed_crown": {
     "dname": "Cursed Crown",
     "behavior": "Unit Target",
-    "dmg_type": "Magical",
     "bkbpierce": "No",
     "desc": "Dark Willow casts an ancient fae curse on the target. After a delay, the target and nearby enemies are stunned.",
     "attrib": [
@@ -27701,6 +27768,12 @@
         "key": "damage",
         "header": "DAMAGE:",
         "value": "70",
+        "generated": true
+      },
+      {
+        "key": "damage_growth",
+        "header": "DAMAGE GROWTH:",
+        "value": "8",
         "generated": true
       }
     ],
@@ -30964,7 +31037,8 @@
       "AOE",
       null,
       null,
-      "Instant Cast"
+      "Instant Cast",
+      null
     ],
     "dmg_type": "Magical",
     "desc": "Detonate all remote mines in the target area.",
@@ -31004,7 +31078,8 @@
     "dname": "Minefield Sign",
     "behavior": [
       "Point Target",
-      "AOE"
+      "AOE",
+      null
     ],
     "desc": "Plant a warning sign to remind enemies to step lightly. Only one sign can exist at a time. Lasts 180 seconds.\n\nUpgradable by Aghanim's Scepter.",
     "attrib": [
@@ -31825,6 +31900,9 @@
   "special_bonus_mp_600": {
     "dname": "+600 Mana"
   },
+  "special_bonus_mp_700": {
+    "dname": "+700 Mana"
+  },
   "special_bonus_mp_800": {
     "dname": "+800 Mana"
   },
@@ -32642,7 +32720,7 @@
     "dname": "-0.3s Battery Assault Interval"
   },
   "special_bonus_unique_clockwerk_2": {
-    "dname": "+125 Rocket Flare Damage"
+    "dname": "+%value% Rocket Flare Damage"
   },
   "special_bonus_unique_clockwerk_3": {
     "dname": "+30 Battery Assault Damage"
@@ -33176,7 +33254,7 @@
     "dname": "+1 Forged Spirit Summoned"
   },
   "special_bonus_unique_invoker_2": {
-    "dname": "AoE Deafening Blast"
+    "dname": "Radial Deafening Blast"
   },
   "special_bonus_unique_invoker_3": {
     "dname": "-16s Tornado Cooldown"
@@ -33203,13 +33281,13 @@
     "dname": "+50 Mist Coil Heal/Damage"
   },
   "special_bonus_unique_abaddon_3": {
-    "dname": "+25% Curse of Avernus MS Slow"
+    "dname": "+25% Curse of Avernus MS/AS Slow"
   },
   "special_bonus_unique_alchemist": {
-    "dname": "-5s Unstable Concoction Cooldown"
+    "dname": "-8s Unstable Concoction Cooldown"
   },
   "special_bonus_unique_alchemist_2": {
-    "dname": "+360 Unstable Concoction Damage"
+    "dname": "+400 Unstable Concoction Damage"
   },
   "special_bonus_unique_alchemist_3": {
     "dname": "-0.2 Chemical Rage Base Attack Time"
@@ -33383,10 +33461,13 @@
     "dname": "+100 Powershot Damage"
   },
   "special_bonus_unique_windranger_4": {
-    "dname": "+20% Ministun Focus Fire"
+    "dname": "+35% Ministun Focus Fire"
   },
   "special_bonus_unique_windranger_5": {
-    "dname": "+1 Shackleshot Target"
+    "dname": "+2 Shackleshot Target"
+  },
+  "special_bonus_unique_windranger_6": {
+    "dname": "+0.5s Shackleshot Duration"
   },
   "special_bonus_unique_phantom_lancer": {
     "dname": "+500 Phantom Rush Range"
@@ -33602,10 +33683,10 @@
     "dname": "+2.5s Stone Gaze Duration"
   },
   "special_bonus_unique_medusa_2": {
-    "dname": "+7 Split Shot target"
+    "dname": "+7 Split Shot Targets"
   },
   "special_bonus_unique_medusa_3": {
-    "dname": "+15% Mystic Snake Mana Steal"
+    "dname": "+20% Mystic Snake Mana Steal"
   },
   "special_bonus_unique_medusa_4": {
     "dname": "Split Shot Uses Modifiers"
@@ -33624,7 +33705,7 @@
     "dname": "+2 Intelligence Steal"
   },
   "special_bonus_unique_silencer_3": {
-    "dname": "+20% Glaives of Wisdom"
+    "dname": "+20% Glaives of Wisdom Damage"
   },
   "special_bonus_unique_silencer_4": {
     "dname": "+2s Global Silence"
@@ -33645,7 +33726,7 @@
     "dname": "Exorcism Grants Haste"
   },
   "special_bonus_unique_phantom_assassin": {
-    "dname": "Double Strike Stifling Dagger"
+    "dname": "+1 Multishot Stifling Dagger"
   },
   "special_bonus_unique_phantom_assassin_2": {
     "dname": "+5% Coup de Grace"
@@ -33693,7 +33774,7 @@
     "dname": "+35 Knockback Distance Headshot"
   },
   "special_bonus_unique_sniper_4": {
-    "dname": "-1.5s Assassinate"
+    "dname": "-1.5s Assassinate Cast Time"
   },
   "special_bonus_unique_magnus": {
     "dname": "-4s Shockwave Cooldown"
@@ -33918,7 +33999,7 @@
     "dname": "+2s Decrepify Duration"
   },
   "special_bonus_unique_pugna_6": {
-    "dname": "+1 Nether Ward Health"
+    "dname": "+2 Nether Ward Health"
   },
   "special_bonus_unique_timbersaw": {
     "dname": "+8% Whirling Death Attribute Reduction"
@@ -33948,13 +34029,13 @@
     "dname": "+350 Spiders Health"
   },
   "special_bonus_unique_broodmother_3": {
-    "dname": "+75 Spawn Spiderling Damage"
+    "dname": "+75 Spawn Spiderlings Damage"
   },
   "special_bonus_unique_broodmother_4": {
     "dname": "+20 Spiders Attack Damage"
   },
   "special_bonus_unique_chen_1": {
-    "dname": "+4 Holy Persuasion Max Count"
+    "dname": "+4 Holy Persuasion Max Units"
   },
   "special_bonus_unique_chen_2": {
     "dname": "+400 Hand of God Heal"
@@ -33963,7 +34044,7 @@
     "dname": "-10s Test of Faith Cooldown"
   },
   "special_bonus_unique_chen_4": {
-    "dname": "+1000 Creep Min Health"
+    "dname": "+1000 Holy Persuasion Minimum Health"
   },
   "special_bonus_unique_lone_druid_1": {
     "dname": "+200 Spirit Bear Damage"
