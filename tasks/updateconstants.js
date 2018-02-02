@@ -435,6 +435,21 @@ const sources = [
     },
   },
 ];
+
+const patches = JSON.parse(fs.readFileSync('./json/patch.json'))
+const lastPatch = patches[patches.length - 1]
+const today = new Date()
+const dayDifference = Math.ceil(Math.abs(today.getTime() - new Date(lastPatch.date).getTime()) / (1000 * 3600 * 24));
+if (dayDifference >= 14) {
+  const n = Math.floor(dayDifference / 14)
+  for (let i = 0; i < n; i += 1) {
+    const versionNum = parseFloat(patches[patches.length - 1].name, 10) + 0.01
+    const date = new Date(patches[patches.length - 1].date)
+    patches.push({ name: versionNum.toFixed(2), date: new Date(date.getTime() + 60 * 60 * 24 * 1000 * 14) })
+  }
+  fs.writeFileSync('./json/patch.json', JSON.stringify(patches, null, 1))
+}
+
 // "heropickerdata": "http://www.dota2.com/jsfeed/heropickerdata?l=english",
 // "heropediadata": "http://www.dota2.com/jsfeed/heropediadata?feeds=herodata",
 // "leagues": "https://api.opendota.com/api/leagues",
