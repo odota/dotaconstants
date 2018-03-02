@@ -877,14 +877,14 @@
     "img": "/apps/dota2/images/items/boots_lg.png?3",
     "dname": "Boots of Speed",
     "qual": "component",
-    "cost": 400,
+    "cost": 500,
     "desc": "Flat movement speed bonuses from multiple pairs of boots do not stack.",
     "notes": "",
     "attrib": [
       {
         "key": "bonus_movement_speed",
         "header": "+",
-        "value": "40",
+        "value": "50",
         "footer": "Movement Speed"
       }
     ],
@@ -1634,7 +1634,7 @@
     "img": "/apps/dota2/images/items/travel_boots_lg.png?3",
     "dname": "Boots of Travel",
     "qual": "common",
-    "cost": 2400,
+    "cost": 2500,
     "desc": "Active: TeleportTeleports you to an allied non-hero unit or structure. Teleporting to a unit is interrupted if the target unit dies.Shares a cooldown with Town Portal Scroll.\nFlat movement speed bonuses from multiple pairs of boots do not stack.",
     "notes": "",
     "attrib": [
@@ -1670,7 +1670,7 @@
     "img": "/apps/dota2/images/items/travel_boots_2_lg.png?3",
     "dname": "Boots of Travel",
     "qual": "common",
-    "cost": 4400,
+    "cost": 4500,
     "desc": "Active: Teleport Teleports you to any allied structure or unit, including heroes. Teleporting to a unit is interrupted if the target unit dies.Shares a cooldown with Town Portal Scroll.\nFlat movement speed bonuses from multiple pairs of boots do not stack.",
     "notes": "",
     "attrib": [
@@ -1707,14 +1707,14 @@
     "img": "/apps/dota2/images/items/phase_boots_lg.png?3",
     "dname": "Phase Boots",
     "qual": "common",
-    "cost": 1240,
+    "cost": 1340,
     "desc": "Active: Phase Gives 24% increased movement speed on melee heroes, and 20% on ranged heroes, and lets you move through units for 2.5 seconds.\nFlat movement speed bonuses from multiple pairs of boots do not stack.",
     "notes": "",
     "attrib": [
       {
         "key": "bonus_movement_speed",
         "header": "+",
-        "value": "45",
+        "value": "50",
         "footer": "Movement Speed"
       },
       {
@@ -2035,14 +2035,14 @@
     "img": "/apps/dota2/images/items/power_treads_lg.png?3",
     "dname": "Power Treads",
     "qual": "common",
-    "cost": 1350,
+    "cost": 1450,
     "desc": "Active: Switch AttributeSwitches between +10 Strength, +10 Agility, or +10 Intelligence.\nFlat movement speed bonuses from multiple pairs of boots do not stack.",
     "notes": "Power Treads can be built using a Belt of Strength, Band of Elvenskin, or a Robe of the Magi.\nThe attack speed bonus from multiple Power Treads does not stack.",
     "attrib": [
       {
         "key": "bonus_movement_speed",
         "header": "+",
-        "value": "45",
+        "value": "50",
         "footer": "Movement Speed"
       },
       {
@@ -4607,7 +4607,7 @@
     "dname": "Black King Bar",
     "qual": "epic",
     "cost": 3975,
-    "desc": "Active: Avatar Grants Spell Immunity and 100% Magic Damage Resistance.  Duration and cooldown decrease with each use. Duration: 10,9,8,7,6,5 Dispel Type: Basic Dispel",
+    "desc": "Active: Avatar Grants Spell Immunity and 100% Magic Damage Resistance.  Duration decreases with each use. Duration: 10,9,8,7,6,5 Dispel Type: Basic Dispel",
     "notes": "Purchasing another Black King Bar will not reset its immunity duration.\nUsing Black King Bar may remove some positive buffs.",
     "attrib": [
       {
@@ -5191,7 +5191,7 @@
       }
     ],
     "mc": false,
-    "cd": 100,
+    "cd": 90,
     "lore": "",
     "components": [
       "vitality_booster",
@@ -7528,7 +7528,7 @@
     "dname": "Soul Ring",
     "qual": "common",
     "cost": 770,
-    "desc": "Active: Sacrifice Consume 150 health to temporarily gain 150 mana.  Lasts 10 seconds.If the mana gained cannot fit in your mana pool, it creates a buffer of mana that will be used before your mana pool.",
+    "desc": "Active: Sacrifice Consume 170 health to temporarily gain 150 mana.  Lasts 10 seconds.If the mana gained cannot fit in your mana pool, it creates a buffer of mana that will be used before your mana pool.",
     "notes": "If this mana is not used before the duration ends, the extra mana is lost.",
     "attrib": [
       {
@@ -7546,7 +7546,7 @@
       {
         "key": "health_sacrifice",
         "header": "HEALTH SACRIFICE:",
-        "value": "150",
+        "value": "170",
         "generated": true
       },
       {
@@ -7577,7 +7577,7 @@
     "img": "/apps/dota2/images/items/arcane_boots_lg.png?3",
     "dname": "Arcane Boots",
     "qual": "rare",
-    "cost": 1300,
+    "cost": 1400,
     "desc": "Active: Replenish ManaRestores 135 mana to all nearby allies.Radius: 900\nFlat movement speed bonuses from multiple pairs of boots do not stack.",
     "notes": "Does not work on Meepo clones.",
     "attrib": [
@@ -7983,13 +7983,13 @@
     "dname": "Tome of Knowledge",
     "qual": "consumable",
     "cost": 150,
-    "desc": "Use: EnlightenGrants you 500 experience plus 135 per tome consumed by your team.Tomes Used By Team: %customval_team_tomes_used%",
+    "desc": "Use: EnlightenGrants you 700 experience plus 135 per tome consumed by your team.Tomes Used By Team: %customval_team_tomes_used%",
     "notes": "",
     "attrib": [
       {
         "key": "xp_bonus",
         "header": "XP BONUS:",
-        "value": "500",
+        "value": "700",
         "generated": true
       },
       {
@@ -8112,7 +8112,7 @@
     "img": "/apps/dota2/images/items/guardian_greaves_lg.png?3",
     "dname": "Guardian Greaves",
     "qual": "rare",
-    "cost": 5350,
+    "cost": 5450,
     "desc": "Active: MendRestores 250 health and 160 mana to nearby allies, and removes most negative effects from the caster.Radius: 900Dispel Type: Basic Dispel\nPassive: Guardian Aura Provides nearby allies with 3.5 health regeneration and 2 bonus armor. If an allied hero's health falls below 20%, they receive 12 health regeneration and 15 armor.\nFlat movement speed bonuses from multiple pairs of boots do not stack.",
     "notes": "The aura boost only applies to heroes.",
     "attrib": [
@@ -8606,7 +8606,7 @@
     "img": "/apps/dota2/images/items/tranquil_boots_lg.png?3",
     "dname": "Tranquil Boots",
     "qual": "rare",
-    "cost": 950,
+    "cost": 1050,
     "desc": "Passive: Break Whenever you attack or are attacked, the bonus 13 HP regen is lost and the movement speed bonus is reduced to 65 for 13 seconds.\nFlat movement speed bonuses from multiple pairs of boots do not stack.",
     "notes": "",
     "attrib": [
