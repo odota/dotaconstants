@@ -98,8 +98,8 @@
         "key": "mana_void_damage_per_mana",
         "header": "DAMAGE:",
         "value": [
-          "0.6",
-          "0.85",
+          "0.8",
+          "0.95",
           "1.1"
         ]
       },
@@ -174,7 +174,7 @@
       {
         "key": "duration",
         "header": "DURATION:",
-        "value": "10"
+        "value": "12"
       },
       {
         "key": "slow",
@@ -879,9 +879,9 @@
         "header": "RANGE DAMAGE BONUS:",
         "value": [
           "10%",
-          "18%",
-          "26%",
-          "34%"
+          "20%",
+          "30%",
+          "40%"
         ]
       }
     ],
@@ -1783,9 +1783,9 @@
       }
     ],
     "mc": [
+      "70",
       "100",
-      "120",
-      "140",
+      "130",
       "160"
     ],
     "cd": "12",
@@ -3816,7 +3816,7 @@
       {
         "key": "drain_range_buffer",
         "header": "DRAIN RANGE BUFFER:",
-        "value": "200",
+        "value": "250",
         "generated": true
       },
       {
@@ -3894,10 +3894,10 @@
         "key": "damage",
         "header": "DAMAGE:",
         "value": [
+          "60",
           "100",
-          "130",
-          "160",
-          "190"
+          "140",
+          "180"
         ]
       },
       {
@@ -4250,7 +4250,12 @@
         ]
       }
     ],
-    "mc": "80",
+    "mc": [
+      "80",
+      "90",
+      "100",
+      "110"
+    ],
     "cd": [
       "15",
       "14",
@@ -4409,7 +4414,12 @@
       {
         "key": "charge_restore_time",
         "header": "CHARGE RESTORE TIME:",
-        "value": "45"
+        "value": [
+          "60",
+          "55",
+          "50",
+          "45"
+        ]
       }
     ],
     "mc": [
@@ -4895,7 +4905,12 @@
       {
         "key": "burrow_duration",
         "header": "STUN DURATION:",
-        "value": "2.17"
+        "value": [
+          "1.9",
+          "2",
+          "2.1",
+          "2.2"
+        ]
       },
       {
         "key": "burrow_speed",
@@ -5179,7 +5194,12 @@
       }
     ],
     "mc": "120",
-    "cd": "17",
+    "cd": [
+      "20",
+      "19",
+      "18",
+      "17"
+    ],
     "img": "/apps/dota2/images/abilities/tiny_avalanche_md.png"
   },
   "tiny_toss": {
@@ -5629,7 +5649,7 @@
       "Instant Cast",
       null
     ],
-    "desc": "Slardar slithers ahead, moving significantly faster and passing through units, though becoming more vulnerable to damage.  At ability level 4, Slardar may move at 700 speed while in the river.",
+    "desc": "Slardar slithers ahead, moving significantly faster and passing through units.  At ability level 4, Slardar may move at 700 speed while in the river.",
     "attrib": [
       {
         "key": "bonus_speed",
@@ -5642,14 +5662,9 @@
         ]
       },
       {
-        "key": "bonus_damage",
-        "header": "ADDED DAMAGE TAKEN:",
-        "value": "15%"
-      },
-      {
         "key": "duration",
         "header": "DURATION:",
-        "value": "12"
+        "value": "10"
       },
       {
         "key": "river_speed",
@@ -6321,9 +6336,9 @@
         "key": "mana_regen_self",
         "header": "SELF MANA REGEN:",
         "value": [
-          "1",
-          "2",
-          "3",
+          "1.3",
+          "2.2",
+          "3.1",
           "4"
         ]
       }
@@ -6777,10 +6792,10 @@
         "key": "health_conversion",
         "header": "HEALTH CONVERSION:",
         "value": [
-          "30%",
-          "50%",
+          "55%",
           "70%",
-          "90%"
+          "85%",
+          "100%"
         ]
       }
     ],
@@ -7239,7 +7254,7 @@
       "No Target",
       "Channeled"
     ],
-    "desc": "CHANNELED - Riki phases out of the world while striking every enemy from behind in an area around him once per second.\n\nUpgradable by Aghanim's Scepter.",
+    "desc": "CHANNELED - Riki phases out of the world while striking random enemy heroes from behind in an area around him.\n\nUpgradable by Aghanim's Scepter.",
     "attrib": [
       {
         "key": "range",
@@ -7247,8 +7262,17 @@
         "value": "500"
       },
       {
-        "key": "attack_count",
-        "header": "MAX ATTACKS PER UNIT:",
+        "key": "attack_rate",
+        "header": "ATTACK RATE:",
+        "value": [
+          "0.5",
+          "0.45",
+          "0.4"
+        ]
+      },
+      {
+        "key": "duration_tooltip",
+        "header": "DURATION:",
         "value": [
           "4",
           "5",
@@ -7886,8 +7910,8 @@
     ],
     "mc": [
       "175",
-      "275",
-      "375"
+      "225",
+      "275"
     ],
     "cd": [
       "20",
@@ -7962,10 +7986,10 @@
       }
     ],
     "mc": [
-      "125",
-      "145",
-      "165",
-      "185"
+      "100",
+      "130",
+      "160",
+      "190"
     ],
     "cd": [
       "8",
@@ -7994,9 +8018,9 @@
         "header": "HEALTH DECAY:",
         "value": [
           "0.5%",
-          "1%",
-          "1.5%",
-          "2%"
+          "1.1%",
+          "1.7%",
+          "2.3%"
         ]
       }
     ],
@@ -8292,8 +8316,8 @@
         "header": "GOLEM DAMAGE:",
         "value": [
           "75",
-          "100",
-          "125"
+          "125",
+          "175"
         ]
       },
       {
@@ -8333,8 +8357,8 @@
         "header": "SCEPTER GOLEM DAMAGE:",
         "value": [
           "56",
-          "75",
-          "94"
+          "94",
+          "131"
         ]
       },
       {
@@ -10739,9 +10763,9 @@
         "header": "DAMAGE PER SECOND:",
         "value": [
           "10",
-          "20",
-          "30",
-          "40"
+          "24",
+          "38",
+          "52"
         ]
       },
       {
@@ -11254,9 +11278,9 @@
     "bkbpierce": "No",
     "desc": "Summons a lightning storm that blasts the target enemy unit, then strikes any nearby enemy units. Struck enemies are slowed.\n\nUpgradable by Aghanim's Scepter.",
     "dmg": [
-      "50",
-      "100",
-      "150",
+      "80",
+      "120",
+      "160",
       "200"
     ],
     "attrib": [
@@ -11290,9 +11314,9 @@
         "key": "slow_duration",
         "header": "SLOW DURATION:",
         "value": [
-          "0.7",
+          "0.4",
+          "0.6",
           "0.8",
-          "0.9",
           "1"
         ]
       },
@@ -11683,12 +11707,7 @@
         ]
       }
     ],
-    "mc": [
-      "140",
-      "130",
-      "120",
-      "110"
-    ],
+    "mc": "140",
     "cd": [
       "24",
       "20",
@@ -11887,26 +11906,31 @@
         "key": "radius",
         "header": "RADIUS:",
         "value": [
-          "250",
-          "350",
+          "400",
           "450",
+          "500",
           "550"
         ]
       },
       {
         "key": "duration",
         "header": "DURATION:",
-        "value": "0.5",
+        "value": [
+          "0.3",
+          "0.4",
+          "0.5",
+          "0.6"
+        ],
         "generated": true
       },
       {
         "key": "damage",
         "header": "DAMAGE:",
         "value": [
-          "40",
-          "80",
-          "120",
-          "160"
+          "25",
+          "50",
+          "100",
+          "200"
         ]
       },
       {
@@ -11914,6 +11938,16 @@
         "header": "RADIUS TREE:",
         "value": "275",
         "generated": true
+      },
+      {
+        "key": "cast_range_tooltip",
+        "header": "CAST RANGE:",
+        "value": [
+          "450",
+          "500",
+          "550",
+          "600"
+        ]
       }
     ],
     "mc": [
@@ -11922,7 +11956,12 @@
       "160",
       "190"
     ],
-    "cd": "32",
+    "cd": [
+      "60",
+      "50",
+      "40",
+      "30"
+    ],
     "img": "/apps/dota2/images/abilities/dark_seer_vacuum_md.png"
   },
   "dark_seer_ion_shell": {
@@ -12021,18 +12060,18 @@
       {
         "key": "replica_damage_incoming",
         "header": "REPLICA DAMAGE INCOMING:",
-        "value": "300",
+        "value": "200",
         "generated": true
       },
       {
         "key": "tooltip_replica_total_damage_incoming",
         "header": "REPLICA DAMAGE TAKEN:",
-        "value": "400%"
+        "value": "300%"
       },
       {
         "key": "width",
         "header": "WIDTH:",
-        "value": "1000",
+        "value": "1300",
         "generated": true
       },
       {
@@ -12104,7 +12143,7 @@
       {
         "key": "duration",
         "header": "DURATION:",
-        "value": "3"
+        "value": "3.5"
       },
       {
         "key": "attack_speed_bonus_pct",
@@ -12285,7 +12324,7 @@
         ]
       }
     ],
-    "mc": "50",
+    "mc": "85",
     "cd": [
       "30",
       "26",
@@ -12382,10 +12421,10 @@
         "key": "slow_attack_speed",
         "header": "ATTACK SLOW:",
         "value": [
-          "-40",
-          "-70",
+          "-20",
+          "-60",
           "-100",
-          "-130"
+          "-140"
         ]
       },
       {
@@ -12405,7 +12444,12 @@
       {
         "key": "dominate_duration",
         "header": "CREEP ENCHANT DURATION:",
-        "value": "80"
+        "value": [
+          "50",
+          "60",
+          "70",
+          "80"
+        ]
       },
       {
         "key": "slow_movement_speed",
@@ -12416,19 +12460,19 @@
         "key": "tooltip_duration",
         "header": "HERO SLOW DURATION:",
         "value": [
-          "2.25",
-          "3.5",
-          "4.75",
+          "3",
+          "4",
+          "5",
           "6"
         ]
       }
     ],
     "mc": "65",
     "cd": [
-      "30",
-      "24",
-      "18",
-      "12"
+      "55",
+      "40",
+      "25",
+      "10"
     ],
     "img": "/apps/dota2/images/abilities/enchantress_enchant_md.png"
   },
@@ -12501,9 +12545,9 @@
       }
     ],
     "mc": [
+      "40",
       "55",
-      "60",
-      "65"
+      "70"
     ],
     "cd": "0",
     "img": "/apps/dota2/images/abilities/enchantress_impetus_md.png"
@@ -13162,12 +13206,7 @@
         "generated": true
       }
     ],
-    "mc": [
-      "120",
-      "130",
-      "140",
-      "150"
-    ],
+    "mc": "150",
     "cd": "10",
     "img": "/apps/dota2/images/abilities/bounty_hunter_shuriken_toss_md.png"
   },
@@ -14233,10 +14272,10 @@
         "key": "damage",
         "header": "DAMAGE:",
         "value": [
-          "50",
-          "100",
-          "150",
-          "200"
+          "90",
+          "140",
+          "190",
+          "240"
         ]
       },
       {
@@ -15000,7 +15039,7 @@
       "Instant Cast",
       null
     ],
-    "desc": "Causes Spirit Breaker to gain power with higher movement speed. His presence increases the movement speed of nearby allied units. Can be cast to improve the movement speed bonus for 6 seconds, however afterward the passive bonus will be halved while the ability is on cooldown.",
+    "desc": "Causes Spirit Breaker to gain power with higher movement speed. His presence increases the movement speed of nearby allied units. Can be cast to improve the movement speed bonus for 6 seconds.",
     "attrib": [
       {
         "key": "bonus_movespeed_pct_self",
@@ -15043,7 +15082,7 @@
         "value": "6"
       }
     ],
-    "cd": "12",
+    "cd": "20",
     "img": "/apps/dota2/images/abilities/spirit_breaker_empowering_haste_md.png"
   },
   "spirit_breaker_greater_bash": {
@@ -15369,22 +15408,12 @@
       {
         "key": "hits_to_kill_tooltip",
         "header": "HITS TO DESTROY:",
-        "value": [
-          "3",
-          "3",
-          "4",
-          "4"
-        ]
+        "value": "3"
       },
       {
         "key": "tower_hits_to_kill_tooltip",
         "header": "TOWER HITS TO DESTROY:",
-        "value": [
-          "6",
-          "6",
-          "8",
-          "10"
-        ]
+        "value": "6"
       },
       {
         "key": "stun_duration",
@@ -15422,12 +15451,7 @@
       {
         "key": "hero_damage",
         "header": "HERO DAMAGE:",
-        "value": [
-          "34",
-          "34",
-          "26",
-          "26"
-        ],
+        "value": "34",
         "generated": true
       },
       {
@@ -15519,7 +15543,7 @@
       }
     ],
     "mc": "50",
-    "cd": "30",
+    "cd": "40",
     "img": "/apps/dota2/images/abilities/gyrocopter_flak_cannon_md.png"
   },
   "gyrocopter_call_down": {
@@ -18463,16 +18487,6 @@
     "desc": "Purges the target enemy unit, removing positive buffs, and slowing the target for the duration.  The unit slowly regains its speed until the end of the duration, upon which damage is dealt.  Units under the effect of Disruption can still be affected by Demonic Purge.\n\nUpgradable by Aghanim's Scepter.\n\nDISPEL TYPE: Basic Dispel",
     "attrib": [
       {
-        "key": "slow_rate",
-        "header": "SLOW RATE:",
-        "value": [
-          "5",
-          "3",
-          "2"
-        ],
-        "generated": true
-      },
-      {
         "key": "purge_damage",
         "header": "PURGE DAMAGE:",
         "value": [
@@ -18484,13 +18498,7 @@
       {
         "key": "tooltip_duration",
         "header": "DURATION:",
-        "value": "5"
-      },
-      {
-        "key": "creep_root_duration",
-        "header": "CREEP ROOT DURATION:",
-        "value": "3",
-        "generated": true
+        "value": "7"
       },
       {
         "key": "max_charges",
@@ -18501,17 +18509,17 @@
       {
         "key": "charge_restore_time",
         "header": "CHARGE RESTORE TIME:",
-        "value": "40",
+        "value": "60",
         "generated": true
       },
       {
         "key": "charge_restore_time_tooltip_scepter",
         "header": "SCEPTER CHARGE RESTORE TIME:",
-        "value": "40"
+        "value": "60"
       }
     ],
     "mc": "200",
-    "cd": "40",
+    "cd": "60",
     "img": "/apps/dota2/images/abilities/shadow_demon_demonic_purge_md.png"
   },
   "chaos_knight_chaos_bolt": {
@@ -19277,7 +19285,7 @@
   "ogre_magi_multicast": {
     "dname": "Multicast",
     "behavior": "Passive",
-    "desc": "Enables Ogre Magi to cast his spells multiple times with each use, while also granting his spells greater potency:\nFireblast has its cooldown decreased, its range increased, and its mana cost increased.\nIgnite hits enemies in an area, its range is increased, and it may be cast onto random nearby enemies when used.\nBloodlust has its cooldown reduced, and may be cast on random nearby allies when used.",
+    "desc": "Enables Ogre Magi to cast his spells multiple times with each use, while also granting his spells greater potency:\nFireblast has its cooldown decreased, its range increased.\nIgnite hits enemies in an area, its range is increased, and it may be cast onto random nearby enemies when used.\nBloodlust has its cooldown reduced, and may be cast on random nearby allies when used.",
     "attrib": [
       {
         "key": "multicast_2_times",
@@ -19308,15 +19316,6 @@
           "0.125"
         ],
         "generated": true
-      },
-      {
-        "key": "fireblast_mana_cost",
-        "header": "FIREBLAST MANA INCREASE:",
-        "value": [
-          "20",
-          "40",
-          "60"
-        ]
       },
       {
         "key": "fireblast_cooldown",
@@ -19624,12 +19623,6 @@
         "header": "ZOMBIE INTERVAL:",
         "value": "3",
         "generated": true
-      },
-      {
-        "key": "bonus_speed",
-        "header": "BONUS SPEED:",
-        "value": "50",
-        "generated": true
       }
     ],
     "img": "/apps/dota2/images/abilities/undying_tombstone_zombie_aura_md.png"
@@ -19671,9 +19664,14 @@
         "value": "2.5"
       },
       {
-        "key": "bonus_speed",
-        "header": "BONUS SPEED:",
+        "key": "bonus_move_speed",
+        "header": "BONUS MOVE SPEED:",
         "value": "50%"
+      },
+      {
+        "key": "bonus_attack_speed",
+        "header": "BONUS ATTACK SPEED:",
+        "value": "75"
       },
       {
         "key": "radius",
@@ -19737,7 +19735,11 @@
       {
         "key": "death_heal",
         "header": "DEATH HEAL (HEROES):",
-        "value": "10%"
+        "value": [
+          "15%",
+          "20%",
+          "25%"
+        ]
       },
       {
         "key": "death_heal_creep",
@@ -19803,7 +19805,12 @@
       }
     ],
     "mc": "125",
-    "cd": "22",
+    "cd": [
+      "28",
+      "26",
+      "24",
+      "22"
+    ],
     "img": "/apps/dota2/images/abilities/rubick_telekinesis_md.png"
   },
   "rubick_telekinesis_land": {
@@ -20117,9 +20124,9 @@
     ],
     "mc": "70",
     "cd": [
+      "19",
+      "16",
       "13",
-      "12",
-      "11",
       "10"
     ],
     "img": "/apps/dota2/images/abilities/disruptor_kinetic_field_md.png"
@@ -21454,7 +21461,7 @@
     "dname": "Tether",
     "behavior": "Unit Target",
     "bkbpierce": "No",
-    "desc": "Tethers Io to an allied unit, granting bonus movement speed to both. When Io restores health or mana, tethered units target gain 1.5x the amount. Any enemy unit that crosses the tether is slowed. The tether breaks when the allied unit moves too far away, or Io cancels the tether.",
+    "desc": "Tethers Io to an allied unit, granting bonus movement speed to both. When Io restores health or mana, tethered units target gains a larger portion of that amount. Any enemy unit that crosses the tether is slowed. The tether breaks when the allied unit moves too far away, or Io cancels the tether.",
     "attrib": [
       {
         "key": "radius",
@@ -21465,9 +21472,9 @@
         "key": "movespeed",
         "header": "MOVEMENT SPEED BONUS:",
         "value": [
+          "7%",
           "10%",
-          "12%",
-          "14%",
+          "13%",
           "16%"
         ]
       },
@@ -21484,15 +21491,14 @@
         "generated": true
       },
       {
-        "key": "tether_duration",
-        "header": "TETHER DURATION:",
-        "value": "14"
-      },
-      {
         "key": "tether_heal_amp",
-        "header": "TETHER HEAL AMP:",
-        "value": "1.5",
-        "generated": true
+        "header": "HP/MANA AMP:",
+        "value": [
+          "1.2",
+          "1.3",
+          "1.4",
+          "1.5"
+        ]
       },
       {
         "key": "slow",
@@ -21675,9 +21681,9 @@
     ],
     "mc": "100",
     "cd": [
-      "120",
-      "100",
-      "80"
+      "130",
+      "110",
+      "90"
     ],
     "img": "/apps/dota2/images/abilities/wisp_relocate_md.png"
   },
@@ -22177,7 +22183,7 @@
       {
         "key": "base_attack_time",
         "header": "MELEE BASE ATTACK TIME:",
-        "value": "1.5"
+        "value": "1.45"
       },
       {
         "key": "bash_chance",
@@ -22735,7 +22741,7 @@
       {
         "key": "skewer_radius",
         "header": "SKEWER RADIUS:",
-        "value": "125",
+        "value": "135",
         "generated": true
       },
       {
@@ -22794,8 +22800,8 @@
         "key": "hero_stun_duration",
         "header": "STUN DURATION:",
         "value": [
-          "2.25",
-          "3",
+          "2.75",
+          "3.25",
           "3.75"
         ]
       },
@@ -23026,8 +23032,8 @@
         "key": "mana_per_second",
         "header": "MANA COST PER SECOND:",
         "value": [
-          "20",
-          "25",
+          "16",
+          "23",
           "30"
         ]
       },
@@ -23039,8 +23045,8 @@
       }
     ],
     "mc": [
-      "100",
-      "150",
+      "80",
+      "140",
       "200"
     ],
     "cd": "8",
@@ -23109,8 +23115,8 @@
         "key": "mana_per_second",
         "header": "MANA COST PER SECOND:",
         "value": [
-          "20",
-          "25",
+          "16",
+          "23",
           "30"
         ]
       },
@@ -23122,8 +23128,8 @@
       }
     ],
     "mc": [
-      "100",
-      "150",
+      "80",
+      "140",
       "200"
     ],
     "cd": "8",
@@ -23428,10 +23434,10 @@
       "115"
     ],
     "cd": [
-      "19",
-      "16",
-      "13",
-      "10"
+      "21",
+      "18",
+      "15",
+      "12"
     ],
     "img": "/apps/dota2/images/abilities/tusk_ice_shards_md.png"
   },
@@ -24160,7 +24166,7 @@
       {
         "key": "initial_stun_duration",
         "header": "INITIAL STUN DURATION:",
-        "value": "0.8",
+        "value": "0.2",
         "generated": true
       },
       {
@@ -24429,7 +24435,7 @@
     "attrib": [
       {
         "key": "crack_time",
-        "header": "EXPLODE DELAY:",
+        "header": "IMPLODE DELAY:",
         "value": "3.14"
       },
       {
@@ -26072,7 +26078,7 @@
       {
         "key": "aura_radius",
         "header": "RADIUS:",
-        "value": "1000"
+        "value": "1300"
       },
       {
         "key": "damage_per_sec",
@@ -26719,7 +26725,7 @@
       {
         "key": "attack_speed",
         "header": "SOLDIER ATK SPEED:",
-        "value": "1.4"
+        "value": "1.3"
       },
       {
         "key": "duration",
@@ -27242,8 +27248,8 @@
     ],
     "cd": [
       "40",
-      "30",
-      "20"
+      "35",
+      "30"
     ],
     "img": "/apps/dota2/images/abilities/dark_willow_bedlam_md.png"
   },
@@ -27251,7 +27257,8 @@
     "dname": "Terrorize",
     "behavior": [
       "Point Target",
-      "AOE"
+      "AOE",
+      null
     ],
     "bkbpierce": "No",
     "desc": "Dark Willow releases her pet wisp to terrorize her enemies. After a short delay, all enemies in the target area become fearful and run toward their home fountain. Terrorize cannot be used while Bedlam is active.",
@@ -27277,12 +27284,6 @@
         "key": "return_travel_speed",
         "header": "RETURN TRAVEL SPEED:",
         "value": "500",
-        "generated": true
-      },
-      {
-        "key": "initial_delay",
-        "header": "INITIAL DELAY:",
-        "value": "0.8",
         "generated": true
       },
       {
@@ -31444,9 +31445,9 @@
         "key": "attack_range_bonus",
         "header": "BONUS ATTACK RANGE:",
         "value": [
-          "275",
-          "375",
-          "475",
+          "350",
+          "425",
+          "500",
           "575"
         ]
       },
@@ -31745,7 +31746,7 @@
       }
     ],
     "mc": "75",
-    "cd": "18",
+    "cd": "16",
     "img": "/apps/dota2/images/abilities/arc_warden_flux_md.png"
   },
   "arc_warden_magnetic_field": {
@@ -31760,7 +31761,7 @@
       {
         "key": "radius",
         "header": "RADIUS:",
-        "value": "275"
+        "value": "300"
       },
       {
         "key": "duration",
@@ -32825,7 +32826,7 @@
     "dname": "+30 Battery Assault Damage"
   },
   "special_bonus_unique_clockwerk_4": {
-    "dname": "Rocket Flare Truesight"
+    "dname": "Rocket Flare True Sight"
   },
   "special_bonus_unique_omniknight_1": {
     "dname": "+200 Purification Damage/Heal"
@@ -33365,7 +33366,7 @@
     "dname": "+120 Torrent Damage"
   },
   "special_bonus_unique_kunkka_3": {
-    "dname": "Ghost Ship Fleet"
+    "dname": "Ghostship Fleet"
   },
   "special_bonus_unique_kunkka_4": {
     "dname": "+50% Tidebringer Cleave"
@@ -33683,7 +33684,7 @@
     "dname": "+8 March of the Machines Damage"
   },
   "special_bonus_unique_tinker_3": {
-    "dname": "+0.3s Heat Seeking Missile Ministun"
+    "dname": "+0.3s Heat-Seeking Missile Ministun"
   },
   "special_bonus_unique_tiny": {
     "dname": "+125 Avalanche Damage"
@@ -33725,7 +33726,7 @@
     "dname": "+30 Decay Duration"
   },
   "special_bonus_unique_undying_5": {
-    "dname": "+4 Tombstone Attacks"
+    "dname": "+4 Tombstone Attacks to Destroy"
   },
   "special_bonus_unique_viper_1": {
     "dname": "+6 Corrosive Skin Stats"
@@ -33870,7 +33871,7 @@
     "dname": "+0.20 Backstab Multiplier"
   },
   "special_bonus_unique_riki_2": {
-    "dname": "-7s Smokescreen Cooldown"
+    "dname": "-7s Smoke Screen Cooldown"
   },
   "special_bonus_unique_riki_3": {
     "dname": "+900 Blink Strike Cast Range"
@@ -33933,7 +33934,7 @@
     "dname": "+20 Marksmanship Agility"
   },
   "special_bonus_unique_drow_ranger_4": {
-    "dname": "+3s Gust Duration"
+    "dname": "+3s Gust Silence Duration"
   },
   "special_bonus_unique_earth_spirit": {
     "dname": "+200 Rolling Boulder Damage"

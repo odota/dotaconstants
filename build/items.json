@@ -471,7 +471,7 @@
       {
         "key": "bonus_attack_speed",
         "header": "+",
-        "value": "120",
+        "value": "130",
         "footer": "Attack Speed"
       },
       {
@@ -1119,13 +1119,13 @@
     "dname": "Clarity",
     "qual": "consumable",
     "cost": 50,
-    "desc": "Use: Replenish Grants 3.2 mana regeneration to the target for 50 seconds.If the unit is attacked by an enemy hero or Roshan, the effect is lost.Range: 250",
+    "desc": "Use: Replenish Grants 3 mana regeneration to the target for 50 seconds.If the unit is attacked by an enemy hero or Roshan, the effect is lost.Range: 250",
     "notes": "",
     "attrib": [
       {
         "key": "mana_regen",
         "header": "MANA REGEN:",
-        "value": "3.2",
+        "value": "3",
         "generated": true
       },
       {
@@ -4454,7 +4454,7 @@
       {
         "key": "bonus_mana_regen",
         "header": "+",
-        "value": "3",
+        "value": "5",
         "footer": "Mana Regeneration"
       }
     ],
@@ -4549,7 +4549,7 @@
       {
         "key": "bonus_strength",
         "header": "+",
-        "value": "40",
+        "value": "45",
         "footer": "Strength"
       },
       {
@@ -5111,7 +5111,7 @@
       {
         "key": "projectile_speed",
         "header": "PROJECTILE SPEED:",
-        "value": "1200",
+        "value": "900",
         "generated": true
       },
       {
@@ -5156,7 +5156,7 @@
     "dname": "Aeon Disk",
     "qual": "epic",
     "cost": 3350,
-    "desc": "Passive: Combo Breaker When you take damage and your health falls below 70%, a strong dispel is applied and you gain a 2.5 second buff that causes all damage you deal and are dealt to be reduced to zero. Only triggers on player based damage. \n\nPassive: Status Resistance Reduces status effect durations by 25%.",
+    "desc": "Passive: Combo Breaker When you take damage and your health falls below 70%, a strong dispel is applied and you gain a 2.5 second buff that causes all damage you deal and are dealt to be reduced to zero. Only triggers on player based damage.",
     "notes": "",
     "attrib": [
       {
@@ -5179,9 +5179,8 @@
       },
       {
         "key": "status_resistance",
-        "header": "STATUS RESISTANCE:",
-        "value": "25",
-        "generated": true
+        "header": "+Status Resistance",
+        "value": "25%"
       },
       {
         "key": "buff_duration",
@@ -5307,7 +5306,7 @@
     "dname": "Spirit Vessel",
     "qual": "rare",
     "cost": 2975,
-    "desc": "Active: Soul Release When used against enemies, it reduces health by 3% of current health per second, and reduces HP regeneration and healing by 70%. Deals 20 damage per second. When used on allies, it increases health by 1% of current health per second, and increases HP regeneration and healing by 20%. Provides 35 health regeneration per second. Lasts 8 seconds.  Gains charges every time an enemy hero dies within 1400 units.  Only the closest Spirit Vessel to the dying hero will gain a charge.Cast Range: 950 ",
+    "desc": "Active: Soul Release When used against enemies, it reduces health by 4.5% of current health per second, and reduces HP regeneration and healing by 70%. Deals 20 damage per second. When used on allies, it increases health by 1% of current health per second, and increases HP regeneration and healing by 20%. Provides 35 health regeneration per second. Lasts 8 seconds.  Gains charges every time an enemy hero dies within 1400 units.  Only the closest Spirit Vessel to the dying hero will gain a charge.Cast Range: 950 ",
     "notes": "",
     "attrib": [
       {
@@ -5397,7 +5396,7 @@
       {
         "key": "enemy_hp_drain",
         "header": "ENEMY HP DRAIN:",
-        "value": "3",
+        "value": "4.5",
         "generated": true
       },
       {
@@ -5968,7 +5967,7 @@
     "dname": "Skull Basher",
     "qual": "epic",
     "cost": 2700,
-    "desc": "Passive: Bash Grants melee heroes a 25% chance on hit to stun the target for 1.4 seconds and deal 100 bonus magical damage.  Bash pierces evasion. Bash chance for ranged heroes is 10%.",
+    "desc": "Passive: Bash Grants melee heroes a 25% chance on hit to stun the target for 1.5 seconds and deal 100 bonus magical damage.  Bash pierces evasion. Bash chance for ranged heroes is 10%.",
     "notes": "Does not stack with other sources of Bash, however it will stack with Mini-Bash.\nThe following heroes cannot trigger Bash on this item: Spirit Breaker, Faceless Void, Slardar, and Troll Warlord.",
     "attrib": [
       {
@@ -5992,7 +5991,7 @@
       {
         "key": "bash_duration",
         "header": "BASH DURATION:",
-        "value": "1.4",
+        "value": "1.5",
         "generated": true
       },
       {
@@ -6538,7 +6537,7 @@
     "dname": "Silver Edge",
     "qual": "epic",
     "cost": 5550,
-    "desc": "Active: Shadow WalkMakes you invisible for 14 seconds, or until you attack or cast a spell.  While invisible, you move 25% faster and can move through units.  Attacking to end the invisibility will deal 175 bonus physical damage to the target, and for 5 seconds, disable their passive abilities.",
+    "desc": "Active: Shadow WalkMakes you invisible for 14 seconds, or until you attack or cast a spell.  While invisible, you move 25% faster and can move through units.  Attacking to end the invisibility will deal 175 bonus physical damage to the target, and for 4 seconds, disable their passive abilities.",
     "notes": "Backstab cannot miss.\nBackstab does not pierce spell immunity.",
     "attrib": [
       {
@@ -6592,12 +6591,12 @@
       {
         "key": "backstab_duration",
         "header": "BACKSTAB DURATION:",
-        "value": "5",
+        "value": "4",
         "generated": true
       }
     ],
     "mc": 75,
-    "cd": 24,
+    "cd": 22,
     "lore": "Once used to slay an unjust king, only to have the kingdom erupt into civil war in the aftermath.",
     "components": [
       "invis_sword",
@@ -6696,7 +6695,7 @@
     "dname": "Satanic",
     "qual": "artifact",
     "cost": 5500,
-    "desc": "Active: Unholy RageIncreases Lifesteal percentage to 200% for 4.5 seconds. \nPassive: LifestealHeals the attacker for 25% of attack damage dealt.",
+    "desc": "Active: Unholy RageIncreases Lifesteal percentage to 200% for 5 seconds. \nPassive: LifestealHeals the attacker for 25% of attack damage dealt.",
     "notes": "",
     "attrib": [
       {
@@ -6732,7 +6731,7 @@
       {
         "key": "unholy_duration",
         "header": "UNHOLY DURATION:",
-        "value": "4.5",
+        "value": "5",
         "generated": true
       }
     ],
@@ -8352,7 +8351,7 @@
     "dname": "Abyssal Blade",
     "qual": "epic",
     "cost": 6400,
-    "desc": "Active: Overwhelm Stuns a target enemy unit for 2 seconds. Pierces Spell Immunity.Range: 140\nPassive: Bash Grants melee heroes a 25% chance on hit to stun the target for 1.4 seconds and deal 100 bonus magical damage.  Bash pierces evasion. Bash chance for ranged heroes is 10%.\nPassive: Damage Block Grants a 50% chance to block 70 damage from incoming attacks on melee heroes, and 35 damage on ranged.",
+    "desc": "Active: Overwhelm Stuns a target enemy unit for 2 seconds. Pierces Spell Immunity.Range: 140\nPassive: Bash Grants melee heroes a 25% chance on hit to stun the target for 1.5 seconds and deal 100 bonus magical damage.  Bash pierces evasion. Bash chance for ranged heroes is 10%.\nPassive: Damage Block Grants a 50% chance to block 70 damage from incoming attacks on melee heroes, and 35 damage on ranged.",
     "notes": "The stun is melee range.\nDoes not stack with other bashes.\nThe following heroes cannot trigger Bash on this item: Spirit Breaker, Faceless Void, Slardar, and Troll Warlord.\nMultiple sources of damage block do not stack.",
     "attrib": [
       {
@@ -8406,7 +8405,7 @@
       {
         "key": "bash_duration",
         "header": "BASH DURATION:",
-        "value": "1.4",
+        "value": "1.5",
         "generated": true
       },
       {
