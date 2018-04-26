@@ -28,7 +28,7 @@
       }
     ],
     "mc": false,
-    "cd": 14,
+    "cd": 15,
     "lore": "The fabled dagger used by the fastest assassin ever to walk the lands.",
     "components": null,
     "created": false
@@ -810,12 +810,6 @@
     "notes": "",
     "attrib": [
       {
-        "key": "bonus_damage",
-        "header": "+",
-        "value": "10",
-        "footer": "Damage"
-      },
-      {
         "key": "lifesteal_percent",
         "header": "LIFESTEAL PERCENT:",
         "value": "15",
@@ -1028,19 +1022,32 @@
     "components": null,
     "created": false
   },
+  "recipe_magic_wand": {
+    "id": 35,
+    "img": "/apps/dota2/images/items/recipe_lg.png?3",
+    "cost": 150,
+    "desc": "",
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": false,
+    "lore": "",
+    "components": null,
+    "created": false
+  },
   "magic_wand": {
     "id": 36,
     "img": "/apps/dota2/images/items/magic_wand_lg.png?3",
     "dname": "Magic Wand",
     "qual": "common",
-    "cost": 400,
-    "desc": "Active: Energy ChargeInstantly restores 15 health and mana per charge stored. Max 17 charges. Gains a charge whenever a visible enemy within 1200 range uses an ability.",
+    "cost": 450,
+    "desc": "Active: Energy ChargeInstantly restores 15 health and mana per charge stored. Max 20 charges. Gains a charge whenever a visible enemy within 1200 range uses an ability.",
     "notes": "Gains charges for spells cast by visible enemies in 1200 range.\nCertain abilities and item abilities will not add charges.",
     "attrib": [
       {
         "key": "max_charges",
         "header": "MAX CHARGES:",
-        "value": "17",
+        "value": "20",
         "generated": true
       },
       {
@@ -1052,14 +1059,8 @@
       {
         "key": "bonus_all_stats",
         "header": "+",
-        "value": "2",
+        "value": "3",
         "footer": "All Attributes"
-      },
-      {
-        "key": "bonus_health_regen",
-        "header": "+",
-        "value": "1.5",
-        "footer": "HP Regeneration"
       },
       {
         "key": "restore_per_charge",
@@ -1074,8 +1075,7 @@
     "components": [
       "magic_stick",
       "branches",
-      "branches",
-      "enchanted_mango"
+      "branches"
     ],
     "created": true
   },
@@ -1152,20 +1152,20 @@
     "img": "/apps/dota2/images/items/enchanted_mango_lg.png?3",
     "dname": "Enchanted Mango",
     "qual": "consumable",
-    "cost": 100,
-    "desc": "Use: Eat Mango Instantly restores 175 mana.Range: 400",
+    "cost": 70,
+    "desc": "Use: Eat Mango Instantly restores 125 mana.Range: 400",
     "notes": "Hold Control to use on a nearby allied hero.",
     "attrib": [
       {
         "key": "hp_regen",
         "header": "+",
-        "value": "1",
+        "value": "0.7",
         "footer": "HP Regeneration"
       },
       {
         "key": "replenish_amount",
         "header": "REPLENISH AMOUNT:",
-        "value": "175",
+        "value": "125",
         "generated": true
       },
       {
@@ -1708,7 +1708,7 @@
     "dname": "Phase Boots",
     "qual": "common",
     "cost": 1340,
-    "desc": "Active: Phase Gives 24% increased movement speed on melee heroes, and 20% on ranged heroes, and lets you move through units for 2.5 seconds.\nFlat movement speed bonuses from multiple pairs of boots do not stack.",
+    "desc": "Active: Phase Gives 20% increased movement speed on melee heroes, and 16% on ranged heroes, and lets you move through units and turn more quickly for 3 seconds.\nFlat movement speed bonuses from multiple pairs of boots do not stack.",
     "notes": "",
     "attrib": [
       {
@@ -1744,19 +1744,19 @@
       {
         "key": "phase_movement_speed",
         "header": "PHASE MOVEMENT SPEED:",
-        "value": "24",
+        "value": "20",
         "generated": true
       },
       {
         "key": "phase_movement_speed_range",
         "header": "PHASE MOVEMENT SPEED RANGE:",
-        "value": "20",
+        "value": "16",
         "generated": true
       },
       {
         "key": "phase_duration",
         "header": "PHASE DURATION:",
-        "value": "2.5",
+        "value": "3",
         "generated": true
       },
       {
@@ -3373,7 +3373,7 @@
     "id": 101,
     "img": "/apps/dota2/images/items/recipe_lg.png?3",
     "dname": "Force Staff Recipe",
-    "cost": 400,
+    "cost": 950,
     "desc": "",
     "notes": "",
     "attrib": [],
@@ -3401,7 +3401,7 @@
       {
         "key": "bonus_health_regen",
         "header": "+",
-        "value": "5",
+        "value": "2",
         "footer": "HP Regeneration"
       },
       {
@@ -3417,12 +3417,12 @@
         "generated": true
       }
     ],
-    "mc": 25,
+    "mc": 100,
     "cd": 23,
     "lore": "Allows you to manipulate others, for good or evil.",
     "components": [
       "staff_of_wizardry",
-      "ring_of_health"
+      "ring_of_regen"
     ],
     "created": true
   },
@@ -3444,7 +3444,7 @@
       {
         "key": "bonus_health_regen",
         "header": "+",
-        "value": "5.5",
+        "value": "2",
         "footer": "HP Regeneration"
       },
       {
@@ -3508,7 +3508,7 @@
         "generated": true
       }
     ],
-    "mc": 25,
+    "mc": 100,
     "cd": 23,
     "lore": "A legendary pike once held as royal sigil of the ancient wyvern riders.",
     "components": [
@@ -3596,7 +3596,7 @@
         "generated": true
       }
     ],
-    "mc": 180,
+    "mc": 120,
     "cd": 35,
     "lore": "A lesser wand that grows in power the longer it is used, it brings magic to the fingertips of the user.",
     "components": [
@@ -3669,7 +3669,7 @@
         "generated": true
       }
     ],
-    "mc": 180,
+    "mc": 120,
     "cd": 35,
     "lore": "A lesser wand that grows in power the longer it is used, it brings magic to the fingertips of the user.",
     "components": [
@@ -3742,7 +3742,7 @@
         "generated": true
       }
     ],
-    "mc": 180,
+    "mc": 120,
     "cd": 35,
     "lore": "A lesser wand that grows in power the longer it is used, it brings magic to the fingertips of the user.",
     "components": [
@@ -3815,7 +3815,7 @@
         "generated": true
       }
     ],
-    "mc": 180,
+    "mc": 120,
     "cd": 35,
     "lore": "A lesser wand that grows in power the longer it is used, it brings magic to the fingertips of the user.",
     "components": [
@@ -3888,7 +3888,7 @@
         "generated": true
       }
     ],
-    "mc": 180,
+    "mc": 120,
     "cd": 35,
     "lore": "A lesser wand that grows in power the longer it is used, it brings magic to the fingertips of the user.",
     "components": [
@@ -3917,7 +3917,7 @@
     "dname": "Necronomicon",
     "qual": "rare",
     "cost": 2400,
-    "desc": "Active: Demonic SummoningSummons a Warrior and an Archer to fight for you for 50 seconds.Warrior:Burns mana every hit, and deals magical damage to whoever kills it.  Gains True Sight at level 3.Health: 700,800,900Damage: 75,100,125Mana Break Damage: 30,40,50Last Will Damage: 550,675,800Archer:Has a passive movement and attack speed aura. Gains Purge at Level 3.Health: 700,800,900Damage: 60,90,120Aura Move Speed: 5,7,9Aura Attack Speed: 5,7,9Aura Radius: 900",
+    "desc": "Active: Demonic SummoningSummons a Warrior and an Archer to fight for you for 60 seconds.Warrior:Burns mana every hit, and deals magical damage to whoever kills it.  Gains True Sight at level 3.Health: 700,800,900Damage: 75,100,125Mana Break Damage: 30,40,50Last Will Damage: 550,675,800Archer:Has a passive movement and attack speed aura. Gains Purge at Level 3.Health: 700,800,900Damage: 60,90,120Aura Move Speed: 5,7,9Aura Attack Speed: 5,7,9Aura Radius: 900",
     "notes": "",
     "attrib": [
       {
@@ -3943,7 +3943,7 @@
       {
         "key": "summon_duration",
         "header": "SUMMON DURATION:",
-        "value": "50",
+        "value": "60",
         "generated": true
       },
       {
@@ -4075,7 +4075,7 @@
     "dname": "Necronomicon",
     "qual": "rare",
     "cost": 3700,
-    "desc": "Active: Demonic SummoningSummons a Warrior and an Archer to fight for you for 50 seconds.Warrior:Burns mana every hit, and deals magical damage to whoever kills it.  Gains True Sight at level 3.Health: 700,800,900Damage: 75,100,125Mana Break Damage: 30,40,50Last Will Damage: 550,675,800Archer:Has a passive movement and attack speed aura. Gains Purge at Level 3.Health: 700,800,900Damage: 60,90,120Aura Move Speed: 5,7,9Aura Attack Speed: 5,10,15Aura Radius: 900",
+    "desc": "Active: Demonic SummoningSummons a Warrior and an Archer to fight for you for 60 seconds.Warrior:Burns mana every hit, and deals magical damage to whoever kills it.  Gains True Sight at level 3.Health: 700,800,900Damage: 75,100,125Mana Break Damage: 30,40,50Last Will Damage: 550,675,800Archer:Has a passive movement and attack speed aura. Gains Purge at Level 3.Health: 700,800,900Damage: 60,90,120Aura Move Speed: 5,7,9Aura Attack Speed: 5,10,15Aura Radius: 900",
     "notes": "",
     "attrib": [
       {
@@ -4101,7 +4101,7 @@
       {
         "key": "summon_duration",
         "header": "SUMMON DURATION:",
-        "value": "50",
+        "value": "60",
         "generated": true
       },
       {
@@ -4232,7 +4232,7 @@
     "dname": "Necronomicon",
     "qual": "rare",
     "cost": 5000,
-    "desc": "Active: Demonic SummoningSummons a Warrior and an Archer to fight for you for 50 seconds.Warrior:Burns mana every hit, and deals magical damage to whoever kills it.  Gains True Sight at level 3.Health: 700,800,900Damage: 75,100,125Mana Break Damage: 30,40,50Last Will Damage: 550,675,800Archer:Has a passive movement and attack speed aura. Gains Purge at Level 3.Health: 700,800,900Damage: 60,90,120Aura Move Speed: 5,7,9Aura Attack Speed: 5,10,15Aura Radius: 900",
+    "desc": "Active: Demonic SummoningSummons a Warrior and an Archer to fight for you for 60 seconds.Warrior:Burns mana every hit, and deals magical damage to whoever kills it.  Gains True Sight at level 3.Health: 700,800,900Damage: 75,100,125Mana Break Damage: 30,40,50Last Will Damage: 550,675,800Archer:Has a passive movement and attack speed aura. Gains Purge at Level 3.Health: 700,800,900Damage: 60,90,120Aura Move Speed: 5,7,9Aura Attack Speed: 5,10,15Aura Radius: 900",
     "notes": "",
     "attrib": [
       {
@@ -4258,7 +4258,7 @@
       {
         "key": "summon_duration",
         "header": "SUMMON DURATION:",
-        "value": "50",
+        "value": "60",
         "generated": true
       },
       {
@@ -4877,7 +4877,7 @@
       {
         "key": "bonus_all_stats",
         "header": "+",
-        "value": "15",
+        "value": "13",
         "footer": "All Attributes"
       },
       {
@@ -5739,14 +5739,20 @@
     "img": "/apps/dota2/images/items/monkey_king_bar_lg.png?3",
     "dname": "Monkey King Bar",
     "qual": "epic",
-    "cost": 4200,
-    "desc": "Passive: PierceGrants each attack a 75% chance to pierce through evasion and deal 60 bonus pure damage.",
+    "cost": 4175,
+    "desc": "Passive: PierceGrants each attack a 75% chance to pierce through evasion and deal 100 bonus magical damage.",
     "notes": "",
     "attrib": [
       {
+        "key": "bonus_damage",
+        "header": "+",
+        "value": "52",
+        "footer": "Damage"
+      },
+      {
         "key": "bonus_attack_speed",
         "header": "+",
-        "value": "60",
+        "value": "10",
         "footer": "Attack Speed"
       },
       {
@@ -5758,7 +5764,7 @@
       {
         "key": "bonus_chance_damage",
         "header": "BONUS CHANCE DAMAGE:",
-        "value": "60",
+        "value": "100",
         "generated": true
       }
     ],
@@ -5766,9 +5772,9 @@
     "cd": false,
     "lore": "A powerful staff used by a master warrior.",
     "components": [
-      "hyperstone",
+      "demon_edge",
       "javelin",
-      "javelin"
+      "quarterstaff"
     ],
     "created": true
   },
@@ -5966,10 +5972,16 @@
     "img": "/apps/dota2/images/items/basher_lg.png?3",
     "dname": "Skull Basher",
     "qual": "epic",
-    "cost": 2700,
-    "desc": "Passive: Bash Grants melee heroes a 25% chance on hit to stun the target for 1.5 seconds and deal 100 bonus magical damage.  Bash pierces evasion. Bash chance for ranged heroes is 10%.",
+    "cost": 3200,
+    "desc": "Passive: Bash Grants melee heroes a 25% chance on hit to stun the target for 1.5 seconds and deal 100 bonus magical damage.  Bash chance for ranged heroes is 10%.",
     "notes": "Does not stack with other sources of Bash, however it will stack with Mini-Bash.\nThe following heroes cannot trigger Bash on this item: Spirit Breaker, Faceless Void, Slardar, and Troll Warlord.",
     "attrib": [
+      {
+        "key": "bonus_damage",
+        "header": "+",
+        "value": "25",
+        "footer": "Damage"
+      },
       {
         "key": "bonus_strength",
         "header": "+",
@@ -6011,17 +6023,30 @@
     "cd": 2,
     "lore": "A feared weapon in the right hands, this maul's ability to shatter the defenses of its opponents should not be underestimated.",
     "components": [
-      "belt_of_strength",
-      "javelin"
+      "mithril_hammer",
+      "belt_of_strength"
     ],
     "created": true
+  },
+  "recipe_bfury": {
+    "id": 144,
+    "img": "/apps/dota2/images/items/recipe_lg.png?3",
+    "cost": 300,
+    "desc": "",
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": false,
+    "lore": "",
+    "components": null,
+    "created": false
   },
   "bfury": {
     "id": 145,
     "img": "/apps/dota2/images/items/bfury_lg.png?3",
     "dname": "Battle Fury",
     "qual": "epic",
-    "cost": 4100,
+    "cost": 4400,
     "desc": "Active: Chop Tree/Ward Destroy a target tree or ward.Tree Cast Range: 350Ward Cast Range: 450 \nPassive: Quell Increases attack damage against non-hero units by 60% for melee heroes, and 25% for ranged. \nPassive: Cleave Deals 40% of attack damage as physical damage in a cone up to 625 around the target. (Melee Only)",
     "notes": "Cleave damage is reduced by armor type but not by armor value.\nCleave damage goes through spell immunity.\nIf multiple sources of Cleave are present, each Cleave's damage is applied separately.\nChop can be used to destroy Techies' Remote Mines.",
     "attrib": [
@@ -6118,7 +6143,7 @@
     "id": 146,
     "img": "/apps/dota2/images/items/recipe_lg.png?3",
     "dname": "Manta Style Recipe",
-    "cost": 900,
+    "cost": 500,
     "desc": "",
     "notes": "",
     "attrib": [],
@@ -6133,7 +6158,7 @@
     "img": "/apps/dota2/images/items/manta_lg.png?3",
     "dname": "Manta Style",
     "qual": "epic",
-    "cost": 5000,
+    "cost": 4800,
     "desc": "Active: Mirror ImageCreates 2 images of your hero that last 20 seconds. Melee images deal 33% damage and take 350% damage, while Ranged images deal 28% and take 400% damage. Cooldown increased by 15 seconds on ranged heroes.Dispel Type: Basic Dispel",
     "notes": "Has a 0.1 second cast time during which you are invulnerable.\nMany effects are removed upon using Manta.\nYasha based movement speed bonuses from multiple items do not stack.",
     "attrib": [
@@ -6609,7 +6634,7 @@
     "img": "/apps/dota2/images/items/sange_and_yasha_lg.png?3",
     "dname": "Sange and Yasha",
     "qual": "artifact",
-    "cost": 3900,
+    "cost": 4300,
     "desc": "Passive: Greater MaimEach attack has a 40% chance to reduce enemy hero movement speed by -26% and attack speed by -26 when used by a melee hero. Reduces enemy hero movement by -13% and attack speed by -13 when used by a ranged hero. Effect lasts 5 seconds.",
     "notes": "Yasha-based movement speed bonuses from multiple items do not stack.",
     "attrib": [
@@ -6764,8 +6789,8 @@
     "img": "/apps/dota2/images/items/mjollnir_lg.png?3",
     "dname": "Mjollnir",
     "qual": "artifact",
-    "cost": 5700,
-    "desc": "Active: Static ChargePlaces a charged shield on a target unit for 15 seconds which has a 20% chance to release a 200 magical damage shocking bolt at a nearby attacker and 4 additional enemies.Range: 800\nPassive: Chain LightningGrants a 25% chance on attack to release a bolt of electricity that leaps between 12 targets within a 900 radius, dealing 150 magical damage to each.",
+    "cost": 5600,
+    "desc": "Active: Static ChargePlaces a charged shield on a target unit for 15 seconds which has a 20% chance to release a 200 magical damage shocking bolt at a nearby attacker and 4 additional enemies.Range: 800\nPassive: Chain LightningGrants a 25% chance on attack to release a bolt of electricity that leaps between 12 targets within a 900 radius, dealing 170 magical damage to each. Lightning proc pierces evasion.",
     "notes": "Static Charge cannot trigger more than once per second.\nStatic Charge's shock deals magical damage centered on hero with the Static Charge. Static Charge's targets cannot be more than 900 range away.\nStatic Charge procs will not bounce to heroes that are invisible or hidden by Fog of War.",
     "attrib": [
       {
@@ -6777,7 +6802,7 @@
       {
         "key": "bonus_attack_speed",
         "header": "+",
-        "value": "80",
+        "value": "75",
         "footer": "Attack Speed"
       },
       {
@@ -6837,7 +6862,7 @@
       {
         "key": "chain_damage",
         "header": "CHAIN DAMAGE:",
-        "value": "150",
+        "value": "170",
         "generated": true
       },
       {
@@ -6946,7 +6971,7 @@
     "id": 161,
     "img": "/apps/dota2/images/items/recipe_lg.png?3",
     "dname": "Sange Recipe",
-    "cost": 500,
+    "cost": 700,
     "desc": "",
     "notes": "",
     "attrib": [],
@@ -6961,14 +6986,14 @@
     "img": "/apps/dota2/images/items/sange_lg.png?3",
     "dname": "Sange",
     "qual": "artifact",
-    "cost": 1950,
-    "desc": "Passive: Lesser MaimEach attack has a 30% chance to reduce enemy hero movement speed by -20% and attack speed by -20 when used by a melee hero. Reduces enemy hero movement by -10% and attack speed by -10 when used by a ranged hero. Effect lasts 5 seconds.",
+    "cost": 2150,
+    "desc": "Passive: Lesser MaimEach attack has a 40% chance to reduce enemy hero movement speed by -26% and attack speed by -26 when used by a melee hero. Reduces enemy hero movement by -13% and attack speed by -13 when used by a ranged hero. Effect lasts 5 seconds.",
     "notes": "",
     "attrib": [
       {
         "key": "bonus_damage",
         "header": "+",
-        "value": "10",
+        "value": "8",
         "footer": "Damage"
       },
       {
@@ -6980,31 +7005,31 @@
       {
         "key": "maim_chance",
         "header": "MAIM CHANCE:",
-        "value": "30",
+        "value": "40",
         "generated": true
       },
       {
         "key": "maim_slow_movement",
         "header": "MAIM SLOW MOVEMENT:",
-        "value": "-20",
+        "value": "-26",
         "generated": true
       },
       {
         "key": "maim_slow_attack",
         "header": "MAIM SLOW ATTACK:",
-        "value": "-20",
+        "value": "-26",
         "generated": true
       },
       {
         "key": "maim_slow_movement_range",
         "header": "MAIM SLOW MOVEMENT RANGE:",
-        "value": "-10",
+        "value": "-13",
         "generated": true
       },
       {
         "key": "maim_slow_attack_range",
         "header": "MAIM SLOW ATTACK RANGE:",
-        "value": "-10",
+        "value": "-13",
         "generated": true
       },
       {
@@ -7029,7 +7054,7 @@
     "dname": "Helm of the Dominator",
     "qual": "artifact",
     "cost": 2000,
-    "desc": "Active: DominateTakes control of one neutral, non-ancient target unit and sets its movement speed to 425 and max health to a minimum of 1500.Dominated units with a max health of greater than 1500 retain their original max health.  Dominated unit's bounty is set to 125 gold.Range: 700\nPassive: Dominator Aura Increases nearby allies' attack speed by 20 and health regen by 8.Radius: 900",
+    "desc": "Active: DominateTakes control of one neutral, non-ancient target unit and sets its movement speed to 425 and max health to a minimum of 1500.Dominated units with a max health of greater than 1500 retain their original max health.  Dominated unit's bounty is set to 200 gold.Range: 700\nPassive: Dominator Aura Increases nearby allies' attack speed by 20 and health regen by 7.Radius: 900",
     "notes": "Cannot dominate more than one unit at a time.  If a new unit is dominated, the old one will die.\nCan also Dominate enemy lane creeps and summoned units.\nSelling Helm of the Dominator will cause dominated units to die.",
     "attrib": [
       {
@@ -7037,12 +7062,6 @@
         "header": "+",
         "value": "2",
         "footer": "All Attributes"
-      },
-      {
-        "key": "attack_speed",
-        "header": "+",
-        "value": "5",
-        "footer": "Attack Speed"
       },
       {
         "key": "attack_speed_aura",
@@ -7053,7 +7072,7 @@
       {
         "key": "hp_regen_aura",
         "header": "HP REGEN AURA:",
-        "value": "8",
+        "value": "7",
         "generated": true
       },
       {
@@ -7083,7 +7102,7 @@
       {
         "key": "tooltip_bounty",
         "header": "TOOLTIP BOUNTY:",
-        "value": "125",
+        "value": "200",
         "generated": true
       }
     ],
@@ -7097,27 +7116,13 @@
     ],
     "created": true
   },
-  "recipe_maelstrom": {
-    "id": 165,
-    "img": "/apps/dota2/images/items/recipe_lg.png?3",
-    "dname": "Maelstrom Recipe",
-    "cost": 700,
-    "desc": "",
-    "notes": "",
-    "attrib": [],
-    "mc": false,
-    "cd": false,
-    "lore": "",
-    "components": null,
-    "created": false
-  },
   "maelstrom": {
     "id": 166,
     "img": "/apps/dota2/images/items/maelstrom_lg.png?3",
     "dname": "Maelstrom",
     "qual": "artifact",
-    "cost": 2800,
-    "desc": "Passive: Chain LightningGrants a 25% chance on attack to release a bolt of electricity that leaps between 4 targets within a 900 radius, dealing 120 magical damage to each.",
+    "cost": 2700,
+    "desc": "Passive: Chain LightningGrants a 25% chance on attack to release a bolt of electricity that leaps between 4 targets within a 900 radius, dealing 170 magical damage to each. Lightning proc pierces evasion.",
     "notes": "",
     "attrib": [
       {
@@ -7125,12 +7130,6 @@
         "header": "+",
         "value": "24",
         "footer": "Damage"
-      },
-      {
-        "key": "bonus_attack_speed",
-        "header": "+",
-        "value": "25",
-        "footer": "Attack Speed"
       },
       {
         "key": "chain_chance",
@@ -7141,7 +7140,7 @@
       {
         "key": "chain_damage",
         "header": "CHAIN DAMAGE:",
-        "value": "120",
+        "value": "170",
         "generated": true
       },
       {
@@ -7174,7 +7173,7 @@
     "lore": "A hammer forged for the gods themselves, Maelstrom allows its user to harness the power of lightning.",
     "components": [
       "mithril_hammer",
-      "gloves"
+      "javelin"
     ],
     "created": true
   },
@@ -7220,7 +7219,7 @@
     "id": 169,
     "img": "/apps/dota2/images/items/recipe_lg.png?3",
     "dname": "Yasha Recipe",
-    "cost": 500,
+    "cost": 700,
     "desc": "",
     "notes": "",
     "attrib": [],
@@ -7235,7 +7234,7 @@
     "img": "/apps/dota2/images/items/yasha_lg.png?3",
     "dname": "Yasha",
     "qual": "artifact",
-    "cost": 1950,
+    "cost": 2150,
     "desc": "",
     "notes": "Yasha-based movement speed bonuses from multiple items do not stack.",
     "attrib": [
@@ -8350,10 +8349,16 @@
     "img": "/apps/dota2/images/items/abyssal_blade_lg.png?3",
     "dname": "Abyssal Blade",
     "qual": "epic",
-    "cost": 6400,
-    "desc": "Active: Overwhelm Stuns a target enemy unit for 2 seconds. Pierces Spell Immunity.Range: 140\nPassive: Bash Grants melee heroes a 25% chance on hit to stun the target for 1.5 seconds and deal 100 bonus magical damage.  Bash pierces evasion. Bash chance for ranged heroes is 10%.\nPassive: Damage Block Grants a 50% chance to block 70 damage from incoming attacks on melee heroes, and 35 damage on ranged.",
+    "cost": 6900,
+    "desc": "Active: Overwhelm Stuns a target enemy unit for 2 seconds. Pierces Spell Immunity.Range: 140\nPassive: Bash Grants melee heroes a 25% chance on hit to stun the target for 1.5 seconds and deal 100 bonus magical damage.  Bash chance for ranged heroes is 10%.\nPassive: Damage Block Grants a 50% chance to block 70 damage from incoming attacks on melee heroes, and 35 damage on ranged.",
     "notes": "The stun is melee range.\nDoes not stack with other bashes.\nThe following heroes cannot trigger Bash on this item: Spirit Breaker, Faceless Void, Slardar, and Troll Warlord.\nMultiple sources of damage block do not stack.",
     "attrib": [
+      {
+        "key": "bonus_damage",
+        "header": "+",
+        "value": "25",
+        "footer": "Damage"
+      },
       {
         "key": "bonus_health",
         "header": "+",
@@ -8447,8 +8452,8 @@
     "img": "/apps/dota2/images/items/heavens_halberd_lg.png?3",
     "dname": "Heaven's Halberd",
     "qual": "artifact",
-    "cost": 3400,
-    "desc": "Active: DisarmPrevents a target from attacking for 3 seconds on melee targets, and 5 seconds on ranged targets.Range: 600 \nPassive: Lesser MaimEach attack has a 35% chance to reduce enemy hero movement speed by -20% and attack speed by -20 if the user is melee. Reduces enemy hero movement by -10% and attack speed by -10 if the user is ranged. Effect lasts 5 seconds.",
+    "cost": 3600,
+    "desc": "Active: DisarmPrevents a target from attacking for 3 seconds on melee targets, and 5 seconds on ranged targets.Range: 600 \nPassive: Lesser MaimEach attack has a 40% chance to reduce enemy hero movement speed by -26% and attack speed by -26 if the user is melee. Reduces enemy hero movement by -13% and attack speed by -13 if the user is ranged. Effect lasts 5 seconds.",
     "notes": "",
     "attrib": [
       {
@@ -8472,31 +8477,31 @@
       {
         "key": "maim_chance",
         "header": "MAIM CHANCE:",
-        "value": "35",
+        "value": "40",
         "generated": true
       },
       {
         "key": "maim_slow_movement",
         "header": "MAIM SLOW MOVEMENT:",
-        "value": "-20",
+        "value": "-26",
         "generated": true
       },
       {
         "key": "maim_slow_attack",
         "header": "MAIM SLOW ATTACK:",
-        "value": "-20",
+        "value": "-26",
         "generated": true
       },
       {
         "key": "maim_slow_movement_range",
         "header": "MAIM SLOW MOVEMENT RANGE:",
-        "value": "-10",
+        "value": "-13",
         "generated": true
       },
       {
         "key": "maim_slow_attack_range",
         "header": "MAIM SLOW ATTACK RANGE:",
-        "value": "-10",
+        "value": "-13",
         "generated": true
       },
       {
