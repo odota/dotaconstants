@@ -1,6 +1,7 @@
 const request = require('request');
 const async = require('async');
 const fs = require('fs');
+const simplevdf = require('simple-vdf');
 
 const extraStrings = {
   DOTA_ABILITY_BEHAVIOR_NONE: "None",
@@ -433,6 +434,50 @@ const sources = [
       });
       return countries;
     },
+  }, {
+    key: "patchnotes",
+    url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/panorama/localization/patchnotes/patchnotes_english.txt",
+    transform: respObj => {
+      let items = Object.keys(require("../build/items.json"));
+      let heroes = Object.keys(require("../build/hero_names.json")).map((hero) => hero.replace("npc_dota_hero_", ""));
+
+      let result = {};
+      let keys = Object.keys(respObj);
+      for (let key of keys) {
+        let keyArr = key.replace("dota_patch_", "").split("_");
+        let patch = keyArr.splice(0, 2).join("_");
+        if (!result[patch]) result[patch] = {
+          general: [],
+          items: {},
+          heroes: {}
+        };
+        
+        if (keyArr[0] == "general") {
+            result[patch].general.push(respObj[key]);
+        } else if (keyArr[0] == "item") {
+          let searchName = keyArr.slice(1);
+          let itemName = parseNameFromArray(searchName, items);
+          if (itemName) {
+            if (!result[patch].items[itemName]) result[patch].items[itemName] = [];
+            result[patch].items[itemName].push(respObj[key])
+          } else {
+            if (!result[patch].items.misc) result[patch].items.misc = [];
+            result[patch].items.misc.push(respObj[key]);
+          }
+        } else {
+          let heroName = parseNameFromArray(keyArr, heroes);
+          if (heroName) {
+            if (!result[patch].heroes[heroName]) result[patch].heroes[heroName] = [];
+            result[patch].heroes[heroName].push(respObj[key])
+          } else {
+            if (!result[patch].heroes.misc) result[patch].heroes.misc = [];
+            result[patch].heroes.misc.push(respObj[key]);
+          }
+        }
+      }
+
+      return result;
+    },
   },
 ];
 
@@ -476,7 +521,19 @@ async.each(sources, function(s, cb) {
         if (err || resp.statusCode !== 200) {
           return cb(err);
         }
-        body = JSON.parse(body);
+        let parsed;
+        try {
+          body = JSON.parse(body);
+        } catch (err) {
+          let vdf = simplevdf.parse(body);
+          vdf = vdf[Object.keys(vdf)[0]];
+          let keys = Object.keys(vdf);
+          let normalized = {};
+          for (let key of keys) {
+            normalized[key.toLowerCase()] = vdf[key];
+          }
+          body = normalized;
+        }
         if (s.transform) {
           body = s.transform(body);
         }
@@ -663,4 +720,15 @@ function formatVpkHero(key, vpkr, localized_name) {
   h.legs = Number(vpkrh.Legs || baseHero.Legs);
 
   return h;
+}
+
+function parseNameFromArray(array, names) {
+  let final = [];
+  for (let i = 1; i <= array.length; i++) {
+    let name = array.slice(0, i).join("_");
+    if (names.includes(name)) {
+      final.push(name)
+    }
+  }
+  return final.map((a) => a)[0];
 }
