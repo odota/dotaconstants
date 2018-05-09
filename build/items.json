@@ -810,6 +810,12 @@
     "notes": "",
     "attrib": [
       {
+        "key": "bonus_damage",
+        "header": "+",
+        "value": "10",
+        "footer": "Damage"
+      },
+      {
         "key": "lifesteal_percent",
         "header": "LIFESTEAL PERCENT:",
         "value": "15",
@@ -1025,6 +1031,7 @@
   "recipe_magic_wand": {
     "id": 35,
     "img": "/apps/dota2/images/items/recipe_lg.png?3",
+    "dname": "Magic Wand Recipe",
     "cost": 150,
     "desc": "",
     "notes": "",
@@ -6635,7 +6642,7 @@
     "dname": "Sange and Yasha",
     "qual": "artifact",
     "cost": 4300,
-    "desc": "Passive: Greater MaimEach attack has a 40% chance to reduce enemy hero movement speed by -26% and attack speed by -26 when used by a melee hero. Reduces enemy hero movement by -13% and attack speed by -13 when used by a ranged hero. Effect lasts 5 seconds.",
+    "desc": "Passive: MaimEach attack has a 40% chance to reduce enemy hero movement speed by -26% and attack speed by -26 when used by a melee hero. Reduces enemy hero movement by -13% and attack speed by -13 when used by a ranged hero. Effect lasts 5 seconds.",
     "notes": "Yasha-based movement speed bonuses from multiple items do not stack.",
     "attrib": [
       {
@@ -6987,13 +6994,13 @@
     "dname": "Sange",
     "qual": "artifact",
     "cost": 2150,
-    "desc": "Passive: Lesser MaimEach attack has a 40% chance to reduce enemy hero movement speed by -26% and attack speed by -26 when used by a melee hero. Reduces enemy hero movement by -13% and attack speed by -13 when used by a ranged hero. Effect lasts 5 seconds.",
+    "desc": "Passive: MaimEach attack has a 40% chance to reduce enemy hero movement speed by -26% and attack speed by -26 when used by a melee hero. Reduces enemy hero movement by -13% and attack speed by -13 when used by a ranged hero. Effect lasts 5 seconds.",
     "notes": "",
     "attrib": [
       {
         "key": "bonus_damage",
         "header": "+",
-        "value": "8",
+        "value": "10",
         "footer": "Damage"
       },
       {
@@ -8453,7 +8460,7 @@
     "dname": "Heaven's Halberd",
     "qual": "artifact",
     "cost": 3600,
-    "desc": "Active: DisarmPrevents a target from attacking for 3 seconds on melee targets, and 5 seconds on ranged targets.Range: 600 \nPassive: Lesser MaimEach attack has a 40% chance to reduce enemy hero movement speed by -26% and attack speed by -26 if the user is melee. Reduces enemy hero movement by -13% and attack speed by -13 if the user is ranged. Effect lasts 5 seconds.",
+    "desc": "Active: DisarmPrevents a target from attacking for 3 seconds on melee targets, and 5 seconds on ranged targets.Range: 600 \nPassive: MaimEach attack has a 40% chance to reduce enemy hero movement speed by -26% and attack speed by -26 if the user is melee. Reduces enemy hero movement by -13% and attack speed by -13 if the user is ranged. Effect lasts 5 seconds.",
     "notes": "",
     "attrib": [
       {
@@ -8930,6 +8937,48 @@
     "mc": false,
     "cd": false,
     "lore": "",
+    "components": null,
+    "created": false
+  },
+  "mutation_tombstone": {
+    "id": 1028,
+    "img": "/apps/dota2/images/items/mutation_tombstone_lg.png?3",
+    "dname": "Tombstone",
+    "qual": "consumable",
+    "cost": 0,
+    "desc": "",
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": false,
+    "lore": "",
+    "components": null,
+    "created": false
+  },
+  "super_blink": {
+    "id": 1029,
+    "img": "/apps/dota2/images/items/super_blink_lg.png?3",
+    "dname": "Super Blink Dagger",
+    "cost": null,
+    "desc": "Active: Blink Teleport to a target point up to 1200 units away.",
+    "notes": "",
+    "attrib": [
+      {
+        "key": "blink_range",
+        "header": "BLINK RANGE:",
+        "value": "1200",
+        "generated": true
+      },
+      {
+        "key": "blink_range_clamp",
+        "header": "BLINK RANGE CLAMP:",
+        "value": "960",
+        "generated": true
+      }
+    ],
+    "mc": false,
+    "cd": 15,
+    "lore": "The fabled dagger used by the fastest assassin ever to walk the lands.",
     "components": null,
     "created": false
   },
