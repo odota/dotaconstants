@@ -1166,7 +1166,7 @@
       {
         "key": "hp_regen",
         "header": "+",
-        "value": "0.7",
+        "value": "0.6",
         "footer": "HP Regeneration"
       },
       {
@@ -1262,19 +1262,19 @@
     "dname": "Bottle",
     "qual": "common",
     "cost": 650,
-    "desc": "Active: RegenerateConsumes a charge to restore 80 health and 40 mana over 2.5 seconds. If the hero is attacked by an enemy hero or Roshan, the effect is lost.The Bottle automatically refills at the fountain.Hold Control to use on an allied hero.Range: 350\nPassive:  Store RuneRunes can be stored in the bottle for later use by right-clicking them. Unused runes will automatically activate after 2 minutes.Using a stored rune fully refills the Bottle. Stored Bounty Runes replenish 2/3 charges.",
+    "desc": "Active: RegenerateConsumes a charge to restore 100 health and 50 mana over 2.5 seconds. If the hero is attacked by an enemy hero or Roshan, the effect is lost.The Bottle automatically refills at the fountain.Hold Control to use on an allied hero.Range: 350\nPassive:  Store RuneRunes can be stored in the bottle for later use by right-clicking them. Unused runes will automatically activate after 2 minutes.Using a stored rune fully refills the Bottle. Stored Bounty Runes replenish 2/3 charges.",
     "notes": "Bottle is shareable. Stored runes cannot be shared.\nIf Bottle does not have full charges and is placed on a courier, the courier's movespeed will be slowed by 30%.",
     "attrib": [
       {
         "key": "health_restore",
         "header": "HEALTH RESTORE:",
-        "value": "80",
+        "value": "100",
         "generated": true
       },
       {
         "key": "mana_restore",
         "header": "MANA RESTORE:",
-        "value": "40",
+        "value": "50",
         "generated": true
       },
       {
@@ -1307,7 +1307,7 @@
     "img": "/apps/dota2/images/items/ward_observer_lg.png?3",
     "dname": "Observer Ward",
     "qual": "consumable",
-    "cost": 80,
+    "cost": 75,
     "desc": "Use: PlantPlants an Observer Ward, an invisible watcher that gives ground vision in a 1600 radius to your team. Lasts 6 minutes.Hold Control to give one Observer Ward to an allied hero.Range: 500",
     "notes": "",
     "attrib": [
@@ -1405,7 +1405,7 @@
     "img": "/apps/dota2/images/items/ward_dispenser_lg.png?3",
     "dname": "Observer and Sentry Wards",
     "qual": "common",
-    "cost": 180,
+    "cost": 175,
     "desc": "Use: Plant Plant the currently active ward.  Double-Click to switch the currently active ward.Range: 500",
     "notes": "Hold Control to give one ward to an allied hero.",
     "attrib": [
