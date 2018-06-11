@@ -388,10 +388,10 @@
       }
     ],
     "mc": [
-      "70",
-      "100",
-      "130",
-      "160"
+      "90",
+      "115",
+      "140",
+      "165"
     ],
     "cd": [
       "14",
@@ -1096,6 +1096,11 @@
           "85",
           "110"
         ]
+      },
+      {
+        "key": "echo_slam_initial_damage",
+        "header": "INITIAL DAMAGE:",
+        "value": "100"
       }
     ],
     "mc": [
@@ -3224,9 +3229,9 @@
         "key": "silence_duration",
         "header": "DURATION:",
         "value": [
-          "0.75",
           "1.5",
-          "2.25",
+          "2",
+          "2.5",
           "3"
         ]
       },
@@ -3662,10 +3667,10 @@
       }
     ],
     "mc": [
+      "70",
       "110",
-      "140",
-      "170",
-      "200"
+      "150",
+      "190"
     ],
     "cd": "13",
     "img": "/apps/dota2/images/abilities/shadow_shaman_voodoo_md.png"
@@ -4086,7 +4091,7 @@
   "skeleton_king_mortal_strike": {
     "dname": "Mortal Strike",
     "behavior": "No Target",
-    "desc": "Wraith King passively gains a chance to deal bonus damage on an attack. Kill non-player units when it triggers and convert them into a skeleton army.",
+    "desc": "Wraith King passively gains a chance to deal bonus damage on an attack. Every two kills on an enemy unit adds a skeleton charge.",
     "attrib": [
       {
         "key": "crit_mult",
@@ -4510,7 +4515,7 @@
       {
         "key": "ghost_spawn_rate",
         "header": "GHOST SPAWN RATE:",
-        "value": "0.3",
+        "value": "0.35",
         "generated": true
       }
     ],
@@ -4566,7 +4571,12 @@
         "generated": true
       }
     ],
-    "mc": "140",
+    "mc": [
+      "110",
+      "120",
+      "130",
+      "140"
+    ],
     "cd": "13",
     "img": "/apps/dota2/images/abilities/sven_storm_bolt_md.png"
   },
@@ -5071,9 +5081,9 @@
         "key": "caustic_finale_slow",
         "header": "MOVE SLOW:",
         "value": [
-          "-21%",
-          "-24%",
-          "-27%",
+          "-15%",
+          "-20%",
+          "-25%",
           "-30%"
         ]
       },
@@ -5403,7 +5413,7 @@
       {
         "key": "splash_pct",
         "header": "SPLASH DAMAGE:",
-        "value": "130%"
+        "value": "150%"
       }
     ],
     "img": "/apps/dota2/images/abilities/tiny_toss_tree_md.png"
@@ -5417,9 +5427,9 @@
         "key": "status_resistance",
         "header": "STATUS RESISTANCE:",
         "value": [
-          "20%",
           "30%",
-          "40%"
+          "40%",
+          "50%"
         ]
       },
       {
@@ -5557,9 +5567,9 @@
       }
     ],
     "mc": [
-      "75",
-      "95",
-      "115",
+      "90",
+      "105",
+      "120",
       "135"
     ],
     "cd": "6",
@@ -6281,10 +6291,10 @@
       "160"
     ],
     "cd": [
-      "12",
       "11",
       "10",
-      "9"
+      "9",
+      "8"
     ],
     "img": "/apps/dota2/images/abilities/crystal_maiden_crystal_nova_md.png"
   },
@@ -6737,7 +6747,7 @@
       {
         "key": "slow_attack_speed",
         "header": "ATTACK SLOW:",
-        "value": "-20"
+        "value": "-30"
       },
       {
         "key": "aoe_damage",
@@ -6756,7 +6766,7 @@
       "170",
       "190"
     ],
-    "cd": "8",
+    "cd": "7",
     "img": "/apps/dota2/images/abilities/lich_frost_nova_md.png"
   },
   "lich_frost_armor": {
@@ -7438,7 +7448,12 @@
         "value": "35"
       }
     ],
-    "mc": "170",
+    "mc": [
+      "140",
+      "150",
+      "160",
+      "170"
+    ],
     "cd": "35",
     "img": "/apps/dota2/images/abilities/enigma_demonic_conversion_md.png"
   },
@@ -9659,9 +9674,9 @@
         "key": "duration",
         "header": "SLOW DURATION:",
         "value": [
-          "1",
-          "2",
-          "3",
+          "1.75",
+          "2.5",
+          "3.25",
           "4"
         ]
       },
@@ -12188,9 +12203,9 @@
         "key": "attack_speed_bonus_pct",
         "header": "BONUS ATTACK SPEED:",
         "value": [
-          "80",
-          "140",
-          "200",
+          "110",
+          "160",
+          "210",
           "260"
         ]
       }
@@ -12499,9 +12514,9 @@
         "key": "tooltip_duration",
         "header": "HERO SLOW DURATION:",
         "value": [
-          "3",
-          "4",
-          "5",
+          "3.75",
+          "4.5",
+          "5.25",
           "6"
         ]
       }
@@ -12553,7 +12568,7 @@
       "130",
       "140"
     ],
-    "cd": "45",
+    "cd": "35",
     "img": "/apps/dota2/images/abilities/enchantress_natures_attendants_md.png"
   },
   "enchantress_impetus": {
@@ -12868,7 +12883,12 @@
       "100",
       "110"
     ],
-    "cd": "8",
+    "cd": [
+      "11",
+      "10",
+      "9",
+      "8"
+    ],
     "img": "/apps/dota2/images/abilities/night_stalker_void_md.png"
   },
   "night_stalker_crippling_fear": {
@@ -12904,7 +12924,12 @@
       }
     ],
     "mc": "50",
-    "cd": "12",
+    "cd": [
+      "24",
+      "20",
+      "16",
+      "12"
+    ],
     "img": "/apps/dota2/images/abilities/night_stalker_crippling_fear_md.png"
   },
   "night_stalker_hunter_in_the_night": {
@@ -15158,10 +15183,10 @@
         "key": "duration",
         "header": "STUN DURATION:",
         "value": [
-          "1",
           "1.2",
           "1.4",
-          "1.6"
+          "1.6",
+          "1.8"
         ]
       },
       {
@@ -15212,8 +15237,8 @@
         "header": "BONUS DAMAGE:",
         "value": [
           "150",
-          "250",
-          "350"
+          "200",
+          "250"
         ]
       },
       {
@@ -15311,7 +15336,7 @@
       {
         "key": "duration_tooltip",
         "header": "DURATION:",
-        "value": "15"
+        "value": "20"
       }
     ],
     "mc": [
@@ -15921,7 +15946,7 @@
   "alchemist_chemical_rage": {
     "dname": "Chemical Rage",
     "behavior": "No Target",
-    "desc": "Alchemist causes his Ogre to enter a chemically induced rage, reducing base attack cooldown and increasing movement speed and regeneration.",
+    "desc": "Alchemist causes his Ogre to enter a chemically induced rage, reducing base attack cooldown and increasing movement speed and regeneration.\n\nDISPEL TYPE: Basic Dispel",
     "attrib": [
       {
         "key": "duration",
@@ -16945,7 +16970,7 @@
       {
         "key": "penalty_duration",
         "header": "PENALTY DURATION:",
-        "value": "4"
+        "value": "5"
       },
       {
         "key": "movespeed",
@@ -17503,9 +17528,9 @@
         "key": "bonus_damage",
         "header": "BONUS DAMAGE:",
         "value": [
-          "15%",
-          "26%",
-          "37%",
+          "12%",
+          "24%",
+          "36%",
           "48%"
         ]
       },
@@ -20106,9 +20131,9 @@
     ],
     "mc": "130",
     "cd": [
+      "18",
       "15",
-      "13",
-      "11",
+      "12",
       "9"
     ],
     "img": "/apps/dota2/images/abilities/disruptor_thunder_strike_md.png"
@@ -20741,8 +20766,8 @@
       }
     ],
     "mc": [
-      "100",
       "150",
+      "175",
       "200"
     ],
     "cd": [
@@ -20942,12 +20967,7 @@
         "value": "15"
       }
     ],
-    "mc": [
-      "25",
-      "35",
-      "45",
-      "55"
-    ],
+    "mc": "0",
     "cd": [
       "17",
       "16",
@@ -21524,10 +21544,10 @@
         "key": "movespeed",
         "header": "MOVEMENT SPEED BONUS:",
         "value": [
-          "7%",
-          "10%",
-          "13%",
-          "16%"
+          "5%",
+          "8%",
+          "11%",
+          "14%"
         ]
       },
       {
@@ -21578,10 +21598,10 @@
         "key": "hero_damage",
         "header": "HERO DAMAGE:",
         "value": [
-          "25",
-          "50",
-          "75",
-          "100"
+          "20",
+          "40",
+          "60",
+          "80"
         ]
       },
       {
@@ -22643,9 +22663,9 @@
         "key": "shock_damage",
         "header": "DAMAGE:",
         "value": [
-          "75",
-          "150",
-          "225",
+          "90",
+          "160",
+          "230",
           "300"
         ]
       },
@@ -22803,12 +22823,7 @@
       {
         "key": "slow_duration",
         "header": "SLOW DURATION:",
-        "value": [
-          "2.5",
-          "2.75",
-          "3",
-          "3.25"
-        ]
+        "value": "3.25"
       },
       {
         "key": "skewer_damage",
@@ -23237,8 +23252,13 @@
         "value": "5"
       },
       {
+        "key": "base_armor",
+        "header": "BASE ARMOR LOSS:",
+        "value": "2"
+      },
+      {
         "key": "armor_per_stack",
-        "header": "ARMOR LOSS:",
+        "header": "ARMOR LOSS PER STACK:",
         "value": [
           "1",
           "1.4",
@@ -23431,7 +23451,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Tusk compresses shards of ice into a ball of frozen energy that damages all enemies it comes in contact with. When the ball reaches its target destination the shards are released, creating a barrier that lasts for 3,4,5,6 seconds.",
+    "desc": "Tusk compresses shards of ice into a ball of frozen energy that damages all enemies it comes in contact with. When the ball reaches its target destination the shards are released, creating a barrier that lasts for 4,5,6,7 seconds.",
     "attrib": [
       {
         "key": "shard_width",
@@ -23464,10 +23484,10 @@
         "key": "shard_duration",
         "header": "SHARD DURATION:",
         "value": [
-          "3",
           "4",
           "5",
-          "6"
+          "6",
+          "7"
         ]
       },
       {
@@ -23495,10 +23515,10 @@
       "115"
     ],
     "cd": [
-      "21",
-      "18",
-      "15",
-      "12"
+      "23",
+      "20",
+      "17",
+      "14"
     ],
     "img": "/apps/dota2/images/abilities/tusk_ice_shards_md.png"
   },
@@ -26153,9 +26173,9 @@
         "key": "stun_duration",
         "header": "STUN DURATION:",
         "value": [
-          "1.5",
           "2",
-          "2.5"
+          "2.5",
+          "3"
         ]
       },
       {
@@ -26242,10 +26262,10 @@
         "key": "damage_per_second",
         "header": "DAMAGE PER SECOND:",
         "value": [
-          "10",
-          "30",
-          "50",
-          "70"
+          "20",
+          "40",
+          "60",
+          "80"
         ]
       },
       {
@@ -27235,9 +27255,9 @@
       "170"
     ],
     "cd": [
-      "40",
-      "35",
-      "30",
+      "34",
+      "31",
+      "28",
       "25"
     ],
     "img": "/apps/dota2/images/abilities/dark_willow_bramble_maze_md.png"
@@ -32917,13 +32937,13 @@
     "dname": "+75 Death Ward Damage"
   },
   "special_bonus_unique_necrophos": {
-    "dname": "-1.5s Death Pulse Cooldown"
+    "dname": "-2.5s Death Pulse Cooldown"
   },
   "special_bonus_unique_necrophos_2": {
-    "dname": "+0.6 Heartstopper Aura"
+    "dname": "+0.8 Heartstopper Aura"
   },
   "special_bonus_unique_necrophos_3": {
-    "dname": "+16% Ghost Shroud Slow"
+    "dname": "+20% Ghost Shroud Slow"
   },
   "special_bonus_unique_necrophos_4": {
     "dname": "+40 Death Pulse Heal"
@@ -32953,7 +32973,7 @@
     "dname": "-5s Sacred Arrow cooldown"
   },
   "special_bonus_unique_mirana_4": {
-    "dname": "-80 Moonlight Shadow Cooldown"
+    "dname": "-75 Moonlight Shadow Cooldown"
   },
   "special_bonus_unique_bounty_hunter": {
     "dname": "+125% Jinada Critical Strike"
@@ -32990,6 +33010,9 @@
   },
   "special_bonus_unique_pudge_3": {
     "dname": "+3s Dismember Duration"
+  },
+  "special_bonus_unique_pudge_4": {
+    "dname": "+12% Rot Slow"
   },
   "special_bonus_unique_treant": {
     "dname": "+2 Living Armor Block Instances"
@@ -33121,10 +33144,10 @@
     "dname": "+400 Ether Shock Damage"
   },
   "special_bonus_unique_shadow_shaman_4": {
-    "dname": "+60 Wards Attack Damage"
+    "dname": "+50 Wards Attack Damage"
   },
   "special_bonus_unique_shadow_shaman_5": {
-    "dname": "-4s Hex Cooldown"
+    "dname": "-5s Hex Cooldown"
   },
   "special_bonus_unique_warlock_1": {
     "dname": "Magic Immunity for Chaotic Offering Golems"
@@ -33400,7 +33423,7 @@
     "dname": "+5 Max Skeletons"
   },
   "special_bonus_unique_wraith_king_6": {
-    "dname": "+25 Skeletons Attack Damage"
+    "dname": "+35 Skeletons Attack Damage"
   },
   "special_bonus_unique_wraith_king_7": {
     "dname": "+1.5s Wraithfire Blast Slow Duration"
@@ -33463,7 +33486,7 @@
     "dname": "+225 Aphotic Shield Health"
   },
   "special_bonus_unique_abaddon_2": {
-    "dname": "+60 Mist Coil Heal/Damage"
+    "dname": "+75 Mist Coil Heal/Damage"
   },
   "special_bonus_unique_abaddon_3": {
     "dname": "+25% Curse of Avernus MS/AS Slow"
@@ -33479,6 +33502,9 @@
   },
   "special_bonus_unique_alchemist_4": {
     "dname": "+30 Chemical Rage Regeneration"
+  },
+  "special_bonus_unique_alchemist_5": {
+    "dname": "-3 Acid Spray Armor Reduction"
   },
   "special_bonus_unique_axe": {
     "dname": "+120 Battle Hunger DPS"
@@ -33604,7 +33630,7 @@
     "dname": "-1s Earthshock Cooldown"
   },
   "special_bonus_unique_ursa_3": {
-    "dname": "+1 Enrage Duration"
+    "dname": "+1.5s Enrage Duration"
   },
   "special_bonus_unique_ursa_4": {
     "dname": "+25s Fury Swipes Reset Time"
@@ -33682,7 +33708,7 @@
     "dname": "+120s Essence Shift Duration"
   },
   "special_bonus_unique_spectre": {
-    "dname": "-8s Spectral Dagger Cooldown"
+    "dname": "-10s Spectral Dagger Cooldown"
   },
   "special_bonus_unique_spectre_2": {
     "dname": "+15 Desolate Damage"
@@ -33914,7 +33940,7 @@
     "dname": "Exorcism Grants Haste"
   },
   "special_bonus_unique_phantom_assassin": {
-    "dname": "+1 Multishot Stifling Dagger"
+    "dname": "Triple Strike Stifling Dagger"
   },
   "special_bonus_unique_phantom_assassin_2": {
     "dname": "+5% Coup de Grace"
@@ -34008,6 +34034,12 @@
   },
   "special_bonus_unique_huskar_3": {
     "dname": "0 Inner Vitality Cooldown"
+  },
+  "special_bonus_unique_huskar_4": {
+    "dname": "+120 Max Damage Berserker's Blood"
+  },
+  "special_bonus_unique_huskar_5": {
+    "dname": "Burning Spears Pure Damage"
   },
   "special_bonus_unique_naga_siren": {
     "dname": "+1 Mirror Image Illusion"
@@ -34134,6 +34166,9 @@
   },
   "special_bonus_unique_gyrocopter_5": {
     "dname": "Global Call Down"
+  },
+  "special_bonus_unique_gyrocopter_6": {
+    "dname": "+0.5s Homing Missile Stun Duration"
   },
   "special_bonus_unique_outworld_devourer": {
     "dname": "+60s Arcane Orb Int Steal"

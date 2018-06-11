@@ -465,7 +465,7 @@
     "dname": "Moon Shard",
     "qual": "consumable",
     "cost": 4000,
-    "desc": "Use: Consume Consume the Moon Shard to permanently gain 60 attack speed and 150 bonus night vision. Max 1 use.\nPassive: Shade SightGrants 300 bonus night vision.",
+    "desc": "Use: Consume Consume the Moon Shard to permanently gain 60 attack speed and 200 bonus night vision. Max 1 use.\nPassive: Shade SightGrants 400 bonus night vision.",
     "notes": "The bonus night vision works during Night Stalker's Darkness ability.",
     "attrib": [
       {
@@ -477,7 +477,7 @@
       {
         "key": "bonus_night_vision",
         "header": "BONUS NIGHT VISION:",
-        "value": "300",
+        "value": "400",
         "generated": true
       },
       {
@@ -489,7 +489,7 @@
       {
         "key": "consumed_bonus_night_vision",
         "header": "CONSUMED BONUS NIGHT VISION:",
-        "value": "150",
+        "value": "200",
         "generated": true
       }
     ],
@@ -949,14 +949,14 @@
     "img": "/apps/dota2/images/items/talisman_of_evasion_lg.png?3",
     "dname": "Talisman of Evasion",
     "qual": "secret_shop",
-    "cost": 1450,
+    "cost": 1400,
     "desc": "",
     "notes": "Stacks diminishingly with other sources of Evasion.",
     "attrib": [
       {
         "key": "bonus_evasion",
         "header": "+",
-        "value": "20%",
+        "value": "15%",
         "footer": "Evasion"
       }
     ],
@@ -1436,7 +1436,7 @@
       {
         "key": "lifetime_sentry",
         "header": "LIFETIME SENTRY:",
-        "value": "240",
+        "value": "360",
         "generated": true
       },
       {
@@ -1463,7 +1463,7 @@
       {
         "key": "sentry_duration_minutes_tooltip",
         "header": "SENTRY DURATION (MINUTES):",
-        "value": "4"
+        "value": "6"
       },
       {
         "key": "tooltip_range",
@@ -3293,7 +3293,7 @@
       {
         "key": "bonus_movement_speed",
         "header": "+",
-        "value": "40",
+        "value": "30",
         "footer": "Movement Speed"
       },
       {
@@ -4433,7 +4433,7 @@
     "id": 109,
     "img": "/apps/dota2/images/items/recipe_lg.png?3",
     "dname": "Refresher Orb Recipe",
-    "cost": 1800,
+    "cost": 1700,
     "desc": "",
     "notes": "",
     "attrib": [],
@@ -4448,7 +4448,7 @@
     "img": "/apps/dota2/images/items/refresher_lg.png?3",
     "dname": "Refresher Orb",
     "qual": "rare",
-    "cost": 5200,
+    "cost": 5100,
     "desc": "Active: Reset CooldownsResets the cooldowns of all your items and abilities.",
     "notes": "",
     "attrib": [
@@ -5852,7 +5852,7 @@
     "img": "/apps/dota2/images/items/butterfly_lg.png?3",
     "dname": "Butterfly",
     "qual": "epic",
-    "cost": 5525,
+    "cost": 5475,
     "desc": "Active: Flutter Grants 35% additional movement speed for 2 seconds.",
     "notes": "Stacks diminishingly with other sources of Evasion.",
     "attrib": [
@@ -6038,6 +6038,7 @@
   "recipe_bfury": {
     "id": 144,
     "img": "/apps/dota2/images/items/recipe_lg.png?3",
+    "dname": "Battle Fury Recipe",
     "cost": 300,
     "desc": "",
     "notes": "",
@@ -7892,7 +7893,7 @@
     "img": "/apps/dota2/images/items/solar_crest_lg.png?3",
     "dname": "Solar Crest",
     "qual": "rare",
-    "cost": 2625,
+    "cost": 2575,
     "desc": "Active: ShineWhen cast on an ally, grants them 10 armor and 20% evasion. When cast on an enemy, removes 10 of their armor and grants your allies 40% Accuracy on the target. Removes the armor and evasion from the caster when used.  Cannot target magic immune enemies.Range: 1000",
     "notes": "",
     "attrib": [
@@ -7909,10 +7910,16 @@
         "footer": "Mana Regeneration"
       },
       {
-        "key": "bonus_evasion",
+        "key": "self_bonus_evasion",
         "header": "+",
-        "value": "20%",
+        "value": "15%",
         "footer": "Evasion"
+      },
+      {
+        "key": "bonus_evasion",
+        "header": "BONUS EVASION:",
+        "value": "20",
+        "generated": true
       },
       {
         "key": "truestrike_chance",
@@ -8459,7 +8466,7 @@
     "img": "/apps/dota2/images/items/heavens_halberd_lg.png?3",
     "dname": "Heaven's Halberd",
     "qual": "artifact",
-    "cost": 3600,
+    "cost": 3550,
     "desc": "Active: DisarmPrevents a target from attacking for 3 seconds on melee targets, and 5 seconds on ranged targets.Range: 600 \nPassive: MaimEach attack has a 40% chance to reduce enemy hero movement speed by -26% and attack speed by -26 if the user is melee. Reduces enemy hero movement by -13% and attack speed by -13 if the user is ranged. Effect lasts 5 seconds.",
     "notes": "",
     "attrib": [
@@ -8979,6 +8986,20 @@
     "mc": false,
     "cd": 15,
     "lore": "The fabled dagger used by the fastest assassin ever to walk the lands.",
+    "components": null,
+    "created": false
+  },
+  "pocket_tower": {
+    "id": 1030,
+    "img": "/apps/dota2/images/items/pocket_tower_lg.png?3",
+    "dname": "Pocket Tower",
+    "cost": null,
+    "desc": "",
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": 15,
+    "lore": "",
     "components": null,
     "created": false
   },
