@@ -1354,7 +1354,7 @@
     "dname": "Sentry Ward",
     "qual": "consumable",
     "cost": 100,
-    "desc": "Use: Plant Plants a Sentry Ward, an invisible watcher that grants True Sight, the ability to see invisible enemy units and wards, to any existing allied vision within a 850 radius.Lasts 4 minutes.Does not grant ground vision.Hold Control to give one Sentry Ward to an allied hero.Range: 500",
+    "desc": "Use: Plant Plants a Sentry Ward, an invisible watcher that grants True Sight, the ability to see invisible enemy units and wards, to any existing allied vision within a 850 radius.Lasts 6 minutes.Does not grant ground vision.Hold Control to give one Sentry Ward to an allied hero.Range: 500",
     "notes": "",
     "attrib": [
       {
@@ -1384,7 +1384,7 @@
       {
         "key": "duration_minutes_tooltip",
         "header": "DURATION MINUTES TOOLTIP:",
-        "value": "4",
+        "value": "6",
         "generated": true
       },
       {
@@ -2130,7 +2130,7 @@
       }
     ],
     "mc": false,
-    "cd": 95,
+    "cd": 90,
     "lore": "Preserved through unknown magical means, the Hand of Midas is a weapon of greed, sacrificing animals to line the owner's pockets.",
     "components": [
       "gloves"
@@ -3188,7 +3188,7 @@
     "dname": "Echo Sabre",
     "qual": "artifact",
     "cost": 2650,
-    "desc": "Passive: Echo Strike Causes melee attacks to attack twice in quick succession. The double attacks apply a 100% movement slow for 0.7 seconds on each strike.",
+    "desc": "Passive: Echo Strike Causes melee attacks to attack twice in quick succession. The double attacks apply a 100% movement slow for 0.8 seconds on each strike.",
     "notes": "",
     "attrib": [
       {
@@ -3200,7 +3200,7 @@
       {
         "key": "bonus_strength",
         "header": "+",
-        "value": "10",
+        "value": "12",
         "footer": "Strength"
       },
       {
@@ -3212,7 +3212,7 @@
       {
         "key": "bonus_damage",
         "header": "+",
-        "value": "15",
+        "value": "12",
         "footer": "Damage"
       },
       {
@@ -3242,7 +3242,7 @@
       {
         "key": "slow_duration",
         "header": "SLOW DURATION:",
-        "value": "0.7",
+        "value": "0.8",
         "generated": true
       }
     ],
@@ -5163,7 +5163,7 @@
     "dname": "Aeon Disk",
     "qual": "epic",
     "cost": 3350,
-    "desc": "Passive: Combo Breaker When you take damage and your health falls below 70%, a strong dispel is applied and you gain a 2.5 second buff that causes all damage you deal and are dealt to be reduced to zero. Only triggers on player based damage.",
+    "desc": "Passive: Combo Breaker When you take damage and your health falls below 80%, a strong dispel is applied and you gain a 2.5 second buff that causes all damage you deal and are dealt to be reduced to zero. Only triggers on player based damage.",
     "notes": "",
     "attrib": [
       {
@@ -5181,7 +5181,7 @@
       {
         "key": "health_threshold_pct",
         "header": "HEALTH THRESHOLD PCT:",
-        "value": "70",
+        "value": "80",
         "generated": true
       },
       {
@@ -5197,7 +5197,7 @@
       }
     ],
     "mc": false,
-    "cd": 90,
+    "cd": 115,
     "lore": "",
     "components": [
       "vitality_booster",
@@ -5805,7 +5805,7 @@
     "dname": "Radiance",
     "qual": "epic",
     "cost": 5150,
-    "desc": "Toggle: Burn When active, scorches enemies for 60 magical damage per second, and causes them to miss 17% of their attacks.Radius: 700",
+    "desc": "Toggle: Burn When active, scorches enemies for 60 magical damage per second, and causes them to miss 17% of their attacks. Illusions deal 35 magical damage per second.Radius: 700",
     "notes": "",
     "attrib": [
       {
@@ -7130,7 +7130,7 @@
     "dname": "Maelstrom",
     "qual": "artifact",
     "cost": 2700,
-    "desc": "Passive: Chain LightningGrants a 25% chance on attack to release a bolt of electricity that leaps between 4 targets within a 900 radius, dealing 170 magical damage to each. Lightning proc pierces evasion.",
+    "desc": "Passive: Chain LightningGrants a 25% chance on attack to release a bolt of electricity that leaps between 4 targets within a 900 radius, dealing 160 magical damage to each. Lightning proc pierces evasion.",
     "notes": "",
     "attrib": [
       {
@@ -7148,7 +7148,7 @@
       {
         "key": "chain_damage",
         "header": "CHAIN DAMAGE:",
-        "value": "170",
+        "value": "160",
         "generated": true
       },
       {
@@ -7688,13 +7688,19 @@
     "dname": "Orb of Venom",
     "qual": "component",
     "cost": 275,
-    "desc": "Passive: Poison AttackPoisons the target, dealing 5 magical damage per second for 3 seconds and slowing movement by -12% if the equipped hero is melee, or -4% if they are ranged.",
+    "desc": "Passive: Poison AttackPoisons the target, dealing 5 magical damage per second and slowing movement by -12% if the equipped hero is melee, or 3 magical damage per second and slowing movement by -4% if they are ranged. Lasts for 3 seconds.",
     "notes": "",
     "attrib": [
       {
-        "key": "poison_damage",
-        "header": "POISON DAMAGE:",
+        "key": "poison_damage_melee",
+        "header": "POISON DAMAGE MELEE:",
         "value": "5",
+        "generated": true
+      },
+      {
+        "key": "poison_damage_range",
+        "header": "POISON DAMAGE RANGE:",
+        "value": "3",
         "generated": true
       },
       {
