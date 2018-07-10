@@ -372,6 +372,7 @@ const sources = [
       Object.keys(DOTAHeroes).forEach(function(heroKey){
         if (heroKey != "Version" && heroKey != "npc_dota_hero_base" && heroKey != "npc_dota_hero_target_dummy"){
           const newHero = {"abilities": [], "talents": []};
+          let talentCounter = 2;
           Object.keys(DOTAHeroes[heroKey]).forEach(function(key){
             var abilityRegexMatch = key.match(/Ability([0-9]+)/);
             if (abilityRegexMatch){
@@ -381,7 +382,8 @@ const sources = [
               }
               else{
                 // -8 not -10 because going from 0-based index -> 1 and flooring divison result
-                newHero["talents"].push({"name": DOTAHeroes[heroKey][key], "level": Math.floor((abilityNum - 8) / 2)});
+                newHero["talents"].push({"name": DOTAHeroes[heroKey][key], "level": Math.floor((talentCounter) / 2)});
+                talentCounter++;
               }
             }
           });
