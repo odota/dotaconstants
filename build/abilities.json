@@ -10209,10 +10209,10 @@
         "key": "magic_resistance",
         "header": "MAGIC RESISTANCE REDUCTION:",
         "value": [
-          "-10",
-          "-15",
-          "-20",
-          "-25"
+          "-10%",
+          "-15%",
+          "-20%",
+          "-25%"
         ]
       },
       {
@@ -14747,8 +14747,9 @@
       },
       {
         "key": "duration_scepter",
-        "header": "SCEPTER DURATION:",
-        "value": "16"
+        "header": "DURATION SCEPTER:",
+        "value": "16",
+        "generated": true
       },
       {
         "key": "damage_scepter",
@@ -14951,7 +14952,7 @@
       {
         "key": "move_speed_pct",
         "header": "SLOW AMOUNT:",
-        "value": "30"
+        "value": "30%"
       },
       {
         "key": "move_speed_duration",
@@ -15383,7 +15384,7 @@
     "behavior": "Passive",
     "dmg_type": "Physical",
     "bkbpierce": "Yes",
-    "desc": "Ursa's claws dig deeper wounds in the enemy, causing consecutive attacks to the same enemy to deal more damage.  If the same target is not attacked after 15 seconds, the bonus damage is lost.",
+    "desc": "Ursa's claws dig deeper wounds in the enemy, causing consecutive attacks to the same enemy to deal more damage.  If the same target is not attacked after 20 seconds, the bonus damage is lost.",
     "attrib": [
       {
         "key": "bonus_reset_time",
@@ -15535,8 +15536,9 @@
       },
       {
         "key": "min_damage",
-        "header": "MINIMUM DAMAGE:",
-        "value": "50"
+        "header": "MIN DAMAGE:",
+        "value": "50",
+        "generated": true
       },
       {
         "key": "max_distance",
@@ -16172,8 +16174,9 @@
       },
       {
         "key": "mana_cost_scepter",
-        "header": "SCEPTER MANA COST:",
-        "value": "0"
+        "header": "MANA COST SCEPTER:",
+        "value": "0",
+        "generated": true
       }
     ],
     "mc": "0",
@@ -27723,6 +27726,13 @@
       }
     ],
     "img": "/apps/dota2/images/abilities/necronomicon_archer_aoe_md.png"
+  },
+  "courier_autodeliver": {
+    "dname": "Auto Deliver",
+    "behavior": "No Target",
+    "desc": "Toggle auto delivering of items.",
+    "attrib": [],
+    "img": "/apps/dota2/images/abilities/courier_autodeliver_md.png"
   },
   "courier_return_to_base": {
     "dname": "Return to Base",
