@@ -648,9 +648,9 @@
         "key": "bonus_movement_speed",
         "header": "MAX THIRST MOVE SPEED:",
         "value": [
-          "16%",
-          "24%",
-          "32%",
+          "7%",
+          "18%",
+          "29%",
           "40%"
         ]
       },
@@ -658,9 +658,9 @@
         "key": "bonus_damage",
         "header": "MAX THIRST DAMAGE:",
         "value": [
-          "16",
-          "24",
-          "32",
+          "7",
+          "18",
+          "29",
           "40"
         ]
       },
@@ -1168,10 +1168,10 @@
         "key": "blade_fury_damage",
         "header": "DAMAGE:",
         "value": [
-          "80",
-          "105",
-          "130",
-          "155"
+          "90",
+          "115",
+          "140",
+          "160"
         ]
       },
       {
@@ -3089,13 +3089,13 @@
       {
         "key": "illusion_damage_in_pct",
         "header": "ILLUSION DAMAGE IN PCT:",
-        "value": "400",
+        "value": "500",
         "generated": true
       },
       {
         "key": "tooltip_total_illusion_damage_in_pct",
         "header": "ILLUSION DAMAGE TAKEN:",
-        "value": "500%"
+        "value": "600%"
       },
       {
         "key": "illusion_from_illusion_duration",
@@ -3243,10 +3243,10 @@
         "key": "silence_duration",
         "header": "DURATION:",
         "value": [
-          "1.5",
           "2",
           "2.5",
-          "3"
+          "3",
+          "3.5"
         ]
       },
       {
@@ -3476,10 +3476,10 @@
     ],
     "mc": "140",
     "cd": [
+      "27",
+      "22",
       "17",
-      "15",
-      "13",
-      "11"
+      "12"
     ],
     "img": "/apps/dota2/images/abilities/pudge_meat_hook_md.png"
   },
@@ -5614,7 +5614,7 @@
       {
         "key": "cloud_radius",
         "header": "CLOUD RADIUS:",
-        "value": "500",
+        "value": "450",
         "generated": true
       }
     ],
@@ -6299,9 +6299,9 @@
       }
     ],
     "mc": [
-      "100",
-      "120",
+      "130",
       "140",
+      "150",
       "160"
     ],
     "cd": [
@@ -6675,7 +6675,12 @@
       }
     ],
     "mc": "50",
-    "cd": "12",
+    "cd": [
+      "15",
+      "14",
+      "13",
+      "12"
+    ],
     "img": "/apps/dota2/images/abilities/windrunner_windrun_md.png"
   },
   "windrunner_focusfire": {
@@ -8140,7 +8145,7 @@
       {
         "key": "bonus_damage",
         "header": "INCREASED MAGIC DAMAGE:",
-        "value": "-30%"
+        "value": "-40%"
       }
     ],
     "mc": "50",
@@ -8186,9 +8191,9 @@
         "key": "cooldown_scepter",
         "header": "SCEPTER COOLDOWN:",
         "value": [
-          "55",
-          "40",
-          "25"
+          "60",
+          "50",
+          "40"
         ]
       },
       {
@@ -9988,8 +9993,8 @@
         "header": "BONUS DAMAGE:",
         "value": [
           "250",
-          "350",
-          "450"
+          "300",
+          "350"
         ]
       },
       {
@@ -10035,8 +10040,8 @@
         "header": "TRAP BONUS DAMAGE:",
         "value": [
           "250",
-          "350",
-          "450"
+          "300",
+          "350"
         ],
         "generated": true
       },
@@ -10090,8 +10095,8 @@
         "header": "TRAP BONUS DAMAGE:",
         "value": [
           "250",
-          "350",
-          "450"
+          "300",
+          "350"
         ],
         "generated": true
       },
@@ -12587,9 +12592,9 @@
       }
     ],
     "mc": [
-      "110",
-      "120",
-      "130",
+      "170",
+      "160",
+      "150",
       "140"
     ],
     "cd": "35",
@@ -13129,7 +13134,7 @@
       "Point Target",
       "AOE"
     ],
-    "desc": "Spins a large web that grants Broodmother a passive movement speed increase, gives free movement, and boosts regeneration while in its vicinity. Spin Web charges restore every 40 seconds. Spin Web can be cast from anywhere as long as the new web touches an existing web. Webs never expire, and can be manually destroyed. When the maximum limit of webs is exceeded, the oldest web disappears.",
+    "desc": "Spins a large web that grants Broodmother a passive movement speed increase, gives free movement, and boosts regeneration while in its vicinity. Spin Web charges restore every 45 seconds. Spin Web can be cast from anywhere as long as the new web touches an existing web. Webs never expire, and can be manually destroyed. When the maximum limit of webs is exceeded, the oldest web disappears.",
     "attrib": [
       {
         "key": "radius",
@@ -13161,9 +13166,9 @@
         "key": "bonus_movespeed",
         "header": "MOVE INCREASE:",
         "value": [
+          "25%",
           "40%",
-          "50%",
-          "60%",
+          "55%",
           "70%"
         ]
       },
@@ -13180,7 +13185,7 @@
       {
         "key": "charge_restore_time",
         "header": "CHARGE RESTORE TIME:",
-        "value": "40"
+        "value": "45"
       }
     ],
     "mc": "50",
@@ -14906,9 +14911,9 @@
       }
     ],
     "mc": [
+      "65",
       "80",
-      "90",
-      "100",
+      "95",
       "110"
     ],
     "cd": "4",
@@ -17272,10 +17277,10 @@
         "key": "bonus_mana",
         "header": "BASE MANA:",
         "value": [
-          "125",
-          "200",
-          "275",
-          "350"
+          "150",
+          "250",
+          "350",
+          "450"
         ]
       },
       {
@@ -17380,9 +17385,9 @@
         "key": "damage_multiplier",
         "header": "INT DIFF DAMAGE MULTIPLIER:",
         "value": [
-          "8",
           "9",
-          "10"
+          "10",
+          "11"
         ]
       },
       {
@@ -19078,10 +19083,10 @@
       }
     ],
     "mc": [
-      "80",
-      "95",
+      "100",
       "110",
-      "125"
+      "120",
+      "130"
     ],
     "cd": [
       "16",
@@ -19236,10 +19241,10 @@
         "key": "fireblast_damage",
         "header": "FIREBLAST DAMAGE:",
         "value": [
-          "55",
-          "110",
-          "165",
-          "220"
+          "60",
+          "120",
+          "180",
+          "240"
         ]
       }
     ],
@@ -21385,7 +21390,7 @@
       {
         "key": "minimum_damage",
         "header": "MINIMUM DAMAGE:",
-        "value": "50"
+        "value": "40"
       },
       {
         "key": "radius",
@@ -23036,9 +23041,9 @@
         "key": "bonus_armor",
         "header": "BONUS ARMOR:",
         "value": [
-          "1",
-          "1.2",
+          "1.3",
           "1.4",
+          "1.5",
           "1.6"
         ]
       },
@@ -24087,12 +24092,7 @@
         "generated": true
       }
     ],
-    "mc": [
-      "50",
-      "60",
-      "70",
-      "80"
-    ],
+    "mc": "50",
     "cd": "4.5",
     "img": "/apps/dota2/images/abilities/abaddon_death_coil_md.png"
   },
@@ -31690,9 +31690,9 @@
       }
     ],
     "mc": [
-      "90",
-      "110",
-      "130",
+      "105",
+      "120",
+      "135",
       "150"
     ],
     "cd": "7",
