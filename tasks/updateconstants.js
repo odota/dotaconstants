@@ -57,7 +57,7 @@ const sources = [
       Object.keys(scripts).filter(key => {
         return !(key.includes("item_recipe") && scripts[key].ItemCost === "0") && key !== "Version";
       }).forEach(key => {
-        var item = {};
+        var item = {...replaceSpecialAttribs(strings[`DOTA_Tooltip_ability_${key}_Description`], scripts[key].AbilitySpecial, true)};
 
         item.id = parseInt(scripts[key].ID);
         item.img = `/apps/dota2/images/items/${key.replace(/^item_/, '')}_lg.png?3`;
@@ -69,7 +69,6 @@ const sources = [
         item.qual = scripts[key].ItemQuality;
         item.cost = parseInt(scripts[key].ItemCost);
 
-        item.desc = replaceSpecialAttribs(strings[`DOTA_Tooltip_ability_${key}_Description`], scripts[key].AbilitySpecial) || "";
         var notes = [];
         for (let i = 0; strings[`DOTA_Tooltip_ability_${key}_Note${i}`]; i++) {
           notes.push(strings[`DOTA_Tooltip_ability_${key}_Note${i}`]);
@@ -77,7 +76,7 @@ const sources = [
 
         item.notes = notes.join("\n");
 
-        item.attrib = formatAttrib(scripts[key].AbilitySpecial, strings, `DOTA_Tooltip_ability_${key}_`);
+        item.attrib = formatAttrib(scripts[key].AbilitySpecial, strings, `DOTA_Tooltip_ability_${key}_`).filter(attr => !attr.generated);
 
         item.mc = parseInt(scripts[key].AbilityManaCost) || false;
         item.cd = parseInt(scripts[key].AbilityCooldown) || false;
@@ -626,9 +625,24 @@ function formatAttrib(attributes, strings, strings_prefix) {
   }).filter(a => a);
 }
 
+function catogerizeItemAbilities (abilities) {
+  const itemAbilities = {}
+  abilities.forEach(ability => {
+    if(!ability.includes("<h1>")) {
+      (itemAbilities.hint = itemAbilities.hint || []).push(ability)
+    } else {
+    ability = ability.replace(/<[^h1>]*>/gi, "");
+    const regExp = /<h1>\s*(.*)\s*:\s*(.*)\s*<\/h1>\s*([\s\S]*)/gi
+    const [_, type, name, desc] = regExp.exec(ability);
+    (itemAbilities[type.toLowerCase()] = itemAbilities[type.toLowerCase()] || []).push({"name": name, "desc": desc})
+    }
+  })
+  return itemAbilities;
+}
+
 // Formats templates like "Storm's movement speed is %storm_move_speed%" with "Storm's movement speed is 32"
 // args are the template, and a list of attribute dictionaries, like the ones in AbilitySpecial for each ability in the npc_abilities.json from the vpk
-function replaceSpecialAttribs(template, attribs) {
+function replaceSpecialAttribs(template, attribs, isItem = false) {
   if (!template) {
     return template;
   }
@@ -649,6 +663,11 @@ function replaceSpecialAttribs(template, attribs) {
       }
       return attr[name];
     });
+  }
+  if(isItem) {
+    template = template.replace(/<br>/gi, '\n')
+    const abilities = template.split("\\n")
+    return catogerizeItemAbilities(abilities)
   }
   template = template.replace(/\\n/g, "\n").replace(/<[^>]*>/g, "");
   return template;
