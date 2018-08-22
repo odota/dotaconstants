@@ -76,7 +76,8 @@ const sources = [
 
         item.notes = notes.join("\n");
 
-        item.attrib = formatAttrib(scripts[key].AbilitySpecial, strings, `DOTA_Tooltip_ability_${key}_`).filter(attr => !attr.generated);
+        item.attrib = formatAttrib(scripts[key].AbilitySpecial, strings, `DOTA_Tooltip_ability_${key}_`)
+          .filter(attr => !attr.generated || attr.key === 'lifetime');
 
         item.mc = parseInt(scripts[key].AbilityManaCost) || false;
         item.cd = parseInt(scripts[key].AbilityCooldown) || false;
