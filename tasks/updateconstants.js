@@ -255,11 +255,13 @@ const sources = [
     key: "abilities",
     url: [
       'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/dota_english.json',
-      'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_abilities.json'
+      'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_abilities.json',
+      'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/abilities_english.json'
     ],
     transform: respObj => {
       const strings = respObj[0].lang.Tokens;
       const scripts = respObj[1].DOTAAbilities;
+      const stringsFB = respObj[2].lang.Tokens;
 
       var not_abilities = [ "Version", "ability_base", "default_attack", "attribute_bonus", "ability_deward" ];
 
@@ -268,14 +270,14 @@ const sources = [
       Object.keys(scripts).filter(key => !not_abilities.includes(key)).forEach(key => {
         var ability = {};
 
-        ability.dname = strings[`DOTA_Tooltip_ability_${key}`];
+        ability.dname = strings[`DOTA_Tooltip_ability_${key}`] || stringsFB[`DOTA_Tooltip_ability_${key}`];
 
         ability.behavior = formatBehavior(scripts[key].AbilityBehavior) || undefined;
         ability.dmg_type = formatBehavior(scripts[key].AbilityUnitDamageType) || undefined;
         ability.bkbpierce = formatBehavior(scripts[key].SpellImmunityType) || undefined;
         ability.target_type = formatBehavior(scripts[key].AbilityUnitTargetTeam) || undefined;
 
-        ability.desc = replaceSpecialAttribs(strings[`DOTA_Tooltip_ability_${key}_Description`], scripts[key].AbilitySpecial);
+        ability.desc = replaceSpecialAttribs(strings[`DOTA_Tooltip_ability_${key}_Description`] || stringsFB[`DOTA_Tooltip_ability_${key}_Description`], scripts[key].AbilitySpecial);
         ability.dmg = scripts[key].AbilityDamage && formatValues(scripts[key].AbilityDamage);
 
         ability.attrib = formatAttrib(scripts[key].AbilitySpecial, strings, `DOTA_Tooltip_ability_${key}_`);
@@ -326,12 +328,14 @@ const sources = [
     url: [
       "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/dota_english.json",
       "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.json",
+      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/dota_english.json",
     ],
     transform: respObj => {
       let heroes = [];
       let keys = Object.keys(respObj[1].DOTAHeroes).filter((name) => !badNames.includes(name));
       keys.forEach((name) => {
         let h = formatVpkHero(name, respObj[1], respObj[0].lang.Tokens[name]);
+        h.localized_name = h.localized_name || respObj[2].lang.Tokens[name];
         heroes.push(h);
       });
       heroes = heroes.sort((a, b) => a.id - b.id);
@@ -340,6 +344,8 @@ const sources = [
         hero.id = Number(hero.id);
         heroesObj[hero.id] = hero
       }
+      heroesObj.localized_name = heroesObj.localized_name
+
       return heroesObj;
     },
   }, {
@@ -347,6 +353,7 @@ const sources = [
     url: [
       "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/dota_english.json",
       "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.json",
+      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/dota_english.json",
     ],
     transform: respObj => {
       let heroes = [];
