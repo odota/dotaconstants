@@ -351,7 +351,6 @@ const sources = [
     url: [
       "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/dota_english.json",
       "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.json",
-      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/dota_english.json",
     ],
     transform: respObj => {
       let heroes = [];
