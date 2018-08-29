@@ -344,8 +344,6 @@ const sources = [
         hero.id = Number(hero.id);
         heroesObj[hero.id] = hero
       }
-      heroesObj.localized_name = heroesObj.localized_name
-
       return heroesObj;
     },
   }, {
