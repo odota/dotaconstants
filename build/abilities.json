@@ -27490,9 +27490,11 @@
     "img": "/apps/dota2/images/abilities/dark_willow_cursed_crown_md.png"
   },
   "grimstroke_dark_artistry": {
+    "dname": "Stroke of Fate",
     "behavior": "Point Target",
     "dmg_type": "Magical",
     "bkbpierce": "No",
+    "desc": "Grimstroke paints a path of ink with his brush, damaging and slowing enemies. The damage is increased with each enemy the ink hits.",
     "dmg": [
       "120",
       "180",
@@ -27568,9 +27570,11 @@
     "img": "/apps/dota2/images/abilities/grimstroke_dark_artistry_md.png"
   },
   "grimstroke_ink_creature": {
+    "dname": "Phantom's Embrace",
     "behavior": "Unit Target",
     "dmg_type": "Magical",
     "bkbpierce": "No",
+    "desc": "Summons a phantom that moves quickly towards the target, latching to it when she arrives. Once latched, the phantom damages and silences. If she survives the full latch duration she rends her victim for heavy damage and refreshes Phantom's Embrace's cooldown.",
     "attrib": [
       {
         "key": "spawn_time",
@@ -27713,8 +27717,10 @@
     "img": "/apps/dota2/images/abilities/grimstroke_ink_creature_md.png"
   },
   "grimstroke_spirit_walk": {
+    "dname": "Ink Swell",
     "behavior": "Unit Target",
     "dmg_type": "Magical",
+    "desc": "Grimstroke shrouds an allied unit in ink, increasing its movement speed while silencing and disarming it, as well as making it immune to attacks. Enemies in range of the allied unit are damaged with inky tendrils over time. After 3 seconds it triggers, applying damage and stun in an area around the unit in proportion to how much ink tendril damage was inflicted across the duration.",
     "attrib": [
       {
         "key": "cast_range_tooltip",
@@ -27844,12 +27850,14 @@
     "img": "/apps/dota2/images/abilities/grimstroke_spirit_walk_md.png"
   },
   "grimstroke_soul_chain": {
+    "dname": "Soulbind",
     "behavior": [
       "Unit Target",
       "AOE"
     ],
     "dmg_type": "Magical",
     "bkbpierce": "Yes",
+    "desc": "Binds a targeted enemy hero to its nearest allied hero within the bind radius, preventing both from moving away from each other. Any unit-targeted spell that either bound hero receives also gets cast on the other hero. If the bind is broken before the duration expires, the initial target will be bound to its nearest allied hero in the radius.",
     "attrib": [
       {
         "key": "chain_duration",
@@ -34875,16 +34883,16 @@
     "dname": "+1.5 Terrorize Duration"
   },
   "special_bonus_unique_grimstroke_1": {
-    "dname": "+2 Hits to Kill  Phantom"
+    "dname": "+200 Ink Swell Radius"
   },
   "special_bonus_unique_grimstroke_2": {
-    "dname": "+600  Stroke of Fate Cast Range"
+    "dname": "+50% Stroke of Fate Damage"
   },
   "special_bonus_unique_grimstroke_3": {
-    "dname": "+50%  Stroke of Fate Damage"
+    "dname": "+600 Stroke of Fate Cast Range"
   },
   "special_bonus_unique_grimstroke_4": {
-    "dname": "+200  Ink Swell Radius"
+    "dname": "+2 Hits to Kill Phantom"
   },
   "generic_hidden": {
     "behavior": [
