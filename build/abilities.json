@@ -537,9 +537,9 @@
         "key": "health_bonus_pct",
         "header": "KILL HEAL PERCENTAGE:",
         "value": [
+          "16%",
           "19%",
-          "21%",
-          "23%",
+          "22%",
           "25%"
         ]
       },
@@ -547,9 +547,9 @@
         "key": "health_bonus_creep_pct",
         "header": "HEALTH BONUS CREEP PCT:",
         "value": [
+          "16",
           "19",
-          "21",
-          "23",
+          "22",
           "25"
         ],
         "generated": true
@@ -4010,12 +4010,7 @@
     "dmg_type": "Magical",
     "bkbpierce": "No",
     "desc": "Wraith King sears an enemy unit with spectral fire, dealing damage and stunning, then dealing damage over time and slowing the target.",
-    "dmg": [
-      "50",
-      "100",
-      "150",
-      "200"
-    ],
+    "dmg": "100",
     "attrib": [
       {
         "key": "blast_speed",
@@ -4026,12 +4021,18 @@
       {
         "key": "blast_stun_duration",
         "header": "STUN DURATION:",
-        "value": "2"
+        "value": [
+          "1.1",
+          "1.4",
+          "1.7",
+          "2"
+        ]
       },
       {
-        "key": "tooltip_slow_duration",
-        "header": "SLOW DURATION:",
-        "value": "2"
+        "key": "blast_dot_duration",
+        "header": "BLAST DOT DURATION:",
+        "value": "2",
+        "generated": true
       },
       {
         "key": "blast_slow",
@@ -4039,19 +4040,13 @@
         "value": "-20%"
       },
       {
-        "key": "blast_dot_duration",
-        "header": "BLAST DOT DURATION:",
-        "value": "4",
-        "generated": true
-      },
-      {
         "key": "blast_dot_damage",
         "header": "DAMAGE PER SECOND:",
         "value": [
-          "20",
-          "35",
+          "10",
+          "30",
           "50",
-          "65"
+          "70"
         ]
       }
     ],
@@ -4062,9 +4057,9 @@
       "140"
     ],
     "cd": [
-      "11",
+      "14",
+      "12",
       "10",
-      "9",
       "8"
     ],
     "img": "/apps/dota2/images/abilities/skeleton_king_hellfire_blast_md.png"
@@ -4743,10 +4738,10 @@
         "key": "static_remnant_damage",
         "header": "DAMAGE:",
         "value": [
-          "140",
-          "180",
-          "220",
-          "260"
+          "120",
+          "160",
+          "200",
+          "240"
         ]
       }
     ],
@@ -5239,9 +5234,9 @@
     ],
     "mc": "120",
     "cd": [
-      "20",
+      "23",
+      "21",
       "19",
-      "18",
       "17"
     ],
     "img": "/apps/dota2/images/abilities/tiny_avalanche_md.png"
@@ -5371,12 +5366,7 @@
         ]
       }
     ],
-    "mc": [
-      "20",
-      "30",
-      "40",
-      "50"
-    ],
+    "mc": "50",
     "cd": [
       "24",
       "20",
@@ -6054,7 +6044,7 @@
       {
         "key": "magic_missile_speed",
         "header": "MAGIC MISSILE SPEED:",
-        "value": "1250",
+        "value": "900",
         "generated": true
       },
       {
@@ -6199,7 +6189,12 @@
       "35",
       "40"
     ],
-    "cd": "10",
+    "cd": [
+      "16",
+      "14",
+      "12",
+      "10"
+    ],
     "img": "/apps/dota2/images/abilities/vengefulspirit_wave_of_terror_md.png"
   },
   "vengefulspirit_nether_swap": {
@@ -6300,9 +6295,9 @@
     ],
     "mc": [
       "130",
-      "140",
-      "150",
-      "160"
+      "145",
+      "160",
+      "175"
     ],
     "cd": [
       "11",
@@ -6384,10 +6379,10 @@
         "key": "mana_regen",
         "header": "ALLY MANA REGEN:",
         "value": [
-          "0.8",
-          "1",
-          "1.2",
-          "1.4"
+          "0.7",
+          "0.9",
+          "1.1",
+          "1.3"
         ]
       },
       {
@@ -10824,7 +10819,12 @@
       {
         "key": "end_distance",
         "header": "END DISTANCE:",
-        "value": "500",
+        "value": [
+          "600",
+          "700",
+          "800",
+          "900"
+        ],
         "generated": true
       },
       {
@@ -12266,7 +12266,7 @@
         ]
       }
     ],
-    "mc": "10",
+    "mc": "12",
     "cd": "0",
     "img": "/apps/dota2/images/abilities/clinkz_searing_arrows_md.png"
   },
@@ -13529,16 +13529,11 @@
         "generated": true
       }
     ],
-    "mc": [
-      "70",
-      "80",
-      "90",
-      "100"
-    ],
+    "mc": "110",
     "cd": [
-      "35",
-      "30",
-      "25",
+      "44",
+      "36",
+      "28",
       "20"
     ],
     "img": "/apps/dota2/images/abilities/weaver_the_swarm_md.png"
@@ -13637,8 +13632,8 @@
       "0"
     ],
     "cd": [
-      "60",
-      "50",
+      "70",
+      "55",
       "40"
     ],
     "img": "/apps/dota2/images/abilities/weaver_time_lapse_md.png"
@@ -14151,7 +14146,12 @@
       {
         "key": "duration",
         "header": "DURATION:",
-        "value": "8"
+        "value": [
+          "5",
+          "6",
+          "7",
+          "8"
+        ]
       },
       {
         "key": "speed",
@@ -14427,7 +14427,7 @@
       {
         "key": "dagger_grace_period",
         "header": "DAGGER GRACE PERIOD:",
-        "value": "2",
+        "value": "1",
         "generated": true
       }
     ],
@@ -14460,7 +14460,7 @@
       {
         "key": "radius",
         "header": "RADIUS:",
-        "value": "325"
+        "value": "500"
       },
       {
         "key": "blind_pct",
@@ -14491,9 +14491,9 @@
         "key": "damage_reflection_pct",
         "header": "DAMAGE REFLECTED:",
         "value": [
-          "10%",
-          "14%",
-          "18%",
+          "7%",
+          "12%",
+          "17%",
           "22%"
         ]
       },
@@ -14505,7 +14505,7 @@
       {
         "key": "max_radius",
         "header": "MAX RADIUS:",
-        "value": "1000"
+        "value": "700"
       }
     ],
     "img": "/apps/dota2/images/abilities/spectre_dispersion_md.png"
@@ -14562,7 +14562,11 @@
         "generated": true
       }
     ],
-    "mc": "150",
+    "mc": [
+      "150",
+      "200",
+      "250"
+    ],
     "cd": [
       "180",
       "150",
@@ -15319,10 +15323,10 @@
     "bkbpierce": "No",
     "desc": "Ursa slams the earth, causing a powerful shock to damage and slow all enemy units in a nearby area for 4 seconds.",
     "dmg": [
-      "90",
-      "140",
-      "190",
-      "240"
+      "50",
+      "100",
+      "150",
+      "200"
     ],
     "attrib": [
       {
@@ -15371,12 +15375,7 @@
         "value": "20"
       }
     ],
-    "mc": [
-      "45",
-      "55",
-      "65",
-      "75"
-    ],
+    "mc": "75",
     "cd": "10",
     "img": "/apps/dota2/images/abilities/ursa_overpower_md.png"
   },
@@ -15401,9 +15400,9 @@
         "key": "damage_per_stack",
         "header": "DAMAGE PER ATTACK:",
         "value": [
-          "15",
-          "20",
-          "25",
+          "12",
+          "18",
+          "24",
           "30"
         ]
       }
@@ -15423,8 +15422,8 @@
         "key": "enrage_multiplier",
         "header": "FURY SWIPES MULTIPLIER:",
         "value": [
-          "1.5",
-          "1.75",
+          "1.4",
+          "1.7",
           "2"
         ]
       },
@@ -15941,7 +15940,7 @@
   "alchemist_goblins_greed": {
     "dname": "Greevil's Greed",
     "behavior": "Passive",
-    "desc": "Alchemist synthesizes additional gold from his enemies and bounty runes. With each kill, Alchemist earns base bonus gold and extra bonus gold. If Alchemist kills another unit which yields gold within the next 40 seconds, an additional instance of Extra Bonus Gold is added to the total. Additionally, causes bounty runes to yield 3.5 times their normal gold.",
+    "desc": "Alchemist synthesizes additional gold from his enemies and bounty runes. With each kill, Alchemist earns base bonus gold and extra bonus gold. If Alchemist kills another unit which yields gold within the next 40 seconds, an additional instance of Extra Bonus Gold is added to the total. Additionally, causes bounty runes to yield %bounty_multiplier_tooltip% times their normal gold.",
     "attrib": [
       {
         "key": "duration",
@@ -15969,9 +15968,15 @@
         ]
       },
       {
-        "key": "bounty_multiplier_tooltip",
-        "header": "BOUNTY RUNE MULTIPLIER:",
-        "value": "3.5"
+        "key": "bounty_multiplier",
+        "header": "BOUNTY MULTIPLIER:",
+        "value": [
+          "2",
+          "2.5",
+          "3",
+          "3.5"
+        ],
+        "generated": true
       }
     ],
     "img": "/apps/dota2/images/abilities/alchemist_goblins_greed_md.png"
@@ -16307,9 +16312,9 @@
         "key": "self_slow",
         "header": "SELF SPEED (WEX):\\n",
         "value": [
-          "30%",
-          "20%",
-          "10%",
+          "-30%",
+          "-20%",
+          "-10%",
           "0%",
           "10%",
           "20%",
@@ -17018,10 +17023,10 @@
       }
     ],
     "mc": [
-      "75",
-      "95",
-      "115",
-      "135"
+      "125",
+      "130",
+      "135",
+      "140"
     ],
     "cd": [
       "20",
@@ -17073,9 +17078,9 @@
         "key": "damage",
         "header": "DAMAGE:",
         "value": [
-          "150",
-          "200",
-          "250",
+          "120",
+          "180",
+          "240",
           "300"
         ]
       },
@@ -17121,9 +17126,9 @@
       }
     ],
     "mc": [
-      "250",
-      "375",
-      "500"
+      "300",
+      "450",
+      "600"
     ],
     "cd": "130",
     "img": "/apps/dota2/images/abilities/silencer_global_silence_md.png"
@@ -21702,9 +21707,9 @@
       "150"
     ],
     "cd": [
-      "20",
+      "26",
+      "22",
       "18",
-      "16",
       "14"
     ],
     "img": "/apps/dota2/images/abilities/wisp_spirits_md.png"
@@ -27251,10 +27256,10 @@
         "key": "latch_damage",
         "header": "LATCH DAMAGE:",
         "value": [
-          "140",
-          "180",
-          "220",
-          "260"
+          "125",
+          "150",
+          "175",
+          "200"
         ]
       },
       {
@@ -27305,8 +27310,8 @@
         "header": "ATTACK DAMAGE:",
         "value": [
           "60",
-          "120",
-          "180"
+          "110",
+          "160"
         ]
       },
       {
@@ -27417,9 +27422,9 @@
         "key": "damage",
         "header": "MAX DAMAGE:",
         "value": [
-          "120",
-          "200",
-          "280",
+          "90",
+          "180",
+          "270",
           "360"
         ]
       },
@@ -27441,10 +27446,10 @@
       "100"
     ],
     "cd": [
-      "30",
-      "24",
-      "18",
-      "12"
+      "32",
+      "26",
+      "20",
+      "14"
     ],
     "img": "/apps/dota2/images/abilities/dark_willow_shadow_realm_md.png"
   },
@@ -27463,10 +27468,10 @@
         "key": "stun_duration",
         "header": "STUN DURATION:",
         "value": [
-          "2",
-          "2.5",
-          "3",
-          "3.5"
+          "1.75",
+          "2.25",
+          "2.75",
+          "3.25"
         ]
       },
       {
@@ -27495,12 +27500,6 @@
     "dmg_type": "Magical",
     "bkbpierce": "No",
     "desc": "Grimstroke paints a path of ink with his brush, damaging and slowing enemies. The damage is increased with each enemy the ink hits.",
-    "dmg": [
-      "120",
-      "180",
-      "240",
-      "300"
-    ],
     "attrib": [
       {
         "key": "start_radius",
@@ -27521,26 +27520,14 @@
         "generated": true
       },
       {
-        "key": "movement_slow_pct",
-        "header": "MOVEMENT SLOW PCT:",
+        "key": "damage",
+        "header": "DAMAGE:",
         "value": [
-          "50",
-          "60",
-          "70",
-          "80"
+          "120",
+          "180",
+          "240",
+          "300"
         ],
-        "generated": true
-      },
-      {
-        "key": "activation_delay",
-        "header": "ACTIVATION DELAY:",
-        "value": "0.5",
-        "generated": true
-      },
-      {
-        "key": "slow_duration",
-        "header": "SLOW DURATION:",
-        "value": "2",
         "generated": true
       },
       {
@@ -27552,6 +27539,35 @@
           "32",
           "40"
         ],
+        "generated": true
+      },
+      {
+        "key": "movement_slow_pct",
+        "header": "MOVEMENT SLOW PCT:",
+        "value": [
+          "50",
+          "60",
+          "70",
+          "80"
+        ],
+        "generated": true
+      },
+      {
+        "key": "slow_duration",
+        "header": "SLOW DURATION:",
+        "value": "1.5",
+        "generated": true
+      },
+      {
+        "key": "vision_duration",
+        "header": "VISION DURATION:",
+        "value": "2",
+        "generated": true
+      },
+      {
+        "key": "range_tooltip",
+        "header": "RANGE TOOLTIP:",
+        "value": "1400",
         "generated": true
       }
     ],
@@ -27574,7 +27590,7 @@
     "behavior": "Unit Target",
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Summons a phantom that moves quickly towards the target, latching to it when she arrives. Once latched, the phantom damages and silences. If she survives the full latch duration she rends her victim for heavy damage and refreshes Phantom's Embrace's cooldown.",
+    "desc": "Summons a phantom that moves quickly towards the target, latching to it when she arrives. Once latched, the phantom damages and silences. If she survives the full latch duration she rends her victim for heavy damage and refreshes Phantom's Embrace's cooldown.\n\nHero attacks against the phantom count as 3 attacks each.",
     "attrib": [
       {
         "key": "spawn_time",
@@ -27593,9 +27609,9 @@
         "header": "LATCH DURATION:",
         "value": [
           "4",
-          "4.5",
+          "4",
           "5",
-          "5.5"
+          "5"
         ],
         "generated": true
       },
@@ -27608,6 +27624,12 @@
           "9",
           "9"
         ],
+        "generated": true
+      },
+      {
+        "key": "hero_attack_multiplier",
+        "header": "HERO ATTACK MULTIPLIER:",
+        "value": "3",
         "generated": true
       },
       {
@@ -27651,17 +27673,6 @@
         "generated": true
       },
       {
-        "key": "destroy_attacks_tooltip",
-        "header": "DESTROY ATTACKS TOOLTIP:",
-        "value": [
-          "2",
-          "2",
-          "3",
-          "3"
-        ],
-        "generated": true
-      },
-      {
         "key": "pop_damage",
         "header": "POP DAMAGE:",
         "value": [
@@ -27676,17 +27687,6 @@
         "key": "return_projectile_speed",
         "header": "RETURN PROJECTILE SPEED:",
         "value": "750",
-        "generated": true
-      },
-      {
-        "key": "return_mana_gain",
-        "header": "RETURN MANA GAIN:",
-        "value": [
-          "50",
-          "75",
-          "100",
-          "125"
-        ],
         "generated": true
       },
       {
@@ -27720,7 +27720,7 @@
     "dname": "Ink Swell",
     "behavior": "Unit Target",
     "dmg_type": "Magical",
-    "desc": "Grimstroke shrouds an allied unit in ink, increasing its movement speed while silencing and disarming it, as well as making it immune to attacks. Enemies in range of the allied unit are damaged with inky tendrils over time. After 3 seconds it triggers, applying damage and stun in an area around the unit in proportion to how much ink tendril damage was inflicted across the duration.",
+    "desc": "Grimstroke shrouds an allied unit in ink, increasing its movement speed. Enemies in range of the allied unit are damaged with inky tendrils over time. After 3 seconds it triggers, applying damage and stun in an area around the unit in proportion to how much ink tendril damage was inflicted to heroes.",
     "attrib": [
       {
         "key": "cast_range_tooltip",
@@ -27743,10 +27743,10 @@
         "key": "movespeed_bonus_pct",
         "header": "MOVESPEED BONUS PCT:",
         "value": [
-          "28",
-          "32",
-          "36",
-          "40"
+          "18",
+          "22",
+          "26",
+          "30"
         ],
         "generated": true
       },
@@ -27757,19 +27757,8 @@
         "generated": true
       },
       {
-        "key": "damage",
-        "header": "DAMAGE:",
-        "value": [
-          "55",
-          "70",
-          "85",
-          "100"
-        ],
-        "generated": true
-      },
-      {
-        "key": "max_damage_tooltip",
-        "header": "MAX DAMAGE TOOLTIP:",
+        "key": "max_damage",
+        "header": "MAX DAMAGE:",
         "value": [
           "220",
           "280",
@@ -27779,19 +27768,8 @@
         "generated": true
       },
       {
-        "key": "debuff_duration",
-        "header": "DEBUFF DURATION:",
-        "value": [
-          "0.55",
-          "0.7",
-          "0.85",
-          "1"
-        ],
-        "generated": true
-      },
-      {
-        "key": "max_stun_tooltip",
-        "header": "MAX STUN TOOLTIP:",
+        "key": "max_stun",
+        "header": "MAX STUN:",
         "value": [
           "2.2",
           "2.8",
@@ -27827,12 +27805,6 @@
           "55"
         ],
         "generated": true
-      },
-      {
-        "key": "max_bonus_multiplier",
-        "header": "MAX BONUS MULTIPLIER:",
-        "value": "3",
-        "generated": true
       }
     ],
     "mc": [
@@ -27855,17 +27827,16 @@
       "Unit Target",
       "AOE"
     ],
-    "dmg_type": "Magical",
     "bkbpierce": "Yes",
-    "desc": "Binds a targeted enemy hero to its nearest allied hero within the bind radius, preventing both from moving away from each other. Any unit-targeted spell that either bound hero receives also gets cast on the other hero. If the bind is broken before the duration expires, the initial target will be bound to its nearest allied hero in the radius.",
+    "desc": "Binds a targeted enemy hero to its nearest allied hero within the bind radius, preventing both from moving away from each other. Any unit-targeted ability that either bound hero receives also gets cast on the other hero. If the bind is broken before the duration expires, the initial target will be bound to its nearest allied hero in the radius.",
     "attrib": [
       {
         "key": "chain_duration",
         "header": "CHAIN DURATION:",
         "value": [
-          "4",
           "6",
-          "8"
+          "8",
+          "10"
         ],
         "generated": true
       },
@@ -32669,6 +32640,9 @@
   },
   "special_bonus_hp_regen_15": {
     "dname": "+15 Health Regen"
+  },
+  "special_bonus_hp_regen_16": {
+    "dname": "+16 Health Regen"
   },
   "special_bonus_hp_regen_20": {
     "dname": "+20 Health Regen"

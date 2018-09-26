@@ -348,7 +348,7 @@
     "passive": [
       {
         "name": "Damage Block",
-        "desc": "Grants a 50% chance to block 18 damage from incoming attacks on melee heroes, and 9 damage on ranged."
+        "desc": "Grants a 50% chance to block 20 damage from incoming attacks on melee heroes, and 9 damage on ranged."
       }
     ],
     "id": 182,
@@ -1322,7 +1322,7 @@
     "active": [
       {
         "name": "Phase",
-        "desc": "Gives 20% increased movement speed on melee heroes, and 16% on ranged heroes, and lets you move through units and turn more quickly for 3 seconds."
+        "desc": "Gives 20% increased movement speed on melee heroes, and 13% on ranged heroes, and lets you move through units and turn more quickly for 3 seconds."
       }
     ],
     "hint": [
@@ -1947,7 +1947,7 @@
     "active": [
       {
         "name": "Restore",
-        "desc": "Heals 250 health and gives +2 armor to allied units in a 900 radius."
+        "desc": "Heals 275 health and gives +2 armor to allied units in a 900 radius."
       }
     ],
     "passive": [
@@ -2173,7 +2173,7 @@
     "active": [
       {
         "name": "Soul Release",
-        "desc": "Provides 35 health regeneration when cast on allies, and deals 25 damage per second when cast on enemies. \n\nLasts 8 seconds.  \n\nGains charges every time an enemy hero dies within 1400 units.  Only the closest Urn to the dying hero will gain a charge.\n\nCast Range: 950"
+        "desc": "Provides 30 health regeneration when cast on allies, and deals 25 damage per second when cast on enemies. \n\nLasts 8 seconds.  \n\nGains charges every time an enemy hero dies within 1400 units.  Only the closest Urn to the dying hero will gain a charge.\n\nCast Range: 950"
       }
     ],
     "id": 92,
@@ -2294,7 +2294,7 @@
         "footer": "Mana Regeneration"
       }
     ],
-    "mc": 100,
+    "mc": 250,
     "cd": 22,
     "lore": "The most guarded relic among the cult of Vyse, it is the most coveted weapon among magi.",
     "components": [
@@ -3784,7 +3784,7 @@
     "active": [
       {
         "name": "Soul Release",
-        "desc": "When used against enemies, it reduces health by 4.5% of current health per second, and reduces HP regeneration and healing by 70%. Deals 20 damage per second. \n\nWhen used on allies, it increases health by 1% of current health per second, and increases HP regeneration and healing by 20%. Provides 35 health regeneration per second. \n\nLasts 8 seconds.  \n\nGains charges every time an enemy hero dies within 1400 units.  Only the closest Spirit Vessel to the dying hero will gain a charge.\n\nCast Range: 950 "
+        "desc": "When used against enemies, it reduces health by 4.5% of current health per second, and reduces HP regeneration and healing by 70%. Deals 20 damage per second. \n\nWhen used on allies, it increases health by 1% of current health per second, and increases HP regeneration and healing by 20%. Provides 30 health regeneration per second. \n\nLasts 8 seconds.  \n\nGains charges every time an enemy hero dies within 1400 units.  Only the closest Spirit Vessel to the dying hero will gain a charge.\n\nCast Range: 950 "
       }
     ],
     "id": 267,
@@ -3803,7 +3803,7 @@
       {
         "key": "bonus_movement_speed",
         "header": "+",
-        "value": "30",
+        "value": "20",
         "footer": "Movement Speed"
       },
       {
@@ -3962,7 +3962,7 @@
       {
         "key": "bonus_armor",
         "header": "+",
-        "value": "6",
+        "value": "5",
         "footer": "Armor"
       },
       {
@@ -3973,7 +3973,7 @@
       }
     ],
     "mc": 25,
-    "cd": 20,
+    "cd": 25,
     "lore": "A razor-sharp coat of mail, it is the choice of selfless martyrs in combat.",
     "components": [
       "broadsword",
@@ -5644,7 +5644,7 @@
     "active": [
       {
         "name": "Mend",
-        "desc": "Restores 250 health and 160 mana to nearby allies, and removes most negative effects from the caster.\n\nRadius: 900\nDispel Type: Basic Dispel"
+        "desc": "Restores 275 health and 160 mana to nearby allies, and removes most negative effects from the caster.\n\nRadius: 900\nDispel Type: Basic Dispel"
       }
     ],
     "passive": [
@@ -5928,7 +5928,7 @@
       {
         "key": "bonus_damage",
         "header": "+",
-        "value": "10",
+        "value": "7",
         "footer": "Damage"
       },
       {
