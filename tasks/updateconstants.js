@@ -442,6 +442,66 @@ const sources = [
       });
       return countries;
     },
+  },
+  {
+    key: "chat_wheel",
+    url: [ 
+      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/chat_wheel.txt",
+      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/dota_english.json",
+      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/hero_chat_wheel_english.txt"
+    ],
+    transform: respObj => {
+      const chat_wheel = respObj[0];
+      const lang = respObj[1].lang.Tokens;
+      const chat_wheel_lang = respObj[2];
+
+      const result = {};
+
+      function localize(input) {
+        if (!/^#/.test(input)) {
+          return input;
+        }
+        var key = input.replace(/^#/, '');
+        return lang[key] || chat_wheel_lang[key] || key;
+      }
+      function addMessage(key, message) {
+        var data = {
+          id: parseInt(message.message_id),
+          name: key,
+          all_chat: message.all_chat == "1" ? true : undefined,
+          label: localize(message.label),
+          message: localize(message.message),
+          image: message.image,
+          badge_tier: message.unlock_hero_badge_tier
+        };
+        if (message.sound) {
+          if (/^soundboard\./.test(message.sound) || /^wisp_/.test(key)) {
+            // All of the soundboard clips and the IO responses are wav files
+            data.sound_ext = "wav";
+          }
+          else if (message.message_id / 1000 >= 121) {
+            // Gets the hero id from the message id
+            // If the hero is grimstroke or newer, the files are aac
+            data.sound_ext = "aac";
+          }
+          else {
+            // All other response clips used are mp3s
+            data.sound_ext = "mp3";
+          }
+        }
+        result[data.id] = data;
+      }
+
+      for (let key in chat_wheel.messages) {
+        addMessage(key, chat_wheel.messages[key])
+      }
+      for (let hero_id in chat_wheel.hero_messages) {
+        for (let key in chat_wheel.hero_messages[hero_id]) {
+          addMessage(key, chat_wheel.hero_messages[hero_id][key])
+        }
+      }
+      return result;
+    },
   }, {
     key: "patchnotes",
     url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/panorama/localization/patchnotes/patchnotes_english.txt",
@@ -513,7 +573,7 @@ async.each(sources, function(s, cb) {
       if (typeof url === 'object') {
         async.map(url, (urlString, cb) => {
           request(urlString, (err, resp, body) => {
-            cb(err, JSON.parse(body));
+            cb(err, parseJson(body));
           });
         }, (err, resultArr) => {
           handleResponse(err, {
@@ -525,23 +585,27 @@ async.each(sources, function(s, cb) {
         request(url, handleResponse);
       }
 
-      function handleResponse(err, resp, body) {
-        if (err || resp.statusCode !== 200) {
-          return cb(err);
-        }
-        let parsed;
+      function parseJson(text) {
         try {
-          body = JSON.parse(body);
+          return JSON.parse(text);
         } catch (err) {
-          let vdf = simplevdf.parse(body);
+          let vdf = simplevdf.parse(text);
           vdf = vdf[Object.keys(vdf)[0]];
           let keys = Object.keys(vdf);
           let normalized = {};
           for (let key of keys) {
             normalized[key.toLowerCase()] = vdf[key];
           }
-          body = normalized;
+          return normalized;
         }
+      }
+
+      function handleResponse(err, resp, body) {
+        if (err || resp.statusCode !== 200) {
+          return cb(err);
+        }
+        let parsed;
+        body = parseJson(body)
         if (s.transform) {
           body = s.transform(body);
         }
