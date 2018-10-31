@@ -4030,9 +4030,8 @@
       },
       {
         "key": "blast_dot_duration",
-        "header": "BLAST DOT DURATION:",
-        "value": "2",
-        "generated": true
+        "header": "SLOW DURATION:",
+        "value": "2"
       },
       {
         "key": "blast_slow",
@@ -4071,7 +4070,7 @@
       "No Target",
       null
     ],
-    "desc": "Nearby friendly units restore health based on the damage they deal when attacking enemy units.",
+    "desc": "Nearby friendly melee units restore health based on the damage they deal when attacking enemy units.",
     "attrib": [
       {
         "key": "vampiric_aura_radius",
@@ -15379,7 +15378,7 @@
     "behavior": "Passive",
     "dmg_type": "Physical",
     "bkbpierce": "Yes",
-    "desc": "Ursa's claws dig deeper wounds in the enemy, causing consecutive attacks to the same enemy to deal more damage.  If the same target is not attacked after 20 seconds, the bonus damage is lost.",
+    "desc": "Ursa's claws dig deeper wounds in the enemy, causing consecutive attacks to the same enemy to deal more damage.  If the same target is not attacked after 8,12,16,20 seconds, the bonus damage is lost.",
     "attrib": [
       {
         "key": "bonus_reset_time",
@@ -15940,7 +15939,7 @@
   "alchemist_goblins_greed": {
     "dname": "Greevil's Greed",
     "behavior": "Passive",
-    "desc": "Alchemist synthesizes additional gold from his enemies and bounty runes. With each kill, Alchemist earns base bonus gold and extra bonus gold. If Alchemist kills another unit which yields gold within the next 40 seconds, an additional instance of Extra Bonus Gold is added to the total. Additionally, causes bounty runes to yield %bounty_multiplier_tooltip% times their normal gold.",
+    "desc": "Alchemist synthesizes additional gold from his enemies and bounty runes. With each kill, Alchemist earns base bonus gold and extra bonus gold. If Alchemist kills another unit which yields gold within the next 40 seconds, an additional instance of Extra Bonus Gold is added to the total. Additionally, causes bounty runes to yield more gold.",
     "attrib": [
       {
         "key": "duration",
@@ -15969,14 +15968,13 @@
       },
       {
         "key": "bounty_multiplier",
-        "header": "BOUNTY MULTIPLIER:",
+        "header": "BOUNTY RUNE MULTIPLIER:",
         "value": [
           "2",
           "2.5",
           "3",
           "3.5"
-        ],
-        "generated": true
+        ]
       }
     ],
     "img": "/apps/dota2/images/abilities/alchemist_goblins_greed_md.png"
@@ -22508,7 +22506,7 @@
       },
       {
         "key": "stun_duration",
-        "header": "STUN DURATION",
+        "header": "STUN DURATION:",
         "value": [
           "2",
           "2.25",
@@ -24413,17 +24411,17 @@
       },
       {
         "key": "move_pct_creeps",
-        "header": "BONUS SPEED(CREEPS):",
+        "header": "BONUS SPEED (CREEPS):",
         "value": "1%"
       },
       {
         "key": "move_pct_heroes",
-        "header": "BONUS SPEED(HEROES):",
+        "header": "BONUS SPEED (HEROES):",
         "value": "5%"
       },
       {
         "key": "damage_creeps",
-        "header": "BONUS DAMAGE(CREEPS):",
+        "header": "BONUS DAMAGE (CREEPS):",
         "value": [
           "6",
           "9",
@@ -24433,7 +24431,7 @@
       },
       {
         "key": "damage_heroes",
-        "header": "BONUS DAMAGE(HEROES):",
+        "header": "BONUS DAMAGE (HEROES):",
         "value": [
           "15",
           "30",
@@ -27526,42 +27524,38 @@
       },
       {
         "key": "damage",
-        "header": "DAMAGE:",
+        "header": "BASE DAMAGE:",
         "value": [
           "120",
           "180",
           "240",
           "300"
-        ],
-        "generated": true
+        ]
       },
       {
         "key": "bonus_damage_per_target",
-        "header": "BONUS DAMAGE PER TARGET:",
+        "header": "BONUS DMG PER TARGET:",
         "value": [
           "16",
           "24",
           "32",
           "40"
-        ],
-        "generated": true
+        ]
       },
       {
         "key": "movement_slow_pct",
-        "header": "MOVEMENT SLOW PCT:",
+        "header": "MOVEMENT SLOW:",
         "value": [
-          "50",
-          "60",
-          "70",
-          "80"
-        ],
-        "generated": true
+          "50%",
+          "60%",
+          "70%",
+          "80%"
+        ]
       },
       {
         "key": "slow_duration",
         "header": "SLOW DURATION:",
-        "value": "1.5",
-        "generated": true
+        "value": "1.5"
       },
       {
         "key": "vision_duration",
@@ -27571,9 +27565,8 @@
       },
       {
         "key": "range_tooltip",
-        "header": "RANGE TOOLTIP:",
-        "value": "1400",
-        "generated": true
+        "header": "RANGE:",
+        "value": "1400"
       }
     ],
     "mc": [
@@ -27612,19 +27605,17 @@
       {
         "key": "latch_duration",
         "header": "LATCH DURATION:",
-        "value": "5",
-        "generated": true
+        "value": "5"
       },
       {
         "key": "destroy_attacks",
-        "header": "DESTROY ATTACKS:",
+        "header": "ATTACKS TO DESTROY:",
         "value": [
           "6",
           "6",
           "9",
           "9"
-        ],
-        "generated": true
+        ]
       },
       {
         "key": "hero_attack_multiplier",
@@ -27645,14 +27636,13 @@
       },
       {
         "key": "dps_tooltip",
-        "header": "DPS TOOLTIP:",
+        "header": "PHANTOM DPS:",
         "value": [
           "6",
           "14",
           "22",
           "30"
-        ],
-        "generated": true
+        ]
       },
       {
         "key": "enemy_vision_time",
@@ -27674,14 +27664,13 @@
       },
       {
         "key": "pop_damage",
-        "header": "POP DAMAGE:",
+        "header": "REND DAMAGE:",
         "value": [
           "120",
           "200",
           "280",
           "360"
-        ],
-        "generated": true
+        ]
       },
       {
         "key": "return_projectile_speed",
@@ -27724,32 +27713,28 @@
     "attrib": [
       {
         "key": "cast_range_tooltip",
-        "header": "CAST RANGE TOOLTIP:",
+        "header": "CAST RANGE:",
         "value": [
           "400",
           "500",
           "600",
           "700"
-        ],
-        "generated": true
+        ]
       },
       {
         "key": "buff_duration",
         "header": "BUFF DURATION:",
-        "value": "3",
-        "generated": true
+        "value": "3"
       },
       {
         "key": "movespeed_bonus_pct",
-        "header": "MOVESPEED BONUS PCT:",
-        "value": "18",
-        "generated": true
+        "header": "MOVESPEED BONUS:",
+        "value": "18%"
       },
       {
         "key": "radius",
         "header": "RADIUS:",
-        "value": "400",
-        "generated": true
+        "value": "400"
       },
       {
         "key": "max_damage",
@@ -27759,19 +27744,17 @@
           "240",
           "320",
           "400"
-        ],
-        "generated": true
+        ]
       },
       {
         "key": "max_stun",
-        "header": "MAX STUN:",
+        "header": "MAX STUN DURATION:",
         "value": [
           "2.2",
           "2.8",
           "3.4",
           "4"
-        ],
-        "generated": true
+        ]
       },
       {
         "key": "damage_per_tick",
@@ -27792,14 +27775,13 @@
       },
       {
         "key": "tick_dps_tooltip",
-        "header": "TICK DPS TOOLTIP:",
+        "header": "INK TENDRILS DPS:",
         "value": [
           "25",
           "35",
           "45",
           "55"
-        ],
-        "generated": true
+        ]
       }
     ],
     "mc": [
@@ -27827,19 +27809,17 @@
     "attrib": [
       {
         "key": "chain_duration",
-        "header": "CHAIN DURATION:",
+        "header": "DURATION:",
         "value": [
           "6",
           "8",
           "10"
-        ],
-        "generated": true
+        ]
       },
       {
         "key": "chain_latch_radius",
-        "header": "CHAIN LATCH RADIUS:",
-        "value": "550",
-        "generated": true
+        "header": "BIND RADIUS:",
+        "value": "550"
       },
       {
         "key": "chain_break_distance",
@@ -27869,21 +27849,19 @@
         "key": "movement_slow",
         "header": "MOVEMENT SLOW:",
         "value": [
-          "15",
-          "30",
-          "45"
-        ],
-        "generated": true
+          "15%",
+          "30%",
+          "45%"
+        ]
       },
       {
         "key": "cast_range_tooltip",
-        "header": "CAST RANGE TOOLTIP:",
+        "header": "CAST RANGE:",
         "value": [
           "700",
           "800",
           "900"
-        ],
-        "generated": true
+        ]
       }
     ],
     "mc": [
@@ -32386,7 +32364,7 @@
   "arc_warden_tempest_double": {
     "dname": "Tempest Double",
     "behavior": "No Target",
-    "desc": "Briefly refocusing its fractured elements into a single form, the Arc Warden is able to create a perfect electrical duplication of itself. The duplicate can use all of Arc Warden's current items and spells, except consumables and items that drop on death. The duplicate has seperate item and ability cooldowns.",
+    "desc": "Briefly refocusing its fractured elements into a single form, the Arc Warden is able to create a perfect electrical duplication of itself. The duplicate can use all of Arc Warden's current items and spells, except consumables and items that drop on death. The duplicate has separate item and ability cooldowns.",
     "attrib": [
       {
         "key": "duration",
@@ -33411,7 +33389,7 @@
     "dname": "Blink Uncontrollable Illusion"
   },
   "special_bonus_unique_mirana_1": {
-    "dname": "+100 Leap Attack Speed"
+    "dname": "+80 Leap Attack Speed"
   },
   "special_bonus_unique_mirana_2": {
     "dname": "+2 Multishot Sacred Arrows"
@@ -33822,7 +33800,7 @@
     "dname": "+1.25s Supernova Stun Duration"
   },
   "special_bonus_unique_phoenix_3": {
-    "dname": "+60 Fire Spirits DPS"
+    "dname": "+40 Fire Spirits DPS"
   },
   "special_bonus_unique_phoenix_4": {
     "dname": "+1400 Icarus Dive Cast Range"
@@ -33981,7 +33959,7 @@
     "dname": "+30 Searing Arrows Damage"
   },
   "special_bonus_unique_clinkz_2": {
-    "dname": "+4s Strafe Duration"
+    "dname": "+3s Strafe Duration"
   },
   "special_bonus_unique_clinkz_3": {
     "dname": "Searing Arrows Multishot"
@@ -34143,7 +34121,7 @@
     "dname": "+4 Max Juxtapose Illusions"
   },
   "special_bonus_unique_phantom_lancer_4": {
-    "dname": "-7s Doppelganger CD"
+    "dname": "-6s Doppelganger CD"
   },
   "special_bonus_unique_slark": {
     "dname": "+3s Pounce Leash"
@@ -34170,7 +34148,7 @@
     "dname": "+40% Haunt Illusion Damage"
   },
   "special_bonus_unique_spectre_5": {
-    "dname": "+8% Dispersion"
+    "dname": "+6% Dispersion"
   },
   "special_bonus_unique_spirit_breaker_1": {
     "dname": "+25% Greater Bash Chance"
@@ -34275,7 +34253,7 @@
     "dname": "+1.5% Static Field Damage"
   },
   "special_bonus_unique_zeus_2": {
-    "dname": "+170 Arc Lightning Damage"
+    "dname": "+155 Arc Lightning Damage"
   },
   "special_bonus_unique_zeus_3": {
     "dname": "+0.5s Lightning Bolt Ministun"
@@ -34405,10 +34383,10 @@
     "dname": "-7s Smoke Screen Cooldown"
   },
   "special_bonus_unique_riki_3": {
-    "dname": "+900 Blink Strike Cast Range"
+    "dname": "+700 Blink Strike Cast Range"
   },
   "special_bonus_unique_riki_4": {
-    "dname": "+400 Tricks of the Trade AoE"
+    "dname": "+300 Tricks of the Trade AoE"
   },
   "special_bonus_unique_riki_5": {
     "dname": "Cloak and Dagger Doesn't Reveal"
@@ -34429,7 +34407,7 @@
     "dname": "-6s Ice Shards Cooldown"
   },
   "special_bonus_unique_sniper_1": {
-    "dname": "+25 Shrapnel DPS"
+    "dname": "+35 Shrapnel DPS"
   },
   "special_bonus_unique_sniper_2": {
     "dname": "+6 Shrapnel Charges"
@@ -34699,7 +34677,7 @@
     "dname": "+18% Rupture Damage"
   },
   "special_bonus_unique_bloodseeker_4": {
-    "dname": "+20 Max Thirst MS and Damage"
+    "dname": "+18 Max Thirst MS and Damage"
   },
   "special_bonus_unique_broodmother_1": {
     "dname": "+60 Insatiable Hunger Damage/Lifesteal"
