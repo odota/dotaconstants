@@ -120,7 +120,7 @@
       {
         "key": "bonus_regen",
         "header": "+",
-        "value": "3",
+        "value": "3.5",
         "footer": "HP Regeneration"
       }
     ],
@@ -289,7 +289,7 @@
       {
         "key": "mana_regen",
         "header": "+",
-        "value": "0.5",
+        "value": "0.75",
         "footer": "Mana Regeneration"
       }
     ],
@@ -313,7 +313,7 @@
       {
         "key": "movement_speed",
         "header": "+",
-        "value": "20",
+        "value": "6%",
         "footer": "Movement Speed"
       }
     ],
@@ -574,6 +574,27 @@
     "components": null,
     "created": false
   },
+  "crown": {
+    "id": 261,
+    "img": "/apps/dota2/images/items/crown_lg.png?3",
+    "dname": "Crown",
+    "qual": "component",
+    "cost": 450,
+    "notes": "",
+    "attrib": [
+      {
+        "key": "bonus_all_stats",
+        "header": "+",
+        "value": "4",
+        "footer": "All Attributes"
+      }
+    ],
+    "mc": false,
+    "cd": false,
+    "lore": "",
+    "components": null,
+    "created": false
+  },
   "ogre_axe": {
     "id": 21,
     "img": "/apps/dota2/images/items/ogre_axe_lg.png?3",
@@ -690,16 +711,9 @@
     "img": "/apps/dota2/images/items/lifesteal_lg.png?3",
     "dname": "Morbid Mask",
     "qual": "component",
-    "cost": 1100,
+    "cost": 900,
     "notes": "",
-    "attrib": [
-      {
-        "key": "bonus_damage",
-        "header": "+",
-        "value": "10",
-        "footer": "Damage"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": false,
     "lore": "A mask that drains the energy of those caught in its gaze.",
@@ -717,13 +731,40 @@
       {
         "key": "bonus_health_regen",
         "header": "+",
-        "value": "1.5",
+        "value": "2",
         "footer": "HP Regeneration"
       }
     ],
     "mc": false,
     "cd": false,
     "lore": "This ring is considered a good luck charm among the Gnomes.",
+    "components": null,
+    "created": false
+  },
+  "ring_of_tarrasque": {
+    "id": 279,
+    "img": "/apps/dota2/images/items/ring_of_tarrasque_lg.png?3",
+    "dname": "Ring of Tarrasque",
+    "qual": "component",
+    "cost": 700,
+    "notes": "",
+    "attrib": [
+      {
+        "key": "bonus_health",
+        "header": "+",
+        "value": "150",
+        "footer": "Health"
+      },
+      {
+        "key": "bonus_health_regen",
+        "header": "+",
+        "value": "3.75",
+        "footer": "HP Regeneration"
+      }
+    ],
+    "mc": false,
+    "cd": false,
+    "lore": "",
     "components": null,
     "created": false
   },
@@ -738,7 +779,7 @@
       {
         "key": "bonus_mana_regen",
         "header": "+",
-        "value": "0.5",
+        "value": "0.75",
         "footer": "Mana Regeneration"
       }
     ],
@@ -762,7 +803,7 @@
       {
         "key": "bonus_movement_speed",
         "header": "+",
-        "value": "50",
+        "value": "15%",
         "footer": "Movement Speed"
       }
     ],
@@ -953,7 +994,7 @@
     "use": [
       {
         "name": "Replenish",
-        "desc": "Grants 3 mana regeneration to the target for 50 seconds.\n\nIf the unit is attacked by an enemy hero or Roshan, the effect is lost.\n\nRange: 250"
+        "desc": "Grants 4.5 mana regeneration to the target for 50 seconds.\n\nIf the unit is attacked by an enemy hero, tower, or Roshan, the effect is lost.\n\nRange: 250"
       }
     ],
     "id": 38,
@@ -986,7 +1027,7 @@
       {
         "key": "hp_regen",
         "header": "+",
-        "value": "0.5",
+        "value": "0.6",
         "footer": "HP Regeneration"
       }
     ],
@@ -1000,7 +1041,7 @@
     "use": [
       {
         "name": "Salve",
-        "desc": "Grants 50 health regeneration to the target for 8 seconds.\n\nIf the unit is attacked by an enemy hero or Roshan, the effect is lost.\n\nRange: 250"
+        "desc": "Grants 50 health regeneration to the target for 8 seconds.\n\nIf the unit is attacked by an enemy hero, tower, or Roshan, the effect is lost.\n\nRange: 250"
       }
     ],
     "id": 39,
@@ -1040,7 +1081,7 @@
     "active": [
       {
         "name": "Regenerate",
-        "desc": "Consumes a charge to restore 100 health and 50 mana over 2.5 seconds. If the hero is attacked by an enemy hero or Roshan, the effect is lost.\n\nThe Bottle automatically refills at the fountain.\n\nHold Control to use on an allied hero.\n\nRange: 350"
+        "desc": "Consumes a charge to restore 125 health and 75 mana over 2.5 seconds. If the hero is attacked by an enemy hero, tower, or Roshan, the effect is lost.\n\nThe Bottle automatically refills at the fountain.\n\nHold Control to use on an allied hero.\n\nRange: 350"
       }
     ],
     "passive": [
@@ -1093,7 +1134,7 @@
     "use": [
       {
         "name": "Plant",
-        "desc": "Plants a Sentry Ward, an invisible watcher that grants True Sight, the ability to see invisible enemy units and wards, to any existing allied vision within a 850 radius.\nLasts 6 minutes.\n\nDoes not grant ground vision.\nHold Control to give one Sentry Ward to an allied hero.\n\nRange: 500"
+        "desc": "Plants a Sentry Ward, an invisible watcher that grants True Sight, the ability to see invisible enemy units and wards, to any existing allied vision within a 1000 radius.\nLasts 6 minutes.\n\nDoes not grant ground vision.\nHold Control to give one Sentry Ward to an allied hero.\n\nRange: 500"
       }
     ],
     "id": 43,
@@ -1232,7 +1273,7 @@
     "dname": "Town Portal Scroll",
     "qual": "consumable",
     "cost": 50,
-    "notes": "If multiple heroes teleport to the same location in succession, the channeling time will be increased for each successive hero.",
+    "notes": "If multiple heroes teleport to the same location in succession, the channeling time will be increased for each successive hero.\nTeleport can be prevented or canceled by Root abilities.",
     "attrib": [],
     "mc": 75,
     "cd": 80,
@@ -1257,11 +1298,11 @@
     "active": [
       {
         "name": "Teleport",
-        "desc": "Teleports you to an allied non-hero unit or structure. Teleporting to a unit is interrupted if the target unit dies.\n\nShares a cooldown with Town Portal Scroll."
+        "desc": "Teleports you to an allied non-hero unit or structure. Teleporting to a unit is interrupted if the target unit dies.\n\nAdds 10 seconds to the cooldown of Town Portal Scroll."
       }
     ],
     "hint": [
-      "Flat movement speed bonuses from multiple pairs of boots do not stack."
+      "Movement speed bonuses from multiple pairs of boots do not stack."
     ],
     "id": 48,
     "img": "/apps/dota2/images/items/travel_boots_lg.png?3",
@@ -1273,7 +1314,7 @@
       {
         "key": "bonus_movement_speed",
         "header": "+",
-        "value": "100",
+        "value": "32%",
         "footer": "Movement Speed"
       }
     ],
@@ -1289,11 +1330,11 @@
     "active": [
       {
         "name": "Teleport",
-        "desc": "Teleports you to any allied structure or unit, including heroes. Teleporting to a unit is interrupted if the target unit dies.\n\nShares a cooldown with Town Portal Scroll."
+        "desc": "Teleports you to any allied structure or unit, including heroes. Teleporting to a unit is interrupted if the target unit dies.\n\nAdds 10 seconds to the cooldown of Town Portal Scroll."
       }
     ],
     "hint": [
-      "Flat movement speed bonuses from multiple pairs of boots do not stack."
+      "Movement speed bonuses from multiple pairs of boots do not stack."
     ],
     "id": 220,
     "img": "/apps/dota2/images/items/travel_boots_2_lg.png?3",
@@ -1305,7 +1346,7 @@
       {
         "key": "bonus_movement_speed",
         "header": "+",
-        "value": "100",
+        "value": "32%",
         "footer": "Movement Speed"
       }
     ],
@@ -1319,10 +1360,10 @@
     "created": true
   },
   "phase_boots": {
-    "active": [
+    "passive": [
       {
         "name": "Phase",
-        "desc": "Gives 20% increased movement speed on melee heroes, and 13% on ranged heroes, and lets you move through units and turn more quickly for 3 seconds."
+        "desc": "When targeting an enemy unit up to 900 range away, you gain 20% increased movement speed on melee heroes, and 10% on ranged heroes, and lets you move through units and turn more quickly."
       }
     ],
     "hint": [
@@ -1332,29 +1373,35 @@
     "img": "/apps/dota2/images/items/phase_boots_lg.png?3",
     "dname": "Phase Boots",
     "qual": "common",
-    "cost": 1360,
+    "cost": 1550,
     "notes": "",
     "attrib": [
       {
         "key": "bonus_movement_speed",
         "header": "+",
-        "value": "50",
+        "value": "15%",
         "footer": "Movement Speed"
       },
       {
-        "key": "bonus_damage",
+        "key": "bonus_attack_speed",
         "header": "+",
-        "value": "24",
-        "footer": "Damage"
+        "value": "25",
+        "footer": "Attack Speed"
+      },
+      {
+        "key": "bonus_armor",
+        "header": "+",
+        "value": "5",
+        "footer": "Armor"
       }
     ],
     "mc": false,
-    "cd": 8,
+    "cd": false,
     "lore": "Boots that allow the wearer to travel between the ether.",
     "components": [
       "boots",
-      "blades_of_attack",
-      "blades_of_attack"
+      "chainmail",
+      "gloves"
     ],
     "created": true
   },
@@ -1474,7 +1521,7 @@
       {
         "key": "bonus_health_regen",
         "header": "+",
-        "value": "5",
+        "value": "6",
         "footer": "HP Regeneration"
       }
     ],
@@ -1495,7 +1542,7 @@
       {
         "key": "bonus_mana_regen",
         "header": "+",
-        "value": "1",
+        "value": "1.75",
         "footer": "Mana Regeneration"
       }
     ],
@@ -1599,7 +1646,7 @@
     "active": [
       {
         "name": "Switch Attribute",
-        "desc": "Switches between +10 Strength, +10 Agility, or +10 Intelligence."
+        "desc": "Switches between +12 Strength, +12 Agility, or +12 Intelligence."
       }
     ],
     "hint": [
@@ -1609,26 +1656,26 @@
     "img": "/apps/dota2/images/items/power_treads_lg.png?3",
     "dname": "Power Treads",
     "qual": "common",
-    "cost": 1450,
-    "notes": "Power Treads can be built using a Belt of Strength, Band of Elvenskin, or a Robe of the Magi.\nThe attack speed bonus from multiple Power Treads does not stack.",
+    "cost": 1380,
+    "notes": "Power Treads can be built using a Belt of Strength, Band of Elvenskin, or a Robe of the Magi.",
     "attrib": [
       {
         "key": "bonus_movement_speed",
         "header": "+",
-        "value": "50",
+        "value": "15%",
         "footer": "Movement Speed"
       },
       {
         "key": "bonus_stat",
         "header": "+",
-        "value": "10",
+        "value": "12",
         "footer": "Selected Attribute"
       },
       {
-        "key": "bonus_attack_speed",
+        "key": "bonus_damage",
         "header": "+",
-        "value": "25",
-        "footer": "Attack Speed"
+        "value": "16",
+        "footer": "Damage"
       }
     ],
     "mc": false,
@@ -1636,8 +1683,8 @@
     "lore": "A pair of tough-skinned boots that change to meet the demands of the wearer.",
     "components": [
       "boots",
-      "gloves",
-      "belt_of_strength"
+      "belt_of_strength",
+      "blades_of_attack"
     ],
     "created": true
   },
@@ -1671,7 +1718,7 @@
       {
         "key": "bonus_attack_speed",
         "header": "+",
-        "value": "30",
+        "value": "40",
         "footer": "Attack Speed"
       }
     ],
@@ -1712,7 +1759,7 @@
       {
         "key": "bonus_mana_regen",
         "header": "+",
-        "value": "0.75",
+        "value": "1.25",
         "footer": "Mana Regeneration"
       }
     ],
@@ -1737,13 +1784,13 @@
       {
         "key": "bonus_health_regen",
         "header": "+",
-        "value": "5.5",
+        "value": "6",
         "footer": "HP Regeneration"
       },
       {
         "key": "bonus_mana_regen",
         "header": "+",
-        "value": "1.5",
+        "value": "2",
         "footer": "Mana Regeneration"
       }
     ],
@@ -1787,7 +1834,7 @@
     "id": 72,
     "img": "/apps/dota2/images/items/recipe_lg.png?3",
     "dname": "Bracer Recipe",
-    "cost": 165,
+    "cost": 210,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -1801,13 +1848,13 @@
     "img": "/apps/dota2/images/items/bracer_lg.png?3",
     "dname": "Bracer",
     "qual": "common",
-    "cost": 465,
+    "cost": 510,
     "notes": "",
     "attrib": [
       {
         "key": "bonus_strength",
         "header": "+",
-        "value": "7",
+        "value": "8",
         "footer": "Strength"
       },
       {
@@ -1821,6 +1868,12 @@
         "header": "+",
         "value": "3",
         "footer": "Intelligence"
+      },
+      {
+        "key": "bonus_magic_resistance",
+        "header": "+",
+        "value": "6%",
+        "footer": "Magic Resistance"
       }
     ],
     "mc": false,
@@ -1836,7 +1889,7 @@
     "id": 74,
     "img": "/apps/dota2/images/items/recipe_lg.png?3",
     "dname": "Wraith Band Recipe",
-    "cost": 165,
+    "cost": 210,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -1850,7 +1903,7 @@
     "img": "/apps/dota2/images/items/wraith_band_lg.png?3",
     "dname": "Wraith Band",
     "qual": "common",
-    "cost": 465,
+    "cost": 510,
     "notes": "",
     "attrib": [
       {
@@ -1862,7 +1915,7 @@
       {
         "key": "bonus_agility",
         "header": "+",
-        "value": "7",
+        "value": "8",
         "footer": "Agility"
       },
       {
@@ -1870,6 +1923,12 @@
         "header": "+",
         "value": "3",
         "footer": "Intelligence"
+      },
+      {
+        "key": "bonus_attack_speed",
+        "header": "+",
+        "value": "8",
+        "footer": "Attack Speed"
       }
     ],
     "mc": false,
@@ -1885,7 +1944,7 @@
     "id": 76,
     "img": "/apps/dota2/images/items/recipe_lg.png?3",
     "dname": "Null Talisman Recipe",
-    "cost": 165,
+    "cost": 210,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -1899,7 +1958,7 @@
     "img": "/apps/dota2/images/items/null_talisman_lg.png?3",
     "dname": "Null Talisman",
     "qual": "common",
-    "cost": 465,
+    "cost": 510,
     "notes": "",
     "attrib": [
       {
@@ -1917,8 +1976,13 @@
       {
         "key": "bonus_intellect",
         "header": "+",
-        "value": "7",
+        "value": "8",
         "footer": "Intelligence"
+      },
+      {
+        "key": "bonus_spell_amp",
+        "header": "+Spell Amplification",
+        "value": "3%"
       }
     ],
     "mc": false,
@@ -1934,7 +1998,7 @@
     "id": 78,
     "img": "/apps/dota2/images/items/recipe_lg.png?3",
     "dname": "Mekansm Recipe",
-    "cost": 900,
+    "cost": 950,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -1947,20 +2011,20 @@
     "active": [
       {
         "name": "Restore",
-        "desc": "Heals 275 health and gives +2 armor to allied units in a 900 radius."
+        "desc": "Heals 275 health and gives +2 armor to allied units in a 1200 radius."
       }
     ],
     "passive": [
       {
         "name": "Mekansm Aura",
-        "desc": "Grants 3.5 health regeneration to allied units in a 900 radius."
+        "desc": "Grants 4.5 health regeneration to allied units in a 1200 radius."
       }
     ],
     "id": 79,
     "img": "/apps/dota2/images/items/mekansm_lg.png?3",
     "dname": "Mekansm",
     "qual": "rare",
-    "cost": 2350,
+    "cost": 2275,
     "notes": "Restore does not affect units that have been affected by Restore in the last 25 seconds.\nMultiple instances of Mekansm Aura do not stack.",
     "attrib": [
       {
@@ -1989,14 +2053,14 @@
     "passive": [
       {
         "name": "Vladmir's Aura",
-        "desc": "Grants lifesteal (15% for melee heroes, 10% for ranged), 2.5 health regeneration, 1 mana regeneration, 15% bonus attack damage, and 4 armor to nearby allies. \n\nRadius: 900"
+        "desc": "Grants lifesteal (15% for melee heroes, 10% for ranged), 2.5 health regeneration, 1.75 mana regeneration, 15% bonus attack damage, and 4 armor to nearby allies. \n\nRadius: 1200"
       }
     ],
     "id": 81,
     "img": "/apps/dota2/images/items/vladmir_lg.png?3",
     "dname": "Vladmir's Offering",
     "qual": "rare",
-    "cost": 2250,
+    "cost": 1925,
     "notes": "Multiple instances of Vladmir's Aura do not stack.",
     "attrib": [
       {
@@ -2033,7 +2097,7 @@
     "active": [
       {
         "name": "Armor Bonus",
-        "desc": "Gives +2 armor to all allied units.  Lasts 25 seconds on heroes, 30 seconds on units.\n\nRadius: 900"
+        "desc": "Gives +2 armor to all allied units.  Lasts 25 seconds on heroes, 30 seconds on units.\n\nRadius: 1200"
       }
     ],
     "id": 86,
@@ -2069,7 +2133,7 @@
     "passive": [
       {
         "name": "Basilius Aura",
-        "desc": "Grants 0.5 mana regeneration and 2 armor in a 900 radius."
+        "desc": "Grants 0.75 mana regeneration and 2 armor in a 1200 radius."
       }
     ],
     "toggle": [
@@ -2101,6 +2165,67 @@
     ],
     "created": true
   },
+  "recipe_holy_locket": {
+    "id": 268,
+    "img": "/apps/dota2/images/items/recipe_lg.png?3",
+    "cost": 550,
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": false,
+    "lore": "",
+    "components": null,
+    "created": false
+  },
+  "holy_locket": {
+    "passive": [
+      {
+        "name": "Holy Blessing",
+        "desc": "Amplifies heals and regeneration you provide by 25%."
+      }
+    ],
+    "id": 269,
+    "img": "/apps/dota2/images/items/holy_locket_lg.png?3",
+    "dname": "Holy Locket",
+    "qual": "rare",
+    "cost": 2650,
+    "notes": "",
+    "attrib": [
+      {
+        "key": "bonus_health",
+        "header": "+",
+        "value": "200",
+        "footer": "Health"
+      },
+      {
+        "key": "health_regen",
+        "header": "+",
+        "value": "4",
+        "footer": "HP Regeneration"
+      },
+      {
+        "key": "mana_regen",
+        "header": "+",
+        "value": "3",
+        "footer": "Mana Regeneration"
+      },
+      {
+        "key": "magic_resist",
+        "header": "+",
+        "value": "15%",
+        "footer": "Magic Resistance"
+      }
+    ],
+    "mc": false,
+    "cd": false,
+    "lore": "",
+    "components": [
+      "ring_of_tarrasque",
+      "void_stone",
+      "cloak"
+    ],
+    "created": true
+  },
   "recipe_pipe": {
     "id": 89,
     "img": "/apps/dota2/images/items/recipe_lg.png?3",
@@ -2118,26 +2243,26 @@
     "active": [
       {
         "name": "Barrier",
-        "desc": "Gives a shield that blocks 400 magic damage to all nearby allies. Lasts 12 seconds.\n\nRadius: 900"
+        "desc": "Gives a shield that blocks 400 magic damage to all nearby allies. Lasts 12 seconds.\n\nRadius: 1200"
       }
     ],
     "passive": [
       {
         "name": "Insight Aura",
-        "desc": "Gives allied units 2 health regeneration and 10% magic resistance.\n\nRadius: 900"
+        "desc": "Gives allied units 3 health regeneration and 10% magic resistance.\n\nRadius: 1200"
       }
     ],
     "id": 90,
     "img": "/apps/dota2/images/items/pipe_lg.png?3",
     "dname": "Pipe of Insight",
     "qual": "rare",
-    "cost": 3150,
+    "cost": 3025,
     "notes": "Multiple instances of Barrier do not stack.\nStacks multiplicatively with other sources of magic resistance.",
     "attrib": [
       {
         "key": "health_regen",
         "header": "+",
-        "value": "6.5",
+        "value": "8",
         "footer": "HP Regeneration"
       },
       {
@@ -2145,6 +2270,12 @@
         "header": "+",
         "value": "30%",
         "footer": "Magic Resistance"
+      },
+      {
+        "key": "bonus_all_stats",
+        "header": "+",
+        "value": "2",
+        "footer": "All Attributes"
       }
     ],
     "mc": 100,
@@ -2186,7 +2317,7 @@
       {
         "key": "mana_regen",
         "header": "+",
-        "value": "1",
+        "value": "1.5",
         "footer": "Mana Regeneration"
       },
       {
@@ -2216,7 +2347,7 @@
     "id": 93,
     "img": "/apps/dota2/images/items/recipe_lg.png?3",
     "dname": "Headdress Recipe",
-    "cost": 300,
+    "cost": 175,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -2229,14 +2360,14 @@
     "passive": [
       {
         "name": "Regeneration Aura",
-        "desc": "Grants 2 health regeneration to allies.\n\nRadius: 900"
+        "desc": "Grants 2 health regeneration to allies.\n\nRadius: 1200"
       }
     ],
     "id": 94,
     "img": "/apps/dota2/images/items/headdress_lg.png?3",
     "dname": "Headdress",
     "qual": "rare",
-    "cost": 650,
+    "cost": 525,
     "notes": "Multiple instances of Regeneration Aura do not stack.",
     "attrib": [
       {
@@ -2290,7 +2421,7 @@
       {
         "key": "bonus_mana_regen",
         "header": "+",
-        "value": "2.25",
+        "value": "9",
         "footer": "Mana Regeneration"
       }
     ],
@@ -2352,7 +2483,7 @@
       {
         "key": "bonus_mana_regen",
         "header": "+",
-        "value": "2.25",
+        "value": "5.5",
         "footer": "Mana Regeneration"
       }
     ],
@@ -2419,7 +2550,7 @@
       {
         "key": "bonus_mana_regen",
         "header": "+",
-        "value": "2.25",
+        "value": "5.5",
         "footer": "Mana Regeneration"
       }
     ],
@@ -2473,7 +2604,7 @@
       {
         "key": "bonus_mana_regen",
         "header": "+",
-        "value": "0.75",
+        "value": "1.25",
         "footer": "Mana Regeneration"
       }
     ],
@@ -2522,13 +2653,13 @@
       {
         "key": "bonus_mana_regen",
         "header": "+",
-        "value": "2.25",
+        "value": "5",
         "footer": "Mana Regeneration"
       },
       {
         "key": "bonus_movement_speed",
         "header": "+",
-        "value": "30",
+        "value": "6%",
         "footer": "Movement Speed"
       }
     ],
@@ -2578,7 +2709,7 @@
       {
         "key": "bonus_mana_regen",
         "header": "+",
-        "value": "1.25",
+        "value": "3",
         "footer": "Mana Regeneration"
       }
     ],
@@ -2627,7 +2758,7 @@
       {
         "key": "bonus_health_regen",
         "header": "+",
-        "value": "2",
+        "value": "2.5",
         "footer": "HP Regeneration"
       }
     ],
@@ -2639,6 +2770,19 @@
       "ring_of_regen"
     ],
     "created": true
+  },
+  "recipe_hurricane_pike": {
+    "id": 262,
+    "img": "/apps/dota2/images/items/recipe_lg.png?3",
+    "dname": "Hurricane Pike Recipe",
+    "cost": 450,
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": false,
+    "lore": "",
+    "components": null,
+    "created": false
   },
   "hurricane_pike": {
     "active": [
@@ -2657,7 +2801,7 @@
     "img": "/apps/dota2/images/items/hurricane_pike_lg.png?3",
     "dname": "Hurricane Pike",
     "qual": "epic",
-    "cost": 4615,
+    "cost": 4600,
     "notes": "Self-cast will use Hurricane Pike on yourself.\nHurricane Pike doesn't interrupt the target's actions.\nWill not work on a unit inside Chronosphere, Duel, or Black Hole.",
     "attrib": [
       {
@@ -2669,7 +2813,7 @@
       {
         "key": "bonus_health_regen",
         "header": "+",
-        "value": "2",
+        "value": "2.5",
         "footer": "HP Regeneration"
       },
       {
@@ -2689,7 +2833,6 @@
     "cd": 23,
     "lore": "A legendary pike once held as royal sigil of the ancient wyvern riders.",
     "components": [
-      "wraith_band",
       "force_staff",
       "dragon_lance"
     ],
@@ -2719,25 +2862,25 @@
     "img": "/apps/dota2/images/items/dagon_lg.png?3",
     "dname": "Dagon",
     "qual": "rare",
-    "cost": 2715,
+    "cost": 2700,
     "notes": "Instantly kills illusions.",
     "attrib": [
       {
         "key": "bonus_intellect",
         "header": "+",
         "value": [
-          "15",
-          "18",
-          "21",
-          "24",
-          "27"
+          "13",
+          "16",
+          "19",
+          "22",
+          "25"
         ],
         "footer": "Intelligence"
       },
       {
         "key": "bonus_all_stats",
         "header": "+",
-        "value": "3",
+        "value": "5",
         "footer": "All Attributes"
       }
     ],
@@ -2746,7 +2889,7 @@
     "lore": "A lesser wand that grows in power the longer it is used, it brings magic to the fingertips of the user.",
     "components": [
       "staff_of_wizardry",
-      "null_talisman"
+      "crown"
     ],
     "created": true
   },
@@ -2761,25 +2904,25 @@
     "img": "/apps/dota2/images/items/dagon_2_lg.png?3",
     "dname": "Dagon",
     "qual": "rare",
-    "cost": 3965,
+    "cost": 3950,
     "notes": "Instantly kills illusions.",
     "attrib": [
       {
         "key": "bonus_intellect",
         "header": "+",
         "value": [
-          "15",
-          "18",
-          "21",
-          "24",
-          "27"
+          "13",
+          "16",
+          "19",
+          "22",
+          "25"
         ],
         "footer": "Intelligence"
       },
       {
         "key": "bonus_all_stats",
         "header": "+",
-        "value": "3",
+        "value": "5",
         "footer": "All Attributes"
       }
     ],
@@ -2803,25 +2946,25 @@
     "img": "/apps/dota2/images/items/dagon_3_lg.png?3",
     "dname": "Dagon",
     "qual": "rare",
-    "cost": 5215,
+    "cost": 5200,
     "notes": "Instantly kills illusions.",
     "attrib": [
       {
         "key": "bonus_intellect",
         "header": "+",
         "value": [
-          "15",
-          "18",
-          "21",
-          "24",
-          "27"
+          "13",
+          "16",
+          "19",
+          "22",
+          "25"
         ],
         "footer": "Intelligence"
       },
       {
         "key": "bonus_all_stats",
         "header": "+",
-        "value": "3",
+        "value": "5",
         "footer": "All Attributes"
       }
     ],
@@ -2845,25 +2988,25 @@
     "img": "/apps/dota2/images/items/dagon_4_lg.png?3",
     "dname": "Dagon",
     "qual": "rare",
-    "cost": 6465,
+    "cost": 6450,
     "notes": "Instantly kills illusions.",
     "attrib": [
       {
         "key": "bonus_intellect",
         "header": "+",
         "value": [
-          "15",
-          "18",
-          "21",
-          "24",
-          "27"
+          "13",
+          "16",
+          "19",
+          "22",
+          "25"
         ],
         "footer": "Intelligence"
       },
       {
         "key": "bonus_all_stats",
         "header": "+",
-        "value": "3",
+        "value": "5",
         "footer": "All Attributes"
       }
     ],
@@ -2887,25 +3030,25 @@
     "img": "/apps/dota2/images/items/dagon_5_lg.png?3",
     "dname": "Dagon",
     "qual": "rare",
-    "cost": 7715,
+    "cost": 7700,
     "notes": "Instantly kills illusions.",
     "attrib": [
       {
         "key": "bonus_intellect",
         "header": "+",
         "value": [
-          "15",
-          "18",
-          "21",
-          "24",
-          "27"
+          "13",
+          "16",
+          "19",
+          "22",
+          "25"
         ],
         "footer": "Intelligence"
       },
       {
         "key": "bonus_all_stats",
         "header": "+",
-        "value": "3",
+        "value": "5",
         "footer": "All Attributes"
       }
     ],
@@ -2935,7 +3078,7 @@
     "active": [
       {
         "name": "Demonic Summoning",
-        "desc": "Summons a Warrior and an Archer to fight for you for 60 seconds.\n\n<h1>Warrior:</h1>Burns mana every hit, and deals magical damage to whoever kills it.  Gains True Sight at level 3.\nHealth: 700,800,900\nDamage: 75,100,125\nMana Break Damage: 30,40,50\nLast Will Damage: 550,675,800\n\n<h1>Archer:</h1>Has a passive movement and attack speed aura. Gains Purge at Level 3.\nHealth: 700,800,900\nDamage: 60,90,120\nAura Move Speed: 5,7,9\nAura Attack Speed: 5,7,9\nAura Radius: 900"
+        "desc": "Summons a Warrior and an Archer to fight for you for 60 seconds.\n\n<h1>Warrior:</h1>Burns mana every hit, and deals magical damage to whoever kills it.  Gains True Sight at level 3.\nHealth: 700,800,900\nDamage: 75,100,125\nMana Break Damage: 30,40,50\nLast Will Damage: 550,675,800\n\n<h1>Archer:</h1>Has a passive movement and attack speed aura. Gains Purge at Level 3.\nHealth: 700,800,900\nDamage: 60,90,120\nAura Move Speed: 5,7,9\nAura Attack Speed: 5,7,9\nAura Radius: 1200"
       }
     ],
     "id": 106,
@@ -2959,9 +3102,9 @@
         "key": "bonus_mana_regen",
         "header": "+",
         "value": [
-          "1",
-          "1.25",
-          "1.5"
+          "2",
+          "2.5",
+          "3"
         ],
         "footer": "Mana Regeneration"
       }
@@ -2980,7 +3123,7 @@
     "active": [
       {
         "name": "Demonic Summoning",
-        "desc": "Summons a Warrior and an Archer to fight for you for 60 seconds.\n\n<h1>Warrior:</h1>Burns mana every hit, and deals magical damage to whoever kills it.  Gains True Sight at level 3.\nHealth: 700,800,900\nDamage: 75,100,125\nMana Break Damage: 30,40,50\nLast Will Damage: 550,675,800\n\n<h1>Archer:</h1>Has a passive movement and attack speed aura. Gains Purge at Level 3.\nHealth: 700,800,900\nDamage: 60,90,120\nAura Move Speed: 5,7,9\nAura Attack Speed: 5,10,15\nAura Radius: 900"
+        "desc": "Summons a Warrior and an Archer to fight for you for 60 seconds.\n\n<h1>Warrior:</h1>Burns mana every hit, and deals magical damage to whoever kills it.  Gains True Sight at level 3.\nHealth: 700,800,900\nDamage: 75,100,125\nMana Break Damage: 30,40,50\nLast Will Damage: 550,675,800\n\n<h1>Archer:</h1>Has a passive movement and attack speed aura. Gains Purge at Level 3.\nHealth: 700,800,900\nDamage: 60,90,120\nAura Move Speed: 5,7,9\nAura Attack Speed: 5,10,15\nAura Radius: 1200"
       }
     ],
     "id": 193,
@@ -3004,9 +3147,9 @@
         "key": "bonus_mana_regen",
         "header": "+",
         "value": [
-          "1",
-          "1.25",
-          "1.5"
+          "2",
+          "2.5",
+          "3"
         ],
         "footer": "Mana Regeneration"
       }
@@ -3024,7 +3167,7 @@
     "active": [
       {
         "name": "Demonic Summoning",
-        "desc": "Summons a Warrior and an Archer to fight for you for 60 seconds.\n\n<h1>Warrior:</h1>Burns mana every hit, and deals magical damage to whoever kills it.  Gains True Sight at level 3.\nHealth: 700,800,900\nDamage: 75,100,125\nMana Break Damage: 30,40,50\nLast Will Damage: 550,675,800\n\n<h1>Archer:</h1>Has a passive movement and attack speed aura. Gains Purge at Level 3.\nHealth: 700,800,900\nDamage: 60,90,120\nAura Move Speed: 5,7,9\nAura Attack Speed: 5,10,15\nAura Radius: 900"
+        "desc": "Summons a Warrior and an Archer to fight for you for 60 seconds.\n\n<h1>Warrior:</h1>Burns mana every hit, and deals magical damage to whoever kills it.  Gains True Sight at level 3.\nHealth: 700,800,900\nDamage: 75,100,125\nMana Break Damage: 30,40,50\nLast Will Damage: 550,675,800\n\n<h1>Archer:</h1>Has a passive movement and attack speed aura. Gains Purge at Level 3.\nHealth: 700,800,900\nDamage: 60,90,120\nAura Move Speed: 5,7,9\nAura Attack Speed: 5,10,15\nAura Radius: 1200"
       }
     ],
     "id": 194,
@@ -3048,9 +3191,9 @@
         "key": "bonus_mana_regen",
         "header": "+",
         "value": [
-          "1",
-          "1.25",
-          "1.5"
+          "2",
+          "2.5",
+          "3"
         ],
         "footer": "Mana Regeneration"
       }
@@ -3138,13 +3281,13 @@
       {
         "key": "bonus_health_regen",
         "header": "+",
-        "value": "11",
+        "value": "13",
         "footer": "HP Regeneration"
       },
       {
         "key": "bonus_mana_regen",
         "header": "+",
-        "value": "5",
+        "value": "12",
         "footer": "Mana Regeneration"
       }
     ],
@@ -3174,7 +3317,7 @@
     "passive": [
       {
         "name": "Assault Aura",
-        "desc": "Grants 25 attack speed and 5 armor to nearby allied units and structures, and decreases nearby enemy unit and structure armor by -5.\n\nRadius: 900"
+        "desc": "Grants 25 attack speed and 5 armor to nearby allied units and structures, and decreases nearby enemy unit and structure armor by -5.\n\nRadius: 1200"
       }
     ],
     "id": 112,
@@ -3207,11 +3350,24 @@
     ],
     "created": true
   },
+  "recipe_heart": {
+    "id": 113,
+    "img": "/apps/dota2/images/items/recipe_lg.png?3",
+    "dname": "Heart of Tarrasque Recipe",
+    "cost": 400,
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": false,
+    "lore": "",
+    "components": null,
+    "created": false
+  },
   "heart": {
     "passive": [
       {
         "name": "Health Regeneration",
-        "desc": "Restores 7% of max health per second. \n\nIf damage is taken from an enemy hero or Roshan, this ability is disabled for 5 seconds for melee heroes, or 7 seconds for ranged heroes."
+        "desc": "Restores 5% of max health per second. \n\nIf damage is taken from an enemy hero or Roshan, this ability is disabled for 5 seconds for melee heroes, or 7 seconds for ranged heroes."
       }
     ],
     "id": 114,
@@ -3230,17 +3386,22 @@
       {
         "key": "bonus_health",
         "header": "+",
-        "value": "500",
+        "value": "400",
         "footer": "Health"
+      },
+      {
+        "key": "hp_regen_amp",
+        "header": "+Health Regen Amplification",
+        "value": "50%"
       }
     ],
     "mc": false,
     "cd": 7,
     "lore": "Preserved heart of an extinct monster, it bolsters the bearer's fortitude.",
     "components": [
-      "reaver",
+      "ring_of_tarrasque",
       "vitality_booster",
-      "vitality_booster"
+      "reaver"
     ],
     "created": true
   },
@@ -3248,7 +3409,7 @@
     "id": 115,
     "img": "/apps/dota2/images/items/recipe_lg.png?3",
     "dname": "Black King Bar Recipe",
-    "cost": 1375,
+    "cost": 1450,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -3268,7 +3429,7 @@
     "img": "/apps/dota2/images/items/black_king_bar_lg.png?3",
     "dname": "Black King Bar",
     "qual": "epic",
-    "cost": 3975,
+    "cost": 4050,
     "notes": "Purchasing another Black King Bar will not reset its immunity duration.\nUsing Black King Bar may remove some positive buffs.",
     "attrib": [
       {
@@ -3336,7 +3497,7 @@
     "passive": [
       {
         "name": "Freezing Aura",
-        "desc": "Reduces the attack speed of all enemies by -45. \n\nRadius: 900"
+        "desc": "Reduces the attack speed of all enemies by -45. \n\nRadius: 1200"
       }
     ],
     "id": 119,
@@ -3371,14 +3532,14 @@
   "bloodstone": {
     "active": [
       {
-        "name": "Pocket Deny",
-        "desc": "Instantly causes you to die.\n\nMust ground target to cast.  Cannot self cast."
+        "name": "Bloodpact",
+        "desc": "Converts 60% of your current mana to health regeneration over 2 seconds."
       }
     ],
     "passive": [
       {
-        "name": "Bloodpact",
-        "desc": "Begins with 14 charges, and gains a charge each time an enemy hero dies within 1600 range. \n\nEach charge grants 0.35 mana regeneration per second, and reduces respawn time by 3 seconds. \n\nIf the bearer dies, the Bloodstone loses a third of its charges."
+        "name": "Mana Battery",
+        "desc": "Each charge provides 0.25 HP and MP regen. Nearby kills provide 1 charges. Dying causes you to lose 3 charges. Starts with 12 charges."
       }
     ],
     "id": 121,
@@ -3386,7 +3547,7 @@
     "dname": "Bloodstone",
     "qual": "epic",
     "cost": 4900,
-    "notes": "Only the first Bloodstone will gain charges.",
+    "notes": "",
     "attrib": [
       {
         "key": "bonus_health",
@@ -3403,18 +3564,23 @@
       {
         "key": "bonus_health_regen",
         "header": "+",
-        "value": "7",
+        "value": "6",
         "footer": "HP Regeneration"
       },
       {
         "key": "bonus_mana_regen",
         "header": "+",
-        "value": "2",
+        "value": "3",
         "footer": "Mana Regeneration"
+      },
+      {
+        "key": "mana_regen_multiplier",
+        "header": "+Mana Regeneration",
+        "value": "200%"
       }
     ],
     "mc": false,
-    "cd": 300,
+    "cd": 250,
     "lore": "The Bloodstone's bright ruby color is unmistakable on the battlefield, as the owner seems to have infinite vitality and spirit.",
     "components": [
       "pers",
@@ -3464,13 +3630,13 @@
       {
         "key": "bonus_health_regen",
         "header": "+",
-        "value": "5.5",
+        "value": "6.5",
         "footer": "HP Regeneration"
       },
       {
         "key": "bonus_mana_regen",
         "header": "+",
-        "value": "2.25",
+        "value": "5",
         "footer": "Mana Regeneration"
       }
     ],
@@ -3506,13 +3672,13 @@
       {
         "key": "bonus_health_regen",
         "header": "+",
-        "value": "5.5",
+        "value": "6.5",
         "footer": "HP Regeneration"
       },
       {
         "key": "bonus_mana_regen",
         "header": "+",
-        "value": "1.75",
+        "value": "4",
         "footer": "Mana Regeneration"
       },
       {
@@ -3561,13 +3727,13 @@
       {
         "key": "bonus_health_regen",
         "header": "+",
-        "value": "4",
+        "value": "5",
         "footer": "HP Regeneration"
       },
       {
         "key": "bonus_mana_regen",
         "header": "+",
-        "value": "1.5",
+        "value": "3",
         "footer": "Mana Regeneration"
       }
     ],
@@ -3611,7 +3777,7 @@
       {
         "key": "bonus_regen",
         "header": "+",
-        "value": "5",
+        "value": "6",
         "footer": "HP Regeneration"
       }
     ],
@@ -3641,7 +3807,7 @@
     "passive": [
       {
         "name": "Combo Breaker",
-        "desc": "When you take damage and your health falls below 70%, a strong dispel is applied and you gain a 2.5 second buff that causes all damage you deal and are dealt to be reduced to zero. Only triggers on player based damage."
+        "desc": "When you take damage and your health falls below 70%, a strong dispel is applied and you gain a 2.5 second buff that provides +50% Status Resistance and causes all damage you deal and are dealt to be reduced to zero. Only triggers on player based damage."
       }
     ],
     "id": 256,
@@ -3654,19 +3820,14 @@
       {
         "key": "bonus_health",
         "header": "+",
-        "value": "250",
+        "value": "300",
         "footer": "Health"
       },
       {
         "key": "bonus_mana",
         "header": "+",
-        "value": "250",
+        "value": "300",
         "footer": "Mana"
-      },
-      {
-        "key": "status_resistance",
-        "header": "+Status Resistance",
-        "value": "25%"
       }
     ],
     "mc": false,
@@ -3682,7 +3843,7 @@
     "id": 258,
     "img": "/apps/dota2/images/items/recipe_lg.png?3",
     "dname": "Kaya Recipe",
-    "cost": 500,
+    "cost": 650,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -3696,7 +3857,7 @@
     "img": "/apps/dota2/images/items/kaya_lg.png?3",
     "dname": "Kaya",
     "qual": "epic",
-    "cost": 1950,
+    "cost": 2100,
     "notes": "",
     "attrib": [
       {
@@ -3706,14 +3867,14 @@
         "footer": "Intelligence"
       },
       {
-        "key": "spell_amp",
-        "header": "+Spell Amplification",
-        "value": "10%"
-      },
-      {
         "key": "manacost_reduction",
         "header": "+Manacost and Manaloss Reduction",
-        "value": "10%"
+        "value": "12%"
+      },
+      {
+        "key": "spell_amp",
+        "header": "+Spell Amplification",
+        "value": "8%"
       }
     ],
     "mc": false,
@@ -3786,7 +3947,7 @@
     "active": [
       {
         "name": "Soul Release",
-        "desc": "When used against enemies, it reduces health by 4.5% of current health per second, and reduces HP regeneration and healing by 70%. Deals 20 damage per second. \n\nWhen used on allies, it increases health by 1% of current health per second, and increases HP regeneration and healing by 20%. Provides 30 health regeneration per second. \n\nLasts 8 seconds.  \n\nGains charges every time an enemy hero dies within 1400 units.  Only the closest Spirit Vessel to the dying hero will gain a charge.\n\nCast Range: 950 "
+        "desc": "When used against enemies, it reduces health by 4.5% of current health per second, and reduces HP regeneration and healing by 70%. Deals 25 damage per second. \n\nWhen used on allies, it provides 30 health regeneration per second. \n\nLasts 8 seconds.  \n\nGains charges every time an enemy hero dies within 1400 units.  Only the closest Spirit Vessel to the dying hero will gain a charge.\n\nCast Range: 950 "
       }
     ],
     "id": 267,
@@ -3805,13 +3966,13 @@
       {
         "key": "bonus_movement_speed",
         "header": "+",
-        "value": "20",
+        "value": "6%",
         "footer": "Movement Speed"
       },
       {
         "key": "bonus_mana_regen",
         "header": "+",
-        "value": "1",
+        "value": "1.5",
         "footer": "Mana Regeneration"
       },
       {
@@ -3860,7 +4021,7 @@
       {
         "key": "bonus_health_regen",
         "header": "+",
-        "value": "5.5",
+        "value": "7",
         "footer": "HP Regeneration"
       }
     ],
@@ -3891,7 +4052,7 @@
     "active": [
       {
         "name": "Guard",
-        "desc": "For 12 seconds, grant nearby allied heroes and buildings +2 armor, and a 100% chance to block 60 damage from each incoming attack.\n\nUnits may only be affected by Guard once every 46 seconds.\n\nRadius: 900"
+        "desc": "For 12 seconds, grant nearby allied heroes and buildings +2 armor, and a 100% chance to block 60 damage from each incoming attack.\n\nUnits may only be affected by Guard once every 46 seconds.\n\nRadius: 1200"
       }
     ],
     "passive": [
@@ -3916,7 +4077,7 @@
       {
         "key": "bonus_health_regen",
         "header": "+",
-        "value": "6",
+        "value": "7",
         "footer": "HP Regeneration"
       },
       {
@@ -4032,7 +4193,7 @@
       {
         "key": "bonus_health_regen",
         "header": "+",
-        "value": "6.5",
+        "value": "8",
         "footer": "HP Regeneration"
       },
       {
@@ -4162,12 +4323,6 @@
     "created": true
   },
   "butterfly": {
-    "active": [
-      {
-        "name": "Flutter",
-        "desc": "Grants 35% additional movement speed for 2 seconds."
-      }
-    ],
     "id": 139,
     "img": "/apps/dota2/images/items/butterfly_lg.png?3",
     "dname": "Butterfly",
@@ -4201,7 +4356,7 @@
       }
     ],
     "mc": false,
-    "cd": 25,
+    "cd": false,
     "lore": "Only the mightiest and most experienced of warriors can wield the Butterfly, but it provides incredible dexterity in combat.",
     "components": [
       "eagle",
@@ -4257,7 +4412,7 @@
     "id": 142,
     "img": "/apps/dota2/images/items/recipe_lg.png?3",
     "dname": "Skull Basher Recipe",
-    "cost": 1000,
+    "cost": 900,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -4277,8 +4432,8 @@
     "img": "/apps/dota2/images/items/basher_lg.png?3",
     "dname": "Skull Basher",
     "qual": "epic",
-    "cost": 3050,
-    "notes": "Does not stack with other sources of Bash, however it will stack with Mini-Bash.\nThe following heroes cannot trigger Bash on this item: Spirit Breaker, Faceless Void, Slardar, and Troll Warlord.",
+    "cost": 2950,
+    "notes": "Does not stack with other sources of Bash, however it will stack with Mini-Bash.\nThe following heroes cannot trigger Bash on this item: Spirit Breaker, Faceless Void, and Slardar.",
     "attrib": [
       {
         "key": "bonus_damage",
@@ -4329,7 +4484,7 @@
       },
       {
         "name": "Cleave",
-        "desc": "Deals 40% of attack damage as physical damage in a cone up to 625 around the target. (Melee Only)"
+        "desc": "Deals 60% of attack damage as physical damage in a cone up to 650 around the target. (Melee Only)"
       }
     ],
     "id": 145,
@@ -4348,13 +4503,13 @@
       {
         "key": "bonus_health_regen",
         "header": "+",
-        "value": "6",
+        "value": "7.5",
         "footer": "HP Regeneration"
       },
       {
         "key": "bonus_mana_regen",
         "header": "+",
-        "value": "2.25",
+        "value": "3.75",
         "footer": "Mana Regeneration"
       }
     ],
@@ -4392,7 +4547,7 @@
     "img": "/apps/dota2/images/items/manta_lg.png?3",
     "dname": "Manta Style",
     "qual": "epic",
-    "cost": 4800,
+    "cost": 4750,
     "notes": "Has a 0.1 second cast time during which you are invulnerable.\nMany effects are removed upon using Manta.\nYasha based movement speed bonuses from multiple items do not stack.",
     "attrib": [
       {
@@ -4465,7 +4620,7 @@
       {
         "key": "bonus_damage",
         "header": "+",
-        "value": "30",
+        "value": "38",
         "footer": "Damage"
       }
     ],
@@ -4563,7 +4718,7 @@
       {
         "key": "bonus_health_regen",
         "header": "+",
-        "value": "4",
+        "value": "5",
         "footer": "HP Regeneration"
       }
     ],
@@ -4669,25 +4824,13 @@
     "created": true
   },
   "sange_and_yasha": {
-    "passive": [
-      {
-        "name": "Maim",
-        "desc": "Each attack has a 40% chance to reduce enemy hero movement speed by -26% and attack speed by -26 when used by a melee hero. Reduces enemy hero movement by -13% and attack speed by -13 when used by a ranged hero. Effect lasts 5 seconds."
-      }
-    ],
     "id": 154,
     "img": "/apps/dota2/images/items/sange_and_yasha_lg.png?3",
     "dname": "Sange and Yasha",
     "qual": "artifact",
-    "cost": 4300,
+    "cost": 4200,
     "notes": "Yasha-based movement speed bonuses from multiple items do not stack.",
     "attrib": [
-      {
-        "key": "bonus_damage",
-        "header": "+",
-        "value": "16",
-        "footer": "Damage"
-      },
       {
         "key": "bonus_strength",
         "header": "+",
@@ -4701,6 +4844,11 @@
         "footer": "Agility"
       },
       {
+        "key": "status_resistance",
+        "header": "+Status Resistance",
+        "value": "16%"
+      },
+      {
         "key": "bonus_attack_speed",
         "header": "+",
         "value": "16",
@@ -4709,8 +4857,14 @@
       {
         "key": "movement_speed_percent_bonus",
         "header": "+",
-        "value": "16%",
+        "value": "12%",
         "footer": "Movement Speed"
+      },
+      {
+        "key": "bonus_damage",
+        "header": "+",
+        "value": "12",
+        "footer": "Damage"
       }
     ],
     "mc": false,
@@ -4719,6 +4873,109 @@
     "components": [
       "yasha",
       "sange"
+    ],
+    "created": true
+  },
+  "kaya_and_sange": {
+    "id": 273,
+    "img": "/apps/dota2/images/items/kaya_and_sange_lg.png?3",
+    "dname": "Kaya and Sange",
+    "qual": "artifact",
+    "cost": 4200,
+    "notes": "",
+    "attrib": [
+      {
+        "key": "bonus_strength",
+        "header": "+",
+        "value": "16",
+        "footer": "Strength"
+      },
+      {
+        "key": "bonus_intellect",
+        "header": "+",
+        "value": "16",
+        "footer": "Intelligence"
+      },
+      {
+        "key": "status_resistance",
+        "header": "+Status Resistance",
+        "value": "16%"
+      },
+      {
+        "key": "manacost_reduction",
+        "header": "+Manacost and Manaloss Reduction",
+        "value": "16%"
+      },
+      {
+        "key": "spell_amp",
+        "header": "+Spell Amplification",
+        "value": "12%"
+      },
+      {
+        "key": "bonus_damage",
+        "header": "+",
+        "value": "12",
+        "footer": "Damage"
+      }
+    ],
+    "mc": false,
+    "cd": false,
+    "lore": "",
+    "components": [
+      "sange",
+      "kaya"
+    ],
+    "created": true
+  },
+  "yasha_and_kaya": {
+    "id": 277,
+    "img": "/apps/dota2/images/items/yasha_and_kaya_lg.png?3",
+    "dname": "Yasha and Kaya",
+    "qual": "artifact",
+    "cost": 4200,
+    "notes": "",
+    "attrib": [
+      {
+        "key": "bonus_agility",
+        "header": "+",
+        "value": "16",
+        "footer": "Agility"
+      },
+      {
+        "key": "bonus_intellect",
+        "header": "+",
+        "value": "16",
+        "footer": "Intelligence"
+      },
+      {
+        "key": "bonus_attack_speed",
+        "header": "+",
+        "value": "16",
+        "footer": "Attack Speed"
+      },
+      {
+        "key": "manacost_reduction",
+        "header": "+Manacost and Manaloss Reduction",
+        "value": "16%"
+      },
+      {
+        "key": "movement_speed_percent_bonus",
+        "header": "+",
+        "value": "12%",
+        "footer": "Movement Speed"
+      },
+      {
+        "key": "spell_amp",
+        "header": "+Spell Amplification",
+        "value": "12%"
+      }
+    ],
+    "mc": false,
+    "cd": false,
+    "lore": "",
+    "components": [
+      "kaya",
+      "yasha"
     ],
     "created": true
   },
@@ -4739,7 +4996,7 @@
     "img": "/apps/dota2/images/items/satanic_lg.png?3",
     "dname": "Satanic",
     "qual": "artifact",
-    "cost": 5500,
+    "cost": 5300,
     "notes": "",
     "attrib": [
       {
@@ -4751,8 +5008,13 @@
       {
         "key": "bonus_damage",
         "header": "+",
-        "value": "50",
+        "value": "25",
         "footer": "Damage"
+      },
+      {
+        "key": "status_resistance",
+        "header": "+Status Resistance",
+        "value": "30%"
       }
     ],
     "mc": false,
@@ -4867,7 +5129,7 @@
     "id": 161,
     "img": "/apps/dota2/images/items/recipe_lg.png?3",
     "dname": "Sange Recipe",
-    "cost": 700,
+    "cost": 650,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -4877,30 +5139,29 @@
     "created": false
   },
   "sange": {
-    "passive": [
-      {
-        "name": "Maim",
-        "desc": "Each attack has a 40% chance to reduce enemy hero movement speed by -26% and attack speed by -26 when used by a melee hero. Reduces enemy hero movement by -13% and attack speed by -13 when used by a ranged hero. Effect lasts 5 seconds."
-      }
-    ],
     "id": 162,
     "img": "/apps/dota2/images/items/sange_lg.png?3",
     "dname": "Sange",
     "qual": "artifact",
-    "cost": 2150,
+    "cost": 2100,
     "notes": "",
     "attrib": [
-      {
-        "key": "bonus_damage",
-        "header": "+",
-        "value": "10",
-        "footer": "Damage"
-      },
       {
         "key": "bonus_strength",
         "header": "+",
         "value": "16",
         "footer": "Strength"
+      },
+      {
+        "key": "status_resistance",
+        "header": "+Status Resistance",
+        "value": "12%"
+      },
+      {
+        "key": "bonus_damage",
+        "header": "+",
+        "value": "8",
+        "footer": "Damage"
       }
     ],
     "mc": false,
@@ -4922,14 +5183,14 @@
     "passive": [
       {
         "name": "Dominator Aura",
-        "desc": "Increases nearby allies' attack speed by 20 and health regen by 7.\n\nRadius: 900"
+        "desc": "Increases nearby allies' attack speed by 20 and health regen by 8.5.\n\nRadius: 1200"
       }
     ],
     "id": 164,
     "img": "/apps/dota2/images/items/helm_of_the_dominator_lg.png?3",
     "dname": "Helm of the Dominator",
     "qual": "artifact",
-    "cost": 2000,
+    "cost": 1875,
     "notes": "Cannot dominate more than one unit at a time.  If a new unit is dominated, the old one will die.\nCan also Dominate enemy lane creeps and summoned units.\nSelling Helm of the Dominator will cause dominated units to die.",
     "attrib": [
       {
@@ -4983,7 +5244,7 @@
     "passive": [
       {
         "name": "Corruption",
-        "desc": "Your attacks reduce the target's armor by -6 for 15 seconds."
+        "desc": "Your attacks reduce the target's armor by -7 for 15 seconds."
       }
     ],
     "id": 168,
@@ -5014,7 +5275,7 @@
     "id": 169,
     "img": "/apps/dota2/images/items/recipe_lg.png?3",
     "dname": "Yasha Recipe",
-    "cost": 700,
+    "cost": 650,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -5028,7 +5289,7 @@
     "img": "/apps/dota2/images/items/yasha_lg.png?3",
     "dname": "Yasha",
     "qual": "artifact",
-    "cost": 2150,
+    "cost": 2100,
     "notes": "Yasha-based movement speed bonuses from multiple items do not stack.",
     "attrib": [
       {
@@ -5040,7 +5301,7 @@
       {
         "key": "bonus_attack_speed",
         "header": "+",
-        "value": "10",
+        "value": "12",
         "footer": "Attack Speed"
       },
       {
@@ -5076,13 +5337,13 @@
     "img": "/apps/dota2/images/items/mask_of_madness_lg.png?3",
     "dname": "Mask of Madness",
     "qual": "artifact",
-    "cost": 1975,
+    "cost": 1775,
     "notes": "",
     "attrib": [
       {
         "key": "bonus_damage",
         "header": "+",
-        "value": "20",
+        "value": "10",
         "footer": "Damage"
       },
       {
@@ -5235,7 +5496,7 @@
       {
         "key": "bonus_health_regen",
         "header": "+",
-        "value": "2",
+        "value": "2.5",
         "footer": "HP Regeneration"
       }
     ],
@@ -5253,7 +5514,7 @@
     "active": [
       {
         "name": "Replenish Mana",
-        "desc": "Restores 135 mana to all nearby allies.\n\nRadius: 900"
+        "desc": "Restores 160 mana to all nearby allies.\n\nRadius: 1200"
       }
     ],
     "hint": [
@@ -5269,7 +5530,7 @@
       {
         "key": "bonus_movement",
         "header": "+",
-        "value": "50",
+        "value": "15%",
         "footer": "Movement Speed"
       },
       {
@@ -5378,7 +5639,7 @@
     "id": 184,
     "img": "/apps/dota2/images/items/recipe_lg.png?3",
     "dname": "Drum of Endurance Recipe",
-    "cost": 575,
+    "cost": 500,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -5391,20 +5652,20 @@
     "active": [
       {
         "name": "Endurance",
-        "desc": "Gives +35 attack speed and +13% movement speed to nearby allies for 6 seconds. \n\nRadius: 900"
+        "desc": "Gives +35 attack speed and +13% movement speed to nearby allies for 6 seconds. \n\nRadius: 1200"
       }
     ],
     "passive": [
       {
         "name": "Swiftness Aura",
-        "desc": "Gives 20 movement speed to nearby allies. \n\nRadius: 900"
+        "desc": "Gives 6 movement speed to nearby allies. \n\nRadius: 1200"
       }
     ],
     "id": 185,
     "img": "/apps/dota2/images/items/ancient_janggo_lg.png?3",
     "dname": "Drum of Endurance",
     "qual": "rare",
-    "cost": 1615,
+    "cost": 1525,
     "notes": "Re-purchasing the Drum of Endurance recipe will refresh its charges.\nMultiple instances of Swiftness Aura do not stack.",
     "attrib": [
       {
@@ -5416,19 +5677,19 @@
       {
         "key": "bonus_str",
         "header": "+",
-        "value": "7",
+        "value": "6",
         "footer": "Strength"
       },
       {
         "key": "bonus_agi",
         "header": "+",
-        "value": "3",
+        "value": "6",
         "footer": "Agility"
       },
       {
         "key": "bonus_mana_regen",
         "header": "+",
-        "value": "0.75",
+        "value": "1.5",
         "footer": "Mana Regeneration"
       }
     ],
@@ -5437,7 +5698,7 @@
     "lore": "A relic that enchants the bodies of those around it for swifter movement in times of crisis.",
     "components": [
       "sobi_mask",
-      "bracer",
+      "crown",
       "wind_lace"
     ],
     "created": true
@@ -5465,7 +5726,7 @@
       {
         "key": "bonus_mana_regen_pct",
         "header": "+",
-        "value": "0.5",
+        "value": "0.75",
         "footer": "Mana Regeneration"
       }
     ],
@@ -5479,37 +5740,55 @@
     ],
     "created": true
   },
+  "recipe_solar_crest": {
+    "id": 227,
+    "img": "/apps/dota2/images/items/recipe_lg.png?3",
+    "cost": 300,
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": false,
+    "lore": "",
+    "components": null,
+    "created": false
+  },
   "solar_crest": {
     "active": [
       {
         "name": "Shine",
-        "desc": "When cast on an ally, grants them 10 armor and 20% evasion. When cast on an enemy, removes 10 of their armor and grants your allies 40% Accuracy on the target. \n\nRemoves the armor and evasion from the caster when used. \n\n Cannot target magic immune enemies.\n\nRange: 1000"
+        "desc": "When cast on an ally, grants them 12 armor, 70 attack speed, and 10% movement speed. When cast on an enemy, removes 12 armor, 70 attack speed, and 10% movement speed.\n\nRemoves the armor from the caster when used. \n\n Cannot target magic immune enemies.\n\nRange: 1000"
       }
     ],
     "id": 229,
     "img": "/apps/dota2/images/items/solar_crest_lg.png?3",
     "dname": "Solar Crest",
     "qual": "rare",
-    "cost": 2575,
+    "cost": 3875,
     "notes": "",
     "attrib": [
       {
         "key": "bonus_armor",
         "header": "+",
-        "value": "10",
+        "value": "12",
         "footer": "Armor"
+      },
+      {
+        "key": "bonus_all_stats",
+        "header": "+",
+        "value": "10",
+        "footer": "All Attributes"
+      },
+      {
+        "key": "self_movement_speed",
+        "header": "+",
+        "value": "6%",
+        "footer": "Movement Speed"
       },
       {
         "key": "bonus_mana_regen_pct",
         "header": "+",
-        "value": "1",
+        "value": "1.5",
         "footer": "Mana Regeneration"
-      },
-      {
-        "key": "self_bonus_evasion",
-        "header": "+",
-        "value": "15%",
-        "footer": "Evasion"
       }
     ],
     "mc": false,
@@ -5517,7 +5796,8 @@
     "lore": "A talisman forged to honor the daytime sky.",
     "components": [
       "medallion_of_courage",
-      "talisman_of_evasion"
+      "ultimate_orb",
+      "wind_lace"
     ],
     "created": true
   },
@@ -5565,7 +5845,7 @@
     "id": 189,
     "img": "/apps/dota2/images/items/recipe_lg.png?3",
     "dname": "Veil of Discord Recipe",
-    "cost": 500,
+    "cost": 700,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -5585,13 +5865,13 @@
     "img": "/apps/dota2/images/items/veil_of_discord_lg.png?3",
     "dname": "Veil of Discord",
     "qual": "rare",
-    "cost": 2330,
+    "cost": 2050,
     "notes": "",
     "attrib": [
       {
         "key": "bonus_health_regen",
         "header": "+",
-        "value": "5",
+        "value": "6",
         "footer": "HP Regeneration"
       },
       {
@@ -5615,7 +5895,7 @@
       {
         "key": "bonus_int",
         "header": "+",
-        "value": "14",
+        "value": "15",
         "footer": "Intelligence"
       }
     ],
@@ -5624,8 +5904,7 @@
     "lore": "The headwear of corrupt magi.",
     "components": [
       "helm_of_iron_will",
-      "null_talisman",
-      "null_talisman"
+      "crown"
     ],
     "created": true
   },
@@ -5646,13 +5925,13 @@
     "active": [
       {
         "name": "Mend",
-        "desc": "Restores 275 health and 160 mana to nearby allies, and removes most negative effects from the caster.\n\nRadius: 900\nDispel Type: Basic Dispel"
+        "desc": "Restores 300 health and 200 mana to nearby allies, and removes most negative effects from the caster.\n\nRadius: 1200\nDispel Type: Basic Dispel"
       }
     ],
     "passive": [
       {
         "name": "Guardian Aura",
-        "desc": "Provides nearby allies with 3.5 health regeneration and 2 bonus armor. If an allied hero's health falls below 20%, they receive 12 health regeneration and 15 armor."
+        "desc": "Provides nearby allies with 4.5 health regeneration and 2 bonus armor. If an allied hero's health falls below 20%, they receive 16 health regeneration and 15 armor."
       }
     ],
     "hint": [
@@ -5662,13 +5941,13 @@
     "img": "/apps/dota2/images/items/guardian_greaves_lg.png?3",
     "dname": "Guardian Greaves",
     "qual": "rare",
-    "cost": 5450,
+    "cost": 5375,
     "notes": "The aura boost only applies to heroes.",
     "attrib": [
       {
         "key": "bonus_movement",
         "header": "+",
-        "value": "55",
+        "value": "17%",
         "footer": "Movement Speed"
       },
       {
@@ -5703,7 +5982,7 @@
     "id": 205,
     "img": "/apps/dota2/images/items/recipe_lg.png?3",
     "dname": "Rod of Atos Recipe",
-    "cost": 1000,
+    "cost": 850,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -5723,7 +6002,7 @@
     "img": "/apps/dota2/images/items/rod_of_atos_lg.png?3",
     "dname": "Rod of Atos",
     "qual": "rare",
-    "cost": 2930,
+    "cost": 2750,
     "notes": "",
     "attrib": [
       {
@@ -5735,13 +6014,13 @@
       {
         "key": "bonus_strength",
         "header": "+",
-        "value": "15",
+        "value": "12",
         "footer": "Strength"
       },
       {
         "key": "bonus_agility",
         "header": "+",
-        "value": "6",
+        "value": "12",
         "footer": "Agility"
       }
     ],
@@ -5750,8 +6029,8 @@
     "lore": "Atos, the Lord of Blight, has his essence stored in this deceptively simple wand.",
     "components": [
       "staff_of_wizardry",
-      "bracer",
-      "bracer"
+      "crown",
+      "crown"
     ],
     "created": true
   },
@@ -5822,7 +6101,7 @@
     "img": "/apps/dota2/images/items/abyssal_blade_lg.png?3",
     "dname": "Abyssal Blade",
     "qual": "epic",
-    "cost": 6750,
+    "cost": 6650,
     "notes": "The stun is melee range.\nDoes not stack with other bashes.\nThe following heroes cannot trigger Bash on this item: Spirit Breaker, Faceless Void, Slardar, and Troll Warlord.\nMultiple sources of damage block do not stack.",
     "attrib": [
       {
@@ -5840,7 +6119,7 @@
       {
         "key": "bonus_health_regen",
         "header": "+",
-        "value": "7",
+        "value": "10",
         "footer": "HP Regeneration"
       },
       {
@@ -5863,20 +6142,14 @@
     "active": [
       {
         "name": "Disarm",
-        "desc": "Prevents a target from attacking for 3 seconds on melee targets, and 5 seconds on ranged targets.\n\nRange: 600 "
-      }
-    ],
-    "passive": [
-      {
-        "name": "Maim",
-        "desc": "Each attack has a 40% chance to reduce enemy hero movement speed by -26% and attack speed by -26 if the user is melee. Reduces enemy hero movement by -13% and attack speed by -13 if the user is ranged. Effect lasts 5 seconds."
+        "desc": "Prevents a target from attacking for 3 seconds on melee targets, and 5 seconds on ranged targets.\n\nRange: 600"
       }
     ],
     "id": 210,
     "img": "/apps/dota2/images/items/heavens_halberd_lg.png?3",
     "dname": "Heaven's Halberd",
     "qual": "artifact",
-    "cost": 3550,
+    "cost": 3500,
     "notes": "",
     "attrib": [
       {
@@ -5896,6 +6169,11 @@
         "header": "+",
         "value": "20",
         "footer": "Strength"
+      },
+      {
+        "key": "status_resistance",
+        "header": "+Status Resistance",
+        "value": "14%"
       }
     ],
     "mc": 100,
@@ -5911,7 +6189,7 @@
     "passive": [
       {
         "name": "Aquila Aura",
-        "desc": "Grants 0.5 mana regeneration and 2 armor to nearby allies.\n\nRadius: 900"
+        "desc": "Grants 0.5 mana regeneration and 2 armor to nearby allies.\n\nRadius: 1200"
       }
     ],
     "toggle": [
@@ -5955,17 +6233,14 @@
     "mc": false,
     "cd": false,
     "lore": "The ring of the fallen Warlord Aquila continues to support armies in battle.",
-    "components": [
-      "wraith_band",
-      "ring_of_basilius"
-    ],
-    "created": true
+    "components": null,
+    "created": false
   },
   "tranquil_boots": {
     "passive": [
       {
         "name": "Break",
-        "desc": "Whenever you attack or are attacked, the bonus 13 HP regen is lost and the movement speed bonus is reduced to 65 for 13 seconds."
+        "desc": "Whenever you attack a hero or are attacked by any unit, the bonus 16 HP regen is lost and the movement speed bonus is reduced to 20% for 13 seconds."
       }
     ],
     "hint": [
@@ -5981,13 +6256,13 @@
       {
         "key": "bonus_movement_speed",
         "header": "+",
-        "value": "90",
+        "value": "28%",
         "footer": "Movement Speed"
       },
       {
         "key": "bonus_health_regen",
         "header": "+",
-        "value": "13",
+        "value": "16",
         "footer": "HP Regeneration"
       }
     ],
