@@ -938,9 +938,9 @@
         "header": "RANGE ATTACK SPEED:",
         "value": [
           "20%",
-          "36%",
-          "52%",
-          "68%"
+          "40%",
+          "60%",
+          "80%"
         ]
       }
     ],
@@ -4720,10 +4720,10 @@
         "key": "hp_shield",
         "header": "ATTACK SHIELD HEALTH :",
         "value": [
-          "100",
-          "200",
-          "300",
-          "400"
+          "110",
+          "220",
+          "330",
+          "440"
         ]
       },
       {
@@ -4877,10 +4877,10 @@
     ],
     "mc": "85",
     "cd": [
-      "21",
+      "22",
       "20",
-      "19",
-      "18"
+      "18",
+      "16"
     ],
     "img": "/apps/dota2/images/abilities/storm_spirit_electric_vortex_md.png"
   },
@@ -4910,7 +4910,7 @@
       {
         "key": "overload_attack_slow",
         "header": "ATTACK SLOW:",
-        "value": "-50"
+        "value": "-80"
       },
       {
         "key": "tooltip_duration",
@@ -5126,16 +5126,11 @@
         "generated": true
       }
     ],
-    "mc": [
-      "60",
-      "50",
-      "40",
-      "30"
-    ],
+    "mc": "60",
     "cd": [
-      "34",
-      "28",
-      "22",
+      "40",
+      "32",
+      "24",
       "16"
     ],
     "img": "/apps/dota2/images/abilities/sandking_sand_storm_md.png"
@@ -9095,7 +9090,7 @@
     "behavior": "Unit Target",
     "dmg_type": "Magical",
     "bkbpierce": "Yes",
-    "desc": "Beastmaster lets loose a deafening roar that stuns, and shoves open a path to its target. All units in the path of the roar are damaged, while units shoved aside by the roar have their movement and attack speed slowed. Additionally, Beastmaster and his units gain 30% movement speed for 3 seconds.\n\nUpgradable by Aghanim's Scepter.",
+    "desc": "Beastmaster lets loose a deafening roar that stuns, and shoves open a path to its target. All units in the path of the roar are damaged, while units shoved aside by the roar have their movement and attack speed slowed. Additionally, Beastmaster and his units gain 40% movement speed for 3 seconds.\n\nUpgradable by Aghanim's Scepter.",
     "attrib": [
       {
         "key": "duration",
@@ -9501,9 +9496,9 @@
         "header": "SLOW:",
         "value": [
           "-11%",
-          "-12%",
           "-13%",
-          "-14%"
+          "-15%",
+          "-17%"
         ]
       }
     ],
@@ -10836,10 +10831,10 @@
         "key": "primary_attribute",
         "header": "BONUS PRIMARY ATTRIBUTE:",
         "value": [
-          "8",
-          "14",
-          "20",
-          "26"
+          "6",
+          "12",
+          "18",
+          "24"
         ]
       },
       {
@@ -11277,9 +11272,9 @@
     ],
     "mc": [
       "80",
-      "90",
       "100",
-      "110"
+      "120",
+      "140"
     ],
     "cd": [
       "27",
@@ -11453,7 +11448,7 @@
       {
         "key": "duration",
         "header": "DURATION:",
-        "value": "10"
+        "value": "8"
       },
       {
         "key": "radius",
@@ -12788,9 +12783,9 @@
         "key": "attack_rate",
         "header": "ATTACK RATE:",
         "value": [
-          "1.8",
           "1.65",
-          "1.5"
+          "1.5",
+          "1.35"
         ]
       },
       {
@@ -18010,20 +18005,20 @@
         "key": "mana_steal",
         "header": "SPELL MANA STEAL:",
         "value": [
-          "60%",
           "80%",
           "100%",
-          "120%"
+          "120%",
+          "140%"
         ]
       },
       {
         "key": "movement_slow",
         "header": "MOVEMENT SLOW:",
         "value": [
-          "8%",
-          "16%",
-          "24%",
-          "32%"
+          "12%",
+          "20%",
+          "28%",
+          "36%"
         ]
       },
       {
@@ -18038,7 +18033,7 @@
       }
     ],
     "mc": "50",
-    "cd": "20",
+    "cd": "18",
     "img": "/apps/dota2/images/abilities/obsidian_destroyer_equilibrium_md.png"
   },
   "obsidian_destroyer_sanity_eclipse": {
@@ -18463,10 +18458,10 @@
         "key": "bonus_attack_speed",
         "header": "ATTACK SPEED:",
         "value": [
-          "30",
-          "50",
-          "70",
-          "90"
+          "20",
+          "40",
+          "60",
+          "80"
         ]
       },
       {
@@ -18492,10 +18487,10 @@
       "80"
     ],
     "cd": [
-      "42",
-      "34",
-      "26",
-      "18"
+      "44",
+      "36",
+      "28",
+      "20"
     ],
     "img": "/apps/dota2/images/abilities/lone_druid_spirit_link_md.png"
   },
@@ -19587,17 +19582,17 @@
       }
     ],
     "cd": [
-      "8",
       "7",
       "6",
-      "5"
+      "5",
+      "4"
     ],
     "img": "/apps/dota2/images/abilities/chaos_knight_chaos_strike_md.png"
   },
   "chaos_knight_phantasm": {
     "dname": "Phantasm",
     "behavior": "No Target",
-    "desc": "Summons several phantasmal copies of the Chaos Knight from alternate dimensions. The phantasms deal 40,70,100% damage, but take 260% damage.\n\nUpgradeable by Aghanim's Scepter.\nDISPEL TYPE: Basic Dispel",
+    "desc": "Summons several phantasmal copies of the Chaos Knight from alternate dimensions. The phantasms deal 50,75,100% damage, but take 260% damage.\n\nUpgradeable by Aghanim's Scepter.\nDISPEL TYPE: Basic Dispel",
     "attrib": [
       {
         "key": "images_count",
@@ -19613,8 +19608,8 @@
         "key": "outgoing_damage",
         "header": "OUTGOING DAMAGE:",
         "value": [
-          "-60",
-          "-30",
+          "-50",
+          "-25",
           "0"
         ],
         "generated": true
@@ -19623,8 +19618,8 @@
         "key": "outgoing_damage_tooltip",
         "header": "PHANTASM DAMAGE:",
         "value": [
-          "40%",
-          "70%",
+          "50%",
+          "75%",
           "100%"
         ]
       },
@@ -19730,10 +19725,10 @@
         "key": "poof_damage",
         "header": "POOF DAMAGE:",
         "value": [
-          "80",
-          "100",
-          "120",
-          "140"
+          "70",
+          "90",
+          "110",
+          "130"
         ]
       }
     ],
@@ -19785,10 +19780,10 @@
         "key": "health_steal_heroes",
         "header": "HEALTH STEAL (HEROES):",
         "value": [
-          "8",
-          "12",
-          "16",
-          "20"
+          "6",
+          "10",
+          "14",
+          "18"
         ]
       },
       {
@@ -19855,9 +19850,9 @@
         "key": "fade_time",
         "header": "FADE TIME:",
         "value": [
-          "4.75",
           "4",
-          "3.25",
+          "3.5",
+          "3",
           "2.5"
         ]
       },
@@ -19876,10 +19871,10 @@
         "key": "movement_speed",
         "header": "MOVEMENT SPEED:",
         "value": [
-          "10%",
-          "15%",
-          "20%",
-          "25%"
+          "14%",
+          "18%",
+          "22%",
+          "26%"
         ]
       },
       {
@@ -22889,12 +22884,17 @@
       {
         "key": "leash_duration",
         "header": "LEASH DURATION:",
-        "value": "3.5"
+        "value": [
+          "2.75",
+          "3",
+          "3.25",
+          "3.5"
+        ]
       },
       {
         "key": "leash_radius",
         "header": "LEASH RADIUS:",
-        "value": "325"
+        "value": "350"
       }
     ],
     "mc": "75",
@@ -22910,7 +22910,7 @@
     "dname": "Essence Shift",
     "behavior": "Passive",
     "bkbpierce": "Yes",
-    "desc": "Slark steals the life essence of enemy heroes with his attacks, draining each of their attributes and converting them to bonus Agility.",
+    "desc": "Slark steals the life essence of enemy heroes with his attacks, draining each of their attributes and converting them to bonus Agility. If Slark kills an affected enemy hero, he permanently steals 1 Agility.",
     "attrib": [
       {
         "key": "agi_gain",
@@ -23001,7 +23001,11 @@
       }
     ],
     "mc": "120",
-    "cd": "60",
+    "cd": [
+      "80",
+      "70",
+      "60"
+    ],
     "img": "/apps/dota2/images/abilities/slark_shadow_dance_md.png"
   },
   "medusa_split_shot": {
@@ -23589,7 +23593,7 @@
       {
         "key": "max_stacks",
         "header": "MAX STACKS:",
-        "value": "10"
+        "value": "13"
       },
       {
         "key": "aura_radius",
@@ -26026,10 +26030,10 @@
         "key": "bonus_hero_damage",
         "header": "BONUS HERO DAMAGE:",
         "value": [
-          "30",
-          "60",
-          "90",
-          "120"
+          "35",
+          "70",
+          "105",
+          "140"
         ]
       },
       {
@@ -35310,7 +35314,7 @@
     "dname": "-6s Doppelganger CD"
   },
   "special_bonus_unique_slark": {
-    "dname": "+3s Pounce Leash"
+    "dname": "+2s Pounce Leash"
   },
   "special_bonus_unique_slark_2": {
     "dname": "+150 Dark Pact Damage"
@@ -35517,7 +35521,7 @@
     "dname": "+7 Split Shot Targets"
   },
   "special_bonus_unique_medusa_3": {
-    "dname": "+20% Mystic Snake Mana Steal"
+    "dname": "+35% Mystic Snake Mana Steal"
   },
   "special_bonus_unique_medusa_4": {
     "dname": "Split Shot Uses Modifiers"
