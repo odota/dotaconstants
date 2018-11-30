@@ -950,7 +950,7 @@
   "drow_ranger_marksmanship": {
     "dname": "Marksmanship",
     "behavior": "Passive",
-    "desc": "Drow's experiences in battle grant her a chance to launch arrows with incredible accuracy and effectiveness. Pierces through the enemy's defenses, ignoring their armor entirely. Instantly kills creeps. This ability is disabled if there is an enemy hero within 400 range. \n\nUpgradable by Aghanim's Scepter.",
+    "desc": "Drow's experiences in battle grant her a chance to launch arrows with incredible accuracy and effectiveness. Pierces through the enemy's defenses, ignoring their armor entirely. Instantly kills creeps and deals bonus proc physical damage to heroes. This ability is disabled if there is an enemy hero within 400 range. \n\nUpgradable by Aghanim's Scepter.",
     "attrib": [
       {
         "key": "chance",
@@ -960,6 +960,11 @@
           "30%",
           "40%"
         ]
+      },
+      {
+        "key": "bonus_damage",
+        "header": "BONUS PROC DAMAGE:",
+        "value": "120"
       },
       {
         "key": "split_count_scepter",
@@ -1465,7 +1470,7 @@
       {
         "key": "cleave_damage",
         "header": "CLEAVE DAMAGE:",
-        "value": "150%"
+        "value": "165%"
       }
     ],
     "cd": [
@@ -2256,9 +2261,9 @@
         "key": "charge_restore_time",
         "header": "CHARGE RESTORE TIME:",
         "value": [
-          "14",
+          "17",
+          "15",
           "13",
-          "12",
           "11"
         ],
         "generated": true
@@ -3970,7 +3975,7 @@
   "razor_unstable_current": {
     "dname": "Unstable Current",
     "behavior": "Passive",
-    "desc": "Increases the movement speed. Passively hits every unit in the area for some damage.",
+    "desc": "Passively increases your movement speed and occasionally hits every unit in the area for some damage.",
     "attrib": [
       {
         "key": "movement_speed_pct",
@@ -4004,9 +4009,8 @@
       },
       {
         "key": "radius",
-        "header": "RADIUS:",
-        "value": "500",
-        "generated": true
+        "header": "PASSIVE AREA RADIUS:",
+        "value": "500"
       }
     ],
     "img": "/apps/dota2/images/abilities/razor_unstable_current_md.png"
@@ -4821,9 +4825,9 @@
         "header": "DAMAGE:",
         "value": [
           "120",
-          "160",
-          "200",
-          "240"
+          "170",
+          "220",
+          "270"
         ]
       }
     ],
@@ -7025,7 +7029,7 @@
   "lich_frost_shield": {
     "dname": "Frost Shield",
     "behavior": "Unit Target",
-    "desc": "Applies a magical frost shield around you, reducing damage from a limited number of attacks against you. While the shield is active, ice magic will be launched towards the nearest enemy unit every 1 seconds, doing minor damage and slowing.",
+    "desc": "Applies a magical frost shield around you, reducing damage from attacks against you. While the shield is active, ice magic will be launched towards the nearest enemy unit every 1 seconds, doing minor damage and slowing.",
     "attrib": [
       {
         "key": "damage_reduction",
@@ -8314,9 +8318,9 @@
         "header": "HEALTH REGEN PER KILL:",
         "value": [
           "2",
-          "3",
-          "4",
-          "5"
+          "3.5",
+          "5",
+          "6.5"
         ]
       },
       {
@@ -9728,10 +9732,10 @@
         "key": "bonus_damage",
         "header": "BONUS DAMAGE:",
         "value": [
+          "25",
           "30",
-          "40",
-          "50",
-          "60"
+          "35",
+          "40"
         ]
       }
     ],
@@ -10172,8 +10176,7 @@
       {
         "key": "duration",
         "header": "DURATION:",
-        "value": "25",
-        "generated": true
+        "value": "25"
       },
       {
         "key": "radius",
@@ -10186,7 +10189,7 @@
         "value": "0.75"
       }
     ],
-    "mc": "20",
+    "mc": "30",
     "cd": [
       "60",
       "55",
@@ -10841,10 +10844,10 @@
         "key": "bonus_night_vision",
         "header": "BONUS NIGHT VISION:",
         "value": [
-          "250",
-          "500",
-          "750",
-          "1000"
+          "200",
+          "400",
+          "600",
+          "800"
         ]
       }
     ],
@@ -11188,7 +11191,7 @@
     "behavior": "Unit Target",
     "dmg_type": "Physical",
     "bkbpierce": "No",
-    "desc": "Releases a cone of poisonous magic that strikes multiple enemy units. Deals damage over time and slows the targets. Anytime the targets get attacked, the debuff duration is refreshed.",
+    "desc": "Releases a cone of poison that strikes multiple enemy units. Deals damage over time and slows the targets. Anytime the targets get attacked, the debuff duration is refreshed.",
     "attrib": [
       {
         "key": "start_radius",
@@ -11375,10 +11378,10 @@
       "120"
     ],
     "cd": [
-      "13",
-      "11",
-      "9",
-      "7"
+      "14",
+      "12",
+      "10",
+      "8"
     ],
     "img": "/apps/dota2/images/abilities/dazzle_shadow_wave_md.png"
   },
@@ -12783,9 +12786,9 @@
         "key": "attack_rate",
         "header": "ATTACK RATE:",
         "value": [
-          "1.65",
           "1.5",
-          "1.35"
+          "1.35",
+          "1.2"
         ]
       },
       {
@@ -13259,6 +13262,8 @@
   "huskar_inner_fire": {
     "dname": "Inner Fire",
     "behavior": "No Target",
+    "dmg_type": "Magical",
+    "bkbpierce": "No",
     "desc": "In a fiery rage, knocks all nearby enemies away from you to a fixed distance, dealing damage and disarming them.",
     "attrib": [
       {
@@ -13346,7 +13351,7 @@
   "huskar_berserkers_blood": {
     "dname": "Berserker's Blood",
     "behavior": "Passive",
-    "desc": "Huskar's injuries feed his power, giving increased attack speed and health regen resistance based on missing health. Health Regen is a percentage of your strength.",
+    "desc": "Huskar's injuries feed his power, giving increased attack speed and health regen based on missing health. Health regen is a percentage of your strength.",
     "attrib": [
       {
         "key": "maximum_attack_speed",
@@ -13901,7 +13906,7 @@
   "bounty_hunter_jinada": {
     "dname": "Jinada",
     "behavior": "Passive",
-    "desc": "Bounty Hunter plans his next hit, dealing bonus damage and stealing some unrealiable gold.",
+    "desc": "Bounty Hunter plans his next hit, dealing bonus damage and stealing some unreliable gold.",
     "attrib": [
       {
         "key": "bonus_damage",
@@ -14030,7 +14035,7 @@
       {
         "key": "cast_range_tooltip",
         "header": "CAST RANGE:",
-        "value": "1200"
+        "value": "1000"
       },
       {
         "key": "gold_steal",
@@ -15172,8 +15177,8 @@
         "header": "ILLUSION DAMAGE OUTGOING:",
         "value": [
           "-60",
-          "-50",
-          "-40"
+          "-45",
+          "-30"
         ],
         "generated": true
       },
@@ -15182,8 +15187,8 @@
         "header": "HAUNT DAMAGE:",
         "value": [
           "40%",
-          "50%",
-          "60%"
+          "55%",
+          "70%"
         ]
       },
       {
@@ -15254,10 +15259,10 @@
         "key": "regen",
         "header": "REGENERATION RATE:",
         "value": [
-          "5",
-          "10",
-          "15",
-          "20"
+          "4",
+          "8",
+          "13",
+          "18"
         ]
       }
     ],
@@ -15576,7 +15581,7 @@
       "Attack Modifier"
     ],
     "bkbpierce": "No",
-    "desc": "Enchances your attacks with heavy magic damage and slow. Gives increases attack range for this attack.",
+    "desc": "Enhances your attacks with heavy magic damage and slow. Grants increased range for this attack.",
     "attrib": [
       {
         "key": "damage",
@@ -15886,10 +15891,10 @@
         "key": "damage",
         "header": "MOVESPEED AS DAMAGE:",
         "value": [
-          "16%",
-          "24%",
-          "32%",
-          "40%"
+          "12%",
+          "20%",
+          "28%",
+          "36%"
         ]
       },
       {
@@ -16084,10 +16089,10 @@
         "key": "damage_per_stack",
         "header": "DAMAGE PER ATTACK:",
         "value": [
-          "12",
-          "18",
-          "24",
-          "30"
+          "10",
+          "16",
+          "22",
+          "28"
         ]
       }
     ],
@@ -18016,9 +18021,9 @@
         "header": "MOVEMENT SLOW:",
         "value": [
           "12%",
-          "20%",
-          "28%",
-          "36%"
+          "22%",
+          "32%",
+          "42%"
         ]
       },
       {
@@ -18160,7 +18165,7 @@
   "lycan_howl": {
     "dname": "Howl",
     "behavior": "No Target",
-    "desc": "Grants bonus attack speed, armor, and health regen to Lycan, all allied heroes and all units under their control.s",
+    "desc": "Grants bonus attack speed, armor, and health regen to Lycan, all allied heroes and all units under their control.",
     "attrib": [
       {
         "key": "howl_duration",
@@ -18171,10 +18176,10 @@
         "key": "attack_speed",
         "header": "ATTACK SPEED:",
         "value": [
-          "21",
-          "34",
-          "47",
-          "60"
+          "20",
+          "30",
+          "40",
+          "50"
         ]
       },
       {
@@ -18487,10 +18492,10 @@
       "80"
     ],
     "cd": [
-      "44",
+      "43",
       "36",
-      "28",
-      "20"
+      "29",
+      "22"
     ],
     "img": "/apps/dota2/images/abilities/lone_druid_spirit_link_md.png"
   },
@@ -18855,7 +18860,7 @@
       "AOE"
     ],
     "bkbpierce": "No",
-    "desc": "Drenches an area in alcohol, causing enemy units to have a chance to attack themselves, and combust whenever a fire based ability touches them.",
+    "desc": "Drenches an area in alcohol, causing enemy units to have a chance to attack themselves, and combust for a short period whenever spell damage over 80 is dealt.",
     "attrib": [
       {
         "key": "duration",
@@ -18876,11 +18881,21 @@
         "key": "ignite_dps",
         "header": "IGNITE DPS:",
         "value": [
-          "10",
+          "20",
           "25",
-          "40",
-          "55"
+          "30",
+          "35"
         ]
+      },
+      {
+        "key": "ignite_duration",
+        "header": "IGNITE DURATION:",
+        "value": "3"
+      },
+      {
+        "key": "ignite_threshold",
+        "header": "IGNITE DAMAGE THRESHOLD:",
+        "value": "80"
       },
       {
         "key": "movement_slow",
@@ -19553,7 +19568,7 @@
   "chaos_knight_chaos_strike": {
     "dname": "Chaos Strike",
     "behavior": "Passive",
-    "desc": "Chaos Knight's attacks deal a critical strike of varying strength, in addition to a lifesteal for 35,40,45,50% of the damage.",
+    "desc": "Chaos Knight's attacks deal a critical strike of varying strength, in addition to a lifesteal for 35,45,55,65% of the damage.",
     "attrib": [
       {
         "key": "crit_min",
@@ -19575,9 +19590,9 @@
         "header": "CRITICAL LIFESTEAL:",
         "value": [
           "35%",
-          "40%",
           "45%",
-          "50%"
+          "55%",
+          "65%"
         ]
       }
     ],
@@ -19892,9 +19907,9 @@
         "header": "TOTAL DAMAGE:",
         "value": [
           "30",
-          "80",
-          "130",
-          "180"
+          "90",
+          "150",
+          "210"
         ]
       },
       {
@@ -22827,12 +22842,7 @@
         "generated": true
       }
     ],
-    "mc": [
-      "55",
-      "50",
-      "45",
-      "40"
-    ],
+    "mc": "60",
     "cd": [
       "9",
       "8",
@@ -22885,10 +22895,10 @@
         "key": "leash_duration",
         "header": "LEASH DURATION:",
         "value": [
+          "2.5",
           "2.75",
           "3",
-          "3.25",
-          "3.5"
+          "3.25"
         ]
       },
       {
@@ -22948,8 +22958,8 @@
         "header": "DURATION:",
         "value": [
           "4",
-          "4.5",
-          "5"
+          "4.25",
+          "4.5"
         ]
       },
       {
@@ -23642,7 +23652,7 @@
       {
         "key": "slow_duration",
         "header": "SLOW DURATION:",
-        "value": "1.8"
+        "value": "2.3"
       },
       {
         "key": "radius",
@@ -23987,9 +23997,9 @@
         "header": "TREE BONUS DAMAGE:",
         "value": [
           "10",
-          "14",
-          "18",
-          "22"
+          "15",
+          "20",
+          "25"
         ]
       },
       {
@@ -25531,8 +25541,8 @@
         "key": "damage_heroes",
         "header": "BONUS DAMAGE (HEROES):",
         "value": [
-          "20",
-          "40",
+          "15",
+          "30",
           "60",
           "80"
         ]
@@ -25565,7 +25575,7 @@
       "100",
       "110"
     ],
-    "cd": "16",
+    "cd": "17",
     "img": "/apps/dota2/images/abilities/elder_titan_ancestral_spirit_md.png"
   },
   "elder_titan_return_spirit": {
@@ -26030,10 +26040,10 @@
         "key": "bonus_hero_damage",
         "header": "BONUS HERO DAMAGE:",
         "value": [
-          "35",
-          "70",
-          "105",
-          "140"
+          "40",
+          "80",
+          "120",
+          "160"
         ]
       },
       {
@@ -33696,6 +33706,9 @@
   "special_bonus_attack_speed_250": {
     "dname": "+250 Attack Speed"
   },
+  "special_bonus_corruption_3": {
+    "dname": "-3 Armor Corruption"
+  },
   "special_bonus_corruption_4": {
     "dname": "-4 Armor Corruption"
   },
@@ -34041,11 +34054,17 @@
   "special_bonus_strength_40": {
     "dname": "+40 Strength"
   },
+  "special_bonus_agility_6": {
+    "dname": "+6 Agility"
+  },
   "special_bonus_agility_8": {
     "dname": "+8 Agility"
   },
   "special_bonus_agility_10": {
     "dname": "+10 Agility"
+  },
+  "special_bonus_agility_12": {
+    "dname": "+12 Agility"
   },
   "special_bonus_agility_13": {
     "dname": "+13 Agility"
@@ -34654,7 +34673,7 @@
     "dname": "+18 Familiar Attack Per Charge"
   },
   "special_bonus_unique_visage_2": {
-    "dname": "+80 Familiars Movement Speed"
+    "dname": "+60 Familiars Movement Speed"
   },
   "special_bonus_unique_visage_3": {
     "dname": "Soul Assumption Hits 2 Targets"
@@ -34795,7 +34814,7 @@
     "dname": "3x Plague Ward HP/Damage"
   },
   "special_bonus_unique_venomancer_2": {
-    "dname": "+6% Poison Sting Slow"
+    "dname": "+8% Poison Sting Slow"
   },
   "special_bonus_unique_venomancer_3": {
     "dname": "-8 Venomous Gale CD"
@@ -34954,7 +34973,7 @@
     "dname": "+3s Thunder Clap Slow"
   },
   "special_bonus_unique_brewmaster_4": {
-    "dname": "+200% Drunken Brawler Critical Strike Damage"
+    "dname": "+175% Drunken Brawler Critical Strike Damage"
   },
   "special_bonus_unique_bristleback": {
     "dname": "+6 Max Goo Stacks"
@@ -35206,7 +35225,7 @@
     "dname": "+175 Chronosphere AoE"
   },
   "special_bonus_unique_faceless_void_3": {
-    "dname": "70 Time Lock Damage"
+    "dname": "+70 Time Lock Damage"
   },
   "special_bonus_unique_faceless_void_4": {
     "dname": "+25% Backtrack"
@@ -35314,7 +35333,7 @@
     "dname": "-6s Doppelganger CD"
   },
   "special_bonus_unique_slark": {
-    "dname": "+2s Pounce Leash"
+    "dname": "+1.5s Pounce Leash"
   },
   "special_bonus_unique_slark_2": {
     "dname": "+150 Dark Pact Damage"
@@ -35323,7 +35342,7 @@
     "dname": "+1s Shadow Dance Duration"
   },
   "special_bonus_unique_slark_4": {
-    "dname": "+120s Essence Shift Duration"
+    "dname": "+100s Essence Shift Duration"
   },
   "special_bonus_unique_spectre": {
     "dname": "-10s Spectral Dagger Cooldown"
@@ -35425,7 +35444,7 @@
     "dname": "+50 Decay Duration"
   },
   "special_bonus_unique_undying_5": {
-    "dname": "+6 Tombstone Attacks to Destroy"
+    "dname": "+5 Tombstone Attacks to Destroy"
   },
   "special_bonus_unique_viper_1": {
     "dname": "+6 Corrosive Skin Stats"
@@ -35461,13 +35480,13 @@
     "dname": "Astral Spirit Grants Spell Immunity"
   },
   "special_bonus_unique_ember_spirit_1": {
-    "dname": "+200 Flame Guard Absorption"
+    "dname": "+250 Flame Guard Absorption"
   },
   "special_bonus_unique_ember_spirit_2": {
     "dname": "+1s Searing Chains"
   },
   "special_bonus_unique_ember_spirit_3": {
-    "dname": "+50 Flame Guard DPS"
+    "dname": "+60 Flame Guard DPS"
   },
   "special_bonus_unique_ember_spirit_4": {
     "dname": "2 Sleight of Fist Charges"
@@ -35486,6 +35505,9 @@
   },
   "special_bonus_reincarnation_200": {
     "dname": "Gains Reincarnation 200 CD"
+  },
+  "special_bonus_reincarnation_250": {
+    "dname": "Gains Reincarnation 250 CD"
   },
   "special_bonus_unique_lion": {
     "dname": "+2 Mana Drain Multi Target"
@@ -35552,7 +35574,7 @@
     "dname": "+8 Exorcism Spirits"
   },
   "special_bonus_unique_death_prophet_2": {
-    "dname": "-2s Crypt Swarm Cooldown"
+    "dname": "-3s Crypt Swarm Cooldown"
   },
   "special_bonus_unique_death_prophet_3": {
     "dname": "+1% Max Health Spirit Siphon"
@@ -35929,6 +35951,9 @@
   "special_bonus_unique_lone_druid_9": {
     "dname": "0 Entangle Cooldown"
   },
+  "special_bonus_unique_lone_druid_10": {
+    "dname": "-0.2 Spirit Bear Attack Time"
+  },
   "special_bonus_unique_wisp_2": {
     "dname": "Tether Stuns"
   },
@@ -35975,7 +36000,7 @@
     "dname": "-5s Poof Cooldown"
   },
   "special_bonus_unique_meepo_2": {
-    "dname": "+40 Poof Damage"
+    "dname": "+30 Poof Damage"
   },
   "special_bonus_unique_meepo_3": {
     "dname": "-4s Earthbind Cooldown"
