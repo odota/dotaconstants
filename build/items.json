@@ -791,7 +791,7 @@
   },
   "boots": {
     "hint": [
-      "Flat movement speed bonuses from multiple pairs of boots do not stack."
+      "Movement speed bonuses from multiple pairs of boots do not stack."
     ],
     "id": 29,
     "img": "/apps/dota2/images/items/boots_lg.png?3",
@@ -1360,14 +1360,14 @@
     "created": true
   },
   "phase_boots": {
-    "passive": [
+    "active": [
       {
         "name": "Phase",
-        "desc": "When targeting an enemy unit up to 900 range away, you gain 20% increased movement speed on melee heroes, and 10% on ranged heroes, and lets you move through units and turn more quickly."
+        "desc": "Gives 20% increased movement speed on melee heroes, and 10% on ranged heroes, and lets you move through units and turn more quickly for 3 seconds."
       }
     ],
     "hint": [
-      "Flat movement speed bonuses from multiple pairs of boots do not stack."
+      "Movement speed bonuses from multiple pairs of boots do not stack."
     ],
     "id": 50,
     "img": "/apps/dota2/images/items/phase_boots_lg.png?3",
@@ -1396,7 +1396,7 @@
       }
     ],
     "mc": false,
-    "cd": false,
+    "cd": 8,
     "lore": "Boots that allow the wearer to travel between the ether.",
     "components": [
       "boots",
@@ -1646,11 +1646,11 @@
     "active": [
       {
         "name": "Switch Attribute",
-        "desc": "Switches between +12 Strength, +12 Agility, or +12 Intelligence."
+        "desc": "Switches between +14 Strength, +14 Agility, or +14 Intelligence."
       }
     ],
     "hint": [
-      "Flat movement speed bonuses from multiple pairs of boots do not stack."
+      "Movement speed bonuses from multiple pairs of boots do not stack."
     ],
     "id": 63,
     "img": "/apps/dota2/images/items/power_treads_lg.png?3",
@@ -1668,7 +1668,7 @@
       {
         "key": "bonus_stat",
         "header": "+",
-        "value": "12",
+        "value": "14",
         "footer": "Selected Attribute"
       },
       {
@@ -1834,7 +1834,7 @@
     "id": 72,
     "img": "/apps/dota2/images/items/recipe_lg.png?3",
     "dname": "Bracer Recipe",
-    "cost": 220,
+    "cost": 240,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -1848,7 +1848,7 @@
     "img": "/apps/dota2/images/items/bracer_lg.png?3",
     "dname": "Bracer",
     "qual": "common",
-    "cost": 520,
+    "cost": 540,
     "notes": "",
     "attrib": [
       {
@@ -1889,7 +1889,7 @@
     "id": 74,
     "img": "/apps/dota2/images/items/recipe_lg.png?3",
     "dname": "Wraith Band Recipe",
-    "cost": 220,
+    "cost": 240,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -1903,7 +1903,7 @@
     "img": "/apps/dota2/images/items/wraith_band_lg.png?3",
     "dname": "Wraith Band",
     "qual": "common",
-    "cost": 520,
+    "cost": 540,
     "notes": "",
     "attrib": [
       {
@@ -1944,7 +1944,7 @@
     "id": 76,
     "img": "/apps/dota2/images/items/recipe_lg.png?3",
     "dname": "Null Talisman Recipe",
-    "cost": 220,
+    "cost": 240,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -1958,7 +1958,7 @@
     "img": "/apps/dota2/images/items/null_talisman_lg.png?3",
     "dname": "Null Talisman",
     "qual": "common",
-    "cost": 520,
+    "cost": 540,
     "notes": "",
     "attrib": [
       {
@@ -4578,7 +4578,7 @@
       {
         "key": "bonus_movement_speed",
         "header": "+",
-        "value": "8%",
+        "value": "25",
         "footer": "Movement Speed"
       }
     ],
@@ -4858,7 +4858,7 @@
       {
         "key": "movement_speed_percent_bonus",
         "header": "+",
-        "value": "12%",
+        "value": "35",
         "footer": "Movement Speed"
       },
       {
@@ -4962,7 +4962,7 @@
       {
         "key": "movement_speed_percent_bonus",
         "header": "+",
-        "value": "12%",
+        "value": "35",
         "footer": "Movement Speed"
       },
       {
@@ -5308,7 +5308,7 @@
       {
         "key": "movement_speed_percent_bonus",
         "header": "+",
-        "value": "8%",
+        "value": "25",
         "footer": "Movement Speed"
       }
     ],
@@ -5325,7 +5325,7 @@
     "active": [
       {
         "name": "Berserk",
-        "desc": "Gives 110 attack speed and 12% movement speed, but reduces your armor by 8 and silences you.  Lasts 8 seconds."
+        "desc": "Gives 110 attack speed and 25 movement speed, but reduces your armor by 8 and silences you.  Lasts 8 seconds."
       }
     ],
     "passive": [
@@ -5519,7 +5519,7 @@
       }
     ],
     "hint": [
-      "Flat movement speed bonuses from multiple pairs of boots do not stack."
+      "Movement speed bonuses from multiple pairs of boots do not stack."
     ],
     "id": 180,
     "img": "/apps/dota2/images/items/arcane_boots_lg.png?3",
@@ -5936,7 +5936,7 @@
       }
     ],
     "hint": [
-      "Flat movement speed bonuses from multiple pairs of boots do not stack."
+      "Movement speed bonuses from multiple pairs of boots do not stack."
     ],
     "id": 231,
     "img": "/apps/dota2/images/items/guardian_greaves_lg.png?3",
@@ -6245,7 +6245,7 @@
       }
     ],
     "hint": [
-      "Flat movement speed bonuses from multiple pairs of boots do not stack."
+      "Movement speed bonuses from multiple pairs of boots do not stack."
     ],
     "id": 214,
     "img": "/apps/dota2/images/items/tranquil_boots_lg.png?3",
@@ -6257,7 +6257,7 @@
       {
         "key": "bonus_movement_speed",
         "header": "+",
-        "value": "28%",
+        "value": "24%",
         "footer": "Movement Speed"
       },
       {

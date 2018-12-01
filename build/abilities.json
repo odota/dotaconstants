@@ -256,9 +256,9 @@
     "bkbpierce": "Yes",
     "desc": "When attacked, Axe performs a helix counter attack, dealing pure damage to all nearby enemies.",
     "dmg": [
-      "75",
-      "110",
-      "145",
+      "60",
+      "100",
+      "140",
       "180"
     ],
     "attrib": [
@@ -3387,8 +3387,8 @@
         "key": "coil_stun_duration",
         "header": "BREAK STUN DURATION:",
         "value": [
-          "1.5",
-          "2.25",
+          "1.8",
+          "2.4",
           "3"
         ]
       },
@@ -5021,9 +5021,9 @@
         "key": "burrow_duration",
         "header": "STUN DURATION:",
         "value": [
-          "1.9",
+          "1.6",
+          "1.8",
           "2",
-          "2.1",
           "2.2"
         ]
       },
@@ -5133,9 +5133,9 @@
     "mc": "60",
     "cd": [
       "40",
-      "32",
-      "24",
-      "16"
+      "34",
+      "28",
+      "22"
     ],
     "img": "/apps/dota2/images/abilities/sandking_sand_storm_md.png"
   },
@@ -7029,7 +7029,7 @@
   "lich_frost_shield": {
     "dname": "Frost Shield",
     "behavior": "Unit Target",
-    "desc": "Applies a magical frost shield around you, reducing damage from attacks against you. While the shield is active, ice magic will be launched towards the nearest enemy unit every 1 seconds, doing minor damage and slowing.",
+    "desc": "Applies a magical frost shield around you, reducing damage from attacks against you. While the shield is active, ice magic will be affect nearby enemy units every 1 seconds, doing minor damage and slowing.",
     "attrib": [
       {
         "key": "damage_reduction",
@@ -9723,9 +9723,9 @@
         "header": "CHANCE:",
         "value": [
           "10%",
-          "15%",
-          "20%",
-          "25%"
+          "14%",
+          "18%",
+          "22%"
         ]
       },
       {
@@ -10133,7 +10133,7 @@
       {
         "key": "duration",
         "header": "DURATION:",
-        "value": "2.5"
+        "value": "2.25"
       },
       {
         "key": "tooltip_range",
@@ -10157,10 +10157,7 @@
   },
   "phantom_assassin_blur": {
     "dname": "Blur",
-    "behavior": [
-      "No Target",
-      "Instant Cast"
-    ],
+    "behavior": "No Target",
     "desc": "Phantom Assassin focuses inward, increasing her ability to evade enemy attacks. Can be activated to blur her body, causing her to be impossible to see until near enemy heroes.\n\nStacks diminishingly with other sources of Evasion.",
     "attrib": [
       {
@@ -10213,8 +10210,8 @@
         "key": "crit_bonus",
         "header": "CRITICAL DAMAGE:",
         "value": [
-          "230%",
-          "340%",
+          "210%",
+          "330%",
           "450%"
         ]
       }
@@ -11434,8 +11431,8 @@
         "key": "cooldown_reduction",
         "header": "COOLDOWN REDUCTION:",
         "value": [
-          "30%",
-          "40%",
+          "20%",
+          "35%",
           "50%"
         ]
       },
@@ -12072,7 +12069,7 @@
       {
         "key": "max_targets",
         "header": "MAX TARGETS:",
-        "value": "16"
+        "value": "18"
       },
       {
         "key": "damage",
@@ -12786,9 +12783,9 @@
         "key": "attack_rate",
         "header": "ATTACK RATE:",
         "value": [
-          "1.5",
-          "1.35",
-          "1.2"
+          "1.75",
+          "1.6",
+          "1.45"
         ]
       },
       {
@@ -15891,10 +15888,10 @@
         "key": "damage",
         "header": "MOVESPEED AS DAMAGE:",
         "value": [
-          "12%",
-          "20%",
-          "28%",
-          "36%"
+          "8%",
+          "16%",
+          "24%",
+          "32%"
         ]
       },
       {
@@ -19011,8 +19008,8 @@
     ],
     "cd": [
       "140",
-      "120",
-      "100"
+      "130",
+      "120"
     ],
     "img": "/apps/dota2/images/abilities/brewmaster_primal_split_md.png"
   },
@@ -20722,10 +20719,10 @@
         "key": "lift_duration",
         "header": "LIFT DURATION:",
         "value": [
-          "1.1",
-          "1.5",
-          "1.9",
-          "2.3"
+          "1",
+          "1.4",
+          "1.8",
+          "2.2"
         ]
       },
       {
@@ -20767,9 +20764,9 @@
     ],
     "mc": "125",
     "cd": [
-      "28",
+      "34",
+      "30",
       "26",
-      "24",
       "22"
     ],
     "img": "/apps/dota2/images/abilities/rubick_telekinesis_md.png"
@@ -21910,12 +21907,22 @@
         "header": "FIXED MOVEMENT SPEED:",
         "value": "25",
         "generated": true
+      },
+      {
+        "key": "bounty",
+        "header": "BOUNTY:",
+        "value": [
+          "100",
+          "125",
+          "150"
+        ],
+        "generated": true
       }
     ],
     "mc": [
-      "200",
-      "300",
-      "400"
+      "250",
+      "350",
+      "450"
     ],
     "cd": "120",
     "img": "/apps/dota2/images/abilities/keeper_of_the_light_will_o_wisp_md.png"
@@ -22565,9 +22572,9 @@
         "key": "tether_heal_amp",
         "header": "HP/MANA AMP:",
         "value": [
+          "1.05",
           "1.2",
-          "1.3",
-          "1.4",
+          "1.35",
           "1.5"
         ]
       }
@@ -22904,7 +22911,7 @@
       {
         "key": "leash_radius",
         "header": "LEASH RADIUS:",
-        "value": "350"
+        "value": "400"
       }
     ],
     "mc": "75",
@@ -22972,8 +22979,8 @@
         "key": "bonus_movement_speed",
         "header": "BONUS MOVEMENT SPEED:",
         "value": [
-          "30%",
-          "40%",
+          "20%",
+          "35%",
           "50%"
         ]
       },
@@ -23796,10 +23803,10 @@
         "key": "cleave_damage_pct",
         "header": "CLEAVE DAMAGE:",
         "value": [
-          "30%",
-          "45%",
-          "60%",
-          "75%"
+          "20%",
+          "38%",
+          "56%",
+          "74%"
         ]
       },
       {
@@ -27739,7 +27746,7 @@
       "No Target",
       null
     ],
-    "desc": "Changes Monkey King's shape to deceive opponents, using the environment nearby as inspiration for the disguise. Taking damage, attacking, or using any item or ability breaks Monkey King's disguise. Grants invulnerability for 0.3 upon transforming.",
+    "desc": "Changes Monkey King's shape to deceive opponents, using the environment nearby as inspiration for the disguise. Taking damage, attacking, or using any item or ability breaks Monkey King's disguise. Grants invulnerability for 0.2 upon transforming.",
     "attrib": [
       {
         "key": "movespeed",
@@ -27755,7 +27762,7 @@
       {
         "key": "invul_duration",
         "header": "INVUL DURATION:",
-        "value": "0.3",
+        "value": "0.2",
         "generated": true
       }
     ],
@@ -28923,9 +28930,9 @@
         "key": "max_damage",
         "header": "MAX DAMAGE:",
         "value": [
-          "160",
-          "240",
-          "320",
+          "100",
+          "200",
+          "300",
           "400"
         ]
       },
@@ -28933,9 +28940,9 @@
         "key": "max_stun",
         "header": "MAX STUN DURATION:",
         "value": [
-          "2",
-          "2.6",
-          "3.2",
+          "1.7",
+          "2.4",
+          "3.1",
           "3.8"
         ]
       },
@@ -29053,8 +29060,8 @@
       "250"
     ],
     "cd": [
-      "80",
-      "65",
+      "90",
+      "70",
       "50"
     ],
     "img": "/apps/dota2/images/abilities/grimstroke_soul_chain_md.png"
@@ -35342,7 +35349,7 @@
     "dname": "+1s Shadow Dance Duration"
   },
   "special_bonus_unique_slark_4": {
-    "dname": "+100s Essence Shift Duration"
+    "dname": "+80s Essence Shift Duration"
   },
   "special_bonus_unique_spectre": {
     "dname": "-10s Spectral Dagger Cooldown"
@@ -35477,7 +35484,7 @@
     "dname": "-75 Earth Splitter Cooldown"
   },
   "special_bonus_unique_elder_titan_4": {
-    "dname": "Astral Spirit Grants Spell Immunity"
+    "dname": "+600 Echo Stomp Wake Damage"
   },
   "special_bonus_unique_ember_spirit_1": {
     "dname": "+250 Flame Guard Absorption"
@@ -35712,7 +35719,7 @@
     "dname": "+4 Epicenter Pulses"
   },
   "special_bonus_unique_sand_king_2": {
-    "dname": "+50 Sand Storm DPS"
+    "dname": "+40 Sand Storm DPS"
   },
   "special_bonus_unique_sand_king_3": {
     "dname": "-50 Epicenter Attack Slow"
