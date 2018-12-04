@@ -502,10 +502,9 @@ const sources = [{
       return result;
     },
   }, 
-  /*
   {
     key: "patchnotes",
-    url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/panorama/localization/patchnotes/patchnotes_english.txt",
+    url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/patchnotes/patchnotes_english.txt",
     transform: respObj => {
       let items = Object.keys(require("../build/items.json"));
       let heroes = Object.keys(require("../build/hero_names.json")).map((hero) => hero.replace("npc_dota_hero_", ""));
@@ -521,7 +520,7 @@ const sources = [{
           heroes: {}
         };
 
-        if (keyArr[0] == "general") {
+        if (keyArr[0].toLowerCase() == "general") {
           result[patch].general.push(respObj[key]);
         }
         else if (keyArr[0] == "item") {
@@ -552,7 +551,6 @@ const sources = [{
       return result;
     },
   },
-  */
 ];
 
 const patches = JSON.parse(fs.readFileSync('./json/patch.json'));
