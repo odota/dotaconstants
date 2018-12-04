@@ -314,21 +314,21 @@
         "Lotus Orb no longer gives +10 Damage."
       ],
       "aether_lens": [
-        "<span class=\\\\\\\"Reworked\\\\\\\">Item Reworked</span>",
-        "<span class=\\\\\\\"Subtitle\\\\\\\">OLD:</span>",
+        "<span class=\\\"Reworked\\\">Item Reworked</span>",
+        "<span class=\\\"Subtitle\\\">OLD:</span>",
         "Provides:",
         "+220 Cast Range",
         "+250 Mana",
         "+100% Mana Regeneration",
         "+6% Spell Amp",
-        "<span class=\\\\\\\"Subtitle\\\\\\\">NEW:</span>",
+        "<span class=\\\"Subtitle\\\">NEW:</span>",
         "Provides:",
         "+250 Cast Range",
         "+450 Mana",
         "+125% Mana Regeneration"
       ],
       "meteor_hammer": [
-        "<span class=\\\\\\\"New\\\\\\\">New Item</span>",
+        "<span class=\\\"New\\\">New Item</span>",
         "Requires:",
         "Ogre Axe (1000)",
         "Staff of Wizardry (1000)",
@@ -352,7 +352,7 @@
         "Gauntlet cost reduced from 150 to 135"
       ],
       "beastmaster": [
-        "<span class=\\\\\\\"Reworked\\\\\\\">Hero Reworked</span>",
+        "<span class=\\\"Reworked\\\">Hero Reworked</span>",
         "Wild Axes reworked:",
         "Wild Axes spread distance (how far the axes are from each other at mid distance) increased from 353 to 450",
         "Wild Axes hit radius increased from 140 to 175",
@@ -2843,16 +2843,18 @@
     }
   },
   "7_19": {
-    "general": ["Daily Bonus Hero changed from 2 Mangoes to 1",
+    "general": [
+      "Daily Bonus Hero changed from 2 Mangoes to 1",
       "Added 2 trees near the cliff area below the Dire primary jungle shrine"
     ],
+    "items": {},
     "heroes": {
       "abaddon": [
-          "Mist Coil manacost reduced from 50/60/70/80 to 50"
-        ],
+        "Mist Coil manacost reduced from 50/60/70/80 to 50"
+      ],
       "ancient_apparition": [
-          "Ice Vortex manacost reduced from 80/90/100/110 to 65/80/95/110"
-        ],
+        "Ice Vortex manacost reduced from 80/90/100/110 to 65/80/95/110"
+      ],
       "bloodseeker": [
         "Level 25 Talent reduced from +20% Max Thirst and Damage to +18%",
         "Thirst bonus rescaled from 16/24/32/40 to 7/18/29/40"
@@ -2878,8 +2880,8 @@
       ],
       "necrolyte": [
         "Reaper's Scythe Scepter cooldown increased from 55/40/25 to 60/50/40",
-        "Ghost Shroud self magic resistance reduction increased from 30% to 40%",
-        "Reaper's Scythe cast point increased from 0.5 to 0.55"
+        "Reaper's Scythe cast point increased from 0.5 to 0.55",
+        "Ghost Shroud self magic resistance reduction increased from 30% to 40%"
       ],
       "ogre_magi": [
         "Fireblast damage increased from 55/110/165/220 to 60/120/180/240"
@@ -2893,7 +2895,7 @@
         "Base intelligence reduced by 2"
       ],
       "phoenix": [
-        "15 Talent reduced from +60 Fire Spirits DPS to +50"
+        "Level 15 Talent reduced from +60 Fire Spirits DPS to +50"
       ],
       "puck": [
         "Waning Rift silence duration increased from 1.5/2/2.5/3 to 2/2.5/3/3.5"
@@ -2946,10 +2948,9 @@
     "general": [
       "Buyback respawn time penalty changed from +25% of remaining time to +25s always",
       "<br>",
-      "Level 2 XP requirement changed from 200 to 230 (in a scenario where Team A gets 2 melee denies per wave, and team B gets 1 melee deny per wave: Team A wave requirement for level 2 increases from 2 waves to 3 waves. Team B wave requirement remains at 3 waves. Total XP needed for other levels unchanged. )",
+      "Level 2 XP requirement changed from 200 to 230 (in a scenario where Team A gets 2 melee denies per wave, and team B gets 1 melee deny per wave: Team A wave requirement for level 2 increases from 2 waves to 3 waves. Team B wave requirement remains at 3 waves. Total XP needed for other levels unchanged.)",
       "<br>",
-      "Glyph is now on cooldown until the 3 minute timer in-game",
-      "<br>"
+      "Glyph is now on cooldown until the 3 minute timer in-game"
     ],
     "items": {
       "stout_shield": [
@@ -2976,12 +2977,12 @@
       ],
       "phase_boots": [
         "Speed bonus on ranged heroes reduced from 16% to 13%",
-        "Instant turn ra te is now a melee only feature"
+        "Instant turn rate is now a melee only feature"
       ]
     },
     "heroes": {
       "alchemist": [
-        " Greevil's Greed bounty rune multiplier rescaled from 3.5x to 2/2.5/3/3.5x"
+        "Greevil's Greed bounty rune multiplier rescaled from 3.5x to 2/2.5/3/3.5x"
       ],
       "bloodseeker": [
         "Bloodrage heal rate reduced from 19/21/23/25% to 16/19/22/25%"
@@ -2990,7 +2991,7 @@
         "Base agility reduced by 3"
       ],
       "chen": [
-        " Penitence duration reduced from 8 to 5/6/7/8"
+        "Penitence duration reduced from 8 to 5/6/7/8"
       ],
       "clinkz": [
         "Base strength reduced by 2"
@@ -3008,17 +3009,18 @@
         "Base attack animation time improved from 0.7 to 0.65"
       ],
       "enchantress": [
-        "Base movement speed reduced by 15 "
+        "Base movement speed reduced by 15"
       ],
       "gyrocopter": [
         "Base agility reduced by 5 (base damage and armor unchanged)"
       ],
       "huskar": [
-        " Base damage reduced from 42-51 to 40-45",
-        " Level 10 Talent increased from +175 Health to +225"
+        "Base damage reduced from 42-51 to 40-45",
+        "Level 10 Talent increased from +175 Health to +225"
       ],
-      "skeleton_king": [
-        "Wraithfire Blast cooldown increased from 11/10/9/8 to 14/12/10/8\t"
+      "wisp": [
+        "Spirits cooldown from 20/18/16/14 to 26/22/18/14",
+        "Level 10 Talent reduced from +25% XP to +20%"
       ],
       "mirana": [
         "Level 15 Talent reduced from +100 Leap Attack Speed to +80"
@@ -3053,6 +3055,9 @@
       ],
       "weaver": [
         "The Swarm manacost increased from 70/80/90/100 to 110"
+      ],
+      "skeleton_king": [
+        "Wraithfire Blast cooldown increased from 11/10/9/8 to 14/12/10/8"
       ]
     }
   },
@@ -3069,7 +3074,7 @@
         "Base strength reduced by 2",
         "Searing Arrows manacost increased from 10 to 12",
         "Level 20 Talent reduced from +20 Health Regen to +16",
-        "Level 25 Talent reduced from +4s Strafe Duration to +3s"
+        "Level 25 Talent reduced from +4 Strafe Duration to +3s"
       ],
       "crystal_maiden": [
         "Arcane Aura allied mana regen reduced from 0.8/1.0/1.2/1.4 to 0.7/0.9/1.1/1.3"
@@ -3080,13 +3085,13 @@
         "Cursed Crown stun duration reduced from 2/2.5/3/3.5 to 1.75/2.25/2.75/3.25",
         "Bedlam damage reduced from 60/120/180 to 60/110/160"
       ],
-      "earthshaker": [
-        "Root now disables his Scepter ability"
-      ],
       "enchantress": [
         "Strength rescaled from 19 + 1.3 to 16 + 1.5",
         "Base movement speed reduced from 325 to 320",
         "Base intelligence reduced by 2"
+      ],
+      "earthshaker": [
+        "Root now disables his Scepter ability"
       ],
       "grimstroke": [
         "Ink Swell no longer makes the target immune to attacks",
@@ -3132,11 +3137,14 @@
         "Level 15 Talent changed from +12 Strength to +20 Mana Break"
       ],
       "skeleton_king": [
+        "Wraithfire Blast stun duration rescaled from 2 to 1.1/1.4/1.7/2.0",
+        "Wraithfire Blast base damage rescaled from 50/100/150/200 to 100",
+        "Wraithfire Blast DPS rescaled from 20/35/50/65 to 10/30/50/70",
         "Vampiric Aura is now a melee only ability"
       ],
       "zuus": [
         "Strength gain reduced from 2.3 to 2.1",
-        "Level 25 Talent reduced from +170 Arc Lightning damage to +155\t"
+        "Level 25 Talent reduced from +170 Arc Lightning damage to +155"
       ]
     }
   },
@@ -3194,6 +3202,1106 @@
       ],
       "zuus": [
         "Arc Lightning manacost increased from 65/70/75/80 to 80"
+      ]
+    }
+  },
+  "7_20": {
+    "general": [],
+    "items": {
+      "phase_boots": [
+        "Reworked item ability and recipe"
+      ],
+      "power_treads": [
+        "Reworked item recipe and bonuses"
+      ],
+      "tranquil_boots": [
+        "No longer disabled by attacking creeps"
+      ],
+      "sange": [
+        "Now provides +12% Status Resistance instead of Maim",
+        "Recipe cost reduced from 700 to 650",
+        "Now provides +16% Status Resistance instead of Maim"
+      ],
+      "heavens_halberd": [
+        "Now provides +14% Status Resistance instead of Maim"
+      ],
+      "yasha": [
+        "Recipe cost reduced from 700 to 650"
+      ],
+      "kaya": [
+        "Recipe cost increased from 500 to 650"
+      ],
+      "solar_crest": [
+        "Reworked item recipe and bonuses"
+      ],
+      "bracer": [
+        "Now gives +6% Magic Resistance"
+      ],
+      "wraith_band": [
+        "Now gives +8 Attack Speed"
+      ],
+      "null_talisman": [
+        "Now gives +3% Spell Amp"
+      ],
+      "hurricane_pike": [
+        "Now has a 450 gold recipe instead of Wraith Band"
+      ],
+      "dagon": [
+        "Reworked item recipe"
+      ],
+      "veil_of_discord": [
+        "Reworked item recipe"
+      ],
+      "ancient_janggo": [
+        "Reworked item recipe"
+      ],
+      "rod_of_atos": [
+        "Reworked item recipe"
+      ],
+      "ring_of_basilius": [
+        "Mana regeneration increased from 0.5 to 0.65"
+      ],
+      "bloodstone": [
+        "No longer has Pocket Deny",
+        "No longer reduces respawn times",
+        "Now passively doubles your mana regeneration",
+        "Starts with 12 charges, deaths remove 3 charges, kills provide 1 charge",
+        "Each charge provides 0.25 MP and HP regen",
+        "Can now be cast to transfer 60% of your current mana to health"
+      ],
+      "aeon_disk": [
+        "Health increased from 250 to 300",
+        "Mana increased from 250 to 300",
+        "No longer provides passive Status Resistance",
+        "Provides +50% Status Resistance during the 2.5s active buff duration"
+      ],
+      "satanic": [
+        "Passively provides 30% Status Resistance",
+        "Bonus damage reduced from 50 to 25"
+      ],
+      "heart": [
+        "Now provides +50% Health Regen Amplification",
+        "Out-of-combat regen reduced from 7% to 5%",
+        "HP bonus reduced from 500 to 400",
+        "Reworked item recipe"
+      ],
+      "spirit_vessel": [
+        "No longer amplifies health regen nor provides current health percentage regen",
+        "Enemy damage per second increased from 20 to 25"
+      ],
+      "headdress": [
+        "Recipe reduced from 300 to 175"
+      ],
+      "mekansm": [
+        "Recipe increased from 900 to 950"
+      ],
+      "arcane_boots": [
+        "Mana restore increased from 135 to 160"
+      ],
+      "guardian_greaves": [
+        "Heal increased from 275 to 300",
+        "Mana restore increased from 160 to 200"
+      ],
+      "pipe": [
+        "Now gives the +2 Stats from its components"
+      ],
+      "basher": [
+        "Recipe cost reduced from 1000 to 900"
+      ],
+      "butterfly": [
+        "No longer has an active ability"
+      ],
+      "lesser_crit": [
+        "Bonus damage increased from +30 to +38"
+      ],
+      "desolator": [
+        "Armor reduction increased from 6 to 7"
+      ],
+      "force_staff": [
+        "Can now override Slark's Pounce"
+      ],
+      "hand_of_midas": [
+        "Attack Speed increased from 30 to 40"
+      ],
+      "ward_sentry": [
+        "Range increased from 850 to 1000"
+      ],
+      "gem": [
+        "Grants 300 ground vision and truesight to team that last held it when dropped"
+      ],
+      "lifesteal": [
+        "No longer provides +10 Damage",
+        "Cost reduced from 1100 to 900"
+      ],
+      "mask_of_madness": [
+        "Damage reduced from +20 to +10"
+      ]
+    },
+    "heroes": {
+      "abaddon": [
+        "Base movement speed increased from 310 to 325",
+        "Base agility increased by 6",
+        "Mist Coil projectile speed reduced from 1600 to 1300",
+        "Curse of Avernus reworked",
+        "Level 25 Talent changed from Curse of Avernus to +375 AoE Mist Coil"
+      ],
+      "ancient_apparition": [
+        "Ice Vortex no longer has a self bonus",
+        "Chilling Touch has been reworked"
+      ],
+      "antimage": [
+        "Removed Scepter upgrade",
+        "Spell Shield replaced with Counterspell"
+      ],
+      "arc_warden": [
+        "Tempest Double bounty increased from a fixed 180 Gold/XP to 180/240/300",
+        "Level 15 Talent changed from +350 Health to +300"
+      ],
+      "axe": [
+        "Berserker's Call armor bonus reduced from 40 to 30"
+      ],
+      "bane": [
+        "Enfeeble has been reworked",
+        "Level 15 Talent changed from Enfeeble Steals Damage to Enfeeble Steals Attack Speed",
+        "Level 20 Talent changed from +100 Enfeeble Damage Reduction to +100 Enfeeble Attack Speed Reduction"
+      ],
+      "batrider": [
+        "Flaming Lasso now does 20/40/60 damage per second"
+      ],
+      "beastmaster": [
+        "Call of the Wild has been reworked",
+        "Primal Roar self movement boost increased from 30 to 40%",
+        "Primal Roar secondary units push distance from 300 to 450",
+        "Primal Roar secondary units push duration from 0.6 to 1.0",
+        "Primal Roar secondary unit slow duration now matches primary target",
+        "Primal Roar secondary unit slow increased from 50 to 60",
+        "Level 25 Talent changed from +2 Hawks Summoned to -15s Hawks Cooldown"
+      ],
+      "bloodseeker": [
+        "Thirst changed from giving attack damage to +30/45/60/75 Attack Speed",
+        "Thirst movement speed increased from 7/18/29/40% to 12/24/36/48%",
+        "Bloodrage incoming and outgoing damage reduced from 25/30/35/40% to 10/15/20/25%",
+        "Bloodrage now does full amplification regardless of the distance",
+        "Blood Rite damage from 120/160/200/240 to 125/175/225/275",
+        "Rupture now deals 8% of current health as pure damage per 100 units moved. No longer lethal",
+        "Rupture duration from 12 to 8/10/12",
+        "Rupture cast range from 800 to 700/800/900",
+        "Rupture cooldown from 60 to 70/60/50",
+        "Level 20 Talent changed from +18% Rupture Damage to +600 Rupture Cast Range"
+      ],
+      "bounty_hunter": [
+        "Strength from 18+2.1 to 20+2.5",
+        "Shadow Walk no longer deals 30/60/90/120 damage. Attacking out of invisibility now applies a 14/20/26/32% movement slow for 4 seconds",
+        "Jinada has been reworked",
+        "Track movement speed bonus is now given to your hero only",
+        "Track now causes all attacks you do to the Tracked enemy to crit for 1.4/1.6/1.8x",
+        "Track cast no longer breaks invisibility",
+        "Track gold radius from 925 to 1200",
+        "Level 20 Talent changed from +125% Jinada Critical Strike to +90 Jinada Gold Steal"
+      ],
+      "brewmaster": [
+        "Intelligence gain increased from 1.3 to 1.6",
+        "Base movement speed increased from 295 to 305",
+        "Thunderclap manacost from 90/105/130/150 to 90/100/110/120",
+        "Drunken Haze has been replaced with Cinder Brew",
+        "Level 25 changed from +15% Drunken Brawler Chance to +200% Critical Strike Damage",
+        "Drunken Brawler has been reworked"
+      ],
+      "bristleback": [
+        "Viscous Nasal Goo armor reduction increased from 1/1.4/1.8/2.2 to 1.4/1.8/2.2/2.6"
+      ],
+      "broodmother": [
+        "Spiderling/Spiderite magic resistance reduced from 50% to 40%"
+      ],
+      "centaur": [
+        "Strength gain reduced from 4.3 to 4.0",
+        "Return has been renamed to Retaliate",
+        "Hoof Stomp damage reduced from 100/150/200/250 to 80/110/140/170",
+        "Double Edge damage changed from 175/250/325/400 to 150/200/250/300 + 40/60/80/100% of Strength as damage",
+        "Double Edge cast point from 0.5 to 0.4",
+        "Retaliate no longer has a strength component",
+        "Retaliate damage increased from 16/18/20/22 to 16/32/48/64",
+        "Retaliate now gains charges each time you are attacked by an enemy hero or tower",
+        "Stampede cooldown increased from 90/75/60 to 110/100/90",
+        "Stampede manacost increased from 100 to 150",
+        "Level 10 Talent changed from +10% Magic Resistance to +20 Movement Speed",
+        "Level 15 Talent changed from +15% Return Strength Damage to +50% Double Edge Strength Damage",
+        "Level 15 Talent changed from +75 Damage to +30 Base Damage",
+        "Level 20 Talent changed from +300 Double Edge Damage to +50 Retaliate Damage"
+      ],
+      "chaos_knight": [
+        "Chaos Strike has been reworked",
+        "Reality Rift no longer reduces armor",
+        "Reality Rift now moves the target a fixed amount of distance",
+        "Reality Rift now maims the target applying a 15/25/35/45% movement and 30/50/70/90 attack speed slow for 2 seconds",
+        "Reality Rift cooldown rescaled from 18/14/10/6 to 20/15/10/5",
+        "Reality Rift cast range from 550/600/650/700 to 475/550/625/700",
+        "Chaos Bolt minimum damage rescaled from 75/100/125/150 to 60/90/120/150",
+        "Chaos Bolt maximum damage rescaled from 200/225/250/275 to 180/210/240/270",
+        "Chaos Bolt projectile speed reduced from 1000 to 700",
+        "Phantasm no longer has a chance to summon an extra illusion",
+        "Illusion count increased from 1/2/3 to 3",
+        "Illusion damage rescaled from 100% to 40/70/100%",
+        "Illusion duration reduced from 42 to 30",
+        "Level 25 Talent changed from -7 Reality Rift Armor Reduction to -2s Chaos Strike Cooldown"
+      ],
+      "chen": [
+        "Penitence projectile speed reduced from 2000 to 1400",
+        "Penitence no longer amplifies damage",
+        "Penitence now causes all allied units attacking the target unit to gain 30/60/90/120 Attack Speed",
+        "Test of Faith has been replaced with Divine Favor",
+        "Holy Persuasion now has a neutral creep level requirement of 4/5/6/6",
+        "Holy Persuasion minimum health increased from 700/800/900/1000 to 1000",
+        "Holy Persuasion now sends an allied unit anywhere on the map to you instead of sending them home",
+        "Holy Persuasion cooldown changed from 32/24/18/10 to 15",
+        "Level 15 Talent changed from -10s Test of Faith Cooldown to -10s Divine Favor Cooldown"
+      ],
+      "clinkz": [
+        "Death Pact replaced with Burning Army"
+      ],
+      "rattletrap": [
+        "Rocket Flare projectile speed increased from 1750 to 2250",
+        "Power Cogs knockback distance increased from 250 to 300",
+        "Power Cogs knockback duration increased from 0.85 to 1",
+        "Power Cogs damage from 50/100/150/200 to 50/125/200/275",
+        "Power Cogs mana burn from 50/100/150/200 to 50/80/110/140"
+      ],
+      "crystal_maiden": [
+        "Base damage increased by 2",
+        "Frostbite no longer has an interrupt",
+        "Frostbite cast range increased from 525 to 550",
+        "Freezing Field no longer has a 0.3 cast point"
+      ],
+      "dark_seer": [
+        "Surge duration rescaled from 3/4.5/6/7.5 to 6",
+        "Surge cooldown rescaled from 13/12/11/10 to 16/14/12/10",
+        "Surge now causes the target to be unslowable",
+        "Surge speed changed from 550 to +36/54/72/90%",
+        "Surge now causes the target to ignore movement speed limit",
+        "Surge now causes the target to ignore unit collisions",
+        "Wall of Replica now uses Vector Targeting to cast",
+        "Wall of Replica cast point reduced from 0.4 to 0.2",
+        "Wall of Replica cast range increased 500/900/1300 to 1300",
+        "Wall of Replica always now slows heroes touching the wall continuously",
+        "Wall of Replica slow reduced from 75% to 50/60/70%"
+      ],
+      "dazzle": [
+        "Poison Touch mana cost increased from 80 to 80/90/100/110",
+        "Poison Touch debuff now stacks",
+        "Weave replaced with Bad Juju",
+        "Shadow Wave cooldown increased from 12/10/8/6 to 13/11/9/7",
+        "Level 25 Talent changed from +0.5 Weave Armor Per Second to +0.5 Bad Juju Armor Reduction",
+        "Level 25 Talent changed from -4s Shadow Wave Cooldown to +40% Poison Touch Slow"
+      ],
+      "death_prophet": [
+        "Movement speed increased from 305 to 310",
+        "Spirit Siphon now drains 4/6/8/10% speed"
+      ],
+      "disruptor": [
+        "Thunder Strike damage increased from 40/60/80/100 to 45/70/95/120"
+      ],
+      "doom_bringer": [
+        "Base attack range increased from 150 to 175",
+        "Devour no longer has a restriction on consuming while another unit is being consumed",
+        "Devour now gives you 5/10/15/20 HP regen per second while the creep is being consumed",
+        "Devour now takes a constant 80 seconds to consume a creep",
+        "Devour can now be toggled off to not steal the creep ability",
+        "Scorched Earth no longer heals",
+        "Scorched Earth cooldown reduced from 55 to 55/50/45/40",
+        "Scorched Earth damage increased from 16/24/32/40 to 20/30/40/50",
+        "Level 10 Talent changed from +10 Scorched Earth Damage/Heal to +20 Scorched Earth Damage"
+      ],
+      "dragon_knight": [
+        "Elder Dragon Form Splash Attack now does 75% damage in the 300 AoE",
+        "Elder Dragon Form Splash Attack no longer does partial damage if the attack misses"
+      ],
+      "drow_ranger": [
+        "Precision Aura now provides attack speed based on 20/36/52/68% of your Agility",
+        "Marksmanship has been reworked",
+        "Level 20 Talent changed from +20 Marksmanship Agility to +25% Evasion",
+        "Level 25 Talent changed from +20% Precision Aura Damage to +25% Precision Aura Attack Speed"
+      ],
+      "earthshaker": [
+        "Fissure cooldown increased from 18/17/16/15 to 21/19/17/15"
+      ],
+      "earth_spirit": [
+        "Strength gain increased from 3.5 to 3.8",
+        "Rolling Boulder changed from an 80% slow for 0.4/0.6/0.8/1.0 seconds to a stun for 0.4/0.6/0.8/1.0",
+        "Rolling Boulder stun duration lasts an extra 0.4/0.6/0.8/1.0 seconds when using a rock",
+        "Boulder Smash changed from a stun for 0.5/1/1.5/2 seconds to an 80% slow for 1.25/2.5/3.25/4 seconds",
+        "Boulder Smash damage increased from 50/100/150/200 to 105/170/235/300",
+        "Stone Remnant max charges increased from 6 to 7",
+        "Magnetize AoE increased from 300 to 350",
+        "Level 25 Talent changed from +1s Boulder Smash Stun duration to +0.75s Rolling Boulder Stun Duration"
+      ],
+      "elder_titan": [
+        "Astral Spirit damage reduced from 60/90/120/150 to 50",
+        "Astral Spirit return speed increased from 600 to 800",
+        "Astral Spirit attack damage per hero from 15/30/45/60 to 20/40/60/80",
+        "Astral Spirit now provides +1.5/3/4.5/6 Armor per hero hit and +0.5 per creep",
+        "Astral Spirit movement speed increased from 5% to 7%",
+        "Astral Spirit movement speed cap increased from 30% to 40%",
+        "Astral Spirit bonus duration increased from 9 to 10 seconds",
+        "Level 25 Talent changed from +100% Lifesteal to Astral Spirit Grants Spell Immunity"
+      ],
+      "ember_spirit": [
+        "Fire Remnant now does damage along the way (at half radius) instead of only at the destination"
+      ],
+      "enigma": [
+        "Base movement speed reduced from 300 to 290"
+      ],
+      "faceless_void": [
+        "Time Lock now causes Faceless Void to land a free second attack while the target is locked in place",
+        "Level 15 Talent from +100 Time Lock Damage to +70"
+      ],
+      "grimstroke": [
+        "Enabled in Captains Mode",
+        "Soulbind now applies a Leashed state to the targets, disallowing teleportation and mobility based abilities",
+        "Soulbind duration reduced from 6/8/10 to 6/7/8",
+        "Phantom's Embrace creature now gets closer to the target before latching on",
+        "Ink Swell now does its maximum impact based on the duration it hit any hero",
+        "Ink Swell max stun duration reduced from 2.2/2.8/3.4/4 to 2/2.6/3.2/3.8",
+        "Level 20 Talent changed from +2 Hits to Kill Phantom to +1"
+      ],
+      "huskar": [
+        "Berserker's Blood no longer gives magic resistance. Now provides health regen up to 20/40/60/80% of Strength based on missing health",
+        "Berserker's Blood now ramps up faster when lower health",
+        "Inner Vitality replaced with Inner Fire",
+        "Level 15 Talent increased from +15% Lifesteal to +20%",
+        "Level 15 Talent increased from +10 Burning Spears DPS to +15",
+        "Level 20 Talent increased from +15 Strength to +20",
+        "Level 25 Talent increased from +150 Attack Range to +175"
+      ],
+      "wisp": [
+        "Spirits Cooldown increased from 26/22/18/14 to 26/24/22/20"
+      ],
+      "jakiro": [
+        "Macropyre damage now lingers on the affected units for 2 seconds"
+      ],
+      "juggernaut": [
+        "Agility increased by 10 (base damage unchanged)",
+        "Changed how Omnislash does the strikes",
+        "Omnislash no longer constantly issues self interrupts during each attack",
+        "Omnislash no longer instantly kills creeps",
+        "Level 25 Talent changed from +5 Omnislash Strikes to +1s Omnislash Duration"
+      ],
+      "keeper_of_the_light": [
+        "Removed Mana Leak and Spirit Form",
+        "Scepter now just causes your Illuminate to heal during the day",
+        "Illuminate cooldown increased from 10 to 11",
+        "Chakra Magic now works differently",
+        "Blinding Light reworked into a basic ability",
+        "Will-o-Wisp added as new Ultimate",
+        "Level 25 Talent changed from +2s Mana Leak Stun to +2 Will-O-Wisp Flickers"
+      ],
+      "legion_commander": [
+        "Winning a Duel automatically casts Press the Attack on you"
+      ],
+      "lich": [
+        "Intelligence increased from 16 + 3.3 to 20 + 3.6",
+        "Frost Nova manacost reduced from 125/150/170/190 to 105/130/155/180",
+        "Sacrifice replaced with Sinister Gaze",
+        "Ice Armor replaced with Frost Shield",
+        "Level 20 Talent changed from 180 Gold/Min to +2s Frost Shield",
+        "Level 20 Talent reduced from +175 Cast Range to +150",
+        "Level 25 Talent increased from Ice Armor Provides +30 HP Regen to Frost Shield Provides +60 HP Regen"
+      ],
+      "life_stealer": [
+        "Feast changed from 4.5/5.5/6.5/7.5% of Current Health to 1.75/2.5/3.25/4% of Max Health",
+        "Level 25 Talent changed from +2% Current Health to +1% Max Health"
+      ],
+      "lion": [
+        "Mana Drain slow increased from 16/19/22/25% to 20/24/28/32%",
+        "Finger of Death now gains +50 Damage per hero kill."
+      ],
+      "lone_druid": [
+        "Base movement speed increased from 320 to 340",
+        "Spirit Bear movement speed increased from 320/330/340/350 to 340/350/360/370",
+        "Spirit Bear attack backswing time reduced from 0.67 to 0.4",
+        "Spirit Bear attack damage increased from 35/45/55/65 to 35/50/65/80",
+        "Spirit Bear now has a level 1 ability, Defender",
+        "Rabid replaced with Spirit Link"
+      ],
+      "luna": [
+        "Lunar Blessing now provides +8/14/20/26 Primary Attribute bonus as the aura bonus",
+        "Level 15 Talent changed from +24 Lunar Blessing Damage to +14 Lunar Blessing Attributes"
+      ],
+      "lycan": [
+        "Howl has been reworked",
+        "Level 25 Talent changed from +600 Howl Health to +40% Chance Shapeshift Critical Strike"
+      ],
+      "magnataur": [
+        "Skewer cooldown reduced from 25 to 26/24/22/20",
+        "Shockwave has been reworked"
+      ],
+      "medusa": [
+        "Stone Gaze no longer grants enemies +100% Magic Resistance",
+        "Stone Gaze no longer instantly kills illusions",
+        "Mystic Snake no longer changes damage type against Stone Gazed enemies"
+      ],
+      "meepo": [
+        "Base movement speed increased from 310 to 320",
+        "Geostrike replaced with Ransack",
+        "Clones now only drain 50% of normal XP from the area",
+        "Level 10 Talent reduced from +20 Damage to +15"
+      ],
+      "mirana": [
+        "Leap now causes the direction Mirana is facing to point towards the leap direction"
+      ],
+      "monkey_king": [
+        "Mischief will now always transform into a courier when nearby another courier",
+        "Mischief now grants you 0.3 seconds of invulnerability when transforming into another unit",
+        "Mischief cooldown increased from 3 to 20"
+      ],
+      "morphling": [
+        "Waveform cooldown increased from 14/13/12/11 to 17/15/13/11"
+      ],
+      "naga_siren": [
+        "Mirror Image duration reduced from 30 to 24",
+        "Mirror Image cooldown reduced from 40 to 45/40/35/30",
+        "Mirror Image manacost rescaled from 70/80/90/100 to 70/85/100/115",
+        "Mirror Image incoming damage reduced from 550/500/450/400% to 475/450/425/400%",
+        "Rip Tide has been reworked"
+      ],
+      "furion": [
+        "Treants experience bounty reduced from 30 to 20",
+        "Treants gold bounty reduced from 21 to 16"
+      ],
+      "necrolyte": [
+        "Base attack range reduced from 550 to 500",
+        "Heartstopper Aura now provides the unit kill regeneration instead of Death Pulse"
+      ],
+      "night_stalker": [
+        "Crippling Fear has been reworked",
+        "Hunter in the Night no longer has an active",
+        "Darkness replaced with Dark Ascension",
+        "Level 25 changed from -8s Crippling Fear Cooldown to -40s Dark Ascension cooldown"
+      ],
+      "nyx_assassin": [
+        "Vendetta now applies a break debuff on the target for 4 seconds"
+      ],
+      "ogre_magi": [
+        "Multicast now affects targeted offensive items",
+        "Multicast no longer provides passive improvements to the base abilities",
+        "Ignite cast range increased from 700 to 700/800/900/1000",
+        "Ignite base cast launches two projectiles",
+        "Fire Blast cooldown rescaled from 12 to 12/11/10/9",
+        "Bloodlust cooldown reduced from 20 to 20/18/16/14",
+        "Bloodlust movement speed reduced from 10/12/14/16% to 8/10/12/14%"
+      ],
+      "omniknight": [
+        "Purification can now be cast on Spell Immune units",
+        "Repel replaced with Heavenly Grace",
+        "Guardian Angel AoE increased from 600 to 1200",
+        "Guardian Angel cooldown reduced from 180/170/160 to 160/150/140",
+        "Level 25 Talent changed from +3s Repel Duration to -8s Heavenly Grace Cooldown"
+      ],
+      "oracle": [
+        "Fortune's End damage increased from 90/120/150/180 to 120/150/180/210"
+      ],
+      "obsidian_destroyer": [
+        "Arcane Orb now splashes its bonus damage in a 175 AoE around the target",
+        "Arcane Orb no longer does bonus damage to illusions",
+        "Essence Aura replaced with Equilibrium",
+        "Level 15 Talent changed from +15% Essence Aura Chance to +6 Armor"
+      ],
+      "pangolier": [
+        "Heartpiercer replaced with Lucky Shot"
+      ],
+      "phantom_assassin": [
+        "Phantom Strike Cooldown rescaled from 14/11/8/5 to 11/9/7/5",
+        "Phantom Strike cast point reduced from 0.3 to 0.25",
+        "Phantom Strike Attack Speed rescaled from 130 to 100/125/150/175",
+        "Phantom Strike no longer has an attack limit",
+        "Phantom Strike Attack Speed bonus now lasts for 2.5 seconds",
+        "Phantom Strike Manacost rescaled from 50 to 35/40/45/50",
+        "Phantom Strike Attack Speed bonus no longer depends on attacking the specific target",
+        "Blur's non-evasion passive component has been changed into an active"
+      ],
+      "phantom_lancer": [
+        "Phantom Lance slow reduced from 10/20/30/40% to 10/18/26/34%",
+        "Juxtapose incoming damage increased from 600% to 650%"
+      ],
+      "phoenix": [
+        "Icarus Dive slow rescaled from 28% to 19/22/25/28%"
+      ],
+      "puck": [
+        "Dream Coil now applies a Leashed state to the targets",
+        "Level 15 Talent increased from +50 Attack Damage to +90",
+        "Level 15 Talent increased from +8% Spell Amplification to +15%"
+      ],
+      "pudge": [
+        "Flesh Heap no longer gives Magic Resistance",
+        "Flesh Heap now grants 3/6/9/12 HP regen",
+        "Dismember strength based damage increased from 30/45/60% to 30/60/90%"
+      ],
+      "queenofpain": [
+        "Sonic Wave now knocks units back 350 units over 1.4 seconds"
+      ],
+      "razor": [
+        "Unstable Current no longer slows or purges a random enemy unit every 5 seconds",
+        "Unstable Current now deals 60/80/100/120 damage to every enemy unit within 500 AoE every 6/5/4/3 seconds",
+        "Plasma Field now applies a slow on units it hits, Minimum 5% Maximum 25/30/35/40% for 1.5 seconds",
+        "Level 25 Talent changed from -3s Unstable Current to +200 Unstable Current Damage"
+      ],
+      "riki": [
+        "Blink Strike cooldown rescaled from 16/12/8/4 to 10/8/6/4",
+        "Blink Strike damage rescaled from 100 to 75/90/105/120"
+      ],
+      "rubick": [
+        "Base damage increased by 3",
+        "Agility increased from 14 + 1.6 to 19 + 2.1",
+        "Intelligence gain increased from 2.4 to 2.7",
+        "Null Field replaced with Arcane Supremacy",
+        "Spell Steal ability cast points now have a min of 0.15 instead of 0",
+        "Level 15 Talent increased from +100 Cast Range to +125",
+        "Level 20 Talent changed from +5% Null Field to -5s Fade Bolt Cooldown",
+        "Level 25 Talent changed from +75% Spell Amp For Stolen Spells to +50%"
+      ],
+      "sand_king": [
+        "Sand Storm is no longer a channeled ability",
+        "Sand Storm AoE changed from 525 to 350/450/550/650",
+        "Sand Storm damage rescaled from 40/60/80/100 to 25/50/75/100",
+        "Sand Storm cooldown rescaled from 34/26/18/10 to 34/28/22/16",
+        "Sand Storm duration reduced from 50 to 20/25/30/35",
+        "Sand Storm visual effects updated slightly",
+        "Epicenter AoE growth now always increases by 50 per pulse"
+      ],
+      "shadow_demon": [
+        "Soul Catcher has been reworked",
+        "Disruption illusions health is now determined at the start of the cast",
+        "Disruption duration increased from 2.5 to 2.75"
+      ],
+      "nevermore": [
+        "Base armor increased by 1"
+      ],
+      "shadow_shaman": [
+        "Mass Serpent Wards now spawn in a circle, with a slightly bigger empty spot in the middle",
+        "Mass Serpent Wards now has an AoE spawn indicator"
+      ],
+      "skywrath_mage": [
+        "Concussive Shot now hits a creep if there are no nearby enemy heroes"
+      ],
+      "slardar": [
+        "Base armor increased by 1",
+        "Bash of the Deep has been reworked",
+        "Slithereen Crush bonuses have been reworked",
+        "Level 15 Talent changed from +100 Bash Damage to +75",
+        "Level 25 Talent changed from +15% Bash Chance to +1.5s Slithereen Crush Stun"
+      ],
+      "slark": [
+        "Turn rate improved from 0.6 to 0.7",
+        "A hero dying with Essence Shift debuff on them causes Slark to permanently steal 1 Agility",
+        "Pounce now applies a Leashed state to the target, disallowing teleportation and mobility based abilities",
+        "Shadow Dance duration rescaled from 4 to 4/4.5/5"
+      ],
+      "sniper": [
+        "Take Aim can now be activated to double your attack range for your next attack"
+      ],
+      "spirit_breaker": [
+        "Nether Strike can no longer be cast when rooted",
+        "Charge of Darkness no longer moves at a fixed speed",
+        "Fixed Charge of Darkness not using the movement speed for the impact damage",
+        "Empowering Haste replaced with Bulldoze",
+        "Greater Bash no longer gives you movement speed",
+        "Greater Bash damage reduced from 12/24/36/48 to 16/24/32/40%",
+        "Level 20 Talent reduced from +30% Greater Bash chance to +15%",
+        "Level 20 Talent changed from +400 Charge Speed to -7s Bulldoze Cooldown"
+      ],
+      "sven": [
+        "Warcry has been reworked"
+      ],
+      "techies": [
+        "Base movement speed increased from 270 to 315",
+        "Base intelligence increased by 2"
+      ],
+      "templar_assassin": [
+        "Level 20 Talent changed from Refraction Dispels to Meld Dispels",
+        "Level 25 Talent changed from Psi Blades Spill Paralyzes to 1.5s Meld Hit Bash"
+      ],
+      "terrorblade": [
+        "Sunder can no longer pierce Spell Immunity",
+        "Level 20 Talent reduced from -10s Reflection Cooldown to -8"
+      ],
+      "tidehunter": [
+        "Anchor Smash now attacks every unit in the area with a bonus 45/90/135/180 damage on top of your attack",
+        "Ravage damage increased from 200/290/380 to 200/300/400",
+        "Level 10 Talent increased from +80 Gush Damage to +100"
+      ],
+      "shredder": [
+        "Chakram projectile damage no longer ignores Ancients",
+        "Whirling Death is now always pure damage",
+        "Whirling Death damage changed from 100/150/200/250 to 90/120/150/180",
+        "Whirling Death stat reduction rescaled from 15% to 12/13/14/15%",
+        "Whirling Death now deals 10/14/18/22 extra damage per tree cut down",
+        "Level 25 Talent increased from +8% Whirling Death to +12%"
+      ],
+      "tiny": [
+        "Tree Grab area damage no longer works when denying units",
+        "Tree Grab cooldown increased from 24/20/16/12 to 27/22/17/12",
+        "Grow no longer provides 30/40/50% Status Resistance",
+        "Grow armor increased from 5/10/15 to 7/16/25",
+        "Avalanche has been reworked",
+        "Avalanche duration increased from 1 to 1.8",
+        "Avalanche AoE increased from 275 to 400",
+        "Avalanche cooldown reduced from 23/21/19/17 to 23/20/17/14",
+        "Avalanche total damage rescaled from 120/180/240/300 to 90/160/230/300",
+        "Toss avalanche damage bonus increased from 2x to 3x",
+        "Level 10 Talent changed from +20% Magic Resistance to +20 Movement Speed",
+        "Level 25 Talent changed from -12s Avalanche CD to -9s"
+      ],
+      "treant": [
+        "Nature's Guise has been reworked"
+      ],
+      "troll_warlord": [
+        "Base damage increased from 38-56 to 44-56",
+        "Basher and Abyssal Blade are no longer restricted items",
+        "Fixed Fervor incrementing when missing attacks",
+        "Berserker's Rage now applies an ensnare instead of a bash",
+        "Berserker's Rage proc chance increased from 10% to 10/12/14/16%",
+        "Fervor stack limit increased from 7 to 12",
+        "Fervor now starts at 0 stacks when attacking a new unit",
+        "Battle Trance has been reworked",
+        "Level 25 Talent changed from Battle Trance Basic Dispel to Battle Trance Strong Dispel"
+      ],
+      "tusk": [
+        "Frozen Sigil replaced with Tag Team"
+      ],
+      "abyssal_underlord": [
+        "Atrophy Aura now provides a permanent +2/3/4/5 bonus damage when a hero dies under the aura"
+      ],
+      "undying": [
+        "Base movement speed reduced from 305 to 295",
+        "Flesh Golem has been reworked",
+        "Flesh Golem model size increased a bit"
+      ],
+      "ursa": [
+        "Fixed Overpower not consuming attack count when an attack is evaded"
+      ],
+      "vengefulspirit": [
+        "Vengeance Aura no longer creates illusions of dying allies",
+        "Vengeance Aura now creates the Scepter effect on dying as a base mechanic",
+        "Netherswap cast range rescaled from 700/950/1200 to 700/850/1000",
+        "Netherswap now has 2 charges with 90/80/70 second replenish time"
+      ],
+      "venomancer": [
+        "Plague Wards collision size increased",
+        "Level 15 Talent changed from +200 Cast Range to Gale Hero Impact Summons 2 Wards",
+        "Level 20 Talent changed from Gale Hero Impact Summons 2 Wards to +15% Spell Lifesteal"
+      ],
+      "viper": [
+        "Nethertoxin AoE increased from 300 to 350",
+        "Nethertoxin damage rescaled from 20/30/40/50 to 20/35/50/65"
+      ],
+      "warlock": [
+        "Fatal Bonds now bounces from unit to unit",
+        "Fatal Bonds no longer ignores units in Fog of War"
+      ],
+      "weaver": [
+        "The Swarm units now have higher attack priority",
+        "Geminate attack cooldown increased from 7/6/5/3 to 9/7/5/3"
+      ],
+      "witch_doctor": [
+        "Death Ward damage increased from 60/105/150 to 75/125/175"
+      ],
+      "skeleton_king": [
+        "Skeletons health reduced from 350 to 250",
+        "Skeletons now reincarnate 3 seconds after dying the first time"
+      ],
+      "zuus": [
+        "Nimbus is no longer automatically selected when hitting Tab",
+        "Nimbus's Lightning Bolt no longer benefits from cooldown reductions on your hero"
+      ]
+    }
+  },
+  "7_20b": {
+    "general": [],
+    "items": {
+      "wraith_band": [
+        "Attack speed bonus reduced from 8 to 7"
+      ]
+    },
+    "heroes": {
+      "meepo": [
+        "Agility gain reduced from 2.2 to 1.4",
+        "Poof damage reduced from 80/100/120/140 to 70/90/110/130",
+        "Ransack hero steal reduced from 8/12/16/20 to 6/10/14/18",
+        "Level 10 Talent reduced from +15 Damage to +10",
+        "Level 15 Talent changed from +10% Lifesteal to +15% Evasion",
+        "Level 20 Talent changed from +15% Evasion to +10% Lifesteal",
+        "Level 25 Talent reduced from +600 Health to +400"
+      ],
+      "luna": [
+        "Lunar Blessing reduced from 8/14/20/26 to 6/12/18/24",
+        "Level 15 Talent changed from +14 Lunar Blessing Attributes to +30 Movement Speed"
+      ],
+      "slark": [
+        "Now only steals agility when he kills the enemy himself",
+        "Pounce leash duration from 3.5 to 2.75/3/3.25/3.5",
+        "Pounce leash range from 325 to 350",
+        "Shadow Dance cooldown increased from 60 to 80/70/60",
+        "Level 20 Talent reduced from +3s Pounce Leash to +2s"
+      ],
+      "dazzle": [
+        "Poison Touch manacost increased from 80/90/100/110 to 80/100/120/140",
+        "Bad Juju debuff duration reduced from 10 to 8"
+      ],
+      "sand_king": [
+        "Sandstorm cooldown increased from 34/28/22/16 to 40/32/24/16",
+        "Sandstorm manacost rescaled from 60/50/40/30 to 60"
+      ],
+      "abyssal_underlord": [
+        "Intelligence gain reduced from 2.6 to 2.3"
+      ],
+      "lone_druid": [
+        "Spirit Link attack speed reduced from 30/50/70/90 to 20/40/60/80",
+        "Spirit Link cooldown from 42/34/26/18 to 44/36/28/20"
+      ],
+      "drow_ranger": [
+        "Base agility increased by 4",
+        "Precision Aura increased from 20/36/52/68% to 20/40/60/80%"
+      ],
+      "obsidian_destroyer": [
+        "Base Intelligence increased from 24 to 28",
+        "Equilibrium mana restore from 60/80/100/120% to 80/100/120/140%",
+        "Equilibrium slow from 8/16/24/32% to 12/20/28/36%",
+        "Equilibrium cooldown from 20 to 18"
+      ],
+      "clinkz": [
+        "Burning Army base attack time improved from 1.8/1.65/1.5 to 1.65/1.5/1.35",
+        "Burning Army cast range increased from 800 to 1200"
+      ],
+      "chaos_knight": [
+        "Chaos Strike cooldown from 8/7/6/5 to 7/6/5/4",
+        "Phantasm damage increased from 40/70/100% to 50/75/100%"
+      ],
+      "centaur": [
+        "Retaliate max stacks increased from 10 to 13"
+      ],
+      "ember_spirit": [
+        "Fixed a bug with multiple Fire Remnant instances not doing damage properly",
+        "Sleight of Fist damage increased from 30/60/90/120 to 35/70/105/140"
+      ],
+      "medusa": [
+        "Agility increased from 20 + 2.5 to 22 + 3.4",
+        "Level 15 Talent increased from +20% Mystic Snake Mana Steal to +35%"
+      ],
+      "treant": [
+        "Nature's Guise fade time reduced from 4.75/4/3.25/2.5 to 4/3.5/3/2.5",
+        "Nature's Guise total damage increased from 30/80/130/180 to 30/90/150/210",
+        "Nature's Guise movement speed increased from 10/15/20/25% to 14/18/22/26%"
+      ],
+      "storm_spirit": [
+        "Electric Vortex duration from 1/1.5/2/2.5 to 1.4/1.8/2.2/2.6",
+        "Electric Vortex cooldown from 21/20/19/18 to 22/20/18/16",
+        "Overload attack speed reduction from -50 to -80 (matches movement speed now)"
+      ],
+      "sven": [
+        "Warcry shield health increased from 100/200/300/400 to 110/220/330/440"
+      ],
+      "venomancer": [
+        "Poison Sting slow from 11/12/13/14% to 11/13/15/17%"
+      ]
+    }
+  },
+  "7_20c": {
+    "general": [],
+    "items": {
+      "wraith_band": [
+        "Attack speed bonus reduced from 7 to 6",
+        "Recipe cost increased from 210 to 220"
+      ],
+      "bracer": [
+        "Recipe cost increased from 210 to 220"
+      ],
+      "null_talisman": [
+        "Recipe cost increased from 210 to 220"
+      ],
+      "sange": [
+        "Recipe cost reduced from 650 to 600"
+      ],
+      "yasha": [
+        "Recipe cost reduced from 650 to 600"
+      ],
+      "kaya": [
+        "Recipe cost reduced from 650 to 600"
+      ],
+      "bloodstone": [
+        "Charges increased from 12 to 14",
+        "HP/MP regen per charge increased from 0.25 to 0.3"
+      ]
+    },
+    "heroes": {
+      "bounty_hunter": [
+        "Agility gain reduced from 3.0 to 2.7",
+        "Track cast range reduced from 1200 to 1000"
+      ],
+      "brewmaster": [
+        "Cinder Brew activation mechanic has been reworked. It now ignites anytime a target is dealt 80 spell damage or more, dealing 20/25/30/35 DPS for 3 seconds. (If you activate it while the debuff is already going, it will extend the ignite debuff duration. If activated after the ignite debuff wears out, a new ignite debuff will be added)",
+        "Cinder Brew primary buff duration is no longer extended when activated (they are seperate debuffs now).",
+        "Level 25 Talent reduced from +200% Drunken Brawler Critical Strike to +175%"
+      ],
+      "centaur": [
+        "Stampede slow duration increased from 1.8 to 2.3 seconds"
+      ],
+      "chaos_knight": [
+        "Chaos Strike lifesteal increased from 35/40/45/50% to 35/45/55/65%"
+      ],
+      "clinkz": [
+        "Attack range increased from 640 to 650",
+        "Burning Army base attack time improved from 1.65/1.5/1.35 to 1.5/1.35/1.2",
+        "Level 20 Talent increased from +100 to +125 Attack Range"
+      ],
+      "dazzle": [
+        "Shadow Wave cooldown increased from 13/11/9/7 to 14/12/10/8"
+      ],
+      "death_prophet": [
+        "Base movement speed increased from 310 to 315",
+        "Level 10 Talent increased from +12% Magic Resistance to +15%",
+        "Level 20 Talent increased from -2s Crypt Swarm Cooldown to -3s"
+      ],
+      "doom_bringer": [
+        "Devour hp regen reduced from 5/10/15/20 to 4/8/13/18"
+      ],
+      "drow_ranger": [
+        "Marksmanship now deals bonus 120 physical proc damage against heroes"
+      ],
+      "elder_titan": [
+        "Astral Spirit attack damage per hero reduced from 20/40/60/80 to 15/30/60/80",
+        "Astral Spirit cooldown increased from 16 to 17"
+      ],
+      "ember_spirit": [
+        "Sleight of Fist bonus damage increased from 35/70/105/140 to 40/80/120/160",
+        "Level 10 Talent increased from +200 Flame Guard Absorption to +250",
+        "Level 15 Talent increased from +50 Flameguard DPS to +60"
+      ],
+      "enchantress": [
+        "Base armor increased by 2"
+      ],
+      "faceless_void": [
+        "Time Lock damage reduced from 30/40/50/60 to 25/30/35/40"
+      ],
+      "gyrocopter": [
+        "Strength gain increased from 2.1 to 2.3"
+      ],
+      "kunkka": [
+        "Tidebringer cleave damage increased from 150% to 165%"
+      ],
+      "lina": [
+        "Base armor increased by 1"
+      ],
+      "lone_druid": [
+        "Base armor reduced by 2",
+        "Agility reduced from 24 + 2.7 to 20 + 2.4",
+        "Spirit Link cooldown rescaled from 44/36/28/20 to 43/36/29/22",
+        "Level 10 Talent reduced from +175 Attack Range to +150",
+        "Level 20 Talent changed from +40 Spirit Link Attack Speed to -0.2 Spirit Bear Base Attack Time"
+      ],
+      "luna": [
+        "Agility gain reduced from 3.3 to 3.1",
+        "Level 10 Talent reduced from +20 Attack Speed to +15",
+        "Level 20 Talent reduced from +10 All Stats to +8",
+        "Lunar Blessing night vision reduced from 250/500/750/1000 to 200/400/600/800"
+      ],
+      "lycan": [
+        "Howl attack speed reduced from 21/34/47/60 to 20/30/40/50"
+      ],
+      "meepo": [
+        "Divided We Stand XP gain reduced from 50% to 40%",
+        "Level 15 Talent reduced from +40 Poof Damage to +30"
+      ],
+      "furion": [
+        "Base armor increased by 1",
+        "Agility gain increased from 2.4 to 2.8"
+      ],
+      "naga_siren": [
+        "Level 15 Talent reduced from +15 Agility to +12"
+      ],
+      "obsidian_destroyer": [
+        "Intelligence gain increased from 2.7 to 3.0",
+        "Base armor increased by 1",
+        "Equilibrium slow from 12/20/28/36% to 12/22/32/42%",
+        "Arcane Orb no longer ignores Ancients"
+      ],
+      "phantom_assassin": [
+        "Level 15 Talent reduced from -4 Armor to -3",
+        "Blur manacost increased from 20 to 30"
+      ],
+      "puck": [
+        "Intelligence gain increased from 2.4 to 2.7"
+      ],
+      "sand_king": [
+        "Base damage reduced by 2",
+        "Strength gain reduced from 2.9 to 2.8",
+        "Agility gain reduced from 2.1 to 1.8"
+      ],
+      "spectre": [
+        "Haunt damage increased from 40/50/60% to 40/55/70%"
+      ],
+      "spirit_breaker": [
+        "Greater Bash damage reduced from 16/24/32/40% to 12/20/28/36%"
+      ],
+      "storm_spirit": [
+        "Intelligence gain increased from 3 to 3.2",
+        "Static Remnant damage increased from 120/160/200/240 to 120/170/220/270"
+      ],
+      "slardar": [
+        "Level 20 Talent changed from +50 Attack Speed to +30% Lifesteal"
+      ],
+      "slark": [
+        "Pounce duration reduced from 2.75/3/3.25/3.5 to 2.5/2.75/3/3.25",
+        "Dark Pact manacost from 55/50/45/40 to 60",
+        "Shadow Dance duration from 4/4.5/5 to 4/4.25/4.5",
+        "Agility steal now also occurs when an enemy dies within 300 units from you with the debuff, rather than only when you get the killing blow",
+        "Level 10 Talent reduced from +8 Agility to +6 Agility",
+        "Level 20 Talent reduced from +2s Pounce Leash to +1.5s",
+        "Level 25 Talent reduced from +120s Essence Shift Duration to +100s"
+      ],
+      "shredder": [
+        "Strength gain increased from 2.1 to 2.4",
+        "Whirling Death tree bonus damage increased from 10/14/18/22 to 10/15/20/25"
+      ],
+      "tusk": [
+        "Strength gain increased from 3 to 3.4"
+      ],
+      "undying": [
+        "Level 20 Talent reduced from +6 Tombstone Attacks To Destroy to +5",
+        "Level 25 Talent increased from Gains Reincarnation 200 CD to 250 CD"
+      ],
+      "ursa": [
+        "Fury Swipes damage reduced from 12/18/24/30 to 10/16/22/28",
+        "Level 15 Talent reduced from +16 Agility to +14"
+      ],
+      "venomancer": [
+        "Base agility increased by 4",
+        "Level 15 Talent increased from +6% Poison Sting Slow to +8%"
+      ],
+      "visage": [
+        "Strength gain reduced from 3.2 to 3.0",
+        "Grave Chill cast range reduced from 650 to 625",
+        "Level 20 Talent reduced from +80 Familiars Movement Speed to +60"
+      ]
+    }
+  },
+  "7_20d": {
+    "general": [
+      "Melee heroes below 300 base movement speed increased by 5"
+    ],
+    "items": {
+      "tranquil_boots": [
+        "Movement speed reduced from +28% to +24%"
+      ],
+      "power_treads": [
+        "Attribute bonus increased from 12 to 14"
+      ],
+      "phase_boots": [
+        "Now has the active again instead of the passive"
+      ],
+      "mask_of_madness": [
+        "Movement speed changed from +12% to +25 constant"
+      ],
+      "yasha": [
+        "Movement speed changed from +8% to +25 constant",
+        "Movement speed changed from +12% to +35 constant"
+      ],
+      "manta": [
+        "Movement speed changed from +8% to +25 constant"
+      ],
+      "sange": [
+        "Movement speed changed from +12% to +35 constant"
+      ],
+      "wraith_band": [
+        "Recipe cost increased from 220 to 240"
+      ],
+      "bracer": [
+        "Recipe cost increased from 220 to 240"
+      ],
+      "null_talisman": [
+        "Recipe cost increased from 220 to 240"
+      ]
+    },
+    "heroes": {
+      "axe": [
+        "Counter Helix damage reduced from 75/110/145/180 to 60/100/140/180",
+        "Level 15 Talent reduced from +4 Mana Regen to +3"
+      ],
+      "brewmaster": [
+        "Primal Split cooldown increased from 140/120/100 to 140/130/120",
+        "Level 10 talent reduced from +30 Damage to +20"
+      ],
+      "clinkz": [
+        "Burning Army damage type changed from Pierce to Hero type (50% vs heroes to 100%)",
+        "Burning Army base attack time increased from 1.5/1.35/1.2 to 1.75/1.6/1.45"
+      ],
+      "dazzle": [
+        "Intelligence gain reduced from 3.4 to 3.2",
+        "Bad Juju cooldown reduction reduced from 30/40/50% to 20/35/50%"
+      ],
+      "elder_titan": [
+        "Level 25 Talent changed from Astral Spirit Grants Spell Immunity to +600 Echo Stomp Wake Damage"
+      ],
+      "ember_spirit": [
+        "Base armor increased by 1"
+      ],
+      "faceless_void": [
+        "Time Lock chance reduced from 10/15/20/25% to 10/14/18/22%",
+        "Level 10 Talent reduced from +20 Damage to +15"
+      ],
+      "grimstroke": [
+        "Ink Swell max damage reduced from 160/240/320/400 to 100/200/300/400",
+        "Ink Swell max stun duration reduced from 2/2.6/3.2/3.8 to 1.7/2.4/3.1/3.8",
+        "Soul Bind cooldown increased from 80/65/50 to 90/70/50"
+      ],
+      "wisp": [
+        "Tether heal/mp transfer rate from 1.2/1.3/1.4/1.5 to 1.05/1.2/1.35/1.5"
+      ],
+      "juggernaut": [
+        "Omnislash now removes debuffs on cast",
+        "Level 15 Talent reduced from +25 Attack Speed to +20"
+      ],
+      "keeper_of_the_light": [
+        "Will-o-Wisp now has a 100/125/150 gold bounty",
+        "Will-o-wisp manacost increased from 200/300/400 to 250/350/450"
+      ],
+      "lich": [
+        "Base movement speed reduced from 315 to 310"
+      ],
+      "magnataur": [
+        "Empower cleave damage reduced from 30/45/60/75% to 20/38/56/74%",
+        "Level 15 Talent reduced from +15 Strength to +12",
+        "Level 20 Talent reduced from +12 Armor to +10"
+      ],
+      "monkey_king": [
+        "Mischief invulnerability duration reduced from 0.3 to 0.2"
+      ],
+      "furion": [
+        "Agility gain increased from 2.8 to 3.3",
+        "Wrath of Nature's max targets increased from 16 to 18"
+      ],
+      "phantom_assassin": [
+        "Phantom Strike attack speed duration reduced from 2.5 to 2.25",
+        "Blur now has a 0.4 second cast point",
+        "Coup de Grace damage reduced from 230/340/450% to 210/330/450%"
+      ],
+      "puck": [
+        "Dream Coil stun duration from 1.5/2.25/3 to 1.8/2.4/3"
+      ],
+      "rubick": [
+        "Telekinesis cooldown increased from 28/26/24/22 to 34/30/26/22",
+        "Telekinesis lift duration reduced from 1.1/1.5/1.9/2.3 to 1/1.4/1.8/2.2"
+      ],
+      "sand_king": [
+        "Sand Storm cooldown from 40/32/24/16 to 40/34/28/22",
+        "Burrow Strike stun duration from 1.9/2/2.1/2.2 to 1.6/1.8/2/2.2",
+        "Level 15 Talent reduced from +50 Sand Storm DPS to +40"
+      ],
+      "slark": [
+        "Leash distance increased from 350 to 400",
+        "Shadow Dance movement speed reduced from 30/40/50% to 20/35/50%",
+        "Level 25 Talent reduced from +100s Essense Shift Duration to +80s"
+      ],
+      "spirit_breaker": [
+        "Greater Bash damage reduced from 12/20/28/36% to 8/16/24/32%"
       ]
     }
   }
