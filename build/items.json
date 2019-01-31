@@ -313,7 +313,7 @@
       {
         "key": "movement_speed",
         "header": "+",
-        "value": "6%",
+        "value": "20",
         "footer": "Movement Speed"
       }
     ],
@@ -1346,7 +1346,7 @@
       {
         "key": "bonus_movement_speed",
         "header": "+",
-        "value": "32%",
+        "value": "35%",
         "footer": "Movement Speed"
       }
     ],
@@ -1363,7 +1363,7 @@
     "active": [
       {
         "name": "Phase",
-        "desc": "Gives 20% increased movement speed on melee heroes, and 10% on ranged heroes, and lets you move through units and turn more quickly for 3 seconds."
+        "desc": "Gives 22% increased movement speed on melee heroes, and 10% on ranged heroes, and lets you move through units and turn more quickly for 3 seconds."
       }
     ],
     "hint": [
@@ -1373,7 +1373,7 @@
     "img": "/apps/dota2/images/items/phase_boots_lg.png?3",
     "dname": "Phase Boots",
     "qual": "common",
-    "cost": 1550,
+    "cost": 1480,
     "notes": "",
     "attrib": [
       {
@@ -1383,15 +1383,19 @@
         "footer": "Movement Speed"
       },
       {
-        "key": "bonus_attack_speed",
-        "header": "+",
-        "value": "25",
-        "footer": "Attack Speed"
+        "key": "bonus_damage_melee",
+        "header": "+Damage (MELEE)",
+        "value": "18"
+      },
+      {
+        "key": "bonus_damage_range",
+        "header": "+Damage (RANGED)",
+        "value": "12"
       },
       {
         "key": "bonus_armor",
         "header": "+",
-        "value": "5",
+        "value": "6",
         "footer": "Armor"
       }
     ],
@@ -1401,7 +1405,7 @@
     "components": [
       "boots",
       "chainmail",
-      "gloves"
+      "blades_of_attack"
     ],
     "created": true
   },
@@ -1646,7 +1650,7 @@
     "active": [
       {
         "name": "Switch Attribute",
-        "desc": "Switches between +14 Strength, +14 Agility, or +14 Intelligence."
+        "desc": "Switches between +10 Strength, +10 Agility, or +10 Intelligence."
       }
     ],
     "hint": [
@@ -1656,7 +1660,7 @@
     "img": "/apps/dota2/images/items/power_treads_lg.png?3",
     "dname": "Power Treads",
     "qual": "common",
-    "cost": 1380,
+    "cost": 1450,
     "notes": "Power Treads can be built using a Belt of Strength, Band of Elvenskin, or a Robe of the Magi.",
     "attrib": [
       {
@@ -1668,14 +1672,14 @@
       {
         "key": "bonus_stat",
         "header": "+",
-        "value": "14",
+        "value": "10",
         "footer": "Selected Attribute"
       },
       {
-        "key": "bonus_damage",
+        "key": "bonus_attack_speed",
         "header": "+",
-        "value": "12",
-        "footer": "Damage"
+        "value": "20",
+        "footer": "Attack Speed"
       }
     ],
     "mc": false,
@@ -1683,7 +1687,7 @@
     "lore": "A pair of tough-skinned boots that change to meet the demands of the wearer.",
     "components": [
       "boots",
-      "blades_of_attack",
+      "gloves",
       "belt_of_strength"
     ],
     "created": true
@@ -2049,11 +2053,23 @@
     ],
     "created": true
   },
+  "recipe_vladmir": {
+    "id": 80,
+    "img": "/apps/dota2/images/items/recipe_lg.png?3",
+    "cost": 525,
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": false,
+    "lore": "",
+    "components": null,
+    "created": false
+  },
   "vladmir": {
     "passive": [
       {
         "name": "Vladmir's Aura",
-        "desc": "Grants lifesteal (15% for melee heroes, 10% for ranged), 2.5 health regeneration, 1.75 mana regeneration, 15% bonus attack damage, and 4 armor to nearby allies. \n\nRadius: 1200"
+        "desc": "Grants lifesteal (15% for melee heroes, 10% for ranged), 1.75 mana regeneration, 15% bonus attack damage, and 4 armor to nearby allies. \n\nRadius: 1200"
       }
     ],
     "id": 81,
@@ -2062,19 +2078,11 @@
     "qual": "rare",
     "cost": 1925,
     "notes": "Multiple instances of Vladmir's Aura do not stack.",
-    "attrib": [
-      {
-        "key": "bonus_all_stats",
-        "header": "+",
-        "value": "2",
-        "footer": "All Attributes"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": false,
     "lore": "An eerie mask that is haunted with the malice of a fallen vampire.",
     "components": [
-      "headdress",
       "ring_of_basilius",
       "lifesteal"
     ],
@@ -2097,7 +2105,7 @@
     "active": [
       {
         "name": "Armor Bonus",
-        "desc": "Gives +2 armor to all allied units.  Lasts 25 seconds on heroes, 30 seconds on units.\n\nRadius: 1200"
+        "desc": "Gives +2 armor to all allied units.  Lasts 15 seconds on heroes, 30 seconds on units.\n\nRadius: 1200"
       }
     ],
     "id": 86,
@@ -2189,7 +2197,7 @@
     "img": "/apps/dota2/images/items/holy_locket_lg.png?3",
     "dname": "Holy Locket",
     "qual": "rare",
-    "cost": 2650,
+    "cost": 2700,
     "notes": "",
     "attrib": [
       {
@@ -2199,16 +2207,16 @@
         "footer": "Health"
       },
       {
+        "key": "bonus_mana",
+        "header": "+",
+        "value": "325",
+        "footer": "Mana"
+      },
+      {
         "key": "health_regen",
         "header": "+",
         "value": "4",
         "footer": "HP Regeneration"
-      },
-      {
-        "key": "mana_regen",
-        "header": "+",
-        "value": "3",
-        "footer": "Mana Regeneration"
       },
       {
         "key": "magic_resist",
@@ -2222,7 +2230,7 @@
     "lore": "",
     "components": [
       "ring_of_tarrasque",
-      "void_stone",
+      "energy_booster",
       "cloak"
     ],
     "created": true
@@ -2556,7 +2564,7 @@
       }
     ],
     "mc": 100,
-    "cd": 18,
+    "cd": 15,
     "lore": "A reviled blade that bites deeper with each wriggle of its victim's final throes.",
     "components": [
       "orchid",
@@ -2660,7 +2668,7 @@
       {
         "key": "bonus_movement_speed",
         "header": "+",
-        "value": "6%",
+        "value": "20",
         "footer": "Movement Speed"
       }
     ],
@@ -3079,7 +3087,7 @@
     "active": [
       {
         "name": "Demonic Summoning",
-        "desc": "Summons a Warrior and an Archer to fight for you for 60 seconds.\n\n<h1>Warrior:</h1>Burns mana every hit, and deals magical damage to whoever kills it.  Gains True Sight at level 3.\nHealth: 700,800,900\nDamage: 75,100,125\nMana Break Damage: 30,40,50\nLast Will Damage: 550,675,800\n\n<h1>Archer:</h1>Has a passive movement and attack speed aura. Gains Purge at Level 3.\nHealth: 700,800,900\nDamage: 60,90,120\nAura Move Speed: 5,7,9\nAura Attack Speed: 5,7,9\nAura Radius: 1200"
+        "desc": "Summons a Warrior and an Archer to fight for you for 60 seconds.\n\n<h1>Warrior:</h1>Burns mana every hit, and deals magical damage to whoever kills it.  Gains True Sight at level 3.\nHealth: 700,800,900\nDamage: 75,100,125\nMana Break Damage: 30,40,50\nLast Will Damage: 600,700,800\n\n<h1>Archer:</h1>Has a passive movement and attack speed aura. Gains Purge at Level 3.\nHealth: 700,800,900\nDamage: 60,90,120\nAura Move Speed: 5,7,9\nAura Attack Speed: 5,7,9\nAura Radius: 1200"
       }
     ],
     "id": 106,
@@ -3124,7 +3132,7 @@
     "active": [
       {
         "name": "Demonic Summoning",
-        "desc": "Summons a Warrior and an Archer to fight for you for 60 seconds.\n\n<h1>Warrior:</h1>Burns mana every hit, and deals magical damage to whoever kills it.  Gains True Sight at level 3.\nHealth: 700,800,900\nDamage: 75,100,125\nMana Break Damage: 30,40,50\nLast Will Damage: 550,675,800\n\n<h1>Archer:</h1>Has a passive movement and attack speed aura. Gains Purge at Level 3.\nHealth: 700,800,900\nDamage: 60,90,120\nAura Move Speed: 5,7,9\nAura Attack Speed: 5,10,15\nAura Radius: 1200"
+        "desc": "Summons a Warrior and an Archer to fight for you for 60 seconds.\n\n<h1>Warrior:</h1>Burns mana every hit, and deals magical damage to whoever kills it.  Gains True Sight at level 3.\nHealth: 700,800,900\nDamage: 75,100,125\nMana Break Damage: 30,40,50\nLast Will Damage: 600,700,800\n\n<h1>Archer:</h1>Has a passive movement and attack speed aura. Gains Purge at Level 3.\nHealth: 700,800,900\nDamage: 60,90,120\nAura Move Speed: 5,7,9\nAura Attack Speed: 5,10,15\nAura Radius: 1200"
       }
     ],
     "id": 193,
@@ -3168,7 +3176,7 @@
     "active": [
       {
         "name": "Demonic Summoning",
-        "desc": "Summons a Warrior and an Archer to fight for you for 60 seconds.\n\n<h1>Warrior:</h1>Burns mana every hit, and deals magical damage to whoever kills it.  Gains True Sight at level 3.\nHealth: 700,800,900\nDamage: 75,100,125\nMana Break Damage: 30,40,50\nLast Will Damage: 550,675,800\n\n<h1>Archer:</h1>Has a passive movement and attack speed aura. Gains Purge at Level 3.\nHealth: 700,800,900\nDamage: 60,90,120\nAura Move Speed: 5,7,9\nAura Attack Speed: 5,10,15\nAura Radius: 1200"
+        "desc": "Summons a Warrior and an Archer to fight for you for 60 seconds.\n\n<h1>Warrior:</h1>Burns mana every hit, and deals magical damage to whoever kills it.  Gains True Sight at level 3.\nHealth: 700,800,900\nDamage: 75,100,125\nMana Break Damage: 30,40,50\nLast Will Damage: 600,700,800\n\n<h1>Archer:</h1>Has a passive movement and attack speed aura. Gains Purge at Level 3.\nHealth: 700,800,900\nDamage: 60,90,120\nAura Move Speed: 5,7,9\nAura Attack Speed: 5,10,15\nAura Radius: 1200"
       }
     ],
     "id": 194,
@@ -3534,7 +3542,7 @@
     "active": [
       {
         "name": "Bloodpact",
-        "desc": "Converts 60% of your current mana to health regeneration over 2 seconds."
+        "desc": "Converts 30% of your max mana to health regeneration over 2 seconds."
       }
     ],
     "passive": [
@@ -3703,7 +3711,7 @@
     "active": [
       {
         "name": "Meteor Hammer",
-        "desc": "CHANNELED - After a successful channel, summons a meteor that strikes a 300 AoE, stunning enemies for 2 seconds and dealing impact damage. Continues to deal damage over time to enemies units and buildings for 6 seconds.\n\nBuilding Impact Damage: 75 \nBuilding Over Time Damage: 50 \n\nNon-Building Impact Damage: 150 \nNon-Building Over Time Damage: 90 \n\nChannel Duration: 2.5 seconds.\nLanding Time: 0.5 seconds."
+        "desc": "CHANNELED - After a successful channel, summons a meteor that strikes a 315 AoE, stunning enemies for 2 seconds and dealing impact damage. Continues to deal damage over time to enemies units and buildings for 6 seconds.\n\nBuilding Impact Damage: 75 \nBuilding Over Time Damage: 50 \n\nNon-Building Impact Damage: 150 \nNon-Building Over Time Damage: 90 \n\nChannel Duration: 2.5 seconds.\nLanding Time: 0.5 seconds."
       }
     ],
     "id": 223,
@@ -3753,7 +3761,7 @@
     "active": [
       {
         "name": "Nullify",
-        "desc": "Dispels the target and mutes them for 5 seconds. Anytime the muted target is attacked, it will be slowed by 100% for 0.4 seconds.\n\nDispel Type: Basic Dispel"
+        "desc": "Dispels the target and mutes them for 6 seconds. Anytime the muted target is attacked, it will be slowed by 100% for 0.4 seconds.\n\nDispel Type: Basic Dispel"
       }
     ],
     "id": 225,
@@ -3795,7 +3803,7 @@
     "id": 255,
     "img": "/apps/dota2/images/items/recipe_lg.png?3",
     "dname": "Aeon Disk Recipe",
-    "cost": 1350,
+    "cost": 1250,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -3808,14 +3816,14 @@
     "passive": [
       {
         "name": "Combo Breaker",
-        "desc": "When you take damage and your health falls below 70%, a strong dispel is applied and you gain a 2.5 second buff that provides +50% Status Resistance and causes all damage you deal and are dealt to be reduced to zero. Only triggers on player based damage."
+        "desc": "When you take damage and your health falls below 70%, a strong dispel is applied and you gain a 2.5 second buff that provides +75% Status Resistance and causes all damage you deal and are dealt to be reduced to zero. Only triggers on player based damage."
       }
     ],
     "id": 256,
     "img": "/apps/dota2/images/items/aeon_disk_lg.png?3",
     "dname": "Aeon Disk",
     "qual": "epic",
-    "cost": 3350,
+    "cost": 3250,
     "notes": "",
     "attrib": [
       {
@@ -3948,7 +3956,7 @@
     "active": [
       {
         "name": "Soul Release",
-        "desc": "When used against enemies, it reduces health by 4.5% of current health per second, and reduces HP regeneration and healing by 70%. Deals 25 damage per second. \n\nWhen used on allies, it provides 30 health regeneration per second. \n\nLasts 8 seconds.  \n\nGains charges every time an enemy hero dies within 1400 units.  Only the closest Spirit Vessel to the dying hero will gain a charge.\n\nCast Range: 950 "
+        "desc": "When used against enemies, it reduces health by 5% of current health per second, and reduces HP regeneration and healing by 70%. Deals 25 damage per second. \n\nWhen used on allies, it provides 30 health regeneration per second. \n\nLasts 8 seconds.  \n\nGains charges every time an enemy hero dies within 1400 units.  Only the closest Spirit Vessel to the dying hero will gain a charge.\n\nCast Range: 950 "
       }
     ],
     "id": 267,
@@ -3967,7 +3975,7 @@
       {
         "key": "bonus_movement_speed",
         "header": "+",
-        "value": "6%",
+        "value": "20",
         "footer": "Movement Speed"
       },
       {
@@ -4040,7 +4048,7 @@
     "id": 243,
     "img": "/apps/dota2/images/items/recipe_lg.png?3",
     "dname": "Crimson Guard Recipe",
-    "cost": 600,
+    "cost": 750,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -4066,7 +4074,7 @@
     "img": "/apps/dota2/images/items/crimson_guard_lg.png?3",
     "dname": "Crimson Guard",
     "qual": "epic",
-    "cost": 3550,
+    "cost": 3700,
     "notes": "Multiple sources of damage block do not stack.",
     "attrib": [
       {
@@ -4481,7 +4489,7 @@
     "passive": [
       {
         "name": "Quell",
-        "desc": "Increases attack damage against non-hero units by 60% for melee heroes, and 25% for ranged. "
+        "desc": "Increases attack damage against non-hero units by 24 for melee heroes, and 7 for ranged. "
       },
       {
         "name": "Cleave",
@@ -4578,7 +4586,7 @@
       {
         "key": "bonus_movement_speed",
         "header": "+",
-        "value": "25",
+        "value": "20",
         "footer": "Movement Speed"
       }
     ],
@@ -4858,7 +4866,7 @@
       {
         "key": "movement_speed_percent_bonus",
         "header": "+",
-        "value": "35",
+        "value": "30",
         "footer": "Movement Speed"
       },
       {
@@ -4962,7 +4970,7 @@
       {
         "key": "movement_speed_percent_bonus",
         "header": "+",
-        "value": "35",
+        "value": "30",
         "footer": "Movement Speed"
       },
       {
@@ -5308,7 +5316,7 @@
       {
         "key": "movement_speed_percent_bonus",
         "header": "+",
-        "value": "25",
+        "value": "20",
         "footer": "Movement Speed"
       }
     ],
@@ -5331,7 +5339,7 @@
     "passive": [
       {
         "name": "Lifesteal",
-        "desc": "Heals the attacker for 15% of attack damage dealt."
+        "desc": "Heals the attacker for 20% of attack damage dealt."
       }
     ],
     "id": 172,
@@ -5423,7 +5431,7 @@
     "active": [
       {
         "name": "Ether Blast",
-        "desc": "Converts the target unit to ethereal form, rendering them immune to physical damage, but unable to attack and -40% more vulnerable to magic damage.  Lasts for 4 seconds on allies and 3 seconds on enemies.\n\n  Enemy targets are also slowed by -80%, and take 2x your primary attribute + 75 as magical damage.\n\nRange: 800"
+        "desc": "Converts the target unit to ethereal form, rendering them immune to physical damage, but unable to attack and -40% more vulnerable to magic damage.  Lasts for 4 seconds on allies and 4 seconds on enemies.\n\n  Enemy targets are also slowed by -80%, and take 2x your primary attribute + 75 as magical damage.\n\nRange: 800"
       }
     ],
     "id": 176,
@@ -5656,12 +5664,6 @@
         "desc": "Gives +35 attack speed and +13% movement speed to nearby allies for 6 seconds. \n\nRadius: 1200"
       }
     ],
-    "passive": [
-      {
-        "name": "Swiftness Aura",
-        "desc": "Gives 6 movement speed to nearby allies. \n\nRadius: 1200"
-      }
-    ],
     "id": 185,
     "img": "/apps/dota2/images/items/ancient_janggo_lg.png?3",
     "dname": "Drum of Endurance",
@@ -5692,6 +5694,12 @@
         "header": "+",
         "value": "1.5",
         "footer": "Mana Regeneration"
+      },
+      {
+        "key": "bonus_movement_speed",
+        "header": "+",
+        "value": "20",
+        "footer": "Movement Speed"
       }
     ],
     "mc": false,
@@ -5782,7 +5790,7 @@
       {
         "key": "self_movement_speed",
         "header": "+",
-        "value": "6%",
+        "value": "20",
         "footer": "Movement Speed"
       },
       {
@@ -6241,7 +6249,7 @@
     "passive": [
       {
         "name": "Break",
-        "desc": "Whenever you attack a hero or are attacked by any unit, the bonus 16 HP regen is lost and the movement speed bonus is reduced to 20% for 13 seconds."
+        "desc": "Whenever you attack a hero or are attacked by any unit, the bonus 16 HP regen is lost and the movement speed bonus is reduced to 18% for 13 seconds."
       }
     ],
     "hint": [
@@ -6257,7 +6265,7 @@
       {
         "key": "bonus_movement_speed",
         "header": "+",
-        "value": "24%",
+        "value": "26%",
         "footer": "Movement Speed"
       },
       {
