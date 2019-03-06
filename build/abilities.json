@@ -1087,6 +1087,30 @@
         "header": "AFTERSHOCK RANGE:",
         "value": "300",
         "generated": true
+      },
+      {
+        "key": "scepter_height",
+        "header": "SCEPTER HEIGHT:",
+        "value": "950",
+        "generated": true
+      },
+      {
+        "key": "scepter_height_arcbuffer",
+        "header": "SCEPTER HEIGHT ARCBUFFER:",
+        "value": "100",
+        "generated": true
+      },
+      {
+        "key": "scepter_acceleration_z",
+        "header": "SCEPTER ACCELERATION Z:",
+        "value": "4000",
+        "generated": true
+      },
+      {
+        "key": "scepter_acceleration_horizontal",
+        "header": "SCEPTER ACCELERATION HORIZONTAL:",
+        "value": "3000",
+        "generated": true
       }
     ],
     "mc": [
@@ -1261,7 +1285,7 @@
       "AOE",
       "Point Target"
     ],
-    "desc": "Summons a Healing Ward which heals all nearby allied units, based on their max health.  The Healing Ward moves at 400 movement speed after being summoned.  Lasts 25 seconds.",
+    "desc": "Summons a Healing Ward which heals all nearby allied units, based on their max health.  The Healing Ward moves at 350 movement speed after being summoned.  Lasts 25 seconds.",
     "attrib": [
       {
         "key": "healing_ward_heal_amount",
@@ -1282,7 +1306,7 @@
       {
         "key": "healing_ward_movespeed_tooltip",
         "header": "HEALING WARD MOVESPEED TOOLTIP:",
-        "value": "400",
+        "value": "350",
         "generated": true
       },
       {
@@ -3199,10 +3223,10 @@
         "key": "bonus_agility",
         "header": "BONUS AGILITY:",
         "value": [
-          "9",
-          "18",
-          "27",
-          "36"
+          "11",
+          "22",
+          "33",
+          "44"
         ]
       },
       {
@@ -3787,7 +3811,12 @@
       "160",
       "170"
     ],
-    "cd": "10",
+    "cd": [
+      "16",
+      "14",
+      "12",
+      "10"
+    ],
     "img": "/apps/dota2/images/abilities/shadow_shaman_shackles_md.png"
   },
   "shadow_shaman_mass_serpent_ward": {
@@ -4322,10 +4351,10 @@
       }
     ],
     "mc": [
-      "105",
-      "120",
-      "140",
-      "165"
+      "85",
+      "110",
+      "135",
+      "160"
     ],
     "cd": [
       "8",
@@ -4859,7 +4888,7 @@
     "dname": "Electric Vortex",
     "behavior": "Unit Target",
     "bkbpierce": "No",
-    "desc": "A vortex that pulls an enemy unit to Storm Spirit's location, it also slows the Storm Spirit by 50% for 3 seconds.\n\nUpgradable by Aghanim's Scepter.",
+    "desc": "A vortex that pulls an enemy unit to Storm Spirit's location.\n\nUpgradable by Aghanim's Scepter.",
     "attrib": [
       {
         "key": "electric_vortex_pull_units_per_second",
@@ -4875,13 +4904,15 @@
       },
       {
         "key": "electric_vortex_self_slow",
-        "header": "SELF SLOW:",
-        "value": "-50%"
+        "header": "ELECTRIC VORTEX SELF SLOW:",
+        "value": "-50",
+        "generated": true
       },
       {
         "key": "electric_vortex_self_slow_duration",
-        "header": "SELF SLOW DURATION:",
-        "value": "3"
+        "header": "ELECTRIC VORTEX SELF SLOW DURATION:",
+        "value": "3",
+        "generated": true
       },
       {
         "key": "duration_tooltip",
@@ -6636,10 +6667,10 @@
       "115"
     ],
     "cd": [
-      "18",
       "16",
       "14",
-      "12"
+      "12",
+      "10"
     ],
     "img": "/apps/dota2/images/abilities/windrunner_shackleshot_md.png"
   },
@@ -6777,12 +6808,12 @@
     "dname": "Focus Fire",
     "behavior": "Unit Target",
     "bkbpierce": "Yes",
-    "desc": "Windranger channels the wind to gain 400 additional attack speed against a single enemy unit or structure, though with a reduction to her attack damage.  Extra damage from secondary item effects is not reduced.  Lasts 20 seconds.\n\nUpgradable by Aghanim's Scepter.",
+    "desc": "Windranger channels the wind to gain 425 additional attack speed against a single enemy unit or structure, though with a reduction to her attack damage.  Extra damage from secondary item effects is not reduced.  Lasts 20 seconds.\n\nUpgradable by Aghanim's Scepter.",
     "attrib": [
       {
         "key": "bonus_attack_speed",
         "header": "BONUS ATTACK SPEED:",
-        "value": "400"
+        "value": "425"
       },
       {
         "key": "focusfire_damage_reduction",
@@ -8099,7 +8130,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Consumes a charge to launch a ball of shrapnel that showers the target area in explosive pellets. Enemies are subject to damage and slowed movement. Reveals the targeted area. Shrapnel charges restore every 55 seconds.",
+    "desc": "Consumes a charge to launch a ball of shrapnel that showers the target area in explosive pellets. Enemies are subject to damage and slowed movement. Reveals the targeted area. Shrapnel charges restore every 50 seconds.",
     "attrib": [
       {
         "key": "slow_movement_speed",
@@ -8152,7 +8183,7 @@
       {
         "key": "charge_restore_time",
         "header": "CHARGE RESTORE TIME:",
-        "value": "55",
+        "value": "50",
         "generated": true
       }
     ],
@@ -8167,10 +8198,10 @@
     "bkbpierce": "No",
     "desc": "Sniper increases his accuracy, giving him a chance to deal extra damage and briefly stop the movements of his enemies.",
     "dmg": [
-      "20",
-      "50",
-      "80",
-      "110"
+      "30",
+      "60",
+      "90",
+      "120"
     ],
     "attrib": [
       {
@@ -9399,9 +9430,9 @@
         "key": "damage",
         "header": "DAMAGE:",
         "value": [
-          "320",
-          "410",
-          "500"
+          "340",
+          "430",
+          "520"
         ]
       },
       {
@@ -9413,9 +9444,9 @@
         "key": "damage_scepter",
         "header": "SCEPTER DAMAGE:",
         "value": [
-          "370",
-          "480",
-          "590"
+          "390",
+          "500",
+          "610"
         ]
       },
       {
@@ -10276,10 +10307,10 @@
         "key": "bonus_damage",
         "header": "BONUS DAMAGE:",
         "value": [
-          "20",
-          "40",
-          "60",
-          "80"
+          "25",
+          "50",
+          "75",
+          "100"
         ]
       },
       {
@@ -10578,9 +10609,9 @@
         "key": "bonus_movement_speed",
         "header": "MOVE SLOW:",
         "value": [
-          "-25%",
+          "-10%",
+          "-20%",
           "-30%",
-          "-35%",
           "-40%"
         ]
       },
@@ -10588,9 +10619,9 @@
         "key": "bonus_attack_speed",
         "header": "ATTACK SLOW:",
         "value": [
-          "-25",
+          "-10",
+          "-20",
           "-30",
-          "-35",
           "-40"
         ]
       }
@@ -10656,7 +10687,12 @@
         "generated": true
       }
     ],
-    "mc": "75",
+    "mc": [
+      "70",
+      "80",
+      "90",
+      "100"
+    ],
     "cd": "5",
     "img": "/apps/dota2/images/abilities/viper_nethertoxin_md.png"
   },
@@ -10900,9 +10936,9 @@
         "key": "beams",
         "header": "TOTAL BEAMS:",
         "value": [
-          "5",
-          "8",
-          "11"
+          "6",
+          "9",
+          "12"
         ]
       },
       {
@@ -12023,7 +12059,7 @@
       "Point Target",
       "AOE"
     ],
-    "desc": "Converts an area of trees into Treants. Treants have 550 health and deal 30-34 damage.",
+    "desc": "Converts an area of trees into Treants. Treants have 550 health and deal 27,30,33,36 damage.",
     "attrib": [
       {
         "key": "area_of_effect",
@@ -12058,15 +12094,14 @@
         "generated": true
       },
       {
-        "key": "treant_min_dmg_tooltip",
-        "header": "TREANT MIN DMG TOOLTIP:",
-        "value": "30",
-        "generated": true
-      },
-      {
-        "key": "treant_max_dmg_tooltip",
-        "header": "TREANT MAX DMG TOOLTIP:",
-        "value": "34",
+        "key": "treant_dmg_tooltip",
+        "header": "TREANT DMG TOOLTIP:",
+        "value": [
+          "27",
+          "30",
+          "33",
+          "36"
+        ],
         "generated": true
       },
       {
@@ -12078,7 +12113,12 @@
       {
         "key": "treant_damage_bonus",
         "header": "TREANT DAMAGE BONUS:",
-        "value": "36",
+        "value": [
+          "27",
+          "30",
+          "33",
+          "36"
+        ],
         "generated": true
       },
       {
@@ -12090,7 +12130,12 @@
       {
         "key": "treant_large_damage_bonus",
         "header": "TREANT LARGE DAMAGE BONUS:",
-        "value": "108",
+        "value": [
+          "81",
+          "90",
+          "99",
+          "108"
+        ],
         "generated": true
       }
     ],
@@ -13221,8 +13266,8 @@
         "header": "DISTANCE DAMAGE:",
         "value": [
           "16%",
-          "20%",
-          "24%"
+          "22%",
+          "28%"
         ]
       },
       {
@@ -14930,7 +14975,7 @@
   "chen_divine_favor": {
     "dname": "Divine Favor",
     "behavior": "Unit Target",
-    "desc": "Provides increased health regeneration, amplifies all health restore by a percentage, and boosts damage. Provides double bonus damage for non-hero targets.",
+    "desc": "Provides increased health regeneration, amplifies all health restore by a percentage, and boosts damage. Provides triple bonus damage for non-hero targets.",
     "attrib": [
       {
         "key": "heal_amp",
@@ -14951,10 +14996,10 @@
         "key": "damage_bonus",
         "header": "ATTACK DAMAGE:",
         "value": [
-          "12",
+          "8",
+          "16",
           "24",
-          "36",
-          "48"
+          "32"
         ]
       },
       {
@@ -15014,7 +15059,7 @@
       },
       {
         "key": "level_req",
-        "header": "LEVEL REQUIREMENT:",
+        "header": "CREEP MAX LEVEL:",
         "value": [
           "4",
           "5",
@@ -15749,9 +15794,9 @@
         "key": "frostbite_duration",
         "header": "FROSTBITTEN DURATION:",
         "value": [
-          "9",
           "10",
-          "11"
+          "11",
+          "12"
         ]
       },
       {
@@ -16516,9 +16561,9 @@
         "key": "radius",
         "header": "RADIUS:",
         "value": [
-          "400",
           "475",
-          "550",
+          "525",
+          "575",
           "625"
         ]
       },
@@ -23947,7 +23992,7 @@
     "behavior": "Point Target",
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Magnus rushes forward, goring enemy units on his massive tusk.  Heroes hit on the way will be dragged to the destination, then damaged and slowed.",
+    "desc": "Magnus rushes forward, goring enemy units on his massive tusk. Heroes hit on the way will be dragged to the destination, then damaged and affected by slowed movement and attack speed.",
     "attrib": [
       {
         "key": "skewer_speed",
@@ -24000,6 +24045,16 @@
         "header": "TREE RADIUS:",
         "value": "200",
         "generated": true
+      },
+      {
+        "key": "tool_attack_slow",
+        "header": "ATTACK SPEED SLOW:",
+        "value": [
+          "10",
+          "20",
+          "30",
+          "40"
+        ]
       }
     ],
     "mc": "80",
@@ -25273,20 +25328,20 @@
         "key": "target_damage",
         "header": "DAMAGE/HEAL:",
         "value": [
-          "100",
-          "150",
-          "200",
-          "250"
+          "120",
+          "165",
+          "210",
+          "255"
         ]
       },
       {
         "key": "heal_amount",
         "header": "HEAL AMOUNT:",
         "value": [
-          "100",
-          "150",
-          "200",
-          "250"
+          "120",
+          "165",
+          "210",
+          "255"
         ],
         "generated": true
       },
@@ -25630,9 +25685,9 @@
         "key": "damage_creeps",
         "header": "BONUS DAMAGE (CREEPS):",
         "value": [
-          "6",
-          "9",
-          "12",
+          "3",
+          "7",
+          "11",
           "15"
         ]
       },
@@ -27843,7 +27898,7 @@
       "No Target",
       null
     ],
-    "desc": "Changes Monkey King's shape to deceive opponents, using the environment nearby as inspiration for the disguise. Taking damage, attacking, or using any item or ability breaks Monkey King's disguise. Grants invulnerability for 0.2 upon transforming.",
+    "desc": "Changes Monkey King's shape to deceive opponents, using the environment nearby as inspiration for the disguise. Taking damage, attacking, or using any item or ability breaks Monkey King's disguise. Grants damage immunity for 0.2 upon transforming.",
     "attrib": [
       {
         "key": "movespeed",
@@ -28398,7 +28453,7 @@
       {
         "key": "slow",
         "header": "SLOW:",
-        "value": "40%"
+        "value": "35%"
       }
     ],
     "img": "/apps/dota2/images/abilities/pangolier_lucky_shot_md.png"
@@ -29162,6 +29217,296 @@
       "50"
     ],
     "img": "/apps/dota2/images/abilities/grimstroke_soul_chain_md.png"
+  },
+  "mars_spear": {
+    "dname": "Spear of Mars",
+    "behavior": [
+      "Point Target",
+      null
+    ],
+    "dmg_type": "Magical",
+    "bkbpierce": "No",
+    "desc": "Mars throws his legendary Spear with deadly precision, damaging each enemy unit it strikes. The first enemy hero it hits is skewered on the spear, pushing it back. If a skewered hero hits a tree, building, or cliff, they will be impaled to it and stunned.",
+    "attrib": [
+      {
+        "key": "damage",
+        "header": "DAMAGE:",
+        "value": [
+          "100",
+          "175",
+          "250",
+          "325"
+        ]
+      },
+      {
+        "key": "spear_speed",
+        "header": "SPEAR SPEED:",
+        "value": "1400",
+        "generated": true
+      },
+      {
+        "key": "spear_width",
+        "header": "SPEAR WIDTH:",
+        "value": "125",
+        "generated": true
+      },
+      {
+        "key": "spear_vision",
+        "header": "SPEAR VISION:",
+        "value": "500",
+        "generated": true
+      },
+      {
+        "key": "spear_range",
+        "header": "RANGE:",
+        "value": [
+          "900",
+          "1000",
+          "1100",
+          "1200"
+        ]
+      },
+      {
+        "key": "activity_duration",
+        "header": "ACTIVITY DURATION:",
+        "value": "1.7",
+        "generated": true
+      },
+      {
+        "key": "stun_duration",
+        "header": "STUN DURATION:",
+        "value": [
+          "1.6",
+          "2",
+          "2.4",
+          "2.8"
+        ]
+      },
+      {
+        "key": "knockback_duration",
+        "header": "KNOCKBACK DURATION:",
+        "value": "0.25",
+        "generated": true
+      },
+      {
+        "key": "knockback_distance",
+        "header": "KNOCKBACK DISTANCE:",
+        "value": "75",
+        "generated": true
+      }
+    ],
+    "mc": "100",
+    "cd": "14",
+    "img": "/apps/dota2/images/abilities/mars_spear_md.png"
+  },
+  "mars_gods_rebuke": {
+    "dname": "God's Rebuke",
+    "behavior": [
+      "Point Target",
+      null
+    ],
+    "dmg_type": "Physical",
+    "desc": "Mars smashes enemies in front of him with his shield, knocking them back and damaging them with a critical hit based on his attack. Bonus damage is added when hitting heroes. Has True Strike.",
+    "attrib": [
+      {
+        "key": "crit_mult",
+        "header": "CRITICAL DAMAGE:",
+        "value": [
+          "160%",
+          "200%",
+          "240%",
+          "280%"
+        ]
+      },
+      {
+        "key": "angle",
+        "header": "ANGLE:",
+        "value": "140",
+        "generated": true
+      },
+      {
+        "key": "radius",
+        "header": "DISTANCE:",
+        "value": "500"
+      },
+      {
+        "key": "knockback_duration",
+        "header": "KNOCKBACK DURATION:",
+        "value": "0.3",
+        "generated": true
+      },
+      {
+        "key": "knockback_distance",
+        "header": "KNOCKBACK DISTANCE:",
+        "value": "150",
+        "generated": true
+      },
+      {
+        "key": "activity_duration",
+        "header": "ACTIVITY DURATION:",
+        "value": "2",
+        "generated": true
+      },
+      {
+        "key": "bonus_damage_vs_heroes",
+        "header": "BONUS DAMAGE VS HEROES:",
+        "value": "25"
+      }
+    ],
+    "mc": [
+      "55",
+      "60",
+      "65",
+      "70"
+    ],
+    "cd": [
+      "16",
+      "14",
+      "12",
+      "10"
+    ],
+    "img": "/apps/dota2/images/abilities/mars_gods_rebuke_md.png"
+  },
+  "mars_bulwark": {
+    "dname": "Bulwark",
+    "behavior": "Passive",
+    "desc": "Mars wields his massive shield to block a portion of each physical attack when hit from the front or sides.",
+    "attrib": [
+      {
+        "key": "physical_damage_reduction",
+        "header": "FRONT REDUCTION:",
+        "value": [
+          "25%",
+          "40%",
+          "55%",
+          "70%"
+        ]
+      },
+      {
+        "key": "forward_angle",
+        "header": "FORWARD ANGLE:",
+        "value": "140",
+        "generated": true
+      },
+      {
+        "key": "physical_damage_reduction_side",
+        "header": "SIDE REDUCTION:",
+        "value": [
+          "12%",
+          "20%",
+          "27%",
+          "35%"
+        ]
+      },
+      {
+        "key": "side_angle",
+        "header": "SIDE ANGLE:",
+        "value": "240",
+        "generated": true
+      }
+    ],
+    "img": "/apps/dota2/images/abilities/mars_bulwark_md.png"
+  },
+  "mars_arena_of_blood": {
+    "dname": "Arena Of Blood",
+    "behavior": [
+      null,
+      "AOE"
+    ],
+    "dmg_type": "Magical",
+    "bkbpierce": "No",
+    "desc": "After a short formation time, Mars summons an arena lined with the undead warriors of the Ash Legion, who block enemy attacks and movement. Enemy heroes near the inside edge of the arena will be attacked by spears, dealing damage and knocking them back.",
+    "attrib": [
+      {
+        "key": "duration",
+        "header": "DURATION:",
+        "value": [
+          "5",
+          "6",
+          "7"
+        ]
+      },
+      {
+        "key": "radius",
+        "header": "RADIUS:",
+        "value": "550"
+      },
+      {
+        "key": "width",
+        "header": "WIDTH:",
+        "value": "100",
+        "generated": true
+      },
+      {
+        "key": "spear_damage",
+        "header": "SPEAR DAMAGE:",
+        "value": [
+          "150",
+          "200",
+          "250"
+        ]
+      },
+      {
+        "key": "formation_time",
+        "header": "FORMATION TIME:",
+        "value": "0.6"
+      },
+      {
+        "key": "spear_distance_from_wall",
+        "header": "SPEAR DISTANCE FROM WALL:",
+        "value": "160",
+        "generated": true
+      },
+      {
+        "key": "spear_attack_interval",
+        "header": "SPEAR ATTACK INTERVAL:",
+        "value": "1",
+        "generated": true
+      },
+      {
+        "key": "warrior_count",
+        "header": "WARRIOR COUNT:",
+        "value": "14",
+        "generated": true
+      },
+      {
+        "key": "first_warrior_angle",
+        "header": "FIRST WARRIOR ANGLE:",
+        "value": "0",
+        "generated": true
+      },
+      {
+        "key": "warrior_fade_min_dist",
+        "header": "WARRIOR FADE MIN DIST:",
+        "value": "350",
+        "generated": true
+      },
+      {
+        "key": "warrior_fade_max_dist",
+        "header": "WARRIOR FADE MAX DIST:",
+        "value": "450",
+        "generated": true
+      }
+    ],
+    "mc": "200",
+    "cd": [
+      "90",
+      "75",
+      "60"
+    ],
+    "img": "/apps/dota2/images/abilities/mars_arena_of_blood_md.png"
+  },
+  "special_bonus_unique_mars_spear_bonus_damage": {
+    "dname": "Spear Of Mars +150 Damage"
+  },
+  "special_bonus_unique_mars_gods_rebuke_extra_crit": {
+    "dname": "God's Rebuke +80% Crit"
+  },
+  "special_bonus_unique_mars_spear_stun_duration": {
+    "dname": "Spear stun lasts +1.5 seconds"
+  },
+  "special_bonus_unique_mars_arena_of_blood_hp_regen": {
+    "dname": "Arena Of Blood Grants Team +100 HP Regen"
   },
   "backdoor_protection": {
     "dname": "Backdoor Protection",
@@ -32878,7 +33223,7 @@
       "180",
       "240"
     ],
-    "cd": "10",
+    "cd": "8",
     "img": "/apps/dota2/images/abilities/techies_remote_mines_md.png"
   },
   "techies_focused_detonate": {
@@ -34469,6 +34814,9 @@
   "special_bonus_spell_amplify_12": {
     "dname": "+12% Spell Amplification"
   },
+  "special_bonus_spell_amplify_14": {
+    "dname": "+14% Spell Amplification"
+  },
   "special_bonus_spell_amplify_15": {
     "dname": "+15% Spell Amplification"
   },
@@ -35896,7 +36244,7 @@
     "dname": "-6s Dragon Slave Cooldown"
   },
   "special_bonus_unique_lina_2": {
-    "dname": "+25/2% Fiery Soul Per Stack"
+    "dname": "+30/2% Fiery Soul Per Stack"
   },
   "special_bonus_unique_lina_3": {
     "dname": "+140 Light Strike Array Damage"
