@@ -1375,7 +1375,7 @@
       "275",
       "350"
     ],
-    "cd": "130",
+    "cd": "140",
     "img": "/apps/dota2/images/abilities/juggernaut_omni_slash_md.png"
   },
   "kunkka_torrent": {
@@ -3476,10 +3476,10 @@
         "key": "health_regen",
         "header": "HEALTH REGEN:",
         "value": [
-          "3",
-          "6",
-          "9",
-          "12"
+          "5",
+          "8",
+          "11",
+          "14"
         ]
       },
       {
@@ -4869,9 +4869,9 @@
         "header": "DAMAGE:",
         "value": [
           "120",
-          "170",
-          "220",
-          "270"
+          "175",
+          "230",
+          "285"
         ]
       }
     ],
@@ -4891,10 +4891,14 @@
     "desc": "A vortex that pulls an enemy unit to Storm Spirit's location.\n\nUpgradable by Aghanim's Scepter.",
     "attrib": [
       {
-        "key": "electric_vortex_pull_units_per_second",
-        "header": "ELECTRIC VORTEX PULL UNITS PER SECOND:",
-        "value": "100",
-        "generated": true
+        "key": "electric_vortex_pull_distance",
+        "header": "PULL DISTANCE:",
+        "value": [
+          "180",
+          "220",
+          "260",
+          "300"
+        ]
       },
       {
         "key": "electric_vortex_pull_tether_range",
@@ -5098,20 +5102,20 @@
         "key": "tooltip_range",
         "header": "RANGE:",
         "value": [
-          "350",
-          "450",
-          "550",
-          "650"
+          "400",
+          "500",
+          "600",
+          "700"
         ]
       },
       {
         "key": "cast_range_scepter",
         "header": "SCEPTER RANGE:",
         "value": [
-          "700",
-          "900",
-          "1100",
-          "1300"
+          "800",
+          "1000",
+          "1200",
+          "1400"
         ]
       },
       {
@@ -5173,9 +5177,9 @@
         "header": "SAND STORM DAMAGE:",
         "value": [
           "20",
-          "40",
-          "60",
-          "80"
+          "45",
+          "70",
+          "95"
         ]
       },
       {
@@ -5765,10 +5769,10 @@
         "key": "damage_health_pct",
         "header": "HEALTH REDUCTION:",
         "value": [
-          "4%",
-          "6%",
-          "8%",
-          "10%"
+          "5%",
+          "7%",
+          "9%",
+          "11%"
         ]
       }
     ],
@@ -6808,12 +6812,12 @@
     "dname": "Focus Fire",
     "behavior": "Unit Target",
     "bkbpierce": "Yes",
-    "desc": "Windranger channels the wind to gain 425 additional attack speed against a single enemy unit or structure, though with a reduction to her attack damage.  Extra damage from secondary item effects is not reduced.  Lasts 20 seconds.\n\nUpgradable by Aghanim's Scepter.",
+    "desc": "Windranger channels the wind to gain 450 additional attack speed against a single enemy unit or structure, though with a reduction to her attack damage.  Extra damage from secondary item effects is not reduced.  Lasts 20 seconds.\n\nUpgradable by Aghanim's Scepter.",
     "attrib": [
       {
         "key": "bonus_attack_speed",
         "header": "BONUS ATTACK SPEED:",
-        "value": "425"
+        "value": "450"
       },
       {
         "key": "focusfire_damage_reduction",
@@ -8130,7 +8134,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Consumes a charge to launch a ball of shrapnel that showers the target area in explosive pellets. Enemies are subject to damage and slowed movement. Reveals the targeted area. Shrapnel charges restore every 50 seconds.",
+    "desc": "Consumes a charge to launch a ball of shrapnel that showers the target area in explosive pellets. Enemies are subject to damage and slowed movement. Reveals the targeted area. Shrapnel charges restore every 40 seconds.",
     "attrib": [
       {
         "key": "slow_movement_speed",
@@ -8183,7 +8187,7 @@
       {
         "key": "charge_restore_time",
         "header": "CHARGE RESTORE TIME:",
-        "value": "50",
+        "value": "40",
         "generated": true
       }
     ],
@@ -8250,9 +8254,9 @@
     ],
     "mc": "30",
     "cd": [
-      "15",
-      "12",
       "9",
+      "8",
+      "7",
       "6"
     ],
     "img": "/apps/dota2/images/abilities/sniper_take_aim_md.png"
@@ -9688,9 +9692,9 @@
         "key": "damage_scepter",
         "header": "SCEPTER DAMAGE:",
         "value": [
-          "60",
-          "85",
-          "110"
+          "75",
+          "100",
+          "125"
         ]
       },
       {
@@ -10334,7 +10338,7 @@
     "behavior": "No Target",
     "dmg_type": "Physical",
     "bkbpierce": "Yes",
-    "desc": "Templar Assassin conceals herself, becoming invisible as long as she remains still.  If Meld's invisibility is broken by attacking an enemy, Lanaya will deal bonus damage to the enemy and reduce their armor for 10 seconds.",
+    "desc": "Templar Assassin conceals herself, becoming invisible as long as she remains still.  If Meld's invisibility is broken by attacking an enemy, Lanaya will deal bonus damage to the enemy and reduce their armor for 12 seconds.",
     "attrib": [
       {
         "key": "bonus_damage",
@@ -10359,7 +10363,7 @@
       {
         "key": "armor_reduction_duration_tooltip",
         "header": "ARMOR REDUCTION DURATION:",
-        "value": "10"
+        "value": "12"
       }
     ],
     "mc": "50",
@@ -10693,7 +10697,7 @@
       "90",
       "100"
     ],
-    "cd": "5",
+    "cd": "6",
     "img": "/apps/dota2/images/abilities/viper_nethertoxin_md.png"
   },
   "viper_corrosive_skin": {
@@ -11207,13 +11211,13 @@
       {
         "key": "frost_bonus_movement_speed",
         "header": "FROST BONUS MOVEMENT SPEED:",
-        "value": "-30",
+        "value": "-40",
         "generated": true
       },
       {
         "key": "frost_bonus_attack_speed",
         "header": "FROST BONUS ATTACK SPEED:",
-        "value": "-30",
+        "value": "-40",
         "generated": true
       },
       {
@@ -11828,9 +11832,9 @@
     "bkbpierce": "Yes",
     "desc": "Saturates the area around Leshrac with magical explosions that deal physical damage to enemy units and structures.  The fewer units available to attack, the more damage those units will take.  Deals 40% more damage to towers.  Lasts 10 seconds.",
     "dmg": [
-      "11",
-      "22",
-      "33",
+      "8",
+      "20",
+      "32",
       "44"
     ],
     "attrib": [
@@ -12242,7 +12246,7 @@
       }
     ],
     "mc": "75",
-    "cd": "16",
+    "cd": "18",
     "img": "/apps/dota2/images/abilities/life_stealer_rage_md.png"
   },
   "life_stealer_feast": {
@@ -15005,7 +15009,12 @@
       {
         "key": "duration",
         "header": "DURATION:",
-        "value": "14"
+        "value": [
+          "8",
+          "10",
+          "12",
+          "14"
+        ]
       }
     ],
     "mc": [
@@ -15899,7 +15908,7 @@
       }
     ],
     "mc": "100",
-    "cd": "12",
+    "cd": "11",
     "img": "/apps/dota2/images/abilities/spirit_breaker_charge_of_darkness_md.png"
   },
   "spirit_breaker_bulldoze": {
@@ -17868,9 +17877,9 @@
         "header": "INT TO DAMAGE:",
         "value": [
           "25%",
-          "40%",
-          "55%",
-          "70%"
+          "45%",
+          "65%",
+          "85%"
         ]
       },
       {
@@ -21654,13 +21663,13 @@
       {
         "key": "incoming_damage",
         "header": "INCOMING DAMAGE:",
-        "value": "300",
+        "value": "250",
         "generated": true
       },
       {
         "key": "tooltip_incoming_damage_total_pct",
         "header": "IMAGE DAMAGE TAKEN:",
-        "value": "400%"
+        "value": "350%"
       },
       {
         "key": "images_count",
@@ -23682,10 +23691,10 @@
         "key": "strength_damage",
         "header": "STRENGTH DAMAGE:",
         "value": [
-          "40%",
           "60%",
           "80%",
-          "100%"
+          "100%",
+          "120%"
         ]
       },
       {
@@ -25278,9 +25287,9 @@
         "key": "damage",
         "header": "DAMAGE:",
         "value": [
-          "600",
-          "1000",
-          "1400"
+          "700",
+          "1150",
+          "1600"
         ]
       },
       {
@@ -27826,11 +27835,15 @@
         "generated": true
       }
     ],
-    "mc": "100",
-    "cd": [
+    "mc": [
       "100",
-      "65",
-      "30"
+      "150",
+      "200"
+    ],
+    "cd": [
+      "115",
+      "80",
+      "45"
     ],
     "img": "/apps/dota2/images/abilities/oracle_false_promise_md.png"
   },
@@ -28438,7 +28451,7 @@
       {
         "key": "chance_pct",
         "header": "CHANCE:",
-        "value": "20%"
+        "value": "17%"
       },
       {
         "key": "duration",
@@ -28541,7 +28554,11 @@
         "generated": true
       }
     ],
-    "mc": "100",
+    "mc": [
+      "100",
+      "150",
+      "200"
+    ],
     "cd": "70",
     "img": "/apps/dota2/images/abilities/pangolier_gyroshell_md.png"
   },
@@ -29253,7 +29270,7 @@
       {
         "key": "spear_vision",
         "header": "SPEAR VISION:",
-        "value": "500",
+        "value": "300",
         "generated": true
       },
       {
@@ -29354,10 +29371,10 @@
       }
     ],
     "mc": [
-      "55",
-      "60",
       "65",
-      "70"
+      "70",
+      "75",
+      "80"
     ],
     "cd": [
       "16",
@@ -29497,13 +29514,13 @@
     "img": "/apps/dota2/images/abilities/mars_arena_of_blood_md.png"
   },
   "special_bonus_unique_mars_spear_bonus_damage": {
-    "dname": "Spear Of Mars +150 Damage"
+    "dname": "Spear Of Mars +200 Damage"
   },
   "special_bonus_unique_mars_gods_rebuke_extra_crit": {
     "dname": "God's Rebuke +80% Crit"
   },
   "special_bonus_unique_mars_spear_stun_duration": {
-    "dname": "Spear stun lasts +1.5 seconds"
+    "dname": "+1s Spear Stun"
   },
   "special_bonus_unique_mars_arena_of_blood_hp_regen": {
     "dname": "Arena Of Blood Grants Team +100 HP Regen"
@@ -33997,8 +34014,8 @@
         "header": "DURATION:",
         "value": [
           "16",
-          "18",
-          "20"
+          "20",
+          "24"
         ]
       },
       {
@@ -35004,7 +35021,7 @@
     "dname": "+1.5s Hoof Stomp Duration"
   },
   "special_bonus_unique_centaur_3": {
-    "dname": "+50 Retaliate Damage"
+    "dname": "+70 Retaliate Damage"
   },
   "special_bonus_unique_centaur_4": {
     "dname": "+50% Double Edge Strength Damage"
@@ -35544,10 +35561,10 @@
     "dname": "2x Dragon Blood HP Regen/Armor"
   },
   "special_bonus_unique_dragon_knight_2": {
-    "dname": "+1.75s Dragon Tail"
+    "dname": "+2s Dragon Tail"
   },
   "special_bonus_unique_dragon_knight_3": {
-    "dname": "-20% Breathe Fire Damage Reduction"
+    "dname": "-25% Breathe Fire Damage Reduction"
   },
   "special_bonus_unique_dragon_knight_4": {
     "dname": "Dragon Blood Aura"

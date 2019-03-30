@@ -33,6 +33,7 @@ const ignoreStrings = [
 ]
 
 const badNames = ["Version", "npc_dota_hero_base", "npc_dota_hero_target_dummy"];
+const now = Number(new Date());
 
 const sources = [{
     key: "items",
@@ -59,9 +60,9 @@ const sources = [{
         var item = { ...replaceSpecialAttribs(strings[`DOTA_Tooltip_ability_${key}_Description`], scripts[key].AbilitySpecial, true) };
 
         item.id = parseInt(scripts[key].ID);
-        item.img = `/apps/dota2/images/items/${key.replace(/^item_/, '')}_lg.png?3`;
+        item.img = `/apps/dota2/images/items/${key.replace(/^item_/, '')}_lg.png?t=${now}`;
         if (key.includes("item_recipe")) {
-          item.img = "/apps/dota2/images/items/recipe_lg.png?3";
+          item.img = `/apps/dota2/images/items/recipe_lg.png?t=${now}`;
         }
 
         item.dname = strings[`DOTA_Tooltip_ability_${key}`];
