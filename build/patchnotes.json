@@ -5497,5 +5497,574 @@
         "Static Field damage increased from 4/6/8/10% to 5/7/9/11%"
       ]
     }
+  },
+  "7_22": {
+    "general": [
+      "Added new Scepter upgrades for all of the 24 remaining heroes without an upgrade",
+      "Updated various older Scepter upgrades",
+      "Scepter can now be consumed as a buff by purchasing a 2000 gold recipe upgrade. Scepter buffs do not grant secondary stat bonuses",
+      "Roshan now drops a consumable Scepter buff item. The third Roshan will randomly drop either a consumable Scepter item or a Refresher Shard. The fourth Roshan has both. You can select Roshan to see his inventory and find out what items will drop",
+      "Added a new visual effect under heroes that have a Scepter upgrade",
+      "<br>",
+      "Added Mars to Captains Mode",
+      "Added Io to Captains Mode",
+      "<br>",
+      "Deny XP granted to the enemy (the player being denied) increased from 35% to 40%",
+      "Death cost changed from 50 + NW/40 to NW/40",
+      "<br>",
+      "Killstreak XP bounty increased from 200->1250 to 400->1800",
+      "XP requirement to reach level 5/6 reduced from 600/620 to 580/600",
+      "XP required to reach level 19+ increased by 100 each level",
+      "Ranged creeps XP now increases by 8 per upgrade cycle (every 7.5 minutes)",
+      "<br>",
+      "Siege creeps base attack time increased from 2.7 to 3",
+      "Siege creeps now spawn two units at 35 minutes instead of 30 minutes",
+      "Siege creeps can no longer be dominated, enchanted or converted",
+      "<br>",
+      "Tier 3+ towers damage increased from 152 damage to 175",
+      "Tier 1 Tower Protection aura armor bonus increased from 2 to 3",
+      "Tier 2+ Tower Protection aura armor bonus increased from 4 to 5",
+      "Tier 2+ Towers now have a multishot attack when glyph is activated. Attacks up to two additional targets. Prioritizes the closest units.",
+      "<br>",
+      "Slightly adjusted Radiant safelane hard camp position and the terrain nearby",
+      "Reduced the chase duration of the hard camp neutrals on the radiant safelane area",
+      "Radiant middle tier 2 tower is now moved further to the left (no longer has vision over the big camp on the right)",
+      "Adjusted tree line to the right of the radiant middle tier 2 tower",
+      "The Radiant mid lane medium camp now has 2 layers of trees behind it",
+      "Adjusted various Dire neutral spawn boxes",
+      "<br>",
+      "Illusions can now lifesteal",
+      "Lifesteal now works against enemy illusions (calculated pre illusion amplifications)",
+      "<br>",
+      "The following items are no longer partially shareable: Ring of Regen, Ring of Tarrasque, Sage's Mask, Ring of Health, Void Stone, and Perseverance",
+      "<br>",
+      "Roshan: Base armor increased by 2",
+      "Roshan: Attack damage per minute increased from 4 to 6",
+      "Roshan: Last hit gold bounty range changed from 150-400 to 225-325 (average unchanged)",
+      "Roshan: Last hit XP bounty reduced from 750 to 400",
+      "<br>",
+      "Satyr Tormenter's Unholy Aura hp regen reduced from 5.5 to 5.0",
+      "The timer that credits a player for a kill, when radiant/dire get the final hit, is increased from 20 to 30 seconds",
+      "<br>",
+      "Heroes can now have non-standard initial attack speed values (previously 100 for all heroes)",
+      "* Abaddon: Base attack speed increased from 100 to 115",
+      "* Broodmother: Base attack speed increased from 100 to 125",
+      "* Crystal Maiden: Base attack speed increased from 100 to 115",
+      "* Gyrocopter: Base attack speed increased from 100 to 125",
+      "* Mirana: Base attack speed increased from 100 to 115",
+      "* Silencer: Base attack speed increased from 100 to 115",
+      "* Slark: Base attack speed increased from 100 to 120",
+      "* Venomancer: Base attack speed increased from 100 to 115",
+      "* Weaver: Base attack speed increased from 100 to 120",
+      "<br>",
+      "Heroes can now have non-standard base mana regen values",
+      "* Clinkz: Now has 0.25 base mana regen",
+      "* Lich: Now has 0.75 base mana regen",
+      "* Pugna: Now has 0.5 base mana regen",
+      "* Shadow Fiend: Now has 0.3 mana regen",
+      "* Techies: Now has 1.0 base mana regen",
+      "* Tinker: Now has 0.25 base mana regen",
+      "* Treant Protector: Now has 0.5 base mana regen",
+      "* Weaver: Now has 0.4 base mana regen",
+      "* Zeus: Now has 0.25 base mana regen"
+    ],
+    "items": {
+      "ward_observer": [
+        "Cost decreased from 75 to 50",
+        "Gold bounty increased from 100 + 2/min to 100 + 4/min",
+        "XP bounty increased from 50 + 4/min to 50 + 6/min"
+      ],
+      "ward_sentry": [
+        "Cost decreased from 100 to 75",
+        "Now have a stock limit (max limit of 10, starting capacity of 4, replenish rate of 70 seconds)"
+      ],
+      "tome_of_knowledge": [
+        "The initial 10 minute stock now provides 2 tomes.",
+        "Now has a 5 minute use cooldown."
+      ],
+      "skadi": [
+        "Slow duration changed from 5/2.5 for melee/range attackers to 3 seconds",
+        "Slow amount reduced from 35% to 20% when used against melee heroes",
+        "Slow amount increased from 35% to 45% when used against ranged heroes",
+        "Attack speed slow now matches the movement slow values above"
+      ],
+      "helm_of_the_dominator": [
+        "Now has a 300 gold recipe"
+      ],
+      "pipe": [
+        "HP regen aura reduced from 3 to 2"
+      ],
+      "mekansm": [
+        "HP regen aura reduced from 4.5 to 3.5"
+      ],
+      "guardian_greaves": [
+        "HP regen aura reduced from 4.5 to 3.5",
+        "Threshold bonus armor reduced from 15 to 10"
+      ],
+      "mask_of_madness": [
+        "Movement speed bonus increased from 25 to 30"
+      ],
+      "rod_of_atos": [
+        "Strength and Agility reduced from 12 to 10"
+      ],
+      "ancient_janggo": [
+        "Mana regen reduced from 1.5 to 1.25"
+      ],
+      "vladmir": [
+        "Mana regen reduced from 1.75 to 1.5"
+      ],
+      "spirit_vessel": [
+        "Heal reduction reduced from 70% to 60%",
+        "Current health as damage per second reduced from 5% to 4%"
+      ],
+      "wraith_band": [
+        "Attack speed bonus reduced from 6 to 5"
+      ],
+      "bloodstone": [
+        "Fixed multiple Bloodstones stacking the mana regen amplification effect"
+      ]
+    },
+    "heroes": {
+      "abaddon": [
+        "Base attack speed increased from 100 to 115",
+        "Reworked Scepter upgrade. While Borrowed Time is active, anytime an ally takes more than 525 damage while within 1600 range of Abaddon, an individual Mist Coil will automatically fire towards that ally. (Scepter still increases duration by 1)",
+        "Mist Coil cast range reduced from 800 to 500",
+        "Level 15 Talent reduced from +75 Mist Coil Heal/Damage to +60"
+      ],
+      "alchemist": [
+        "Added Scepter upgrade. With Scepter equipped or synthesized, you gain a bonus +30 Damage and +6% Spell Amp for each Scepter that you gave allies at any point in the game."
+      ],
+      "ancient_apparition": [
+        "Ice Vortex manacost reduced from 50/70/90/110 to 40/60/80/100",
+        "Ice Blast can no longer been seen on the minimap by enemies if they have truesight"
+      ],
+      "antimage": [
+        "Added Scepter upgrade. Mana Void kills now add +70 seconds to the highest cooldown ability on the enemy hero. Cooldown starts once the enemy respawns. Increases the stun duration by 1 second, if the target dies during this period it is still counted as a Mana Void kill."
+      ],
+      "arc_warden": [
+        "Turn rate improved from 0.6 to 0.7",
+        "Fixed Tempest Double being unable to activate runes",
+        "Added Scepter upgrade. Grants a new ability, Rune Forge. Creates a random Rune in front of you. Cooldown 60. The selection of Runes include Bounty Runes and Powerup Runes.",
+        "Level 10 Talent increased from +30 Attack Speed to +35",
+        "Level 20 Talent increased from -1.5 Spark Wraith Cooldown to -2"
+      ],
+      "axe": [
+        "Base damage increased by 3",
+        "Base armor increased by 1",
+        "Reworked Scepter upgrade. Now causes Battle Hunger to be a 400 AoE target ability (debuff still reduces enemy damage by 30%)",
+        "Battle Hunger gives half speed when used on creeps"
+      ],
+      "bane": [
+        "Brain Sap Scepter now also reduces cast point by 50%",
+        "Level 20 Talent increased from +100 Enfeeble Attack Speed Reduction to +125"
+      ],
+      "batrider": [
+        "Firefly cooldown from 34 to 40/38/36/34",
+        "Flaming Lasso Scepter secondary search radius increased from 400 to 450"
+      ],
+      "beastmaster": [
+        "Level 15 Talent changed from +65 Wild Axes Damage to 40 Boar Attack Damage",
+        "Level 20 Talent changed from +50 Boar Attack Damage to +75 Wild Axes Damage",
+        "Reworked Scepter upgrade. Wild Axes have no cooldown and can be used again once they have returned to Beastmaster."
+      ],
+      "bloodseeker": [
+        "Agility growth reduced from 3.5 to 3.1",
+        "Blood Rite manacost reduced from 100 to 70/80/90/100",
+        "Rupture is now lethal again. Deals 30/45/60% of distance moved as damage. Has 8/10/12 second duration."
+      ],
+      "bounty_hunter": [
+        "Jinada damage reduced from 80/110/140/170 to 70/100/130/160",
+        "Shuriken Toss Scepter now also increases cast range from 400 to 800",
+        "Level 20 Talent increased from +75 Shuriken Toss Damage to +125"
+      ],
+      "brewmaster": [
+        "Thunderclap damage reduced from 100/175/250/300 to 90/160/230/300",
+        "Primal Split Scepter now also grants Brewlings +100 movement speed"
+      ],
+      "bristleback": [
+        "Base armor increased by 1",
+        "Warpath damage per stack increased from 18/24/30 to 22/28/34",
+        "Viscous Nasal Goo Scepter AoE increased from 750 to 825"
+      ],
+      "broodmother": [
+        "Base attack speed increased from 100 to 125",
+        "Added Scepter upgrade. Increases Spin Web max count from 8 to 20, movement speed bonus from 70 to 100%, and removes movement speed limit."
+      ],
+      "centaur": [
+        "Base armor increased by 1",
+        "Level 20 Talent increased from +70 Retaliate Damage to +80"
+      ],
+      "chaos_knight": [
+        "Strength gain reduced from 3.7 to 3.4",
+        "Chaos Bolt minimum damage increased from 60/90/120/150 to 90/110/130/150",
+        "Chaos Bolt maximum damage increased from 180/210/240/270 to 180/220/260/300",
+        "Chaos Bolt minimum stun changed from 1/1/1/2 to 1.25/1.5/1.75/2.0",
+        "Chaos Bolt maximum stun changed from 2/3/4/4 to 2.2/2.8/3.4/4",
+        "Chaos Bolt cooldown increased from 10 to 13/12/11/10",
+        "Phantasm Scepter now also reduces incoming illusion damage from 260% to 180%"
+      ],
+      "chen": [
+        "Holy Persuasion provides +10/15/20/25 bonus movement speed to converted creeps",
+        "Divine Favor is now a passive aura. Provides 1/2/3/4 HP regen, 8/12/16/20% Heal Amplification, and 4/8/12/16 bonus damage for heroes (your creeps get 2x damage values)",
+        "Level 15 Talent changed from -7 Divine Favor Cooldown to +10 Divine Favor Damage"
+      ],
+      "clinkz": [
+        "Now has 0.25 base mana regen",
+        "Added Scepter upgrade. Creates two skeletons near Clinkz when exiting Skeleton Walk. Increases Skeleton Walk speed by +30% and unlocks max movement speed.",
+        "Burning Army base attack time changed from 1.75/1.6/1.45 to 1.6",
+        "Burning Army units damage from 100% of your base damage to 80/100/120%",
+        "Level 15 Talent reduced from +30 Searing Arrows Damage to +20"
+      ],
+      "rattletrap": [
+        "Base armor increased by 1"
+      ],
+      "crystal_maiden": [
+        "Attack point improved from 0.55 to 0.45",
+        "Base attack speed increased from 100 to 115"
+      ],
+      "dark_seer": [
+        "Strength reduced from 24 to 21",
+        "Level 20 Talent changed from 400 AoE Surge to +100 Ion Shell Damage",
+        "Level 20 Talent changed from +15% Cooldown Reduction to +10 Armor",
+        "Level 25 Talent changed from +150 Ion Shell Damage to 400 AoE Surge"
+      ],
+      "dark_willow": [
+        "Level 15 Talent increased from +90 Gold/Min to +120",
+        "Level 20 Talent changed from +300 Shadow Realm Max Damage to -12s Bramble Maze Cooldown",
+        "Added Scepter upgrade. Attacking no longer takes you out of Shadow Realm. Each attack still has bonus damage based on the duration of the buff."
+      ],
+      "dazzle": [
+        "Shallow Grave Scepter radius increased from 450 to 500"
+      ],
+      "death_prophet": [
+        "Crypt Swarm cast point reduced from 0.5 to 0.4",
+        "Added Scepter upgrade. Anytime an enemy is effected by your spells (crypt swarm impact, silence debuff, spirit siphon target) or when you attack an enemy, a ghost will fly out and hit the enemy for double the usual damage then return to you with life. These ghosts apply a 100% slow for 0.3 seconds."
+      ],
+      "disruptor": [
+        "Level 15 Talent increased from -3 Kinetic Field Cooldown to -4"
+      ],
+      "doom_bringer": [
+        "Devour now has a creep level limit of 3/4/5/6",
+        "Level 25 Talent increased from +130% Cleave to +175%"
+      ],
+      "dragon_knight": [
+        "Added Scepter upgrade. Adds a 4th level to Elder Dragon Form, a Black Dragon. Gaining Scepter increases the level of your ultimate by one. Black Dragon has 50% more Corrosive Damage, Splash Damage and Slow amount. It also increases your attack range to 600 and grants you +30% Magic Resistance."
+      ],
+      "drow_ranger": [
+        "Marksmanship no longer instantly kills Ancients (still does damage/pierces)",
+        "Marksmanship now only pierces base armor not total armor"
+      ],
+      "elder_titan": [
+        "Reworked Scepter upgrade. Echo Stomp now causes you to become Spell Immune while channeling and for 2 additional seconds per affected enemy hero."
+      ],
+      "ember_spirit": [
+        "Added Scepter upgrade. Fire Remnant cast range is 3 times longer and initial remnant movement speed is 2 times faster. Maximum number of charges increased from 3 to 5. Activate Fire Remnant costs no mana."
+      ],
+      "faceless_void": [
+        "Strength gain increased from 2.1 to 2.4",
+        "Level 10 Talent improved from +10 Strength to +12",
+        "Level 15 Talent improved from -1 Time Walk Cooldown to -1.5",
+        "Level 20 Talent improved from +40 Attack Speed to +45"
+      ],
+      "grimstroke": [
+        "Ink Swell is now castable on allied Spell Immune units",
+        "Added Scepter upgrade. Grants you a new ability, Dark Portrait. Creates an ink illusion of a target enemy hero. Illusion lasts 20 seconds and is magic immune with +30% movement speed. Takes 200% incoming damage and deals 150% outgoing damage. Cooldown 35. Manacost 200."
+      ],
+      "gyrocopter": [
+        "Base attack speed increased from 100 to 125"
+      ],
+      "huskar": [
+        "Base armor increased by 1",
+        "Berserker's Blood regen increased from 20/40/60/80 to 25/45/65/85%",
+        "Inner Fire cooldown reduced from 18/16/14/12 to 14/13/12/11"
+      ],
+      "invoker": [
+        "Base damage increased by 3",
+        "Exort attack damage per instance reduced from 3/7/11/15/19/23/27 to 2/6/10/14/18/22/26",
+        "Level 10 Talent increased from +30 Chaos Meteor Contact Damage to +40",
+        "Level 20 Talent increased from +35 Alacrity Damage/Speed to +45"
+      ],
+      "wisp": [
+        "Added to Captains Mode",
+        "Added Scepter upgrade. Spirits now passively spawn around you constantly every second (max of 5 spirits at a given time)",
+        "Tether pull can now be interrupted if stunned during it (like Timber Chain)"
+      ],
+      "jakiro": [
+        "Liquid Fire ability effect still impacts the area when the target dies or the attack is evaded."
+      ],
+      "keeper_of_the_light": [
+        "Chakra Magic can now be cast on enemies, placing a debuff that drains 4/4.5/5/5.5%% of current mana per 100 units moved. Lasts 5 seconds (old version was a percent of max mana, not current).",
+        "Scepter now also causes Illuminate to not require channeling (still provides heal bonus)"
+      ],
+      "lich": [
+        "Now has 0.75 base mana regen"
+      ],
+      "lina": [
+        "Strength gain increased from 2 to 2.2",
+        "Turn rate improved from 0.5 to 0.6"
+      ],
+      "lion": [
+        "Finger of Death damage per kill reduced from 50 to 40"
+      ],
+      "legion_commander": [
+        "Base armor increased by 1"
+      ],
+      "lone_druid": [
+        "Strength gain increased from 2.4 to 2.7",
+        "True Form health bonus increased from 300/600/900 to 300/700/1100"
+      ],
+      "luna": [
+        "Base damage increased by 4"
+      ],
+      "lycan": [
+        "Level 15 Talent increased from +8 Feral HP Regen to +10",
+        "Added Scepter upgrade. Causes one of the three creep waves to include two wolves. You cannot control the wolves, but they are considered your units. These wolves have the same movement speed as lane creeps."
+      ],
+      "magnataur": [
+        "Starting strength increased by 2",
+        "Shockwave Scepter max range increased from 1725 to 2000",
+        "Shockwave Scepter speed increased from 1200 to 1500"
+      ],
+      "mars": [
+        "Added to Captains Mode",
+        "Base damage reduced by 4",
+        "Base armor reduced by 1",
+        "Added Scepter upgrade. God's Rebuke cooldown is now 1.4 seconds during Arena of Blood. Resets God's Rebuke cooldown when Arena of Blood is cast.",
+        "Arena of Blood damage rescaled from 150/200/250 to 120/185/250",
+        "Arena of Blood cast point increased from 0.1 to 0.2",
+        "Level 15 Talent reduced from +35 Damage to +30"
+      ],
+      "medusa": [
+        "Agility gain reduced from 3.9 to 3.6",
+        "Level 15 Talent reduced from +30% Mystic Snake Mana Steal to +25%"
+      ],
+      "meepo": [
+        "Base damage increased by 2",
+        "Level 10 Talent increased from +7 Strength to +10",
+        "Level 10 Talent increased from +10 Damage to +15",
+        "Level 15 Talent increased from +15% Evasion to +20%"
+      ],
+      "mirana": [
+        "Attack point increased from 0.3 to 0.35",
+        "Base attack speed increased from 100 to 115",
+        "Starstorm Scepter upgrade trigger rate improved from 10 seconds to 9"
+      ],
+      "monkey_king": [
+        "Added Scepter upgrade. Spawns a monkey soldier near you every 3.5 seconds. These soldiers last 12 seconds. Soldiers do not spawn if you are invisible or on trees. These soldiers can attack any target (however, they will not attack buildings if you are not within 500 range of them)."
+      ],
+      "morphling": [
+        "Adaptive Strike damage reduced from 100 to 70/80/90/100",
+        "Added Scepter upgrade. While Morphed, you gain +35% cooldown reduction, +50% manacost reduction and +600 cast range.",
+        "Morph no longer dispels your hero"
+      ],
+      "furion": [
+        "Base damage reduced by 2",
+        "Nature's Call attack damage reduced from 27/30/33/36 to 24/28/32/36"
+      ],
+      "necrolyte": [
+        "Reaper's Scythe respawn time reduced from 15/30/45 to 15/25/35"
+      ],
+      "night_stalker": [
+        "Added Scepter upgrade. Void is now applied in a 900 AoE around you. Increases the Void ministun duration from 0.1 to 0.6 and reduces cooldown by 2 seconds."
+      ],
+      "nyx_assassin": [
+        "Base strength reduced by 1",
+        "Vendetta cooldown rescaled from 70/60/50 to 90/70/50",
+        "Level 15 Talent reduced from +30 Movement Speed to +25"
+      ],
+      "ogre_magi": [
+        "Multicast 2x cast chance increased from 70% to 75%",
+        "Level 25 Talent increased from +275 Fireblast Damage to +300"
+      ],
+      "omniknight": [
+        "Guardian Angel Scepter now also provides +40 HP/sec regen (affects buildings still)"
+      ],
+      "oracle": [
+        "Base attack time increased from 1.4 to 1.7",
+        "Level 20 Talent reduced from +50 Movement Speed to +45"
+      ],
+      "obsidian_destroyer": [
+        "Equilibrium now passively provides 11/18/25/32%% Mana Steal (all damage not just spells). When Activated, triples the Mana Steal and slows enemies hit by your spells."
+      ],
+      "pangolier": [
+        "Lucky Shot no longer has a chance to silence, now always disarms.",
+        "Lucky Shot now reduces armor by 3/4/5/6",
+        "Added Scepter upgrade. Shield Crash now casts a 2-attack Swashbuckle every 90 degrees around your hero."
+      ],
+      "phantom_assassin": [
+        "Added Scepter upgrade. Blur now has instant cast time and applies a dispel. Anytime you get a hero kill, your abilities are refreshed. Reduces Blur cooldown to 12 seconds."
+      ],
+      "phantom_lancer": [
+        "Strength gain increased from 2 to 2.2",
+        "Agility gain increased from 3 to 3.2"
+      ],
+      "phoenix": [
+        "Base Strength increased by 2",
+        "Supernova now causes your abilities to refresh on cast, rather than at the end of the spell",
+        "Supernova Scepter now also allows you to cast Sun Ray and turn its direction while in Supernova."
+      ],
+      "puck": [
+        "Intelligence gain increased from 3.1 to 3.5",
+        "Strength gain increased from 2.2 to 2.4"
+      ],
+      "pudge": [
+        "Base Intelligence increased by 2",
+        "Level 15 Talent increased from +12% Rot Slow to +16%"
+      ],
+      "pugna": [
+        "Now has 0.5 base mana regen",
+        "Agility gain increased from 1 to 1.3",
+        "Nether Ward mana loss increased from 0.25/0.5/0.75/1 to 0.3/0.6/0.9/1.2"
+      ],
+      "razor": [
+        "Eye of the Storm Scepter no longer increases attack rate",
+        "Eye of the Storm Scepter now hits up to two different units strike instead of one (still affects buildings)"
+      ],
+      "riki": [
+        "Base damage increased by 3"
+      ],
+      "rubick": [
+        "Agility gain increased from 19 + 2.1 to 23 + 2.5"
+      ],
+      "silencer": [
+        "Base attack speed increased from 100 to 115"
+      ],
+      "shadow_demon": [
+        "Intelligence gain increased from 3.1 to 3.3"
+      ],
+      "nevermore": [
+        "Now has 0.3 mana regen",
+        "Strength gain increased from 2.3 to 2.5",
+        "Agility gain increased from 3.3 to 3.5"
+      ],
+      "shadow_shaman": [
+        "Ether Shock manacost rescaled from 95/105/135/160 to 100/120/140/160"
+      ],
+      "skywrath_mage": [
+        "Ancient Seal cast range increased from 700 to 750",
+        "Concussive Shot manacost from 95 to 80/85/90/95"
+      ],
+      "slardar": [
+        "Guardian Sprint now passively provides an extra 5/20/35/50% movement boost in the river with unlocked max speed, rather than a fixed 700 at level 4 when activated.",
+        "Level 25 Talent changed from +1.25s Slithereen Crush Stun to -4.5 Slithereen Crush Cooldown",
+        "Added Scepter upgrade. Slithereen Crush now creates a puddle of water that is considered a river for bonuses. Provides +25 HP regen, +12 Armor and +40% Status Resistance while in a Puddle or River (in addition to the normal Guardian Sprint River bonuses). Puddle AoE is 550. Puddles last for 25 seconds."
+      ],
+      "slark": [
+        "Base attack speed increased from 100 to 120",
+        "Shadow Dance passive health regen rescaled from 3/5/7% to 5/6/7%",
+        "Shadow Dance Scepter range increased from 325 to 425"
+      ],
+      "spectre": [
+        "Added Scepter upgrade. Grants you a new ability, Shadow Step. Allows you to perform a single target unit Haunt. Cooldown 70. Manacost 180."
+      ],
+      "spirit_breaker": [
+        "Base health regen increased from 0.75 to 1.25",
+        "Bulldoze status resistance increased from 30/40/50/60 to 34/46/58/70%",
+        "Bulldoze movement speed increased from 12/18/24/30% to 14/20/26/32%",
+        "Greater Bash stun duration rescaled from 1.2/1.4/1.6/1.8 to 0.9/1.2/1.5/1.8",
+        "Greater Bash damage rescaled from 8/16/24/32% to 14/20/26/32%",
+        "Charge of Darkness manacost reduced from 100 to 70/80/90/100",
+        "Nether Strike Scepter cast range increased from 850 to 950",
+        "Nether Strike Scepter radius increased from 250 to 350"
+      ],
+      "techies": [
+        "Now has 1.0 base mana regen"
+      ],
+      "templar_assassin": [
+        "Added Scepter upgrade. Grants you a new ability, Psionic Projection. Allows you to teleport to any Psionic Trap after a 2 second channel. Does not break Meld. Cooldown 30. Manacost 100. Detonates the psionic trap on arrival."
+      ],
+      "terrorblade": [
+        "Reflection no longer affects illusions",
+        "Added Scepter upgrade. After casting Metamorphosis, a wave travels outwards in all direction causing enemy heroes to become feared for 3 seconds upon impact. Wave starts traveling after 0.6 seconds and has a travel speed of 1000. Spell Immune units do not get hit by the wave. Has a global sound effect."
+      ],
+      "tidehunter": [
+        "Gush Scepter upgrade radius increased from 240 to 260",
+        "Gush Scepter upgrade distance increased from 1800 to 2200"
+      ],
+      "shredder": [
+        "Strength growth increased from 2.8 to 3.2",
+        "Intelligence gain increased from 2.4 to 2.7",
+        "Base armor increased by 1",
+        "Level 10 Talent changed from +6% Spell Amplification to +2.5 Mana Regen",
+        "Level 10 Talent changed from +25% XP Gain to +225 Health",
+        "Level 15 Talent increased from +5 Reactive Armor Stacks to +8",
+        "Level 15 Talent changed from +100 Damage to +10% Spell Amplification",
+        "Level 20 Talent increased from +15 Strength to +20"
+      ],
+      "tinker": [
+        "Now has 0.25 base mana regen",
+        "Intelligence gain increased from 2.5 to 3.3",
+        "Level 10 Talent increased from +6% Spell Amplification to +8%",
+        "Level 10 Talent increased from +75 Cast Range to +100"
+      ],
+      "tiny": [
+        "Intelligence growth increased from 1.6 to 2.2",
+        "Added Scepter upgrade. Grants you a new channeling ability, Tree Volley. Every 0.4 seconds a random tree within 525 range of your hero will be thrown towards the targeted AoE. Deals 120% of your damage to enemies in that area. Target AoE 400. Cast Range 1300. Max Channel 2.4 seconds. Cooldown 12. Manacost 150.",
+        "Tree Grab cooldown reduced from 27/22/17/12 to 25/20/15/10",
+        "Grow armor increased from 7/16/25 to 10/18/26"
+      ],
+      "treant": [
+        "Now has 0.5 base mana regen",
+        "Nature's Guise has been reworked. It is now a self cast ability with a 0.6 second cast time. No longer has a fade delay nor gets interrupted on damage taken. Goes on cooldown after the invisibility buff ends. Cooldown 10/8/6/4. Manacost 30/40/50/60.",
+        "Nature's Guise movement speed bonus rescaled from 14/18/22/26% to 20/22/24/26%",
+        "Nature's Guise damage rescaled from 30/90/150/210 to 60/110/160/210"
+      ],
+      "troll_warlord": [
+        "Added Scepter upgrade. Reduces Battle Trance cooldown to 35 seconds and allows it to be cast on allied or enemy heroes. Lasts half duration on enemies. Cast Range 525."
+      ],
+      "tusk": [
+        "Level 20 Talent changed from +300 Snowball Speed to -6 Ice Shards Cooldown",
+        "Level 25 Talent changed from -6 Ice Shards Cooldown to -7 Snowball Cooldown",
+        "Level 25 Talent increased from 12% Chance Walrus Punch to 15% (now uses pseudo-random chance)"
+      ],
+      "abyssal_underlord": [
+        "Pit of Malice radius increased from 375 to 390",
+        "Pit of Malice cooldown reduced from 32/28/24/20 to 30/26/22/18"
+      ],
+      "undying": [
+        "Soul Rip cast point improved from 0.45 to 0.35",
+        "Tombstone zombies now treat illusions like creeps, requiring 2 hits to kill rather than 1",
+        "Tombstone takes 1/4 damage from creeps/illusions rather than 1/2"
+      ],
+      "vengefulspirit": [
+        "Nether Swap now has a 0.25 second cooldown to prevent accidental uses"
+      ],
+      "venomancer": [
+        "Base intelligence increased by 2",
+        "Base attack speed increased from 100 to 115",
+        "Level 15 Talent increased from +8% Poison Sting Slow to +12%"
+      ],
+      "visage": [
+        "Base magic resistance increased from 10% to 25%",
+        "Summon Familiars health rescaled from 400/550/700 to 500/600/700"
+      ],
+      "warlock": [
+        "Chaotic Offering Scepter now lands the 2nd Golem 0.4 seconds after the first, rather than both at the same time",
+        "Fatal Bonds count rescaled from 3/4/5/6 to 6",
+        "Fatal Bonds rescaled damage from 25% to 13/17/21/25",
+        "Level 25 Talent increased from +20 Golem Armor to +25"
+      ],
+      "weaver": [
+        "Now has 0.4 base mana regen",
+        "Base attack speed increased from 100 to 120"
+      ],
+      "windrunner": [
+        "Focus Fire cooldown reduced from 70 to 70/50/30",
+        "Reworked Scepter. Now adds 2 charges to Windrun and increases movement speed by 45%.",
+        "Level 10 Talent changed from +30% Windrun Slow to -2s Shackleshot Cooldown",
+        "Level 25 Talent changed from +35% Ministun Focus Fire to -20% Focus Fire Damage Reduction"
+      ],
+      "winter_wyvern": [
+        "Arctic Burn scepter manacost per second reduced from 40 to 30"
+      ],
+      "witch_doctor": [
+        "Death Ward damage increased from 75/125/175 to 85/135/185"
+      ],
+      "zuus": [
+        "Now has 0.25 base mana regen",
+        "Attack point improved from 0.633 to 0.45",
+        "Level 10 Talent changed from +6 Armor to +3 Mana Regen"
+      ]
+    }
   }
 }
