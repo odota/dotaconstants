@@ -287,13 +287,17 @@
     "dmg_type": "Pure",
     "bkbpierce": "Yes",
     "desc": "When attacked, Axe performs a helix counter attack, dealing pure damage to all nearby enemies.",
-    "dmg": [
-      "60",
-      "100",
-      "140",
-      "180"
-    ],
     "attrib": [
+      {
+        "key": "damage",
+        "header": "DAMAGE:",
+        "value": [
+          "60",
+          "100",
+          "140",
+          "180"
+        ]
+      },
       {
         "key": "radius",
         "header": "RADIUS:",
@@ -2309,24 +2313,24 @@
         "key": "charge_restore_time",
         "header": "CHARGE RESTORE TIME:",
         "value": [
+          "20",
           "17",
-          "15",
-          "13",
+          "14",
           "11"
         ],
         "generated": true
       }
     ],
     "mc": [
-      "140",
+      "150",
       "155",
       "160",
       "165"
     ],
     "cd": [
+      "20",
       "17",
-      "15",
-      "13",
+      "14",
       "11"
     ],
     "img": "/apps/dota2/images/abilities/morphling_waveform_md.png"
@@ -3206,13 +3210,13 @@
       {
         "key": "illusion_damage_out_pct",
         "header": "ILLUSION DAMAGE OUT PCT:",
-        "value": "-84",
+        "value": "-82",
         "generated": true
       },
       {
         "key": "tooltip_illusion_damage",
         "header": "ILLUSION DAMAGE:",
-        "value": "16%"
+        "value": "18%"
       },
       {
         "key": "illusion_damage_in_pct",
@@ -4133,12 +4137,13 @@
       },
       {
         "key": "strike_interval_scepter",
-        "header": "SCEPTER STRIKE INTERVAL:",
+        "header": "STRIKE INTERVAL SCEPTER:",
         "value": [
           "0.6",
           "0.5",
           "0.4"
-        ]
+        ],
+        "generated": true
       }
     ],
     "mc": [
@@ -4711,9 +4716,9 @@
         "key": "bolt_stun_duration",
         "header": "DURATION:",
         "value": [
-          "1.7",
+          "1.4",
+          "1.6",
           "1.8",
-          "1.9",
           "2"
         ]
       },
@@ -4829,7 +4834,7 @@
         "value": "10"
       }
     ],
-    "mc": "40",
+    "mc": "60",
     "cd": [
       "36",
       "32",
@@ -5233,7 +5238,7 @@
         "generated": true
       }
     ],
-    "mc": "60",
+    "mc": "75",
     "cd": [
       "40",
       "34",
@@ -5637,7 +5642,7 @@
     ],
     "dmg_type": "Physical",
     "bkbpierce": "No",
-    "desc": "Every 0.4 seconds a random tree within 525 range of your hero will be thrown towards the targeted aoe. Deals 125% of your damage to enemies in that area.",
+    "desc": "Every 0.4 seconds a random tree within 525 range of your hero will be thrown towards the targeted aoe. Deals 120% of your damage to enemies in that area.",
     "attrib": [
       {
         "key": "speed",
@@ -5657,11 +5662,6 @@
         "value": "400"
       },
       {
-        "key": "splash_pct",
-        "header": "SPLASH DAMAGE:",
-        "value": "120%"
-      },
-      {
         "key": "tree_grab_radius",
         "header": "TREE GRAB RADIUS:",
         "value": "525",
@@ -5676,12 +5676,7 @@
       {
         "key": "bonus_damage",
         "header": "BONUS DAMAGE:",
-        "value": [
-          "10",
-          "20",
-          "30",
-          "40"
-        ],
+        "value": "20",
         "generated": true
       },
       {
@@ -6389,7 +6384,7 @@
       "130",
       "140"
     ],
-    "cd": "10",
+    "cd": "9",
     "img": "/apps/dota2/images/abilities/vengefulspirit_magic_missile_md.png"
   },
   "vengefulspirit_command_aura": {
@@ -6926,7 +6921,7 @@
       "Instant Cast"
     ],
     "bkbpierce": "No",
-    "desc": "Increases movement speed and adds evasion from all physical attacks, while slowing movement of nearby enemies.\n\nUpgradable by Aghanim's Scepter.",
+    "desc": "Increases movement speed and adds evasion from all physical attacks, while slowing movement of nearby enemies. \n\nUpgradable by Aghanim's Scepter.",
     "attrib": [
       {
         "key": "movespeed_bonus_pct",
@@ -6980,14 +6975,8 @@
       },
       {
         "key": "scepter_bonus_movement",
-        "header": "SCEPTER BONUS MOVEMENT:",
-        "value": "45",
-        "generated": true
-      },
-      {
-        "key": "scepter_movespeed_bonus_pct_tooltip",
         "header": "SCEPTER MOVE SPEED BONUS:",
-        "value": "105%"
+        "value": "45%"
       }
     ],
     "mc": "50",
@@ -7156,9 +7145,9 @@
         "key": "duration",
         "header": "DURATION:",
         "value": [
-          "1.3",
-          "1.7",
-          "2.1",
+          "1.6",
+          "1.9",
+          "2.2",
           "2.5"
         ]
       },
@@ -7189,7 +7178,12 @@
       "140",
       "150"
     ],
-    "cd": "30",
+    "cd": [
+      "30",
+      "28",
+      "26",
+      "24"
+    ],
     "img": "/apps/dota2/images/abilities/lich_sinister_gaze_md.png"
   },
   "lich_frost_aura": {
@@ -7355,8 +7349,8 @@
         "header": "DAMAGE EACH BOUNCE:",
         "value": [
           "250",
-          "375",
-          "500"
+          "400",
+          "550"
         ]
       },
       {
@@ -8273,9 +8267,9 @@
       }
     ],
     "mc": [
-      "145",
+      "130",
       "150",
-      "165",
+      "170",
       "190"
     ],
     "cd": "35",
@@ -8572,9 +8566,9 @@
         "key": "health_regen",
         "header": "HEALTH REGEN PER KILL:",
         "value": [
-          "2",
           "3.5",
-          "5",
+          "4.5",
+          "5.5",
           "6.5"
         ]
       },
@@ -8582,10 +8576,10 @@
         "key": "mana_regen",
         "header": "MANA REGEN PER KILL:",
         "value": [
-          "3",
-          "4",
-          "5",
-          "6"
+          "3.5",
+          "4.5",
+          "5.5",
+          "6.5"
         ]
       },
       {
@@ -8727,10 +8721,10 @@
         "key": "damage_share_percentage",
         "header": "SHARED DAMAGE:",
         "value": [
-          "13%",
-          "17%",
-          "21%",
-          "25%"
+          "12%",
+          "16%",
+          "20%",
+          "24%"
         ]
       },
       {
@@ -8946,12 +8940,6 @@
         "key": "bounty_reduction_scepter",
         "header": "SCEPTER BOUNTY REDUCTION:",
         "value": "50%"
-      },
-      {
-        "key": "delay_scepter",
-        "header": "DELAY SCEPTER:",
-        "value": "0.5",
-        "generated": true
       }
     ],
     "mc": [
@@ -10009,10 +9997,10 @@
         "key": "chance_pct",
         "header": "CHANCE:",
         "value": [
-          "10%",
-          "14%",
-          "18%",
-          "22%"
+          "12%",
+          "16%",
+          "20%",
+          "24%"
         ]
       },
       {
@@ -10075,7 +10063,7 @@
       {
         "key": "radius",
         "header": "RADIUS:",
-        "value": "425"
+        "value": "450"
       },
       {
         "key": "duration",
@@ -11434,7 +11422,7 @@
     "dname": "Elder Dragon Form",
     "behavior": "No Target",
     "bkbpierce": "Yes",
-    "desc": "Dragon Knight takes the form of one of three powerful elder dragons, increasing his speed, and Dragon Tail's range, while granting him new powers.\nLEVEL 1 Green Dragon - Corrosive Breath: attacks deal 20 poison damage per second for 5 seconds. Works on structures.\nLEVEL 2 Red Dragon - Splash Attack: attacks damage all enemy units in a 300 radius for 75,75,75,115% damage, with Corrosive Breath added to the targets.\nLEVEL 3 Blue Dragon - Frost Breath: slows movement speed by 30% and attack speed by 30 of enemy units in Splash Attack range for 3 seconds, with Corrosive Breath added to the targets.",
+    "desc": "Dragon Knight takes the form of one of three powerful elder dragons, increasing his speed, and Dragon Tail's range, while granting him new powers.\nLEVEL 1 Green Dragon - Corrosive Breath: attacks deal 20 poison damage per second for 5 seconds. Works on structures.\nLEVEL 2 Red Dragon - Splash Attack: attacks damage all enemy units in a 300 radius for 75,75,75,115% damage, with Corrosive Breath added to the targets.\nLEVEL 3 Blue Dragon - Frost Breath: slows movement speed by 30% and attack speed by 30 of enemy units in Splash Attack range for 3 seconds, with Corrosive Breath added to the targets.\n\nUpgradable by Aghanim's Scepter.",
     "attrib": [
       {
         "key": "duration",
@@ -11830,8 +11818,8 @@
         "key": "cooldown_reduction",
         "header": "COOLDOWN REDUCTION:",
         "value": [
-          "20%",
-          "35%",
+          "26%",
+          "38%",
           "50%"
         ]
       },
@@ -11891,10 +11879,10 @@
     ],
     "mc": "100",
     "cd": [
-      "32",
-      "28",
       "24",
-      "20"
+      "22",
+      "20",
+      "18"
     ],
     "img": "/apps/dota2/images/abilities/rattletrap_battery_assault_md.png"
   },
@@ -12438,9 +12426,9 @@
         "key": "treant_damage_bonus",
         "header": "TREANT DAMAGE BONUS:",
         "value": [
-          "27",
-          "30",
-          "33",
+          "24",
+          "28",
+          "32",
           "36"
         ],
         "generated": true
@@ -12455,9 +12443,9 @@
         "key": "treant_large_damage_bonus",
         "header": "TREANT LARGE DAMAGE BONUS:",
         "value": [
-          "81",
-          "90",
-          "99",
+          "72",
+          "84",
+          "96",
           "108"
         ],
         "generated": true
@@ -12943,10 +12931,10 @@
         "key": "speed_boost",
         "header": "SPEED BONUS:",
         "value": [
-          "30%",
-          "45%",
-          "60%",
-          "75%"
+          "25%",
+          "40%",
+          "55%",
+          "70%"
         ]
       }
     ],
@@ -13114,14 +13102,19 @@
         "key": "damage_bonus",
         "header": "BONUS DAMAGE:",
         "value": [
+          "20",
           "30",
           "40",
-          "50",
-          "60"
+          "50"
         ]
       }
     ],
-    "mc": "12",
+    "mc": [
+      "6",
+      "8",
+      "10",
+      "12"
+    ],
     "cd": "0",
     "img": "/apps/dota2/images/abilities/clinkz_searing_arrows_md.png"
   },
@@ -13569,10 +13562,10 @@
       "70"
     ],
     "cd": [
-      "22",
-      "18",
-      "14",
-      "10"
+      "20",
+      "16",
+      "12",
+      "8"
     ],
     "img": "/apps/dota2/images/abilities/enchantress_enchant_md.png"
   },
@@ -13912,11 +13905,7 @@
       {
         "key": "movespeed",
         "header": "MOVEMENT SLOW:",
-        "value": [
-          "-40%",
-          "-50%",
-          "-60%"
-        ]
+        "value": "-60%"
       },
       {
         "key": "slow_durtion_tooltip",
@@ -14279,7 +14268,7 @@
       },
       {
         "key": "bonus_movespeed_scepter",
-        "header": "SCEPTER BONUS MOVE SPEED:",
+        "header": "SCEPTER MOVE SPEED:",
         "value": [
           "40",
           "60",
@@ -14721,9 +14710,9 @@
         "header": "GEMINATE ATTACK DAMAGE:",
         "value": [
           "10",
-          "20",
-          "30",
-          "40"
+          "25",
+          "40",
+          "55"
         ]
       }
     ],
@@ -15282,8 +15271,8 @@
     "mc": "225",
     "cd": [
       "100",
-      "80",
-      "60"
+      "90",
+      "80"
     ],
     "img": "/apps/dota2/images/abilities/batrider_flaming_lasso_md.png"
   },
@@ -15330,7 +15319,12 @@
         ]
       }
     ],
-    "mc": "70",
+    "mc": [
+      "70",
+      "80",
+      "90",
+      "100"
+    ],
     "cd": [
       "14",
       "13",
@@ -15398,8 +15392,8 @@
   },
   "chen_divine_favor": {
     "dname": "Divine Favor",
-    "behavior": "Passive",
-    "desc": "Aura provides increased health regeneration, amplifies all health restore by a percentage, and boosts damage for heroes. Provides double bonus damage for your own non-hero units.",
+    "behavior": "Unit Target",
+    "desc": "Passively provides an aura that grants increased health regeneration and amplifies all health restore by a percentage.\n\nCan be cast on allies to teleport them to Chen. If cast on Chen, all units controlled by Chen will be teleported to him. Taking damage will dispel the buff.",
     "attrib": [
       {
         "key": "heal_amp",
@@ -15415,35 +15409,26 @@
         "key": "heal_rate",
         "header": "REGEN PER SEC:",
         "value": [
-          "1",
           "2",
           "3",
-          "4"
-        ]
-      },
-      {
-        "key": "damage_bonus",
-        "header": "ATTACK DAMAGE:",
-        "value": [
           "4",
-          "8",
-          "12",
-          "16"
+          "5"
         ]
-      },
-      {
-        "key": "army_damage_multiplier",
-        "header": "ARMY DAMAGE MULTIPLIER:",
-        "value": "2",
-        "generated": true
       },
       {
         "key": "aura_radius",
         "header": "AURA RADIUS:",
         "value": "1200",
         "generated": true
+      },
+      {
+        "key": "teleport_delay",
+        "header": "TELEPORT DELAY:",
+        "value": "6"
       }
     ],
+    "mc": "130",
+    "cd": "60",
     "img": "/apps/dota2/images/abilities/chen_divine_favor_md.png"
   },
   "chen_test_of_faith_teleport": {
@@ -15469,7 +15454,7 @@
     "dname": "Holy Persuasion",
     "behavior": "Unit Target",
     "bkbpierce": "Yes",
-    "desc": "Chen takes control of an enemy or neutral creep. If the persuaded creep's base health is naturally below the health minimum, its base health will be raised to the health minimum. Converted creeps will have increased movement speed.\n\nCan be cast on allies to teleport them to Chen. If cast on Chen, all units controlled by Chen will be teleported to him. Taking damage will dispel the buff.  \n\nUpgradable by Aghanim's Scepter.",
+    "desc": "Chen takes control of an enemy or neutral creep. If the persuaded creep's base health is naturally below the health minimum, its base health will be raised to the health minimum. Converted creeps will have increased movement speed and bonus damage. \n\nUpgradable by Aghanim's Scepter.",
     "attrib": [
       {
         "key": "max_units",
@@ -15498,7 +15483,7 @@
       },
       {
         "key": "movement_speed_bonus",
-        "header": "CREEP MOVE SPEED BONUS:",
+        "header": "MOVE SPEED BONUS:",
         "value": [
           "10",
           "15",
@@ -15507,9 +15492,14 @@
         ]
       },
       {
-        "key": "teleport_delay",
-        "header": "TELEPORT DELAY:",
-        "value": "6"
+        "key": "damage_bonus",
+        "header": "BONUS DAMAGE:",
+        "value": [
+          "8",
+          "16",
+          "24",
+          "32"
+        ]
       }
     ],
     "mc": [
@@ -20151,9 +20141,9 @@
         "key": "stun_min",
         "header": "MINIMUM STUN:",
         "value": [
-          "1",
-          "1",
-          "1",
+          "1.25",
+          "1.5",
+          "1.75",
           "2"
         ]
       },
@@ -20161,9 +20151,9 @@
         "key": "stun_max",
         "header": "MAXIMUM STUN:",
         "value": [
-          "2",
-          "2",
-          "3",
+          "2.2",
+          "2.8",
+          "3.4",
           "4"
         ]
       },
@@ -20188,7 +20178,12 @@
         ]
       }
     ],
-    "mc": "140",
+    "mc": [
+      "110",
+      "120",
+      "130",
+      "140"
+    ],
     "cd": [
       "13",
       "12",
@@ -20750,9 +20745,9 @@
         "key": "duration",
         "header": "DURATION:",
         "value": [
-          "3.25",
-          "4",
-          "4.75"
+          "3.5",
+          "4.25",
+          "5"
         ]
       },
       {
@@ -21042,7 +21037,7 @@
       {
         "key": "multicast_2_times_tooltip",
         "header": "2X CAST CHANCE:",
-        "value": "70%"
+        "value": "75%"
       },
       {
         "key": "multicast_3_times_tooltip",
@@ -21137,20 +21132,20 @@
         "key": "damage_per_unit",
         "header": "DAMAGE/HEAL PER UNIT:",
         "value": [
-          "18",
           "22",
           "26",
-          "30"
+          "30",
+          "34"
         ]
       },
       {
         "key": "max_units",
         "header": "MAX UNITS:",
         "value": [
+          "8",
           "10",
           "12",
-          "14",
-          "16"
+          "14"
         ]
       },
       {
@@ -21162,10 +21157,10 @@
         "key": "tombstone_heal",
         "header": "TOMBSTONE HEAL:",
         "value": [
-          "2",
           "4",
-          "6",
-          "8"
+          "8",
+          "12",
+          "16"
         ]
       }
     ],
@@ -21979,7 +21974,7 @@
       {
         "key": "reflect_duration",
         "header": "REFLECT DURATION:",
-        "value": "2.25"
+        "value": "2"
       },
       {
         "key": "stun_duration",
@@ -22569,7 +22564,7 @@
       {
         "key": "radius",
         "header": "RADIUS:",
-        "value": "675"
+        "value": "700"
       },
       {
         "key": "hit_count",
@@ -23282,9 +23277,9 @@
         "key": "tether_heal_amp",
         "header": "HP/MANA AMP:",
         "value": [
-          "1.05",
-          "1.2",
-          "1.35",
+          "0.9",
+          "1.1",
+          "1.3",
           "1.5"
         ]
       },
@@ -23307,7 +23302,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Summon five particle spirits that dance in a circle around Io. If a particle collides with an enemy hero, it explodes, damaging and slowing all enemy units in an area around it.  Creeps take minor damage from touching a particle spirit, but do not cause them to explode.  When its duration ends, any remaining Spirits explode.\n\nUpgradable by Aghanim's Scepter.",
+    "desc": "Summon five particle spirits that dance in a circle around Io. If a particle collides with an enemy hero, it explodes, damaging all enemy units in an area around it.  Creeps take minor damage from touching a particle spirit, but do not cause them to explode.  When its duration ends, any remaining Spirits explode.\n\nUpgradable by Aghanim's Scepter.",
     "attrib": [
       {
         "key": "creep_damage",
@@ -23328,21 +23323,6 @@
           "60",
           "80"
         ]
-      },
-      {
-        "key": "slow",
-        "header": "MOVEMENT SLOW:",
-        "value": [
-          "20%",
-          "40%",
-          "60%",
-          "80%"
-        ]
-      },
-      {
-        "key": "slow_duration",
-        "header": "SLOW DURATION:",
-        "value": "0.3"
       },
       {
         "key": "revolution_time",
@@ -23648,7 +23628,7 @@
           "15",
           "30",
           "60",
-          "120"
+          "100"
         ]
       }
     ],
@@ -23710,7 +23690,7 @@
       {
         "key": "scepter_aoe",
         "header": "SCEPTER RADIUS:",
-        "value": "400"
+        "value": "425"
       },
       {
         "key": "cooldown_scepter",
@@ -24077,10 +24057,10 @@
         "key": "damage",
         "header": "DAMAGE:",
         "value": [
-          "75",
-          "125",
-          "175",
-          "225"
+          "50",
+          "100",
+          "150",
+          "200"
         ]
       },
       {
@@ -25763,9 +25743,9 @@
         "key": "damage",
         "header": "DAMAGE:",
         "value": [
-          "70",
-          "140",
-          "210",
+          "100",
+          "160",
+          "220",
           "280"
         ]
       },
@@ -26300,8 +26280,8 @@
         "key": "damage_heroes",
         "header": "BONUS DAMAGE (HEROES):",
         "value": [
-          "15",
-          "30",
+          "20",
+          "40",
           "60",
           "80"
         ]
@@ -27935,7 +27915,12 @@
       }
     ],
     "mc": "0",
-    "cd": "36",
+    "cd": [
+      "36",
+      "34",
+      "32",
+      "30"
+    ],
     "img": "/apps/dota2/images/abilities/phoenix_icarus_dive_md.png"
   },
   "phoenix_icarus_dive_stop": {
@@ -29465,7 +29450,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Dark Willow recedes into the shadows, becoming untargetable.  Her next attack has increased attack range and deals bonus magic damage, and will end Shadow Realm. Damage scales based on how long she remains under the effects of Shadow Realm, the maximum being reached after 3 seconds.\n\nUpgradeable by Aghanim's Scepter.",
+    "desc": "Dark Willow recedes into the shadows, becoming untargetable.  Her next attack has increased attack range and deals bonus magic damage, and will end Shadow Realm. Damage scales based on how long she remains under the effects of Shadow Realm, the maximum being reached after 3.5 seconds.\n\nUpgradeable by Aghanim's Scepter.",
     "attrib": [
       {
         "key": "duration",
@@ -29490,7 +29475,7 @@
       {
         "key": "max_damage_duration",
         "header": "MAX DAMAGE DURATION:",
-        "value": "3"
+        "value": "3.5"
       },
       {
         "key": "scepter_radius",
@@ -29763,7 +29748,7 @@
     "img": "/apps/dota2/images/abilities/grimstroke_ink_creature_md.png"
   },
   "grimstroke_scepter": {
-    "dname": "Dark Artistry",
+    "dname": "Dark Portrait",
     "behavior": [
       "Unit Target",
       "Hidden",
@@ -29774,7 +29759,7 @@
       {
         "key": "illusion_duration",
         "header": "ILLUSION DURATION:",
-        "value": "20"
+        "value": "15"
       },
       {
         "key": "images_do_damage_percent",
@@ -29790,13 +29775,13 @@
       {
         "key": "images_take_damage_percent",
         "header": "IMAGES TAKE DAMAGE PERCENT:",
-        "value": "100",
+        "value": "250",
         "generated": true
       },
       {
         "key": "images_take_damage_percent_tooltip",
         "header": "ILLUSION DAMAGE TAKEN:",
-        "value": "200%"
+        "value": "350%"
       }
     ],
     "mc": "200",
@@ -34948,6 +34933,9 @@
   "special_bonus_attack_speed_160": {
     "dname": "+160 Attack Speed"
   },
+  "special_bonus_attack_speed_175": {
+    "dname": "+175 Attack Speed"
+  },
   "special_bonus_attack_speed_200": {
     "dname": "+200 Attack Speed"
   },
@@ -35957,7 +35945,7 @@
     "dname": "Frost Shield Provides +60 HP Regen"
   },
   "special_bonus_unique_lich_2": {
-    "dname": "Attacks Apply 50% MS and AS Slow"
+    "dname": "Attacks Apply 60% MS and AS Slow"
   },
   "special_bonus_unique_lich_3": {
     "dname": "-4s Frost Blast Cooldown"
@@ -35993,7 +35981,7 @@
     "dname": "+1.25s Storm Hammer Stun Duration"
   },
   "special_bonus_unique_dark_seer": {
-    "dname": "+100 Ion Shell Damage"
+    "dname": "+80 Ion Shell Damage"
   },
   "special_bonus_unique_dark_seer_2": {
     "dname": "+75 Vacuum AoE"
@@ -36044,7 +36032,7 @@
     "dname": "Summons a Golem on death"
   },
   "special_bonus_unique_warlock_5": {
-    "dname": "+5% Fatal Bonds Damage"
+    "dname": "+4% Fatal Bonds Damage"
   },
   "special_bonus_unique_warlock_6": {
     "dname": "300 Shadow Word AoE"
@@ -36338,7 +36326,7 @@
     "dname": "+2s Dragon Tail"
   },
   "special_bonus_unique_dragon_knight_3": {
-    "dname": "-25% Breathe Fire Damage Reduction"
+    "dname": "-30% Breathe Fire Damage Reduction"
   },
   "special_bonus_unique_dragon_knight_4": {
     "dname": "Dragon Blood Aura"
@@ -36418,6 +36406,9 @@
   "special_bonus_unique_axe_3": {
     "dname": "Attacking Procs Counter Helix"
   },
+  "special_bonus_unique_axe_4": {
+    "dname": "+15 Counter Helix Damage"
+  },
   "special_bonus_unique_beastmaster": {
     "dname": "+75 Wild Axes Damage"
   },
@@ -36431,16 +36422,19 @@
     "dname": "+25 Inner Beast Attack Speed"
   },
   "special_bonus_unique_clinkz_1": {
-    "dname": "+20 Searing Arrows Damage"
+    "dname": "+15 Searing Arrows Damage"
   },
   "special_bonus_unique_clinkz_2": {
-    "dname": "+3s Strafe Duration"
+    "dname": "+4s Strafe Duration"
   },
   "special_bonus_unique_clinkz_3": {
     "dname": "Searing Arrows Multishot"
   },
   "special_bonus_unique_clinkz_4": {
     "dname": "Burning Army Truestrike"
+  },
+  "special_bonus_unique_clinkz_5": {
+    "dname": "-30s Burning Army Cooldown"
   },
   "special_bonus_unique_juggernaut": {
     "dname": "+1s Blade Fury"
@@ -36689,10 +36683,13 @@
     "dname": "+100 Laser Damage"
   },
   "special_bonus_unique_tinker_2": {
-    "dname": "+8 March of the Machines Damage"
+    "dname": "+10 March of the Machines Damage"
   },
   "special_bonus_unique_tinker_3": {
     "dname": "+0.3s Heat-Seeking Missile Ministun"
+  },
+  "special_bonus_unique_tinker_4": {
+    "dname": "+1.5s Laser Blind Duration"
   },
   "special_bonus_unique_tiny": {
     "dname": "+100 Avalanche Damage"
@@ -37233,7 +37230,10 @@
     "dname": "+1000 Holy Persuasion Minimum Health"
   },
   "special_bonus_unique_chen_5": {
-    "dname": "+10 Divine Favor Damage"
+    "dname": "+20 Holy Persuasion Damage"
+  },
+  "special_bonus_unique_chen_6": {
+    "dname": "-30s Divine Favor Cooldown"
   },
   "special_bonus_unique_lone_druid_1": {
     "dname": "+200 Spirit Bear Damage"
@@ -37282,6 +37282,9 @@
   },
   "special_bonus_unique_wisp_6": {
     "dname": "-30s Relocate Cooldown"
+  },
+  "special_bonus_unique_wisp_7": {
+    "dname": "Spirits Apply Slow"
   },
   "special_bonus_unique_techies": {
     "dname": "+300 Blast Off Damage"

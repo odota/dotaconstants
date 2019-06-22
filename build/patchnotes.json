@@ -5670,7 +5670,7 @@
       "bloodseeker": [
         "Agility growth reduced from 3.5 to 3.1",
         "Blood Rite manacost reduced from 100 to 70/80/90/100",
-        "Rupture is now lethal again. Deals 30/45/60% of distance moved as damage. Has 8/10/12 second duration."
+        "Rupture is now lethal again. Deals 30/45/60% of distance moved as damage."
       ],
       "bounty_hunter": [
         "Jinada damage reduced from 80/110/140/170 to 70/100/130/160",
@@ -5738,7 +5738,7 @@
       ],
       "death_prophet": [
         "Crypt Swarm cast point reduced from 0.5 to 0.4",
-        "Added Scepter upgrade. Anytime an enemy is effected by your spells (crypt swarm impact, silence debuff, spirit siphon target) or when you attack an enemy, a ghost will fly out and hit the enemy for double the usual damage then return to you with life. These ghosts apply a 100% slow for 0.3 seconds."
+        "Added Scepter upgrade. Anytime an enemy is affected by your spells (crypt swarm impact, silence debuff, spirit siphon target) or when you attack an enemy, a ghost will fly out and hit the enemy for double the usual damage then return to you with life. These ghosts apply a 100% slow for 0.3 seconds."
       ],
       "disruptor": [
         "Level 15 Talent increased from -3 Kinetic Field Cooldown to -4"
@@ -5793,7 +5793,7 @@
         "Liquid Fire ability effect still impacts the area when the target dies or the attack is evaded."
       ],
       "keeper_of_the_light": [
-        "Chakra Magic can now be cast on enemies, placing a debuff that drains 4/4.5/5/5.5%% of current mana per 100 units moved. Lasts 5 seconds (old version was a percent of max mana, not current).",
+        "Chakra Magic can now be cast on enemies, placing a debuff that drains 4/4.5/5/5.5% of current mana per 100 units moved. Lasts 5 seconds (old version was a percent of max mana, not current).",
         "Scepter now also causes Illuminate to not require channeling (still provides heal bonus)"
       ],
       "lich": [
@@ -6064,6 +6064,233 @@
         "Now has 0.25 base mana regen",
         "Attack point improved from 0.633 to 0.45",
         "Level 10 Talent changed from +6 Armor to +3 Mana Regen"
+      ]
+    }
+  },
+  "7_22b": {
+    "general": [],
+    "items": {},
+    "heroes": {
+      "clinkz": [
+        "Base strength increased by 2",
+        "Searing Arrows damage reduced from 30/40/50/60 to 20/30/40/50",
+        "Searing Arrows manacost reduced from 12 to 6/8/10/12",
+        "Level 15 Talent reduced from +20 Searing Arrows to +15"
+      ],
+      "dark_willow": [
+        "Shadow Realm damage ramp up time increased from 3 to 4",
+        "Base attack time increased from 1.3 to 1.5",
+        "Level 25 Talent reduced from +200 Attack Speed to +175"
+      ],
+      "grimstroke": [
+        "Scepter illusion incoming damage increased from 200% to 350%",
+        "Scepter illusion duration reduced from 20 to 15"
+      ],
+      "necrolyte": [
+        "Heartstopper Aura damage type changed from Pure to Magical (still does not trigger damage events)"
+      ],
+      "lycan": [
+        "Scepter wolves gold and xp bounty reduced by half",
+        "Fixed Scepter wolves not gaining crit during Shapeshift"
+      ],
+      "slark": [
+        "Essence Shift level 4 duration reduced from 120 to 100"
+      ]
+    }
+  },
+  "7_22c": {
+    "general": [],
+    "items": {
+      "ring_of_basilius": [
+        "Bonus damage increased from +7 to +8"
+      ]
+    },
+    "heroes": {
+      "axe": [
+        "Base movement speed increased by 10"
+      ],
+      "batrider": [
+        "Flaming Lasso cooldown increased from 100/80/60 to 100/90/80"
+      ],
+      "bloodseeker": [
+        "Base armor increased by 1"
+      ],
+      "bristleback": [
+        "Base damage increased by 3"
+      ],
+      "chaos_knight": [
+        "Chaos Bolt manacost reduced from 140 to 110/120/130/140"
+      ],
+      "chen": [
+        "Divine Favor aura no longer provides +4/8/12/16 damage",
+        "Divine Favor now has the Recall ability instead of Holy Persuasion with a 60 second cooldown",
+        "Divine Favor HP regen increased from 1/2/3/4 to 2/3/4/5",
+        "Holy Persuasion now provides +8/16/24/32 bonus damage to the converted creep",
+        "Penitence manacost increased from 70 to 70/80/90/100",
+        "Level 10 Talent reduced from +35% XP Gain to +30%",
+        "Level 15 Talent changed from +10 Divine Favor Damage to +20 Holy Persuasion Damage",
+        "Level 15 Talent changed from +7 Armor to -30s Divine Favor Cooldown"
+      ],
+      "clinkz": [
+        "Level 10 Talent changed from +5 Armor to +8 Agility",
+        "Level 10 Talent changed from +12% Magic Resistance to +10 Strength",
+        "Level 15 Talent changed from +15 Strength to -30s Burning Army Cooldown",
+        "Level 25 Talent increased from +3s Strafe Duration to +4s"
+      ],
+      "rattletrap": [
+        "Battery Assault cooldown reduced from 32/28/24/20 to 24/22/20/18"
+      ],
+      "dark_seer": [
+        "Surge reduced from 30/45/60/75% to 25/40/55/70%",
+        "Level 20 Talent reduced from +100 Ion Shell Damage to +80"
+      ],
+      "dark_willow": [
+        "Shadow Realm max damage duration reduced from 4 to 3.5 seconds",
+        "Base attack speed increased from 100 to 115"
+      ],
+      "dazzle": [
+        "Bad Juju cooldown reduction increased from 20/35/50% to 26/38/50%",
+        "Level 10 Talent changed from +200 Health to +30% XP Gain"
+      ],
+      "dragon_knight": [
+        "Base intelligence increased by 3",
+        "Level 10 Talent increased from -25% Breathe Fire Damage Reduction to -30%",
+        "Level 15 Talent increased from +350 Health to +400"
+      ],
+      "elder_titan": [
+        "Astral Spirit attack damage bonus per hero increased from 15/30/60/80 to 20/40/60/80"
+      ],
+      "enchantress": [
+        "Impetus range increased from 550 to 575 (matching the hero's attack range)",
+        "Enchant cooldown reduced from 22/18/14/10 to 20/16/12/8"
+      ],
+      "enigma": [
+        "Intelligence gain reduced from 3.9 to 3.6"
+      ],
+      "faceless_void": [
+        "Chronosphere radius increased from 425 to 450",
+        "Time Lock chance increased from 10/14/18/22% to 12/16/20/24%"
+      ],
+      "huskar": [
+        "Life Break slow increased from 40/50/60% to 60%"
+      ],
+      "invoker": [
+        "Base armor increased by 1"
+      ],
+      "wisp": [
+        "Attack range reduced from 575 to 500",
+        "Base armor increased by 1",
+        "Strength gain increased from 2.5 to 3",
+        "Tether regen reduced from 105/120/135/150% to 90/110/130/150%",
+        "Tether cancel now has a 0.25s cooldown to prevent accidental uses",
+        "Spirits no longer slow",
+        "Level 10 Talent changed from +20% XP Gain to Spirits Apply Slow"
+      ],
+      "keeper_of_the_light": [
+        "Will-O-Wisp radius increased from 675 to 700"
+      ],
+      "lich": [
+        "Base intelligence increased by 2",
+        "Sinister Gaze cooldown reduced from 30 to 30/28/26/24",
+        "Chain Frost damage increased from 250/375/500 to 250/400/550",
+        "Level 25 Talent increased from 50% slow to 60%"
+      ],
+      "luna": [
+        "Base health regen increased from 0 to 0.5"
+      ],
+      "medusa": [
+        "Strength gain increased from 1.3 to 1.5"
+      ],
+      "mirana": [
+        "Base mana regen increased from 0 to 0.4",
+        "Starstorm cast point reduced from 0.5 to 0.4"
+      ],
+      "morphling": [
+        "Waveform cooldown increased from 17/15/13/11 to 20/17/14/11",
+        "Waveform manacost increased from 140/155/160/165 to 150/155/160/165"
+      ],
+      "necrolyte": [
+        "Heartstopper heal regen per stack increased from 2/3.5/5/6.5 to 3.5/4.5/5.5/6.5",
+        "Heartstopper mana regen per stack increased from 3/4/5/6 to 3.5/4.5/5.5/6.5"
+      ],
+      "nyx_assassin": [
+        "Spiked Carapace duration reduced from 2.25 to 2",
+        "Base health regen reduced from 3.25 to 2.5"
+      ],
+      "phantom_lancer": [
+        "Juxtapose illusion damage increased from 16% to 18%",
+        "Level 10 Talent increased from +15% Evasion to +20%"
+      ],
+      "phoenix": [
+        "Icarus Dive cooldown reduced from 36 to 36/34/32/30",
+        "Fire Spirits Release cast point changed from 0.01 to 0"
+      ],
+      "puck": [
+        "Base health regen increased from 0 to 0.5",
+        "Level 25 Dreamcoil talent no longer requires enemies to be in attack range of puck, as long as Puck is within 200 range of the edge of the circle",
+        "Level 25 Dreamcoil talent attack interval reduced from every 0.6 seconds to every 0.7 seconds",
+        "Level 10 Talent increased from +5 All Stats to +6",
+        "Level 10 Talent increased from +125 Cast Range to +150"
+      ],
+      "sand_king": [
+        "Strength gain reduced from 3.2 to 3",
+        "Sandstorm manacost increased from 60 to 75"
+      ],
+      "shadow_shaman": [
+        "Base attack speed reduced from 100 to 90"
+      ],
+      "skywrath_mage": [
+        "Concussive Shot damage increased from 70/140/210/280 to 100/160/220/280",
+        "Level 10 Talent changed from +8 Intelligence to +30% XP Gain"
+      ],
+      "slardar": [
+        "Base health regen increased from 0 to 0.5"
+      ],
+      "sven": [
+        "Storm Hammer stun duration reduced from 1.7/1.8/1.9/2 to 1.4/1.6/1.8/2",
+        "Warcry manacost increased from 40 to 60"
+      ],
+      "terrorblade": [
+        "Strength gain increased from 1.5 to 1.7"
+      ],
+      "shredder": [
+        "Base strength increased by 2",
+        "Base mana regen increased from 0 to 0.25"
+      ],
+      "tinker": [
+        "March of the Machines manacost reduced from 145/150/165/190 to 130/150/170/190",
+        "Level 15 Talent changed from +30 Movement Speed to +150 Gold/Min",
+        "Level 15 Talent increased from +10% Spell Lifesteal to +15%",
+        "Level 20 Talent increased from +8 March of the Machines to +10"
+      ],
+      "treant": [
+        "Base armor increased by 1",
+        "Overgrowth duration increased from 3.25/4/4.75 to 3.5/4.25/5"
+      ],
+      "troll_warlord": [
+        "Whirling Axes Melee damage reduced from 75/125/175/225 to 50/100/150/200"
+      ],
+      "tusk": [
+        "Movement speed increased by 5"
+      ],
+      "abyssal_underlord": [
+        "Base armor increased by 1"
+      ],
+      "undying": [
+        "Soul Rip max unit count reduced from 10/12/14/16 to 8/10/12/14",
+        "Soul Rip Heal/Damage from 18/22/26/30 to 22/26/30/34",
+        "Fixed the +5 Tombstone Attack talent not causing the right amount of health change",
+        "Fixed Soul Rip not healing Tombstone for the intended amount"
+      ],
+      "vengefulspirit": [
+        "Magic Missile cooldown reduced from 10 to 9"
+      ],
+      "warlock": [
+        "Fatal Bonds damage reduced from 13/17/21/25% to 12/16/20/24%",
+        "Level 10 Talent reduced from +5% Fatal Bonds Damage to +4%"
+      ],
+      "weaver": [
+        "Geminate Attack bonus damage from 10/20/30/40 to 10/25/40/55"
       ]
     }
   }
