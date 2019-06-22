@@ -552,6 +552,26 @@ const sources = [{
       return result;
     },
   },
+  {
+    key: "underlords_heroes",
+    url: "https://raw.githubusercontent.com/SteamDatabase/GameTracking-Underlords/master/game/dac/pak01_dir/scripts/units.json",
+    transform: resObj => resObj
+  },
+  {
+    key: "underlords_abilities",
+    url: "https://raw.githubusercontent.com/SteamDatabase/GameTracking-Underlords/master/game/dac/pak01_dir/scripts/abilities.json",
+    transform: resObj => resObj
+  },
+  {
+    key: "underlords_synergies",
+    url: "https://raw.githubusercontent.com/SteamDatabase/GameTracking-Underlords/master/game/dac/pak01_dir/scripts/synergies.json",
+    transform: resObj => resObj
+  },
+  {
+    key: "underlords_items",
+    url: "https://raw.githubusercontent.com/SteamDatabase/GameTracking-Underlords/master/game/dac/pak01_dir/scripts/items.json",
+    transform: resObj => resObj
+  }
 ];
 
 const patches = JSON.parse(fs.readFileSync('./json/patch.json'));
