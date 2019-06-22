@@ -1,0 +1,1541 @@
+{
+  "enchantress_natures_attendants": {
+    "maxLevel": 3,
+    "castPoint": 0.5,
+    "castAnimation": "ACT_DOTA_CAST_ABILITY_3",
+    "cooldown": 15,
+    "manaCost": 100,
+    "heal_interval": 1.5,
+    "heal": 25,
+    "radius": 4,
+    "duration": 11,
+    "wisp_count": [
+      3,
+      5,
+      7
+    ],
+    "animationlength": 1.47,
+    "precache": [
+      "particles/units/heroes/hero_enchantress/enchantress_natures_attendants_lvl1.vpcf",
+      "particles/units/heroes/hero_enchantress/enchantress_natures_attendants_lvl2.vpcf",
+      "particles/units/heroes/hero_enchantress/enchantress_natures_attendants_lvl3.vpcf",
+      "particles/units/heroes/hero_enchantress/enchantress_natures_attendants_lvl4.vpcf",
+      "particles/units/heroes/hero_enchantress/enchantress_natures_attendants_heal.vpcf"
+    ]
+  },
+  "tiny_toss": {
+    "maxLevel": 3,
+    "castPoint": 0.3,
+    "castAnimation": "ACT_TINY_TOSS",
+    "cooldown": [
+      10,
+      8,
+      6
+    ],
+    "manaCost": 100,
+    "damage_radius": 1,
+    "damage": [
+      100,
+      200,
+      300
+    ],
+    "stun_duration": [
+      1.5,
+      2,
+      2.5
+    ],
+    "animationlength": 0.77,
+    "precache": [
+      "particles/units/heroes/hero_tiny/tiny_toss_impact.vpcf"
+    ]
+  },
+  "troll_warlord_fervor": {
+    "maxLevel": 3,
+    "attack_speed": [
+      15,
+      20,
+      25
+    ],
+    "max_stacks": [
+      6,
+      9,
+      12
+    ]
+  },
+  "terrorblade_metamorph": {
+    "maxLevel": 3,
+    "castPoint": 0.5,
+    "castAnimation": "ACT_DOTA_CAST_ABILITY_3",
+    "animationlength": 1.1,
+    "cooldown": 60,
+    "manaCost": 100,
+    "duration": 60,
+    "bonus_attack_damage": [
+      50,
+      100,
+      200
+    ],
+    "bonus_attack_range": 4,
+    "bonus_attack_speed": [
+      50,
+      75,
+      100
+    ],
+    "precache": [
+      "particles/units/heroes/hero_terrorblade/terrorblade_sunder.vpcf",
+      "particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_transform.vpcf"
+    ]
+  },
+  "slark_dark_pact": {
+    "maxLevel": 3,
+    "castPoint": 0.001,
+    "castAnimation": "ACT_INVALID",
+    "animationlength": 0.002,
+    "cooldown": [
+      8,
+      7,
+      6
+    ],
+    "manaCost": 100,
+    "delay": 1.5,
+    "radius": 1,
+    "total_damage": [
+      150,
+      230,
+      300
+    ],
+    "total_pulses": 10,
+    "pulse_interval": 0.1,
+    "precache": [
+      "particles/units/heroes/hero_slark/slark_dark_pact_start.vpcf",
+      "particles/units/heroes/hero_slark/slark_dark_pact_pulses.vpcf",
+      "particles/units/heroes/hero_slark/slark_dark_pact_pulses_body.vpcf"
+    ]
+  },
+  "slark_essence_shift": {
+    "maxLevel": 3,
+    "stolen_aspd": [
+      3,
+      5,
+      7
+    ],
+    "stolen_dmg": [
+      3,
+      4,
+      5
+    ]
+  },
+  "dragon_knight_elder_dragon_form": {
+    "maxLevel": 3,
+    "castPoint": 0.5,
+    "castAnimation": "ACT_DOTA_CAST_ABILITY_4",
+    "cooldown": 60,
+    "manaCost": 100,
+    "duration": 60,
+    "bonus_movement_speed": 30,
+    "bonus_attack_range": 2,
+    "bonus_attack_damage": [
+      100,
+      150,
+      200
+    ],
+    "corrosive_breath_damage": [
+      30,
+      30,
+      30
+    ],
+    "corrosive_breath_duration": [
+      5,
+      5,
+      5
+    ],
+    "splash_radius": 1,
+    "splash_damage_percent": 50,
+    "frost_bonus_movement_speed": -30,
+    "frost_bonus_attack_speed": -30,
+    "frost_duration": [
+      3,
+      3,
+      3
+    ],
+    "frost_aoe": 1,
+    "animationlength": 0.001,
+    "precache": [
+      "models/heroes/dragon_knight/dragon_knight_dragon.vmdl",
+      "particles/units/heroes/hero_dragon_knight/dragon_knight_elder_dragon_corrosive.vpcf",
+      "particles/units/heroes/hero_dragon_knight/dragon_knight_elder_dragon_fire.vpcf",
+      "particles/units/heroes/hero_dragon_knight/dragon_knight_elder_dragon_frost.vpcf",
+      "particles/units/heroes/hero_dragon_knight/dragon_knight_transform_green.vpcf",
+      "particles/units/heroes/hero_dragon_knight/dragon_knight_transform_red.vpcf",
+      "particles/units/heroes/hero_dragon_knight/dragon_knight_transform_blue.vpcf",
+      "particles/units/heroes/hero_dragon_knight/dragon_knight_corrosion_debuff.vpcf",
+      "particles/generic_gameplay/generic_slowed_cold.vpcf",
+      "particles/status_fx/status_effect_frost.vpcf"
+    ]
+  },
+  "morphling_waveform": {
+    "maxLevel": 3,
+    "castPoint": 0.25,
+    "castAnimation": "ACT_DOTA_CAST_ABILITY_1",
+    "cooldown": [
+      10,
+      8,
+      6
+    ],
+    "manaCost": 100,
+    "speed": 1250,
+    "width": 200,
+    "distance_cells": 4,
+    "charge_restore_time": 0,
+    "damage": [
+      150,
+      250,
+      350
+    ],
+    "animationlength": 2.97,
+    "precache": [
+      "particles/units/heroes/hero_morphling/morphling_waveform.vpcf",
+      "particles/units/heroes/hero_morphling/morphling_waveform_dmg.vpcf"
+    ]
+  },
+  "viper_viper_strike": {
+    "maxLevel": 3,
+    "castPoint": 0.2,
+    "castAnimation": "ACT_DOTA_CAST_ABILITY_4",
+    "cooldown": 3,
+    "manaCost": 100,
+    "duration": 5,
+    "damage": [
+      150,
+      250,
+      350
+    ],
+    "bonus_movement_speed": [
+      -40,
+      -60,
+      -80
+    ],
+    "bonus_attack_speed": [
+      -40,
+      -60,
+      -80
+    ],
+    "mana_cost_scepter": [
+      125,
+      125,
+      125
+    ],
+    "cooldown_scepter": 10,
+    "cast_range_scepter": 900,
+    "projectile_speed": 1200,
+    "max_charges": 2,
+    "charge_restore_time": 30,
+    "animationlength": 1,
+    "precache": [
+      "particles/units/heroes/hero_viper/viper_viper_strike_warmup.vpcf",
+      "particles/units/heroes/hero_viper/viper_viper_strike_beam.vpcf",
+      "particles/units/heroes/hero_viper/viper_viper_strike_debuff.vpcf",
+      "particles/status_fx/status_effect_poison_viper.vpcf"
+    ]
+  },
+  "phantom_assassin_coup_de_grace": {
+    "maxLevel": 3,
+    "crit_chance": 10,
+    "crit_bonus": [
+      300,
+      450,
+      600
+    ],
+    "animationlength": 0.01,
+    "precache": [
+      "particles/units/heroes/hero_phantom_assassin/phantom_assassin_ambient_blade.vpcf",
+      "particles/units/heroes/hero_phantom_assassin/phantom_assassin_crit_impact_mechanical.vpcf",
+      "particles/units/heroes/hero_phantom_assassin/phantom_assassin_crit_impact.vpcf"
+    ]
+  },
+  "batrider_sticky_napalm": {
+    "maxLevel": 3,
+    "castPoint": 0.3,
+    "castAnimation": "ACT_DOTA_CAST_ABILITY_1",
+    "cooldown": [
+      2,
+      2,
+      2
+    ],
+    "manaCost": 20,
+    "damage": [
+      20,
+      40,
+      80
+    ],
+    "radius": 2,
+    "duration": 20,
+    "movement_speed_pct": -5,
+    "turn_rate_pct": [
+      -70,
+      -70,
+      -70
+    ],
+    "max_stacks": [
+      4,
+      7,
+      10
+    ],
+    "animationlength": 1,
+    "precache": [
+      "particles/units/heroes/hero_batrider/batrider_stickynapalm_impact.vpcf",
+      "particles/units/heroes/hero_batrider/batrider_stickynapalm_debuff.vpcf",
+      "particles/status_fx/status_effect_stickynapalm.vpcf",
+      "particles/units/heroes/hero_batrider/batrider_stickynapalm_stack.vpcf",
+      "particles/units/heroes/hero_batrider/batrider_napalm_damage_debuff.vpcf"
+    ]
+  },
+  "gyrocopter_call_down": {
+    "maxLevel": 3,
+    "castPoint": 0.5,
+    "castAnimation": "ACT_DOTA_CAST_ABILITY_4",
+    "cooldown": 10,
+    "manaCost": 100,
+    "slow_duration_first": 2,
+    "slow_duration_second": 4,
+    "damage_first": [
+      200,
+      300,
+      400
+    ],
+    "damage_second": [
+      200,
+      300,
+      400
+    ],
+    "slow_first": 30,
+    "slow_second": 60,
+    "radius": 3,
+    "range_scepter": 0,
+    "damage_second_scepter": [
+      175,
+      225,
+      275
+    ],
+    "animationlength": 1.07,
+    "precache": [
+      "particles/units/heroes/hero_gyrocopter/gyro_calldown_first.vpcf",
+      "particles/units/heroes/hero_gyrocopter/gyro_calldown_second.vpcf",
+      "particles/units/heroes/hero_gyrocopter/gyro_calldown_marker.vpcf"
+    ]
+  },
+  "alchemist_acid_spray": {
+    "maxLevel": 3,
+    "castPoint": 0.3,
+    "cooldown": 10,
+    "manaCost": 100,
+    "radius": 3,
+    "duration": 10,
+    "damage": [
+      15,
+      25,
+      35
+    ],
+    "armor_reduction": [
+      -5,
+      -8,
+      -11
+    ],
+    "tick_rate": 1,
+    "animationlength": 0.9,
+    "castAnimation": "ACT_DOTA_CAST_ABILITY_1",
+    "precache": [
+      "particles/units/heroes/hero_alchemist/alchemist_acid_spray_cast.vpcf",
+      "particles/units/heroes/hero_alchemist/alchemist_acid_spray.vpcf",
+      "particles/units/heroes/hero_alchemist/alchemist_acid_spray_debuff.vpcf"
+    ]
+  },
+  "keeper_of_the_light_illuminate": {
+    "maxLevel": 3,
+    "castPoint": 3,
+    "castAnimation": "ACT_DOTA_CAST_ABILITY_1",
+    "cooldown": [
+      10,
+      8,
+      6
+    ],
+    "manaCost": 100,
+    "damage_per_second": [
+      150,
+      200,
+      250
+    ],
+    "max_channel_time": 3,
+    "radius": 375,
+    "range": 1000,
+    "speed": 1050,
+    "animationlength": 3,
+    "precache": [
+      "particles/units/heroes/hero_keeper_of_the_light/keeper_of_the_light_illuminate_charge.vpcf",
+      "particles/units/heroes/hero_keeper_of_the_light/keeper_of_the_light_illuminate.vpcf",
+      "particles/units/heroes/hero_keeper_of_the_light/keeper_of_the_light_illuminate_impact.vpcf",
+      "particles/units/heroes/hero_keeper_of_the_light/keeper_of_the_light_illuminate_impact_small.vpcf"
+    ]
+  },
+  "puck_illusory_orb": {
+    "maxLevel": 3,
+    "castPoint": 0.3,
+    "castAnimation": "ACT_DOTA_CAST_ABILITY_1",
+    "cooldown": [
+      5,
+      4,
+      3
+    ],
+    "manaCost": 100,
+    "damage": [
+      150,
+      200,
+      250
+    ],
+    "radius": 150,
+    "max_distance": 800,
+    "orb_speed": 651,
+    "orb_vision": 450,
+    "animationlength": 0.4,
+    "precache": [
+      "particles/units/heroes/hero_puck/puck_illusory_orb.vpcf",
+      "particles/units/heroes/hero_puck/puck_orb_damage.vpcf"
+    ]
+  },
+  "mirana_arrow": {
+    "maxLevel": 3,
+    "castPoint": 0.25,
+    "castAnimation": "ACT_DOTA_CAST_ABILITY_1",
+    "cooldown": [
+      8,
+      8,
+      8
+    ],
+    "manaCost": 100,
+    "damage": [
+      400,
+      800,
+      1800
+    ],
+    "radius": 96,
+    "max_distance": 1600,
+    "arrow_speed": 700,
+    "duration": [
+      3,
+      5,
+      7
+    ],
+    "animationlength": 0.5,
+    "precache": [
+      "particles/units/heroes/hero_mirana/mirana_spell_arrow.vpcf"
+    ]
+  },
+  "chaos_knight_chaos_bolt": {
+    "maxLevel": 3,
+    "castPoint": 0.3,
+    "castAnimation": "ACT_DOTA_CAST_ABILITY_1",
+    "cooldown": 5,
+    "manaCost": 100,
+    "damage_min": [
+      50,
+      100,
+      150
+    ],
+    "damage_max": [
+      200,
+      300,
+      400
+    ],
+    "chaos_bolt_speed": 1000,
+    "stun_min": [
+      1,
+      1,
+      1
+    ],
+    "stun_max": [
+      2,
+      3,
+      4
+    ],
+    "animationlength": 1.3,
+    "precache": [
+      "particles/units/heroes/hero_chaos_knight/chaos_knight_chaos_bolt.vpcf",
+      "particles/units/heroes/hero_chaos_knight/chaos_knight_bolt_msg.vpcf"
+    ]
+  },
+  "slardar_amplify_damage": {
+    "maxLevel": 3,
+    "castPoint": 0.3,
+    "castAnimation": "ACT_DOTA_CAST_ABILITY_4",
+    "cooldown": 3,
+    "manaCost": 75,
+    "armor_reduction": [
+      -15,
+      -30,
+      -45
+    ],
+    "duration": 20,
+    "animationlength": 1,
+    "precache": [
+      "particles/units/heroes/hero_slardar/slardar_amp_damage.vpcf",
+      "particles/units/heroes/hero_slardar/slardar_amp_glow.vpcf",
+      "particles/status_fx/status_effect_slardar_amp_damage.vpcf"
+    ]
+  },
+  "sniper_assassinate": {
+    "maxLevel": 3,
+    "castPoint": 2,
+    "castAnimation": "ACT_DOTA_CAST_ABILITY_4",
+    "cooldown": 10,
+    "manaCost": 100,
+    "damage": [
+      1000,
+      2000,
+      3000
+    ],
+    "projectile_speed": [
+      2500,
+      2500,
+      2500
+    ],
+    "tooltip_range": [
+      2000,
+      2500,
+      3000
+    ],
+    "total_cast_time_tooltip": 1,
+    "scepter_radius": 20,
+    "scepter_crit_bonus": 20,
+    "animationlength": 3.3,
+    "precache": [
+      "particles/units/heroes/hero_sniper/sniper_assassinate.vpcf",
+      "particles/units/heroes/hero_sniper/sniper_crosshair.vpcf"
+    ]
+  },
+  "tinker_heat_seeking_missile": {
+    "maxLevel": 3,
+    "castPoint": 0.5,
+    "castAnimation": "ACT_DOTA_CAST_ABILITY_2",
+    "cooldown": [
+      8,
+      6,
+      4
+    ],
+    "manaCost": 100,
+    "targets": 3,
+    "damage_per_missile": [
+      250,
+      350,
+      450
+    ],
+    "projectile_speed": 500,
+    "animationlength": 1.3,
+    "precache": [
+      "particles/units/heroes/hero_tinker/tinker_missile_dud.vpcf",
+      "particles/units/heroes/hero_tinker/tinker_missile.vpcf",
+      "particles/units/heroes/hero_tinker/tinker_missle_explosion.vpcf"
+    ]
+  },
+  "axe_berserkers_call": {
+    "maxLevel": 3,
+    "castPoint": 0.5,
+    "cooldown": 10,
+    "manaCost": 50,
+    "bonus_armor": [
+      15,
+      25,
+      35
+    ],
+    "duration": [
+      2,
+      3,
+      4
+    ],
+    "radius": 1,
+    "animationlength": 0.8,
+    "castAnimation": "ACT_DOTA_CAST_ABILITY_1",
+    "precache": [
+      "particles/units/heroes/hero_axe/axe_beserkers_call_owner.vpcf",
+      "particles/units/heroes/hero_axe/axe_beserkers_call_target.vpcf"
+    ]
+  },
+  "juggernaut_blade_fury": {
+    "maxLevel": 3,
+    "castPoint": 0.5,
+    "castAnimation": "ACT_DOTA_CAST_ABILITY_1",
+    "cooldown": 12,
+    "manaCost": 100,
+    "duration": 5,
+    "radius": 1,
+    "animationlength": 0.8,
+    "damage_tick": 0.3,
+    "damage": [
+      50,
+      100,
+      150
+    ],
+    "precache": [
+      "particles/units/heroes/hero_juggernaut/juggernaut_blade_fury_null.vpcf",
+      "particles/units/heroes/hero_juggernaut/juggernaut_blade_fury.vpcf",
+      "particles/units/heroes/hero_juggernaut/juggernaut_blade_fury_tgt.vpcf"
+    ]
+  },
+  "lich_chain_frost": {
+    "maxLevel": 3,
+    "castPoint": 0.5,
+    "castAnimation": "ACT_DOTA_CAST_ABILITY_6",
+    "cooldown": [
+      10,
+      8,
+      6
+    ],
+    "manaCost": 100,
+    "slow_duration": 2.5,
+    "slow_value": -65,
+    "jump_range": 4,
+    "jumps": [
+      6,
+      9,
+      12
+    ],
+    "animationlength": 1.5,
+    "damage": [
+      200,
+      300,
+      400
+    ],
+    "precache": [
+      "particles/units/heroes/hero_lich/lich_chain_frost.vpcf",
+      "particles/units/heroes/hero_lich/lich_slowed_cold.vpcf",
+      "particles/status_fx/status_effect_frost_lich.vpcf"
+    ]
+  },
+  "witch_doctor_paralyzing_cask": {
+    "maxLevel": 3,
+    "castPoint": 0.3,
+    "castAnimation": "ACT_DOTA_CAST_ABILITY_1",
+    "cooldown": 10,
+    "manaCost": 100,
+    "duration": 1,
+    "bounce_range": 4,
+    "bounces": [
+      5,
+      7,
+      9
+    ],
+    "damage": [
+      50,
+      75,
+      100
+    ],
+    "speed": 1000,
+    "delay": 0.3,
+    "animationlength": 0.8,
+    "precache": [
+      "particles/units/heroes/hero_witchdoctor/witchdoctor_cask.vpcf"
+    ]
+  },
+  "bounty_hunter_shuriken_toss": {
+    "maxLevel": 3,
+    "castPoint": 0.3,
+    "castAnimation": "ACT_DOTA_CAST_ABILITY_1",
+    "cooldown": 5,
+    "manaCost": 100,
+    "stun_duration": 0.1,
+    "damage": [
+      300,
+      500,
+      700
+    ],
+    "speed": 1000,
+    "animationlength": 0.83,
+    "precache": [
+      "particles/units/heroes/hero_bounty_hunter/bounty_hunter_suriken_toss.vpcf"
+    ]
+  },
+  "sandking_burrowstrike": {
+    "maxLevel": 3,
+    "castPoint": 0,
+    "castAnimation": "ACT_DOTA_CAST_ABILITY_1",
+    "cooldown": [
+      12,
+      10,
+      8
+    ],
+    "manaCost": 100,
+    "speed": 2000,
+    "width": 80,
+    "anim_time": 0.52,
+    "damage": [
+      150,
+      250,
+      350
+    ],
+    "distance_cells": 4,
+    "stun_duration": 2,
+    "animationlength": 0.83,
+    "precache": [
+      "particles/units/heroes/hero_sandking/sandking_burrowstrike.vpcf"
+    ]
+  },
+  "queenofpain_scream_of_pain": {
+    "maxLevel": 3,
+    "castPoint": 0.6,
+    "castAnimation": "ACT_DOTA_CAST_ABILITY_4",
+    "cooldown": 6,
+    "manaCost": 100,
+    "radius": 3,
+    "projectile_speed": 900,
+    "damage": [
+      200,
+      300,
+      400
+    ],
+    "animationlength": 0.67,
+    "precache": [
+      "particles/units/heroes/hero_queenofpain/queen_scream_of_pain.vpcf",
+      "particles/units/heroes/hero_queenofpain/queen_scream_of_pain_owner.vpcf"
+    ]
+  },
+  "ogre_magi_bloodlust": {
+    "maxLevel": 3,
+    "castPoint": 0.45,
+    "castAnimation": "ACT_DOTA_CAST_ABILITY_3",
+    "cooldown": 5,
+    "manaCost": 100,
+    "animationlength": 1.03,
+    "modelscale": 25,
+    "bonus_movement_speed": [
+      8,
+      10,
+      12
+    ],
+    "bonus_attack_speed": [
+      30,
+      40,
+      50
+    ],
+    "self_bonus": [
+      35,
+      55,
+      75
+    ],
+    "duration": 30,
+    "precache": [
+      "particles/units/heroes/hero_ogre_magi/ogre_magi_bloodlust_buff.vpcf",
+      "particles/units/heroes/hero_ogre_magi/ogre_magi_bloodlust_cast.vpcf"
+    ]
+  },
+  "timbersaw_whirling_death": {
+    "maxLevel": 3,
+    "castPoint": 0.5,
+    "castAnimation": "ACT_DOTA_CAST_ABILITY_1",
+    "cooldown": [
+      6,
+      5,
+      4
+    ],
+    "manaCost": 100,
+    "animationlength": 1.8,
+    "radius": 2,
+    "damage": [
+      150,
+      200,
+      250
+    ],
+    "whirling_tick": 0.3,
+    "precache": [
+      "particles/units/heroes/hero_shredder/shredder_whirling_death.vpcf"
+    ]
+  },
+  "necrophos_death_pulse": {
+    "maxLevel": 3,
+    "castPoint": 0.3,
+    "castAnimation": "ACT_DOTA_CAST_ABILITY_1",
+    "cooldown": 5,
+    "manaCost": 100,
+    "radius": 3,
+    "projectile_speed": 400,
+    "damage": [
+      100,
+      150,
+      200
+    ],
+    "heal": [
+      100,
+      175,
+      250
+    ],
+    "animationlength": 0.83,
+    "precache": [
+      "particles/units/heroes/hero_necrolyte/necrolyte_pulse_friend.vpcf",
+      "particles/units/heroes/hero_necrolyte/necrolyte_pulse_enemy.vpcf"
+    ]
+  },
+  "clockwerk_battery_assault": {
+    "maxLevel": 3,
+    "castPoint": 0.3,
+    "cooldown": [
+      12,
+      10,
+      8
+    ],
+    "castAnimation": "ACT_DOTA_CAST_ABILITY_1",
+    "manaCost": 100,
+    "radius_in_cells": 1,
+    "damage_tick": 0.7,
+    "damage": [
+      50,
+      75,
+      100
+    ],
+    "stun": 0.1,
+    "animationlength": 0.97,
+    "duration": 5,
+    "precache": [
+      "particles/units/heroes/hero_rattletrap/rattletrap_battery_assault.vpcf",
+      "particles/units/heroes/hero_rattletrap/rattletrap_battery_shrapnel.vpcf"
+    ]
+  },
+  "templar_assassin_refraction": {
+    "maxLevel": 3,
+    "castPoint": 0,
+    "castAnimation": "ACT_DOTA_CAST_ABILITY_1",
+    "cooldown": 6,
+    "manaCost": 100,
+    "instances": [
+      4,
+      6,
+      8
+    ],
+    "bonus_damage": [
+      40,
+      60,
+      80
+    ],
+    "damage_threshold": 5,
+    "duration": 6,
+    "animationlength": 0.8,
+    "precache": [
+      "particles/units/heroes/hero_templar_assassin/templar_assassin_refraction_dmg.vpcf",
+      "particles/units/heroes/hero_templar_assassin/templar_assassin_refraction.vpcf",
+      "particles/units/heroes/hero_templar_assassin/templar_assassin_refract_hit.vpcf"
+    ]
+  },
+  "enigma_midnight_pulse": {
+    "maxLevel": 3,
+    "castPoint": 0.5,
+    "castAnimation": "ACT_DOTA_CAST_ABILITY_1",
+    "cooldown": 20,
+    "manaCost": 100,
+    "radius": [
+      2,
+      3,
+      4
+    ],
+    "damage_percent": [
+      5,
+      7,
+      9
+    ],
+    "duration": 10,
+    "animationlength": 1.2,
+    "precache": [
+      "particles/units/heroes/hero_enigma/enigma_midnight_pulse.vpcf"
+    ]
+  },
+  "medusa_stone_gaze": {
+    "maxLevel": 3,
+    "castPoint": 0.3,
+    "castAnimation": "ACT_DOTA_MEDUSA_STONE_GAZE",
+    "cooldown": 20,
+    "manaCost": 100,
+    "duration": [
+      4,
+      5,
+      6
+    ],
+    "slow": 30,
+    "radius": 4,
+    "face_duration": 2,
+    "stone_duration": [
+      2,
+      3,
+      4
+    ],
+    "vision_cone": 0.08715,
+    "bonus_physical_damage": 20,
+    "animationlength": 1.83,
+    "precache": [
+      "particles/status_fx/status_effect_medusa_stone_gaze.vpcf",
+      "particles/units/heroes/hero_medusa/medusa_stone_gaze_cast.vpcf",
+      "particles/units/heroes/hero_medusa/medusa_stone_gaze_active.vpcf",
+      "particles/units/heroes/hero_medusa/medusa_stone_gaze_debuff.vpcf",
+      "particles/units/heroes/hero_medusa/medusa_stone_gaze_facing.vpcf",
+      "particles/units/heroes/hero_medusa/medusa_stone_gaze_debuff_stoned.vpcf"
+    ]
+  },
+  "medusa_split_shot": {
+    "maxLevel": 3,
+    "damage_modifier": [
+      -40,
+      -30,
+      -20
+    ],
+    "range": 1,
+    "extra_shots": 3,
+    "precache": []
+  },
+  "treant_leech_seed": {
+    "maxLevel": 3,
+    "castPoint": 0.5,
+    "castAnimation": "ACT_DOTA_CAST_ABILITY_2",
+    "cooldown": 7,
+    "manaCost": 100,
+    "duration": 5,
+    "movement_slow": -50,
+    "radius": 3,
+    "projectile_speed": 600,
+    "leech_damage": [
+      60,
+      90,
+      120
+    ],
+    "damage_interval": 1.5,
+    "animationlength": 1,
+    "precache": [
+      "particles/units/heroes/hero_treant/treant_leech_seed.vpcf",
+      "particles/units/heroes/hero_treant/treant_leech_seed_damage_pulse.vpcf"
+    ]
+  },
+  "razor_plasma_field": {
+    "maxLevel": 3,
+    "castPoint": 0.5,
+    "castAnimation": "ACT_DOTA_CAST_ABILITY_1",
+    "cooldown": 10,
+    "manaCost": 100,
+    "damage_min": 10,
+    "damage_max": [
+      100,
+      175,
+      250
+    ],
+    "radius": 3,
+    "speed": 636,
+    "damage_interval": 1.5,
+    "animationlength": 1,
+    "precache": [
+      "particles/units/heroes/hero_razor/razor_plasmafield.vpcf",
+      "particles/units/heroes/hero_razor/razor_base_attack_impact.vpcf"
+    ]
+  },
+  "shadow_fiend_requiem": {
+    "maxLevel": 3,
+    "castPoint": 1.67,
+    "castAnimation": "ACT_DOTA_CAST_ABILITY_6",
+    "cooldown": 20,
+    "manaCost": 100,
+    "damage": [
+      100,
+      175,
+      250
+    ],
+    "radius": 5,
+    "speed": 700,
+    "line_width_start": 125,
+    "line_width_end": 425,
+    "lines": [
+      6,
+      8,
+      10
+    ],
+    "animationlength": 2.47,
+    "precache": [
+      "particles/units/heroes/hero_nevermore/nevermore_wings.vpcf",
+      "particles/units/heroes/hero_nevermore/nevermore_requiemofsouls.vpcf",
+      "particles/units/heroes/hero_nevermore/nevermore_requiemofsouls_line.vpcf"
+    ]
+  },
+  "antimage_mana_break": {
+    "maxLevel": 3,
+    "damage_per_burn": 0.5,
+    "mana_per_hit": [
+      30,
+      60,
+      90
+    ],
+    "precache": [
+      "particles/units/heroes/hero_antimage/antimage_blade_hit.vpcf"
+    ]
+  },
+  "drow_ranger_trueshot_aura": {
+    "maxLevel": 3,
+    "bonus": [
+      10,
+      20,
+      30
+    ],
+    "range": 1
+  },
+  "luna_moon_glaive": {
+    "bounces": [
+      3,
+      5,
+      7
+    ],
+    "range": 2,
+    "damage_reduction_percent": 30,
+    "precache": [
+      "particles/units/heroes/hero_luna/luna_moon_glaive_bounce.vpcf"
+    ]
+  },
+  "tidehunter_ravage": {
+    "maxLevel": 3,
+    "castPoint": 0.3,
+    "cooldown": 30,
+    "manaCost": 100,
+    "cells": [
+      2,
+      3,
+      4
+    ],
+    "projectile_speed": 725,
+    "duration": [
+      2,
+      2.5,
+      3
+    ],
+    "damage": [
+      150,
+      250,
+      350
+    ],
+    "castAnimation": "ACT_DOTA_CAST_ABILITY_4",
+    "animationlength": 0.97,
+    "precache": [
+      "particles/units/heroes/hero_tidehunter/tidehunter_ravage_cell1.vpcf",
+      "particles/units/heroes/hero_tidehunter/tidehunter_ravage_cell2.vpcf",
+      "particles/units/heroes/hero_tidehunter/tidehunter_ravage_cell3.vpcf",
+      "particles/units/heroes/hero_tidehunter/tidehunter_ravage_cell4.vpcf",
+      "particles/units/heroes/hero_tidehunter/tidehunter_spell_ravage_hit.vpcf"
+    ]
+  },
+  "tusk_walrus_punch": {
+    "maxLevel": 3,
+    "castPoint": 0,
+    "castAnimation": "ACT_DOTA_CAST_ABILITY_4",
+    "cooldown": 7,
+    "manaCost": 100,
+    "air_time": 1,
+    "slow_duration": 2,
+    "critical_damage": [
+      300,
+      350,
+      400
+    ],
+    "move_slow": 40,
+    "precache": [
+      "particles/units/heroes/hero_tusk/tusk_walruspunch_start.vpcf",
+      "particles/units/heroes/hero_tusk/tusk_walruspunch_hand.vpcf",
+      "particles/status_fx/status_effect_iceblast_half.vpcf",
+      "particles/units/heroes/hero_tusk/tusk_walruspunch_tgt_status.vpcf",
+      "particles/units/heroes/hero_tusk/tusk_walruspunch_tgt.vpcf",
+      "particles/units/heroes/hero_tusk/tusk_walruspunch_txt_ult.vpcf"
+    ]
+  },
+  "omniknight_purification": {
+    "maxLevel": 3,
+    "castPoint": 0.5,
+    "castAnimation": "ACT_DOTA_CAST_ABILITY_1",
+    "cooldown": 10,
+    "manaCost": 100,
+    "radius": 1,
+    "heal": [
+      200,
+      400,
+      600
+    ],
+    "animationlength": 1.83,
+    "precache": [
+      "particles/units/heroes/hero_omniknight/omniknight_purification.vpcf",
+      "particles/units/heroes/hero_omniknight/omniknight_purification_cast.vpcf",
+      "particles/units/heroes/hero_omniknight/omniknight_purification_hit.vpcf"
+    ]
+  },
+  "disruptor_static_storm": {
+    "maxLevel": 3,
+    "castPoint": 0.3,
+    "castAnimation": "ACT_DOTA_CAST_ABILITY_2",
+    "cooldown": [
+      15,
+      12,
+      9
+    ],
+    "manaCost": 100,
+    "radius": 2,
+    "pulses": [
+      8,
+      12,
+      16
+    ],
+    "damage_max": [
+      100,
+      150,
+      200
+    ],
+    "duration": [
+      3,
+      4,
+      5
+    ],
+    "animationlength": 0.7,
+    "precache": [
+      "particles/units/heroes/hero_disruptor/disruptor_static_storm.vpcf",
+      "particles/units/heroes/hero_disruptor/disruptor_static_storm_bolt_hero.vpcf",
+      "particles/generic_gameplay/generic_silenced.vpcf",
+      "models/props_gameplay/frog.vmdl"
+    ]
+  },
+  "windrunner_powershot": {
+    "maxLevel": 3,
+    "castPoint": 1.5,
+    "castAnimation": "ACT_DOTA_CAST_ABILITY_2",
+    "cooldown": 10,
+    "manaCost": 100,
+    "powershot_damage": [
+      400,
+      600,
+      800
+    ],
+    "damage_reduction": 10,
+    "arrow_width": [
+      125,
+      125,
+      125
+    ],
+    "arrow_range": 1200,
+    "arrow_speed": [
+      3000,
+      3000,
+      3000
+    ],
+    "animationlength": 2,
+    "precache": [
+      "particles/units/heroes/hero_windrunner/windrunner_spell_powershot_channel.vpcf",
+      "particles/units/heroes/hero_windrunner/windrunner_spell_powershot.vpcf",
+      "particles/units/heroes/hero_windrunner/windrunner_powershot_dmg.vpcf"
+    ]
+  },
+  "crystal_maiden_brilliance_aura": {
+    "maxLevel": 3,
+    "mana_regen": [
+      8,
+      14,
+      20
+    ],
+    "animationlength": 1,
+    "interval": 2,
+    "precache": [
+      "particles/units/heroes/hero_crystalmaiden/cm_brilliance_aura.vpcf",
+      "particles/units/heroes/hero_crystalmaiden/cm_brilliance_aura_target.vpcf"
+    ]
+  },
+  "beastmaster_wild_axes": {
+    "maxLevel": 3,
+    "castPoint": 0.5,
+    "cooldown": 7,
+    "manaCost": 100,
+    "radius": 1,
+    "spread": 450,
+    "range": 1500,
+    "axe_damage": [
+      60,
+      100,
+      140
+    ],
+    "damage_amp": [
+      10,
+      20,
+      30
+    ],
+    "duration": 10,
+    "animationlength": 0.97,
+    "castAnimation": "ACT_DOTA_CAST_ABILITY_1",
+    "precache": [
+      "particles/units/heroes/hero_beastmaster/beastmaster_wildaxe.vpcf",
+      "particles/units/heroes/hero_beastmaster/beastmaster_wildaxes_hit.vpcf",
+      "particles/units/heroes/hero_beastmaster/beastmaster_wildaxe_debuff.vpcf"
+    ]
+  },
+  "doom_bringer_doom": {
+    "maxLevel": 3,
+    "castPoint": 0.5,
+    "cooldown": 10,
+    "manaCost": 100,
+    "animationlength": 1.33,
+    "castAnimation": "ACT_DOTA_CAST_ABILITY_4",
+    "duration": 20,
+    "damage": [
+      60,
+      90,
+      120
+    ],
+    "precache": [
+      "particles/units/heroes/hero_doom_bringer/doom_bringer_doom.vpcf",
+      "particles/status_fx/status_effect_doom.vpcf"
+    ]
+  },
+  "venomancer_plague_ward": {
+    "maxLevel": 3,
+    "castPoint": 0.5,
+    "castAnimation": "ACT_DOTA_CAST_ABILITY_3",
+    "cooldown": 5,
+    "manaCost": 100,
+    "animationlength": 0.73,
+    "duration": 40,
+    "summonID": 56,
+    "precache": [
+      "particles/units/heroes/hero_venomancer/venomancer_ward_cast.vpcf"
+    ]
+  },
+  "lina_laguna_blade": {
+    "maxLevel": 3,
+    "castPoint": 0.3,
+    "castAnimation": "ACT_DOTA_CAST_ABILITY_4",
+    "cooldown": [
+      10,
+      8,
+      6
+    ],
+    "manaCost": 100,
+    "animationlength": 1.27,
+    "damage": [
+      500,
+      750,
+      1000
+    ],
+    "cast_range_scepter": 600,
+    "damage_delay": 0.25,
+    "precache": [
+      "particles/units/heroes/hero_lina/lina_spell_laguna_blade.vpcf"
+    ]
+  },
+  "abaddon_aphotic_shield": {
+    "maxLevel": 3,
+    "castPoint": 0.3,
+    "cooldown": 12,
+    "manaCost": 100,
+    "animationlength": 1.13,
+    "duration": 10,
+    "damage_absorb": [
+      100,
+      300,
+      500
+    ],
+    "radius": 2,
+    "castAnimation": "ACT_DOTA_CAST_ABILITY_2",
+    "precache": [
+      "particles/units/heroes/hero_abaddon/abaddon_aphotic_shield_hit.vpcf",
+      "particles/units/heroes/hero_abaddon/abaddon_aphotic_shield.vpcf"
+    ]
+  },
+  "kunkka_ghostship": {
+    "maxLevel": 3,
+    "castPoint": 0.5,
+    "castAnimation": "ACT_DOTA_CAST_GHOST_SHIP",
+    "cooldown": 10,
+    "manaCost": 100,
+    "animationlength": 0.7,
+    "ghostship_distance": 2000,
+    "ghostship_width": [
+      325,
+      425,
+      525
+    ],
+    "ghostship_crash_cells": [
+      2,
+      3,
+      4
+    ],
+    "movespeed_bonus": [
+      10,
+      10,
+      10
+    ],
+    "buff_duration": 0,
+    "stun_duration": [
+      1.4,
+      1.7,
+      2
+    ],
+    "ghostship_speed": 650,
+    "ghostship_absorb": 0,
+    "ability_damage": [
+      150,
+      250,
+      350
+    ],
+    "precache": [
+      "particles/units/heroes/hero_kunkka/kunkka_ghost_ship.vpcf",
+      "particles/units/heroes/hero_kunkka/kunkka_ghostship_marker.vpcf",
+      "particles/status_fx/status_effect_rum.vpcf"
+    ]
+  },
+  "shadow_shaman_voodoo": {
+    "maxLevel": 3,
+    "castPoint": 0.5,
+    "castAnimation": "ACT_DOTA_CAST_ABILITY_2",
+    "cooldown": 10,
+    "manaCost": 100,
+    "animationlength": 1.17,
+    "movespeed": 100,
+    "duration": [
+      4,
+      6,
+      8
+    ],
+    "precache": [
+      "models/props_gameplay/chicken.vmdl",
+      "particles/units/heroes/hero_shadowshaman/shadowshaman_voodoo.vpcf",
+      "models/props_gameplay/frog.vmdl"
+    ]
+  },
+  "natures_prophet_summon_tree": {
+    "maxLevel": 3,
+    "castPoint": 0.3,
+    "castAnimation": "ACT_DOTA_CAST_ABILITY_3",
+    "cooldown": 6,
+    "manaCost": 50,
+    "summonID": 58,
+    "animationlength": 1.97
+  },
+  "lone_druid_summon_bear": {
+    "maxLevel": 3,
+    "castPoint": 0.3,
+    "castAnimation": "ACT_DOTA_CAST_ABILITY_1",
+    "cooldown": 60,
+    "manaCost": 100,
+    "summonID": 59,
+    "animationlength": 1.3,
+    "precache": [
+      "particles/units/heroes/hero_lone_druid/lone_druid_bear_spawn.vpcf"
+    ]
+  },
+  "lycan_wolf_spawn_shift": {
+    "maxLevel": 3,
+    "castPoint": 0.55,
+    "castAnimation": "ACT_DOTA_CAST_ABILITY_1",
+    "cooldown": 60,
+    "manaCost": 100,
+    "summonID": 60,
+    "animationlength": 0.55,
+    "hp_per": [
+      30,
+      40,
+      50
+    ],
+    "speed": 650,
+    "crit_chance": 40,
+    "crit_bonus": [
+      150,
+      175,
+      200
+    ],
+    "precache": [
+      "particles/units/heroes/hero_lycan/lycan_shapeshift_cast.vpcf",
+      "particles/units/heroes/hero_lycan/lycan_summon_wolves_cast.vpcf",
+      "particles/units/heroes/hero_lycan/lycan_summon_wolves_spawn.vpcf"
+    ]
+  },
+  "techies_bomb": {
+    "maxLevel": 3,
+    "castPoint": 0.3,
+    "castAnimation": "ACT_DOTA_CAST_ABILITY_1",
+    "cooldown": 10,
+    "manaCost": 100,
+    "animationlength": 0.6,
+    "explode_time": "3",
+    "damage": [
+      700,
+      1100,
+      1500
+    ],
+    "range": 4,
+    "summonID": 61,
+    "precache": [
+      "particles/units/heroes/hero_techies/techies_remote_mines_detonate.vpcf"
+    ]
+  },
+  "sven_great_cleave": {
+    "maxLevel": 1,
+    "cleave_starting_width": 150,
+    "cleave_ending_width": 330,
+    "cleave_distance": 625,
+    "great_cleave_damage": 50,
+    "precache": [
+      "particles/units/heroes/hero_sven/sven_spell_great_cleave.vpcf"
+    ]
+  },
+  "lone_druid_spirit_bear_entangle": {
+    "maxLevel": 3,
+    "chance": 25,
+    "stun_duration": 3,
+    "precache": [
+      "particles/units/heroes/hero_lone_druid/lone_druid_bear_entangle.vpcf",
+      "particles/units/heroes/hero_lone_druid/lone_druid_bear_entangle_body.vpcf"
+    ]
+  },
+  "pudge_meathook": {
+    "maxLevel": 3,
+    "castPoint": 0.3,
+    "castAnimation": "ACT_DOTA_OVERRIDE_ABILITY_1",
+    "cooldown": [
+      10,
+      10,
+      10
+    ],
+    "manaCost": 100,
+    "animationlength": 2.87,
+    "hook_speed": 1450,
+    "damage": [
+      150,
+      220,
+      290
+    ],
+    "precache": [
+      "particles/units/heroes/hero_pudge/pudge_meathook.vpcf",
+      "particles/units/heroes/hero_pudge/pudge_meathook_impact.vpcf"
+    ]
+  },
+  "pudge_pound": {
+    "maxLevel": 3,
+    "castPoint": 0,
+    "castAnimation": "ACT_DOTA_OVERRIDE_ABILITY_1",
+    "cooldown": [
+      0,
+      0,
+      0
+    ],
+    "manaCost": 0,
+    "animationlength": 2.87,
+    "chance": [
+      15,
+      20,
+      25
+    ],
+    "num_attacks": [
+      3,
+      4,
+      5
+    ],
+    "bonus_attack_speed": 300,
+    "precache": [
+      "particles/units/heroes/hero_pudge/pudge_dismember.vpcf"
+    ]
+  },
+  "warlock_shadow_word": {
+    "maxLevel": 3,
+    "castPoint": 0.5,
+    "castAnimation": "ACT_DOTA_CAST_ABILITY_2",
+    "cooldown": [
+      20,
+      20,
+      20
+    ],
+    "manaCost": 100,
+    "animationlength": 1.17,
+    "damage_tick": [
+      100,
+      150,
+      200
+    ],
+    "heal_tick": [
+      75,
+      150,
+      200
+    ],
+    "ally_health_pct": 50,
+    "duration": 6,
+    "precache": [
+      "particles/units/heroes/hero_warlock/warlock_shadow_word_debuff.vpcf",
+      "particles/units/heroes/hero_warlock/warlock_shadow_word_buff.vpcf"
+    ]
+  },
+  "bloodseeker_blood_rage": {
+    "maxLevel": 3,
+    "self_dmg_pct": 7,
+    "heal_pct": 35,
+    "attack_speed_per_missing_pct": 5,
+    "precache": [
+      "particles/units/heroes/hero_bloodseeker/bloodseeker_bloodrage.vpcf"
+    ]
+  },
+  "arc_warden_magnetic_field": {
+    "maxLevel": 3,
+    "castPoint": 0.3,
+    "castAnimation": "ACT_DOTA_CAST_ABILITY_2",
+    "cooldown": [
+      15,
+      15,
+      15
+    ],
+    "manaCost": 100,
+    "animationlength": 1,
+    "duration": [
+      4,
+      5,
+      6
+    ],
+    "bonus_attack_speed": [
+      50,
+      60,
+      70
+    ],
+    "evasion_chance": 100,
+    "precache": [
+      "particles/units/heroes/hero_arc_warden/arc_warden_magnetic.vpcf",
+      "particles/units/heroes/hero_arc_warden/arc_warden_magnetic_cast.vpcf"
+    ]
+  },
+  "arc_warden_tempest_double": {
+    "maxLevel": 3,
+    "castPoint": 0.15,
+    "castAnimation": "ACT_DOTA_CAST_ABILITY_4",
+    "cooldown": 60,
+    "manaCost": 100,
+    "animationlength": 1.07,
+    "mana_dampen_incoming": -100,
+    "mana_dampen_outgoing": -50,
+    "precache": [
+      "particles/units/heroes/hero_arc_warden/arc_warden_tempest_cast.vpcf",
+      "particles/units/heroes/hero_arc_warden/arc_warden_tempest_buff.vpcf",
+      "particles/units/heroes/hero_arc_warden/arc_warden_tempest_eyes.vpcf"
+    ]
+  },
+  "sandking_caustic_finale": {
+    "maxLevel": 3,
+    "radius_cell": 1,
+    "damage_aoe": [
+      50,
+      100,
+      150
+    ],
+    "damage_expired": [
+      45,
+      90,
+      180
+    ],
+    "duration": 3.5,
+    "attack_slow": -30,
+    "slow_duration": 3,
+    "precache": [
+      "particles/items2_fx/orb_of_venom.vpcf",
+      "particles/units/heroes/hero_sandking/sandking_caustic_finale_debuff.vpcf",
+      "particles/units/heroes/hero_sandking/sandking_caustic_finale_explode.vpcf"
+    ]
+  },
+  "black_dragon_splash_attack": {
+    "splash_radius": 1,
+    "splash_damage_percent": 50
+  }
+}

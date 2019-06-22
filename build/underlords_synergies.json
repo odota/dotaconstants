@@ -1,0 +1,526 @@
+{
+  "Beast": {
+    "type": "Race",
+    "levels": [
+      {
+        "id": 20000,
+        "unitcount": 2,
+        "affects_all_allied_units": true
+      },
+      {
+        "id": 20001,
+        "unitcount": 4,
+        "affects_all_allied_units": true
+      },
+      {
+        "id": 20002,
+        "unitcount": 6,
+        "affects_all_allied_units": true
+      }
+    ],
+    "damage_pct": [
+      10,
+      25,
+      45
+    ],
+    "color": "178 65 26"
+  },
+  "Demon": {
+    "type": "Race",
+    "levels": [
+      {
+        "id": 20003,
+        "unitcount": 1,
+        "requires_exact_number": true,
+        "affects_all_allies_with_keyword": true
+      }
+    ],
+    "damage_bonus_pct": 50,
+    "color": "222 33 33",
+    "precache": [
+      "particles/gameplay/synergy/demon/demon_buff.vpcf"
+    ]
+  },
+  "Dragon": {
+    "type": "Race",
+    "levels": [
+      {
+        "id": 20004,
+        "unitcount": 3,
+        "affects_all_allies_with_keyword": true
+      }
+    ],
+    "color": "255 81 27"
+  },
+  "Dwarf": {
+    "type": "Race",
+    "levels": [
+      {
+        "id": 20005,
+        "unitcount": 2,
+        "affects_all_allies_with_keyword": true
+      }
+    ],
+    "color": "194 147 21",
+    "precache": [
+      "particles/gameplay/synergy/dwarf/dwarf_target.vpcf"
+    ]
+  },
+  "Element": {
+    "type": "Race",
+    "levels": [
+      {
+        "id": 20006,
+        "unitcount": 2,
+        "affects_all_allies_with_keyword": true
+      },
+      {
+        "id": 20007,
+        "unitcount": 4,
+        "affects_all_allied_units": true
+      }
+    ],
+    "stun_chance": 30,
+    "stun_duration": 4,
+    "bonus_physical_damage": 0,
+    "color": "0 128 128"
+  },
+  "Elf": {
+    "type": "Race",
+    "levels": [
+      {
+        "id": 20008,
+        "unitcount": 3,
+        "affects_all_allies_with_keyword": true
+      },
+      {
+        "id": 20009,
+        "unitcount": 6,
+        "affects_all_allies_with_keyword": true
+      },
+      {
+        "id": 20010,
+        "unitcount": 9,
+        "affects_all_allies_with_keyword": true
+      }
+    ],
+    "evasion_bonus": [
+      20,
+      45,
+      75
+    ],
+    "color": "95 151 208"
+  },
+  "Goblin": {
+    "type": "Race",
+    "levels": [
+      {
+        "id": 20011,
+        "unitcount": 3,
+        "affects_random_ally": true
+      },
+      {
+        "id": 20012,
+        "unitcount": 6,
+        "affects_all_allied_units": true
+      }
+    ],
+    "armor_bonus": 15,
+    "hp_regen": 10,
+    "color": "184 199 44",
+    "precache": [
+      "particles/gameplay/synergy/goblin/goblin_buff.vpcf"
+    ]
+  },
+  "Human": {
+    "type": "Race",
+    "levels": [
+      {
+        "id": 20013,
+        "unitcount": 2,
+        "affects_all_allies_with_keyword": true
+      },
+      {
+        "id": 20014,
+        "unitcount": 4,
+        "affects_all_allies_with_keyword": true
+      },
+      {
+        "id": 20015,
+        "unitcount": 6,
+        "affects_all_allies_with_keyword": true
+      }
+    ],
+    "stun_chance": [
+      20,
+      44,
+      66
+    ],
+    "stun_duration": 4,
+    "color": "2 200 156"
+  },
+  "Naga": {
+    "type": "Race",
+    "levels": [
+      {
+        "id": 20016,
+        "unitcount": 2,
+        "affects_all_allied_units": true
+      },
+      {
+        "id": 20017,
+        "unitcount": 4,
+        "affects_all_allied_units": true
+      }
+    ],
+    "magic_resist": [
+      30,
+      50
+    ],
+    "color": "72 63 162"
+  },
+  "Ogre": {
+    "type": "Race",
+    "levels": [
+      {
+        "id": 20018,
+        "unitcount": 2,
+        "affects_all_allies_with_keyword": true
+      }
+    ],
+    "enrage_bonus_pct": [
+      100
+    ],
+    "color": "85 107 47"
+  },
+  "Orc": {
+    "type": "Race",
+    "levels": [
+      {
+        "id": 20019,
+        "unitcount": 2,
+        "affects_all_allies_with_keyword": true
+      },
+      {
+        "id": 20020,
+        "unitcount": 4,
+        "affects_all_allies_with_keyword": true
+      }
+    ],
+    "hp_bonus": [
+      200,
+      500
+    ],
+    "color": "166 27 27"
+  },
+  "Troll": {
+    "type": "Race",
+    "levels": [
+      {
+        "id": 20021,
+        "unitcount": 2,
+        "affects_all_allies_with_keyword": true
+      },
+      {
+        "id": 20022,
+        "unitcount": 4,
+        "affects_all_allied_units": true
+      }
+    ],
+    "attack_speed_bonus_trolls": [
+      35,
+      65
+    ],
+    "attack_speed_bonus_others": [
+      0,
+      30
+    ],
+    "color": "158 110 74",
+    "precache": [
+      "particles/generic_gameplay/generic_attackspeed.vpcf"
+    ]
+  },
+  "Undead": {
+    "type": "Race",
+    "levels": [
+      {
+        "id": 20023,
+        "unitcount": 2,
+        "affects_all_enemy_units": true
+      },
+      {
+        "id": 20024,
+        "unitcount": 4,
+        "affects_all_enemy_units": true
+      },
+      {
+        "id": 20025,
+        "unitcount": 6,
+        "affects_all_enemy_units": true
+      }
+    ],
+    "armor_debuff": [
+      -5,
+      -10,
+      -20
+    ],
+    "color": "79 213 101"
+  },
+  "Satyr": {
+    "type": "Race",
+    "levels": [
+      {
+        "id": 20026,
+        "unitcount": 1
+      }
+    ],
+    "color": "192 192 192"
+  },
+  "Assassin": {
+    "type": "Class",
+    "levels": [
+      {
+        "id": 20027,
+        "unitcount": 3,
+        "affects_all_allies_with_keyword": true
+      },
+      {
+        "id": 20028,
+        "unitcount": 6,
+        "affects_all_allies_with_keyword": true
+      },
+      {
+        "id": 20029,
+        "unitcount": 9,
+        "affects_all_allies_with_keyword": true
+      }
+    ],
+    "crit_chance": [
+      10,
+      20,
+      30
+    ],
+    "crit_bonus": [
+      300,
+      400,
+      500
+    ],
+    "color": "153 50 204"
+  },
+  "DemonHunter": {
+    "type": "Class",
+    "levels": [
+      {
+        "id": 20030,
+        "affects_all_enemies_with_keyword": true,
+        "special_keyword": "demon",
+        "cumulative": true,
+        "modifier_name": "demonhunter_immunity",
+        "unitcount": 1
+      },
+      {
+        "id": 20031,
+        "unitcount": 2,
+        "affects_all_allies_with_keyword": true,
+        "special_keyword": "demon",
+        "modifier_name": "demonhunter_demon_buff"
+      }
+    ],
+    "damage_bonus_pct": [
+      0,
+      50
+    ],
+    "color": "139 0 139"
+  },
+  "Druid": {
+    "type": "Class",
+    "levels": [
+      {
+        "id": 20032,
+        "unitcount": 2,
+        "affects_all_allies_with_keyword": true
+      },
+      {
+        "id": 20033,
+        "unitcount": 4,
+        "affects_all_allies_with_keyword": true
+      }
+    ],
+    "color": "34 139 34"
+  },
+  "Hunter": {
+    "type": "Class",
+    "levels": [
+      {
+        "id": 20034,
+        "unitcount": 3,
+        "affects_all_allies_with_keyword": true
+      },
+      {
+        "id": 20035,
+        "unitcount": 6,
+        "affects_all_allies_with_keyword": true
+      }
+    ],
+    "chance": [
+      20,
+      35
+    ],
+    "num_attacks": [
+      2,
+      2
+    ],
+    "bonus_attack_speed": 300,
+    "color": "255 118 82"
+  },
+  "Knight": {
+    "type": "Class",
+    "levels": [
+      {
+        "id": 20036,
+        "unitcount": 2,
+        "affects_all_allies_with_keyword": true
+      },
+      {
+        "id": 20037,
+        "unitcount": 4,
+        "affects_all_allies_with_keyword": true
+      },
+      {
+        "id": 20038,
+        "unitcount": 6,
+        "affects_all_allies_with_keyword": true
+      }
+    ],
+    "physical_reduction": [
+      -25,
+      -35,
+      -50
+    ],
+    "magical_reduction": [
+      -25,
+      -35,
+      -50
+    ],
+    "duration": 1,
+    "color": "255 227 39"
+  },
+  "Mage": {
+    "type": "Class",
+    "levels": [
+      {
+        "id": 20039,
+        "unitcount": 3,
+        "affects_all_enemy_units": true
+      },
+      {
+        "id": 20040,
+        "unitcount": 6,
+        "affects_all_enemy_units": true
+      }
+    ],
+    "base_modifiers": [
+      "modifier_bonus_mana_per_hit"
+    ],
+    "magic_resist_debuff": [
+      -40,
+      -100
+    ],
+    "color": "88 221 233"
+  },
+  "Mech": {
+    "type": "Class",
+    "levels": [
+      {
+        "id": 20041,
+        "unitcount": 2,
+        "affects_all_allies_with_keyword": true
+      },
+      {
+        "id": 20042,
+        "unitcount": 4,
+        "affects_all_allies_with_keyword": true
+      }
+    ],
+    "health_regen": [
+      15,
+      40
+    ],
+    "color": "251 142 20",
+    "precache": [
+      "particles/gameplay/synergy/mech/mech_buff.vpcf"
+    ]
+  },
+  "Shaman": {
+    "type": "Class",
+    "levels": [
+      {
+        "id": 20043,
+        "unitcount": 2,
+        "affects_random_enemy": true
+      }
+    ],
+    "base_modifiers": [
+      "modifier_bonus_mana_per_hit"
+    ],
+    "delay": 1,
+    "duration": 6,
+    "movespeed": 140,
+    "color": "52 159 100"
+  },
+  "Warlock": {
+    "type": "Class",
+    "levels": [
+      {
+        "id": 20044,
+        "unitcount": 2,
+        "affects_all_allied_units": true
+      },
+      {
+        "id": 20045,
+        "unitcount": 4,
+        "affects_all_allied_units": true
+      },
+      {
+        "id": 20046,
+        "unitcount": 6,
+        "affects_all_allied_units": true
+      }
+    ],
+    "base_modifiers": [
+      "modifier_bonus_mana_per_hit"
+    ],
+    "lifesteal_pct": [
+      15,
+      30,
+      50
+    ],
+    "color": "228 110 213"
+  },
+  "Warrior": {
+    "type": "Class",
+    "levels": [
+      {
+        "id": 20047,
+        "unitcount": 3,
+        "affects_all_allies_with_keyword": true
+      },
+      {
+        "id": 20048,
+        "unitcount": 6,
+        "affects_all_allies_with_keyword": true
+      },
+      {
+        "id": 20049,
+        "unitcount": 9,
+        "affects_all_allies_with_keyword": true
+      }
+    ],
+    "armor_bonus": [
+      10,
+      15,
+      25
+    ],
+    "color": "28 103 180"
+  }
+}
