@@ -25,8 +25,10 @@ player_colors: require(__dirname + '/build/player_colors.json'),
 region: require(__dirname + '/build/region.json'),
 skillshots: require(__dirname + '/build/skillshots.json'),
 underlords_abilities: require(__dirname + '/build/underlords_abilities.json'),
+underlords_alliances: require(__dirname + '/build/underlords_alliances.json'),
 underlords_heroes: require(__dirname + '/build/underlords_heroes.json'),
 underlords_items: require(__dirname + '/build/underlords_items.json'),
+underlords_localization_en: require(__dirname + '/build/underlords_localization_en.json'),
 underlords_synergies: require(__dirname + '/build/underlords_synergies.json'),
 xp_level: require(__dirname + '/build/xp_level.json')
 };

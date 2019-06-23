@@ -563,13 +563,18 @@ const sources = [{
     transform: resObj => resObj
   },
   {
-    key: "underlords_synergies",
+    key: "underlords_alliances",
     url: "https://raw.githubusercontent.com/SteamDatabase/GameTracking-Underlords/master/game/dac/pak01_dir/scripts/synergies.json",
     transform: resObj => resObj
   },
   {
     key: "underlords_items",
     url: "https://raw.githubusercontent.com/SteamDatabase/GameTracking-Underlords/master/game/dac/pak01_dir/scripts/items.json",
+    transform: resObj => resObj
+  },
+  {
+    key: "underlords_localization_en",
+    url: "https://raw.githubusercontent.com/SteamDatabase/GameTracking-Underlords/master/game/dac/panorama/localization/dac_english.txt",
     transform: resObj => resObj
   }
 ];
