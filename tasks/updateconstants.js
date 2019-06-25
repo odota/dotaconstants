@@ -576,6 +576,11 @@ const sources = [{
     key: "underlords_localization_en",
     url: "https://raw.githubusercontent.com/SteamDatabase/GameTracking-Underlords/master/game/dac/panorama/localization/dac_english.txt",
     transform: resObj => resObj
+  },
+  {
+    key: "underlords_localization_abilities_en",
+    url: "https://raw.githubusercontent.com/SteamDatabase/GameTracking-Underlords/master/game/dac/pak01_dir/resource/localization/dac_abilities_english.txt",
+    transform: resObj => resObj
   }
 ];
 
