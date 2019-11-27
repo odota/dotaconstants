@@ -325,14 +325,15 @@ const sources = [{
     url: [
       "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/dota_english.json",
       "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.json",
-      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/dota_english.json",
+      // "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/dota_english.json",
     ],
     transform: respObj => {
       let heroes = [];
       let keys = Object.keys(respObj[1].DOTAHeroes).filter((name) => !badNames.includes(name));
       keys.forEach((name) => {
         let h = formatVpkHero(name, respObj[1], respObj[0].lang.Tokens[name]);
-        h.localized_name = h.localized_name || respObj[2].lang.Tokens[name];
+        h.localized_name = h.localized_name || respObj[1]['DOTAHeroes'][name].workshop_guide_name;
+        // h.localized_name = h.localized_name || respObj[2].lang.Tokens[name];
         heroes.push(h);
       });
       heroes = heroes.sort((a, b) => a.id - b.id);
