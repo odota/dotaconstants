@@ -719,8 +719,13 @@ function catogerizeItemAbilities(abilities) {
     else {
       ability = ability.replace(/<[^h1>]*>/gi, "");
       const regExp = /<h1>\s*(.*)\s*:\s*(.*)\s*<\/h1>\s*([\s\S]*)/gi
-      const [_, type, name, desc] = regExp.exec(ability);
-      (itemAbilities[type.toLowerCase()] = itemAbilities[type.toLowerCase()] || []).push({ "name": name, "desc": desc })
+      try {
+        const [_, type, name, desc] = regExp.exec(ability);
+        (itemAbilities[type.toLowerCase()] = itemAbilities[type.toLowerCase()] || []).push({ "name": name, "desc": desc })
+      }
+      catch(e) {
+        console.log(e);
+      }
     }
   })
   return itemAbilities;
