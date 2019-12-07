@@ -39,10 +39,10 @@
         "key": "mana_per_hit_pct",
         "header": "MAX MANA BURNED PER HIT:",
         "value": [
+          "1%",
           "2%",
           "3%",
-          "4%",
-          "5%"
+          "4%"
         ]
       },
       {
@@ -617,9 +617,9 @@
         "key": "health_bonus_pct",
         "header": "KILL HEAL PERCENTAGE:",
         "value": [
-          "16%",
-          "19%",
-          "22%",
+          "13%",
+          "17%",
+          "21%",
           "25%"
         ]
       },
@@ -627,9 +627,9 @@
         "key": "health_bonus_creep_pct",
         "header": "HEALTH BONUS CREEP PCT:",
         "value": [
-          "16",
-          "19",
-          "22",
+          "13",
+          "17",
+          "21",
           "25"
         ],
         "generated": true
@@ -831,6 +831,7 @@
       "Autocast",
       "Attack Modifier"
     ],
+    "dmg_type": "Physical",
     "bkbpierce": "No",
     "desc": "Adds a freezing effect to Drow's attacks, slowing enemy movement and dealing bonus damage.  Slow lasts %abilityduration% seconds.",
     "dmg": "0",
@@ -926,9 +927,9 @@
       "80"
     ],
     "cd": [
-      "32",
-      "28",
+      "26",
       "24",
+      "22",
       "20"
     ],
     "img": "/apps/dota2/images/abilities/drow_ranger_multishot_md.png"
@@ -1048,7 +1049,7 @@
     "behavior": "Passive",
     "dmg_type": "Physical",
     "bkbpierce": "Yes",
-    "desc": "Drow's experiences in battle grant her a chance to launch arrows with incredible accuracy and effectiveness. Pierces through the enemy's defenses, ignoring their base armor. Grants Drow and nearby ranged heroes with bonus agility based on your current agility. This ability is disabled if there is an enemy hero within 400 range.",
+    "desc": "Drow's experiences in battle grant her a chance to launch arrows with incredible accuracy and effectiveness. Pierces through the enemy's defenses, ignoring their base armor. Grants Drow and nearby ranged heroes with bonus agility based on Drow's current agility. This ability is disabled if there is an enemy hero within 400 range.",
     "attrib": [
       {
         "key": "chance",
@@ -1063,18 +1064,18 @@
         "key": "bonus_damage",
         "header": "BONUS PROC DAMAGE:",
         "value": [
-          "40",
-          "50",
-          "60"
+          "70",
+          "80",
+          "90"
         ]
       },
       {
         "key": "agility_multiplier",
         "header": "AGILITY BONUS:",
         "value": [
-          "25%",
-          "30%",
-          "35%"
+          "35%",
+          "40%",
+          "45%"
         ]
       },
       {
@@ -1164,7 +1165,7 @@
   "earthshaker_enchant_totem": {
     "dname": "Enchant Totem",
     "behavior": "No Target",
-    "desc": "Empowers Earthshaker's totem, causing it to deal extra damage on the next attack.",
+    "desc": "Empowers Earthshaker's totem, causing it to deal extra damage and have 75 bonus attack range on the next attack.",
     "dmg": "0",
     "attrib": [
       {
@@ -1221,7 +1222,8 @@
       {
         "key": "bonus_attack_range",
         "header": "BONUS ATTACK RANGE:",
-        "value": "75"
+        "value": "75",
+        "generated": true
       }
     ],
     "mc": [
@@ -1501,9 +1503,9 @@
         "key": "slow_duration",
         "header": "SLOW DURATION:",
         "value": [
-          "1.75",
-          "2.5",
-          "3.25",
+          "1",
+          "2",
+          "3",
           "4"
         ]
       },
@@ -2552,10 +2554,10 @@
         "key": "bonus_attributes",
         "header": "BONUS ATTRIBUTES:",
         "value": [
-          "1",
           "3",
           "5",
-          "7"
+          "7",
+          "9"
         ],
         "generated": true
       }
@@ -2588,10 +2590,10 @@
         "key": "bonus_attributes",
         "header": "BONUS AGILITY:",
         "value": [
-          "1",
           "3",
           "5",
-          "7"
+          "7",
+          "9"
         ]
       },
       {
@@ -2634,10 +2636,10 @@
         "key": "bonus_attributes",
         "header": "BONUS STRENGTH:",
         "value": [
-          "1",
           "3",
           "5",
-          "7"
+          "7",
+          "9"
         ]
       },
       {
@@ -2658,7 +2660,7 @@
     "dname": "Morph",
     "behavior": "Unit Target",
     "bkbpierce": "Yes",
-    "desc": "Morphling changes his form to match the targeted enemy, gaining their basic abilities. Can be toggled for the duration of the ability.",
+    "desc": "Morphling changes his form to match the targeted enemy, gaining their basic abilities with reduced mana cost. Can be toggled for the duration of the ability.",
     "attrib": [
       {
         "key": "duration",
@@ -2987,7 +2989,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Shadow Fiend gathers his captured souls to release them as lines of demonic energy. Units near Shadow Fiend when the souls are released can be damaged by several lines of energy. Any unit damaged by Requiem of Souls will be feared and have its movement speed reduced for 0.6 seconds for each line hit. Lines of energy are created for every 2,2,2 souls captured through Necromastery.  Requiem of Souls is automatically cast whenever Shadow Fiend dies, regardless of its cooldown.",
+    "desc": "Shadow Fiend gathers his captured souls to release them as lines of demonic energy. Units near Shadow Fiend when the souls are released can be damaged by several lines of energy. Any unit damaged by Requiem of Souls will be feared and have its movement speed reduced for 0.8 seconds for each line hit. Lines of energy are created for every 2,2,2 souls captured through Necromastery.  Requiem of Souls is automatically cast whenever Shadow Fiend dies, regardless of its cooldown.",
     "dmg": [
       "80",
       "120",
@@ -3008,13 +3010,13 @@
       {
         "key": "requiem_slow_duration",
         "header": "REQUIEM SLOW DURATION:",
-        "value": "0.6",
+        "value": "0.8",
         "generated": true
       },
       {
         "key": "requiem_slow_duration_max",
         "header": "REQUIEM SLOW DURATION MAX:",
-        "value": "2.2",
+        "value": "2.4",
         "generated": true
       },
       {
@@ -3423,7 +3425,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Puck releases a burst of faerie dust that deals damage and silences enemy units nearby.",
+    "desc": "Puck teleports to the target location and releases a burst of faerie dust that deals damage and silences enemy units nearby.",
     "attrib": [
       {
         "key": "radius",
@@ -3444,9 +3446,9 @@
         "key": "damage",
         "header": "DAMAGE:",
         "value": [
-          "100",
-          "160",
-          "220",
+          "70",
+          "140",
+          "210",
           "280"
         ]
       }
@@ -3565,7 +3567,7 @@
         "key": "coil_stun_duration_scepter",
         "header": "SCEPTER BREAK STUN DURATION:",
         "value": [
-          "1.5",
+          "1.8",
           "3",
           "4.5"
         ]
@@ -4164,20 +4166,20 @@
         "key": "movement_speed_pct",
         "header": "BONUS SPEED:",
         "value": [
-          "4%",
-          "6%",
-          "8%",
-          "10%"
+          "3%",
+          "5%",
+          "7%",
+          "9%"
         ]
       },
       {
         "key": "self_movement_speed_pct",
         "header": "SELF BONUS SPEED:",
         "value": [
-          "8%",
-          "12%",
-          "16%",
-          "20%"
+          "6%",
+          "10%",
+          "14%",
+          "18%"
         ]
       },
       {
@@ -4207,8 +4209,8 @@
         "key": "passive_area_damage",
         "header": "PASSIVE DAMAGE:",
         "value": [
-          "80",
-          "110",
+          "60",
+          "100",
           "140"
         ]
       },
@@ -5665,7 +5667,7 @@
     "behavior": "Unit Target",
     "dmg_type": "Physical",
     "bkbpierce": "Yes",
-    "desc": "Grabs a tree to whack enemies on the head. Grants bonus attack range but Tiny is slowed by 25. Attacks deal more damage and fully splash on units along the way. The tree can be thrown, expending all the charges, to deal your attack to a unit at a distance.",
+    "desc": "Grabs a tree to whack enemies on the head. Grants bonus attack range but Tiny is slowed by 25. Attacks deal more damage and fully splash on units along the way. The tree can be thrown, to deal your attack to a unit at a distance.",
     "attrib": [
       {
         "key": "bonus_damage",
@@ -5681,10 +5683,10 @@
         "key": "bonus_damage_buildings",
         "header": "BONUS BUILDING DAMAGE:",
         "value": [
+          "20%",
           "50%",
           "80%",
-          "110%",
-          "140%"
+          "110%"
         ]
       },
       {
@@ -5751,7 +5753,7 @@
     ],
     "dmg_type": "Physical",
     "bkbpierce": "No",
-    "desc": "Consume the remaining Tree Grab charges and throws the tree at the target unit, proccing your attack on it and splashing damage around the target.",
+    "desc": "Throws the tree at the target unit, proccing your attack on it and splashing damage around the target.",
     "attrib": [
       {
         "key": "speed",
@@ -6375,10 +6377,10 @@
         "key": "damage_reduction",
         "header": "DAMAGE BLOCK:",
         "value": [
-          "5",
-          "10",
-          "20",
-          "40"
+          "12",
+          "24",
+          "36",
+          "48"
         ]
       },
       {
@@ -6541,26 +6543,26 @@
       "Passive",
       null
     ],
-    "desc": "Vengeful Spirit's presence increases the attack range and primary attribute of nearby friendly units. Spawns a Vengeance Illusion when you die that lasts until Vengeful Spirit revives.",
+    "desc": "Vengeful Spirit's presence increases the ranged attack range and primary attribute of nearby friendly units. Spawns a Strong Illusion when of Vengeful Spirit when she dies that lasts until it is killed or Vengeful Spirit revives.",
     "attrib": [
       {
         "key": "bonus_attributes",
         "header": "BONUS PRIMARY ATTRIBUTE:",
         "value": [
           "4",
-          "8",
-          "12",
-          "16"
+          "7",
+          "10",
+          "13"
         ]
       },
       {
         "key": "bonus_attack_range",
         "header": "BONUS ATTACK RANGE:",
         "value": [
-          "60",
+          "50",
+          "75",
           "100",
-          "140",
-          "180"
+          "125"
         ]
       },
       {
@@ -6571,7 +6573,12 @@
       {
         "key": "illusion_damage_out_pct",
         "header": "ILLUSION DAMAGE DEALT:",
-        "value": "100%"
+        "value": [
+          "70%",
+          "80%",
+          "90%",
+          "100%"
+        ]
       },
       {
         "key": "illusion_damage_in_pct",
@@ -6813,26 +6820,16 @@
   "crystal_maiden_brilliance_aura": {
     "dname": "Arcane Aura",
     "behavior": "Passive",
-    "desc": "Gives additional mana regeneration and magic resistance to all friendly units on the map. This bonus is increased for Crystal Maiden.",
+    "desc": "Gives additional mana regeneration to all friendly units on the map. This bonus is increased for Crystal Maiden.",
     "attrib": [
       {
         "key": "mana_regen",
         "header": "MANA REGEN:",
         "value": [
+          "0.5",
           "1",
           "1.5",
-          "2",
-          "2.5"
-        ]
-      },
-      {
-        "key": "magic_resistance",
-        "header": "MAGIC RESISTANCE:",
-        "value": [
-          "4%",
-          "6%",
-          "8%",
-          "10%"
+          "2"
         ]
       },
       {
@@ -7914,9 +7911,9 @@
         "key": "damage_multiplier",
         "header": "AGI DAMAGE MULT:",
         "value": [
-          "1",
-          "1.5",
-          "2"
+          "1.4",
+          "1.8",
+          "2.2"
         ]
       },
       {
@@ -7972,6 +7969,7 @@
       "AOE",
       "Channeled"
     ],
+    "bkbpierce": "Yes",
     "desc": "Riki phases out of the world while striking randomy enemy units from behind in an area around him.",
     "attrib": [
       {
@@ -7988,9 +7986,9 @@
         "key": "damage_pct",
         "header": "ATTACK DAMAGE:",
         "value": [
-          "55%",
           "70%",
-          "85%",
+          "80%",
+          "90%",
           "100%"
         ]
       },
@@ -8585,7 +8583,7 @@
       "No Target",
       "Instant Cast"
     ],
-    "desc": "Extends the attack range of Sniper's rifle. Can be activated to double the attack range bonus for 1 attack.",
+    "desc": "Extends the attack range of Sniper's rifle. Can be activated to double the attack range bonus for 1 attack. Goes on cooldown after the attack is used.",
     "attrib": [
       {
         "key": "bonus_attack_range",
@@ -9904,7 +9902,7 @@
     "behavior": "Passive",
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Adds poison damage to Venomancer's normal attacks, slowing movement speed.",
+    "desc": "Adds poison damage to Venomancer's normal attacks, slowing movement speed and reducing the target's HP regeneration.",
     "attrib": [
       {
         "key": "duration",
@@ -9921,9 +9919,9 @@
         "header": "DAMAGE PER SECOND:",
         "value": [
           "6",
-          "14",
-          "22",
-          "30"
+          "12",
+          "18",
+          "24"
         ]
       },
       {
@@ -9939,7 +9937,12 @@
       {
         "key": "hp_regen_reduction",
         "header": "HP REGEN REDUCTION:",
-        "value": "30%"
+        "value": [
+          "15%",
+          "20%",
+          "25%",
+          "30%"
+        ]
       }
     ],
     "img": "/apps/dota2/images/abilities/venomancer_poison_sting_md.png"
@@ -10103,9 +10106,8 @@
       },
       {
         "key": "radius_scepter",
-        "header": "RADIUS SCEPTER:",
-        "value": "250",
-        "generated": true
+        "header": "SCEPTER TIMELOCK RADIUS:",
+        "value": "250"
       }
     ],
     "mc": "40",
@@ -10419,9 +10421,9 @@
         "key": "health_drain",
         "header": "DRAIN PER SECOND:",
         "value": [
-          "150",
-          "250",
-          "350"
+          "175",
+          "275",
+          "375"
         ]
       },
       {
@@ -12730,7 +12732,7 @@
       "No Target",
       "Instant Cast"
     ],
-    "desc": "Launch into a maddened rage, becoming Spell Immune, 100% resistant to magic damage, and gaining increased movement speed.\n\nDISPEL TYPE: Basic Dispel",
+    "desc": "Launch into a maddened rage, becoming Spell Immune, and gaining increased movement speed.\n\nDISPEL TYPE: Basic Dispel",
     "attrib": [
       {
         "key": "movement_speed_bonus",
@@ -12854,17 +12856,8 @@
         "generated": true
       },
       {
-        "key": "bonus_movement_speed_hero",
-        "header": "HERO MOVEMENT SPEED:",
-        "value": [
-          "30%",
-          "40%",
-          "50%"
-        ]
-      },
-      {
-        "key": "bonus_movement_speed_creep",
-        "header": "CREEP MOVEMENT SPEED:",
+        "key": "bonus_movement_speed",
+        "header": "MOVEMENT SPEED:",
         "value": [
           "15%",
           "20%",
@@ -12875,15 +12868,15 @@
         "key": "bonus_health",
         "header": "HEALTH BONUS:",
         "value": [
-          "750",
-          "1000",
-          "1250"
+          "400",
+          "800",
+          "1200"
         ]
       },
       {
         "key": "cooldown_scepter",
         "header": "SCEPTER COOLDOWN:",
-        "value": "20"
+        "value": "25"
       },
       {
         "key": "cast_range_scepter",
@@ -13484,10 +13477,10 @@
         "key": "health_gain",
         "header": "HEALTH GAIN:",
         "value": [
-          "200",
-          "300",
-          "400",
-          "500"
+          "250",
+          "350",
+          "450",
+          "550"
         ]
       },
       {
@@ -13787,7 +13780,7 @@
       {
         "key": "hop_distance",
         "header": "DISTANCE:",
-        "value": "400"
+        "value": "450"
       },
       {
         "key": "hop_duration",
@@ -13810,7 +13803,7 @@
     "dname": "Enchant",
     "behavior": "Unit Target",
     "bkbpierce": "No",
-    "desc": "Enchantress charms an enemy. If the enemy is a hero, they are slowed. If the enemy is a creep, she brings it under her control. If cast on a creep already under her control, she refreshes its enchant duration.\n\nDISPEL TYPE: Basic Dispel",
+    "desc": "Enchantress charms an enemy. If the enemy is a hero, they are slowed. If the enemy is a creep, she brings it under her control.\n\nDISPEL TYPE: Basic Dispel",
     "attrib": [
       {
         "key": "dominate_duration",
@@ -16248,7 +16241,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Doom swings his burning sword, igniting the enemy. Stuns for 0.6 seconds and applies a 4 second burn that deals 16,20,24,28 + 1.25,2.5,3.75,5% of the target's Max HP as damage per second.",
+    "desc": "Doom swings his burning sword, igniting the enemy. Stuns for 0.6 seconds and applies a 4 second burn that deals a base damage plus a percentage of the target's Max HP as damage per second.",
     "attrib": [
       {
         "key": "burn_damage",
@@ -16910,7 +16903,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Ursa slams the earth, causing a powerful shock to damage and slow all enemy units in a nearby area for 4 seconds.",
+    "desc": "Ursa leaps forward 250 units and slams the earth, causing a powerful shock to damage and slow all enemy units in a nearby area for %abilityduration% seconds.",
     "dmg": [
       "75",
       "125",
@@ -16927,9 +16920,9 @@
         "key": "movement_slow",
         "header": "SLOW:",
         "value": [
+          "-10%",
           "-25%",
-          "-35%",
-          "-45%",
+          "-40%",
           "-55%"
         ]
       },
@@ -17066,8 +17059,8 @@
     ],
     "mc": "0",
     "cd": [
+      "70",
       "50",
-      "40",
       "30"
     ],
     "img": "/apps/dota2/images/abilities/ursa_enrage_md.png"
@@ -17799,7 +17792,7 @@
       "Instant Cast",
       null
     ],
-    "desc": "Combines the properties of the elements currently being manipulated to create a new spell for Invoker to use.  Click the help button to see the list of possible spells.",
+    "desc": "Combines the properties of the elements currently being manipulated to create a new spell for Invoker to use. Invoke cooldown is reduced by 0.3 seconds for each orb level.  Click the help button to see the list of possible spells.",
     "attrib": [
       {
         "key": "max_invoked_spells",
@@ -18733,7 +18726,7 @@
     "behavior": "Unit Target",
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Enchants a target, causing them to be damaged and silenced if they cast a spell or if the enchantment timer expires. Deals extra damage based on the difference in intelligence between Silencer and the target.",
+    "desc": "Enchants a target, providing vision of them and causing them to be damaged and silenced if they cast a spell or if the enchantment timer expires. Deals extra damage based on the difference in intelligence between Silencer and the target.",
     "attrib": [
       {
         "key": "damage",
@@ -18814,7 +18807,7 @@
     ],
     "dmg_type": "Pure",
     "bkbpierce": "No",
-    "desc": "Adds extra pure damage to Outworld Devourer's attacks, based on his remaining mana pool. Costs a percentage of his current mana to cast.",
+    "desc": "Adds extra pure damage to Outworld Devourer's attacks, based on his remaining mana pool.",
     "attrib": [
       {
         "key": "mana_pool_damage_pct",
@@ -19058,18 +19051,18 @@
         "key": "damage_multiplier",
         "header": "MANA DIFFERENCE MULTIPLIER:",
         "value": [
-          "0.4",
           "0.5",
-          "0.6"
+          "0.6",
+          "0.7"
         ]
       },
       {
         "key": "stack_mana",
         "header": "MAX MANA PER CHARGE:",
         "value": [
-          "30",
           "40",
-          "50"
+          "50",
+          "60"
         ]
       },
       {
@@ -19513,7 +19506,7 @@
     "dname": "Savage Roar",
     "behavior": "No Target",
     "bkbpierce": "No",
-    "desc": "Lone Druid roars fiercely causing nearby enemies to flee towards their base in terror. Their movement speed is increased by 20%.",
+    "desc": "Lone Druid and the Spirit Bear roar fiercely causing nearby enemies to flee towards their base in terror. Their movement speed is increased by 20%.",
     "attrib": [
       {
         "key": "radius",
@@ -19558,7 +19551,7 @@
       "Hidden"
     ],
     "bkbpierce": "No",
-    "desc": "Spirit Bear roars fiercely causing nearby enemies to flee towards their base in terror. Their movement speed is increased by 20%.",
+    "desc": "Lone Druid and the Spirit Bear roar fiercely causing nearby enemies to flee towards their base in terror. Their movement speed is increased by 20%.",
     "attrib": [
       {
         "key": "radius",
@@ -20676,9 +20669,9 @@
         "header": "CRITICAL MAX:",
         "value": [
           "140%",
-          "165%",
-          "190%",
-          "215%"
+          "170%",
+          "200%",
+          "230%"
         ]
       },
       {
@@ -20948,14 +20941,17 @@
   },
   "treant_natures_guise": {
     "dname": "Nature's Guise",
-    "behavior": "No Target",
-    "dmg_type": "Magical",
-    "desc": "Turns Treant invisible after a %abilitycastpoint% second cast time when he is within close radius of a tree. Increases movement speed while invisible, and causes a disarming root when attacking out of invisibility.",
+    "behavior": [
+      "Passive",
+      null
+    ],
+    "desc": "Provides Treant with Tree Walking whenever he hasn't taken damage for 3 seconds. While active, Treant gains movement speed bonus and amplified healing and regeneration on himself.",
     "attrib": [
       {
         "key": "radius",
-        "header": "TREE RADIUS:",
-        "value": "265"
+        "header": "RADIUS:",
+        "value": "150",
+        "generated": true
       },
       {
         "key": "grace_time",
@@ -20964,63 +20960,29 @@
         "generated": true
       },
       {
-        "key": "movement_speed",
-        "header": "MOVEMENT SPEED:",
-        "value": [
-          "20%",
-          "22%",
-          "24%",
-          "26%"
-        ]
-      },
-      {
-        "key": "bash_duration",
-        "header": "ROOT DURATION:",
-        "value": [
-          "0.4",
-          "1",
-          "1.6",
-          "2.2"
-        ]
-      },
-      {
-        "key": "total_damage",
-        "header": "TOTAL DAMAGE:",
-        "value": [
-          "60",
-          "110",
-          "160",
-          "210"
-        ]
-      },
-      {
-        "key": "tick_count",
-        "header": "TICK COUNT:",
+        "key": "cooldown_time",
+        "header": "COOLDOWN TIME:",
         "value": "3",
         "generated": true
+      },
+      {
+        "key": "regen_amp",
+        "header": "SELF HEAL AND REGEN AMP:",
+        "value": "25%"
+      },
+      {
+        "key": "movement_bonus",
+        "header": "MOVEMENT SPEED:",
+        "value": "15%"
       }
-    ],
-    "mc": [
-      "30",
-      "40",
-      "50",
-      "60"
-    ],
-    "cd": [
-      "10",
-      "8",
-      "6",
-      "4"
     ],
     "img": "/apps/dota2/images/abilities/treant_natures_guise_md.png"
   },
   "treant_natures_grasp": {
     "dname": "Nature's Grasp",
-    "behavior": [
-      "Unit Target",
-      "Point Target"
-    ],
+    "behavior": "Point Target",
     "dmg_type": "Magical",
+    "bkbpierce": "No",
     "desc": "Creates vines towards the target location. Vines slow down and deal damage to enemies that walk through. Vines deal 50% more damage if they touch a tree. Does half damage to creeps.",
     "attrib": [
       {
@@ -21086,7 +21048,12 @@
       "80",
       "90"
     ],
-    "cd": "20",
+    "cd": [
+      "20",
+      "19",
+      "18",
+      "17"
+    ],
     "img": "/apps/dota2/images/abilities/treant_natures_grasp_md.png"
   },
   "treant_leech_seed": {
@@ -21145,7 +21112,12 @@
       }
     ],
     "mc": "80",
-    "cd": "16",
+    "cd": [
+      "16",
+      "15",
+      "14",
+      "13"
+    ],
     "img": "/apps/dota2/images/abilities/treant_leech_seed_md.png"
   },
   "treant_living_armor": {
@@ -21161,25 +21133,25 @@
         "header": "TOTAL HEAL:",
         "value": [
           "60",
-          "120",
-          "180",
-          "240"
+          "100",
+          "140",
+          "180"
         ]
       },
       {
         "key": "bonus_armor",
         "header": "BONUS ARMOR:",
         "value": [
-          "7",
-          "10",
-          "13",
-          "16"
+          "4",
+          "6",
+          "8",
+          "10"
         ]
       },
       {
         "key": "duration",
         "header": "DURATION:",
-        "value": "8"
+        "value": "12"
       }
     ],
     "mc": "50",
@@ -21196,7 +21168,7 @@
     "behavior": "No Target",
     "dmg_type": "Magical",
     "bkbpierce": "Yes",
-    "desc": "Summons an overgrowth of vines and branches around Treant that prevent afflicted enemies from moving, blinking, going invisible, or attacking.",
+    "desc": "Summons an overgrowth of vines and branches around Treant that deal damage to afflicted enemies and prevent them from moving, blinking, going invisible, or attacking.",
     "attrib": [
       {
         "key": "duration",
@@ -21221,11 +21193,7 @@
       {
         "key": "damage",
         "header": "DAMAGE PER SECOND:",
-        "value": [
-          "50",
-          "75",
-          "100"
-        ]
+        "value": "100"
       }
     ],
     "mc": [
@@ -21259,6 +21227,12 @@
         "key": "overgrowth_aoe",
         "header": "TREE OVERGROWTH RADIUS:",
         "value": "800"
+      },
+      {
+        "key": "tree_respawn_seconds",
+        "header": "TREE RESPAWN SECONDS:",
+        "value": "10",
+        "generated": true
       }
     ],
     "mc": "100",
@@ -21803,18 +21777,18 @@
         "key": "slow",
         "header": "SLOW:",
         "value": [
-          "30%",
-          "35%",
-          "40%"
+          "40%",
+          "45%",
+          "50%"
         ]
       },
       {
         "key": "damage",
         "header": "DAMAGE PER SECOND:",
         "value": [
-          "15",
           "25",
-          "35"
+          "35",
+          "45"
         ]
       },
       {
@@ -21826,9 +21800,9 @@
         "key": "str_percentage",
         "header": "STRENGTH MULTIPLIER:",
         "value": [
-          "30%",
           "40%",
-          "50%"
+          "50%",
+          "60%"
         ]
       },
       {
@@ -22152,7 +22126,7 @@
     "behavior": "Unit Target",
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Repeatedly strikes the targeted unit with lightning.  Each strike damages nearby enemy units in a small radius and applies an extremely short high duration slow.  Provides vision of its target.",
+    "desc": "Repeatedly strikes the targeted unit with lightning.  Each strike damages nearby enemy units in a small radius and slows enemy movement and attack speed by 100% for 0.1 seconds.  Provides vision of its target.",
     "attrib": [
       {
         "key": "radius",
@@ -23576,7 +23550,8 @@
       null,
       "Point Target",
       "AOE",
-      null
+      null,
+      "Instant Cast"
     ],
     "bkbpierce": "No",
     "desc": "The closest familiar to the target location moves and casts Stone Form at that location.After a short delay, the Familiar turns into stone and smashes into the ground, stunning and damaging all targets in the area.  The Familiar becomes invulnerable, and will regain its health very rapidly.  After 6 seconds, the Familiar will automatically leave Stone Form.",
@@ -23852,7 +23827,7 @@
       "No Target",
       "Instant Cast"
     ],
-    "desc": "Io gains bonus attack speed and damage reduction.  If Io is Tethered to an ally, that unit also gains the bonuses.",
+    "desc": "Io gains bonus attack speed and HP Regen based on max health.  If Io is Tethered to an ally, that unit also gains the bonuses.",
     "attrib": [
       {
         "key": "bonus_attack_speed",
@@ -24326,7 +24301,7 @@
       "No Target",
       "Instant Cast"
     ],
-    "desc": "Creates a shield that absorbs 60% of incoming damage in exchange for Medusa's mana.",
+    "desc": "Creates a shield that absorbs 70% of incoming damage in exchange for Medusa's mana.",
     "attrib": [
       {
         "key": "damage_per_mana",
@@ -24341,7 +24316,7 @@
       {
         "key": "absorption_tooltip",
         "header": "ABSORPTION TOOLTIP:",
-        "value": "60",
+        "value": "70",
         "generated": true
       }
     ],
@@ -24401,7 +24376,7 @@
       {
         "key": "speed_boost",
         "header": "SPEED BOOST:",
-        "value": "25%"
+        "value": "35%"
       }
     ],
     "mc": "200",
@@ -25001,7 +24976,7 @@
   "magnataur_empower": {
     "dname": "Empower",
     "behavior": "Unit Target",
-    "desc": "Gives an allied unit bonus damage and cleave on attack. Magnataur receives 2 times the bonus.",
+    "desc": "Gives an allied unit bonus damage and cleave on attack. Magnus receives 2 times the bonus.",
     "attrib": [
       {
         "key": "empower_duration",
@@ -25162,7 +25137,12 @@
       {
         "key": "skewer_cooldown",
         "header": "SCEPTER COOLDOWN:",
-        "value": "4"
+        "value": "6"
+      },
+      {
+        "key": "skewer_manacost",
+        "header": "SCEPTER MANACOST:",
+        "value": "40"
       }
     ],
     "mc": "80",
@@ -30664,9 +30644,9 @@
         "key": "physical_damage_reduction",
         "header": "FRONT REDUCTION:",
         "value": [
-          "25%",
           "40%",
-          "55%",
+          "50%",
+          "60%",
           "70%"
         ]
       },
@@ -30680,9 +30660,9 @@
         "key": "physical_damage_reduction_side",
         "header": "SIDE REDUCTION:",
         "value": [
-          "12%",
           "20%",
-          "27%",
+          "25%",
+          "30%",
           "35%"
         ]
       },
@@ -30871,10 +30851,10 @@
         "key": "impact_damage",
         "header": "DAMAGE:",
         "value": [
-          "90",
-          "150",
-          "210",
-          "270"
+          "80",
+          "130",
+          "180",
+          "230"
         ]
       },
       {
@@ -30931,10 +30911,10 @@
     "bkbpierce": "No",
     "desc": "Void Spirit temporarily fades into the aether, creating a number of portals through which he can reassemble himself. Upon exiting a portal, he damages all enemies in the area.",
     "dmg": [
-      "140",
-      "220",
-      "300",
-      "380"
+      "100",
+      "180",
+      "260",
+      "340"
     ],
     "attrib": [
       {
@@ -31023,9 +31003,9 @@
         "key": "max_travel_distance",
         "header": "RANGE:",
         "value": [
-          "600",
-          "800",
-          "1000"
+          "700",
+          "900",
+          "1100"
         ]
       },
       {
@@ -31084,9 +31064,9 @@
         "header": "DAMAGE:",
         "value": [
           "70",
-          "130",
-          "190",
-          "250"
+          "120",
+          "170",
+          "220"
         ]
       },
       {
@@ -31098,10 +31078,10 @@
         "key": "base_absorb_amount",
         "header": "BASE SHIELD ABSORB:",
         "value": [
-          "50",
-          "100",
-          "150",
-          "200"
+          "40",
+          "80",
+          "120",
+          "160"
         ]
       },
       {
@@ -31122,12 +31102,12 @@
       }
     ],
     "mc": [
-      "90",
       "100",
       "110",
-      "120"
+      "120",
+      "130"
     ],
-    "cd": "14",
+    "cd": "16",
     "img": "/apps/dota2/images/abilities/void_spirit_resonant_pulse_md.png"
   },
   "special_bonus_unique_void_spirit_1": {
@@ -31230,6 +31210,7 @@
       "AOE"
     ],
     "dmg_type": "Magical",
+    "bkbpierce": "No",
     "desc": "Snapfire's friend launches a barrage of firespit globs over 6 seconds. Globs cause impact damage and create pools of firespit, which slow and apply damage over time. Snapfire has a reduced turn rate for the duration and a minimum launch range of 600. Each glob can be targeted with a right click.",
     "attrib": [
       {
@@ -31258,9 +31239,9 @@
         "key": "damage_per_impact",
         "header": "DAMAGE PER GLOB:",
         "value": [
-          "175",
-          "250",
-          "325"
+          "200",
+          "300",
+          "400"
         ]
       },
       {
@@ -31299,7 +31280,7 @@
       {
         "key": "move_slow_pct",
         "header": "ENEMY MOVEMENT SLOW:",
-        "value": "15%"
+        "value": "25%"
       },
       {
         "key": "burn_ground_duration",
@@ -31321,13 +31302,13 @@
       {
         "key": "min_lob_travel_time",
         "header": "MIN LOB TRAVEL TIME:",
-        "value": "1",
+        "value": "0.8",
         "generated": true
       },
       {
         "key": "max_lob_travel_time",
         "header": "MAX LOB TRAVEL TIME:",
-        "value": "2.5",
+        "value": "2",
         "generated": true
       },
       {
@@ -31360,7 +31341,7 @@
       {
         "key": "projectile_speed",
         "header": "PROJECTILE SPEED:",
-        "value": "800",
+        "value": "1000",
         "generated": true
       },
       {
@@ -31417,25 +31398,25 @@
         "key": "impact_stun_duration",
         "header": "IMPACT STUN DURATION:",
         "value": [
-          "1.4",
           "1.6",
-          "1.8",
-          "2"
+          "1.9",
+          "2.2",
+          "2.5"
         ]
       },
       {
         "key": "self_cast_delay",
         "header": "SELF CAST DELAY:",
-        "value": "0.4",
+        "value": "0.3",
         "generated": true
       }
     ],
     "mc": "100",
     "cd": [
       "24",
-      "22",
-      "20",
-      "18"
+      "21",
+      "18",
+      "15"
     ],
     "img": "/apps/dota2/images/abilities/snapfire_firesnap_cookie_md.png"
   },
@@ -31449,10 +31430,10 @@
         "key": "damage",
         "header": "FIXED DAMAGE PER SHOT:",
         "value": [
-          "30",
-          "45",
-          "60",
-          "75"
+          "40",
+          "55",
+          "70",
+          "85"
         ]
       },
       {
@@ -31493,10 +31474,10 @@
         "key": "attack_speed_slow_per_stack",
         "header": "ATTACK SLOW PER STACK:",
         "value": [
+          "15",
           "20",
           "25",
-          "30",
-          "35"
+          "30"
         ]
       },
       {
@@ -31505,7 +31486,7 @@
         "value": "3"
       }
     ],
-    "mc": "75",
+    "mc": "90",
     "cd": [
       "24",
       "20",
@@ -35071,12 +35052,12 @@
       {
         "key": "charge_restore_time",
         "header": "CHARGE RESTORE TIME:",
-        "value": "15"
+        "value": "23"
       },
       {
         "key": "cast_range_scepter_bonus",
         "header": "BONUS SCEPTER CAST RANGE:",
-        "value": "400"
+        "value": "300"
       }
     ],
     "mc": [
@@ -35144,7 +35125,7 @@
       {
         "key": "cast_range_scepter_bonus",
         "header": "BONUS SCEPTER CAST RANGE:",
-        "value": "400"
+        "value": "300"
       }
     ],
     "mc": [
@@ -35276,7 +35257,7 @@
       {
         "key": "cast_range_scepter_bonus",
         "header": "BONUS SCEPTER CAST RANGE:",
-        "value": "400"
+        "value": "300"
       },
       {
         "key": "vision_radius",
@@ -37263,7 +37244,7 @@
     "dname": "{s:value}s Tree Respawn Time"
   },
   "special_bonus_unique_treant_4": {
-    "dname": "+{s:value}s Nature's Guise Root"
+    "dname": "Nature's Guise Invisibility"
   },
   "special_bonus_unique_treant_5": {
     "dname": "+{s:value} Eyes and Overgrowth AoE"
@@ -37581,7 +37562,7 @@
     "dname": "+{s:value} Freezing Field Damage"
   },
   "special_bonus_unique_crystal_maiden_4": {
-    "dname": "+{s:value}% Manacost/Manaloss Reduction Aura"
+    "dname": "+{s:value}% Magic Resistance Arcane Aura"
   },
   "special_bonus_unique_doom_1": {
     "dname": "+{s:value}% Infernal Blade Damage"
@@ -38797,7 +38778,7 @@
     "dname": "+{s:value} Ink Swell Radius"
   },
   "special_bonus_unique_grimstroke_2": {
-    "dname": "{s:value}x Stroke of Fate Damage"
+    "dname": "+{s:value}% Stroke of Fate Damage"
   },
   "special_bonus_unique_grimstroke_3": {
     "dname": "+{s:value} Stroke of Fate Cast Range"
