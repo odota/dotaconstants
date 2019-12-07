@@ -58,6 +58,14 @@ const sources = [{
         return !(key.includes("item_recipe") && scripts[key].ItemCost === "0") && key !== "Version";
       }).forEach(key => {
         var item = { ...replaceSpecialAttribs(strings[`DOTA_Tooltip_ability_${key}_Description`], scripts[key].AbilitySpecial, true) };
+        if (item.use)
+        {
+          item.use.forEach((entry, i) => item.use[i].desc = item.use[i].desc.replace('%abilitycastrange%', scripts[key].AbilityCastRange));
+        }
+        if (item.active)
+        {
+          item.active.forEach((entry, i) => item.active[i].desc = item.active[i].desc.replace('%abilitycastrange%', scripts[key].AbilityCastRange));
+        }
 
         item.id = parseInt(scripts[key].ID);
         item.img = `/apps/dota2/images/items/${key.replace(/^item_/, '')}_lg.png?t=${now}`;
