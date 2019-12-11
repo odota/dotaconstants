@@ -39,11 +39,15 @@ const sources = [{
     key: "items",
     url: [
       'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/abilities_english.json',
-      'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/items.json'
+      'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/items.json',
+      'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/neutral_items.txt'
     ],
     transform: respObj => {
       const strings = respObj[0].lang.Tokens;
       const scripts = respObj[1].DOTAAbilities;
+      const neutrals = respObj[2];
+      // parse neutral items into name => tier map
+      const neutralItemNameTierMap = getNeutralItemNameTierMap(neutrals);
 
       // Fix places where valve doesnt care about correct case
       Object.keys(strings).forEach(key => {
@@ -94,7 +98,10 @@ const sources = [{
 
         item.components = null;
         item.created = false;
-
+        item.charges = parseInt(scripts[key].ItemInitialCharges) || false;
+        if (neutralItemNameTierMap[key]) {
+          item.tier = neutralItemNameTierMap[key];
+        }
         items[key.replace(/^item_/, '')] = item;
       });
 
@@ -855,4 +862,15 @@ function parseNameFromArray(array, names) {
     }
   }
   return final.map((a) => a)[0];
+}
+
+const getNeutralItemNameTierMap = (neutrals) => {
+  var ret = {};
+  Object.keys(neutrals).forEach(tier => {
+    var items = neutrals[tier].items;
+    Object.keys(items).forEach(itemName => {
+      ret[itemName] = ret[itemName.replace(/recipe_/gi, "")] = parseInt(tier);
+    })
+  })
+  return ret;
 }
