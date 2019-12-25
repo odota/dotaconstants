@@ -821,7 +821,7 @@
       "225",
       "250"
     ],
-    "cd": "60",
+    "cd": "70",
     "img": "/apps/dota2/images/abilities/bloodseeker_rupture_md.png"
   },
   "drow_ranger_frost_arrows": {
@@ -880,10 +880,10 @@
         "key": "arrow_damage_pct",
         "header": "ARROW BASE DAMAGE BONUS:",
         "value": [
-          "95%",
-          "125%",
-          "155%",
-          "185%"
+          "90%",
+          "115%",
+          "140%",
+          "165%"
         ]
       },
       {
@@ -1073,9 +1073,9 @@
         "key": "agility_multiplier",
         "header": "AGILITY BONUS:",
         "value": [
-          "35%",
-          "40%",
-          "45%"
+          "28%",
+          "36%",
+          "44%"
         ]
       },
       {
@@ -6516,10 +6516,10 @@
         "key": "magic_missile_stun",
         "header": "STUN DURATION:",
         "value": [
+          "1.4",
           "1.5",
           "1.6",
-          "1.7",
-          "1.8"
+          "1.7"
         ]
       },
       {
@@ -6548,7 +6548,7 @@
       "Passive",
       null
     ],
-    "desc": "Vengeful Spirit's presence increases the ranged attack range and primary attribute of nearby friendly units. Spawns a Strong Illusion when of Vengeful Spirit when she dies that lasts until it is killed or Vengeful Spirit revives.",
+    "desc": "Vengeful Spirit's presence increases the ranged attack range and primary attribute of nearby friendly units. Spawns a Strong Illusion of Vengeful Spirit when she dies that lasts until it is killed or Vengeful Spirit revives.",
     "attrib": [
       {
         "key": "bonus_attributes",
@@ -6840,7 +6840,7 @@
       {
         "key": "self_factor",
         "header": "SELF BONUS FACTOR:",
-        "value": "2"
+        "value": "3"
       }
     ],
     "img": "/apps/dota2/images/abilities/crystal_maiden_brilliance_aura_md.png"
@@ -12838,7 +12838,7 @@
     "dname": "Infest",
     "behavior": "Unit Target",
     "dmg_type": "Magical",
-    "desc": "Lifestealer infests the body of a target unit, becoming undetectable inside. He can then explode from the host body, dealing damage to nearby enemies. If the infested unit is an enemy creep or a neutral creep, he can take control of the unit's ability to move and attack, and when consumed the creep will heal Lifestealer's health equal to the creep's current health.  Does not work on enemy heroes.\n\nDISPEL TYPE: Basic Dispel",
+    "desc": "Lifestealer infests the body of a target unit, becoming undetectable, and healing for a portion of his max hitpoints every second while inside. He can then explode from the host body, dealing damage to nearby enemies. If the infested unit is an enemy creep or a neutral creep, he can take control of the unit's ability to move and attack. Does not work on enemy heroes.\n\nDISPEL TYPE: Basic Dispel",
     "attrib": [
       {
         "key": "radius",
@@ -13171,7 +13171,10 @@
   },
   "dark_seer_wall_of_replica": {
     "dname": "Wall of Replica",
-    "behavior": "Point Target",
+    "behavior": [
+      "Point Target",
+      null
+    ],
     "dmg_type": "Magical",
     "bkbpierce": "Yes",
     "desc": "Raises a wall of warping light that slows and creates replicas of any enemy hero who crosses it. Enemy replicas serve at the Dark Seer's will. Replicas last until they are destroyed, or until the wall's duration ends.",
@@ -13404,7 +13407,10 @@
   },
   "clinkz_burning_army": {
     "dname": "Burning Army",
-    "behavior": "Point Target",
+    "behavior": [
+      "Point Target",
+      null
+    ],
     "dmg_type": "Physical",
     "desc": "Clinkz summons an army of fiery ranged skeleton archers. Archers are immobile and die with 2 attacks from a hero. Skeletons use your current Searing Arrows ability and attack only heroes. Base damage is %base_damage_percent%% of your hero's base damage. Attack range is equal to your hero's attack range. ",
     "attrib": [
@@ -16950,7 +16956,7 @@
         "generated": true
       }
     ],
-    "mc": "75",
+    "mc": "85",
     "cd": [
       "9",
       "8",
@@ -19055,11 +19061,7 @@
       {
         "key": "damage_multiplier",
         "header": "MANA DIFFERENCE MULTIPLIER:",
-        "value": [
-          "0.5",
-          "0.6",
-          "0.7"
-        ]
+        "value": "0.5"
       },
       {
         "key": "stack_mana",
@@ -20948,6 +20950,7 @@
     "dname": "Nature's Guise",
     "behavior": [
       "Passive",
+      null,
       null
     ],
     "desc": "Provides Treant with Tree Walking whenever he hasn't taken damage for 3 seconds. While active, Treant gains movement speed bonus and amplified healing and regeneration on himself.",
@@ -21116,11 +21119,11 @@
         "generated": true
       }
     ],
-    "mc": "80",
+    "mc": "110",
     "cd": [
+      "22",
+      "19",
       "16",
-      "15",
-      "14",
       "13"
     ],
     "img": "/apps/dota2/images/abilities/treant_leech_seed_md.png"
@@ -21198,7 +21201,7 @@
       {
         "key": "damage",
         "header": "DAMAGE PER SECOND:",
-        "value": "100"
+        "value": "75"
       }
     ],
     "mc": [
@@ -21206,11 +21209,7 @@
       "175",
       "200"
     ],
-    "cd": [
-      "100",
-      "85",
-      "70"
-    ],
+    "cd": "100",
     "img": "/apps/dota2/images/abilities/treant_overgrowth_md.png"
   },
   "treant_eyes_in_the_forest": {
@@ -23994,7 +23993,6 @@
   "slark_pounce": {
     "dname": "Pounce",
     "behavior": "No Target",
-    "dmg_type": "Magical",
     "bkbpierce": "No",
     "desc": "Slark leaps forward, grabbing the first hero he connects with.  That unit is leashed, and can only move a limited distance away from Slark's landing position.",
     "attrib": [
@@ -24319,10 +24317,9 @@
         ]
       },
       {
-        "key": "absorption_tooltip",
-        "header": "ABSORPTION TOOLTIP:",
-        "value": "70",
-        "generated": true
+        "key": "absorption_pct",
+        "header": "DAMAGE ABSORBED:",
+        "value": "70%"
       }
     ],
     "img": "/apps/dota2/images/abilities/medusa_mana_shield_md.png"
@@ -29429,7 +29426,10 @@
   },
   "pangolier_swashbuckle": {
     "dname": "Swashbuckle",
-    "behavior": "Point Target",
+    "behavior": [
+      "Point Target",
+      null
+    ],
     "dmg_type": "Physical",
     "bkbpierce": "Yes",
     "desc": "Vector Targeted. Pangolier dashes along the target line, then slashes all enemies in the drawn direction with several quick swipes.\n\nLucky Shot has a chance to activate from this damage.",
@@ -30800,7 +30800,10 @@
   },
   "void_spirit_aether_remnant": {
     "dname": "Aether Remnant",
-    "behavior": "Point Target",
+    "behavior": [
+      "Point Target",
+      null
+    ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
     "desc": "Vector targeted. Void Spirit dispatches a remnant to the target location. The remnant stands watch over the region, facing the direction of his vector. When a unit crosses its gaze, the remnant pulls it in and damages it.",
@@ -30993,9 +30996,9 @@
         "key": "charge_restore_time",
         "header": "CHARGE RESTORE TIME:",
         "value": [
+          "30",
           "25",
-          "20",
-          "15"
+          "20"
         ]
       },
       {
@@ -31038,11 +31041,7 @@
         ]
       }
     ],
-    "mc": [
-      "80",
-      "90",
-      "100"
-    ],
+    "mc": "100",
     "cd": "0",
     "img": "/apps/dota2/images/abilities/void_spirit_astral_step_md.png"
   },
@@ -31285,7 +31284,11 @@
       {
         "key": "move_slow_pct",
         "header": "ENEMY MOVEMENT SLOW:",
-        "value": "25%"
+        "value": [
+          "15%",
+          "20%",
+          "25%"
+        ]
       },
       {
         "key": "burn_ground_duration",
@@ -31435,10 +31438,10 @@
         "key": "damage",
         "header": "FIXED DAMAGE PER SHOT:",
         "value": [
-          "40",
-          "55",
-          "70",
-          "85"
+          "35",
+          "50",
+          "65",
+          "80"
         ]
       },
       {
@@ -31619,9 +31622,15 @@
         "key": "radius",
         "header": "RADIUS:",
         "value": "500"
+      },
+      {
+        "key": "initial_cooldown",
+        "header": "INITIAL COOLDOWN:",
+        "value": "420",
+        "generated": true
       }
     ],
-    "cd": "300",
+    "cd": "240",
     "img": "/apps/dota2/images/abilities/filler_ability_md.png"
   },
   "necronomicon_warrior_last_will": {
@@ -31784,12 +31793,6 @@
         "key": "handoff_distance",
         "header": "HANDOFF DISTANCE:",
         "value": "400",
-        "generated": true
-      },
-      {
-        "key": "stash_pickup_distance",
-        "header": "STASH PICKUP DISTANCE:",
-        "value": "250",
         "generated": true
       }
     ],
@@ -38848,13 +38851,13 @@
     "img": "/apps/dota2/images/abilities/seasonal_throw_snowball_md.png"
   },
   "seasonal_summon_snowman": {
-    "dname": "Summon Snowman",
+    "dname": "Build Snowman",
     "behavior": [
       "Point Target",
       null,
       null
     ],
-    "desc": "Summons a jolly snowman.",
+    "desc": "Construct a jolly snowman.",
     "dmg": "0",
     "attrib": [
       {
@@ -38885,6 +38888,123 @@
     "mc": "0",
     "cd": "10",
     "img": "/apps/dota2/images/abilities/seasonal_summon_snowman_md.png"
+  },
+  "seasonal_summon_penguin": {
+    "dname": "Summon Penguin",
+    "behavior": [
+      "Point Target",
+      null,
+      null
+    ],
+    "desc": "Summon a friendly penguin who slides around. Each time a hero bumps the penguin, it gains speed and lasts a bit longer.",
+    "dmg": "0",
+    "attrib": [
+      {
+        "key": "initial_lifetime",
+        "header": "INITIAL LIFETIME:",
+        "value": "20",
+        "generated": true
+      },
+      {
+        "key": "initial_speed",
+        "header": "INITIAL SPEED:",
+        "value": "100",
+        "generated": true
+      },
+      {
+        "key": "speed_step",
+        "header": "SPEED STEP:",
+        "value": "1",
+        "generated": true
+      },
+      {
+        "key": "max_speed",
+        "header": "MAX SPEED:",
+        "value": "1000",
+        "generated": true
+      },
+      {
+        "key": "impaired_duration",
+        "header": "IMPAIRED DURATION:",
+        "value": "3",
+        "generated": true
+      },
+      {
+        "key": "bump_delay",
+        "header": "BUMP DELAY:",
+        "value": "1.5",
+        "generated": true
+      },
+      {
+        "key": "bump_collision_radius",
+        "header": "BUMP COLLISION RADIUS:",
+        "value": "120",
+        "generated": true
+      },
+      {
+        "key": "spawn_offset",
+        "header": "SPAWN OFFSET:",
+        "value": "150",
+        "generated": true
+      },
+      {
+        "key": "run_distance",
+        "header": "RUN DISTANCE:",
+        "value": "200",
+        "generated": true
+      },
+      {
+        "key": "jump_distance",
+        "header": "JUMP DISTANCE:",
+        "value": "150",
+        "generated": true
+      },
+      {
+        "key": "speed_after_crash",
+        "header": "SPEED AFTER CRASH:",
+        "value": "125",
+        "generated": true
+      },
+      {
+        "key": "speed_gain_per_hero_bump",
+        "header": "SPEED GAIN PER HERO BUMP:",
+        "value": "60",
+        "generated": true
+      },
+      {
+        "key": "speed_step_interval",
+        "header": "SPEED STEP INTERVAL:",
+        "value": "0.05",
+        "generated": true
+      },
+      {
+        "key": "max_gainable_lifetime",
+        "header": "MAX GAINABLE LIFETIME:",
+        "value": "20",
+        "generated": true
+      },
+      {
+        "key": "lifetime_gain_per_hero_bump",
+        "header": "LIFETIME GAIN PER HERO BUMP:",
+        "value": "5",
+        "generated": true
+      },
+      {
+        "key": "min_speech_repeat_time",
+        "header": "MIN SPEECH REPEAT TIME:",
+        "value": "0.5",
+        "generated": true
+      },
+      {
+        "key": "bump_delay_absolute",
+        "header": "BUMP DELAY ABSOLUTE:",
+        "value": "0.25",
+        "generated": true
+      }
+    ],
+    "mc": "0",
+    "cd": "30",
+    "img": "/apps/dota2/images/abilities/seasonal_summon_penguin_md.png"
   },
   "seasonal_decorate_tree": {
     "dname": "Decorate Tree",
