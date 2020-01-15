@@ -65,13 +65,11 @@ const sources = [{
         if (item.use)
         {
           item.use.forEach((entry, i) => item.use[i].desc = item.use[i].desc.replace('%abilitycastrange%', scripts[key].AbilityCastRange));
-          item.use.forEach((entry, i) => item.use[i].desc = item.use[i].desc.replace('%abilitycastpoint%', scripts[key].AbilityCastPoint));
 
         }
         if (item.active)
         {
           item.active.forEach((entry, i) => item.active[i].desc = item.active[i].desc.replace('%abilitycastrange%', scripts[key].AbilityCastRange));
-          item.active.forEach((entry, i) => item.active[i].desc = item.active[i].desc.replace('%abilitycastpoint%', scripts[key].AbilityCastPoint));
         }
 
         item.id = parseInt(scripts[key].ID);
@@ -285,7 +283,9 @@ const sources = [{
       Object.keys(scripts).filter(key => !not_abilities.includes(key)).forEach(key => {
         var ability = {};
 
-        ability.dname = strings[`DOTA_Tooltip_ability_${key}`];
+        if (strings[`DOTA_Tooltip_ability_${key}`] && scripts[key].AbilitySpecial) {
+          ability.dname = replaceSValues(strings[`DOTA_Tooltip_ability_${key}`], scripts[key].AbilitySpecial);
+        }
 
         ability.behavior = formatBehavior(scripts[key].AbilityBehavior) || undefined;
         ability.dmg_type = formatBehavior(scripts[key].AbilityUnitDamageType) || undefined;
@@ -749,6 +749,20 @@ function catogerizeItemAbilities(abilities) {
     }
   })
   return itemAbilities;
+}
+
+function replaceSValues(template, attribs) {
+  let values = {};
+  if (Array.isArray(attribs)) {
+    attribs.forEach(attrib => {
+      let key = Object.keys(attrib)[0];
+      values[key] = attrib[key];
+    });
+    Object.keys(values).forEach(key => {
+      template = template.replace(`{s:${key}}`, values[key]);
+    });
+  }
+  return template;
 }
 
 // Formats templates like "Storm's movement speed is %storm_move_speed%" with "Storm's movement speed is 32"
