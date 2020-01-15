@@ -890,10 +890,10 @@
         "key": "arrow_slow_duration",
         "header": "ARROW SLOW DURATION:",
         "value": [
-          "1",
+          "1.25",
           "2",
-          "3",
-          "4"
+          "2.75",
+          "3.5"
         ]
       },
       {
@@ -922,9 +922,9 @@
     ],
     "mc": [
       "50",
-      "60",
       "70",
-      "80"
+      "90",
+      "110"
     ],
     "cd": [
       "26",
@@ -3729,7 +3729,8 @@
     "behavior": [
       "No Target",
       "Instant Cast",
-      "Hidden"
+      "Hidden",
+      null
     ],
     "bkbpierce": "No",
     "desc": "Ejects the swallowed allied hero inside of you.",
@@ -5672,7 +5673,7 @@
     "behavior": "Unit Target",
     "dmg_type": "Physical",
     "bkbpierce": "Yes",
-    "desc": "Grabs a tree to whack enemies on the head. Grants bonus attack range but Tiny is slowed by 25. Attacks deal more damage and fully splash on units along the way. The tree can be thrown, to deal your attack to a unit at a distance.",
+    "desc": "Grabs a tree to whack enemies on the head. Grants bonus attack range but Tiny is slowed by 30. Attacks deal more damage and fully splash on units along the way. The tree can be thrown, to deal your attack to a unit at a distance.",
     "attrib": [
       {
         "key": "bonus_damage",
@@ -5735,7 +5736,7 @@
       {
         "key": "speed_reduction",
         "header": "SPEED REDUCTION:",
-        "value": "25",
+        "value": "30",
         "generated": true
       }
     ],
@@ -6539,7 +6540,12 @@
       "120",
       "130"
     ],
-    "cd": "9",
+    "cd": [
+      "12",
+      "11",
+      "10",
+      "9"
+    ],
     "img": "/apps/dota2/images/abilities/vengefulspirit_magic_missile_md.png"
   },
   "vengefulspirit_command_aura": {
@@ -10861,6 +10867,7 @@
       "Point Target",
       "Hidden",
       null,
+      "Channeled",
       null
     ],
     "desc": "Allows Templar Assassin to teleport to any Psionic Trap after a brief channel. Does not break meld. Detonates the Psionic Trap on arrival.",
@@ -11038,7 +11045,7 @@
         "generated": true
       }
     ],
-    "mc": "20",
+    "mc": "25",
     "cd": "0",
     "img": "/apps/dota2/images/abilities/viper_poison_attack_md.png"
   },
@@ -16202,10 +16209,10 @@
         "key": "damage_per_second",
         "header": "DAMAGE:",
         "value": [
-          "20",
-          "35",
-          "50",
-          "65"
+          "15",
+          "30",
+          "45",
+          "60"
         ]
       },
       {
@@ -16231,9 +16238,9 @@
     ],
     "mc": [
       "60",
-      "65",
       "70",
-      "75"
+      "80",
+      "90"
     ],
     "cd": [
       "50",
@@ -19061,7 +19068,7 @@
       {
         "key": "damage_multiplier",
         "header": "MANA DIFFERENCE MULTIPLIER:",
-        "value": "0.5"
+        "value": "0.4"
       },
       {
         "key": "stack_mana",
@@ -19163,7 +19170,8 @@
     "dname": "Wolf Bite",
     "behavior": [
       "Unit Target",
-      "Hidden"
+      "Hidden",
+      null
     ],
     "desc": "Lycan bites an ally, granting them Shapeshift properties. Lycan and the bitten target gain 30% Lifesteal and share %lifesteal%% Lifesteal with each other as long as they are within 1200 range of each other.",
     "attrib": [
@@ -19937,7 +19945,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Drenches an area in alcohol, causing enemy units to be move slower and ignited once they take any spell damage. Duration is increased by 3 seconds when ignited.",
+    "desc": "Drenches an area in alcohol, causing enemy units to move slower and ignited once they take any spell damage. Duration is increased by 3 seconds when ignited.",
     "attrib": [
       {
         "key": "duration",
@@ -21091,10 +21099,10 @@
         "key": "movement_slow",
         "header": "MOVEMENT SLOW:",
         "value": [
-          "-26%",
-          "-34%",
-          "-42%",
-          "-50%"
+          "-18%",
+          "-24%",
+          "-30%",
+          "-36%"
         ]
       },
       {
@@ -21205,9 +21213,9 @@
       }
     ],
     "mc": [
-      "150",
-      "175",
-      "200"
+      "200",
+      "250",
+      "300"
     ],
     "cd": "100",
     "img": "/apps/dota2/images/abilities/treant_overgrowth_md.png"
@@ -21288,7 +21296,11 @@
   },
   "ogre_magi_unrefined_fireblast": {
     "dname": "Unrefined Fireblast",
-    "behavior": "Unit Target",
+    "behavior": [
+      "Unit Target",
+      "Hidden",
+      null
+    ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
     "desc": "Blasts an enemy unit with a wave of fire, dealing damage and stunning the target. Its mana cost is 60% of Ogre Magi's current mana.",
@@ -23552,13 +23564,12 @@
     "dname": "Stone Form",
     "behavior": [
       null,
-      "Point Target",
-      "AOE",
-      null,
-      "Instant Cast"
+      "No Target",
+      "Instant Cast",
+      null
     ],
     "bkbpierce": "No",
-    "desc": "The closest familiar to the target location moves and casts Stone Form at that location.After a short delay, the Familiar turns into stone and smashes into the ground, stunning and damaging all targets in the area.  The Familiar becomes invulnerable, and will regain its health very rapidly.  After 6 seconds, the Familiar will automatically leave Stone Form.",
+    "desc": "After a short delay, the nearest Familiar turns into stone and smashes into the ground, stunning and damaging all targets in the area.  The Familiar becomes invulnerable, and will regain its health very rapidly.  After 6 seconds, the Familiar will automatically leave Stone Form.",
     "attrib": [
       {
         "key": "stun_radius",
@@ -24934,13 +24945,15 @@
       },
       {
         "key": "slow_duration",
-        "header": "SCEPTER SLOW DURATION:",
-        "value": "2"
+        "header": "SLOW DURATION:",
+        "value": "2",
+        "generated": true
       },
       {
         "key": "scepter_distance",
-        "header": "SCEPTER RANGE:",
-        "value": "2000"
+        "header": "SCEPTER DISTANCE:",
+        "value": "2000",
+        "generated": true
       },
       {
         "key": "scepter_speed",
@@ -31337,7 +31350,7 @@
       "150",
       "175"
     ],
-    "cd": "90",
+    "cd": "110",
     "img": "/apps/dota2/images/abilities/snapfire_mortimer_kisses_md.png"
   },
   "snapfire_firesnap_cookie": {

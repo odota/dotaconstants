@@ -65,10 +65,13 @@ const sources = [{
         if (item.use)
         {
           item.use.forEach((entry, i) => item.use[i].desc = item.use[i].desc.replace('%abilitycastrange%', scripts[key].AbilityCastRange));
+          item.use.forEach((entry, i) => item.use[i].desc = item.use[i].desc.replace('%abilitycastpoint%', scripts[key].AbilityCastPoint));
+
         }
         if (item.active)
         {
           item.active.forEach((entry, i) => item.active[i].desc = item.active[i].desc.replace('%abilitycastrange%', scripts[key].AbilityCastRange));
+          item.active.forEach((entry, i) => item.active[i].desc = item.active[i].desc.replace('%abilitycastpoint%', scripts[key].AbilityCastPoint));
         }
 
         item.id = parseInt(scripts[key].ID);
