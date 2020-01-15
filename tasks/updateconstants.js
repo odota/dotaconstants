@@ -283,9 +283,7 @@ const sources = [{
       Object.keys(scripts).filter(key => !not_abilities.includes(key)).forEach(key => {
         var ability = {};
 
-        if (strings[`DOTA_Tooltip_ability_${key}`] && scripts[key].AbilitySpecial) {
-          ability.dname = replaceSValues(strings[`DOTA_Tooltip_ability_${key}`], scripts[key].AbilitySpecial);
-        }
+        ability.dname = replaceSValues(strings[`DOTA_Tooltip_ability_${key}`], scripts[key].AbilitySpecial);
 
         ability.behavior = formatBehavior(scripts[key].AbilityBehavior) || undefined;
         ability.dmg_type = formatBehavior(scripts[key].AbilityUnitDamageType) || undefined;
@@ -753,7 +751,7 @@ function catogerizeItemAbilities(abilities) {
 
 function replaceSValues(template, attribs) {
   let values = {};
-  if (Array.isArray(attribs)) {
+  if (template && attribs && Array.isArray(attribs)) {
     attribs.forEach(attrib => {
       let key = Object.keys(attrib)[0];
       values[key] = attrib[key];
