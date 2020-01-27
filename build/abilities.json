@@ -2331,17 +2331,19 @@
       {
         "key": "max_charges",
         "header": "MAX CHARGES:",
-        "value": "3"
+        "value": "3",
+        "generated": true
       },
       {
         "key": "charge_restore_time",
-        "header": "CHARGE REPLENISH TIME:",
+        "header": "CHARGE RESTORE TIME:",
         "value": [
           "45",
           "40",
           "35",
           "30"
-        ]
+        ],
+        "generated": true
       }
     ],
     "mc": "40",
@@ -4719,7 +4721,8 @@
           "2",
           "3",
           "4"
-        ]
+        ],
+        "generated": true
       },
       {
         "key": "charge_restore_time",
@@ -4729,7 +4732,8 @@
           "52",
           "44",
           "36"
-        ]
+        ],
+        "generated": true
       }
     ],
     "mc": "70",
@@ -6669,7 +6673,8 @@
       {
         "key": "max_charges",
         "header": "MAX CHARGES:",
-        "value": "2"
+        "value": "2",
+        "generated": true
       },
       {
         "key": "charge_restore_time",
@@ -6678,7 +6683,8 @@
           "90",
           "80",
           "70"
-        ]
+        ],
+        "generated": true
       },
       {
         "key": "scepter_radius",
@@ -7893,18 +7899,20 @@
       },
       {
         "key": "max_charges",
-        "header": "CHARGES:",
-        "value": "2"
+        "header": "MAX CHARGES:",
+        "value": "2",
+        "generated": true
       },
       {
         "key": "charge_restore_time",
-        "header": "CHARGES REPLENISH TIME:",
+        "header": "CHARGE RESTORE TIME:",
         "value": [
           "25",
           "20",
           "15",
           "10"
-        ]
+        ],
+        "generated": true
       }
     ],
     "mc": "50",
@@ -8489,7 +8497,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Consumes a charge to launch a ball of shrapnel that showers the target area in explosive pellets. Enemies are subject to damage and slowed movement. Reveals the targeted area. Shrapnel charges restore every 40 seconds.",
+    "desc": "Consumes a charge to launch a ball of shrapnel that showers the target area in explosive pellets. Enemies are subject to damage and slowed movement. Reveals the targeted area. Shrapnel charges restore every %abilitychargerestoretime% seconds.",
     "attrib": [
       {
         "key": "slow_movement_speed",
@@ -11318,7 +11326,7 @@
       },
       {
         "key": "damage_pct",
-        "header": "DAMAGE BONUS:",
+        "header": "BASE DAMAGE BONUS:",
         "value": [
           "10%",
           "15%",
@@ -11328,7 +11336,7 @@
       },
       {
         "key": "armor_pct",
-        "header": "ARMOR BONUS:",
+        "header": "BASE ARMOR BONUS:",
         "value": [
           "10%",
           "15%",
@@ -13484,7 +13492,7 @@
   "clinkz_death_pact": {
     "dname": "Death Pact",
     "behavior": "Unit Target",
-    "desc": "Clinkz consumes the target enemy unit or skeleton, gaining max health and armor reduction on attack. If you kill an enemy hero during the buff, Clinkz will gain a permanent damage bonus and Death Pact will be refreshed.",
+    "desc": "Clinkz consumes the target enemy unit or skeleton, gaining max health and armor reduction on attack. If a hero dies under this debuff, Clinkz will gain a permanent damage bonus and Death Pact will be refreshed.",
     "attrib": [
       {
         "key": "duration",
@@ -21642,13 +21650,14 @@
       },
       {
         "key": "health_threshold",
-        "header": "DEATHLUST FLAT HEALTH THRESHOLD:",
+        "header": "HEALTH THRESHOLD:",
         "value": [
           "100",
           "200",
           "300",
           "400"
-        ]
+        ],
+        "generated": true
       },
       {
         "key": "health_threshold_pct_tooltip",
@@ -21824,8 +21833,7 @@
       {
         "key": "duration",
         "header": "DURATION:",
-        "value": "30",
-        "generated": true
+        "value": "30"
       },
       {
         "key": "spawn_rate",
@@ -27793,12 +27801,14 @@
       {
         "key": "max_charges",
         "header": "MAX CHARGES:",
-        "value": "7"
+        "value": "7",
+        "generated": true
       },
       {
         "key": "charge_restore_time",
         "header": "CHARGE RESTORE TIME:",
-        "value": "30"
+        "value": "30",
+        "generated": true
       },
       {
         "key": "duration",
@@ -35067,13 +35077,15 @@
       },
       {
         "key": "max_charges",
-        "header": "CHARGES:",
-        "value": "3"
+        "header": "MAX CHARGES:",
+        "value": "3",
+        "generated": true
       },
       {
         "key": "charge_restore_time",
         "header": "CHARGE RESTORE TIME:",
-        "value": "23"
+        "value": "23",
+        "generated": true
       },
       {
         "key": "cast_range_scepter_bonus",
