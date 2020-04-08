@@ -634,9 +634,9 @@
         "key": "health_bonus_creep_pct",
         "header": "HEALTH BONUS CREEP PCT:",
         "value": [
-          "13",
-          "17",
-          "21",
+          "10",
+          "15",
+          "20",
           "25"
         ],
         "generated": true
@@ -1473,7 +1473,7 @@
     "img": "/apps/dota2/images/abilities/juggernaut_omni_slash_md.png"
   },
   "juggernaut_swift_slash": {
-    "dname": "Swift Slash",
+    "dname": "Swiftslash",
     "behavior": "Unit Target",
     "dmg_type": "Physical",
     "bkbpierce": "Yes",
@@ -4356,7 +4356,7 @@
       },
       {
         "key": "self_bonus",
-        "header": "SELF LIFESTEAL MULTIPLIER:",
+        "header": "SELF MULTIPLIER:",
         "value": "1.5"
       }
     ],
@@ -4385,7 +4385,7 @@
       {
         "key": "skeleton_duration",
         "header": "SKELETON DURATION:",
-        "value": "90"
+        "value": "60"
       },
       {
         "key": "max_skeleton_charges",
@@ -4707,7 +4707,7 @@
         "generated": true
       }
     ],
-    "mc": "70",
+    "mc": "80",
     "cd": "0",
     "img": "/apps/dota2/images/abilities/death_prophet_spirit_siphon_md.png"
   },
@@ -4797,7 +4797,7 @@
       {
         "key": "scepter_spirit_bonus_damage",
         "header": "SPIRIT BONUS DAMAGE:",
-        "value": "75%"
+        "value": "50%"
       },
       {
         "key": "movement_bonus",
@@ -7501,7 +7501,7 @@
     "behavior": "Unit Target",
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Releases an orb of frost that bounces between nearby enemy units up to 10,10,10 times, slowing and damaging each time it hits. Each bounce increases the damage for the subsequent bounces. \n\nUpgradable by Aghanim's Scepter.",
+    "desc": "Releases an orb of frost that bounces between nearby enemy units up to 10,10,10 times, slowing and damaging each time it hits. Each bounce increases the damage for the subsequent bounces.",
     "attrib": [
       {
         "key": "damage",
@@ -8195,9 +8195,9 @@
         "key": "near_damage",
         "header": "NEAR DAMAGE:",
         "value": [
-          "50",
           "100",
-          "150"
+          "150",
+          "200"
         ],
         "generated": true
       },
@@ -14076,10 +14076,10 @@
         "key": "maximum_attack_speed",
         "header": "MAX ATTACK SPEED:",
         "value": [
-          "140",
-          "200",
-          "260",
-          "320"
+          "130",
+          "190",
+          "250",
+          "310"
         ]
       },
       {
@@ -14182,10 +14182,10 @@
     "bkbpierce": "No",
     "desc": "Creates a damaging void that slows an enemy unit and deals damage.  Void also mini-stuns, interrupting channeling abilities. The slowing effect lasts longer at night.",
     "dmg": [
-      "90",
+      "80",
       "160",
-      "255",
-      "335"
+      "240",
+      "320"
     ],
     "attrib": [
       {
@@ -14888,10 +14888,10 @@
         "key": "speed",
         "header": "MOVEMENT BONUS:",
         "value": [
+          "200",
           "220",
           "240",
-          "260",
-          "280"
+          "260"
         ]
       },
       {
@@ -16074,7 +16074,7 @@
       {
         "key": "tooltip_cooldown",
         "header": "COOLDOWN:",
-        "value": "70"
+        "value": "35"
       }
     ],
     "mc": "180",
@@ -16937,10 +16937,10 @@
       "70"
     ],
     "cd": [
-      "16",
+      "15",
       "13",
-      "10",
-      "7"
+      "11",
+      "9"
     ],
     "img": "/apps/dota2/images/abilities/ursa_overpower_md.png"
   },
@@ -16970,10 +16970,10 @@
         "key": "damage_per_stack",
         "header": "DAMAGE PER ATTACK:",
         "value": [
-          "10",
-          "20",
-          "30",
-          "40"
+          "9",
+          "18",
+          "27",
+          "36"
         ]
       }
     ],
@@ -16986,7 +16986,7 @@
       "Instant Cast"
     ],
     "bkbpierce": "Yes",
-    "desc": "Ursa goes into a frenzy, providing damage reducation and status resistance. Removes any existing debuffs.\n\nDISPEL TYPE: Strong Dispel",
+    "desc": "Ursa goes into a frenzy, providing damage reduction and status resistance. Removes any existing debuffs.\n\nDISPEL TYPE: Strong Dispel",
     "attrib": [
       {
         "key": "damage_reduction",
@@ -17221,7 +17221,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Call down an aerial missile strike on enemy units in a target area. After 2 seconds, two missiles arrive in succession, with 2 seconds between them, the first dealing major damage and minor slow for 2 seconds; the second dealing minor damage and major slow for 4 seconds.",
+    "desc": "Call down an aerial missile strike on enemy units in a target area. After 2 seconds, two missiles arrive in succession, with 2 seconds between them.",
     "attrib": [
       {
         "key": "slow_duration_first",
@@ -19128,6 +19128,7 @@
   "lycan_howl": {
     "dname": "Howl",
     "behavior": "No Target",
+    "bkbpierce": "No",
     "desc": "Strikes fear into enemies, reducing armor and attack damage to all enemies within 2000 range of Lycan and his wolves.",
     "attrib": [
       {
@@ -19249,15 +19250,11 @@
         ]
       }
     ],
-    "mc": [
-      "110",
-      "95",
-      "80"
-    ],
+    "mc": "100",
     "cd": [
-      "120",
-      "105",
-      "90"
+      "125",
+      "110",
+      "95"
     ],
     "img": "/apps/dota2/images/abilities/lycan_shapeshift_md.png"
   },
@@ -22992,10 +22989,10 @@
         "key": "cooldown_reduction",
         "header": "COOLDOWN REDUCTION:",
         "value": [
+          "3",
           "4",
           "5",
-          "6",
-          "7"
+          "6"
         ]
       },
       {
@@ -23421,6 +23418,11 @@
         "header": "RADIUS:",
         "value": "1200",
         "generated": true
+      },
+      {
+        "key": "max_damage_reduction",
+        "header": "MAX DAMAGE REDUCTION:",
+        "value": "80%"
       }
     ],
     "img": "/apps/dota2/images/abilities/visage_gravekeepers_cloak_md.png"
@@ -24716,10 +24718,10 @@
         "key": "damage_gain_pct",
         "header": "ATTACK DAMAGE PER CHARGE:",
         "value": [
+          "4%",
           "6%",
           "8%",
-          "10%",
-          "12%"
+          "10%"
         ]
       },
       {
@@ -28451,10 +28453,10 @@
         "key": "damage_per_second",
         "header": "DAMAGE PER SECOND:",
         "value": [
-          "20",
-          "40",
-          "60",
-          "80"
+          "15",
+          "35",
+          "55",
+          "75"
         ]
       },
       {
@@ -28703,10 +28705,10 @@
         "key": "damage_per_second",
         "header": "DAMAGE PER SECOND:",
         "value": [
-          "20",
-          "40",
-          "60",
-          "80"
+          "15",
+          "35",
+          "55",
+          "75"
         ]
       },
       {
@@ -31458,10 +31460,10 @@
         "key": "impact_damage",
         "header": "IMPACT DAMAGE:",
         "value": [
-          "90",
-          "160",
-          "230",
-          "300"
+          "70",
+          "140",
+          "210",
+          "280"
         ]
       },
       {
@@ -37268,10 +37270,10 @@
     "dname": "-70 Moonlight Shadow Cooldown"
   },
   "special_bonus_unique_bounty_hunter": {
-    "dname": "+90 Jinada Gold Steal"
+    "dname": "+65 Jinada Gold Steal"
   },
   "special_bonus_unique_bounty_hunter_2": {
-    "dname": "+75 Shuriken Toss Damage"
+    "dname": "+65 Shuriken Toss Damage"
   },
   "special_bonus_unique_bounty_hunter_3": {
     "dname": "+300 Track Gold"
@@ -37715,7 +37717,7 @@
     "dname": "+1.25s Supernova Stun Duration"
   },
   "special_bonus_unique_phoenix_3": {
-    "dname": "+40 Fire Spirits DPS"
+    "dname": "+35 Fire Spirits DPS"
   },
   "special_bonus_unique_phoenix_4": {
     "dname": "+1400 Icarus Dive Cast Range"
@@ -37889,7 +37891,7 @@
     "dname": "+75 Wild Axes Damage"
   },
   "special_bonus_unique_beastmaster_2": {
-    "dname": "+35 Boar Damage"
+    "dname": "+30 Boar Damage"
   },
   "special_bonus_unique_beastmaster_3": {
     "dname": "-20s Hawks Cooldown"
@@ -37988,7 +37990,7 @@
     "dname": "-60s Dark Ascension Cooldown"
   },
   "special_bonus_unique_night_stalker_2": {
-    "dname": "+110 Hunter In The Night Attack Speed"
+    "dname": "+100 Hunter In The Night Attack Speed"
   },
   "special_bonus_unique_nyx": {
     "dname": "+75% Spiked Carapace Damage"
@@ -38051,10 +38053,10 @@
     "dname": "+10s Phantasm Duration"
   },
   "special_bonus_unique_lycan_1": {
-    "dname": "+8s Shapeshift Duration"
+    "dname": "+6s Shapeshift Duration"
   },
   "special_bonus_unique_lycan_2": {
-    "dname": "+3 Wolves Summoned"
+    "dname": "+2 Wolves Summoned"
   },
   "special_bonus_unique_lycan_3": {
     "dname": "+13 Feral HP Regen"
@@ -38394,7 +38396,7 @@
     "dname": "+30% Blur Evasion"
   },
   "special_bonus_unique_riki_1": {
-    "dname": "+0.8 Backstab Multiplier"
+    "dname": "+0.5 Backstab Multiplier"
   },
   "special_bonus_unique_riki_2": {
     "dname": "-5s Smoke Screen Cooldown"
@@ -38499,7 +38501,7 @@
     "dname": "+400 Life Break Cast Range"
   },
   "special_bonus_unique_huskar_2": {
-    "dname": "+10 Burning Spears DPS"
+    "dname": "+8 Burning Spears DPS"
   },
   "special_bonus_unique_huskar_3": {
     "dname": "0 Inner Vitality Cooldown"
@@ -38679,7 +38681,7 @@
     "dname": "-3s Blinding Light Cooldown"
   },
   "special_bonus_unique_keeper_of_the_light_6": {
-    "dname": "+250 Will-O-Wisp AOE"
+    "dname": "+200 Will-O-Wisp AOE"
   },
   "special_bonus_unique_legion_commander": {
     "dname": "+40 Duel Damage Bonus"
