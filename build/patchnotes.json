@@ -8312,8 +8312,8 @@
       "Radiant Ancient creeps are now easier to stack",
       "Tier 1 neutral item drop rates increased from 10 to 14%",
       "Fountain attack damage increased from 275 to 300",
-      "Neutral creep Frost Armor slow reduced from 30 to 25",
-      "Neutral Creep Frost Armor armor reduced from 6 to 5",
+      "Neutral creep Ice Armor slow reduced from 30 to 25",
+      "Neutral creep Ice  Armor armor reduced from 6 to 5",
       "Illusion rune now has similar cast mechanics as Manta (shuffle, dispel, dodge)"
     ],
     "items": {
@@ -8558,7 +8558,7 @@
       ],
       "ring_of_tarrasque": [
         "Cost reduced from 700 to 600",
-        "Health regen increased from 3.5 to 4.5"
+        "Health regen increased from 3.75 to 4.5"
       ],
       "tranquil_boots": [
         "Health regen reduced from 16 to 14",
@@ -8605,7 +8605,7 @@
       ],
       "chaos_knight": [
         "Phantasm cooldown reduced from 145 to 145/135/125",
-        "Reality Rift cast range increased from 475/550/625/700 to 550/600/650/750"
+        "Reality Rift cast range increased from 475/550/625/700 to 550/600/650/700"
       ],
       "clinkz": [
         "Death Pact no longer has a neutral level requirement",
@@ -8640,7 +8640,7 @@
       ],
       "elder_titan": [
         "Level 15 Talent increased from +15% Magic Resistance to +20%",
-        "Level 20 Tlaent increased from +100 Echo Stomp Damage to +125"
+        "Level 20 Talent increased from +100 Echo Stomp Damage to +125"
       ],
       "ember_spirit": [
         "Searing Chains cooldown reduced from 14/12/10/8 to 11/10/9/8",
@@ -8896,6 +8896,153 @@
       "zuus": [
         "Base movement speed increased from 295 to 300",
         "Attack point improved from 0.45 to 0.35"
+      ]
+    }
+  },
+  "7_25a": {
+    "general": [],
+    "items": {},
+    "heroes": {
+      "bounty_hunter": [
+        "Level 15 Talent reduced from +75 Shuriken Toss Damage to +65",
+        "Level 20 Talent reduced from +90 Jinada Gold Steal to +65"
+      ],
+      "meepo": [
+        "Divided We Stand clone XP gain reduced from 40% to 30%",
+        "Level 10 Talent reduced from +10 Strength to +8"
+      ],
+      "night_stalker": [
+        "Strength gain reduced from 3.2 to 3",
+        "Void damage reduced from 90/160/255/335 to 80/160/240/320",
+        "Level 25 Talent reduced from +110 Hunter In The Night Attack Speed to +100"
+      ],
+      "ursa": [
+        "Movement speed reduced by 5",
+        "Fury Swipes damage reduced from 10/20/30/40 to 9/18/27/36",
+        "Overpower cooldown rescaled from 16/13/10/7 to 15/13/11/9"
+      ],
+      "visage": [
+        "Gravekeeper's Cloak max damage reduction is now fixed at 80%"
+      ]
+    }
+  },
+  "7_25b": {
+    "general": [
+      "Kill Streak XP bonus reduced from 500->2040 to 30*Level -> 100*Level"
+    ],
+    "items": {
+      "trusty_shovel": [
+        "TP Scroll bundle reduced from 2 to 1"
+      ],
+      "ring_of_tarrasque": [
+        "Cost increased from 600 to 650"
+      ],
+      "necronomicon": [
+        "Manacost increased from 50 to 150"
+      ]
+    },
+    "heroes": {
+      "lycan": [
+        "Base damage reduced by 6",
+        "Level 20 Talent reduced from +8s Shapeshift Duration to +6s",
+        "Level 25 Talent reduced from +3 Wolves Summoned to +2"
+      ],
+      "weaver": [
+        "Agility gain reduced from 3.6 to 3.1",
+        "Shukuchi movement bonus reduced from 220/240/260/280 to 200/220/240/260"
+      ]
+    }
+  },
+  "7_25c": {
+    "general": [
+      "When two players pick the same hero in a round, the hero is banned instead and the round restarts",
+      "All Pick hero selection duration reduced from 25 to 20 seconds",
+      "<br>",
+      "Wards can now always be attacked by the owning player",
+      "Harpy Stormcrafter mana capacity reduced from 150 to 125"
+    ],
+    "items": {
+      "ring_of_regen": [
+        "Health regeneration reduced from 2 to 1.75"
+      ],
+      "soul_ring": [
+        "Health regen reduced from 2.5 to 2.25"
+      ],
+      "headdress": [
+        "Health regen reduced from 2.5 to 2"
+      ],
+      "mekansm": [
+        "Health regen aura reduced from 2.5 to 2"
+      ],
+      "pipe": [
+        "Health regen aura reduced from 2.5 to 2",
+        "Recipe cost increased from 800 to 1000"
+      ],
+      "helm_of_the_dominator": [
+        "Health regen aura reduced from 5 to 4.25"
+      ],
+      "ring_of_tarrasque": [
+        "Health regen reduced from 4.5 to 4"
+      ],
+      "royal_jelly": [
+        "Health regen reduced from 2.5 to 2.25",
+        "<br>"
+      ],
+      "necronomicon": [
+        "Strength reduced from 10/15/20 to 6/12/18"
+      ],
+      "vladmir": [
+        "Recipe cost increased from 450 to 550",
+        "<br>"
+      ],
+      "dust": [
+        "Cost reduced from 90 to 80"
+      ]
+    },
+    "heroes": {
+      "beastmaster": [
+        "Call of the Wild Hawk no longer blocks neutral camps",
+        "Level 15 Talent reduced from +35 Boar Damage to +30"
+      ],
+      "centaur": [
+        "Retaliate attack damage per charge reduced from 6/8/10/12% to 4/6/8/10%"
+      ],
+      "rattletrap": [
+        "Strength gain reduced from 3.7 to 3.5"
+      ],
+      "death_prophet": [
+        "Base damage reduced by 2",
+        "Spirit Siphon manacost increased from 70 to 80",
+        "Exorcism Scepter damage multiplier reduced from 1.75 to 1.5"
+      ],
+      "huskar": [
+        "Berserker's Blood attack speed reduced from 140/200/260/320 to 130/190/250/310",
+        "Level 15 Talent reduced from +10 Burning Spear DPS to +8"
+      ],
+      "keeper_of_the_light": [
+        "Chakra Magic cooldown reduction from 4/5/6/7 to 3/4/5/6",
+        "Level 20 Talent reduced from +250 Will-O-Wisp AoE to +200"
+      ],
+      "lycan": [
+        "Shapeshift cooldown increased from 110/95/80 to 125/110/95"
+      ],
+      "meepo": [
+        "Base agility reduced from 24 to 17 (base damage and armor unchanged)",
+        "Divided We Stand now level requirement increased from 3/10/18 to 4/11/18"
+      ],
+      "phantom_lancer": [
+        "Base agility reduced by 3"
+      ],
+      "phoenix": [
+        "Fire Spirits damage reduced from 20/40/60/80 to 15/35/55/75",
+        "Level 15 Talent reduced from +40 Fire Spirits DPS to +35"
+      ],
+      "snapfire": [
+        "Firesnap Cookie damage reduced from 90/160/230/300 to 70/140/210/280"
+      ],
+      "skeleton_king": [
+        "Base damage reduced by 2",
+        "Mortal Strike skeletons duration reduced from 90 seconds to 60"
       ]
     }
   }
