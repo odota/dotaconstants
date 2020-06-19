@@ -38,6 +38,16 @@ const badNames = [
   "npc_dota_hero_base",
   "npc_dota_hero_target_dummy",
 ];
+
+const extraAttribKeys = [
+  "AbilityCastRange",
+  "AbilityChargeRestoreTime", 
+  "AbilityDuration",
+  "AbilityChannelTime",
+  "AbilityCastPoint",
+  "AbilityCharges"
+];
+
 const now = Number(new Date());
 
 const sources = [
@@ -78,27 +88,10 @@ const sources = [
             ...replaceSpecialAttribs(
               strings[`DOTA_Tooltip_ability_${key}_Description`],
               scripts[key].AbilitySpecial,
-              true
+              true,
+              scripts[key]
             ),
           };
-          if (item.use) {
-            item.use.forEach(
-              (entry, i) =>
-                (item.use[i].desc = item.use[i].desc.replace(
-                  "%abilitycastrange%",
-                  scripts[key].AbilityCastRange
-                ))
-            );
-          }
-          if (item.active) {
-            item.active.forEach(
-              (entry, i) =>
-                (item.active[i].desc = item.active[i].desc.replace(
-                  "%abilitycastrange%",
-                  scripts[key].AbilityCastRange
-                ))
-            );
-          }
 
           item.id = parseInt(scripts[key].ID);
           item.img = `/apps/dota2/images/items/${key.replace(
@@ -349,7 +342,9 @@ const sources = [
 
           ability.desc = replaceSpecialAttribs(
             strings[`DOTA_Tooltip_ability_${key}_Description`],
-            scripts[key].AbilitySpecial
+            scripts[key].AbilitySpecial,
+            false,
+            scripts[key]
           );
           ability.dmg =
             scripts[key].AbilityDamage &&
@@ -906,11 +901,31 @@ function replaceSValues(template, attribs) {
 
 // Formats templates like "Storm's movement speed is %storm_move_speed%" with "Storm's movement speed is 32"
 // args are the template, and a list of attribute dictionaries, like the ones in AbilitySpecial for each ability in the npc_abilities.json from the vpk
-function replaceSpecialAttribs(template, attribs, isItem = false) {
+function replaceSpecialAttribs(template, attribs, isItem = false, allData={}) {
   if (!template) {
     return template;
   }
   if (attribs) {
+    //additional special ability keys being catered
+    extraAttribKeys.forEach(abilitykey => {
+      if (abilitykey in allData) {
+        let value = allData[abilitykey].split(); //can have multiple values
+        value = value.length === 1 ? Number(value[0]) : value.map(v => Number(v));
+        attribs.push({[abilitykey.toLowerCase()]: value});
+        //these are also present with another attrib name
+        if (abilitykey === "AbilityChargeRestoreTime") { 
+          attribs.push({"charge_restore_time": value});
+        }
+        if (abilitykey === "AbilityCharges") {
+          attribs.push({"max_charges": value});
+        }
+      }
+    });
+
+    if (template.includes("%customval_team_tomes_used%")){ //in-game line not required in tooltip
+      template = template.replace(/[ a-zA-Z]+: %\w+%/g,"");
+    }
+
     template = template.replace(/%([^% ]*)%/g, function (str, name) {
       if (name == "") {
         return "%";
@@ -923,6 +938,13 @@ function replaceSpecialAttribs(template, attribs, isItem = false) {
         attr = attribs.find((attr) => name in attr);
       }
       if (!attr) {
+        if (name === "lifesteal") { //special cases, in terms of template context and dota2 gamepedia
+          return attribs.find(obj => "lifesteal_percent" in obj).lifesteal_percent; 
+        }
+        else if (name === "movement_slow") {
+          return attribs.find(obj => "damage_pct" in obj).damage_pct; 
+        }
+
         console.log(`cant find attribute %${name}%`);
         return `%${name}%`;
       }
