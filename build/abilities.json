@@ -2260,7 +2260,7 @@
   "mirana_invis": {
     "dname": "Moonlight Shadow",
     "behavior": "No Target",
-    "desc": "Turns Mirana and all allied heroes invisible and grants bonus movment speed. If a hero is revealed, invisibility will restore after the fade delay as long as Moonlight Shadow's duration has not expired.",
+    "desc": "Turns Mirana and all allied heroes invisible and grants bonus movement speed. If a hero is revealed, invisibility will restore after the fade delay as long as Moonlight Shadow's duration has not expired.",
     "attrib": [
       {
         "key": "fade_delay",
@@ -8252,7 +8252,7 @@
     "behavior": "Unit Target",
     "dmg_type": "Pure",
     "bkbpierce": "No",
-    "desc": "Fires an intense energy beam, erasing the target's base magic resistance, dealing damage and blinding the target, causing it to miss all physical attacks.",
+    "desc": "Fires an intense energy beam, dealing damage and blinding the target, causing it to miss all physical attacks.",
     "attrib": [
       {
         "key": "miss_rate",
@@ -8724,15 +8724,14 @@
         ]
       },
       {
+        "key": "hero_multiplier",
+        "header": "HERO KILL REGEN MULTIPLIER:",
+        "value": "6"
+      },
+      {
         "key": "regen_duration",
         "header": "REGEN DURATION:",
         "value": "7"
-      },
-      {
-        "key": "hero_multiplier",
-        "header": "HERO MULTIPLIER:",
-        "value": "6",
-        "generated": true
       },
       {
         "key": "scepter_multiplier",
@@ -18555,6 +18554,619 @@
     "cd": "40",
     "img": "/apps/dota2/images/abilities/invoker_deafening_blast_md.png"
   },
+  "invoker_cold_snap_ad": {
+    "dname": "Cold Snap (AD)",
+    "behavior": "Unit Target",
+    "dmg_type": "Magical",
+    "bkbpierce": "No",
+    "desc": "Invoker draws the heat from an enemy, chilling them to their very core for a duration. The enemy will take damage and be briefly frozen. Further damage taken in this state will freeze the enemy again, dealing bonus damage. The enemy can only be frozen so often, but the freeze cooldown decreases as the level goes up.",
+    "attrib": [
+      {
+        "key": "duration",
+        "header": "COLD SNAP DURATION:\\n",
+        "value": [
+          "3.5",
+          "4.3",
+          "5.1",
+          "6"
+        ]
+      },
+      {
+        "key": "freeze_duration",
+        "header": "FREEZE DURATION:",
+        "value": "0.4"
+      },
+      {
+        "key": "freeze_cooldown",
+        "header": "FREEZE COOLDOWN:",
+        "value": [
+          "0.74",
+          "0.69",
+          "0.64",
+          "0.6"
+        ]
+      },
+      {
+        "key": "freeze_damage",
+        "header": "FREEZE DAMAGE:",
+        "value": [
+          "16",
+          "30",
+          "44",
+          "56"
+        ]
+      },
+      {
+        "key": "damage_trigger",
+        "header": "DAMAGE TRIGGER:",
+        "value": "10",
+        "generated": true
+      }
+    ],
+    "mc": "100",
+    "cd": "20",
+    "img": "/apps/dota2/images/abilities/invoker_cold_snap_ad_md.png"
+  },
+  "invoker_ghost_walk_ad": {
+    "dname": "Ghost Walk (AD)",
+    "behavior": [
+      "No Target",
+      "Instant Cast",
+      null
+    ],
+    "bkbpierce": "No",
+    "desc": "Invoker manipulates the ice and electrical energies around him, rendering his body invisible. The elemental imbalance created as a consequence slows nearby enemies, and slows Invoker as well based on the level.",
+    "attrib": [
+      {
+        "key": "duration",
+        "header": "DURATION:",
+        "value": "100"
+      },
+      {
+        "key": "area_of_effect",
+        "header": "RADIUS:",
+        "value": "400"
+      },
+      {
+        "key": "enemy_slow",
+        "header": "ENEMY SLOW:\\n",
+        "value": [
+          "-25%",
+          "-34%",
+          "-42%",
+          "-50%"
+        ]
+      },
+      {
+        "key": "self_slow",
+        "header": "SELF SPEED:\\n",
+        "value": [
+          "-20%",
+          "0%",
+          "16%",
+          "30%"
+        ]
+      },
+      {
+        "key": "aura_fade_time",
+        "header": "AURA FADE TIME:",
+        "value": "2",
+        "generated": true
+      }
+    ],
+    "mc": "200",
+    "cd": "45",
+    "img": "/apps/dota2/images/abilities/invoker_ghost_walk_ad_md.png"
+  },
+  "invoker_tornado_ad": {
+    "dname": "Tornado (AD)",
+    "behavior": "Point Target",
+    "dmg_type": "Magical",
+    "bkbpierce": "No",
+    "desc": "Unleashes a fast moving tornado that picks up enemy units in its path, suspending them helplessly in the air shortly before allowing them to plummet to their doom. Travels further based on the level and holds enemies in the air for a duration.\n\nDISPEL TYPE: Basic Dispel",
+    "attrib": [
+      {
+        "key": "travel_distance",
+        "header": "TRAVEL DISTANCE:\\n",
+        "value": [
+          "1200",
+          "1865",
+          "2530",
+          "3200"
+        ]
+      },
+      {
+        "key": "travel_speed",
+        "header": "TRAVEL SPEED:",
+        "value": "1000",
+        "generated": true
+      },
+      {
+        "key": "area_of_effect",
+        "header": "RADIUS:",
+        "value": "200"
+      },
+      {
+        "key": "vision_distance",
+        "header": "VISION DISTANCE:",
+        "value": "200",
+        "generated": true
+      },
+      {
+        "key": "end_vision_duration",
+        "header": "END VISION DURATION:",
+        "value": "1.75",
+        "generated": true
+      },
+      {
+        "key": "lift_duration",
+        "header": "LIFT TIME:\\n",
+        "value": [
+          "1.1",
+          "1.6",
+          "2.1",
+          "2.6"
+        ]
+      },
+      {
+        "key": "base_damage",
+        "header": "BASE DAMAGE:",
+        "value": "70"
+      },
+      {
+        "key": "quas_damage",
+        "header": "QUAS DAMAGE:",
+        "value": "0",
+        "generated": true
+      },
+      {
+        "key": "wex_damage",
+        "header": "ADDED DAMAGE:",
+        "value": [
+          "90",
+          "165",
+          "240",
+          "315"
+        ]
+      }
+    ],
+    "mc": "150",
+    "cd": "30",
+    "img": "/apps/dota2/images/abilities/invoker_tornado_ad_md.png"
+  },
+  "invoker_emp_ad": {
+    "dname": "E.M.P. (AD)",
+    "behavior": [
+      "Point Target",
+      "AOE"
+    ],
+    "dmg_type": "Magical",
+    "bkbpierce": "No",
+    "desc": "Invoker builds up a charge of electromagnetic energy at a targeted location which automatically detonates after 2.9 seconds. The detonation covers an area, draining mana. Deals damage for each point of mana drained.  If EMP drains mana from an enemy hero, Invoker gains 50% of the mana drained.",
+    "attrib": [
+      {
+        "key": "delay",
+        "header": "CHARGE TIME:",
+        "value": "2.9"
+      },
+      {
+        "key": "area_of_effect",
+        "header": "RADIUS:",
+        "value": "675"
+      },
+      {
+        "key": "mana_burned",
+        "header": "MAX MANA BURNED:\\n",
+        "value": [
+          "175",
+          "300",
+          "425",
+          "550"
+        ]
+      },
+      {
+        "key": "damage_per_mana_pct",
+        "header": "BURN DAMAGE:",
+        "value": "60%"
+      }
+    ],
+    "mc": "125",
+    "cd": "30",
+    "img": "/apps/dota2/images/abilities/invoker_emp_ad_md.png"
+  },
+  "invoker_alacrity_ad": {
+    "dname": "Alacrity (AD)",
+    "behavior": "Unit Target",
+    "desc": "Invoker infuses an ally with an immense surge of energy, increasing their attack speed and their damage.",
+    "attrib": [
+      {
+        "key": "bonus_attack_speed",
+        "header": "BONUS ATTACK SPEED:\\n",
+        "value": [
+          "25",
+          "50",
+          "75",
+          "100"
+        ]
+      },
+      {
+        "key": "bonus_damage",
+        "header": "BONUS DAMAGE:\\n",
+        "value": [
+          "25",
+          "50",
+          "75",
+          "100"
+        ]
+      },
+      {
+        "key": "duration",
+        "header": "DURATION:",
+        "value": "9"
+      }
+    ],
+    "mc": "60",
+    "cd": "17",
+    "img": "/apps/dota2/images/abilities/invoker_alacrity_ad_md.png"
+  },
+  "invoker_sun_strike_ad": {
+    "dname": "Sun Strike (AD)",
+    "behavior": [
+      "Point Target",
+      "AOE"
+    ],
+    "dmg_type": "Pure",
+    "bkbpierce": "Yes",
+    "desc": "Sends a catastrophic ray of fierce energy from the sun at any targeted location, incinerating all enemies standing beneath it once it reaches the earth. Damage is spread evenly over all enemies hit.",
+    "attrib": [
+      {
+        "key": "delay",
+        "header": "DELAY:",
+        "value": "1.7"
+      },
+      {
+        "key": "area_of_effect",
+        "header": "RADIUS:",
+        "value": "175"
+      },
+      {
+        "key": "damage",
+        "header": "DAMAGE:\\n",
+        "value": [
+          "162",
+          "266",
+          "370",
+          "475"
+        ]
+      },
+      {
+        "key": "vision_distance",
+        "header": "VISION DISTANCE:",
+        "value": "400",
+        "generated": true
+      },
+      {
+        "key": "vision_duration",
+        "header": "VISION DURATION:",
+        "value": "4",
+        "generated": true
+      },
+      {
+        "key": "cataclysm_cooldown",
+        "header": "CATACLYSM COOLDOWN:",
+        "value": "90",
+        "generated": true
+      },
+      {
+        "key": "cataclysm_min_range",
+        "header": "CATACLYSM MIN RANGE:",
+        "value": "160",
+        "generated": true
+      },
+      {
+        "key": "cataclysm_max_range",
+        "header": "CATACLYSM MAX RANGE:",
+        "value": "200",
+        "generated": true
+      }
+    ],
+    "mc": "175",
+    "cd": "25",
+    "img": "/apps/dota2/images/abilities/invoker_sun_strike_ad_md.png"
+  },
+  "invoker_forge_spirit_ad": {
+    "dname": "Forge Spirit (AD)",
+    "behavior": "No Target",
+    "bkbpierce": "No",
+    "desc": "Invoker forges a spirit embodying the strength of fire and fortitude of ice. The elemental's scorching attack is capable of melting the armor of enemy heroes.",
+    "attrib": [
+      {
+        "key": "spirit_damage",
+        "header": "DAMAGE:\\n",
+        "value": [
+          "32",
+          "45",
+          "68",
+          "82"
+        ]
+      },
+      {
+        "key": "spirit_mana",
+        "header": "MANA:\\n",
+        "value": [
+          "140",
+          "220",
+          "340",
+          "400"
+        ]
+      },
+      {
+        "key": "spirit_armor",
+        "header": "ARMOR:\\n",
+        "value": [
+          "1",
+          "2",
+          "4",
+          "6"
+        ]
+      },
+      {
+        "key": "spirit_attack_range",
+        "header": "ATTACK RANGE:\\n",
+        "value": [
+          "365",
+          "470",
+          "580",
+          "690"
+        ]
+      },
+      {
+        "key": "spirit_hp",
+        "header": "HEALTH:\\n",
+        "value": [
+          "400",
+          "566",
+          "732",
+          "900"
+        ]
+      },
+      {
+        "key": "spirit_duration",
+        "header": "DURATION:\\n",
+        "value": [
+          "30",
+          "46",
+          "62",
+          "80"
+        ]
+      }
+    ],
+    "mc": "75",
+    "cd": "30",
+    "img": "/apps/dota2/images/abilities/invoker_forge_spirit_ad_md.png"
+  },
+  "invoker_chaos_meteor_ad": {
+    "dname": "Chaos Meteor (AD)",
+    "behavior": "Point Target",
+    "dmg_type": "Magical",
+    "bkbpierce": "No",
+    "desc": "Invoker pulls a flaming meteor from space onto the targeted location. Upon landing, the meteor rolls forward, constantly dealing damage and rolling further based on the level. Units hit by the meteor will also be set on fire for a short time.",
+    "attrib": [
+      {
+        "key": "land_time",
+        "header": "IMPACT DELAY:",
+        "value": "1.3"
+      },
+      {
+        "key": "area_of_effect",
+        "header": "RADIUS:",
+        "value": "275"
+      },
+      {
+        "key": "travel_distance",
+        "header": "TRAVEL DISTANCE:\\n",
+        "value": [
+          "615",
+          "866",
+          "1118",
+          "1370"
+        ]
+      },
+      {
+        "key": "travel_speed",
+        "header": "TRAVEL SPEED:",
+        "value": "300",
+        "generated": true
+      },
+      {
+        "key": "damage_interval",
+        "header": "CONTACT DAMAGE TICK:",
+        "value": "0.5"
+      },
+      {
+        "key": "vision_distance",
+        "header": "VISION DISTANCE:",
+        "value": "500",
+        "generated": true
+      },
+      {
+        "key": "end_vision_duration",
+        "header": "END VISION DURATION:",
+        "value": "3",
+        "generated": true
+      },
+      {
+        "key": "main_damage",
+        "header": "CONTACT DAMAGE:\\n",
+        "value": [
+          "75",
+          "105",
+          "135",
+          "162.5"
+        ]
+      },
+      {
+        "key": "burn_duration",
+        "header": "BURN DURATION:",
+        "value": "3"
+      },
+      {
+        "key": "burn_dps",
+        "header": "BURN DAMAGE PER SECOND:\\n",
+        "value": [
+          "15",
+          "21",
+          "26.5",
+          "32.5"
+        ]
+      }
+    ],
+    "mc": "200",
+    "cd": "55",
+    "img": "/apps/dota2/images/abilities/invoker_chaos_meteor_ad_md.png"
+  },
+  "invoker_ice_wall_ad": {
+    "dname": "Ice Wall (AD)",
+    "behavior": "No Target",
+    "dmg_type": "Magical",
+    "bkbpierce": "No",
+    "desc": "Generates a wall of solid ice directly in front of Invoker for a duration. The bitter cold emanating from it greatly slows nearby enemies and deals damage each second.",
+    "attrib": [
+      {
+        "key": "duration",
+        "header": "WALL DURATION:\\n",
+        "value": [
+          "4.5",
+          "7",
+          "9.5",
+          "12"
+        ]
+      },
+      {
+        "key": "slow",
+        "header": "MOVEMENT SLOW:\\n",
+        "value": [
+          "-40%",
+          "-74%",
+          "-106%",
+          "-140%"
+        ]
+      },
+      {
+        "key": "slow_duration",
+        "header": "SLOW DURATION:",
+        "value": "2"
+      },
+      {
+        "key": "damage_per_second",
+        "header": "DAMAGE PER SECOND:\\n",
+        "value": [
+          "12",
+          "22",
+          "32",
+          "42"
+        ]
+      },
+      {
+        "key": "wall_place_distance",
+        "header": "WALL PLACE DISTANCE:",
+        "value": "200",
+        "generated": true
+      },
+      {
+        "key": "num_wall_elements",
+        "header": "NUM WALL ELEMENTS:",
+        "value": "15",
+        "generated": true
+      },
+      {
+        "key": "wall_element_spacing",
+        "header": "WALL ELEMENT SPACING:",
+        "value": "80",
+        "generated": true
+      },
+      {
+        "key": "wall_element_radius",
+        "header": "WALL ELEMENT RADIUS:",
+        "value": "105",
+        "generated": true
+      }
+    ],
+    "mc": "175",
+    "cd": "25",
+    "img": "/apps/dota2/images/abilities/invoker_ice_wall_ad_md.png"
+  },
+  "invoker_deafening_blast_ad": {
+    "dname": "Deafening Blast",
+    "behavior": "Point Target",
+    "dmg_type": "Magical",
+    "bkbpierce": "No",
+    "desc": "Invoker unleashes a mighty sonic wave in front of him, dealing damage to any enemy unit it collides with. The sheer impact from the blast is enough to knock those enemy units back for a duration then disarm their attacks for a duration.",
+    "attrib": [
+      {
+        "key": "travel_distance",
+        "header": "TRAVEL DISTANCE:",
+        "value": "1000"
+      },
+      {
+        "key": "travel_speed",
+        "header": "TRAVEL SPEED:",
+        "value": "1100",
+        "generated": true
+      },
+      {
+        "key": "radius_start",
+        "header": "RADIUS START:",
+        "value": "175",
+        "generated": true
+      },
+      {
+        "key": "radius_end",
+        "header": "RADIUS END:",
+        "value": "225",
+        "generated": true
+      },
+      {
+        "key": "end_vision_duration",
+        "header": "END VISION DURATION:",
+        "value": "1.75",
+        "generated": true
+      },
+      {
+        "key": "damage",
+        "header": "DAMAGE:\\n",
+        "value": [
+          "80",
+          "146",
+          "214",
+          "280"
+        ]
+      },
+      {
+        "key": "knockback_duration",
+        "header": "KNOCKBACK DURATION:\\n",
+        "value": [
+          "0.5",
+          "0.9",
+          "1.33",
+          "1.75"
+        ]
+      },
+      {
+        "key": "disarm_duration",
+        "header": "DISARM DURATION:\\n",
+        "value": [
+          "2",
+          "3.25",
+          "4.5",
+          "5.75"
+        ]
+      }
+    ],
+    "mc": "300",
+    "cd": "40",
+    "img": "/apps/dota2/images/abilities/invoker_deafening_blast_ad_md.png"
+  },
   "silencer_curse_of_the_silent": {
     "dname": "Arcane Curse",
     "behavior": [
@@ -20310,13 +20922,14 @@
       },
       {
         "key": "illusion_outgoing_damage_tooltip",
-        "header": "ILLUSION DAMAGE:",
+        "header": "ILLUSION OUTGOING DAMAGE TOOLTIP:",
         "value": [
-          "30%",
-          "45%",
-          "60%",
-          "75%"
-        ]
+          "30",
+          "45",
+          "60",
+          "75"
+        ],
+        "generated": true
       },
       {
         "key": "illusion_incoming_damage",
@@ -20326,8 +20939,9 @@
       },
       {
         "key": "illusion_incoming_damage_tooltip",
-        "header": "ILLUSION DAMAGE TAKEN:",
-        "value": "200%"
+        "header": "ILLUSION INCOMING DAMAGE TOOLTIP:",
+        "value": "200",
+        "generated": true
       }
     ],
     "mc": [
@@ -36181,6 +36795,118 @@
   "special_bonus_undefined": {
     "dname": "Undefined"
   },
+  "ad_special_bonus_gold_150_l": {
+    "dname": "+150 Gold",
+    "behavior": "Passive",
+    "desc": "Associated ability not drafted, have some gold!",
+    "attrib": [
+      {
+        "key": "value",
+        "header": "VALUE:",
+        "value": "150",
+        "generated": true
+      }
+    ],
+    "img": "/apps/dota2/images/abilities/ad_special_bonus_gold_150_l_md.png"
+  },
+  "ad_special_bonus_gold_250_l": {
+    "dname": "+250 Gold",
+    "behavior": "Passive",
+    "desc": "Associated ability not drafted, have some gold!",
+    "attrib": [
+      {
+        "key": "value",
+        "header": "VALUE:",
+        "value": "250",
+        "generated": true
+      }
+    ],
+    "img": "/apps/dota2/images/abilities/ad_special_bonus_gold_250_l_md.png"
+  },
+  "ad_special_bonus_gold_500_l": {
+    "dname": "+500 Gold",
+    "behavior": "Passive",
+    "desc": "Associated ability not drafted, have some gold!",
+    "attrib": [
+      {
+        "key": "value",
+        "header": "VALUE:",
+        "value": "500",
+        "generated": true
+      }
+    ],
+    "img": "/apps/dota2/images/abilities/ad_special_bonus_gold_500_l_md.png"
+  },
+  "ad_special_bonus_gold_750_l": {
+    "dname": "+750 Gold",
+    "behavior": "Passive",
+    "desc": "Associated ability not drafted, have some gold!",
+    "attrib": [
+      {
+        "key": "value",
+        "header": "VALUE:",
+        "value": "750",
+        "generated": true
+      }
+    ],
+    "img": "/apps/dota2/images/abilities/ad_special_bonus_gold_750_l_md.png"
+  },
+  "ad_special_bonus_gold_150_r": {
+    "dname": "+150 Gold",
+    "behavior": "Passive",
+    "desc": "Associated ability not drafted, have some gold!",
+    "attrib": [
+      {
+        "key": "value",
+        "header": "VALUE:",
+        "value": "150",
+        "generated": true
+      }
+    ],
+    "img": "/apps/dota2/images/abilities/ad_special_bonus_gold_150_r_md.png"
+  },
+  "ad_special_bonus_gold_250_r": {
+    "dname": "+250 Gold",
+    "behavior": "Passive",
+    "desc": "Associated ability not drafted, have some gold!",
+    "attrib": [
+      {
+        "key": "value",
+        "header": "VALUE:",
+        "value": "250",
+        "generated": true
+      }
+    ],
+    "img": "/apps/dota2/images/abilities/ad_special_bonus_gold_250_r_md.png"
+  },
+  "ad_special_bonus_gold_500_r": {
+    "dname": "+500 Gold",
+    "behavior": "Passive",
+    "desc": "Associated ability not drafted, have some gold!",
+    "attrib": [
+      {
+        "key": "value",
+        "header": "VALUE:",
+        "value": "500",
+        "generated": true
+      }
+    ],
+    "img": "/apps/dota2/images/abilities/ad_special_bonus_gold_500_r_md.png"
+  },
+  "ad_special_bonus_gold_750_r": {
+    "dname": "+750 Gold",
+    "behavior": "Passive",
+    "desc": "Associated ability not drafted, have some gold!",
+    "attrib": [
+      {
+        "key": "value",
+        "header": "VALUE:",
+        "value": "750",
+        "generated": true
+      }
+    ],
+    "img": "/apps/dota2/images/abilities/ad_special_bonus_gold_750_r_md.png"
+  },
   "special_bonus_hp_100": {
     "dname": "+100 Health"
   },
@@ -37634,7 +38360,7 @@
     "dname": "-6 Venomous Gale CD"
   },
   "special_bonus_unique_venomancer_4": {
-    "dname": "+5.5s Poison Nova Duration"
+    "dname": "+5s Poison Nova Duration"
   },
   "special_bonus_unique_venomancer_5": {
     "dname": "Gale Hero Impact Summons 2 Wards"
@@ -38978,9 +39704,6 @@
   "special_bonus_unique_lone_druid_8": {
     "dname": "-32s True Form Cooldown"
   },
-  "special_bonus_unique_wisp": {
-    "dname": "+60 Spirits Hero Damage"
-  },
   "special_bonus_unique_lone_druid_9": {
     "dname": "0 Entangle Cooldown"
   },
@@ -38989,6 +39712,9 @@
   },
   "special_bonus_unique_lone_druid_11": {
     "dname": "+25 Spirit Bear Movement Speed"
+  },
+  "special_bonus_unique_wisp": {
+    "dname": "+60 Spirits Hero Damage"
   },
   "special_bonus_unique_wisp_2": {
     "dname": "Tether Stuns"
@@ -39939,5 +40665,268 @@
     "mc": "0",
     "cd": "45",
     "img": "/apps/dota2/images/abilities/seasonal_ti9_monkey_md.png"
+  },
+  "seasonal_ti10_high_five": {
+    "behavior": [
+      "No Target",
+      "Instant Cast",
+      null
+    ],
+    "dmg": "0",
+    "attrib": [
+      {
+        "key": "think_interval",
+        "header": "THINK INTERVAL:",
+        "value": "0.2",
+        "generated": true
+      },
+      {
+        "key": "acknowledge_range",
+        "header": "ACKNOWLEDGE RANGE:",
+        "value": "900",
+        "generated": true
+      },
+      {
+        "key": "request_duration",
+        "header": "REQUEST DURATION:",
+        "value": "10",
+        "generated": true
+      },
+      {
+        "key": "high_five_speed",
+        "header": "HIGH FIVE SPEED:",
+        "value": "700",
+        "generated": true
+      },
+      {
+        "key": "acknowledged_cooldown",
+        "header": "ACKNOWLEDGED COOLDOWN:",
+        "value": "1",
+        "generated": true
+      }
+    ],
+    "mc": "0",
+    "cd": "60",
+    "img": "/apps/dota2/images/abilities/seasonal_ti10_high_five_md.png"
+  },
+  "seasonal_ti10_guild_banner": {
+    "behavior": [
+      "Point Target",
+      null
+    ],
+    "dmg": "0",
+    "attrib": [
+      {
+        "key": "size",
+        "header": "SIZE:",
+        "value": "0.7",
+        "generated": true
+      },
+      {
+        "key": "max_simultaneous",
+        "header": "MAX SIMULTANEOUS:",
+        "value": "1",
+        "generated": true
+      },
+      {
+        "key": "lifetime",
+        "header": "LIFETIME:",
+        "value": "60",
+        "generated": true
+      }
+    ],
+    "mc": "0",
+    "cd": "60",
+    "img": "/apps/dota2/images/abilities/seasonal_ti10_guild_banner_md.png"
+  },
+  "seasonal_ti10_portal": {
+    "behavior": [
+      "Point Target",
+      null,
+      null
+    ],
+    "dmg": "0",
+    "attrib": [
+      {
+        "key": "duration",
+        "header": "DURATION:",
+        "value": "10",
+        "generated": true
+      }
+    ],
+    "mc": "0",
+    "cd": "40",
+    "img": "/apps/dota2/images/abilities/seasonal_ti10_portal_md.png"
+  },
+  "seasonal_ti10_disco_ball": {
+    "behavior": [
+      "Point Target",
+      null,
+      null
+    ],
+    "dmg": "0",
+    "attrib": [
+      {
+        "key": "size",
+        "header": "SIZE:",
+        "value": "320",
+        "generated": true
+      },
+      {
+        "key": "duration",
+        "header": "DURATION:",
+        "value": "30",
+        "generated": true
+      },
+      {
+        "key": "idle_lifetime",
+        "header": "IDLE LIFETIME:",
+        "value": "0.25",
+        "generated": true
+      }
+    ],
+    "mc": "0",
+    "cd": "30",
+    "img": "/apps/dota2/images/abilities/seasonal_ti10_disco_ball_md.png"
+  },
+  "seasonal_ti10_disco_ball_channel": {
+    "behavior": [
+      "Unit Target",
+      "Channeled",
+      "Hidden"
+    ],
+    "dmg": "0",
+    "attrib": [
+      {
+        "key": "duration",
+        "header": "DURATION:",
+        "value": "30",
+        "generated": true
+      }
+    ],
+    "mc": "0",
+    "cd": "0",
+    "img": "/apps/dota2/images/abilities/seasonal_ti10_disco_ball_channel_md.png"
+  },
+  "seasonal_ti10_soccer_ball": {
+    "behavior": [
+      "Point Target",
+      null,
+      null
+    ],
+    "dmg": "0",
+    "attrib": [
+      {
+        "key": "tick_interval",
+        "header": "TICK INTERVAL:",
+        "value": "0.05",
+        "generated": true
+      },
+      {
+        "key": "forward_move_speed",
+        "header": "FORWARD MOVE SPEED:",
+        "value": "1000",
+        "generated": true
+      },
+      {
+        "key": "magnus_coefficient",
+        "header": "MAGNUS COEFFICIENT:",
+        "value": "1000",
+        "generated": true
+      },
+      {
+        "key": "magnus_falloff",
+        "header": "MAGNUS FALLOFF:",
+        "value": "0.7",
+        "generated": true
+      },
+      {
+        "key": "hit_radius",
+        "header": "HIT RADIUS:",
+        "value": "80",
+        "generated": true
+      },
+      {
+        "key": "drag_coefficient",
+        "header": "DRAG COEFFICIENT:",
+        "value": "0.0002",
+        "generated": true
+      },
+      {
+        "key": "min_delay",
+        "header": "MIN DELAY:",
+        "value": "0.2",
+        "generated": true
+      },
+      {
+        "key": "max_delay",
+        "header": "MAX DELAY:",
+        "value": "1.25",
+        "generated": true
+      }
+    ],
+    "mc": "0",
+    "cd": "20",
+    "img": "/apps/dota2/images/abilities/seasonal_ti10_soccer_ball_md.png"
+  },
+  "seasonal_ti10_hot_potato": {
+    "behavior": [
+      "Unit Target",
+      null,
+      null
+    ],
+    "attrib": [
+      {
+        "key": "projectile_speed",
+        "header": "PROJECTILE SPEED:",
+        "value": "1000",
+        "generated": true
+      },
+      {
+        "key": "min_duration",
+        "header": "MIN DURATION:",
+        "value": "7",
+        "generated": true
+      },
+      {
+        "key": "max_duration",
+        "header": "MAX DURATION:",
+        "value": "22",
+        "generated": true
+      },
+      {
+        "key": "debuff_duration",
+        "header": "DEBUFF DURATION:",
+        "value": "30",
+        "generated": true
+      }
+    ],
+    "mc": "0",
+    "cd": "60",
+    "img": "/apps/dota2/images/abilities/seasonal_ti10_hot_potato_md.png"
+  },
+  "seasonal_ti10_hot_potato_throw_existing_potato": {
+    "behavior": [
+      "Unit Target",
+      null,
+      "Hidden"
+    ],
+    "attrib": [
+      {
+        "key": "projectile_speed",
+        "header": "PROJECTILE SPEED:",
+        "value": "1000",
+        "generated": true
+      },
+      {
+        "key": "debuff_duration",
+        "header": "DEBUFF DURATION:",
+        "value": "30",
+        "generated": true
+      }
+    ],
+    "mc": "0",
+    "cd": "0",
+    "img": "/apps/dota2/images/abilities/seasonal_ti10_hot_potato_throw_existing_potato_md.png"
   }
 }
