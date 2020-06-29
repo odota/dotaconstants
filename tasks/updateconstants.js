@@ -97,7 +97,7 @@ const sources = [
           item.img = `/apps/dota2/images/items/${key.replace(
             /^item_/,
             ""
-          )}_lg.png?t=${now}`;
+          )}_lg.png?t=${1593393829403}`;
           if (key.includes("item_recipe")) {
             item.img = `/apps/dota2/images/items/recipe_lg.png?t=${now}`;
           }
