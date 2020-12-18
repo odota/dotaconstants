@@ -99,7 +99,7 @@ const sources = [
             ""
           )}_lg.png?t=${1593393829403}`;
           if (key.includes("item_recipe")) {
-            item.img = `/apps/dota2/images/items/recipe_lg.png?t=${now}`;
+            item.img = `/apps/dota2/images/items/recipe_lg.png?t=${1593393829403}`;
           }
 
           item.dname = strings[`DOTA_Tooltip_ability_${key}`];
@@ -148,7 +148,7 @@ const sources = [
           result_key = scripts[key].ItemResult.replace(/^item_/, "");
           items[result_key].components = scripts[key].ItemRequirements[0]
             .split(";")
-            .map((item) => item.replace(/^item_/, ""));
+            .map((item) => item.replace(/^item_/, "").replace('*', ''));
           items[result_key].created = true;
         });
 

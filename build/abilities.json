@@ -390,13 +390,15 @@
       },
       {
         "key": "damage_reduction_scepter",
-        "header": "SCEPTER DAMAGE REDUCTION:",
-        "value": "30%"
+        "header": "DAMAGE REDUCTION SCEPTER:",
+        "value": "30",
+        "generated": true
       },
       {
         "key": "scepter_range",
-        "header": "SCEPTER AOE:",
-        "value": "400"
+        "header": "SCEPTER RANGE:",
+        "value": "400",
+        "generated": true
       },
       {
         "key": "abilitycastrange",
@@ -6247,7 +6249,7 @@
       {
         "key": "abilitycastpoint",
         "header": "ABILITYCASTPOINT:",
-        "value": "0.3",
+        "value": "0",
         "generated": true
       }
     ],
@@ -10648,11 +10650,6 @@
         "key": "speed",
         "header": "MISSILE SPEED:",
         "value": "700"
-      },
-      {
-        "key": "targets_scepter",
-        "header": "SCEPTER TARGETS:",
-        "value": "4"
       },
       {
         "key": "abilitycastpoint",
@@ -17696,7 +17693,7 @@
       null
     ],
     "bkbpierce": "No",
-    "desc": "Leaps backward, dodges incoming projectiles, and launches an Impetus attack on the 3 furthest enemy units within Enchantress' attack range + 200. Grants 40% movement speed for 2 seconds.",
+    "desc": "Leaps backward, dodges incoming projectiles, and launches an Impetus attack on the 3 furthest enemy units within Enchantress' attack range + 200.",
     "attrib": [
       {
         "key": "hop_distance",
@@ -29290,8 +29287,9 @@
       },
       {
         "key": "regen_rate_tooltip_scepter",
-        "header": "SCEPTER HEALTH REGEN:",
-        "value": "10%"
+        "header": "REGEN RATE TOOLTIP SCEPTER:",
+        "value": "10",
+        "generated": true
       },
       {
         "key": "scepter_cooldown",
@@ -29300,7 +29298,8 @@
           "160",
           "120",
           "80"
-        ]
+        ],
+        "generated": true
       },
       {
         "key": "abilitycastrange",
@@ -36143,7 +36142,7 @@
       null
     ],
     "dmg_type": "Magical",
-    "desc": "Costs 25% of Terrorblade's Current HP to cast, providing him +25% Movement and +50% Attack Speed for 6 seconds. Provides 50% more bonus while melee. Cooldown: 14. ",
+    "desc": "Costs 25% of Terrorblade's Current HP to cast, providing him +25 Movement and +50% Attack Speed for 6 seconds. Provides 50% more bonus while melee. Cooldown: 14. ",
     "attrib": [
       {
         "key": "berserk_bonus_attack_speed",
