@@ -4489,9 +4489,9 @@
       "200"
     ],
     "cd": [
-      "70",
-      "65",
-      "60"
+      "80",
+      "75",
+      "70"
     ],
     "img": "/apps/dota2/images/abilities/puck_dream_coil_md.png"
   },
@@ -5467,9 +5467,9 @@
       }
     ],
     "mc": [
-      "50",
-      "60",
+      "65",
       "70",
+      "75",
       "80"
     ],
     "cd": "50",
@@ -5543,7 +5543,7 @@
         "value": "1200"
       }
     ],
-    "mc": "160",
+    "mc": "180",
     "cd": [
       "200",
       "120",
@@ -6603,16 +6603,6 @@
           "500",
           "575",
           "650"
-        ]
-      },
-      {
-        "key": "AbilityDuration",
-        "header": "DURATION:",
-        "value": [
-          "20",
-          "25",
-          "30",
-          "35"
         ]
       },
       {
@@ -9439,7 +9429,7 @@
       null
     ],
     "bkbpierce": "No",
-    "desc": "Creates an icicle at the target spot for 15 seconds, slowing enemies within 500 range by -20%. Has 300 health.Chain Frost can bounce to the Icicle if there are no other enemies in range.Can cast Frost Shield on it.",
+    "desc": "Creates an icicle at the target spot for 15 seconds, slowing enemies within 600 range by -20%. Has 600 health.Chain Frost can bounce to the Icicle if there are no other enemies in range.Can cast Frost Shield on it.",
     "attrib": [
       {
         "key": "bonus_movespeed",
@@ -9450,7 +9440,7 @@
       {
         "key": "aura_radius",
         "header": "AURA RADIUS:",
-        "value": "500",
+        "value": "600",
         "generated": true
       },
       {
@@ -9804,7 +9794,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Fires a dart at the target enemy, putting them to sleep for 3 seconds. At the end of the duration, the target wakes up and takes 150 damage and is slowed by 25% for 4 seconds.",
+    "desc": "Fires a dart at the target enemy, putting them to sleep for 3 seconds. At the end of the duration, the target wakes up and takes 150 damage and is slowed by 30% for 4 seconds.",
     "attrib": [
       {
         "key": "duration",
@@ -9814,7 +9804,7 @@
       {
         "key": "movement_slow",
         "header": "MOVEMENT SLOW:",
-        "value": "25",
+        "value": "30",
         "generated": true
       },
       {
@@ -9847,8 +9837,8 @@
         "generated": true
       }
     ],
-    "mc": "125",
-    "cd": "15",
+    "mc": "85",
+    "cd": "12",
     "img": "/apps/dota2/images/abilities/riki_poison_dart_md.png"
   },
   "riki_smoke_screen": {
@@ -10834,8 +10824,8 @@
         "generated": true
       }
     ],
-    "mc": "75",
-    "cd": "20",
+    "mc": "50",
+    "cd": "16",
     "img": "/apps/dota2/images/abilities/sniper_concussive_grenade_md.png"
   },
   "sniper_shrapnel": {
@@ -14658,7 +14648,7 @@
         "generated": true
       }
     ],
-    "mc": "150",
+    "mc": "100",
     "cd": "20",
     "img": "/apps/dota2/images/abilities/dragon_knight_fireball_md.png"
   },
@@ -15370,12 +15360,12 @@
       "Hidden",
       null
     ],
-    "desc": "Rises up, granting Clockwerk flying vision, flying movement, and a 15% bonus movement speed. Clockwerk has a severely-limited turn rate during this time and cannot attack. Lasts up to 6 seconds or until he casts Hookshot.",
+    "desc": "Rises up, granting Clockwerk flying vision, flying movement, and a 22% bonus movement speed. Clockwerk has a severely-limited turn rate during this time and cannot attack. Lasts up to 6 seconds or until he casts Hookshot.",
     "attrib": [
       {
         "key": "bonus_speed",
         "header": "BONUS SPEED:",
-        "value": "15",
+        "value": "22",
         "generated": true
       },
       {
@@ -15396,8 +15386,8 @@
         "value": "6"
       }
     ],
-    "mc": "150",
-    "cd": "25",
+    "mc": "75",
+    "cd": "20",
     "img": "/apps/dota2/images/abilities/rattletrap_jetpack_md.png"
   },
   "rattletrap_overclocking": {
@@ -16166,17 +16156,17 @@
       {
         "key": "treant_hp_bonus",
         "header": "TREANT HP BONUS:",
-        "value": "440",
+        "value": "550",
         "generated": true
       },
       {
         "key": "treant_damage_bonus",
         "header": "TREANT DAMAGE BONUS:",
         "value": [
-          "24",
-          "28",
-          "32",
-          "36"
+          "22",
+          "26",
+          "30",
+          "34"
         ],
         "generated": true
       },
@@ -16360,10 +16350,10 @@
         "key": "hp_leech_percent",
         "header": "MAX HEALTH LIFE STEAL:",
         "value": [
-          "1.6%",
-          "2.2%",
-          "2.8%",
-          "3.4%"
+          "1.8%",
+          "2.4%",
+          "3%",
+          "3.6%"
         ]
       }
     ],
@@ -16713,12 +16703,12 @@
       "Hidden",
       null
     ],
-    "desc": "Grants Normal Punch. Passive cooldown attack. Causes Dark Seer's next attack on a hero to knock an illusion out of the victim and stun them for up to 2 seconds, 350 distance and 250 damage based on how far Dark Seer has moved in the past 3 seconds. Max power is reached after 1500 distance moved. Illusions lasts for 5 seconds. Cooldown: 14",
+    "desc": "Grants Normal Punch. Passive cooldown attack. Causes Dark Seer's next attack on a hero to knock an illusion out of the victim and stun them for up to 2.25 seconds, 350 distance and 250 damage based on how far Dark Seer has moved in the past 3 seconds. Max power is reached after 1500 distance moved. Illusions lasts for 5 seconds. Cooldown: 14",
     "attrib": [
       {
         "key": "max_stun",
         "header": "MAX STUN:",
-        "value": "2",
+        "value": "2.25",
         "generated": true
       },
       {
@@ -16807,11 +16797,6 @@
         "header": "RADIUS TREE:",
         "value": "275",
         "generated": true
-      },
-      {
-        "key": "scepter_cooldown",
-        "header": "SCEPTER COOLDOWN:",
-        "value": "12"
       },
       {
         "key": "abilitycastrange",
@@ -18692,12 +18677,12 @@
       null
     ],
     "bkbpierce": "No",
-    "desc": "Consumes a Spin Web charge and roots the target enemy for 2 seconds and deals 75 damage per second.",
+    "desc": "Consumes a Spin Web charge and roots the target enemy for 2.5 seconds and deals 75 damage per second.",
     "attrib": [
       {
         "key": "duration",
         "header": "DURATION:",
-        "value": "2"
+        "value": "2.5"
       },
       {
         "key": "projectile_speed",
@@ -19920,9 +19905,9 @@
         "key": "damage",
         "header": "DAMAGE PER SECOND:",
         "value": [
+          "20",
           "40",
-          "60",
-          "80"
+          "60"
         ]
       },
       {
@@ -22077,7 +22062,7 @@
       }
     ],
     "mc": "125",
-    "cd": "45",
+    "cd": "35",
     "img": "/apps/dota2/images/abilities/alchemist_berserk_potion_md.png"
   },
   "alchemist_acid_spray": {
@@ -24544,9 +24529,9 @@
         "header": "DAMAGE:",
         "value": [
           "120",
-          "190",
-          "260",
-          "330"
+          "200",
+          "280",
+          "360"
         ]
       },
       {
@@ -24569,10 +24554,10 @@
         "key": "mana_capacity_steal",
         "header": "MANA CAPACITY STEAL:",
         "value": [
-          "14%",
           "16%",
           "18%",
-          "20%"
+          "20%",
+          "22%"
         ]
       },
       {
@@ -24668,7 +24653,7 @@
       {
         "key": "proc_chance",
         "header": "CHANCE:",
-        "value": "25%"
+        "value": "30%"
       },
       {
         "key": "mana_restore",
@@ -24721,8 +24706,8 @@
         "header": "BASE DAMAGE:",
         "value": [
           "200",
-          "275",
-          "350"
+          "300",
+          "400"
         ]
       },
       {
@@ -24772,7 +24757,7 @@
   "lycan_summon_wolves": {
     "dname": "Summon Wolves",
     "behavior": "No Target",
-    "desc": "Summons two wolves to fight for Lycan.  Level 3-4 wolves have Cripple, and level 4 wolves have permanent invisibility.",
+    "desc": "Summons two wolves to fight for Lycan.  Level 3-4 wolves have Permanent Invisibility, and level 4 wolves have Cripple.",
     "attrib": [
       {
         "key": "wolf_index",
@@ -24953,10 +24938,10 @@
         "key": "bonus_damage",
         "header": "BONUS DAMAGE:",
         "value": [
-          "14%",
-          "26%",
-          "38%",
-          "50%"
+          "12%",
+          "22%",
+          "32%",
+          "42%"
         ]
       },
       {
@@ -27495,8 +27480,8 @@
         "generated": true
       }
     ],
-    "mc": "125",
-    "cd": "18",
+    "mc": "75",
+    "cd": "16",
     "img": "/apps/dota2/images/abilities/ogre_magi_smash_md.png"
   },
   "ogre_magi_unrefined_fireblast": {
@@ -27573,9 +27558,9 @@
         "key": "burn_damage",
         "header": "BURN DAMAGE:",
         "value": [
-          "26",
-          "34",
-          "42",
+          "20",
+          "30",
+          "40",
           "50"
         ]
       },
@@ -28941,9 +28926,9 @@
       }
     ],
     "mc": [
-      "160",
-      "220",
-      "280"
+      "180",
+      "240",
+      "300"
     ],
     "cd": [
       "90",
@@ -30740,7 +30725,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Reduce movement speed of an enemy by 30% for 6 seconds and provide true sight vision over them. If Slark pounces on the enemy during that time, he will be rewarded with 50 Attack Speed for the duration of the Leash.",
+    "desc": "Reduce movement speed of an enemy by 30% for 6 seconds and provide true sight vision over them. If Slark pounces on the enemy during that time, he will be rewarded with 75 Attack Speed for the duration of the Leash.",
     "attrib": [
       {
         "key": "slow_duration",
@@ -30757,7 +30742,7 @@
       {
         "key": "attack_speed",
         "header": "ATTACK SPEED:",
-        "value": "50",
+        "value": "75",
         "generated": true
       },
       {
@@ -30774,7 +30759,7 @@
       }
     ],
     "mc": "50",
-    "cd": "12",
+    "cd": "9",
     "img": "/apps/dota2/images/abilities/slark_fish_bait_md.png"
   },
   "slark_dark_pact": {
@@ -31894,12 +31879,12 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Magnus tosses any enemies in front of him, launching them to his rear. Enemies spend 0.6 seconds in the air, then take 150 damage and are stunned for 0.25 seconds upon landing.",
+    "desc": "Magnus tosses any enemies in front of him, launching them to his rear. Enemies spend 0.6 seconds in the air, then take 200 damage and are stunned for 0.25 seconds upon landing.",
     "attrib": [
       {
         "key": "damage",
         "header": "DAMAGE:",
-        "value": "150"
+        "value": "200"
       },
       {
         "key": "radius",
@@ -32324,7 +32309,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Releases a 275 width flame that extends 400 range in the direction Timbersaw is facing. Applies a debuff that deals 90 damage per second and slows by 25%. Lasts 7 seconds. Debuff lingers for 3 seconds.",
+    "desc": "Releases a 275 width flame that extends 400 range in the direction Timbersaw is facing. Applies a debuff that deals 90 damage per second and slows by 30%. Lasts 7 seconds. Debuff lingers for 3 seconds.",
     "attrib": [
       {
         "key": "damage_per_second",
@@ -32428,7 +32413,7 @@
         "generated": true
       }
     ],
-    "mc": "70",
+    "mc": "80",
     "cd": "6",
     "img": "/apps/dota2/images/abilities/shredder_whirling_death_md.png"
   },
@@ -33289,7 +33274,7 @@
       null
     ],
     "bkbpierce": "No",
-    "desc": "Summons a flying Sigil that slows enemy attack by -30 and movement speed by -20% for enemies within 650 radius. Lasts 25 seconds. Cooldown: 40",
+    "desc": "Summons a flying Sigil that slows enemy attack by -35 and movement speed by -35% for enemies within 650 radius. Lasts 25 seconds. Cooldown: 30",
     "attrib": [
       {
         "key": "sigil_radius",
@@ -33304,12 +33289,12 @@
       {
         "key": "move_slow",
         "header": "MOVEMENT SLOW:",
-        "value": "30%"
+        "value": "35%"
       },
       {
         "key": "attack_slow",
         "header": "ATTACK SLOW:",
-        "value": "30"
+        "value": "35"
       },
       {
         "key": "abilitycastpoint",
@@ -35423,7 +35408,7 @@
       {
         "key": "duration",
         "header": "DURATION:",
-        "value": "120"
+        "value": "60"
       },
       {
         "key": "abilitycastrange",
@@ -36156,7 +36141,7 @@
       null
     ],
     "dmg_type": "Magical",
-    "desc": "Costs 25% of Terrorblade's Current HP to cast, providing him +50 Movement and +50% Attack Speed for 7 seconds. Provides 50% more bonus while melee. Cooldown: 14. ",
+    "desc": "Costs 20% of Terrorblade's Current HP to cast, providing him +50 Movement and +50 Attack Speed for 7 seconds. Provides 100% more bonus while melee. Cooldown: 14. ",
     "attrib": [
       {
         "key": "berserk_bonus_attack_speed",
@@ -36173,7 +36158,7 @@
       {
         "key": "melee_bonus",
         "header": "MELEE BONUS:",
-        "value": "50",
+        "value": "100",
         "generated": true
       },
       {
@@ -36185,7 +36170,7 @@
       {
         "key": "health_cost_pct",
         "header": "HEALTH COST PCT:",
-        "value": "25",
+        "value": "20",
         "generated": true
       },
       {
@@ -36341,7 +36326,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Summons 4 fire spirits that circle around Phoenix. Each spirit can be launched independently \n\t\tat a targeted area of effect. Affected enemy units take damage over time and have their attack speed greatly reduced.",
+    "desc": "Summons 4 fire spirits that circle around Phoenix. Each spirit can be launched independently at a targeted area of effect. Affected enemy units take damage over time and have their attack speed greatly reduced.",
     "attrib": [
       {
         "key": "hp_cost_perc",
@@ -37375,7 +37360,7 @@
       {
         "key": "scepter_spawn_interval",
         "header": "SCEPTER SOLDIER SPAWN INTERVAL:",
-        "value": "3.5"
+        "value": "4"
       },
       {
         "key": "scepter_spawn_duration",
@@ -38587,7 +38572,7 @@
       null
     ],
     "bkbpierce": "No",
-    "desc": "Covers an enemy in ink for 6 seconds, slowing their attack speed by 50, movement speed by 20% and dealing a total of 240 damage over its duration.",
+    "desc": "Covers an enemy in ink for 6 seconds, slowing their attack speed by 50, movement speed by 25% and dealing a total of 320 damage over its duration.",
     "attrib": [
       {
         "key": "duration",
@@ -38597,7 +38582,7 @@
       {
         "key": "total_damage",
         "header": "TOTAL DAMAGE:",
-        "value": "240"
+        "value": "320"
       },
       {
         "key": "attack_speed",
@@ -38607,12 +38592,12 @@
       {
         "key": "move_speed",
         "header": "MOVE SPEED SLOW:",
-        "value": "20"
+        "value": "25"
       },
       {
         "key": "abilitycastrange",
         "header": "ABILITYCASTRANGE:",
-        "value": "700",
+        "value": "950",
         "generated": true
       },
       {
@@ -39363,6 +39348,12 @@
         "key": "damage_radius",
         "header": "DAMAGE RADIUS:",
         "value": "275",
+        "generated": true
+      },
+      {
+        "key": "shard_bonus_damage",
+        "header": "SHARD BONUS DAMAGE:",
+        "value": "125",
         "generated": true
       },
       {
@@ -40431,6 +40422,18 @@
           "24%",
           "32%"
         ]
+      },
+      {
+        "key": "decoy_stun_duration",
+        "header": "DECOY STUN DURATION:",
+        "value": "1",
+        "generated": true
+      },
+      {
+        "key": "decoy_detonate_radius",
+        "header": "DECOY DETONATE RADIUS:",
+        "value": "250",
+        "generated": true
       },
       {
         "key": "abilitycastrange",
@@ -46637,6 +46640,9 @@
   "special_bonus_attack_base_damage_30": {
     "dname": "+30 Base Damage"
   },
+  "special_bonus_attack_base_damage_40": {
+    "dname": "+40 Base Damage"
+  },
   "special_bonus_attack_base_damage_45": {
     "dname": "+45 Base Damage"
   },
@@ -47055,7 +47061,7 @@
     "dname": "Blink Uncontrollable Illusion"
   },
   "special_bonus_unique_antimage_6": {
-    "dname": "+0.1s Mana Void Damage Multiplier"
+    "dname": "+0.1 Mana Void Damage Multiplier"
   },
   "special_bonus_unique_antimage_7": {
     "dname": "+0.8% Max Mana Mana Burn"
@@ -48796,7 +48802,7 @@
     "dname": "+0.4s Homing Missile Stun Duration"
   },
   "special_bonus_unique_outworld_devourer": {
-    "dname": "+1.6% Arcane Orb Damage"
+    "dname": "+2% Arcane Orb Damage"
   },
   "special_bonus_unique_outworld_devourer_2": {
     "dname": "+30% Mind Over Matter Slow"
@@ -48805,7 +48811,7 @@
     "dname": "+150 Astral Imprisonment Damage"
   },
   "special_bonus_unique_outworld_devourer_4": {
-    "dname": "+0.1 Sanity's Eclipse Mana Difference Multiplier"
+    "dname": "+0.15 Sanity's Eclipse Mana Difference Multiplier"
   },
   "special_bonus_unique_keeper_of_the_light": {
     "dname": "+160 Illuminate Damage"
@@ -48862,7 +48868,7 @@
     "dname": "+50% Illusory Orb Distance/Speed"
   },
   "special_bonus_unique_puck_2": {
-    "dname": "-7s Waning Rift Cooldown"
+    "dname": "-6s Waning Rift Cooldown"
   },
   "special_bonus_unique_puck_3": {
     "dname": "Dream Coil Rapid Fire"
