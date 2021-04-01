@@ -3,6 +3,7 @@ const async = require("async");
 const fs = require("fs");
 const simplevdf = require("simple-vdf");
 const { mapAbilities } = require("../utils");
+const { url } = require("inspector");
 
 const extraStrings = {
   DOTA_ABILITY_BEHAVIOR_NONE: "None",
@@ -49,6 +50,12 @@ const extraAttribKeys = [
 ];
 
 const now = Number(new Date());
+
+aghs_desc_urls = [];
+for (i=1; i <= 200; i++)
+{
+  aghs_desc_urls.push("http://www.dota2.com/datafeed/herodata?language=english&hero_id=" + i);
+}
 
 const sources = [
   {
@@ -668,6 +675,106 @@ const sources = [
 
       return result;
     },
+  },
+  {
+    key: "aghs_desc",
+    url: aghs_desc_urls,
+    transform: (respObj) => {
+      const herodata = respObj;
+      aghs_desc_arr = [];
+
+      // for every hero
+      for(i=0;i < herodata.length; i++)
+      {
+        // check validity of data from URL
+        // some hero IDs are unused (to the public ;) )
+        if(herodata[i].result.data.heroes.length == 0 || herodata[i].result.data.heroes[0].abilities.length == 0)
+        {
+          continue;
+        }
+        
+        hd_hero = herodata[i].result.data.heroes[0];
+        
+        // object to store data about aghs scepter/shard for a hero
+        var aghs_element = 
+        {
+          hero_name:    "",
+          hero_id:      0,
+          
+          has_scepter: false,
+          scepter_desc: "",
+          scepter_skill_name: "",
+          scepter_new_skill: false,
+          
+          has_shard: false,
+          shard_desc:   "",
+          shard_skill_name: "",
+          shard_new_skill: false,
+        }
+
+        // fill out an aghs_element
+        aghs_element.hero_name = hd_hero.name;
+        aghs_element.hero_id = hd_hero.id;
+
+        hd_hero.abilities.forEach( (ability) => {
+          // skip unused skills
+          if(ability.name_loc == "" || ability.desc_loc == "")
+          {
+            console.log("unused skillo: " + hd_hero.name);
+            return; // i guess this is continue in JS :|
+          }
+            
+          // ------------- Scepter  -------------
+          if(ability.ability_is_granted_by_scepter)
+          {
+            // scepter grants new ability
+            aghs_element.scepter_desc       = ability.desc_loc;
+            aghs_element.scepter_skill_name = ability.name_loc;
+            aghs_element.scepter_new_skill  = true;
+            aghs_element.has_scepter        = true;
+          }
+          else if(ability.ability_has_scepter && !(ability.scepter_loc == ""))
+          {
+            // scepter ugprades an ability
+            aghs_element.scepter_desc       = ability.scepter_loc;
+            aghs_element.scepter_skill_name = ability.name_loc;
+            aghs_element.scepter_new_skill  = false;
+            aghs_element.has_scepter        = true;
+          }
+          // -------------- Shard  --------------
+          if(ability.ability_is_granted_by_shard)
+          {
+            // scepter grants new ability
+            aghs_element.shard_desc       = ability.desc_loc;
+            aghs_element.shard_skill_name = ability.name_loc;
+            aghs_element.shard_new_skill  = true;
+            aghs_element.has_shard        = true;
+          }                                     
+          else if(ability.ability_has_shard && !(ability.shard_loc == ""))
+          {
+            // scepter ugprades an ability
+            aghs_element.shard_desc       = ability.shard_loc;
+            aghs_element.shard_skill_name = ability.name_loc;
+            aghs_element.shard_new_skill  = false;
+            aghs_element.has_shard        = true;
+          }
+        });
+
+        // Error handling
+        if(!aghs_element.has_shard)
+        {
+          console.log(aghs_element.hero_name + "[" + aghs_element.hero_id + "]" + ": Didn't find a scepter...");
+        }
+        if(!aghs_element.has_scepter)
+        {
+          console.log(aghs_element.hero_name + "[" + aghs_element.hero_id + "]" + ": Didn't find a shard...");
+        }
+        // push the current hero's element into the array
+        aghs_desc_arr.push(aghs_element);
+      }
+
+      return aghs_desc_arr;
+      },
   },
 ];
 
