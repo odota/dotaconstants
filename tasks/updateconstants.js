@@ -3,7 +3,6 @@ const async = require("async");
 const fs = require("fs");
 const simplevdf = require("simple-vdf");
 const { mapAbilities } = require("../utils");
-const { url } = require("inspector");
 const hero_list = require("../build/heroes.json")
 
 const extraStrings = {
