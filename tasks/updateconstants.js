@@ -3,6 +3,7 @@ const async = require("async");
 const fs = require("fs");
 const simplevdf = require("simple-vdf");
 const { mapAbilities } = require("../utils");
+const hero_list = require("../build/heroes.json")
 
 const extraStrings = {
   DOTA_ABILITY_BEHAVIOR_NONE: "None",
@@ -49,6 +50,13 @@ const extraAttribKeys = [
 ];
 
 const now = Number(new Date());
+
+const aghs_desc_urls = [];
+
+for (const hero_id in hero_list)
+{
+  aghs_desc_urls.push("http://www.dota2.com/datafeed/herodata?language=english&hero_id=" + hero_id);
+}
 
 const sources = [
   {
@@ -668,6 +676,94 @@ const sources = [
 
       return result;
     },
+  },
+  {
+    key: "aghs_desc",
+    url: aghs_desc_urls,
+    transform: (respObj) => {
+      const herodata = respObj;
+      aghs_desc_arr = [];
+
+      // for every hero
+      herodata.forEach( (hd_hero) =>
+      {        
+        hd_hero = hd_hero.result.data.heroes[0];
+        
+        // object to store data about aghs scepter/shard for a hero
+        var aghs_element = 
+        {
+          hero_name: hd_hero.name,
+          hero_id:   hd_hero.id,
+          
+          has_scepter: false,
+          scepter_desc: "",
+          scepter_skill_name: "",
+          scepter_new_skill: false,
+          
+          has_shard: false,
+          shard_desc:   "",
+          shard_skill_name: "",
+          shard_new_skill: false,
+        }
+
+        hd_hero.abilities.forEach( (ability) => {
+          // skip unused skills
+          if(ability.name_loc == "" || ability.desc_loc == "")
+          {
+            return; // i guess this is continue in JS :|
+          }
+            
+          // ------------- Scepter  -------------
+          if(ability.ability_is_granted_by_scepter)
+          {
+            // scepter grants new ability
+            aghs_element.scepter_desc       = ability.desc_loc;
+            aghs_element.scepter_skill_name = ability.name_loc;
+            aghs_element.scepter_new_skill  = true;
+            aghs_element.has_scepter        = true;
+          }
+          else if(ability.ability_has_scepter && !(ability.scepter_loc == ""))
+          {
+            // scepter ugprades an ability
+            aghs_element.scepter_desc       = ability.scepter_loc;
+            aghs_element.scepter_skill_name = ability.name_loc;
+            aghs_element.scepter_new_skill  = false;
+            aghs_element.has_scepter        = true;
+          }
+          // -------------- Shard  --------------
+          if(ability.ability_is_granted_by_shard)
+          {
+            // scepter grants new ability
+            aghs_element.shard_desc       = ability.desc_loc;
+            aghs_element.shard_skill_name = ability.name_loc;
+            aghs_element.shard_new_skill  = true;
+            aghs_element.has_shard        = true;
+          }                                     
+          else if(ability.ability_has_shard && !(ability.shard_loc == ""))
+          {
+            // scepter ugprades an ability
+            aghs_element.shard_desc       = ability.shard_loc;
+            aghs_element.shard_skill_name = ability.name_loc;
+            aghs_element.shard_new_skill  = false;
+            aghs_element.has_shard        = true;
+          }
+        });
+
+        // Error handling
+        if(!aghs_element.has_shard)
+        {
+          console.log(aghs_element.hero_name + "[" + aghs_element.hero_id + "]" + ": Didn't find a scepter...");
+        }
+        if(!aghs_element.has_scepter)
+        {
+          console.log(aghs_element.hero_name + "[" + aghs_element.hero_id + "]" + ": Didn't find a shard...");
+        }
+        // push the current hero's element into the array
+        aghs_desc_arr.push(aghs_element);
+      });
+
+      return aghs_desc_arr;
+      },
   },
 ];
 
