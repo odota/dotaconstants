@@ -290,27 +290,6 @@ const sources = [
       return itemIds;
     },
   },
-  /*
-  {
-    key: "item_groups",
-    url: "http://www.dota2.com/jsfeed/itemdata?l=english",
-    transform: (respObj) => {
-      const items = respObj.itemdata;
-      const itemGroups = [];
-      for (const key in items) {
-        if (items[key].components) {
-          const arr = expandItemGroup(key, items);
-          const obj = {};
-          arr.forEach(function (e) {
-            obj[e] = 1;
-          });
-          itemGroups.push(obj);
-        }
-      }
-      return itemGroups;
-    },
-  },
-  */
   {
     key: "abilities",
     url: [
@@ -392,20 +371,6 @@ const sources = [
       return abilities;
     },
   },
-  /*
-  {
-    key: "ability_keys",
-    url: "http://www.dota2.com/jsfeed/abilitydata?l=english",
-    transform: (respObj) => {
-      const abilityKeys = {};
-      const abilities = respObj.abilitydata;
-      for (const key in abilities) {
-        abilityKeys[key] = 1;
-      }
-      return abilityKeys;
-    },
-  },
-  */
   {
     key: "ability_ids",
     url:
