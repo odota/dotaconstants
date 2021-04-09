@@ -290,6 +290,7 @@ const sources = [
       return itemIds;
     },
   },
+  /*
   {
     key: "item_groups",
     url: "http://www.dota2.com/jsfeed/itemdata?l=english",
@@ -309,6 +310,7 @@ const sources = [
       return itemGroups;
     },
   },
+  */
   {
     key: "abilities",
     url: [
@@ -390,6 +392,7 @@ const sources = [
       return abilities;
     },
   },
+  /*
   {
     key: "ability_keys",
     url: "http://www.dota2.com/jsfeed/abilitydata?l=english",
@@ -402,6 +405,7 @@ const sources = [
       return abilityKeys;
     },
   },
+  */
   {
     key: "ability_ids",
     url:
@@ -686,7 +690,10 @@ const sources = [
 
       // for every hero
       herodata.forEach( (hd_hero) =>
-      {        
+      {
+        if (!hd_hero) {
+          return;
+        }
         hd_hero = hd_hero.result.data.heroes[0];
         
         // object to store data about aghs scepter/shard for a hero

@@ -2,6 +2,7 @@ module.exports = {
 abilities: require(__dirname + '/build/abilities.json'),
 ability_ids: require(__dirname + '/build/ability_ids.json'),
 ability_keys: require(__dirname + '/build/ability_keys.json'),
+aghs_desc: require(__dirname + '/build/aghs_desc.json'),
 ancients: require(__dirname + '/build/ancients.json'),
 chat_wheel: require(__dirname + '/build/chat_wheel.json'),
 cluster: require(__dirname + '/build/cluster.json'),
