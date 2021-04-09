@@ -47,7 +47,7 @@
   },
   "swift_blink": {
     "hint": [
-      "Active: Swift Blink Teleport to a target point up to 1200 units away.After teleportation, you gain 30% phased movement speed, +40 Attack Speed, and +40 Attack Damage for 6 seconds. Swift Blink cannot be used for 3 seconds after taking damage from an enemy hero or Roshan."
+      "Active: Swift Blink Teleport to a target point up to 1200 units away.After teleportation, you gain 40% phased movement speed, +50 Attack Speed, and +50 Attack Damage for 6 seconds. Swift Blink cannot be used for 3 seconds after taking damage from an enemy hero or Roshan."
     ],
     "id": 603,
     "img": "/apps/dota2/images/items/swift_blink_lg.png?t=1593393829403",
@@ -75,7 +75,7 @@
   },
   "arcane_blink": {
     "hint": [
-      "Active: Arcane Blink Teleport to a target point up to 1200 units away.After teleportation, you gain 25% Ability Cooldown Reduction and 50% Cast Point reduction for 6. Arcane Blink cannot be used for 3 seconds after taking damage from an enemy hero or Roshan."
+      "Active: Arcane Blink Teleport to a target point up to 1200 units away.After teleportation, you gain 25% Ability Cooldown Reduction and 50% Cast Point reduction for 6 seconds. Arcane Blink cannot be used for 3 seconds after taking damage from an enemy hero or Roshan."
     ],
     "id": 604,
     "img": "/apps/dota2/images/items/arcane_blink_lg.png?t=1593393829403",
@@ -1002,7 +1002,7 @@
     "img": "/apps/dota2/images/items/cloak_lg.png?t=1593393829403",
     "dname": "Cloak",
     "qual": "component",
-    "cost": 450,
+    "cost": 500,
     "notes": "Stacks multiplicatively with other sources of spell resistance.",
     "attrib": [
       {
@@ -2524,7 +2524,7 @@
     "img": "/apps/dota2/images/items/pipe_lg.png?t=1593393829403",
     "dname": "Pipe of Insight",
     "qual": "rare",
-    "cost": 3425,
+    "cost": 3475,
     "notes": "Multiple instances of Barrier do not stack.\nStacks multiplicatively with other sources of magic resistance.",
     "attrib": [
       {
@@ -4649,7 +4649,7 @@
     "img": "/apps/dota2/images/items/hood_of_defiance_lg.png?t=1593393829403",
     "dname": "Hood of Defiance",
     "qual": "epic",
-    "cost": 1450,
+    "cost": 1500,
     "notes": "Stacks multiplicatively with other sources of spell resistance.",
     "attrib": [
       {
@@ -4698,7 +4698,7 @@
     "img": "/apps/dota2/images/items/eternal_shroud_lg.png?t=1593393829403",
     "dname": "Eternal Shroud",
     "qual": "epic",
-    "cost": 3250,
+    "cost": 3300,
     "notes": "",
     "attrib": [
       {
@@ -5521,7 +5521,7 @@
       {
         "key": "bonus_damage",
         "header": "+",
-        "value": "45",
+        "value": "55",
         "footer": "Damage"
       }
     ],
@@ -6216,7 +6216,7 @@
     "dname": "Orb of Venom",
     "qual": "component",
     "cost": 275,
-    "notes": "",
+    "notes": "Does not stack with its upgrades.",
     "attrib": [],
     "mc": false,
     "cd": false,
@@ -6234,11 +6234,24 @@
     "dname": "Blight Stone",
     "qual": "component",
     "cost": 300,
-    "notes": "",
+    "notes": "Does not stack with its upgrades.",
     "attrib": [],
     "mc": false,
     "cd": false,
     "lore": "An unnerving stone unearthed beneath the Fields of Endless Carnage.",
+    "components": null,
+    "created": false,
+    "charges": false
+  },
+  "recipe_orb_of_corrosion": {
+    "id": 640,
+    "img": "/apps/dota2/images/items/recipe_lg.png?t=1593393829403",
+    "cost": 100,
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": false,
+    "lore": "",
     "components": null,
     "created": false,
     "charges": false
@@ -6251,7 +6264,7 @@
     "img": "/apps/dota2/images/items/orb_of_corrosion_lg.png?t=1593393829403",
     "dname": "Orb of Corrosion",
     "qual": "rare",
-    "cost": 825,
+    "cost": 925,
     "notes": "",
     "attrib": [
       {
@@ -6297,13 +6310,13 @@
       {
         "key": "bonus_health",
         "header": "+",
-        "value": "150",
+        "value": "175",
         "footer": "Health"
       },
       {
         "key": "bonus_mana_regen",
         "header": "+",
-        "value": "1.6",
+        "value": "1.8",
         "footer": "Mana Regeneration"
       },
       {
@@ -6346,7 +6359,7 @@
     "img": "/apps/dota2/images/items/mage_slayer_lg.png?t=1593393829403",
     "dname": "Mage Slayer",
     "qual": "rare",
-    "cost": 3400,
+    "cost": 3450,
     "notes": "",
     "attrib": [
       {
@@ -7004,7 +7017,7 @@
     "img": "/apps/dota2/images/items/glimmer_cape_lg.png?t=1593393829403",
     "dname": "Glimmer Cape",
     "qual": "rare",
-    "cost": 1900,
+    "cost": 1950,
     "notes": "",
     "attrib": [
       {
@@ -8937,7 +8950,7 @@
   },
   "chipped_vest": {
     "hint": [
-      "PassiveEverytime you are attacked, you return 26 damage to heroes and 13 damage to creeps."
+      "PassiveEverytime you are attacked, you return 28 damage to heroes and 17 damage to creeps."
     ],
     "id": 565,
     "img": "/apps/dota2/images/items/chipped_vest_lg.png?t=1593393829403",
@@ -9048,7 +9061,7 @@
   },
   "cloak_of_flames": {
     "hint": [
-      "PassiveBurns enemy units for 45 damage per second.Radius: 400"
+      "PassiveBurns enemy units for 45 damage per second. Illusions deal 30 damage per second.Radius: 375"
     ],
     "id": 574,
     "img": "/apps/dota2/images/items/cloak_of_flames_lg.png?t=1593393829403",
@@ -9059,7 +9072,7 @@
       {
         "key": "armor",
         "header": "+",
-        "value": "5",
+        "value": "4",
         "footer": "Armor"
       },
       {
@@ -9328,7 +9341,7 @@
   },
   "bullwhip": {
     "hint": [
-      "Active: WhipGrants 16% movement speed when cast on allies, and slows by 16% when cast on enemies. Lasts 5 seconds."
+      "Active: WhipGrants 20% movement speed when cast on allies, and slows by 20% when cast on enemies. Lasts 4 seconds."
     ],
     "id": 680,
     "img": "/apps/dota2/images/items/bullwhip_lg.png?t=1593393829403",
@@ -9380,7 +9393,7 @@
       }
     ],
     "mc": false,
-    "cd": 30,
+    "cd": 20,
     "lore": "A failed experiment in finer telekinetic control, still fit for other ends.",
     "components": null,
     "created": false,
@@ -9476,7 +9489,7 @@
       }
     ],
     "mc": false,
-    "cd": 25,
+    "cd": 15,
     "lore": "An impossible tome filled with unreadable prose of unknowable thoughts.",
     "components": null,
     "created": false,
