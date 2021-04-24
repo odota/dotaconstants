@@ -5106,7 +5106,7 @@
   },
   "manta": {
     "hint": [
-      "Active: Mirror ImageCreates 2 images of your hero that last 20 seconds. Melee images deal 33% damage, while Ranged images deal 28%. Illusions take %tooltip_damage_incoming_melee_total_pct%% damage Cooldown increased by %tooltip_ranged_cooldown_increase% seconds on ranged heroes.Dispel Type: Basic Dispel"
+      "Active: Mirror ImageCreates 2 images of your hero that last 20 seconds. Melee images deal 33% damage, while Ranged images deal 28%. Illusions take 300% damage. Dispel Type: Basic Dispel"
     ],
     "id": 147,
     "img": "/apps/dota2/images/items/manta_lg.png?t=1593393829403",
@@ -5808,7 +5808,7 @@
     "dname": "Helm of the Overlord",
     "qual": "artifact",
     "cost": 6000,
-    "notes": "Cannot dominate more than one unit at a time.  If a new unit is dominated, the old one will die.\nCan also Dominate enemy lane creeps and summoned units.\nSelling Helm of the Dominator will cause dominated units to die.",
+    "notes": "Can dominate up to two at a time. \nCan also Dominate enemy lane creeps and summoned units.\nSelling will cause dominated units to die.",
     "attrib": [
       {
         "key": "bonus_stats",
@@ -6021,6 +6021,12 @@
     "cost": 1775,
     "notes": "",
     "attrib": [
+      {
+        "key": "bonus_damage",
+        "header": "+",
+        "value": "10",
+        "footer": "Damage"
+      },
       {
         "key": "bonus_attack_speed",
         "header": "+",

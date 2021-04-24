@@ -1091,10 +1091,10 @@
         "key": "frost_arrows_movement_speed",
         "header": "MOVEMENT SLOW:",
         "value": [
-          "-15%",
-          "-30%",
-          "-45%",
-          "-60%"
+          "-10%",
+          "-25%",
+          "-40%",
+          "-55%"
         ]
       },
       {
@@ -2240,10 +2240,10 @@
     ],
     "mc": "50",
     "cd": [
-      "38",
-      "30",
-      "22",
-      "14"
+      "24",
+      "20",
+      "16",
+      "12"
     ],
     "img": "/apps/dota2/images/abilities/kunkka_x_marks_the_spot_md.png"
   },
@@ -2422,7 +2422,7 @@
       {
         "key": "light_strike_array_aoe",
         "header": "RADIUS:",
-        "value": "225"
+        "value": "250"
       },
       {
         "key": "light_strike_array_delay_time",
@@ -2464,9 +2464,9 @@
     ],
     "mc": [
       "100",
+      "105",
       "110",
-      "120",
-      "130"
+      "115"
     ],
     "cd": [
       "10",
@@ -2479,7 +2479,7 @@
   "lina_fiery_soul": {
     "dname": "Fiery Soul",
     "behavior": "Passive",
-    "desc": "Grants bonus attack and movement speed each time Lina casts a spell. Stacks with itself. Lasts 10 seconds.",
+    "desc": "Grants bonus attack and movement speed each time Lina casts a spell. Stacks with itself. Lasts 12 seconds.",
     "attrib": [
       {
         "key": "fiery_soul_attack_speed_bonus",
@@ -2509,7 +2509,7 @@
       {
         "key": "fiery_soul_stack_duration",
         "header": "DURATION:",
-        "value": "10"
+        "value": "12"
       }
     ],
     "img": "/apps/dota2/images/abilities/lina_fiery_soul_md.png"
@@ -4226,10 +4226,10 @@
         "key": "bonus_agility",
         "header": "BONUS AGILITY:",
         "value": [
-          "11",
-          "22",
-          "33",
-          "44"
+          "10",
+          "20",
+          "30",
+          "40"
         ]
       },
       {
@@ -5647,10 +5647,10 @@
       }
     ],
     "mc": [
-      "85",
+      "80",
+      "95",
       "110",
-      "135",
-      "160"
+      "125"
     ],
     "cd": [
       "8",
@@ -6220,8 +6220,8 @@
         "key": "gods_strength_damage",
         "header": "BONUS DAMAGE:",
         "value": [
-          "100%",
-          "150%",
+          "120%",
+          "160%",
           "200%"
         ]
       },
@@ -8621,6 +8621,19 @@
       "90"
     ],
     "img": "/apps/dota2/images/abilities/crystal_maiden_freezing_field_md.png"
+  },
+  "crystal_maiden_freezing_field_stop": {
+    "dname": "Stop Freezing Field",
+    "behavior": [
+      "No Target",
+      null,
+      "Hidden",
+      "Instant Cast"
+    ],
+    "desc": "Immediately stops the Freezing Field",
+    "attrib": [],
+    "cd": "1",
+    "img": "/apps/dota2/images/abilities/crystal_maiden_freezing_field_stop_md.png"
   },
   "windrunner_gale_force": {
     "behavior": [
@@ -11049,13 +11062,13 @@
       {
         "key": "slow",
         "header": "SLOW:",
-        "value": "30",
+        "value": "25",
         "generated": true
       },
       {
         "key": "headshot_chance",
         "header": "HEADSHOT CHANCE:",
-        "value": "30",
+        "value": "40",
         "generated": true
       },
       {
@@ -13856,10 +13869,10 @@
       "50"
     ],
     "cd": [
-      "15",
-      "12",
+      "11",
       "9",
-      "6"
+      "7",
+      "5"
     ],
     "img": "/apps/dota2/images/abilities/templar_assassin_meld_md.png"
   },
@@ -16292,9 +16305,9 @@
         "header": "TREANT DAMAGE:",
         "value": [
           "18",
-          "24",
-          "30",
-          "36"
+          "26",
+          "34",
+          "42"
         ]
       },
       {
@@ -16308,9 +16321,9 @@
         "header": "TREANT DAMAGE BONUS:",
         "value": [
           "27",
-          "36",
-          "45",
-          "54"
+          "39",
+          "51",
+          "63"
         ],
         "generated": true
       },
@@ -16494,10 +16507,10 @@
         "key": "hp_leech_percent",
         "header": "MAX HEALTH LIFE STEAL:",
         "value": [
-          "1.8%",
-          "2.4%",
-          "3%",
-          "3.6%"
+          "1.6%",
+          "2.2%",
+          "2.8%",
+          "3.4%"
         ]
       },
       {
@@ -17453,7 +17466,7 @@
     ],
     "dmg_type": "Pure",
     "bkbpierce": "No",
-    "desc": "Causes Omniknight's next attack to deal bonus pure damage based on 60 plus 115% of his base damage. He is healed for the same amount of pure damage. Cooldown: 6",
+    "desc": "Causes Omniknight's next attack to deal bonus pure damage based on 60 plus 115% of his base damage. He is healed for the same amount of pure damage. Cooldown: 4",
     "dmg": "0",
     "attrib": [
       {
@@ -18266,10 +18279,10 @@
         "key": "maximum_health_regen",
         "header": "MAX STR REGEN:",
         "value": [
-          "25%",
-          "45%",
-          "65%",
-          "85%"
+          "20%",
+          "40%",
+          "60%",
+          "80%"
         ]
       },
       {
@@ -18380,7 +18393,11 @@
       }
     ],
     "mc": "0",
-    "cd": "12",
+    "cd": [
+      "16",
+      "14",
+      "12"
+    ],
     "img": "/apps/dota2/images/abilities/huskar_life_break_md.png"
   },
   "night_stalker_void": {
@@ -18607,9 +18624,9 @@
         "key": "count",
         "header": "COUNT:",
         "value": [
-          "3",
           "4",
-          "5"
+          "5",
+          "6"
         ]
       },
       {
@@ -20862,7 +20879,7 @@
       "60",
       "70"
     ],
-    "cd": "70",
+    "cd": "60",
     "img": "/apps/dota2/images/abilities/doom_bringer_devour_md.png"
   },
   "doom_bringer_scorched_earth": {
@@ -21008,9 +21025,9 @@
         "key": "damage",
         "header": "DAMAGE PER SECOND:",
         "value": [
-          "25",
-          "40",
-          "55"
+          "30",
+          "45",
+          "60"
         ]
       },
       {
@@ -25013,10 +25030,10 @@
         "key": "wolf_hp",
         "header": "HP:",
         "value": [
-          "300",
-          "350",
-          "400",
-          "450"
+          "325",
+          "375",
+          "425",
+          "475"
         ]
       },
       {
@@ -25219,9 +25236,9 @@
         "key": "health_bonus",
         "header": "HEALTH BONUS:",
         "value": [
-          "150",
-          "250",
-          "350"
+          "200",
+          "300",
+          "400"
         ]
       }
     ],
@@ -25251,9 +25268,8 @@
       },
       {
         "key": "maim_movement_speed",
-        "header": "MAIM MOVEMENT SPEED:",
-        "value": "0",
-        "generated": true
+        "header": "MOVEMENT SPEED SLOW:",
+        "value": "15%"
       },
       {
         "key": "maim_attack_speed",
@@ -25452,10 +25468,10 @@
         "key": "duration",
         "header": "DURATION:",
         "value": [
-          "1.2",
-          "1.6",
-          "2",
-          "2.4"
+          "1.4",
+          "1.8",
+          "2.2",
+          "2.6"
         ]
       },
       {
@@ -26385,9 +26401,9 @@
         "key": "illusion_duration",
         "header": "ILLUSION DURATION:",
         "value": [
-          "8",
-          "10",
+          "11",
           "12",
+          "13",
           "14"
         ]
       },
@@ -26717,7 +26733,11 @@
         "generated": true
       }
     ],
-    "mc": "200",
+    "mc": [
+      "150",
+      "175",
+      "200"
+    ],
     "cd": "60",
     "img": "/apps/dota2/images/abilities/shadow_demon_demonic_purge_md.png"
   },
@@ -28351,10 +28371,10 @@
         "key": "stun_duration",
         "header": "STUN DURATION:",
         "value": [
-          "1",
-          "1.25",
-          "1.5",
-          "1.75"
+          "1.2",
+          "1.4",
+          "1.6",
+          "1.8"
         ]
       },
       {
@@ -30002,8 +30022,8 @@
       "175"
     ],
     "cd": [
-      "90",
       "80",
+      "75",
       "70"
     ],
     "img": "/apps/dota2/images/abilities/keeper_of_the_light_spirit_form_md.png"
@@ -31024,7 +31044,7 @@
       "Hidden",
       null
     ],
-    "desc": "Creates a 300 AoE cloud at the target location for 3 seconds. All allies inside the radius are hidden and affected by Shadow Dance. Cast Range: 800. Cooldown: 75. Manacost: 150",
+    "desc": "Creates a 300 AoE cloud at the target location for 3 seconds. All allies inside the radius are hidden and affected by Shadow Dance. Cast Range: 800. Cooldown: 75",
     "attrib": [
       {
         "key": "duration",
@@ -32595,9 +32615,9 @@
         "key": "polarity_damage",
         "header": "DAMAGE:",
         "value": [
-          "50",
-          "125",
-          "200"
+          "75",
+          "150",
+          "225"
         ]
       },
       {
@@ -32646,7 +32666,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Releases a 275 width flame that extends 400 range in the direction Timbersaw is facing. Applies a debuff that deals 90 damage per second and slows by 30%. Affects buildings for 40% damage. Lasts 7 seconds. Debuff lingers for 3 seconds.",
+    "desc": "Releases a 275 width flame that extends 400 range in the direction Timbersaw is facing. Applies a debuff that deals 90 damage per second and slows by 30%. Affects buildings for 40% damage. Lasts 7 seconds. Debuff lingers for 2 seconds.",
     "attrib": [
       {
         "key": "damage_per_second",
@@ -34161,10 +34181,10 @@
         "key": "heal_amount",
         "header": "HEAL AMOUNT:",
         "value": [
-          "120",
-          "165",
+          "110",
+          "160",
           "210",
-          "255"
+          "260"
         ],
         "generated": true
       },
@@ -34730,7 +34750,7 @@
       {
         "key": "crack_time",
         "header": "IMPLODE DELAY:",
-        "value": "2.8"
+        "value": "2.7182"
       },
       {
         "key": "crack_width",
@@ -35189,7 +35209,7 @@
       {
         "key": "creep_damage_penalty",
         "header": "CREEP DAMAGE PENALTY:",
-        "value": "-50%"
+        "value": "-40%"
       },
       {
         "key": "AbilityCharges",
@@ -36560,7 +36580,7 @@
       }
     ],
     "mc": [
-      "200",
+      "150",
       "100",
       "50"
     ],
@@ -37735,9 +37755,9 @@
     ],
     "mc": "100",
     "cd": [
-      "130",
-      "110",
-      "90"
+      "120",
+      "100",
+      "80"
     ],
     "img": "/apps/dota2/images/abilities/monkey_king_wukongs_command_md.png"
   },
@@ -40740,7 +40760,7 @@
       {
         "key": "base_damage_pct",
         "header": "BASE DAMAGE:",
-        "value": "65%"
+        "value": "75%"
       },
       {
         "key": "bounce_count",
@@ -41105,7 +41125,7 @@
     "dname": "Sharpshooter Pure Damage and Pierces Spell Immunity"
   },
   "special_bonus_unique_hoodwink_bushwhack_cooldown": {
-    "dname": "-3s Bushwhack Cooldown"
+    "dname": "-4s Bushwhack Cooldown"
   },
   "special_bonus_unique_hoodwink_bushwhack_damage": {
     "dname": "+60 Bushwhack Damage"
@@ -41186,7 +41206,7 @@
       {
         "key": "self_stun_duration",
         "header": "SELF STUN DURATION:",
-        "value": "0.3",
+        "value": "0.2",
         "generated": true
       },
       {
@@ -41205,6 +41225,12 @@
         "key": "animation_rate",
         "header": "ANIMATION RATE:",
         "value": "0",
+        "generated": true
+      },
+      {
+        "key": "turn_rate",
+        "header": "TURN RATE:",
+        "value": "90",
         "generated": true
       },
       {
@@ -41270,7 +41296,12 @@
       {
         "key": "burn_damage",
         "header": "FIRE TRAIL BURN DPS:",
-        "value": "20"
+        "value": [
+          "20",
+          "30",
+          "40",
+          "50"
+        ]
       },
       {
         "key": "burn_interval",
@@ -41369,10 +41400,10 @@
         "key": "heal_pct",
         "header": "HEAL PCT:",
         "value": [
-          "25",
           "30",
-          "35",
-          "40"
+          "40",
+          "50",
+          "60"
         ],
         "generated": true
       },
@@ -41433,7 +41464,7 @@
       {
         "key": "radius",
         "header": "LAND RADIUS:",
-        "value": "400"
+        "value": "500"
       },
       {
         "key": "base_damage",
@@ -41448,9 +41479,9 @@
         "key": "base_heal",
         "header": "HEAL PER PULSE:",
         "value": [
-          "40",
-          "55",
-          "70"
+          "45",
+          "70",
+          "95"
         ]
       },
       {
@@ -41472,9 +41503,9 @@
         "key": "land_stun_duration",
         "header": "LANDING STUN DURATION:",
         "value": [
-          "1.1",
-          "1.3",
-          "1.5"
+          "1.5",
+          "1.75",
+          "2"
         ]
       },
       {
@@ -46084,7 +46115,7 @@
         "generated": true
       }
     ],
-    "mc": "90",
+    "mc": "100",
     "cd": [
       "42",
       "36",
@@ -46280,7 +46311,11 @@
       }
     ],
     "mc": "250",
-    "cd": "80",
+    "cd": [
+      "90",
+      "85",
+      "80"
+    ],
     "img": "/apps/dota2/images/abilities/winter_wyvern_winters_curse_md.png"
   },
   "cny_beast_teleport": {
@@ -48335,7 +48370,7 @@
     "dname": "+0.5 Bad Juju Armor Reduction"
   },
   "special_bonus_unique_dazzle_5": {
-    "dname": "+250 Heal On Shallow Grave End"
+    "dname": "+225 Heal On Shallow Grave End"
   },
   "special_bonus_unique_shadow_shaman_1": {
     "dname": "+1 Serpent Wards Max HP"
@@ -48605,7 +48640,7 @@
     "dname": "1s Meld Hit Bash"
   },
   "special_bonus_unique_templar_assassin_8": {
-    "dname": "+80 Psi Blades Range"
+    "dname": "+100 Psi Blades Range"
   },
   "special_bonus_unique_crystal_maiden_1": {
     "dname": "+1.25s Frostbite Duration"
@@ -49108,6 +49143,9 @@
   "special_bonus_unique_nyx_5": {
     "dname": "-3.5s Spiked Carapace Cooldown"
   },
+  "special_bonus_unique_nyx_6": {
+    "dname": "+0.6s Spiked Carapace Stun Duration"
+  },
   "special_bonus_unique_weaver_1": {
     "dname": "+60 Shukuchi Damage"
   },
@@ -49166,7 +49204,7 @@
     "dname": "+10% Chaos Strike Chance"
   },
   "special_bonus_unique_lycan_1": {
-    "dname": "+5s Shapeshift Duration"
+    "dname": "+6s Shapeshift Duration"
   },
   "special_bonus_unique_lycan_2": {
     "dname": "+2 Wolves Summoned"
@@ -49175,7 +49213,7 @@
     "dname": "+8 Feral HP Regen"
   },
   "special_bonus_unique_lycan_4": {
-    "dname": "+25% Feral Impulse Damage"
+    "dname": "+30% Feral Impulse Damage"
   },
   "special_bonus_unique_lycan_5": {
     "dname": "+32% Chance Shapeshift Critical Strike"
@@ -49184,7 +49222,7 @@
     "dname": "+75 Shapeshift Movement Speed"
   },
   "special_bonus_unique_lycan_7": {
-    "dname": "+175 Summon Wolves Health"
+    "dname": "+200 Summon Wolves Health"
   },
   "special_bonus_unique_windranger": {
     "dname": "Windrun Grants Invisibility"
@@ -49617,7 +49655,7 @@
     "dname": "+250 Phantom Strike Cast Range"
   },
   "special_bonus_unique_phantom_assassin_7": {
-    "dname": "-1.5s Stifling Dagger Cooldown"
+    "dname": "-2s Stifling Dagger Cooldown"
   },
   "special_bonus_unique_phantom_assassin_8": {
     "dname": "+700 Range and Ground Target Stifling Dagger"
@@ -49755,7 +49793,7 @@
     "dname": "+325 Life Break Cast Range"
   },
   "special_bonus_unique_huskar_2": {
-    "dname": "+6 Burning Spears DPS"
+    "dname": "+5 Burning Spears DPS"
   },
   "special_bonus_unique_huskar_3": {
     "dname": "0 Inner Vitality Cooldown"
@@ -49767,7 +49805,7 @@
     "dname": "Burning Spears Pure Damage"
   },
   "special_bonus_unique_huskar_6": {
-    "dname": "+40% Berserker's Blood Regen"
+    "dname": "+35% Berserker's Blood Regen"
   },
   "special_bonus_unique_huskar_7": {
     "dname": "-3s Life Break Cooldown"
@@ -49885,7 +49923,7 @@
     "dname": "+100 Slithereen Crush AoE"
   },
   "special_bonus_unique_lina_1": {
-    "dname": "-2s Dragon Slave Cooldown"
+    "dname": "-2.5s Dragon Slave Cooldown"
   },
   "special_bonus_unique_lina_2": {
     "dname": "+30/2% Fiery Soul Per Stack"
@@ -50176,7 +50214,7 @@
     "dname": "+1000 True Form and Spirit Bear Health"
   },
   "special_bonus_unique_lone_druid_8": {
-    "dname": "-40s True Form Cooldown"
+    "dname": "-50s True Form Cooldown"
   },
   "special_bonus_unique_lone_druid_9": {
     "dname": "0 Entangle Cooldown"
@@ -50266,7 +50304,7 @@
     "dname": "+40% Boundless Strike Crit"
   },
   "special_bonus_unique_monkey_king_2": {
-    "dname": "+100 Jingu Mastery Damage"
+    "dname": "+130 Jingu Mastery Damage"
   },
   "special_bonus_unique_monkey_king_3": {
     "dname": "+350 Primal Spring Damage"
@@ -50350,7 +50388,7 @@
     "dname": "+20% Ink Swell Movement Speed"
   },
   "special_bonus_unique_grimstroke_7": {
-    "dname": "-6s Ink Swell Cooldown"
+    "dname": "-5s Ink Swell Cooldown"
   },
   "special_bonus_unique_grimstroke_8": {
     "dname": "+50 Phantom's Embrace DPS"
