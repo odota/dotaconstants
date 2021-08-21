@@ -75,7 +75,7 @@
   },
   "arcane_blink": {
     "hint": [
-      "Active: Arcane Blink Teleport to a target point up to 1200 units away.After teleportation, you gain 25% Ability Cooldown Reduction and 50% Cast Point reduction for 6 seconds. Arcane Blink cannot be used for 3 seconds after taking damage from an enemy hero or Roshan."
+      "Active: Arcane Blink Teleport to a target point up to 1200 units away.After teleportation, you gain 30% Ability Cooldown Reduction and 50% Cast Point reduction for 6 seconds. Arcane Blink cannot be used for 3 seconds after taking damage from an enemy hero or Roshan."
     ],
     "id": 604,
     "img": "/apps/dota2/images/items/arcane_blink_lg.png?t=1593393829403",
@@ -1171,7 +1171,7 @@
     "img": "/apps/dota2/images/items/enchanted_mango_lg.png?t=1593393829403",
     "dname": "Enchanted Mango",
     "qual": "consumable",
-    "cost": 70,
+    "cost": 65,
     "notes": "Hold Control to use on a nearby allied hero.",
     "attrib": [
       {
@@ -1226,7 +1226,7 @@
   },
   "bottle": {
     "hint": [
-      "Active: RegenerateConsumes a charge to restore 115 health and 65 mana over 2.5 seconds. If the hero is attacked by an enemy hero or Roshan, the effect is lost.The Bottle automatically refills at the fountain.Hold Control to use on an allied hero.Range: 350",
+      "Active: RegenerateConsumes a charge to restore 110 health and 60 mana over 2.7 seconds. If the hero is attacked by an enemy hero or Roshan, the effect is lost.The Bottle automatically refills at the fountain.Hold Control to use on an allied hero.Range: 350",
       "Passive:  Store RuneRunes can be stored in the bottle for later use by right-clicking them. Unused runes will automatically activate after 2 minutes.Using a stored rune fully refills the Bottle."
     ],
     "id": 41,
@@ -1270,7 +1270,7 @@
   },
   "ward_sentry": {
     "hint": [
-      "Use: Plant Plants a Sentry Ward, an invisible watcher that grants True Sight, the ability to see invisible enemy units and wards, to any existing allied vision within a 900 radius.Lasts 8 minutes.Does not grant ground vision.Hold Control to give one Sentry Ward to an allied hero.Range: 500"
+      "Use: Plant Plants a Sentry Ward, an invisible watcher that grants True Sight, the ability to see invisible enemy units and wards, to any existing allied vision within a 900 radius.Lasts 7 minutes.Does not grant ground vision.Hold Control to give one Sentry Ward to an allied hero.Range: 500"
     ],
     "id": 43,
     "img": "/apps/dota2/images/items/ward_sentry_lg.png?t=1593393829403",
@@ -1282,7 +1282,7 @@
       {
         "key": "lifetime",
         "header": "LIFETIME:",
-        "value": "480",
+        "value": "420",
         "generated": true
       }
     ],
@@ -1980,7 +1980,7 @@
   },
   "witch_blade": {
     "hint": [
-      "Passive: Witch BladeCauses your next attack to apply a poison for 3 seconds, slowing by 25% and dealing 1x your intelligence as damage every second. This attack has True Strike."
+      "Passive: Witch BladeCauses your next attack to apply a poison for 4 seconds, slowing by 25% and dealing 0.75x your intelligence as damage every second. This attack has True Strike."
     ],
     "id": 534,
     "img": "/apps/dota2/images/items/witch_blade_lg.png?t=1593393829403",
@@ -2443,7 +2443,7 @@
       {
         "key": "mana_regen",
         "header": "+",
-        "value": "0.6",
+        "value": "0.5",
         "footer": "Mana Regeneration"
       }
     ],
@@ -2614,8 +2614,8 @@
     "lore": "Contains the ashes of powerful demons.",
     "components": [
       "sobi_mask",
-      "circlet",
-      "ring_of_protection"
+      "ring_of_protection",
+      "circlet"
     ],
     "created": true,
     "charges": false
@@ -2914,7 +2914,7 @@
       {
         "key": "bonus_mana_regen",
         "header": "+",
-        "value": "3.5",
+        "value": "2.5",
         "footer": "Mana Regeneration"
       },
       {
@@ -2939,7 +2939,7 @@
     "id": 612,
     "img": "/apps/dota2/images/items/recipe_lg.png?t=1593393829403",
     "dname": "Wind Waker Recipe",
-    "cost": 1600,
+    "cost": 1300,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -2957,7 +2957,7 @@
     "img": "/apps/dota2/images/items/wind_waker_lg.png?t=1593393829403",
     "dname": "Wind Waker",
     "qual": "rare",
-    "cost": 7125,
+    "cost": 6825,
     "notes": "Cyclone can purge some buffs and debuffs.\nWhen cast on yourself, the cyclone can be moved anywhere at a speed of 360.",
     "attrib": [
       {
@@ -3023,7 +3023,7 @@
       {
         "key": "bonus_mana_regen",
         "header": "+",
-        "value": "3",
+        "value": "2.5",
         "footer": "Mana Regeneration"
       }
     ],
@@ -3101,7 +3101,7 @@
   },
   "hurricane_pike": {
     "hint": [
-      "Active: Hurricane Thrust Pushes you and target enemy 450 units away from each other, and for 5 seconds, allows you to make 4 attacks against the target without range restrictions and with +100 attack speed.Works like Force Staff when used on self or allies.Allied Range: 550Enemy Range: 400",
+      "Active: Hurricane Thrust Pushes you and target enemy 450 units away from each other, and for 6 seconds, allows you to make 5 attacks against the target without range restrictions and with +100 attack speed.Works like Force Staff when used on self or allies.Allied Range: 550Enemy Range: 400",
       "Passive:  Dragon's Reach Increases attack range of ranged heroes by 140."
     ],
     "id": 263,
@@ -3687,7 +3687,7 @@
   },
   "aghanims_shard": {
     "hint": [
-      "Passive: Ability UpgradeUpgrades one of your abilities."
+      "Passive: Ability UpgradeUpgrades an existing ability or adds a new ability to your hero."
     ],
     "id": 609,
     "img": "/apps/dota2/images/items/aghanims_shard_lg.png?t=1593393829403",
@@ -3705,7 +3705,7 @@
   },
   "aghanims_shard_roshan": {
     "hint": [
-      "Passive: Ability UpgradeUpgrades one of your abilities."
+      "Passive: Ability UpgradeUpgrades an existing ability or adds a new ability to your hero.."
     ],
     "id": 725,
     "img": "/apps/dota2/images/items/aghanims_shard_roshan_lg.png?t=1593393829403",
@@ -4024,11 +4024,6 @@
         "value": "8%"
       },
       {
-        "key": "spell_lifesteal_amp",
-        "header": "+Spell Lifesteal Amplification",
-        "value": "30%"
-      },
-      {
         "key": "hero_lifesteal",
         "header": "+Spell Lifesteal (Hero)",
         "value": "15%"
@@ -4037,6 +4032,11 @@
         "key": "creep_lifesteal",
         "header": "+Spell Lifesteal (Creep)",
         "value": "3%"
+      },
+      {
+        "key": "spell_lifesteal_amp",
+        "header": "+Spell Lifesteal Amplification",
+        "value": "30%"
       }
     ],
     "mc": false,
@@ -4155,6 +4155,7 @@
   "recipe_meteor_hammer": {
     "id": 222,
     "img": "/apps/dota2/images/items/recipe_lg.png?t=1593393829403",
+    "dname": "Meteor Hammer Recipe",
     "cost": 250,
     "notes": "",
     "attrib": [],
@@ -4261,7 +4262,7 @@
   },
   "aeon_disk": {
     "hint": [
-      "Passive: Combo Breaker When you take damage and your health falls below 70%, a strong dispel is applied and you gain a 2.5 second buff that provides +75% Status Resistance and causes all damage you deal and are dealt to be reduced to zero. Only triggers on player based damage."
+      "Passive: Combo Breaker When you take damage and your health falls below 70%, a strong dispel is applied and you gain a 2.5 second buff that provides +75% Status Resistance and causes all damage you deal and are dealt to be reduced to zero. Only triggers on player based damage. Cooldown increases every time it triggers."
     ],
     "id": 256,
     "img": "/apps/dota2/images/items/aeon_disk_lg.png?t=1593393829403",
@@ -4273,7 +4274,7 @@
       {
         "key": "bonus_health",
         "header": "+",
-        "value": "300",
+        "value": "250",
         "footer": "Health"
       },
       {
@@ -4281,6 +4282,16 @@
         "header": "+",
         "value": "300",
         "footer": "Mana"
+      },
+      {
+        "key": "cooldown_duration",
+        "header": "COOLDOWN:",
+        "value": [
+          "105",
+          "125",
+          "145",
+          "165"
+        ]
       }
     ],
     "mc": false,
@@ -4518,7 +4529,7 @@
   },
   "vanguard": {
     "hint": [
-      "Passive: Damage Block Grants a 60% chance to block 70 damage from incoming attacks on melee heroes, and 35 damage on ranged."
+      "Passive: Damage Block Grants a 60% chance to block 64 damage from incoming attacks on melee heroes, and 32 damage on ranged."
     ],
     "id": 125,
     "img": "/apps/dota2/images/items/vanguard_lg.png?t=1593393829403",
@@ -5333,7 +5344,7 @@
     "id": 248,
     "img": "/apps/dota2/images/items/recipe_lg.png?t=1593393829403",
     "dname": "Silver Edge Recipe",
-    "cost": 1100,
+    "cost": 350,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -5345,38 +5356,27 @@
   },
   "silver_edge": {
     "hint": [
-      "Active: Shadow WalkMakes you invisible for 14 seconds, or until you attack or cast a spell.  While invisible, you move 25% faster and can move through units.  Attacking to end the invisibility will deal 175 bonus physical damage to the target, and disable their passive abilities for 4 seconds."
+      "Active: Shadow WalkMakes you invisible for 14 seconds, or until you attack or cast a spell.  While invisible, you move 25% faster and can move through units.  Attacking to end the invisibility will deal 175 bonus physical damage and a guaranteed 160% critical strike to the target, and disable their passive abilities for 4 seconds.",
+      "Passive: Critical StrikeGrants each attack a 30% chance to deal 160% damage."
     ],
     "id": 249,
     "img": "/apps/dota2/images/items/silver_edge_lg.png?t=1593393829403",
     "dname": "Silver Edge",
     "qual": "epic",
-    "cost": 5600,
-    "notes": "Backstab cannot miss.\nBackstab does not pierce spell immunity.",
+    "cost": 5300,
+    "notes": "",
     "attrib": [
       {
         "key": "bonus_damage",
         "header": "+",
-        "value": "40",
+        "value": "60",
         "footer": "Damage"
       },
       {
         "key": "bonus_attack_speed",
         "header": "+",
-        "value": "45",
+        "value": "40",
         "footer": "Attack Speed"
-      },
-      {
-        "key": "bonus_intellect",
-        "header": "+",
-        "value": "15",
-        "footer": "Intelligence"
-      },
-      {
-        "key": "bonus_mana_regen",
-        "header": "+",
-        "value": "4",
-        "footer": "Mana Regeneration"
       }
     ],
     "mc": 75,
@@ -5384,7 +5384,7 @@
     "lore": "Once used to slay an unjust king, only to have the kingdom erupt into civil war in the aftermath.",
     "components": [
       "invis_sword",
-      "oblivion_staff"
+      "lesser_crit"
     ],
     "created": true,
     "charges": false
@@ -5429,7 +5429,7 @@
       {
         "key": "hp_regen_amp",
         "header": "+Self HP Regen and Lifesteal Amp",
-        "value": "30%"
+        "value": "22%"
       }
     ],
     "mc": false,
@@ -5480,7 +5480,7 @@
       {
         "key": "hp_regen_amp",
         "header": "+Self HP Regen and Lifesteal Amp",
-        "value": "30%"
+        "value": "22%"
       },
       {
         "key": "spell_lifesteal_amp",
@@ -5713,12 +5713,12 @@
       {
         "key": "status_resistance",
         "header": "+Status Resistance",
-        "value": "16%"
+        "value": "12%"
       },
       {
         "key": "hp_regen_amp",
         "header": "+Self HP Regen and Lifesteal Amp",
-        "value": "24%"
+        "value": "20%"
       }
     ],
     "mc": false,
@@ -5789,7 +5789,7 @@
     "id": 633,
     "img": "/apps/dota2/images/items/recipe_lg.png?t=1593393829403",
     "dname": "Helm of the Overlord Recipe",
-    "cost": 1600,
+    "cost": 1000,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -5801,19 +5801,20 @@
   },
   "helm_of_the_overlord": {
     "hint": [
-      "Active: DominateTakes control of one neutral target unit and sets its movement speed to 380 and max health to a minimum of 1800. Also provides the unit with +25 base attack damage, +12 health regen, +4 mana regen and +4 armor. Dominated units with a max health of greater than 1800 retain their original max health.  Dominated unit's bounty is set to 150 gold.Range: 700"
+      "Active: DominateTakes control of one neutral target unit and sets its movement speed to 400 and max health to a minimum of 1800. Also provides the unit with +80 base attack damage, +12 health regen, +4 mana regen and +8 armor. Dominated units with a max health of greater than 1800 retain their original max health.  Dominated unit's bounty is set to 200 gold.Range: 700",
+      "Passive: Vladmir's AuraGrants 15% lifesteal, 18% bonus damage, 1.75 mana regeneration, and 3 armor to nearby allies."
     ],
     "id": 635,
     "img": "/apps/dota2/images/items/helm_of_the_overlord_lg.png?t=1593393829403",
     "dname": "Helm of the Overlord",
     "qual": "artifact",
-    "cost": 6000,
+    "cost": 6050,
     "notes": "Can dominate up to two at a time. \nCan also Dominate enemy lane creeps and summoned units.\nSelling will cause dominated units to die.",
     "attrib": [
       {
         "key": "bonus_stats",
         "header": "+",
-        "value": "20",
+        "value": "8",
         "footer": "All Attributes"
       },
       {
@@ -5834,7 +5835,7 @@
     "lore": "The powerful headpiece of a dead necromancer.",
     "components": [
       "helm_of_the_dominator",
-      "ultimate_orb"
+      "vladmir"
     ],
     "created": true,
     "charges": false
@@ -5903,19 +5904,19 @@
       {
         "key": "bonus_intellect",
         "header": "+",
-        "value": "20",
+        "value": "24",
         "footer": "Intelligence"
       },
       {
         "key": "bonus_strength",
         "header": "+",
-        "value": "12",
+        "value": "14",
         "footer": "Strength"
       },
       {
         "key": "bonus_agility",
         "header": "+",
-        "value": "12",
+        "value": "14",
         "footer": "Agility"
       }
     ],
@@ -6185,7 +6186,7 @@
   },
   "arcane_boots": {
     "hint": [
-      "Active: Replenish ManaRestores 160 mana to all nearby allies.Radius: 1200",
+      "Active: Replenish ManaRestores 175 mana to all nearby allies.Radius: 1200",
       "Movement speed bonuses from multiple pairs of boots do not stack."
     ],
     "id": 180,
@@ -6368,7 +6369,7 @@
       {
         "key": "bonus_health",
         "header": "+",
-        "value": "175",
+        "value": "200",
         "footer": "Health"
       },
       {
@@ -6380,7 +6381,7 @@
       {
         "key": "bonus_damage",
         "header": "+",
-        "value": "10",
+        "value": "12",
         "footer": "Damage"
       }
     ],
@@ -6417,7 +6418,7 @@
     "img": "/apps/dota2/images/items/mage_slayer_lg.png?t=1593393829403",
     "dname": "Mage Slayer",
     "qual": "rare",
-    "cost": 3250,
+    "cost": 2400,
     "notes": "",
     "attrib": [
       {
@@ -6427,16 +6428,28 @@
         "footer": "Magic Resistance"
       },
       {
-        "key": "bonus_agility",
+        "key": "bonus_attack_speed",
         "header": "+",
-        "value": "20",
-        "footer": "Agility"
+        "value": "15",
+        "footer": "Attack Speed"
       },
       {
         "key": "bonus_damage",
         "header": "+",
         "value": "20",
         "footer": "Damage"
+      },
+      {
+        "key": "bonus_mana_regen",
+        "header": "+",
+        "value": "2",
+        "footer": "Mana Regeneration"
+      },
+      {
+        "key": "bonus_intellect",
+        "header": "+",
+        "value": "10",
+        "footer": "Intelligence"
       }
     ],
     "mc": false,
@@ -6444,8 +6457,7 @@
     "lore": "Forged by a secret order in The Third Age of Praxa'cia to fell the False King.",
     "components": [
       "cloak",
-      "blade_of_alacrity",
-      "claymore"
+      "oblivion_staff"
     ],
     "created": true,
     "charges": false
@@ -6480,13 +6492,13 @@
       {
         "key": "bonus_str",
         "header": "+",
-        "value": "6",
+        "value": "7",
         "footer": "Strength"
       },
       {
         "key": "bonus_int",
         "header": "+",
-        "value": "6",
+        "value": "7",
         "footer": "Intelligence"
       }
     ],
@@ -6552,7 +6564,7 @@
   },
   "solar_crest": {
     "hint": [
-      "Active: ShineWhen cast on an ally, grants them 6 armor, 65 attack speed, and 10% movement speed. When cast on an enemy, removes 6 armor, 65 attack speed, and 10% movement speed.Removes the armor from the caster when used.  Cannot target spell immune enemies.Range: 1000"
+      "Active: ShineWhen cast on an ally, grants them 6 armor, 50 attack speed, and 10% movement speed. When cast on an enemy, removes 6 armor, 50 attack speed, and 10% movement speed.Removes the armor from the caster when used.  Cannot target spell immune enemies.Range: 1000"
     ],
     "id": 229,
     "img": "/apps/dota2/images/items/solar_crest_lg.png?t=1593393829403",
@@ -6762,19 +6774,19 @@
       {
         "key": "bonus_intellect",
         "header": "+",
-        "value": "20",
+        "value": "24",
         "footer": "Intelligence"
       },
       {
         "key": "bonus_strength",
         "header": "+",
-        "value": "10",
+        "value": "12",
         "footer": "Strength"
       },
       {
         "key": "bonus_agility",
         "header": "+",
-        "value": "10",
+        "value": "12",
         "footer": "Agility"
       }
     ],
@@ -6854,7 +6866,7 @@
   "abyssal_blade": {
     "hint": [
       "Active: Overwhelm Stuns a target enemy unit for 2 seconds. Pierces Spell Immunity.Range: 150",
-      "Passive: Bash Grants melee heroes a 25% chance on hit to stun the target for 1.5 seconds and deal 100 bonus physical damage.  Bash chance for ranged heroes is 10%.",
+      "Passive: Bash Grants melee heroes a 25% chance on hit to stun the target for 1.5 seconds and deal 120 bonus physical damage.  Bash chance for ranged heroes is 10%.",
       "Passive: Damage Block Grants a 60% chance to block 70 damage from incoming attacks on melee heroes, and 35 damage on ranged."
     ],
     "id": 208,
@@ -6944,7 +6956,7 @@
       {
         "key": "hp_regen_amp",
         "header": "+Self HP Regen and Lifesteal Amp",
-        "value": "24%"
+        "value": "20%"
       }
     ],
     "mc": 100,
@@ -7575,6 +7587,91 @@
     "created": false,
     "charges": false
   },
+  "force_field": {
+    "hint": [
+      "Active: Mega Shield Force Field Aura Grants 35% Damage Reflection for 5 seconds.",
+      "Passive: Shield Grants +5 armor and +20% Magic Resistance to all allies within 1200 radius."
+    ],
+    "id": 829,
+    "img": "/apps/dota2/images/items/force_field_lg.png?t=1593393829403",
+    "dname": "Arcanist's Armor",
+    "cost": 0,
+    "notes": "",
+    "attrib": [
+      {
+        "key": "self_armor",
+        "header": "+",
+        "value": "5",
+        "footer": "Armor"
+      },
+      {
+        "key": "self_mres",
+        "header": "+",
+        "value": "20",
+        "footer": "Magic Resistance"
+      }
+    ],
+    "mc": false,
+    "cd": 20,
+    "lore": "An exquisite piece commissioned by a paranoid monarch who choked on a piece of fruit long before the item saw its intended use.",
+    "components": null,
+    "created": false,
+    "charges": false,
+    "tier": 5
+  },
+  "tree_processor": {
+    "id": 833,
+    "img": "/apps/dota2/images/items/tree_processor_lg.png?t=1593393829403",
+    "dname": "Tree Processor",
+    "cost": 0,
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": 40,
+    "lore": "",
+    "components": null,
+    "created": false,
+    "charges": false
+  },
+  "black_powder_bag": {
+    "hint": [
+      "Passive: Hair Trigger The next time you get attacked by a hero within 300 range, explode dealing 300 damage to all enemies within a 300 radius and causing them to miss 100% of their attacks for 2.5 seconds."
+    ],
+    "id": 834,
+    "img": "/apps/dota2/images/items/black_powder_bag_lg.png?t=1593393829403",
+    "dname": "Blast Rig",
+    "cost": 0,
+    "notes": "",
+    "attrib": [
+      {
+        "key": "bonus_armor",
+        "header": "+",
+        "value": "8",
+        "footer": "Armor"
+      }
+    ],
+    "mc": false,
+    "cd": 20,
+    "lore": "One of a set of custom rigs once worn by infamous road agents in the Outlands, its siblings have been lost to misfires and the various tides of time.",
+    "components": null,
+    "created": false,
+    "charges": false,
+    "tier": 3
+  },
+  "mechanical_arm": {
+    "id": 849,
+    "img": "/apps/dota2/images/items/mechanical_arm_lg.png?t=1593393829403",
+    "dname": "Mechanical Arm",
+    "cost": 0,
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": false,
+    "lore": "",
+    "components": null,
+    "created": false,
+    "charges": false
+  },
   "craggy_coat": {
     "hint": [
       "Increases the wearer's armor, while reducing their attack speed."
@@ -7726,8 +7823,7 @@
     "lore": "Precious. And hearty as a weed.",
     "components": null,
     "created": false,
-    "charges": false,
-    "tier": 1
+    "charges": false
   },
   "mango_tree": {
     "hint": [
@@ -7994,12 +8090,11 @@
     "lore": "Though their tasks are largely thankless, demon hunters can often turn a profit bartering parts in Weeping Rose.",
     "components": null,
     "created": false,
-    "charges": false,
-    "tier": 2
+    "charges": false
   },
   "flicker": {
     "hint": [
-      "Active: Flicker Dispells debuffs and blinks you in a random forward direction for a random distance between 200 and 600. Does not get disabled on incoming damage."
+      "Active: Flicker Dispells debuffs and blinks you in a random forward direction for a random distance between 200 and 600. If cast within 3 seconds of receving player damage, it will blink in place."
     ],
     "id": 335,
     "img": "/apps/dota2/images/items/flicker_lg.png?t=1593393829403",
@@ -8015,7 +8110,7 @@
       }
     ],
     "mc": false,
-    "cd": 4,
+    "cd": 5,
     "lore": "The technically-true-to-his-word 'teleportation device' crafted by a notorious fae trickster.",
     "components": null,
     "created": false,
@@ -8058,8 +8153,7 @@
   },
   "spider_legs": {
     "hint": [
-      "Active: Scurry Grants you 22% bonus movement speed and free pathing for 3 seconds. Walking over trees causes them to be destroyed.",
-      "Movement speed bonuses from multiple pairs of boots do not stack."
+      "Active: Scurry Grants you 22% bonus movement speed and free pathing for 3 seconds. Walking over trees causes them to be destroyed."
     ],
     "id": 326,
     "img": "/apps/dota2/images/items/spider_legs_lg.png?t=1593393829403",
@@ -8070,7 +8164,7 @@
       {
         "key": "bonus_movement_speed",
         "header": "+",
-        "value": "65",
+        "value": "25",
         "footer": "Movement Speed"
       },
       {
@@ -8255,7 +8349,7 @@
       }
     ],
     "mc": false,
-    "cd": 55,
+    "cd": 50,
     "lore": "Former plaything of a young deity, received as a gift from his uncle.",
     "components": null,
     "created": false,
@@ -8389,7 +8483,7 @@
   },
   "enchanted_quiver": {
     "hint": [
-      "Passive: Certain Strike Empowers your next attack with 300 bonus magical damage and True Strike. Ranged Attackers have +400 bonus range for the attack."
+      "Passive: Certain Strike Empowers your next attack with 200 bonus magical damage and True Strike. Ranged Attackers have +400 bonus range for the attack."
     ],
     "id": 361,
     "img": "/apps/dota2/images/items/enchanted_quiver_lg.png?t=1593393829403",
@@ -8398,7 +8492,7 @@
     "notes": "",
     "attrib": [],
     "mc": false,
-    "cd": 5,
+    "cd": 4,
     "lore": "A graceful gift blessed by the goddess of the hunt.",
     "components": null,
     "created": false,
@@ -8480,8 +8574,7 @@
     "lore": "A dashing cape whose creator insists on calling 'Cloak of Apparition' as opposed to his assistant's 'Illusion' drivel.",
     "components": null,
     "created": false,
-    "charges": false,
-    "tier": 4
+    "charges": false
   },
   "havoc_hammer": {
     "hint": [
@@ -8581,8 +8674,7 @@
     "lore": "A simple design much improved by a master smith's loving hand.",
     "components": null,
     "created": false,
-    "charges": false,
-    "tier": 5
+    "charges": false
   },
   "woodland_striders": {
     "hint": [
@@ -8679,7 +8771,7 @@
   },
   "fallen_sky": {
     "hint": [
-      "Active: Fallen Sky Transform into a meteor that strikes down at the target area after 0.5 seconds in a 315 AoE, stunning enemies for 2 seconds and dealing impact damage. Continues to deal damage every 1 seconds to enemy units and buildings for 6 seconds.Building Impact Damage: 75 Building Over Time Damage: 50 Non-Building Impact Damage: 150 Non-Building Over Time Damage: 90 Range: 1600"
+      "Active: Fallen Sky Transform into a meteor that strikes down at the target area after 0.5 seconds in a 315 AoE, stunning enemies for 2 seconds and dealing impact damage. Continues to deal damage every 1 seconds to enemy units and buildings for 6 seconds.Building Impact Damage: 75 Building Over Time Damage: 50 Non-Building Impact Damage: 150 Non-Building Over Time Damage: 90 Range: 1200"
     ],
     "id": 371,
     "img": "/apps/dota2/images/items/fallen_sky_lg.png?t=1593393829403",
@@ -8816,8 +8908,7 @@
     "lore": "A life-saving jewel bestowed upon a young queen by a kindly vizier. ",
     "components": null,
     "created": false,
-    "charges": false,
-    "tier": 1
+    "charges": false
   },
   "paladin_sword": {
     "hint": [
@@ -8876,8 +8967,7 @@
     "lore": "The trophy from a mighty beast ambushed and slain in the recesses of its own home.",
     "components": null,
     "created": false,
-    "charges": false,
-    "tier": 4
+    "charges": false
   },
   "orb_of_destruction": {
     "hint": [
@@ -8915,8 +9005,7 @@
     "lore": "An ingot of chaos suspended in wizard's ether, housed within an arcanist's orb.",
     "components": null,
     "created": false,
-    "charges": false,
-    "tier": 3
+    "charges": false
   },
   "the_leveller": {
     "id": 379,
@@ -9028,7 +9117,7 @@
       {
         "key": "hp_regen",
         "header": "+",
-        "value": "5",
+        "value": "4",
         "footer": "HP Regeneration"
       }
     ],
@@ -9128,7 +9217,7 @@
   },
   "cloak_of_flames": {
     "hint": [
-      "PassiveBurns enemy units for 45 damage per second. Illusions deal 30 damage per second.Radius: 375"
+      "Passive: ImmolateBurns enemy units for 45 damage per second. Illusions deal 30 damage per second.Radius: 375"
     ],
     "id": 574,
     "img": "/apps/dota2/images/items/cloak_of_flames_lg.png?t=1593393829403",
@@ -9242,7 +9331,7 @@
   },
   "possessed_mask": {
     "hint": [
-      "Passive: LifestealHeals the attacker for 7% of attack damage dealt."
+      "Passive: LifestealHeals the attacker for 7 HP on each attack."
     ],
     "id": 577,
     "img": "/apps/dota2/images/items/possessed_mask_lg.png?t=1593393829403",
@@ -9629,9 +9718,9 @@
   },
   "stormcrafter": {
     "hint": [
-      "Active Cyclones your hero for 0.75 seconds. ",
+      "Active: Whirlwind Cyclones your hero for 0.75 seconds. ",
       "",
-      "Passive Zaps an enemy within 700 range, dealing 200 damage and a 40% slow for 0.3 seconds. Strikes every 3 seconds."
+      "Passive: Bottled Lightning Zaps an enemy within 700 range, dealing 200 damage and a 40% slow for 0.3 seconds. Strikes every 3 seconds."
     ],
     "id": 585,
     "img": "/apps/dota2/images/items/stormcrafter_lg.png?t=1593393829403",
@@ -9681,7 +9770,7 @@
       {
         "key": "bonus_health",
         "header": "+",
-        "value": "100",
+        "value": "75",
         "footer": "Health"
       },
       {
@@ -9704,6 +9793,232 @@
     "created": false,
     "charges": false,
     "tier": 1
+  },
+  "assassins_dagger": {
+    "id": 824,
+    "img": "/apps/dota2/images/items/assassins_dagger_lg.png?t=1593393829403",
+    "dname": "Assassin's Dagger",
+    "cost": 0,
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": 7,
+    "lore": "",
+    "components": null,
+    "created": false,
+    "charges": false
+  },
+  "ascetic_cap": {
+    "hint": [
+      "Passive: EnduranceWhenever a debuff would be applied to the owner, grant 50% Status resistance for 3 seconds."
+    ],
+    "id": 825,
+    "img": "/apps/dota2/images/items/ascetic_cap_lg.png?t=1593393829403",
+    "dname": "Ascetic's Cap",
+    "cost": 0,
+    "notes": "",
+    "attrib": [
+      {
+        "key": "bonus_health",
+        "header": "+",
+        "value": "300",
+        "footer": "Health"
+      },
+      {
+        "key": "hp_regen",
+        "header": "+",
+        "value": "10",
+        "footer": "HP Regeneration"
+      }
+    ],
+    "mc": false,
+    "cd": 30,
+    "lore": "An austere hat thought to be of Turstarkuri origin.",
+    "components": null,
+    "created": false,
+    "charges": false,
+    "tier": 4
+  },
+  "sample_picker": {
+    "id": 826,
+    "img": "/apps/dota2/images/items/sample_picker_lg.png?t=1593393829403",
+    "dname": "Assassin's Contract",
+    "cost": 0,
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": 15,
+    "lore": "",
+    "components": null,
+    "created": false,
+    "charges": false
+  },
+  "icarus_wings": {
+    "id": 827,
+    "img": "/apps/dota2/images/items/icarus_wings_lg.png?t=1593393829403",
+    "dname": "Icarus Wings",
+    "cost": 0,
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": 45,
+    "lore": "",
+    "components": null,
+    "created": false,
+    "charges": false
+  },
+  "misericorde": {
+    "hint": [
+      "Passive: Dark MercyYour attacks deal 7 more damage to enemies for each 10% HP they are missing."
+    ],
+    "id": 828,
+    "img": "/apps/dota2/images/items/misericorde_lg.png?t=1593393829403",
+    "dname": "Brigand's Blade",
+    "cost": 0,
+    "notes": "",
+    "attrib": [
+      {
+        "key": "damage",
+        "header": "+",
+        "value": "10",
+        "footer": "Damage"
+      },
+      {
+        "key": "aspd",
+        "header": "+",
+        "value": "10",
+        "footer": "Attack Speed"
+      }
+    ],
+    "mc": false,
+    "cd": false,
+    "lore": "An infamous assassin's blade stolen and smuggled out of White Spire after its owner's mysterious demise.",
+    "components": null,
+    "created": false,
+    "charges": false,
+    "tier": 2
+  },
+  "light_robes": {
+    "id": 836,
+    "img": "/apps/dota2/images/items/light_robes_lg.png?t=1593393829403",
+    "dname": "Light Robes",
+    "cost": 0,
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": false,
+    "lore": "",
+    "components": null,
+    "created": false,
+    "charges": false
+  },
+  "heavy_blade": {
+    "hint": [
+      "Active: CleansePurge all enemies and allies within 300 radius.",
+      "Passive: SubjugateYour attacks deal bonus damage equal to 4% of your target Max Mana."
+    ],
+    "id": 837,
+    "img": "/apps/dota2/images/items/heavy_blade_lg.png?t=1593393829403",
+    "dname": "Witchbane",
+    "cost": 0,
+    "notes": "",
+    "attrib": [],
+    "mc": 75,
+    "cd": 20,
+    "lore": "With ready access to test subjects, untold cruelties have been dreamed up and loosed upon the world from within the walls of the Tyler Estate.",
+    "components": null,
+    "created": false,
+    "charges": false,
+    "tier": 4
+  },
+  "unstable_wand": {
+    "hint": [
+      "Active: Pig, Out!Turns your hero into a critter and gives them +10% Movement Speed."
+    ],
+    "id": 838,
+    "img": "/apps/dota2/images/items/unstable_wand_lg.png?t=1593393829403",
+    "dname": "Pig Pole",
+    "cost": 0,
+    "notes": "",
+    "attrib": [
+      {
+        "key": "all_stats",
+        "header": "+",
+        "value": "6",
+        "footer": "All Attributes"
+      }
+    ],
+    "mc": 50,
+    "cd": 25,
+    "lore": "A makeshift charm misplaced by a peace-loving, addlebrained enchanter.",
+    "components": null,
+    "created": false,
+    "charges": false,
+    "tier": 1
+  },
+  "fortitude_ring": {
+    "id": 839,
+    "img": "/apps/dota2/images/items/fortitude_ring_lg.png?t=1593393829403",
+    "dname": "Ring of Fortitude",
+    "cost": 0,
+    "notes": "",
+    "attrib": [],
+    "mc": 100,
+    "cd": 30,
+    "lore": "",
+    "components": null,
+    "created": false,
+    "charges": false
+  },
+  "pogo_stick": {
+    "hint": [
+      "Active: VaultPropels your hero forward 300 units. Tumbler's Toy gets disabled for 3 seconds if its owner receives damage from a player source."
+    ],
+    "id": 840,
+    "img": "/apps/dota2/images/items/pogo_stick_lg.png?t=1593393829403",
+    "dname": "Tumbler's Toy",
+    "cost": 0,
+    "notes": "",
+    "attrib": [
+      {
+        "key": "bonus_mana",
+        "header": "+",
+        "value": "200",
+        "footer": "Mana"
+      }
+    ],
+    "mc": false,
+    "cd": 30,
+    "lore": "An antique plaything found in the ruins of an Ozenja circus bazaar.",
+    "components": null,
+    "created": false,
+    "charges": false,
+    "tier": 1
+  },
+  "paintball": {
+    "hint": [
+      "Active: Shadow BrandThrows a Mark towards an enemy within 900 range dealing your attack damage, and applying a debuff that deals 20 damage every second and provides vision of the unit for 7 seconds."
+    ],
+    "id": 835,
+    "img": "/apps/dota2/images/items/paintball_lg.png?t=1593393829403",
+    "dname": "Fae Grenade",
+    "cost": 0,
+    "notes": "",
+    "attrib": [
+      {
+        "key": "movespeed",
+        "header": "+",
+        "value": "20",
+        "footer": "Movement Speed"
+      }
+    ],
+    "mc": 25,
+    "cd": 20,
+    "lore": "Those marked for death by the fae shine brightly to all manner of creatures in the shadow realm.",
+    "components": null,
+    "created": false,
+    "charges": false,
+    "tier": 2
   },
   "diffusal_blade_2": {
     "id": 196,
