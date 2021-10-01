@@ -116,7 +116,7 @@
     "scepter_new_skill": false,
     "has_shard": true,
     "shard_desc": "Causes Adaptive Strike to have +1 Multishot and increases the stun duration by 1 second. Multishot prioritizes heroes.",
-    "shard_skill_name": "Adaptive Strike (Agility)",
+    "shard_skill_name": "Adaptive Strike (Strength)",
     "shard_new_skill": false
   },
   {
@@ -127,7 +127,7 @@
     "scepter_skill_name": "Requiem of Souls",
     "scepter_new_skill": false,
     "has_shard": true,
-    "shard_desc": "Shadow Fiend gains 2 souls per kill. Additionally Shadow Fiend can consume 1 soul per attack to deal a 170% damage crit. CD: 3s",
+    "shard_desc": "Shadow Fiend gains 2 souls per kill. Additionally Shadow Fiend can consume 1 soul per attack to deal a 190% damage crit. CD: 3s",
     "shard_skill_name": "Necromastery",
     "shard_new_skill": false
   },
@@ -231,7 +231,7 @@
     "hero_name": "npc_dota_hero_vengefulspirit",
     "hero_id": 20,
     "has_scepter": true,
-    "scepter_desc": "Upon death, creates a strong illusion of Vengeful Spirit that deals and takes 100%% damage and can cast all of her spells. Illusion has 25%% movement speed bonus. If the illusion is alive when Vengeful Spirit respawn, she will take its place. XP earned by her illusion is given to her.",
+    "scepter_desc": "Upon death, creates a strong illusion of Vengeful Spirit that deals and takes 100%% damage and can cast all of her spells. Illusion has 12%% movement speed bonus. If the illusion is alive when Vengeful Spirit respawn, she will take its place. XP earned by her illusion is given to her.",
     "scepter_skill_name": "Vengeance Aura",
     "scepter_new_skill": false,
     "has_shard": true,
@@ -247,7 +247,7 @@
     "scepter_skill_name": "Windrun",
     "scepter_new_skill": false,
     "has_shard": true,
-    "shard_desc": "Summons a strong wind that pushes all enemies globally 250 units per second in the target direction for 3 seconds. Vector Targeted. Mana Cost: 150 Cooldown: 40s",
+    "shard_desc": "Summons a strong wind that pushes all enemies within 1000 radius by 250 units per second in the target direction for 3 seconds. Vector Targeted. Global Range. Mana Cost: 150 Cooldown: 40s",
     "shard_skill_name": "Gale Force",
     "shard_new_skill": true
   },
@@ -283,7 +283,7 @@
     "scepter_skill_name": "Laguna Blade",
     "scepter_new_skill": false,
     "has_shard": true,
-    "shard_desc": "Increases Laguna Blade's cast range by 250 and causes it to go the full cast length and hit all units along the way. Can be ground targeted.",
+    "shard_desc": "Increases Laguna Blade's cast range by 250 and causes it to go the full cast length and hit all units along the way. Can be ground targeted. Additionally reduces Laguna Blade Mana Cost by 100",
     "shard_skill_name": "Laguna Blade",
     "shard_new_skill": false
   },
@@ -439,7 +439,7 @@
     "scepter_skill_name": "Wild Axes",
     "scepter_new_skill": false,
     "has_shard": true,
-    "shard_desc": "Reduces Hawk cooldown by 15 seconds. Hawks gains Dive Bomb. Channels for 1 second, revealing itself, and then flies towards the target enemy, dealing 250 damage and stunning them for 2 seconds, killing the hawk. Cast Range: 1200.",
+    "shard_desc": "Reduces Hawk cooldown by 7 seconds. Hawks gains Dive Bomb. Channels for 1 second, revealing itself, and then flies towards the target enemy, dealing 250 damage and stunning them for 2 seconds, killing the hawk. Cast Range: 1200.",
     "shard_skill_name": "Call of the Wild Hawk",
     "shard_new_skill": false
   },
@@ -559,7 +559,7 @@
     "scepter_skill_name": "Eclipse",
     "scepter_new_skill": false,
     "has_shard": true,
-    "shard_desc": "Allows Lucent beam to be ground targeted with a 325 target search radius. Also releases attacks on up to two random targets within 325 range of the Lucent Beam and reduces mana cost by 50.",
+    "shard_desc": "Allows Lucent beam to be ground targeted with a 325 target search radius. Also releases an attack on a random target within 500 range of the Lucent Beam and reduces mana cost by 50.",
     "shard_skill_name": "Lucent Beam",
     "shard_new_skill": false
   },
@@ -639,7 +639,7 @@
     "hero_name": "npc_dota_hero_dark_seer",
     "hero_id": 55,
     "has_scepter": true,
-    "scepter_desc": "Causes Ion Shell to have 2 Charges, increases duration by 20 seconds and provides +300 Health.",
+    "scepter_desc": "Causes Ion Shell to have 2 Charges, increases duration by 20 seconds and provides +275 Health.",
     "scepter_skill_name": "Ion Shell",
     "scepter_new_skill": false,
     "has_shard": true,
@@ -667,7 +667,7 @@
     "scepter_skill_name": "Guardian Angel",
     "scepter_new_skill": false,
     "has_shard": true,
-    "shard_desc": "Causes Omniknight's next attack todeal bonus pure damage based on %bonus_damage% plus %base_damage%%% of his base damage and reduces all outgoing damage from the target by 60% for the next 4 seconds. Cooldown: 10",
+    "shard_desc": "Causes Omniknight's next attack to deal bonus pure damage based on %bonus_damage% plus %base_damage%%% of his base damage and reduces all outgoing damage from the target by 60% for the next 4 seconds. Cooldown: 10",
     "shard_skill_name": "Hammer of Purity",
     "shard_new_skill": true
   },
@@ -739,7 +739,7 @@
     "scepter_skill_name": "Time Lapse",
     "scepter_new_skill": false,
     "has_shard": true,
-    "shard_desc": "Reduces cooldown by 4 seconds. Causes The Swarm to latch onto and reveal invisible units. Causes Geminate attack to launch on other enemies within 1200 range of the target that have Beetles attached to them.",
+    "shard_desc": "Reduces cooldown by 2 seconds. Causes The Swarm to latch onto and reveal invisible units. Causes Geminate attack to launch on other enemies within 1200 range of the target that have Beetles attached to them.",
     "shard_skill_name": "The Swarm",
     "shard_new_skill": false
   },
@@ -799,7 +799,7 @@
     "scepter_skill_name": "Chilling Touch",
     "scepter_new_skill": false,
     "has_shard": true,
-    "shard_desc": "Causes Ice Vortex to deal 35 DPS and reduces attack speed by 20.",
+    "shard_desc": "Causes Ice Vortex to deal 40 DPS and reduces attack speed by 20.",
     "shard_skill_name": "Ice Vortex",
     "shard_new_skill": false
   },
@@ -847,7 +847,7 @@
     "scepter_skill_name": "Flak Cannon",
     "scepter_new_skill": false,
     "has_shard": true,
-    "shard_desc": "Homing Missiles now constantly fire a rocket barrage with a 700 AOE after 1 second of being cast. Barrage prioritizes the homing missile target.",
+    "shard_desc": "Homing Missiles now constantly fire a rocket barrage with a 725 AOE after 1 second of being cast. Barrage prioritizes the homing missile target.",
     "shard_skill_name": "Homing Missile",
     "shard_new_skill": false
   },
@@ -867,7 +867,7 @@
     "hero_name": "npc_dota_hero_invoker",
     "hero_id": 74,
     "has_scepter": true,
-    "scepter_desc": "Creates a Cataclysm when Sun Strike is double tapped. Puts it on a 90 second cooldown. Creates 2 visible Sun Strikes within 160-200 range of each enemy hero.",
+    "scepter_desc": "Creates a Cataclysm when Sun Strike is double tapped. Puts it on a 90 second cooldown. Creates 2 visible Sun Strikes within 160-200 range of each enemy hero. Additionally Increases the level of Quas, Wex and Exort by 1.",
     "scepter_skill_name": "Sun Strike",
     "scepter_new_skill": false,
     "has_shard": true,
@@ -903,7 +903,7 @@
     "hero_name": "npc_dota_hero_lycan",
     "hero_id": 77,
     "has_scepter": true,
-    "scepter_desc": "Lycan bites an ally, granting them Shapeshift properties. Lycan and the bitten target gain %lifesteal_percent%%% Lifesteal and share %lifesteal%%% Lifesteal with each other as long as they are within %lifesteal_range% range of each other. Bitten target also gains 50% of Feral Impulse's effect",
+    "scepter_desc": "Lycan bites an ally, granting them Shapeshift properties. Lycan and the bitten target gain %lifesteal_percent%%% Lifesteal and share the healing effect of Lifesteal with each other as long as they are within %lifesteal_range% range of each other.",
     "scepter_skill_name": "Wolf Bite",
     "scepter_new_skill": true,
     "has_shard": true,
@@ -979,7 +979,7 @@
     "scepter_skill_name": "Eyes In The Forest",
     "scepter_new_skill": true,
     "has_shard": true,
-    "shard_desc": "Causes you to become invisible with Nature's Guise and root enemies upon attacking. Roots them for 1 second and deals a total of 200 damage. Lasts an extra second when attacking near a tree. Increases movement speed bonus by 15%%%.",
+    "shard_desc": "Causes you to become invisible with Nature's Guise and root enemies upon attacking. Roots them for 1 second and deals a total of 200 damage. Lasts an extra second when attacking near a tree. Increases movement speed bonus by 15%%.",
     "shard_skill_name": "Nature's Guise",
     "shard_new_skill": false
   },
@@ -1275,7 +1275,7 @@
     "hero_name": "npc_dota_hero_abyssal_underlord",
     "hero_id": 108,
     "has_scepter": true,
-    "scepter_desc": "Opens Opens 2 portals, one next to Underlord and one in the target location. Allies can channel a portal for 2 seconds to teleport to the other side.",
+    "scepter_desc": "Opens 2 portals, one next to Underlord and one in the target location up to 4000 range. Allies can channel a portal for 2 seconds to teleport to the other side.",
     "scepter_skill_name": "Fiend's Gate",
     "scepter_new_skill": true,
     "has_shard": true,
