@@ -500,23 +500,17 @@ const sources = [
       return region;
     },
   },
-  /* {
+  {
      key: "cluster",
-     url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/regions.json",
+     url: "https://api.stratz.com/api/v1/Cluster",
      transform: respObj => {
-       const cluster = {};
-       const regions = respObj.regions;
-       for (const key in regions) {
-         if (regions[key].clusters) {
-           regions[key].clusters.forEach(function(c) {
-             cluster[c] = Number(regions[key].region);
-           });
-         }
-       }
-       cluster["121"] = Number(regions['USEast'].region);
+        const cluster = {};
+        respObj.forEach(({ id, regionId }) => {
+          cluster[id] = regionId;
+        })
        return cluster;
      },
-   }, */
+   },
   {
     key: "countries",
     url:
