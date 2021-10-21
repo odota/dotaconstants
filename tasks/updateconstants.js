@@ -3,7 +3,7 @@ const async = require("async");
 const fs = require("fs");
 const simplevdf = require("simple-vdf");
 const { mapAbilities } = require("../utils");
-const hero_list = require("../build/heroes.json")
+const hero_list = require("../build/heroes.json");
 
 const extraStrings = {
   DOTA_ABILITY_BEHAVIOR_NONE: "None",
@@ -42,20 +42,21 @@ const badNames = [
 
 const extraAttribKeys = [
   "AbilityCastRange",
-  "AbilityChargeRestoreTime", 
+  "AbilityChargeRestoreTime",
   "AbilityDuration",
   "AbilityChannelTime",
   "AbilityCastPoint",
-  "AbilityCharges"
+  "AbilityCharges",
 ];
 
 const now = Number(new Date());
 
 const aghs_desc_urls = [];
 
-for (const hero_id in hero_list)
-{
-  aghs_desc_urls.push("http://www.dota2.com/datafeed/herodata?language=english&hero_id=" + hero_id);
+for (const hero_id in hero_list) {
+  aghs_desc_urls.push(
+    "http://www.dota2.com/datafeed/herodata?language=english&hero_id=" + hero_id
+  );
 }
 
 const sources = [
@@ -156,7 +157,7 @@ const sources = [
           result_key = scripts[key].ItemResult.replace(/^item_/, "");
           items[result_key].components = scripts[key].ItemRequirements[0]
             .split(";")
-            .map((item) => item.replace(/^item_/, "").replace('*', ''));
+            .map((item) => item.replace(/^item_/, "").replace("*", ""));
           items[result_key].created = true;
         });
 
@@ -167,8 +168,7 @@ const sources = [
         dname: "Diffusal Blade",
         qual: "artifact",
         cost: 3850,
-        desc:
-          "Active: Purge Targets an enemy, removing buffs from the target and slowing it for 4 seconds.Range: 600\nPassive: ManabreakEach attack burns 50 mana from the target, and deals 0.8 physical damage per burned mana. Burns 16 mana per attack from melee illusions and 8 mana per attack from ranged illusions. Dispel Type: Basic Dispel",
+        desc: "Active: Purge Targets an enemy, removing buffs from the target and slowing it for 4 seconds.Range: 600\nPassive: ManabreakEach attack burns 50 mana from the target, and deals 0.8 physical damage per burned mana. Burns 16 mana per attack from melee illusions and 8 mana per attack from ranged illusions. Dispel Type: Basic Dispel",
         notes: "Does not stack with other manabreak abilities.",
         attrib: [
           {
@@ -246,8 +246,7 @@ const sources = [
         ],
         mc: false,
         cd: 4,
-        lore:
-          "An enchanted blade that allows the user to cut straight into the enemy's soul.",
+        lore: "An enchanted blade that allows the user to cut straight into the enemy's soul.",
         components: ["diffusal_blade", "recipe_diffusal_blade"],
         created: true,
       };
@@ -273,8 +272,7 @@ const sources = [
   },
   {
     key: "item_ids",
-    url:
-      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/items.json",
+    url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/items.json",
     transform: (respObj) => {
       const items = respObj.DOTAAbilities;
       const itemIds = {};
@@ -373,8 +371,7 @@ const sources = [
   },
   {
     key: "ability_ids",
-    url:
-      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_abilities.json",
+    url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_abilities.json",
     transform: (respObj) => {
       const abilityIds = {};
       for (const key in respObj.DOTAAbilities) {
@@ -446,8 +443,7 @@ const sources = [
   },
   {
     key: "hero_abilities",
-    url:
-      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.json",
+    url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.json",
     transform: (respObj) => {
       var DOTAHeroes = respObj.DOTAHeroes;
       const heroAbilities = {};
@@ -483,8 +479,7 @@ const sources = [
   },
   {
     key: "region",
-    url:
-      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/regions.json",
+    url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/regions.json",
     transform: (respObj) => {
       const region = {};
       const regions = respObj.regions;
@@ -501,20 +496,19 @@ const sources = [
     },
   },
   {
-     key: "cluster",
-     url: "https://api.stratz.com/api/v1/Cluster",
-     transform: respObj => {
-        const cluster = {};
-        respObj.forEach(({ id, regionId }) => {
-          cluster[id] = regionId;
-        })
-       return cluster;
-     },
-   },
+    key: "cluster",
+    url: "https://api.stratz.com/api/v1/Cluster",
+    transform: (respObj) => {
+      const cluster = {};
+      respObj.forEach(({ id, regionId }) => {
+        cluster[id] = regionId;
+      });
+      return cluster;
+    },
+  },
   {
     key: "countries",
-    url:
-      "https://raw.githubusercontent.com/mledoze/countries/master/countries.json",
+    url: "https://raw.githubusercontent.com/mledoze/countries/master/countries.json",
     transform: (respObj) => {
       const countries = {};
       respObj
@@ -591,13 +585,12 @@ const sources = [
   },
   {
     key: "patchnotes",
-    url:
-      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/patchnotes/patchnotes_english.txt",
+    url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/patchnotes/patchnotes_english.txt",
     transform: (respObj) => {
       let items = Object.keys(require("../build/items.json"));
-      let heroes = Object.keys(
-        require("../build/hero_names.json")
-      ).map((hero) => hero.replace("npc_dota_hero_", ""));
+      let heroes = Object.keys(require("../build/hero_names.json")).map(
+        (hero) => hero.replace("npc_dota_hero_", "")
+      );
 
       let result = {};
       let keys = Object.keys(respObj);
@@ -648,88 +641,92 @@ const sources = [
       aghs_desc_arr = [];
 
       // for every hero
-      herodata.forEach( (hd_hero) =>
-      {
+      herodata.forEach((hd_hero) => {
         if (!hd_hero) {
           return;
         }
         hd_hero = hd_hero.result.data.heroes[0];
-        
+
         // object to store data about aghs scepter/shard for a hero
-        var aghs_element = 
-        {
+        var aghs_element = {
           hero_name: hd_hero.name,
-          hero_id:   hd_hero.id,
-          
+          hero_id: hd_hero.id,
+
           has_scepter: false,
           scepter_desc: "",
           scepter_skill_name: "",
           scepter_new_skill: false,
-          
+
           has_shard: false,
-          shard_desc:   "",
+          shard_desc: "",
           shard_skill_name: "",
           shard_new_skill: false,
-        }
+        };
 
-        hd_hero.abilities.forEach( (ability) => {
+        hd_hero.abilities.forEach((ability) => {
           // skip unused skills
-          if(ability.name_loc == "" || ability.desc_loc == "")
-          {
+          if (ability.name_loc == "" || ability.desc_loc == "") {
             return; // i guess this is continue in JS :|
           }
-            
+
           // ------------- Scepter  -------------
-          if(ability.ability_is_granted_by_scepter)
-          {
+          if (ability.ability_is_granted_by_scepter) {
             // scepter grants new ability
-            aghs_element.scepter_desc       = ability.desc_loc;
+            aghs_element.scepter_desc = ability.desc_loc;
             aghs_element.scepter_skill_name = ability.name_loc;
-            aghs_element.scepter_new_skill  = true;
-            aghs_element.has_scepter        = true;
-          }
-          else if(ability.ability_has_scepter && !(ability.scepter_loc == ""))
-          {
+            aghs_element.scepter_new_skill = true;
+            aghs_element.has_scepter = true;
+          } else if (
+            ability.ability_has_scepter &&
+            !(ability.scepter_loc == "")
+          ) {
             // scepter ugprades an ability
-            aghs_element.scepter_desc       = ability.scepter_loc;
+            aghs_element.scepter_desc = ability.scepter_loc;
             aghs_element.scepter_skill_name = ability.name_loc;
-            aghs_element.scepter_new_skill  = false;
-            aghs_element.has_scepter        = true;
+            aghs_element.scepter_new_skill = false;
+            aghs_element.has_scepter = true;
           }
           // -------------- Shard  --------------
-          if(ability.ability_is_granted_by_shard)
-          {
+          if (ability.ability_is_granted_by_shard) {
             // scepter grants new ability
-            aghs_element.shard_desc       = ability.desc_loc;
+            aghs_element.shard_desc = ability.desc_loc;
             aghs_element.shard_skill_name = ability.name_loc;
-            aghs_element.shard_new_skill  = true;
-            aghs_element.has_shard        = true;
-          }                                     
-          else if(ability.ability_has_shard && !(ability.shard_loc == ""))
-          {
+            aghs_element.shard_new_skill = true;
+            aghs_element.has_shard = true;
+          } else if (ability.ability_has_shard && !(ability.shard_loc == "")) {
             // scepter ugprades an ability
-            aghs_element.shard_desc       = ability.shard_loc;
+            aghs_element.shard_desc = ability.shard_loc;
             aghs_element.shard_skill_name = ability.name_loc;
-            aghs_element.shard_new_skill  = false;
-            aghs_element.has_shard        = true;
+            aghs_element.shard_new_skill = false;
+            aghs_element.has_shard = true;
           }
         });
 
         // Error handling
-        if(!aghs_element.has_shard)
-        {
-          console.log(aghs_element.hero_name + "[" + aghs_element.hero_id + "]" + ": Didn't find a scepter...");
+        if (!aghs_element.has_shard) {
+          console.log(
+            aghs_element.hero_name +
+              "[" +
+              aghs_element.hero_id +
+              "]" +
+              ": Didn't find a scepter..."
+          );
         }
-        if(!aghs_element.has_scepter)
-        {
-          console.log(aghs_element.hero_name + "[" + aghs_element.hero_id + "]" + ": Didn't find a shard...");
+        if (!aghs_element.has_scepter) {
+          console.log(
+            aghs_element.hero_name +
+              "[" +
+              aghs_element.hero_id +
+              "]" +
+              ": Didn't find a shard..."
+          );
         }
         // push the current hero's element into the array
         aghs_desc_arr.push(aghs_element);
       });
 
       return aghs_desc_arr;
-      },
+    },
   },
 ];
 
@@ -963,29 +960,36 @@ function replaceSValues(template, attribs) {
 
 // Formats templates like "Storm's movement speed is %storm_move_speed%" with "Storm's movement speed is 32"
 // args are the template, and a list of attribute dictionaries, like the ones in AbilitySpecial for each ability in the npc_abilities.json from the vpk
-function replaceSpecialAttribs(template, attribs, isItem = false, allData={}) {
+function replaceSpecialAttribs(
+  template,
+  attribs,
+  isItem = false,
+  allData = {}
+) {
   if (!template) {
     return template;
   }
   if (attribs) {
     //additional special ability keys being catered
-    extraAttribKeys.forEach(abilitykey => {
+    extraAttribKeys.forEach((abilitykey) => {
       if (abilitykey in allData) {
-        let value = allData[abilitykey].split(' '); //can have multiple values
-        value = value.length === 1 ? Number(value[0]) : value.map(v => Number(v));
-        attribs.push({[abilitykey.toLowerCase()]: value});
+        let value = allData[abilitykey].split(" "); //can have multiple values
+        value =
+          value.length === 1 ? Number(value[0]) : value.map((v) => Number(v));
+        attribs.push({ [abilitykey.toLowerCase()]: value });
         //these are also present with another attrib name
-        if (abilitykey === "AbilityChargeRestoreTime") { 
-          attribs.push({"charge_restore_time": value});
+        if (abilitykey === "AbilityChargeRestoreTime") {
+          attribs.push({ charge_restore_time: value });
         }
         if (abilitykey === "AbilityCharges") {
-          attribs.push({"max_charges": value});
+          attribs.push({ max_charges: value });
         }
       }
     });
 
-    if (template.includes("%customval_team_tomes_used%")){ //in-game line not required in tooltip
-      template = template.replace(/[ a-zA-Z]+: %\w+%/g,"");
+    if (template.includes("%customval_team_tomes_used%")) {
+      //in-game line not required in tooltip
+      template = template.replace(/[ a-zA-Z]+: %\w+%/g, "");
     }
 
     template = template.replace(/%([^% ]*)%/g, function (str, name) {
@@ -1000,11 +1004,12 @@ function replaceSpecialAttribs(template, attribs, isItem = false, allData={}) {
         attr = attribs.find((attr) => name in attr);
       }
       if (!attr) {
-        if (name === "lifesteal") { //special cases, in terms of template context and dota2 gamepedia
-          return attribs.find(obj => "lifesteal_percent" in obj).lifesteal_percent; 
-        }
-        else if (name === "movement_slow") {
-          return attribs.find(obj => "damage_pct" in obj).damage_pct; 
+        if (name === "lifesteal") {
+          //special cases, in terms of template context and dota2 gamepedia
+          return attribs.find((obj) => "lifesteal_percent" in obj)
+            .lifesteal_percent;
+        } else if (name === "movement_slow") {
+          return attribs.find((obj) => "damage_pct" in obj).damage_pct;
         }
 
         console.log(`cant find attribute %${name}%`);
@@ -1063,13 +1068,13 @@ function formatVpkHero(key, vpkr, localized_name) {
   h.roles = vpkrh.Role.split(",");
 
   h.img =
-    "/apps/dota2/images/heroes/" +
+    "/apps/dota2/images/dota_react/heroes/" +
     key.replace("npc_dota_hero_", "") +
-    "_full.png?";
+    ".png?";
   h.icon =
-    "/apps/dota2/images/heroes/" +
+    "/apps/dota2/images/dota_react/heroes/icons/" +
     key.replace("npc_dota_hero_", "") +
-    "_icon.png";
+    ".png?";
   h.url = vpkrh.url;
 
   h.base_health = Number(vpkrh.StatusHealth || baseHero.StatusHealth);
