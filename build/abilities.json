@@ -386,12 +386,22 @@
       {
         "key": "slow",
         "header": "MOVEMENT SLOW:",
-        "value": "-12%"
+        "value": [
+          "-12%",
+          "-13%",
+          "-14%",
+          "-15%"
+        ]
       },
       {
         "key": "speed_bonus",
         "header": "SPEED BONUS:",
-        "value": "12%"
+        "value": [
+          "12%",
+          "13%",
+          "14%",
+          "15%"
+        ]
       },
       {
         "key": "damage_per_second",
@@ -821,10 +831,10 @@
     ],
     "mc": "165",
     "cd": [
-      "22",
-      "19",
-      "16",
-      "13"
+      "24",
+      "21",
+      "18",
+      "15"
     ],
     "img": "/apps/dota2/images/abilities/bane_nightmare_md.png"
   },
@@ -1458,9 +1468,9 @@
         "key": "agility_multiplier",
         "header": "AGILITY BONUS:",
         "value": [
-          "25%",
-          "35%",
-          "45%"
+          "30%",
+          "40%",
+          "50%"
         ]
       },
       {
@@ -1561,9 +1571,9 @@
       }
     ],
     "mc": [
-      "110",
-      "130",
-      "150",
+      "125",
+      "140",
+      "155",
       "170"
     ],
     "cd": [
@@ -2460,7 +2470,7 @@
       "130",
       "145"
     ],
-    "cd": "8",
+    "cd": "9",
     "img": "/apps/dota2/images/abilities/lina_dragon_slave_md.png"
   },
   "lina_light_strike_array": {
@@ -2549,10 +2559,10 @@
         "key": "fiery_soul_move_speed_bonus",
         "header": "MOVE SPEED BONUS:",
         "value": [
+          "4%",
           "5%",
           "6%",
-          "7%",
-          "8%"
+          "7%"
         ]
       },
       {
@@ -2685,9 +2695,9 @@
       }
     ],
     "mc": [
-      "70",
-      "100",
-      "130",
+      "85",
+      "110",
+      "135",
       "160"
     ],
     "cd": "12",
@@ -3531,12 +3541,6 @@
         "key": "scepter_cast_range_bonus",
         "header": "SCEPTER BONUS CAST RANGE:",
         "value": "300"
-      },
-      {
-        "key": "scepter_cooldown_reduction",
-        "header": "SCEPTER COOLDOWN REDUCTION:",
-        "value": "20",
-        "generated": true
       },
       {
         "key": "abilitycastrange",
@@ -4721,7 +4725,7 @@
         "generated": true
       }
     ],
-    "mc": "135",
+    "mc": "110",
     "cd": [
       "18",
       "16",
@@ -4868,7 +4872,7 @@
       {
         "key": "scepter_regen_pct",
         "header": "SCEPTER REGEN PCT:",
-        "value": "6",
+        "value": "5",
         "generated": true
       },
       {
@@ -6520,7 +6524,12 @@
       "80",
       "90"
     ],
-    "cd": "16",
+    "cd": [
+      "22",
+      "20",
+      "18",
+      "16"
+    ],
     "img": "/apps/dota2/images/abilities/storm_spirit_electric_vortex_md.png"
   },
   "storm_spirit_overload": {
@@ -7146,10 +7155,10 @@
         "key": "bonus_damage_buildings",
         "header": "BONUS BUILDING DAMAGE:",
         "value": [
-          "90%",
-          "120%",
-          "150%",
-          "180%"
+          "70%",
+          "100%",
+          "130%",
+          "160%"
         ]
       },
       {
@@ -7178,11 +7187,6 @@
           "80%",
           "100%"
         ]
-      },
-      {
-        "key": "throw_splash_pct",
-        "header": "THROW SPLASH:",
-        "value": "200%"
       },
       {
         "key": "bat_increase",
@@ -7244,18 +7248,13 @@
       {
         "key": "bonus_damage",
         "header": "BONUS DAMAGE:",
-        "value": "25",
+        "value": "20",
         "generated": true
       },
       {
         "key": "splash_radius",
         "header": "SPLASH RADIUS:",
         "value": "275"
-      },
-      {
-        "key": "splash_pct",
-        "header": "SPLASH DAMAGE:",
-        "value": "200%"
       },
       {
         "key": "abilitycastrange",
@@ -8120,10 +8119,10 @@
       }
     ],
     "mc": [
-      "30",
       "40",
       "50",
-      "60"
+      "60",
+      "70"
     ],
     "cd": [
       "7",
@@ -10801,11 +10800,6 @@
         ]
       },
       {
-        "key": "scepter_bounce_range",
-        "header": "BONUS CAST RANGE:",
-        "value": "400"
-      },
-      {
         "key": "radius_explosion",
         "header": "RADIUS SECONDARY DAMAGE:",
         "value": "250"
@@ -10960,8 +10954,8 @@
       }
     ],
     "mc": [
-      "80",
       "95",
+      "105",
       "110",
       "125"
     ],
@@ -11791,9 +11785,9 @@
         "key": "abilitycastrange",
         "header": "CAST RANGE:",
         "value": [
-          "450",
           "600",
-          "750",
+          "700",
+          "800",
           "900"
         ]
       },
@@ -13558,7 +13552,7 @@
       {
         "key": "abilitycastrange",
         "header": "ABILITYCASTRANGE:",
-        "value": "450",
+        "value": "500",
         "generated": true
       },
       {
@@ -18078,10 +18072,10 @@
         "key": "speed_bonus",
         "header": "MOVEMENT SLOW:",
         "value": [
-          "10%",
-          "19%",
-          "28%",
-          "37%"
+          "14%",
+          "22%",
+          "30%",
+          "38%"
         ]
       },
       {
@@ -19111,7 +19105,7 @@
       "Point Target",
       "AOE"
     ],
-    "desc": "Spins a large web that grants Broodmother a passive movement speed increase, and boosts regeneration while in its vicinity, as well as giving free movement. Spin Web charges restore every 40 seconds. Spin Web can be cast from anywhere as long as the new web touches an existing web. Webs never expire, and can be manually destroyed. When the maximum limit of webs is exceeded, the oldest web disappears. The movement bonus is proportional to the unit's HP",
+    "desc": "Spins a large web that grants Broodmother a passive movement speed increase, and boosts regeneration while in its vicinity, as well as giving free movement. Spin Web charges restore every 30 seconds. Spin Web can be cast from anywhere as long as the new web touches an existing web. Webs never expire, and can be manually destroyed. When the maximum limit of webs is exceeded, the oldest web disappears. The movement bonus is proportional to the unit's HP",
     "attrib": [
       {
         "key": "radius",
@@ -19196,13 +19190,13 @@
       {
         "key": "abilitychargerestoretime",
         "header": "ABILITYCHARGERESTORETIME:",
-        "value": "40",
+        "value": "30",
         "generated": true
       },
       {
         "key": "charge_restore_time",
         "header": "CHARGE RESTORE TIME:",
-        "value": "40"
+        "value": "30"
       },
       {
         "key": "abilitycastpoint",
@@ -19938,12 +19932,12 @@
       {
         "key": "cast_range_tooltip_scepter",
         "header": "SCEPTER ALLY CAST RANGE:",
-        "value": "600"
+        "value": "500"
       },
       {
         "key": "abilitycastrange",
         "header": "ABILITYCASTRANGE:",
-        "value": "600",
+        "value": "500",
         "generated": true
       },
       {
@@ -20720,9 +20714,9 @@
     ],
     "mc": [
       "70",
+      "75",
       "80",
-      "90",
-      "100"
+      "85"
     ],
     "cd": [
       "14",
@@ -21004,9 +20998,9 @@
       }
     ],
     "mc": [
-      "250",
-      "350",
-      "450"
+      "200",
+      "300",
+      "400"
     ],
     "cd": [
       "160",
@@ -21301,11 +21295,6 @@
         "generated": true
       },
       {
-        "key": "tooltip_cooldown",
-        "header": "COOLDOWN:",
-        "value": "35"
-      },
-      {
         "key": "abilitycastpoint",
         "header": "ABILITYCASTPOINT:",
         "value": "0.3",
@@ -21313,7 +21302,7 @@
       }
     ],
     "mc": "180",
-    "cd": "30",
+    "cd": "40",
     "img": "/apps/dota2/images/abilities/spectre_haunt_single_md.png"
   },
   "spectre_reality": {
@@ -21558,7 +21547,7 @@
       {
         "key": "abilitycastrange",
         "header": "ABILITYCASTRANGE:",
-        "value": "550",
+        "value": "500",
         "generated": true
       },
       {
@@ -22193,9 +22182,9 @@
         "key": "damage",
         "header": "BONUS DAMAGE:",
         "value": [
-          "100",
-          "175",
-          "250"
+          "125",
+          "200",
+          "275"
         ]
       },
       {
@@ -25429,10 +25418,10 @@
         "key": "mana_restore",
         "header": "MAX MANA RESTORE:",
         "value": [
-          "20%",
           "30%",
           "40%",
-          "50%"
+          "50%",
+          "60%"
         ]
       },
       {
@@ -25625,6 +25614,7 @@
     "behavior": [
       "Unit Target",
       "Hidden",
+      null,
       null
     ],
     "desc": "Lycan bites an ally, granting them Shapeshift properties. Lycan and the bitten target gain 30% Lifesteal and share the healing effect of Lifesteal with each other as long as they are within 1200 range of each other.",
@@ -25642,6 +25632,12 @@
         "generated": true
       },
       {
+        "key": "attack_range",
+        "header": "ATTACK RANGE:",
+        "value": "150",
+        "generated": true
+      },
+      {
         "key": "abilitycastrange",
         "header": "ABILITYCASTRANGE:",
         "value": "300",
@@ -25655,7 +25651,11 @@
       }
     ],
     "mc": "150",
-    "cd": "80",
+    "cd": [
+      "125",
+      "110",
+      "95"
+    ],
     "img": "/apps/dota2/images/abilities/lycan_wolf_bite_md.png"
   },
   "lycan_howl": {
@@ -30410,10 +30410,10 @@
         "key": "magic_resistance",
         "header": "MAGIC RESISTANCE REDUCTION:",
         "value": [
-          "15%",
-          "20%",
-          "25%",
-          "30%"
+          "16%",
+          "22%",
+          "28%",
+          "34%"
         ]
       },
       {
@@ -30638,8 +30638,8 @@
         "key": "illuminate_heal",
         "header": "ILLUMINATE HEAL:",
         "value": [
-          "30%",
-          "45%",
+          "40%",
+          "50%",
           "60%"
         ]
       }
@@ -32866,7 +32866,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Magnus tosses any enemies in front of him, launching them to his rear. Enemies spend 0.6 seconds in the air, then take 200 damage and are stunned for 0.75 seconds upon landing.",
+    "desc": "Magnus tosses any enemies in front of him, launching them to his rear. Enemies spend 0.6 seconds in the air, then take 200 damage and are heavily slowed for 1.25 seconds upon landing.",
     "attrib": [
       {
         "key": "damage",
@@ -32891,9 +32891,10 @@
         "generated": true
       },
       {
-        "key": "stun_duration",
-        "header": "STUN DURATION:",
-        "value": "0.75"
+        "key": "slow_duration",
+        "header": "SLOW DURATION:",
+        "value": "1.25",
+        "generated": true
       },
       {
         "key": "pull_offset",
@@ -33151,9 +33152,9 @@
         "header": "DISTANCE:",
         "value": [
           "900",
-          "1000",
-          "1100",
-          "1200"
+          "975",
+          "1050",
+          "1125"
         ]
       },
       {
@@ -35229,7 +35230,12 @@
       {
         "key": "move_pct_heroes",
         "header": "BONUS SPEED (HEROES):",
-        "value": "7%"
+        "value": [
+          "5%",
+          "6%",
+          "7%",
+          "8%"
+        ]
       },
       {
         "key": "damage_creeps",
@@ -35245,9 +35251,9 @@
         "key": "damage_heroes",
         "header": "BONUS DAMAGE (HEROES):",
         "value": [
-          "20",
-          "40",
-          "60",
+          "14",
+          "36",
+          "58",
           "80"
         ]
       },
@@ -35374,20 +35380,20 @@
         "key": "armor_reduction_pct",
         "header": "BASE ARMOR REDUCTION:",
         "value": [
-          "40%",
-          "60%",
-          "80%",
-          "100%"
+          "41%",
+          "59%",
+          "73%",
+          "89%"
         ]
       },
       {
         "key": "magic_resistance_pct",
         "header": "BASE RESIST REDUCTION:",
         "value": [
-          "40%",
-          "60%",
-          "80%",
-          "100%"
+          "41%",
+          "59%",
+          "73%",
+          "89%"
         ]
       }
     ],
@@ -36022,11 +36028,6 @@
         "value": "5"
       },
       {
-        "key": "scepter_mana_cost",
-        "header": "SCEPTER MANA COST:",
-        "value": "75"
-      },
-      {
         "key": "abilitycastrange",
         "header": "ABILITYCASTRANGE:",
         "value": "1400",
@@ -36137,7 +36138,7 @@
       {
         "key": "abilitycastpoint",
         "header": "ABILITYCASTPOINT:",
-        "value": "0",
+        "value": "0.1",
         "generated": true
       }
     ],
@@ -38103,10 +38104,10 @@
     ],
     "mc": "100",
     "cd": [
-      "23",
-      "22",
-      "21",
-      "20"
+      "28",
+      "26",
+      "24",
+      "22"
     ],
     "img": "/apps/dota2/images/abilities/monkey_king_boundless_strike_md.png"
   },
@@ -38357,10 +38358,10 @@
     ],
     "mc": "100",
     "cd": [
-      "19",
-      "17",
-      "15",
-      "13"
+      "20",
+      "18",
+      "16",
+      "14"
     ],
     "img": "/apps/dota2/images/abilities/monkey_king_primal_spring_md.png"
   },
@@ -39560,18 +39561,7 @@
         "generated": true
       },
       {
-        "key": "damage_per_tick",
-        "header": "DAMAGE PER TICK:",
-        "value": [
-          "5",
-          "10",
-          "15",
-          "20"
-        ],
-        "generated": true
-      },
-      {
-        "key": "dps_tooltip",
+        "key": "damage_per_second",
         "header": "PHANTOM DPS:",
         "value": [
           "10",
@@ -39751,12 +39741,12 @@
     "behavior": "Unit Target",
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Grimstroke shrouds an allied unit in ink, increasing its movement speed. Enemies in range of the allied unit are damaged with inky tendrils over time. After 4 seconds it triggers, applying damage and stun in an area around the unit in proportion to how long ink tendril was near any hero.",
+    "desc": "Grimstroke shrouds an allied unit in ink, increasing its movement speed. Enemies in range of the allied unit are damaged with inky tendrils over time. After 3 seconds it triggers, applying damage and stun in an area around the unit in proportion to how long ink tendril was near any hero.",
     "attrib": [
       {
         "key": "buff_duration",
         "header": "BUFF DURATION:",
-        "value": "4"
+        "value": "3"
       },
       {
         "key": "movespeed_bonus_pct",
@@ -40504,13 +40494,13 @@
       {
         "key": "shard_bonus_damage",
         "header": "SHARD BONUS DAMAGE:",
-        "value": "200",
+        "value": "175",
         "generated": true
       },
       {
         "key": "abilitycastpoint",
         "header": "ABILITYCASTPOINT:",
-        "value": "0.2",
+        "value": "0.3",
         "generated": true
       }
     ],
@@ -40738,7 +40728,7 @@
     "dname": "+50 Aether Remnant Damage"
   },
   "special_bonus_unique_void_spirit_3": {
-    "dname": "Dissimilate Stuns for 2s"
+    "dname": "Dissimilate Stuns for 1.75s"
   },
   "special_bonus_unique_void_spirit_4": {
     "dname": "+80 Resonant Pulse Damage"
@@ -42397,6 +42387,436 @@
   "special_bonus_unique_dawnbreaker_luminosity_attack_count": {},
   "special_bonus_unique_dawnbreaker_fire_wreath_swipe": {},
   "special_bonus_unique_dawnbreaker_celestial_hammer_slow": {},
+  "marci_grapple": {
+    "dname": "Dispose",
+    "behavior": "Unit Target",
+    "dmg_type": "Magical",
+    "bkbpierce": "No",
+    "desc": "Marci grabs an allied or enemy target and throws it effortlessly behind her, damaging and stunning the unit if it's an enemy. Any enemy units in the landing area will also be damaged and stunned.",
+    "attrib": [
+      {
+        "key": "landing_radius",
+        "header": "LANDING RADIUS:",
+        "value": "275",
+        "generated": true
+      },
+      {
+        "key": "air_duration",
+        "header": "AIR DURATION:",
+        "value": "0.5",
+        "generated": true
+      },
+      {
+        "key": "air_height",
+        "header": "AIR HEIGHT:",
+        "value": "150",
+        "generated": true
+      },
+      {
+        "key": "pull_offset",
+        "header": "PULL OFFSET:",
+        "value": "75",
+        "generated": true
+      },
+      {
+        "key": "throw_distance_behind",
+        "header": "THROW DISTANCE:",
+        "value": "350"
+      },
+      {
+        "key": "pull_angle",
+        "header": "PULL ANGLE:",
+        "value": "230",
+        "generated": true
+      },
+      {
+        "key": "stun_duration",
+        "header": "STUN DURATION:",
+        "value": [
+          "1.2",
+          "1.5",
+          "1.8",
+          "2.1"
+        ]
+      },
+      {
+        "key": "impact_damage",
+        "header": "IMPACT DAMAGE:",
+        "value": [
+          "70",
+          "140",
+          "210",
+          "280"
+        ]
+      },
+      {
+        "key": "abilitycastrange",
+        "header": "ABILITYCASTRANGE:",
+        "value": "175",
+        "generated": true
+      },
+      {
+        "key": "abilitycastpoint",
+        "header": "ABILITYCASTPOINT:",
+        "value": "0.2",
+        "generated": true
+      }
+    ],
+    "mc": "90",
+    "cd": [
+      "16",
+      "14",
+      "12",
+      "10"
+    ],
+    "img": "/apps/dota2/images/abilities/marci_grapple_md.png"
+  },
+  "marci_unleash": {
+    "dname": "Unleash",
+    "behavior": "No Target",
+    "dmg_type": "Magical",
+    "desc": "Marci taps a hidden power, gaining Fury charges that allow her to deliver a rapid sequence of strikes. The last strike in every Fury combo creates a damaging pulse around the target that slows movement and attack speed for 2s. In between Fury combos, Marci is unable to attack for 1.5s.\n\nMarci receives a basic dispel when Unleash is cast and gains 15% movement speed.",
+    "attrib": [
+      {
+        "key": "duration",
+        "header": "DURATION:",
+        "value": "18"
+      },
+      {
+        "key": "charges_per_flurry",
+        "header": "STRIKES PER FURY:",
+        "value": [
+          "3",
+          "4",
+          "5"
+        ]
+      },
+      {
+        "key": "flurry_bonus_attack_speed",
+        "header": "FLURRY BONUS ATTACK SPEED:",
+        "value": [
+          "700",
+          "975",
+          "1325"
+        ],
+        "generated": true
+      },
+      {
+        "key": "time_between_flurries",
+        "header": "TIME BETWEEN FLURRIES:",
+        "value": "1.5",
+        "generated": true
+      },
+      {
+        "key": "pulse_radius",
+        "header": "PULSE RADIUS:",
+        "value": "800"
+      },
+      {
+        "key": "pulse_debuff_duration",
+        "header": "PULSE DEBUFF DURATION:",
+        "value": "2",
+        "generated": true
+      },
+      {
+        "key": "pulse_damage",
+        "header": "PULSE DAMAGE:",
+        "value": [
+          "80",
+          "150",
+          "220"
+        ]
+      },
+      {
+        "key": "pulse_move_slow_pct",
+        "header": "PULSE MOVEMENT SLOW:",
+        "value": "30%"
+      },
+      {
+        "key": "pulse_attack_slow_pct",
+        "header": "PULSE ATTACK SLOW:",
+        "value": [
+          "60",
+          "80",
+          "100"
+        ]
+      },
+      {
+        "key": "max_time_window_per_hit",
+        "header": "MAX TIME WINDOW PER HIT:",
+        "value": "1",
+        "generated": true
+      },
+      {
+        "key": "bonus_movespeed",
+        "header": "BONUS MOVESPEED:",
+        "value": "15",
+        "generated": true
+      },
+      {
+        "key": "recovery_fixed_attack_rate",
+        "header": "RECOVERY FIXED ATTACK RATE:",
+        "value": "2",
+        "generated": true
+      },
+      {
+        "key": "abilitycastpoint",
+        "header": "ABILITYCASTPOINT:",
+        "value": "0.2",
+        "generated": true
+      }
+    ],
+    "mc": [
+      "100",
+      "125",
+      "150"
+    ],
+    "cd": [
+      "90",
+      "75",
+      "60"
+    ],
+    "img": "/apps/dota2/images/abilities/marci_unleash_md.png"
+  },
+  "marci_companion_run": {
+    "dname": "Rebound",
+    "behavior": [
+      "Unit Target",
+      null
+    ],
+    "dmg_type": "Magical",
+    "bkbpierce": "No",
+    "desc": "Vector targeted. Marci bounds to the targeted unit, choosing a direction and distance she will spring away from it. Upon reaching the unit, Marci lunges to her final destination, damaging and slowing enemies in the area.\n\nIf the unit she runs to is an ally, it receives 35% bonus movement speed for 5s.",
+    "attrib": [
+      {
+        "key": "move_speed",
+        "header": "MOVE SPEED:",
+        "value": "2000",
+        "generated": true
+      },
+      {
+        "key": "min_jump_distance",
+        "header": "MIN JUMP DISTANCE:",
+        "value": "450",
+        "generated": true
+      },
+      {
+        "key": "max_jump_distance",
+        "header": "MAX JUMP RANGE:",
+        "value": "850"
+      },
+      {
+        "key": "landing_radius",
+        "header": "LANDING RADIUS:",
+        "value": "325",
+        "generated": true
+      },
+      {
+        "key": "impact_damage",
+        "header": "IMPACT DAMAGE:",
+        "value": [
+          "90",
+          "160",
+          "230",
+          "300"
+        ]
+      },
+      {
+        "key": "movement_slow_pct",
+        "header": "MOVEMENT SLOW:",
+        "value": [
+          "30%",
+          "40%",
+          "50%",
+          "60%"
+        ]
+      },
+      {
+        "key": "debuff_duration",
+        "header": "SLOW DURATION:",
+        "value": "3"
+      },
+      {
+        "key": "min_lob_travel_time",
+        "header": "MIN LOB TRAVEL TIME:",
+        "value": "0.1",
+        "generated": true
+      },
+      {
+        "key": "max_lob_travel_time",
+        "header": "MAX LOB TRAVEL TIME:",
+        "value": "0.2",
+        "generated": true
+      },
+      {
+        "key": "min_height_above_lowest",
+        "header": "MIN HEIGHT ABOVE LOWEST:",
+        "value": "250",
+        "generated": true
+      },
+      {
+        "key": "min_height_above_highest",
+        "header": "MIN HEIGHT ABOVE HIGHEST:",
+        "value": "200",
+        "generated": true
+      },
+      {
+        "key": "min_acceleration",
+        "header": "MIN ACCELERATION:",
+        "value": "6000",
+        "generated": true
+      },
+      {
+        "key": "max_acceleration",
+        "header": "MAX ACCELERATION:",
+        "value": "6000",
+        "generated": true
+      },
+      {
+        "key": "vector_preview_radius",
+        "header": "VECTOR PREVIEW RADIUS:",
+        "value": "100",
+        "generated": true
+      },
+      {
+        "key": "ally_buff_duration",
+        "header": "ALLY BUFF DURATION:",
+        "value": "5",
+        "generated": true
+      },
+      {
+        "key": "ally_movespeed_pct",
+        "header": "ALLY MOVESPEED PCT:",
+        "value": "35",
+        "generated": true
+      },
+      {
+        "key": "impact_position_offset",
+        "header": "IMPACT POSITION OFFSET:",
+        "value": "64",
+        "generated": true
+      },
+      {
+        "key": "abilitycastrange",
+        "header": "ABILITYCASTRANGE:",
+        "value": "850",
+        "generated": true
+      },
+      {
+        "key": "abilitycastpoint",
+        "header": "ABILITYCASTPOINT:",
+        "value": "0.1",
+        "generated": true
+      }
+    ],
+    "mc": [
+      "70",
+      "80",
+      "90",
+      "100"
+    ],
+    "cd": [
+      "15",
+      "13",
+      "11",
+      "9"
+    ],
+    "img": "/apps/dota2/images/abilities/marci_companion_run_md.png"
+  },
+  "marci_guardian": {
+    "dname": "Sidekick",
+    "behavior": "Unit Target",
+    "desc": "Marci's loyalty helps ensure survival, imbuing a chosen allied hero and herself with lifesteal and attack damage.",
+    "attrib": [
+      {
+        "key": "buff_duration",
+        "header": "DURATION:",
+        "value": "6"
+      },
+      {
+        "key": "lifesteal_pct",
+        "header": "LIFESTEAL:",
+        "value": [
+          "35%",
+          "40%",
+          "45%",
+          "50%"
+        ]
+      },
+      {
+        "key": "bonus_damage",
+        "header": "BONUS DAMAGE:",
+        "value": [
+          "20",
+          "35",
+          "50",
+          "65"
+        ]
+      },
+      {
+        "key": "bonus_attack_range",
+        "header": "BONUS ATTACK RANGE:",
+        "value": "0",
+        "generated": true
+      },
+      {
+        "key": "nearest_ally_search_range",
+        "header": "NEAREST ALLY SEARCH RANGE:",
+        "value": "700",
+        "generated": true
+      },
+      {
+        "key": "abilitycastrange",
+        "header": "ABILITYCASTRANGE:",
+        "value": "700",
+        "generated": true
+      },
+      {
+        "key": "abilitycastpoint",
+        "header": "ABILITYCASTPOINT:",
+        "value": "0",
+        "generated": true
+      }
+    ],
+    "mc": [
+      "45",
+      "40",
+      "35",
+      "30"
+    ],
+    "cd": [
+      "36",
+      "28",
+      "20",
+      "12"
+    ],
+    "img": "/apps/dota2/images/abilities/marci_guardian_md.png"
+  },
+  "special_bonus_unique_marci_lunge_ally_absorb": {
+    "dname": "+160 Rebound Ally Shield Absorb"
+  },
+  "special_bonus_unique_marci_lunge_damage": {
+    "dname": "+150 Rebound Damage"
+  },
+  "special_bonus_unique_marci_grapple_stun_duration": {
+    "dname": "+0.75s Dispose Stun Duration"
+  },
+  "special_bonus_unique_marci_guardian_magic_immune": {
+    "dname": "1.75s Sidekick Spell Immunity"
+  },
+  "special_bonus_unique_marci_unleash_flurry_crits": {},
+  "special_bonus_unique_marci_unleash_pulse_lunge_refresh": {
+    "dname": "Unleash Pulse Refreshes Rebound"
+  },
+  "special_bonus_unique_marci_unleash_silence": {
+    "dname": "1.5s Unleash Pulse Silence"
+  },
+  "special_bonus_unique_marci_guardian_lifesteal": {
+    "dname": "+50% Sidekick Lifesteal"
+  },
+  "special_bonus_unique_marci_lunge_range": {
+    "dname": "+250 Rebound Cast/Jump Range"
+  },
   "backdoor_protection": {
     "dname": "Backdoor Protection",
     "behavior": "Passive",
@@ -50103,7 +50523,7 @@
     "dname": "+0.6s Spiked Carapace Stun Duration"
   },
   "special_bonus_unique_weaver_1": {
-    "dname": "+60 Shukuchi Damage"
+    "dname": "+50 Shukuchi Damage"
   },
   "special_bonus_unique_weaver_2": {
     "dname": "+90 Geminate Attack Damage"
@@ -50265,7 +50685,7 @@
     "dname": "+50 Shadow Dance Attack Speed"
   },
   "special_bonus_unique_spectre": {
-    "dname": "-5s Spectral Dagger Cooldown"
+    "dname": "-4s Spectral Dagger Cooldown"
   },
   "special_bonus_unique_spectre_2": {
     "dname": "+12 Desolate Damage"
@@ -50382,7 +50802,7 @@
     "dname": "+5 Tree Grab Attack Charges"
   },
   "special_bonus_unique_tiny_7": {
-    "dname": "+15% Tree Grab Unit Damage Bonus"
+    "dname": "+20% Tree Grab Unit Damage Bonus"
   },
   "special_bonus_unique_troll_warlord": {
     "dname": "+7 Berserker's Rage Armor"
@@ -50583,7 +51003,7 @@
     "dname": "+7 Split Shot Targets"
   },
   "special_bonus_unique_medusa_3": {
-    "dname": "+35% Mystic Snake Mana Gain"
+    "dname": "+30% Mystic Snake Mana Gain"
   },
   "special_bonus_unique_medusa_4": {
     "dname": "Split Shot Uses Modifiers"
@@ -50740,7 +51160,7 @@
     "dname": "+10% Empower Damage/Cleave"
   },
   "special_bonus_unique_magnus_3": {
-    "dname": "+425 Skewer Range"
+    "dname": "+375 Skewer Range"
   },
   "special_bonus_unique_magnus_4": {
     "dname": "+10s Empower Duration"
@@ -50945,7 +51365,7 @@
     "dname": "+10% Slithereen Crush Attack/Move Slow"
   },
   "special_bonus_unique_lina_1": {
-    "dname": "-2.5s Dragon Slave Cooldown"
+    "dname": "-3.5s Dragon Slave Cooldown"
   },
   "special_bonus_unique_lina_2": {
     "dname": "+30/2% Fiery Soul Per Stack"
@@ -51194,7 +51614,7 @@
     "dname": "+50% Spiders Damage to Buildings"
   },
   "special_bonus_unique_broodmother_5": {
-    "dname": "-15s Spin Web Recharge Time"
+    "dname": "-10s Spin Web Recharge Time"
   },
   "special_bonus_unique_chen_1": {
     "dname": "+3 Holy Persuasion Max Units and Charges"
@@ -51281,7 +51701,7 @@
     "dname": "Tether Grants Scepter Bonus"
   },
   "special_bonus_unique_wisp_6": {
-    "dname": "-30s Relocate Cooldown"
+    "dname": "-25s Relocate Cooldown"
   },
   "special_bonus_unique_wisp_7": {
     "dname": "Spirits Apply Slow"
