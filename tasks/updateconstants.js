@@ -462,8 +462,23 @@ const sources = [
               if (abilityNum < 10) {
                 newHero["abilities"].push(DOTAHeroes[heroKey][key]);
 
-                // if ability is a skillable ability (num = 1,2,3,6)
-                if (abilityNum == 1 || abilityNum == 2 || abilityNum == 3 || abilityNum == 6) {
+                const exceptions = ["npc_dota_hero_nevermore", "npc_dota_hero_beastmaster", "npc_dota_hero_morphling", "npc_dota_hero_troll_warlord"];
+
+                // handle heroes that are exceptions
+                if (exceptions.includes(heroKey)) {
+                  if (heroKey === "npc_dota_hero_nevermore") {
+                    if (abilityNum == 1 || abilityNum == 4 || abilityNum == 5 || abilityNum == 6) {
+                      newHero["skillable_abilities"].push(DOTAHeroes[heroKey][key]);
+                    }
+                  } else {
+                    if (abilityNum == 1 || abilityNum == 2 || abilityNum == 4 || abilityNum == 6) {
+                      newHero["skillable_abilities"].push(DOTAHeroes[heroKey][key]);
+                    }
+                  }
+                }
+
+                // add skillable abilities for most heroes
+                else if (abilityNum == 1 || abilityNum == 2 || abilityNum == 3 || abilityNum == 6) {
                   newHero["skillable_abilities"].push(DOTAHeroes[heroKey][key]);
                 }
               } else {
