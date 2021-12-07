@@ -453,7 +453,7 @@ const sources = [
           heroKey != "npc_dota_hero_base" &&
           heroKey != "npc_dota_hero_target_dummy"
         ) {
-          const newHero = { abilities: [], talents: [] };
+          const newHero = { abilities: [], skillable_abilities: [], talents: [] };
           let talentCounter = 2;
           Object.keys(DOTAHeroes[heroKey]).forEach(function (key) {
             var abilityRegexMatch = key.match(/Ability([0-9]+)/);
@@ -461,6 +461,11 @@ const sources = [
               var abilityNum = parseInt(abilityRegexMatch[1]);
               if (abilityNum < 10) {
                 newHero["abilities"].push(DOTAHeroes[heroKey][key]);
+
+                // if ability is a skillable ability (num = 1,2,3,6)
+                if (abilityNum == 1 || abilityNum == 2 || abilityNum == 3 || abilityNum == 6) {
+                  newHero["skillable_abilities"].push(DOTAHeroes[heroKey][key]);
+                }
               } else {
                 // -8 not -10 because going from 0-based index -> 1 and flooring divison result
                 newHero["talents"].push({
