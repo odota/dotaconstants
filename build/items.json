@@ -47,7 +47,7 @@
   },
   "swift_blink": {
     "hint": [
-      "Active: Swift Blink Teleport to a target point up to 1200 units away.After teleportation, you gain 40% phased movement speed, +45 Attack Speed, and +45 Attack Damage for 6 seconds. Swift Blink cannot be used for 3 seconds after taking damage from an enemy hero or Roshan."
+      "Active: Swift Blink Teleport to a target point up to %blink_range% units away.After teleportation, you gain %bonus_movement%%% phased movement speed, +%bonus_attack_speed% Attack Speed, and +%bonus_attack_damage% Attack Damage for %duration% seconds. Swift Blink cannot be used for %blink_damage_cooldown% seconds after taking damage from an enemy hero or Roshan."
     ],
     "id": 603,
     "img": "/apps/dota2/images/items/swift_blink_lg.png?t=1593393829403",
@@ -55,14 +55,7 @@
     "qual": "component",
     "cost": 6800,
     "notes": "Self-casting will cause you to teleport in the direction of your team's fountain.\nIf you used Swift Blink to teleport to a distance over the maximum range, you'll be teleported 4/5 of the maximum range instead.",
-    "attrib": [
-      {
-        "key": "bonus_agility",
-        "header": "+",
-        "value": "25",
-        "footer": "Agility"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": 15,
     "lore": "A cunning blade able to anticipate and enable its bearer's movements.",
@@ -75,7 +68,7 @@
   },
   "arcane_blink": {
     "hint": [
-      "Active: Arcane Blink Teleport to a target point up to 1200 units away.After teleportation, you gain 30% Ability Cooldown Reduction and 50% Cast Point reduction for 6 seconds. Arcane Blink cannot be used for 3 seconds after taking damage from an enemy hero or Roshan."
+      "Active: Arcane Blink Teleport to a target point up to %blink_range% units away.After teleportation, you gain %base_cooldown%%% Ability Cooldown Reduction and %cast_pct_improvement%%% Cast Point reduction for %duration% seconds. Arcane Blink cannot be used for %blink_damage_cooldown% seconds after taking damage from an enemy hero or Roshan."
     ],
     "id": 604,
     "img": "/apps/dota2/images/items/arcane_blink_lg.png?t=1593393829403",
@@ -83,14 +76,7 @@
     "qual": "component",
     "cost": 6800,
     "notes": "Self-casting will cause you to teleport in the direction of your team's fountain.\nIf you used Arcane Blink to teleport to a distance over the maximum range, you'll be teleported 4/5 of the maximum range instead.",
-    "attrib": [
-      {
-        "key": "bonus_intellect",
-        "header": "+",
-        "value": "25",
-        "footer": "Intelligence"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": 15,
     "lore": "A revitalizing tool to help bear the weight of arcane expenditure.",
@@ -352,13 +338,13 @@
   "quelling_blade": {
     "hint": [
       "Active: Chop Tree Destroy a target tree. Cast Range: 350",
-      "Passive: Quell Increases attack damage against non-hero units by 12 for melee heroes, and 6 for ranged."
+      "Passive: Quell Increases attack damage against non-hero units by 8 for melee heroes, and 4 for ranged."
     ],
     "id": 11,
     "img": "/apps/dota2/images/items/quelling_blade_lg.png?t=1593393829403",
     "dname": "Quelling Blade",
     "qual": "component",
-    "cost": 130,
+    "cost": 100,
     "notes": "Effects of multiple quelling blades do not stack.",
     "attrib": [],
     "mc": false,
@@ -980,7 +966,7 @@
   },
   "gem": {
     "hint": [
-      "Passive: True Sight Grants the ability to see invisible units and wards to any allied vision within 900 range of its carrier. ",
+      "Passive: True Sight Grants the ability to see invisible units and wards to any allied vision within %radius% range of its carrier. ",
       "Passive: EverlastingDropped on death, and cannot be destroyed."
     ],
     "id": 30,
@@ -991,10 +977,27 @@
     "notes": "Disabled while on a courier.",
     "attrib": [],
     "mc": false,
-    "cd": false,
+    "cd": 12,
     "lore": "Not one thrall creature of the depths,\r\nNor spirit bound in drowning's keep,\r\nNor Maelrawn the Tentacular,\r\nShall rest till seas, gem comes to sleep.",
     "components": null,
     "created": false,
+    "charges": false
+  },
+  "eagle_eye": {
+    "id": 929,
+    "img": "/apps/dota2/images/items/eagle_eye_lg.png?t=1593393829403",
+    "qual": "component",
+    "cost": 3700,
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": 30,
+    "lore": "",
+    "components": [
+      "eagle",
+      "gem"
+    ],
+    "created": true,
     "charges": false
   },
   "cloak": {
@@ -1139,7 +1142,7 @@
       }
     ],
     "mc": false,
-    "cd": 20,
+    "cd": 22,
     "lore": "Imbues the wielder with a ghostly presence, allowing them to evade physical damage.",
     "components": null,
     "created": false,
@@ -1190,7 +1193,7 @@
   },
   "flask": {
     "hint": [
-      "Use: Salve Grants 40 health regeneration to the target for 10 seconds.If the unit is attacked by an enemy hero or Roshan, the effect is lost.Range: 250"
+      "Use: Salve Grants 30 health regeneration to the target for 13 seconds.If the unit is attacked by an enemy hero or Roshan, the effect is lost.Range: 250"
     ],
     "id": 39,
     "img": "/apps/dota2/images/items/flask_lg.png?t=1593393829403",
@@ -1208,7 +1211,7 @@
   },
   "dust": {
     "hint": [
-      "Use: RevealReveals and slows invisible heroes by -20% in a 1050 radius around the caster for 12 seconds."
+      "Use: RevealReveals and slows invisible heroes by %movespeed%%% in a %radius% radius around the caster for %duration% seconds."
     ],
     "id": 40,
     "img": "/apps/dota2/images/items/dust_lg.png?t=1593393829403",
@@ -1245,7 +1248,7 @@
   },
   "ward_observer": {
     "hint": [
-      "Use: PlantPlants an Observer Ward, an invisible watcher that gives ground vision in a 1600 radius to your team. Lasts 6 minutes.Hold Control to give one Observer Ward to an allied hero.Range: 500"
+      "Use: PlantPlants an Observer Ward, an invisible watcher that gives ground vision in a %vision_range_tooltip% radius to your team. Lasts %duration_minutes_tooltip% minutes.Hold Control to give one Observer Ward to an allied hero.Range: %abilitycastrange%"
     ],
     "id": 42,
     "img": "/apps/dota2/images/items/ward_observer_lg.png?t=1593393829403",
@@ -1253,14 +1256,7 @@
     "qual": "consumable",
     "cost": 0,
     "notes": "",
-    "attrib": [
-      {
-        "key": "lifetime",
-        "header": "LIFETIME:",
-        "value": "360",
-        "generated": true
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": 1,
     "lore": "A form of half-sentient plant, often cultivated by apprentice wizards.",
@@ -1270,7 +1266,7 @@
   },
   "ward_sentry": {
     "hint": [
-      "Use: Plant Plants a Sentry Ward, an invisible watcher that grants True Sight, the ability to see invisible enemy units and wards, to any existing allied vision within a 900 radius.Lasts 7 minutes.Does not grant ground vision.Hold Control to give one Sentry Ward to an allied hero.Range: 500"
+      "Use: Plant Plants a Sentry Ward, an invisible watcher that grants True Sight, the ability to see invisible enemy units and wards, to any existing allied vision within a %true_sight_range% radius.Lasts %duration_minutes_tooltip% minutes.Does not grant ground vision.Hold Control to give one Sentry Ward to an allied hero.Range: %abilitycastrange%"
     ],
     "id": 43,
     "img": "/apps/dota2/images/items/ward_sentry_lg.png?t=1593393829403",
@@ -1278,14 +1274,7 @@
     "qual": "consumable",
     "cost": 50,
     "notes": "",
-    "attrib": [
-      {
-        "key": "lifetime",
-        "header": "LIFETIME:",
-        "value": "420",
-        "generated": true
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": 1,
     "lore": "A form of plant originally grown in the garden of a fearful king.",
@@ -1295,7 +1284,7 @@
   },
   "ward_dispenser": {
     "hint": [
-      "Use: Plant Plant the currently active ward.  Double-Click to switch the currently active ward.Range: 500"
+      "Use: Plant Plant the currently active ward.  Double-Click to switch the currently active ward.Range: %abilitycastrange%"
     ],
     "id": 218,
     "img": "/apps/dota2/images/items/ward_dispenser_lg.png?t=1593393829403",
@@ -1303,28 +1292,7 @@
     "qual": "common",
     "cost": 50,
     "notes": "Hold Control to give one ward to an allied hero.",
-    "attrib": [
-      {
-        "key": "observer_vision_range_tooltip",
-        "header": "OBSERVER VISION RANGE:",
-        "value": "1600"
-      },
-      {
-        "key": "observer_duration_minutes_tooltip",
-        "header": "OBSERVER DURATION (MINUTES):",
-        "value": "6"
-      },
-      {
-        "key": "true_sight_range",
-        "header": "SENTRY TRUE SIGHT RANGE:",
-        "value": "900"
-      },
-      {
-        "key": "sentry_duration_minutes_tooltip",
-        "header": "SENTRY DURATION (MINUTES):",
-        "value": "8"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": false,
     "lore": "Advancements in stacking efficiency have made wards easier to carry than ever.",
@@ -1454,7 +1422,7 @@
       {
         "key": "bonus_movement_speed",
         "header": "+",
-        "value": "100",
+        "value": "90",
         "footer": "Movement Speed"
       },
       {
@@ -1483,19 +1451,7 @@
     "qual": "common",
     "cost": 4500,
     "notes": "",
-    "attrib": [
-      {
-        "key": "bonus_movement_speed",
-        "header": "+",
-        "value": "120",
-        "footer": "Movement Speed"
-      },
-      {
-        "key": "tp_cooldown",
-        "header": "TOWN PORTAL SCROLL COOLDOWN:",
-        "value": "30"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": false,
     "lore": "Winged boots that grant omnipresence.",
@@ -2127,38 +2083,7 @@
     "qual": "common",
     "cost": 505,
     "notes": "",
-    "attrib": [
-      {
-        "key": "bonus_strength",
-        "header": "+",
-        "value": "5",
-        "footer": "Strength"
-      },
-      {
-        "key": "bonus_agility",
-        "header": "+",
-        "value": "2",
-        "footer": "Agility"
-      },
-      {
-        "key": "bonus_intellect",
-        "header": "+",
-        "value": "2",
-        "footer": "Intelligence"
-      },
-      {
-        "key": "bonus_damage",
-        "header": "+",
-        "value": "3",
-        "footer": "Damage"
-      },
-      {
-        "key": "bonus_health_regen",
-        "header": "+",
-        "value": "1",
-        "footer": "HP Regeneration"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": false,
     "lore": "The bracer is a common choice to toughen up defenses and increase longevity.",
@@ -2190,38 +2115,7 @@
     "qual": "common",
     "cost": 505,
     "notes": "",
-    "attrib": [
-      {
-        "key": "bonus_agility",
-        "header": "+",
-        "value": "5",
-        "footer": "Agility"
-      },
-      {
-        "key": "bonus_strength",
-        "header": "+",
-        "value": "2",
-        "footer": "Strength"
-      },
-      {
-        "key": "bonus_intellect",
-        "header": "+",
-        "value": "2",
-        "footer": "Intelligence"
-      },
-      {
-        "key": "bonus_attack_speed",
-        "header": "+",
-        "value": "5",
-        "footer": "Attack Speed"
-      },
-      {
-        "key": "bonus_armor",
-        "header": "+",
-        "value": "2",
-        "footer": "Armor"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": false,
     "lore": "A circlet with faint whispers echoing about it.",
@@ -2253,37 +2147,7 @@
     "qual": "common",
     "cost": 505,
     "notes": "",
-    "attrib": [
-      {
-        "key": "bonus_intellect",
-        "header": "+",
-        "value": "5",
-        "footer": "Intelligence"
-      },
-      {
-        "key": "bonus_strength",
-        "header": "+",
-        "value": "2",
-        "footer": "Strength"
-      },
-      {
-        "key": "bonus_agility",
-        "header": "+",
-        "value": "2",
-        "footer": "Agility"
-      },
-      {
-        "key": "bonus_spell_amp",
-        "header": "+Spell Amplification",
-        "value": "3%"
-      },
-      {
-        "key": "bonus_mana_regen",
-        "header": "+",
-        "value": "0.6",
-        "footer": "Mana Regeneration"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": false,
     "lore": "A small gemstone attached to several chains.",
@@ -2370,6 +2234,36 @@
       "ring_of_basilius",
       "lifesteal",
       "blades_of_attack"
+    ],
+    "created": true,
+    "charges": false
+  },
+  "recipe_wraith_pact": {
+    "id": 907,
+    "img": "/apps/dota2/images/items/recipe_lg.png?t=1593393829403",
+    "cost": 400,
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": false,
+    "lore": "",
+    "components": null,
+    "created": false,
+    "charges": false
+  },
+  "wraith_pact": {
+    "id": 908,
+    "img": "/apps/dota2/images/items/wraith_pact_lg.png?t=1593393829403",
+    "qual": "rare",
+    "cost": 4200,
+    "notes": "",
+    "attrib": [],
+    "mc": 100,
+    "cd": 60,
+    "lore": "",
+    "components": [
+      "vladmir",
+      "point_booster"
     ],
     "created": true,
     "charges": false
@@ -2472,11 +2366,11 @@
   },
   "holy_locket": {
     "hint": [
-      "Active: Energy ChargeTarget an allied unit to instantly restore 15 health and mana per charge stored. Max 20 charges. Automatically gains a charge every 10 seconds and whenever a visible enemy within 1200 range uses an ability.",
+      "Active: Energy ChargeTarget an allied unit to instantly restore %restore_per_charge% health and mana per charge stored. Max %max_charges% charges. Automatically gains a charge every %charge_gain_timer% seconds and whenever a visible enemy within %charge_radius% range uses an ability.",
       "",
-      "Passive: Holy BlessingAmplifies heals you provide by 30%.",
+      "Passive: Holy BlessingAmplifies heals you provide by %heal_increase%%%.",
       "",
-      "Passive: Regeneration AuraGrants 3 health regeneration to allies.Radius: 1200"
+      "Passive: Regeneration AuraGrants %aura_health_regen% health regeneration to allies.Radius: %aura_radius%"
     ],
     "id": 269,
     "img": "/apps/dota2/images/items/holy_locket_lg.png?t=1593393829403",
@@ -2484,26 +2378,7 @@
     "qual": "rare",
     "cost": 2400,
     "notes": "",
-    "attrib": [
-      {
-        "key": "bonus_health",
-        "header": "+",
-        "value": "250",
-        "footer": "Health"
-      },
-      {
-        "key": "bonus_mana",
-        "header": "+",
-        "value": "325",
-        "footer": "Mana"
-      },
-      {
-        "key": "bonus_all_stats",
-        "header": "+",
-        "value": "3",
-        "footer": "All Attributes"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": 13,
     "lore": "A prized relic long thought lost forever in a failed crusade.",
@@ -2533,7 +2408,7 @@
   "pipe": {
     "hint": [
       "Active: BarrierGives a shield that blocks 400 magic damage to all nearby allies. Lasts 12 seconds.Radius: 1200",
-      "Passive: Insight Aura Gives allied units 2.5 health regeneration and 10% magic resistance.Radius: 1200"
+      "Passive: Insight Aura Gives allied units 2.5 health regeneration and 12% magic resistance.Radius: 1200"
     ],
     "id": 90,
     "img": "/apps/dota2/images/items/pipe_lg.png?t=1593393829403",
@@ -2708,62 +2583,24 @@
     "created": true,
     "charges": false
   },
-  "recipe_orchid": {
-    "id": 97,
-    "img": "/apps/dota2/images/items/recipe_lg.png?t=1593393829403",
-    "dname": "Orchid Malevolence Recipe",
-    "cost": 475,
-    "notes": "",
-    "attrib": [],
-    "mc": false,
-    "cd": false,
-    "lore": "",
-    "components": null,
-    "created": false,
-    "charges": false
-  },
   "orchid": {
     "hint": [
-      "Active: Soul BurnSilences the target unit for 5 seconds. At the end of the silence, 30% of the damage received while silenced is inflicted as bonus magical damage.Range: 900"
+      "Active: Soul BurnSilences the target unit for %silence_duration% seconds. At the end of the silence, %silence_damage_percent%%% of the damage received while silenced is inflicted as bonus magical damage.Range: %abilitycastrange%"
     ],
     "id": 98,
     "img": "/apps/dota2/images/items/orchid_lg.png?t=1593393829403",
     "dname": "Orchid Malevolence",
     "qual": "rare",
-    "cost": 3475,
+    "cost": 3175,
     "notes": "",
-    "attrib": [
-      {
-        "key": "bonus_intellect",
-        "header": "+",
-        "value": "20",
-        "footer": "Intelligence"
-      },
-      {
-        "key": "bonus_attack_speed",
-        "header": "+",
-        "value": "25",
-        "footer": "Attack Speed"
-      },
-      {
-        "key": "bonus_damage",
-        "header": "+",
-        "value": "30",
-        "footer": "Damage"
-      },
-      {
-        "key": "bonus_mana_regen",
-        "header": "+",
-        "value": "4",
-        "footer": "Mana Regeneration"
-      }
-    ],
+    "attrib": [],
     "mc": 100,
     "cd": 18,
     "lore": "A garnet rod constructed from the essence of a fire demon.",
     "components": [
-      "oblivion_staff",
-      "oblivion_staff"
+      "blitz_knuckles",
+      "claymore",
+      "void_stone"
     ],
     "created": true,
     "charges": false
@@ -2772,7 +2609,7 @@
     "id": 245,
     "img": "/apps/dota2/images/items/recipe_lg.png?t=1593393829403",
     "dname": "Bloodthorn Recipe",
-    "cost": 800,
+    "cost": 925,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -2784,46 +2621,21 @@
   },
   "bloodthorn": {
     "hint": [
-      "Active: Soul Rend Silences a target for 5 seconds. At the end of the silence, an additional 30% of all damage taken during the silence will be dealt to the target as magical damage.All attacks on the silenced target will have True Strike and 100% chance to crit for 130% damage.Range: 900"
+      "Active: Soul Rend Silences a target for %silence_duration% seconds. At the end of the silence, an additional %silence_damage_percent%%% of all damage taken during the silence will be dealt to the target as magical damage.All attacks on the silenced target will have True Strike and %tooltip_crit_chance%%% chance to crit for %target_crit_multiplier%%% damage.Range: %abilitycastrange%"
     ],
     "id": 250,
     "img": "/apps/dota2/images/items/bloodthorn_lg.png?t=1593393829403",
     "dname": "Bloodthorn",
     "qual": "epic",
-    "cost": 6275,
+    "cost": 6500,
     "notes": "Critical Strike does not work against buildings.",
-    "attrib": [
-      {
-        "key": "bonus_intellect",
-        "header": "+",
-        "value": "25",
-        "footer": "Intelligence"
-      },
-      {
-        "key": "bonus_attack_speed",
-        "header": "+",
-        "value": "90",
-        "footer": "Attack Speed"
-      },
-      {
-        "key": "bonus_damage",
-        "header": "+",
-        "value": "30",
-        "footer": "Damage"
-      },
-      {
-        "key": "bonus_mana_regen",
-        "header": "+",
-        "value": "5.5",
-        "footer": "Mana Regeneration"
-      }
-    ],
+    "attrib": [],
     "mc": 100,
     "cd": 15,
     "lore": "A reviled blade that bites deeper with each wriggle of its victim's final throes.",
     "components": [
       "orchid",
-      "hyperstone"
+      "mage_slayer"
     ],
     "created": true,
     "charges": false
@@ -3053,7 +2865,7 @@
   },
   "force_staff": {
     "hint": [
-      "Active: ForcePushes any target unit 600 units in the direction it is facing.Range: 550"
+      "Active: ForcePushes any target unit %push_length% units in the direction it is facing.Range: %abilitycastrange%"
     ],
     "id": 102,
     "img": "/apps/dota2/images/items/force_staff_lg.png?t=1593393829403",
@@ -3061,22 +2873,9 @@
     "qual": "rare",
     "cost": 2200,
     "notes": "Self-cast will cause you to use Force on yourself.\nForce Staff doesn't interrupt the target's actions.\nWill not work on a unit inside Chronosphere, Duel, or Black Hole.",
-    "attrib": [
-      {
-        "key": "bonus_intellect",
-        "header": "+",
-        "value": "10",
-        "footer": "Intelligence"
-      },
-      {
-        "key": "bonus_health",
-        "header": "+",
-        "value": "150",
-        "footer": "Health"
-      }
-    ],
+    "attrib": [],
     "mc": 100,
-    "cd": 23,
+    "cd": 20,
     "lore": "Allows you to manipulate others, for good or evil.",
     "components": [
       "staff_of_wizardry",
@@ -3101,8 +2900,8 @@
   },
   "hurricane_pike": {
     "hint": [
-      "Active: Hurricane Thrust Pushes you and target enemy 450 units away from each other, and for 6 seconds, allows you to make 5 attacks against the target without range restrictions and with +100 attack speed.Works like Force Staff when used on self or allies.Allied Range: 550Enemy Range: 400",
-      "Passive:  Dragon's Reach Increases attack range of ranged heroes by 140."
+      "Active: Hurricane Thrust Pushes you and target enemy %enemy_length% units away from each other, and for %range_duration% seconds, allows you to make %max_attacks% attacks against the target without range restrictions and with +%bonus_attack_speed% attack speed.Works like Force Staff when used on self or allies.Allied Range: %abilitycastrange%Enemy Range: %cast_range_enemy%",
+      "Passive:  Dragon's Reach Increases attack range of ranged heroes by %base_attack_range%."
     ],
     "id": 263,
     "img": "/apps/dota2/images/items/hurricane_pike_lg.png?t=1593393829403",
@@ -3110,34 +2909,9 @@
     "qual": "epic",
     "cost": 4450,
     "notes": "Self-cast will use Hurricane Pike on yourself.\nHurricane Pike doesn't interrupt the target's actions.\nWill not work on a unit inside Chronosphere, Duel, or Black Hole.",
-    "attrib": [
-      {
-        "key": "bonus_intellect",
-        "header": "+",
-        "value": "15",
-        "footer": "Intelligence"
-      },
-      {
-        "key": "bonus_health",
-        "header": "+",
-        "value": "200",
-        "footer": "Health"
-      },
-      {
-        "key": "bonus_agility",
-        "header": "+",
-        "value": "20",
-        "footer": "Agility"
-      },
-      {
-        "key": "bonus_strength",
-        "header": "+",
-        "value": "15",
-        "footer": "Strength"
-      }
-    ],
+    "attrib": [],
     "mc": 100,
-    "cd": 23,
+    "cd": 20,
     "lore": "A legendary pike once held as royal sigil of the ancient wyvern riders.",
     "components": [
       "force_staff",
@@ -3755,12 +3529,12 @@
       {
         "key": "bonus_mana_regen",
         "header": "+",
-        "value": "12",
+        "value": "7",
         "footer": "Mana Regeneration"
       }
     ],
     "mc": 300,
-    "cd": 160,
+    "cd": 170,
     "lore": "A powerful artifact created for wizards.",
     "components": [
       "pers",
@@ -3983,72 +3757,41 @@
     "created": true,
     "charges": false
   },
+  "recipe_bloodstone": {
+    "id": 120,
+    "img": "/apps/dota2/images/items/recipe_lg.png?t=1593393829403",
+    "dname": "Bloodstone Recipe",
+    "cost": 900,
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": false,
+    "lore": "",
+    "components": null,
+    "created": false,
+    "charges": false
+  },
   "bloodstone": {
     "hint": [
-      "Active: Bloodpact Converts 30% of your max mana to health regeneration over 2 seconds.",
-      "Passive: Mana BatteryEach charge provides 0.2 MP regen and 0.35% Spell Amp. Nearby kills provide 1 charges. Dying causes you to lose 3 charges. Starts with 14 charges."
+      "Active: Bloodpact Converts %mana_cost_percentage%%% of your max mana to health regeneration over %restore_duration% seconds.",
+      "Passive: Mana BatteryEach charge provides %regen_per_charge% MP regen and %amp_per_charge%%% Spell Amp. Nearby kills provide %kill_charges% charges. Dying causes you to lose %death_charges% charges. Starts with %initial_charges_tooltip% charges."
     ],
     "id": 121,
     "img": "/apps/dota2/images/items/bloodstone_lg.png?t=1593393829403",
     "dname": "Bloodstone",
     "qual": "epic",
-    "cost": 5750,
+    "cost": 4600,
     "notes": "",
-    "attrib": [
-      {
-        "key": "bonus_health",
-        "header": "+",
-        "value": "425",
-        "footer": "Health"
-      },
-      {
-        "key": "bonus_mana",
-        "header": "+",
-        "value": "425",
-        "footer": "Mana"
-      },
-      {
-        "key": "bonus_intellect",
-        "header": "+",
-        "value": "16",
-        "footer": "Intelligence"
-      },
-      {
-        "key": "mana_regen_multiplier",
-        "header": "+Mana Regen Amplification",
-        "value": "100%"
-      },
-      {
-        "key": "spell_amp",
-        "header": "+Spell Amplification",
-        "value": "8%"
-      },
-      {
-        "key": "hero_lifesteal",
-        "header": "+Spell Lifesteal (Hero)",
-        "value": "15%"
-      },
-      {
-        "key": "creep_lifesteal",
-        "header": "+Spell Lifesteal (Creep)",
-        "value": "3%"
-      },
-      {
-        "key": "spell_lifesteal_amp",
-        "header": "+Spell Lifesteal Amplification",
-        "value": "30%"
-      }
-    ],
+    "attrib": [],
     "mc": false,
-    "cd": 85,
+    "cd": 40,
     "lore": "The Bloodstone's bright ruby color is unmistakable on the battlefield, as the owner seems to have infinite vitality and spirit.",
     "components": [
       "voodoo_mask",
-      "kaya",
       "soul_booster"
     ],
     "created": true,
-    "charges": 14
+    "charges": false
   },
   "recipe_sphere": {
     "id": 122,
@@ -4168,7 +3911,7 @@
   },
   "meteor_hammer": {
     "hint": [
-      "Active: Meteor Hammer CHANNELED - After a successful channel, summons a meteor that strikes a 315 AoE, stunning enemies for 1.5 seconds and dealing impact damage. Continues to deal damage over time to enemies units and buildings for 6 seconds.Building Impact Damage: 75 Building Over Time Damage: 60 Non-Building Impact Damage: 150 Non-Building Over Time Damage: 90 Channel Duration: 2.5 seconds.Landing Time: 0.5 seconds."
+      "Active: Meteor Hammer CHANNELED - After a successful channel, summons a meteor that strikes a %impact_radius% AoE, stunning enemies for %stun_duration% seconds and dealing impact damage. Continues to deal damage over time to enemies units and buildings for %burn_duration% seconds.Building Impact Damage: %impact_damage_buildings% Building Over Time Damage: %burn_dps_buildings% Non-Building Impact Damage: %impact_damage_units% Non-Building Over Time Damage: %burn_dps_units% Channel Duration: %max_duration% seconds.Landing Time: %land_time% seconds."
     ],
     "id": 223,
     "img": "/apps/dota2/images/items/meteor_hammer_lg.png?t=1593393829403",
@@ -4176,27 +3919,8 @@
     "qual": "epic",
     "cost": 2350,
     "notes": "",
-    "attrib": [
-      {
-        "key": "bonus_all_stats",
-        "header": "+",
-        "value": "8",
-        "footer": "All Attributes"
-      },
-      {
-        "key": "bonus_health_regen",
-        "header": "+",
-        "value": "6.5",
-        "footer": "HP Regeneration"
-      },
-      {
-        "key": "bonus_mana_regen",
-        "header": "+",
-        "value": "2.5",
-        "footer": "Mana Regeneration"
-      }
-    ],
-    "mc": 125,
+    "attrib": [],
+    "mc": 100,
     "cd": 24,
     "lore": "",
     "components": [
@@ -4236,7 +3960,7 @@
         "footer": "HP Regeneration"
       }
     ],
-    "mc": 75,
+    "mc": false,
     "cd": 11,
     "lore": "",
     "components": [
@@ -4325,29 +4049,7 @@
     "qual": "epic",
     "cost": 2050,
     "notes": "",
-    "attrib": [
-      {
-        "key": "bonus_intellect",
-        "header": "+",
-        "value": "16",
-        "footer": "Intelligence"
-      },
-      {
-        "key": "spell_amp",
-        "header": "+Spell Amplification",
-        "value": "8%"
-      },
-      {
-        "key": "mana_regen_multiplier",
-        "header": "+Mana Regen Amplification",
-        "value": "50%"
-      },
-      {
-        "key": "spell_lifesteal_amp",
-        "header": "+Spell Lifesteal Amplification",
-        "value": "24%"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": false,
     "lore": "",
@@ -4577,8 +4279,8 @@
   },
   "crimson_guard": {
     "hint": [
-      "Active: Guard For 12 seconds, grant nearby allied heroes and buildings a 100% chance to block 70 damage from each incoming attack.Units may only be affected by Guard once every 40 seconds.Radius: 1200",
-      "Passive: Damage Block Grants a 60% chance to block 70 damage from incoming attacks on melee heroes, and 35 damage on ranged."
+      "Active: Guard For %duration% seconds, grant nearby allied heroes and buildings a %block_chance_active%%% chance to block %block_damage_melee_active% damage from each incoming attack.Units may only be affected by Guard once every %tooltip_reapply_time% seconds.Radius: %bonus_aoe_radius%",
+      "Passive: Damage Block Grants a %block_chance%%% chance to block %block_damage_melee% damage from incoming attacks on melee heroes, and %block_damage_ranged% damage on ranged."
     ],
     "id": 242,
     "img": "/apps/dota2/images/items/crimson_guard_lg.png?t=1593393829403",
@@ -4586,28 +4288,9 @@
     "qual": "epic",
     "cost": 3600,
     "notes": "Multiple sources of damage block do not stack.",
-    "attrib": [
-      {
-        "key": "bonus_health",
-        "header": "+",
-        "value": "250",
-        "footer": "Health"
-      },
-      {
-        "key": "bonus_health_regen",
-        "header": "+",
-        "value": "12",
-        "footer": "HP Regeneration"
-      },
-      {
-        "key": "bonus_armor",
-        "header": "+",
-        "value": "6",
-        "footer": "Armor"
-      }
-    ],
+    "attrib": [],
     "mc": false,
-    "cd": 40,
+    "cd": 35,
     "lore": "A cuirass originally built to protect against the dreaded Year Beast.",
     "components": [
       "vanguard",
@@ -4620,7 +4303,7 @@
     "id": 126,
     "img": "/apps/dota2/images/items/recipe_lg.png?t=1593393829403",
     "dname": "Blade Mail Recipe",
-    "cost": 575,
+    "cost": 550,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -4639,7 +4322,7 @@
     "img": "/apps/dota2/images/items/blade_mail_lg.png?t=1593393829403",
     "dname": "Blade Mail",
     "qual": "epic",
-    "cost": 2125,
+    "cost": 2100,
     "notes": "Damage Return is calculated before any kind of reduction.\nDamage Return doesn't reflect damage from other forms of Blade Mail.\nReturned damage type is the same as it was received.",
     "attrib": [
       {
@@ -4712,7 +4395,7 @@
   },
   "hood_of_defiance": {
     "hint": [
-      "Active: Barrier Creates a spell shield that absorbs up to 325 magical damage.  Lasts 12 seconds."
+      "Active: Barrier Creates a spell shield that absorbs up to %barrier_block% magical damage.  Lasts %barrier_duration% seconds."
     ],
     "id": 131,
     "img": "/apps/dota2/images/items/hood_of_defiance_lg.png?t=1593393829403",
@@ -4720,21 +4403,8 @@
     "qual": "epic",
     "cost": 1500,
     "notes": "Stacks multiplicatively with other sources of spell resistance.",
-    "attrib": [
-      {
-        "key": "bonus_health_regen",
-        "header": "+",
-        "value": "8.5",
-        "footer": "HP Regeneration"
-      },
-      {
-        "key": "tooltip_resist",
-        "header": "+",
-        "value": "20%",
-        "footer": "Magic Resistance"
-      }
-    ],
-    "mc": 75,
+    "attrib": [],
+    "mc": 50,
     "cd": 60,
     "lore": "A furred, magic resistant headpiece that is feared by wizards.",
     "components": [
@@ -4898,7 +4568,7 @@
   },
   "radiance": {
     "hint": [
-      "Toggle: Burn When active, scorches enemies for 60 magical damage per second, and causes them to miss 17% of their attacks. Illusions deal 35 magical damage per second.Radius: 700"
+      "Toggle: Burn When active, scorches enemies for %aura_damage% magical damage per second, and causes them to miss %blind_pct%%% of their attacks. Illusions deal %aura_damage_illusions% magical damage per second.Radius: %aura_radius%"
     ],
     "id": 137,
     "img": "/apps/dota2/images/items/radiance_lg.png?t=1593393829403",
@@ -4906,14 +4576,7 @@
     "qual": "epic",
     "cost": 5100,
     "notes": "",
-    "attrib": [
-      {
-        "key": "bonus_damage",
-        "header": "+",
-        "value": "60",
-        "footer": "Damage"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": false,
     "lore": "A divine weapon that causes damage and a bright burning effect that lays waste to nearby enemies.",
@@ -5067,7 +4730,7 @@
     "img": "/apps/dota2/images/items/bfury_lg.png?t=1593393829403",
     "dname": "Battle Fury",
     "qual": "epic",
-    "cost": 4130,
+    "cost": 4100,
     "notes": "Cleave damage goes through spell immunity.\nIf multiple sources of Cleave are present, each Cleave's damage is applied separately.",
     "attrib": [
       {
@@ -5260,7 +4923,7 @@
   },
   "armlet": {
     "hint": [
-      "Toggle: Unholy StrengthWhen active, Unholy Strength grants +35 damage, +25 strength and +4 armor, but drains 40 health per second. You cannot die from the health drain when Unholy Strength is activated, nor from the strength loss when Unholy Strength is deactivated."
+      "Toggle: Unholy StrengthWhen active, Unholy Strength grants +%unholy_bonus_damage% damage, +%unholy_bonus_strength% strength and +%unholy_bonus_armor% armor, but drains %unholy_health_drain_per_second% health per second. You cannot die from the health drain when Unholy Strength is activated, nor from the strength loss when Unholy Strength is deactivated."
     ],
     "id": 151,
     "img": "/apps/dota2/images/items/armlet_lg.png?t=1593393829403",
@@ -5268,32 +4931,7 @@
     "qual": "epic",
     "cost": 2500,
     "notes": "The strength change will affect both maximum and current HP, but you cannot die from the change.\nThe strength change occurs over 0.6 seconds.\nActivating or deactivating Unholy Strength does not interrupt channeling.",
-    "attrib": [
-      {
-        "key": "bonus_damage",
-        "header": "+",
-        "value": "15",
-        "footer": "Damage"
-      },
-      {
-        "key": "bonus_attack_speed",
-        "header": "+",
-        "value": "25",
-        "footer": "Attack Speed"
-      },
-      {
-        "key": "bonus_armor",
-        "header": "+",
-        "value": "6",
-        "footer": "Armor"
-      },
-      {
-        "key": "bonus_health_regen",
-        "header": "+",
-        "value": "5",
-        "footer": "HP Regeneration"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": false,
     "lore": "Weapon of choice among brutes, the bearer sacrifices his life energy to gain immense strength and power.",
@@ -5412,7 +5050,7 @@
       {
         "key": "status_resistance",
         "header": "+Status Resistance",
-        "value": "22%"
+        "value": "20%"
       },
       {
         "key": "bonus_attack_speed",
@@ -5449,45 +5087,7 @@
     "qual": "artifact",
     "cost": 4100,
     "notes": "",
-    "attrib": [
-      {
-        "key": "bonus_strength",
-        "header": "+",
-        "value": "16",
-        "footer": "Strength"
-      },
-      {
-        "key": "bonus_intellect",
-        "header": "+",
-        "value": "16",
-        "footer": "Intelligence"
-      },
-      {
-        "key": "status_resistance",
-        "header": "+Status Resistance",
-        "value": "22%"
-      },
-      {
-        "key": "mana_regen_multiplier",
-        "header": "+Mana Regen Amplification",
-        "value": "50%"
-      },
-      {
-        "key": "spell_amp",
-        "header": "+Spell Amplification",
-        "value": "16%"
-      },
-      {
-        "key": "hp_regen_amp",
-        "header": "+Self HP Regen and Lifesteal Amp",
-        "value": "22%"
-      },
-      {
-        "key": "spell_lifesteal_amp",
-        "header": "+Spell Lifesteal Amplification",
-        "value": "30%"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": false,
     "lore": "Two of three known items of unimaginable power that many believe were crafted at the same enchanter's forge.",
@@ -5505,47 +5105,7 @@
     "qual": "artifact",
     "cost": 4100,
     "notes": "",
-    "attrib": [
-      {
-        "key": "bonus_agility",
-        "header": "+",
-        "value": "16",
-        "footer": "Agility"
-      },
-      {
-        "key": "bonus_intellect",
-        "header": "+",
-        "value": "16",
-        "footer": "Intelligence"
-      },
-      {
-        "key": "bonus_attack_speed",
-        "header": "+",
-        "value": "12",
-        "footer": "Attack Speed"
-      },
-      {
-        "key": "mana_regen_multiplier",
-        "header": "+Mana Regen Amplification",
-        "value": "50%"
-      },
-      {
-        "key": "movement_speed_percent_bonus",
-        "header": "+",
-        "value": "10%",
-        "footer": "Movement Speed"
-      },
-      {
-        "key": "spell_amp",
-        "header": "+Spell Amplification",
-        "value": "16%"
-      },
-      {
-        "key": "spell_lifesteal_amp",
-        "header": "+Spell Lifesteal Amplification",
-        "value": "30%"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": false,
     "lore": "Yasha and Kaya when paired together share a natural resonance.",
@@ -5582,7 +5142,7 @@
       }
     ],
     "mc": false,
-    "cd": 25,
+    "cd": 30,
     "lore": "Immense power at the cost of your soul.",
     "components": [
       "lifesteal",
@@ -5643,7 +5203,7 @@
   },
   "skadi": {
     "hint": [
-      "Passive: Cold Attack Attacks lower enemy movement and attack speed and reduces heals, health regeneration, lifesteal and spell lifesteal by 40% for 3 seconds. Slows enemy ranged units by -50% movement speed and by -50 attack speed. Slows enemy melee units by -25% movement speed and by -25 attack speed. "
+      "Passive: Cold Attack Attacks lower enemy movement and attack speed and reduces heals, health regeneration, lifesteal and spell lifesteal by %heal_reduction%%% for %cold_duration% seconds. Slows enemy ranged units by %cold_slow_ranged%%% movement speed and by %cold_slow_ranged% attack speed. Slows enemy melee units by %cold_slow_melee%%% movement speed and by %cold_slow_melee% attack speed. "
     ],
     "id": 160,
     "img": "/apps/dota2/images/items/skadi_lg.png?t=1593393829403",
@@ -5651,26 +5211,7 @@
     "qual": "artifact",
     "cost": 5300,
     "notes": "",
-    "attrib": [
-      {
-        "key": "bonus_all_stats",
-        "header": "+",
-        "value": "25",
-        "footer": "All Attributes"
-      },
-      {
-        "key": "bonus_health",
-        "header": "+",
-        "value": "200",
-        "footer": "Health"
-      },
-      {
-        "key": "bonus_mana",
-        "header": "+",
-        "value": "200",
-        "footer": "Mana"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": false,
     "lore": "Extremely rare artifact, guarded by the azure dragons.",
@@ -5932,7 +5473,7 @@
   },
   "desolator": {
     "hint": [
-      "Passive: Corruption Your attacks reduce the target's armor by -6 for 7 seconds."
+      "Passive: Corruption Your attacks reduce the target's armor by %corruption_armor% for %corruption_duration% seconds."
     ],
     "id": 168,
     "img": "/apps/dota2/images/items/desolator_lg.png?t=1593393829403",
@@ -5940,14 +5481,7 @@
     "qual": "artifact",
     "cost": 3500,
     "notes": "Armor reduction works on buildings.",
-    "attrib": [
-      {
-        "key": "bonus_damage",
-        "header": "+",
-        "value": "55",
-        "footer": "Damage"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": false,
     "lore": "A wicked weapon, used in torturing political criminals.",
@@ -6049,7 +5583,7 @@
     "id": 173,
     "img": "/apps/dota2/images/items/recipe_lg.png?t=1593393829403",
     "dname": "Diffusal Blade Recipe",
-    "cost": 700,
+    "cost": 1050,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -6061,75 +5595,165 @@
   },
   "diffusal_blade": {
     "hint": [
-      "Active: Inhibit Targets an enemy, slowing it for 4 seconds.Range: 600",
-      "Passive: ManabreakEach attack burns 40 mana from the target, and deals 1 physical damage per burned mana. Burns 12 mana per attack from melee illusions and 8 mana per attack from ranged illusions."
+      "Active: Inhibit Targets an enemy, slowing it for %purge_slow_duration% seconds.Range: %abilitycastrange%",
+      "Passive: ManabreakEach attack burns %feedback_mana_burn% mana from the target, and deals %damage_per_burn% physical damage per burned mana. Burns %feedback_mana_burn_illusion_melee% mana per attack from melee illusions and %feedback_mana_burn_illusion_ranged% mana per attack from ranged illusions."
     ],
     "id": 174,
     "img": "/apps/dota2/images/items/diffusal_blade_lg.png?t=1593393829403",
     "dname": "Diffusal Blade",
     "qual": "artifact",
-    "cost": 3150,
+    "cost": 2500,
     "notes": "Does not stack with other manabreak abilities.",
-    "attrib": [
-      {
-        "key": "bonus_agility",
-        "header": "+",
-        "value": "24",
-        "footer": "Agility"
-      },
-      {
-        "key": "bonus_intellect",
-        "header": "+",
-        "value": "12",
-        "footer": "Intelligence"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": 15,
     "lore": "An enchanted blade that allows the user to cut straight into the enemy's soul.",
     "components": [
-      "blade_of_alacrity",
       "blade_of_alacrity",
       "robe"
     ],
     "created": true,
     "charges": false
   },
+  "recipe_diffusal_blade_2": {
+    "id": 965,
+    "img": "/apps/dota2/images/items/recipe_lg.png?t=1593393829403",
+    "cost": 200,
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": false,
+    "lore": "",
+    "components": null,
+    "created": false,
+    "charges": false
+  },
+  "diffusal_blade_2": {
+    "id": 196,
+    "img": "/apps/dota2/images/items/diffusal_blade_2_lg.png?3",
+    "dname": "Diffusal Blade",
+    "qual": "artifact",
+    "cost": 3850,
+    "desc": "Active: Purge Targets an enemy, removing buffs from the target and slowing it for 4 seconds.Range: 600\nPassive: ManabreakEach attack burns 50 mana from the target, and deals 0.8 physical damage per burned mana. Burns 16 mana per attack from melee illusions and 8 mana per attack from ranged illusions. Dispel Type: Basic Dispel",
+    "notes": "Does not stack with other manabreak abilities.",
+    "attrib": [
+      {
+        "key": "bonus_agility",
+        "header": "",
+        "value": [
+          "25",
+          "35"
+        ],
+        "footer": "Agility"
+      },
+      {
+        "key": "bonus_intellect",
+        "header": "",
+        "value": [
+          "10",
+          "15"
+        ],
+        "footer": "Intelligence"
+      },
+      {
+        "key": "initial_charges",
+        "header": "INITIAL CHARGES:",
+        "value": "8",
+        "generated": true
+      },
+      {
+        "key": "feedback_mana_burn",
+        "header": "FEEDBACK MANA BURN:",
+        "value": "50",
+        "generated": true
+      },
+      {
+        "key": "feedback_mana_burn_illusion_melee",
+        "header": "FEEDBACK MANA BURN ILLUSION MELEE:",
+        "value": "16",
+        "generated": true
+      },
+      {
+        "key": "feedback_mana_burn_illusion_ranged",
+        "header": "FEEDBACK MANA BURN ILLUSION RANGED:",
+        "value": "8",
+        "generated": true
+      },
+      {
+        "key": "purge_summoned_damage",
+        "header": "PURGE SUMMONED DAMAGE:",
+        "value": "99999",
+        "generated": true
+      },
+      {
+        "key": "purge_rate",
+        "header": "PURGE RATE:",
+        "value": "5",
+        "generated": true
+      },
+      {
+        "key": "purge_root_duration",
+        "header": "PURGE ROOT DURATION:",
+        "value": "3",
+        "generated": true
+      },
+      {
+        "key": "purge_slow_duration",
+        "header": "PURGE SLOW DURATION:",
+        "value": "4",
+        "generated": true
+      },
+      {
+        "key": "damage_per_burn",
+        "header": "DAMAGE PER BURN:",
+        "value": "0.8",
+        "generated": true
+      },
+      {
+        "key": "cast_range_tooltip",
+        "header": "CAST RANGE TOOLTIP:",
+        "value": "600",
+        "generated": true
+      }
+    ],
+    "mc": false,
+    "cd": 4,
+    "lore": "An enchanted blade that allows the user to cut straight into the enemy's soul.",
+    "components": [
+      "diffusal_blade",
+      "recipe_diffusal_blade"
+    ],
+    "created": true
+  },
+  "recipe_ethereal_blade": {
+    "id": 175,
+    "img": "/apps/dota2/images/items/recipe_lg.png?t=1593393829403",
+    "cost": 1100,
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": false,
+    "lore": "",
+    "components": null,
+    "created": false,
+    "charges": false
+  },
   "ethereal_blade": {
     "hint": [
-      "Active: Ether BlastConverts the target unit to ethereal form, rendering them immune to physical damage, but unable to attack and -40% more vulnerable to magic damage.  Lasts for 4 seconds on allies and 4 seconds on enemies.  Enemy targets are also slowed by -80%, and take 1.5x your primary attribute + 125 as magical damage.Range: 800"
+      "Active: Ether BlastConverts the target unit to ethereal form, rendering them immune to physical damage, but unable to attack and %ethereal_damage_bonus%%% more vulnerable to magic damage.  Lasts for %duration_ally% seconds on allies and %duration% seconds on enemies.  Enemy targets are also slowed by %blast_movement_slow%%%, and take %blast_agility_multiplier%x your primary attribute + %blast_damage_base% as magical damage.Range: %abilitycastrange%"
     ],
     "id": 176,
     "img": "/apps/dota2/images/items/ethereal_blade_lg.png?t=1593393829403",
     "dname": "Ethereal Blade",
     "qual": "epic",
-    "cost": 4300,
+    "cost": 4650,
     "notes": "Shares cooldown with Ghost Scepter.\nEthereal units take 40% bonus magic damage.\nLasts an extra second on Self or Allied cast.\nUsing a Town Portal Scroll or Boots of Travel will not dispel Ethereal Form.",
-    "attrib": [
-      {
-        "key": "bonus_agility",
-        "header": "+",
-        "value": "40",
-        "footer": "Agility"
-      },
-      {
-        "key": "bonus_strength",
-        "header": "+",
-        "value": "10",
-        "footer": "Strength"
-      },
-      {
-        "key": "bonus_intellect",
-        "header": "+",
-        "value": "10",
-        "footer": "Intelligence"
-      }
-    ],
+    "attrib": [],
     "mc": 100,
-    "cd": 20,
+    "cd": 22,
     "lore": "A flickering blade of a ghastly nature, it is capable of dealing damage in both magical and physical planes.",
     "components": [
-      "eagle",
+      "kaya",
       "ghost"
     ],
     "created": true,
@@ -6139,7 +5763,7 @@
     "id": 177,
     "img": "/apps/dota2/images/items/recipe_lg.png?t=1593393829403",
     "dname": "Soul Ring Recipe",
-    "cost": 225,
+    "cost": 245,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -6151,28 +5775,15 @@
   },
   "soul_ring": {
     "hint": [
-      "Active: Sacrifice Consume 170 health to temporarily gain 150 mana.  Lasts 10 seconds.If the mana gained cannot fit in your mana pool, it creates a buffer of mana that will be used before your mana pool."
+      "Active: Sacrifice Consume %health_sacrifice% health to temporarily gain %mana_gain% mana.  Lasts %duration% seconds.If the mana gained cannot fit in your mana pool, it creates a buffer of mana that will be used before your mana pool."
     ],
     "id": 178,
     "img": "/apps/dota2/images/items/soul_ring_lg.png?t=1593393829403",
     "dname": "Soul Ring",
     "qual": "common",
-    "cost": 680,
+    "cost": 700,
     "notes": "If this mana is not used before the duration ends, the extra mana is lost.",
-    "attrib": [
-      {
-        "key": "bonus_strength",
-        "header": "+",
-        "value": "6",
-        "footer": "Strength"
-      },
-      {
-        "key": "bonus_armor",
-        "header": "+",
-        "value": "2",
-        "footer": "Armor"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": 25,
     "lore": "A ring that feeds on the souls of those who wear it.",
@@ -6344,6 +5955,53 @@
     "created": true,
     "charges": false
   },
+  "voidwalker_scythe": {
+    "id": 904,
+    "img": "/apps/dota2/images/items/voidwalker_scythe_lg.png?t=1593393829403",
+    "qual": "rare",
+    "cost": 3900,
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": false,
+    "lore": "",
+    "components": [
+      "eagle",
+      "javelin"
+    ],
+    "created": true,
+    "charges": false
+  },
+  "recipe_tenderizer": {
+    "id": 833,
+    "img": "/apps/dota2/images/items/recipe_lg.png?t=1593393829403",
+    "cost": 425,
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": false,
+    "lore": "",
+    "components": null,
+    "created": false,
+    "charges": false
+  },
+  "tenderizer": {
+    "id": 906,
+    "img": "/apps/dota2/images/items/tenderizer_lg.png?t=1593393829403",
+    "qual": "rare",
+    "cost": 6100,
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": 2,
+    "lore": "",
+    "components": [
+      "basher",
+      "eagle"
+    ],
+    "created": true,
+    "charges": false
+  },
   "recipe_falcon_blade": {
     "id": 599,
     "img": "/apps/dota2/images/items/recipe_lg.png?t=1593393829403",
@@ -6365,26 +6023,7 @@
     "qual": "rare",
     "cost": 1125,
     "notes": "",
-    "attrib": [
-      {
-        "key": "bonus_health",
-        "header": "+",
-        "value": "200",
-        "footer": "Health"
-      },
-      {
-        "key": "bonus_mana_regen",
-        "header": "+",
-        "value": "1.8",
-        "footer": "Mana Regeneration"
-      },
-      {
-        "key": "bonus_damage",
-        "header": "+",
-        "value": "12",
-        "footer": "Damage"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": false,
     "lore": "An enchanted blade that long ago raised a hopeless urchin from pauper to king.",
@@ -6412,7 +6051,7 @@
   },
   "mage_slayer": {
     "hint": [
-      "Passive: Mage SlayerPlaces a debuff when you attack enemies, causing them to do 35% less spell damage for 6 seconds."
+      "Passive: Mage SlayerPlaces a debuff when you attack enemies, causing them to do %spell_amp_debuff%%% less spell damage for %duration% seconds."
     ],
     "id": 598,
     "img": "/apps/dota2/images/items/mage_slayer_lg.png?t=1593393829403",
@@ -6420,38 +6059,7 @@
     "qual": "rare",
     "cost": 2400,
     "notes": "",
-    "attrib": [
-      {
-        "key": "bonus_magical_armor",
-        "header": "+",
-        "value": "20%",
-        "footer": "Magic Resistance"
-      },
-      {
-        "key": "bonus_attack_speed",
-        "header": "+",
-        "value": "20",
-        "footer": "Attack Speed"
-      },
-      {
-        "key": "bonus_damage",
-        "header": "+",
-        "value": "20",
-        "footer": "Damage"
-      },
-      {
-        "key": "bonus_mana_regen",
-        "header": "+",
-        "value": "2",
-        "footer": "Mana Regeneration"
-      },
-      {
-        "key": "bonus_intellect",
-        "header": "+",
-        "value": "10",
-        "footer": "Intelligence"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": false,
     "lore": "Forged by a secret order in The Third Age of Praxa'cia to fell the False King.",
@@ -6509,6 +6117,36 @@
       "belt_of_strength",
       "robe",
       "wind_lace"
+    ],
+    "created": true,
+    "charges": 8
+  },
+  "recipe_boots_of_bearing": {
+    "id": 930,
+    "img": "/apps/dota2/images/items/recipe_lg.png?t=1593393829403",
+    "cost": 1500,
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": false,
+    "lore": "",
+    "components": null,
+    "created": false,
+    "charges": false
+  },
+  "boots_of_bearing": {
+    "id": 931,
+    "img": "/apps/dota2/images/items/boots_of_bearing_lg.png?t=1593393829403",
+    "qual": "rare",
+    "cost": 4125,
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": 30,
+    "lore": "",
+    "components": [
+      "tranquil_boots",
+      "ancient_janggo"
     ],
     "created": true,
     "charges": 8
@@ -6689,6 +6327,36 @@
     "created": true,
     "charges": false
   },
+  "recipe_revenants_brooch": {
+    "id": 910,
+    "img": "/apps/dota2/images/items/recipe_lg.png?t=1593393829403",
+    "cost": 800,
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": false,
+    "lore": "",
+    "components": null,
+    "created": false,
+    "charges": false
+  },
+  "revenants_brooch": {
+    "id": 911,
+    "img": "/apps/dota2/images/items/revenants_brooch_lg.png?t=1593393829403",
+    "qual": "rare",
+    "cost": 6200,
+    "notes": "",
+    "attrib": [],
+    "mc": 250,
+    "cd": 45,
+    "lore": "",
+    "components": [
+      "witch_blade",
+      "mystic_staff"
+    ],
+    "created": true,
+    "charges": false
+  },
   "recipe_guardian_greaves": {
     "id": 230,
     "img": "/apps/dota2/images/items/recipe_lg.png?t=1593393829403",
@@ -6706,7 +6374,7 @@
   "guardian_greaves": {
     "hint": [
       "Active: MendRestores 300 health and 200 mana to nearby allies, and removes most negative effects from the caster.Radius: 1200Dispel Type: Basic Dispel",
-      "Passive: Guardian Aura Grants 2.5 health regeneration and 3 armor to allied units. If an allied hero's health falls below 20%, they receive 16 health regeneration and 10 armor. Radius: 1200 ",
+      "Passive: Guardian Aura Grants 2.5 health regeneration and 3 armor to allied units. If an allied hero's health falls below 20%, they receive 18.5 health regeneration and 10 armor. Radius: 1200 ",
       "Movement speed bonuses from multiple pairs of boots do not stack."
     ],
     "id": 231,
@@ -6971,7 +6639,7 @@
   },
   "ring_of_aquila": {
     "hint": [
-      "Passive: Aquila AuraGrants 1.25 mana regeneration and 2 armor to nearby allies.Radius: 1200",
+      "Passive: Aquila AuraGrants %aura_mana_regen% mana regeneration and %aura_bonus_armor% armor to nearby allies.Radius: %aura_radius%",
       "Toggle: Aura Deactivate to stop affecting non-hero units."
     ],
     "id": 212,
@@ -6980,32 +6648,7 @@
     "qual": "rare",
     "cost": 0,
     "notes": "Does not stack with armor auras from Ring of Basilius or Ring of Aquila.\nMultiple instances of Aquila Aura do not stack.",
-    "attrib": [
-      {
-        "key": "bonus_damage",
-        "header": "+",
-        "value": "7",
-        "footer": "Damage"
-      },
-      {
-        "key": "bonus_strength",
-        "header": "+",
-        "value": "3",
-        "footer": "Strength"
-      },
-      {
-        "key": "bonus_agility",
-        "header": "+",
-        "value": "9",
-        "footer": "Agility"
-      },
-      {
-        "key": "bonus_intellect",
-        "header": "+",
-        "value": "3",
-        "footer": "Intelligence"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": false,
     "lore": "The ring of the fallen Warlord Aquila continues to support armies in battle.",
@@ -7083,7 +6726,7 @@
   },
   "glimmer_cape": {
     "hint": [
-      "Active: Glimmer After a 0.6 second delay, grants invisibility and 45% magic resistance to you or a target allied unit for 5 seconds.Range: 550Can be cast while channelling."
+      "Active: Glimmer After a 0.6 second delay, grants invisibility and 50% magic resistance to you or a target allied unit for 5 seconds.Range: 550Can be cast while channelling."
     ],
     "id": 254,
     "img": "/apps/dota2/images/items/glimmer_cape_lg.png?t=1593393829403",
@@ -7326,27 +6969,14 @@
   },
   "grove_bow": {
     "hint": [
-      "Passive: Magic Amp Reduces magic resistance of the attacked enemy by 15%."
+      "Passive: Magic Amp Reduces magic resistance of the attacked enemy by %magic_resistance_reduction%%%."
     ],
     "id": 288,
     "img": "/apps/dota2/images/items/grove_bow_lg.png?t=1593393829403",
     "dname": "Grove Bow",
     "cost": 0,
     "notes": "",
-    "attrib": [
-      {
-        "key": "attack_range_bonus",
-        "header": "+",
-        "value": "100",
-        "footer": "Attack Range (Ranged Only)"
-      },
-      {
-        "key": "attack_speed_bonus",
-        "header": "+",
-        "value": "15",
-        "footer": "Attack Speed"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": false,
     "lore": "A gift from the moon goddess to one of her prized disciples many memories ago.",
@@ -7357,21 +6987,14 @@
   },
   "quickening_charm": {
     "hint": [
-      "Passive: Cooldown ReductionReduces the cooldown time of all spells and items by 12%"
+      "Passive: Cooldown ReductionReduces the cooldown time of all spells and items by %bonus_cooldown%%%"
     ],
     "id": 289,
     "img": "/apps/dota2/images/items/quickening_charm_lg.png?t=1593393829403",
     "dname": "Quickening Charm",
     "cost": 0,
     "notes": "",
-    "attrib": [
-      {
-        "key": "bonus_health_regen",
-        "header": "+",
-        "value": "9",
-        "footer": "HP Regeneration"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": false,
     "lore": "An evergreen amulet of druidic origins.",
@@ -7590,27 +7213,14 @@
   "force_field": {
     "hint": [
       "Active: Mega Shield Force Field Aura Grants 35% Damage Reflection for 5 seconds.",
-      "Passive: Shield Grants +5 armor and +20% Magic Resistance to all allies within 1200 radius."
+      "Passive: Shield Grants +%bonus_aoe_armor% armor and +%bonus_aoe_mres%%% Magic Resistance to all allies within %bonus_aoe_radius% radius."
     ],
     "id": 829,
     "img": "/apps/dota2/images/items/force_field_lg.png?t=1593393829403",
     "dname": "Arcanist's Armor",
     "cost": 0,
     "notes": "",
-    "attrib": [
-      {
-        "key": "self_armor",
-        "header": "+",
-        "value": "5",
-        "footer": "Armor"
-      },
-      {
-        "key": "self_mres",
-        "header": "+",
-        "value": "20",
-        "footer": "Magic Resistance"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": 20,
     "lore": "An exquisite piece commissioned by a paranoid monarch who choked on a piece of fruit long before the item saw its intended use.",
@@ -7619,37 +7229,16 @@
     "charges": false,
     "tier": 5
   },
-  "tree_processor": {
-    "id": 833,
-    "img": "/apps/dota2/images/items/tree_processor_lg.png?t=1593393829403",
-    "dname": "Tree Processor",
-    "cost": 0,
-    "notes": "",
-    "attrib": [],
-    "mc": false,
-    "cd": 40,
-    "lore": "",
-    "components": null,
-    "created": false,
-    "charges": false
-  },
   "black_powder_bag": {
     "hint": [
-      "Passive: Hair Trigger The next time you get attacked by a hero within 300 range, explode dealing 300 damage to all enemies within a 300 radius and causing them to miss 100% of their attacks for 2 seconds."
+      "Passive: Hair Trigger The next time you get attacked by a hero within %radius% range, explode dealing %damage% damage to all enemies within a %radius% radius and causing them to miss %blind_pct%%% of their attacks for %blind_duration% seconds."
     ],
     "id": 834,
     "img": "/apps/dota2/images/items/black_powder_bag_lg.png?t=1593393829403",
     "dname": "Blast Rig",
     "cost": 0,
     "notes": "",
-    "attrib": [
-      {
-        "key": "bonus_armor",
-        "header": "+",
-        "value": "7",
-        "footer": "Armor"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": 20,
     "lore": "One of a set of custom rigs once worn by infamous road agents in the Outlands, its siblings have been lost to misfires and the various tides of time.",
@@ -7741,20 +7330,7 @@
     "dname": "Timeless Relic",
     "cost": 0,
     "notes": "",
-    "attrib": [
-      {
-        "key": "debuff_amp",
-        "header": "+",
-        "value": "25%",
-        "footer": "Debuff Duration"
-      },
-      {
-        "key": "spell_amp",
-        "header": "+",
-        "value": "15%",
-        "footer": "Spell Damage"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": false,
     "lore": "An unmarred discovery from the excavated ruins of an ancient wizard's academy.",
@@ -7871,13 +7447,7 @@
     "dname": "Pupil's Gift",
     "cost": 0,
     "notes": "",
-    "attrib": [
-      {
-        "key": "secondary_stats",
-        "header": "+SECONDARY STATS",
-        "value": "14"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": false,
     "lore": "An astounding plate of ever-replenishing, fortifying fruit.",
@@ -7989,27 +7559,14 @@
   },
   "spell_prism": {
     "hint": [
-      "Passive: Cooldown ReductionReduces the cooldown time of all spells and items by 18%."
+      "Passive: Cooldown ReductionReduces the cooldown time of all spells and items by %bonus_cooldown%%%."
     ],
     "id": 311,
     "img": "/apps/dota2/images/items/spell_prism_lg.png?t=1593393829403",
     "dname": "Spell Prism",
     "cost": 0,
     "notes": "",
-    "attrib": [
-      {
-        "key": "bonus_all_stats",
-        "header": "+",
-        "value": "6",
-        "footer": "All Attributes"
-      },
-      {
-        "key": "mana_regen",
-        "header": "+",
-        "value": "4",
-        "footer": "Mana Regeneration"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": false,
     "lore": "Even the slightest flaw in the components of a spell prism can result in the death of its user.",
@@ -8120,30 +7677,14 @@
   },
   "spy_gadget": {
     "hint": [
-      "Passive: Prescient Aura Lowers Scan cooldown by 50% . Increases attack and cast range of allies in a 1200 unit radius."
+      "Passive: Prescient Aura Lowers Scan cooldown by %scan_cooldown_reduction%%% . Increases attack and cast range of allies in a %aura_range% unit radius."
     ],
     "id": 336,
     "img": "/apps/dota2/images/items/spy_gadget_lg.png?t=1593393829403",
     "dname": "Telescope",
     "cost": 0,
     "notes": "",
-    "attrib": [
-      {
-        "key": "scan_cooldown_reduction",
-        "header": "SCAN COOLDOWN REDUCTION:",
-        "value": "50%"
-      },
-      {
-        "key": "attack_range",
-        "header": "AURA BONUS ATTACK RANGE:",
-        "value": "110"
-      },
-      {
-        "key": "cast_range",
-        "header": "AURA BONUS CAST RANGE:",
-        "value": "110"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": false,
     "lore": "A handy tool that manages to make close what once was far.",
@@ -8154,26 +7695,14 @@
   },
   "spider_legs": {
     "hint": [
-      "Active: Scurry Grants you 22% bonus movement speed and free pathing for 3 seconds. Walking over trees causes them to be destroyed."
+      "Active: Scurry Grants you %bonus_movement_speed_active%%% bonus movement speed and free pathing for %duration% seconds. Walking over trees causes them to be destroyed."
     ],
     "id": 326,
     "img": "/apps/dota2/images/items/spider_legs_lg.png?t=1593393829403",
     "dname": "Spider Legs",
     "cost": 0,
     "notes": "",
-    "attrib": [
-      {
-        "key": "bonus_movement_speed",
-        "header": "+",
-        "value": "25",
-        "footer": "Movement Speed"
-      },
-      {
-        "key": "turn_rate",
-        "header": "+Turn Rate",
-        "value": "50%"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": 12,
     "lore": "A horrifying yet useful mixture of necromancy and artificing.",
@@ -8304,26 +7833,7 @@
     "dname": "Broom Handle",
     "cost": 0,
     "notes": "",
-    "attrib": [
-      {
-        "key": "melee_attack_range",
-        "header": "+",
-        "value": "50",
-        "footer": "Attack Range (Melee Only)"
-      },
-      {
-        "key": "bonus_damage",
-        "header": "+",
-        "value": "14",
-        "footer": "Damage"
-      },
-      {
-        "key": "bonus_armor",
-        "header": "+",
-        "value": "3",
-        "footer": "Armor"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": false,
     "lore": "The surprisingly dangerous creation of an apprentice sorcerer with a strange fondness for brooms.",
@@ -8334,21 +7844,14 @@
   },
   "trusty_shovel": {
     "hint": [
-      "Active: Dig Channel for 1 second. Can find a Bounty Rune, a Flask, an Enchanted Mango, or an enemy Kobold."
+      "Active: Dig Channel for %abilitychanneltime% second. Can find a Bounty Rune, a Flask, an Enchanted Mango, or an enemy Kobold."
     ],
     "id": 356,
     "img": "/apps/dota2/images/items/trusty_shovel_lg.png?t=1593393829403",
     "dname": "Trusty Shovel",
     "cost": 0,
     "notes": "",
-    "attrib": [
-      {
-        "key": "bonus_health",
-        "header": "+",
-        "value": "100",
-        "footer": "Health"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": 50,
     "lore": "Former plaything of a young deity, received as a gift from his uncle.",
@@ -8423,27 +7926,14 @@
   },
   "essence_ring": {
     "hint": [
-      "Active: Life Essence Increases your current and max health by 400 for 15 seconds."
+      "Active: Life Essence Increases your current and max health by %health_gain% for %health_gain_duration% seconds."
     ],
     "id": 359,
     "img": "/apps/dota2/images/items/essence_ring_lg.png?t=1593393829403",
     "dname": "Essence Ring",
     "cost": 0,
     "notes": "",
-    "attrib": [
-      {
-        "key": "bonus_int",
-        "header": "+",
-        "value": "6",
-        "footer": "Intelligence"
-      },
-      {
-        "key": "mp_regen",
-        "header": "+",
-        "value": "2.5",
-        "footer": "Mana Regeneration"
-      }
-    ],
+    "attrib": [],
     "mc": 200,
     "cd": 25,
     "lore": "An ancient bauble blessed by the breath of Verodicia.",
@@ -8484,7 +7974,7 @@
   },
   "enchanted_quiver": {
     "hint": [
-      "Passive: Certain Strike Empowers your next attack with 200 bonus magical damage and True Strike. Ranged Attackers have +400 bonus range for the attack."
+      "Passive: Certain Strike Empowers your next attack with %bonus_damage% bonus magical damage and True Strike. Ranged Attackers have +%bonus_attack_range% bonus range for the attack."
     ],
     "id": 361,
     "img": "/apps/dota2/images/items/enchanted_quiver_lg.png?t=1593393829403",
@@ -8509,20 +7999,7 @@
     "dname": "Ninja Gear",
     "cost": 0,
     "notes": "",
-    "attrib": [
-      {
-        "key": "bonus_agility",
-        "header": "+",
-        "value": "24",
-        "footer": "Agility"
-      },
-      {
-        "key": "passive_movement_bonus",
-        "header": "+",
-        "value": "25",
-        "footer": "Movement Speed"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": 45,
     "lore": "Valuable equipment recovered by a young explorer sifting through the flotsam and detritus drifting in the void.",
@@ -8637,14 +8114,7 @@
     "dname": "Apex",
     "cost": 0,
     "notes": "",
-    "attrib": [
-      {
-        "key": "primary_stat",
-        "header": "+",
-        "value": "70",
-        "footer": "Primary Attribute"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": false,
     "lore": "Three orbs of remarkable power bound within a single scepter.",
@@ -8772,39 +8242,14 @@
   },
   "fallen_sky": {
     "hint": [
-      "Active: Fallen Sky Transform into a meteor that strikes down at the target area after 1 seconds in a 315 AoE, stunning enemies for 2 seconds and dealing impact damage. Continues to deal damage every 1 seconds to enemy units and buildings for 6 seconds.Building Impact Damage: 75 Building Over Time Damage: 50 Non-Building Impact Damage: 150 Non-Building Over Time Damage: 90 Range: 1200"
+      "Active: Fallen Sky Transform into a meteor that strikes down at the target area after %land_time% seconds in a %impact_radius% AoE, stunning enemies for %stun_duration% seconds and dealing impact damage. Continues to deal damage every %burn_interval% seconds to enemy units and buildings for %burn_duration% seconds.Building Impact Damage: %impact_damage_buildings% Building Over Time Damage: %burn_dps_buildings% Non-Building Impact Damage: %impact_damage_units% Non-Building Over Time Damage: %burn_dps_units% Range: %abilitycastrange%"
     ],
     "id": 371,
     "img": "/apps/dota2/images/items/fallen_sky_lg.png?t=1593393829403",
     "dname": "Fallen Sky",
     "cost": 4751,
     "notes": "",
-    "attrib": [
-      {
-        "key": "bonus_strength",
-        "header": "+",
-        "value": "20",
-        "footer": "Strength"
-      },
-      {
-        "key": "bonus_intellect",
-        "header": "+",
-        "value": "20",
-        "footer": "Intelligence"
-      },
-      {
-        "key": "bonus_health_regen",
-        "header": "+",
-        "value": "15",
-        "footer": "HP Regeneration"
-      },
-      {
-        "key": "bonus_mana_regen",
-        "header": "+",
-        "value": "10",
-        "footer": "Mana Regeneration"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": 15,
     "lore": "One of the few surviving creations of the acolytes of the Wyrmforge.",
@@ -8819,21 +8264,14 @@
   },
   "pirate_hat": {
     "hint": [
-      "Active: Dig Channel for 1 second. Always finds a Bounty Rune!"
+      "Active: Dig Channel for %abilitychanneltime% second. Always finds a Bounty Rune!"
     ],
     "id": 372,
     "img": "/apps/dota2/images/items/pirate_hat_lg.png?t=1593393829403",
     "dname": "Pirate Hat",
     "cost": 0,
     "notes": "",
-    "attrib": [
-      {
-        "key": "bonus_attack_speed",
-        "header": "+",
-        "value": "150",
-        "footer": "Attack Speed"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": 40,
     "lore": "A salty skulltopper cursed with endless good fortune.",
@@ -8913,31 +8351,14 @@
   },
   "paladin_sword": {
     "hint": [
-      "Passive: Greater Healing Amplifies the wearer's Regeneration, Healing, Lifesteal and Spell Lifesteal by 14%."
+      "Passive: Greater Healing Amplifies the wearer's Regeneration, Healing, Lifesteal and Spell Lifesteal by %bonus_amp%%%."
     ],
     "id": 376,
     "img": "/apps/dota2/images/items/paladin_sword_lg.png?t=1593393829403",
     "dname": "Paladin Sword",
     "cost": 0,
     "notes": "",
-    "attrib": [
-      {
-        "key": "bonus_damage",
-        "header": "+",
-        "value": "20",
-        "footer": "Damage"
-      },
-      {
-        "key": "bonus_lifesteal",
-        "header": "+Lifesteal",
-        "value": "16%"
-      },
-      {
-        "key": "bonus_spell_lifesteal",
-        "header": "+Spell Lifesteal",
-        "value": "8%"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": false,
     "lore": "The sigil blade of the legendary Brother Yhols of Gausra, stripped from its scabbard on the day of his controversial excommunication.",
@@ -9014,25 +8435,7 @@
     "dname": "The Leveller",
     "cost": 0,
     "notes": "",
-    "attrib": [
-      {
-        "key": "bonus_attack_speed",
-        "header": "+",
-        "value": "50",
-        "footer": "Attack Speed"
-      },
-      {
-        "key": "bonus_armor",
-        "header": "+",
-        "value": "5",
-        "footer": "Armor"
-      },
-      {
-        "key": "demolish",
-        "header": "BONUS BUILDING DAMAGE:",
-        "value": "25%"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": false,
     "lore": "A demonic blade that struck the final blow to crack the gates of the Sanctum of Solanas.",
@@ -9043,27 +8446,14 @@
   },
   "arcane_ring": {
     "hint": [
-      "Active: Replenish Mana Restores 75 mana to all nearby allies.  Radius: 1200"
+      "Active: Replenish Mana Restores %mana_restore% mana to all nearby allies.  Radius: %radius%"
     ],
     "id": 349,
     "img": "/apps/dota2/images/items/arcane_ring_lg.png?t=1593393829403",
     "dname": "Arcane Ring",
     "cost": 0,
     "notes": "",
-    "attrib": [
-      {
-        "key": "bonus_intelligence",
-        "header": "+",
-        "value": "10",
-        "footer": "Intelligence"
-      },
-      {
-        "key": "bonus_armor",
-        "header": "+",
-        "value": "2",
-        "footer": "Armor"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": 45,
     "lore": "Once a prized heirloom of a minor lord's house.",
@@ -9529,26 +8919,14 @@
   },
   "psychic_headband": {
     "hint": [
-      "Active: Psychic PushPushes the target enemy unit away from you 400 distance."
+      "Active: Psychic PushPushes the target enemy unit away from you %push_length% distance."
     ],
     "id": 675,
     "img": "/apps/dota2/images/items/psychic_headband_lg.png?t=1593393829403",
     "dname": "Psychic Headband",
     "cost": 0,
     "notes": "",
-    "attrib": [
-      {
-        "key": "intelligence_pct",
-        "header": "+Intelligence",
-        "value": "16%"
-      },
-      {
-        "key": "cast_range",
-        "header": "+",
-        "value": "100",
-        "footer": "Cast Range"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": 20,
     "lore": "A failed experiment in finer telekinetic control, still fit for other ends.",
@@ -9559,21 +8937,14 @@
   },
   "ceremonial_robe": {
     "hint": [
-      "Passive: Ceremonial AuraLowers enemy Status Resistance by 10% and Magic Resistance by 10%.Radius: 1200"
+      "Passive: Ceremonial AuraLowers enemy Status Resistance by %status_resistance%%% and Magic Resistance by %magic_resistance%%%.Radius: %aura_radius%"
     ],
     "id": 676,
     "img": "/apps/dota2/images/items/ceremonial_robe_lg.png?t=1593393829403",
     "dname": "Ceremonial Robe",
     "cost": 0,
     "notes": "",
-    "attrib": [
-      {
-        "key": "bonus_mana",
-        "header": "+",
-        "value": "350",
-        "footer": "Mana"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": false,
     "lore": "One of many items lost in the looting of Zelenwyr's sacred reliquary.",
@@ -9584,37 +8955,14 @@
   },
   "quicksilver_amulet": {
     "hint": [
-      "Passive: QuicksilverGrants you a bonus 4% movement speed and 20 attack speed anytime one of your abilities are on cooldown."
+      "Passive: QuicksilverGrants you a bonus %bonus_movement%%% movement speed and %bonus_attack% attack speed anytime one of your abilities are on cooldown."
     ],
     "id": 686,
     "img": "/apps/dota2/images/items/quicksilver_amulet_lg.png?t=1593393829403",
     "dname": "Quicksilver Amulet",
     "cost": 0,
     "notes": "",
-    "attrib": [
-      {
-        "key": "base_movement",
-        "header": "+",
-        "value": "4%",
-        "footer": "Movement Speed"
-      },
-      {
-        "key": "base_attack",
-        "header": "+",
-        "value": "10",
-        "footer": "Attack Speed"
-      },
-      {
-        "key": "anim_increase",
-        "header": "+Attack Animation Speed",
-        "value": "40%"
-      },
-      {
-        "key": "projectile_increase",
-        "header": "+Attack Projectile Speed",
-        "value": "40%"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": false,
     "lore": "An enchanted talisman brimming with a mysterious substance.",
@@ -9632,19 +8980,7 @@
     "dname": "Book of Shadows",
     "cost": 0,
     "notes": "",
-    "attrib": [
-      {
-        "key": "bonus_all_stats",
-        "header": "+",
-        "value": "12",
-        "footer": "All Attributes"
-      },
-      {
-        "key": "night_vision",
-        "header": "+Night Vision",
-        "value": "400"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": 8,
     "lore": "An impossible tome filled with unreadable prose of unknowable thoughts.",
@@ -9811,27 +9147,14 @@
   },
   "ascetic_cap": {
     "hint": [
-      "Passive: EnduranceWhenever a debuff would be applied to the owner, grant 40% Status resistance for 3 seconds."
+      "Passive: EnduranceWhenever a debuff would be applied to the owner, grant %status_resistance%%% Status resistance for %duration% seconds."
     ],
     "id": 825,
     "img": "/apps/dota2/images/items/ascetic_cap_lg.png?t=1593393829403",
     "dname": "Ascetic's Cap",
     "cost": 0,
     "notes": "",
-    "attrib": [
-      {
-        "key": "bonus_health",
-        "header": "+",
-        "value": "250",
-        "footer": "Health"
-      },
-      {
-        "key": "hp_regen",
-        "header": "+",
-        "value": "10",
-        "footer": "HP Regeneration"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": 30,
     "lore": "An austere hat thought to be of Turstarkuri origin.",
@@ -9870,27 +9193,14 @@
   },
   "misericorde": {
     "hint": [
-      "Passive: Dark MercyYour attacks deal 8 more damage to enemies for each 10% HP they are missing."
+      "Passive: Dark MercyYour attacks deal %bonus_damage% more damage to enemies for each %missing_hp%%% HP they are missing."
     ],
     "id": 828,
     "img": "/apps/dota2/images/items/misericorde_lg.png?t=1593393829403",
     "dname": "Brigand's Blade",
     "cost": 0,
     "notes": "",
-    "attrib": [
-      {
-        "key": "damage",
-        "header": "+",
-        "value": "10",
-        "footer": "Damage"
-      },
-      {
-        "key": "aspd",
-        "header": "+",
-        "value": "10",
-        "footer": "Attack Speed"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": false,
     "lore": "An infamous assassin's blade stolen and smuggled out of White Spire after its owner's mysterious demise.",
@@ -9973,23 +9283,16 @@
   },
   "pogo_stick": {
     "hint": [
-      "Active: VaultPropels your hero forward 300 units. Tumbler's Toy gets disabled for 3 seconds if its owner receives damage from a player source."
+      "Active: VaultPropels your hero forward %leap_distance% units. Tumbler's Toy gets disabled for 3 seconds if its owner receives damage from a player source."
     ],
     "id": 840,
     "img": "/apps/dota2/images/items/pogo_stick_lg.png?t=1593393829403",
     "dname": "Tumbler's Toy",
     "cost": 0,
     "notes": "",
-    "attrib": [
-      {
-        "key": "bonus_mana",
-        "header": "+",
-        "value": "200",
-        "footer": "Mana"
-      }
-    ],
+    "attrib": [],
     "mc": false,
-    "cd": 20,
+    "cd": 15,
     "lore": "An antique plaything found in the ruins of an Ozenja circus bazaar.",
     "components": null,
     "created": false,
@@ -9998,21 +9301,14 @@
   },
   "paintball": {
     "hint": [
-      "Active: Shadow BrandThrows a Mark towards an enemy within 900 range applying a debuff that deals 35 damage every second and provides vision of the unit for 7 seconds."
+      "Active: Shadow BrandThrows a Mark towards an enemy within %abilitycastrange% range applying a debuff that deals %dps% damage every second and provides vision of the unit for %duration% seconds."
     ],
     "id": 835,
     "img": "/apps/dota2/images/items/paintball_lg.png?t=1593393829403",
     "dname": "Fae Grenade",
     "cost": 0,
     "notes": "",
-    "attrib": [
-      {
-        "key": "movespeed",
-        "header": "+",
-        "value": "20",
-        "footer": "Movement Speed"
-      }
-    ],
+    "attrib": [],
     "mc": 25,
     "cd": 20,
     "lore": "Those marked for death by the fae shine brightly to all manner of creatures in the shadow realm.",
@@ -10020,102 +9316,5 @@
     "created": false,
     "charges": false,
     "tier": 2
-  },
-  "diffusal_blade_2": {
-    "id": 196,
-    "img": "/apps/dota2/images/items/diffusal_blade_2_lg.png?3",
-    "dname": "Diffusal Blade",
-    "qual": "artifact",
-    "cost": 3850,
-    "desc": "Active: Purge Targets an enemy, removing buffs from the target and slowing it for 4 seconds.Range: 600\nPassive: ManabreakEach attack burns 50 mana from the target, and deals 0.8 physical damage per burned mana. Burns 16 mana per attack from melee illusions and 8 mana per attack from ranged illusions. Dispel Type: Basic Dispel",
-    "notes": "Does not stack with other manabreak abilities.",
-    "attrib": [
-      {
-        "key": "bonus_agility",
-        "header": "",
-        "value": [
-          "25",
-          "35"
-        ],
-        "footer": "Agility"
-      },
-      {
-        "key": "bonus_intellect",
-        "header": "",
-        "value": [
-          "10",
-          "15"
-        ],
-        "footer": "Intelligence"
-      },
-      {
-        "key": "initial_charges",
-        "header": "INITIAL CHARGES:",
-        "value": "8",
-        "generated": true
-      },
-      {
-        "key": "feedback_mana_burn",
-        "header": "FEEDBACK MANA BURN:",
-        "value": "50",
-        "generated": true
-      },
-      {
-        "key": "feedback_mana_burn_illusion_melee",
-        "header": "FEEDBACK MANA BURN ILLUSION MELEE:",
-        "value": "16",
-        "generated": true
-      },
-      {
-        "key": "feedback_mana_burn_illusion_ranged",
-        "header": "FEEDBACK MANA BURN ILLUSION RANGED:",
-        "value": "8",
-        "generated": true
-      },
-      {
-        "key": "purge_summoned_damage",
-        "header": "PURGE SUMMONED DAMAGE:",
-        "value": "99999",
-        "generated": true
-      },
-      {
-        "key": "purge_rate",
-        "header": "PURGE RATE:",
-        "value": "5",
-        "generated": true
-      },
-      {
-        "key": "purge_root_duration",
-        "header": "PURGE ROOT DURATION:",
-        "value": "3",
-        "generated": true
-      },
-      {
-        "key": "purge_slow_duration",
-        "header": "PURGE SLOW DURATION:",
-        "value": "4",
-        "generated": true
-      },
-      {
-        "key": "damage_per_burn",
-        "header": "DAMAGE PER BURN:",
-        "value": "0.8",
-        "generated": true
-      },
-      {
-        "key": "cast_range_tooltip",
-        "header": "CAST RANGE TOOLTIP:",
-        "value": "600",
-        "generated": true
-      }
-    ],
-    "mc": false,
-    "cd": 4,
-    "lore": "An enchanted blade that allows the user to cut straight into the enemy's soul.",
-    "components": [
-      "diffusal_blade",
-      "recipe_diffusal_blade"
-    ],
-    "created": true
   }
 }

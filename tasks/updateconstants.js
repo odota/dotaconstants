@@ -788,14 +788,19 @@ async.each(
       try {
         return JSON.parse(text);
       } catch (err) {
-        let vdf = simplevdf.parse(text);
-        vdf = vdf[Object.keys(vdf)[0]];
-        let keys = Object.keys(vdf);
-        let normalized = {};
-        for (let key of keys) {
-          normalized[key.toLowerCase()] = vdf[key];
-        }
-        return normalized;
+        try {
+          let vdf = simplevdf.parse(text);
+          vdf = vdf[Object.keys(vdf)[0]];
+          let keys = Object.keys(vdf);
+          let normalized = {};
+          for (let key of keys) {
+            normalized[key.toLowerCase()] = vdf[key];
+          }
+          return normalized;
+        } catch {
+          console.log(text);
+          return {};
+        } 
       }
     }
 
