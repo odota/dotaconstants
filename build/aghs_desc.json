@@ -151,7 +151,7 @@
     "scepter_skill_name": "Waning Rift",
     "scepter_new_skill": false,
     "has_shard": true,
-    "shard_desc": "Puck attacks all enemies within his attack range + 200 every time he phase shifts.",
+    "shard_desc": "Puck attacks all enemies within its attack range + 200 every time it phase shifts.",
     "shard_skill_name": "Phase Shift",
     "shard_new_skill": false
   },
@@ -391,8 +391,8 @@
     "scepter_skill_name": "Laser",
     "scepter_new_skill": false,
     "has_shard": true,
-    "shard_desc": "Throws a grenade towards an enemy, dealing %damage% damage, teleporting them %knockback_distance% units away and reducing their Cast and Attack Range by %range_reduction%%% for %debuff_duration% seconds",
-    "shard_skill_name": "Warp Grenade",
+    "shard_desc": "Throws a flare towards an enemy, dealing %damage% damage, teleporting them %knockback_distance% units away and reducing their Cast and Attack Range by %range_reduction%%% for %debuff_duration% seconds",
+    "shard_skill_name": "Warp Flare",
     "shard_new_skill": true
   },
   {
@@ -1011,7 +1011,7 @@
     "hero_name": "npc_dota_hero_rubick",
     "hero_id": 86,
     "has_scepter": true,
-    "scepter_desc": "Decreases cooldown, increases cast range and upgrades the spell to the Scepter level.",
+    "scepter_desc": "Increases the number of spells that can be stolen to 2. Increases cast range, and upgrades spells to their Scepter version.",
     "scepter_skill_name": "Spell Steal",
     "scepter_new_skill": false,
     "has_shard": true,
@@ -1075,8 +1075,8 @@
     "scepter_skill_name": "Spirits",
     "scepter_new_skill": false,
     "has_shard": true,
-    "shard_desc": "Tether stuns enemies touching it for 1.75 seconds and deals 150 damage. Does not affect the same unit more than once every 7 seconds. Increases movement speed bonus by 8%%.",
-    "shard_skill_name": "Tether",
+    "shard_desc": "Increases Overcharge Spell Amplification by 10%. Io gains 10% Spell Lifesteal and can now share Spell Lifesteal with its tethered target.",
+    "shard_skill_name": "Overcharge",
     "shard_new_skill": false
   },
   {
@@ -1226,9 +1226,9 @@
   {
     "hero_name": "npc_dota_hero_legion_commander",
     "hero_id": 104,
-    "has_scepter": false,
-    "scepter_desc": "",
-    "scepter_skill_name": "",
+    "has_scepter": true,
+    "scepter_desc": "Increases Duel duration, and makes Legion Commander and her opponent only take 50% damage from other sources. Reduces cooldown by 20 seconds.",
+    "scepter_skill_name": "Duel",
     "scepter_new_skill": false,
     "has_shard": true,
     "shard_desc": "Legion Commander gains 4 armor for every hero hit with Overwhelming Odds and 0.5 armor for each creep. Increases Overwhelming Odds duration by 8 seconds.",

@@ -47,7 +47,7 @@
   },
   "swift_blink": {
     "hint": [
-      "Active: Swift Blink Teleport to a target point up to %blink_range% units away.After teleportation, you gain %bonus_movement%%% phased movement speed, +%bonus_attack_speed% Attack Speed, and +%bonus_attack_damage% Attack Damage for %duration% seconds. Swift Blink cannot be used for %blink_damage_cooldown% seconds after taking damage from an enemy hero or Roshan."
+      "Active: Swift Blink Teleport to a target point up to %blink_range% units away.After teleportation, you gain %bonus_movement%%% phased movement speed and +%bonus_agi_active% Agility for %duration% seconds. Swift Blink cannot be used for %blink_damage_cooldown% seconds after taking damage from an enemy hero or Roshan."
     ],
     "id": 603,
     "img": "/apps/dota2/images/items/swift_blink_lg.png?t=1593393829403",
@@ -68,7 +68,7 @@
   },
   "arcane_blink": {
     "hint": [
-      "Active: Arcane Blink Teleport to a target point up to %blink_range% units away.After teleportation, you gain %base_cooldown%%% Ability Cooldown Reduction and %cast_pct_improvement%%% Cast Point reduction for %duration% seconds. Arcane Blink cannot be used for %blink_damage_cooldown% seconds after taking damage from an enemy hero or Roshan."
+      "Active: Arcane Blink Teleport to a target point up to %blink_range% units away.After teleportation, you gain %manacost_reduction%%% Mana Cost Reduction, %debuff_amp%%% Debuff Amplification and %cast_pct_improvement%%% Cast Point reduction for %duration% seconds. Arcane Blink cannot be used for %blink_damage_cooldown% seconds after taking damage from an enemy hero or Roshan."
     ],
     "id": 604,
     "img": "/apps/dota2/images/items/arcane_blink_lg.png?t=1593393829403",
@@ -479,7 +479,7 @@
     "dname": "Moon Shard",
     "qual": "consumable",
     "cost": 4000,
-    "notes": "The bonus night vision works during Night Stalker's Darkness ability.",
+    "notes": "",
     "attrib": [
       {
         "key": "bonus_attack_speed",
@@ -966,6 +966,7 @@
   },
   "gem": {
     "hint": [
+      "Active: Reveal Gives True Sight over a %active_radius% radius revealing wards and units even in Fog of War.",
       "Passive: True Sight Grants the ability to see invisible units and wards to any allied vision within %radius% range of its carrier. ",
       "Passive: EverlastingDropped on death, and cannot be destroyed."
     ],
@@ -981,23 +982,6 @@
     "lore": "Not one thrall creature of the depths,\r\nNor spirit bound in drowning's keep,\r\nNor Maelrawn the Tentacular,\r\nShall rest till seas, gem comes to sleep.",
     "components": null,
     "created": false,
-    "charges": false
-  },
-  "eagle_eye": {
-    "id": 929,
-    "img": "/apps/dota2/images/items/eagle_eye_lg.png?t=1593393829403",
-    "qual": "component",
-    "cost": 3700,
-    "notes": "",
-    "attrib": [],
-    "mc": false,
-    "cd": 30,
-    "lore": "",
-    "components": [
-      "eagle",
-      "gem"
-    ],
-    "created": true,
     "charges": false
   },
   "cloak": {
@@ -1211,7 +1195,7 @@
   },
   "dust": {
     "hint": [
-      "Use: RevealReveals and slows invisible heroes by %movespeed%%% in a %radius% radius around the caster for %duration% seconds."
+      "Use: RevealReveals and slows invisible heroes by %movespeed%%% in a %radius% radius around the caster for %duration% seconds. Invisible units revealed by dust take %damage% damage."
     ],
     "id": 40,
     "img": "/apps/dota2/images/items/dust_lg.png?t=1593393829403",
@@ -1237,7 +1221,7 @@
     "dname": "Bottle",
     "qual": "common",
     "cost": 675,
-    "notes": "Bottle is shareable. Stored runes cannot be shared.\nIf Bottle does not have full charges and is placed on a courier, the courier's movement speed will be slowed by 30%.",
+    "notes": "Bottle is shareable. Stored runes cannot be shared.",
     "attrib": [],
     "mc": false,
     "cd": false,
@@ -1266,7 +1250,7 @@
   },
   "ward_sentry": {
     "hint": [
-      "Use: Plant Plants a Sentry Ward, an invisible watcher that grants True Sight, the ability to see invisible enemy units and wards, to any existing allied vision within a %true_sight_range% radius.Lasts %duration_minutes_tooltip% minutes.Does not grant ground vision.Hold Control to give one Sentry Ward to an allied hero.Range: %abilitycastrange%"
+      "Use: Plant Plants a Sentry Ward, an invisible watcher that grants True Sight, the ability to see invisible enemy units and wards, to any existing allied vision within a %true_sight_range% radius.Lasts %duration_minutes_tooltip% minutes.Does not grant ground vision.Hold Control to give one Sentry Ward to an allied hero. Range: %abilitycastrange%"
     ],
     "id": 43,
     "img": "/apps/dota2/images/items/ward_sentry_lg.png?t=1593393829403",
@@ -1442,7 +1426,7 @@
   },
   "travel_boots_2": {
     "hint": [
-      "Upgrade: Town Portal ScrollUpgrades your Town Portal Scroll, allowing it to target units and heroes, reduces cooldown and does not consume a charge on usage. ",
+      "Upgrade: Town Portal ScrollUpgrades your Town Portal Scroll, allowing it to target units and heroes, reduces cooldown, channel time and does not consume a charge on usage. ",
       "Movement speed bonuses from multiple pairs of boots do not stack."
     ],
     "id": 220,
@@ -2077,6 +2061,9 @@
     "charges": false
   },
   "bracer": {
+    "hint": [
+      "Doubles its bonuses after minute %clock_time%."
+    ],
     "id": 73,
     "img": "/apps/dota2/images/items/bracer_lg.png?t=1593393829403",
     "dname": "Bracer",
@@ -2109,6 +2096,9 @@
     "charges": false
   },
   "wraith_band": {
+    "hint": [
+      "Doubles its bonuses after minute %clock_time%."
+    ],
     "id": 75,
     "img": "/apps/dota2/images/items/wraith_band_lg.png?t=1593393829403",
     "dname": "Wraith Band",
@@ -2141,6 +2131,9 @@
     "charges": false
   },
   "null_talisman": {
+    "hint": [
+      "Doubles its bonuses after minute %clock_time%."
+    ],
     "id": 77,
     "img": "/apps/dota2/images/items/null_talisman_lg.png?t=1593393829403",
     "dname": "Null Talisman",
@@ -2241,6 +2234,7 @@
   "recipe_wraith_pact": {
     "id": 907,
     "img": "/apps/dota2/images/items/recipe_lg.png?t=1593393829403",
+    "dname": "Wraith Pact Recipe",
     "cost": 400,
     "notes": "",
     "attrib": [],
@@ -2252,15 +2246,20 @@
     "charges": false
   },
   "wraith_pact": {
+    "hint": [
+      "Active: Wraith's ReprisalSummons a movable totem in your location for %abilityduration% seconds that reduces all damage of enemies within %aura_radius% radius by %damage_penalty_aura%%% and deals %aura_dps% damage per second. Totem can be destroyed in 5 hits. Creeps deal half damage to the totem.",
+      "Passive: Vladmir's AuraGrants %lifesteal_aura%%% lifesteal, %damage_aura%%% bonus damage, %mana_regen_aura% mana regeneration, and %armor_aura% armor to nearby allies. Radius: %aura_radius%"
+    ],
     "id": 908,
     "img": "/apps/dota2/images/items/wraith_pact_lg.png?t=1593393829403",
+    "dname": "Wraith Pact",
     "qual": "rare",
     "cost": 4200,
     "notes": "",
     "attrib": [],
     "mc": 100,
     "cd": 60,
-    "lore": "",
+    "lore": "A sentient amulet whose animus shakes the courage of even the strongest foes.",
     "components": [
       "vladmir",
       "point_booster"
@@ -2621,14 +2620,15 @@
   },
   "bloodthorn": {
     "hint": [
-      "Active: Soul Rend Silences a target for %silence_duration% seconds. At the end of the silence, an additional %silence_damage_percent%%% of all damage taken during the silence will be dealt to the target as magical damage.All attacks on the silenced target will have True Strike and %tooltip_crit_chance%%% chance to crit for %target_crit_multiplier%%% damage.Range: %abilitycastrange%"
+      "Active: Soul Rend Silences a target for %silence_duration% seconds. At the end of the silence, an additional %silence_damage_percent%%% of all damage taken during the silence will be dealt to the target as magical damage.All attacks on the silenced target will have True Strike and %tooltip_crit_chance%%% chance to crit for %target_crit_multiplier%%% damage.Range: %abilitycastrange%",
+      "Passive: Mage SlayerPlaces a debuff when you attack enemies, causing them to do %spell_amp_debuff%%% less spell damage for %duration% seconds."
     ],
     "id": 250,
     "img": "/apps/dota2/images/items/bloodthorn_lg.png?t=1593393829403",
     "dname": "Bloodthorn",
     "qual": "epic",
     "cost": 6500,
-    "notes": "Critical Strike does not work against buildings.",
+    "notes": "",
     "attrib": [],
     "mc": 100,
     "cd": 15,
@@ -3773,15 +3773,14 @@
   },
   "bloodstone": {
     "hint": [
-      "Active: Bloodpact Converts %mana_cost_percentage%%% of your max mana to health regeneration over %restore_duration% seconds.",
-      "Passive: Mana BatteryEach charge provides %regen_per_charge% MP regen and %amp_per_charge%%% Spell Amp. Nearby kills provide %kill_charges% charges. Dying causes you to lose %death_charges% charges. Starts with %initial_charges_tooltip% charges."
+      "Active: Bloodpact Doubles Bloodstone's Spell Lifesteal and also converts the same percentage of damage dealt to mana. Lasts %buff_duration% seconds. Costs %hp_cost%%% of your current HP to activate"
     ],
     "id": 121,
     "img": "/apps/dota2/images/items/bloodstone_lg.png?t=1593393829403",
     "dname": "Bloodstone",
     "qual": "epic",
     "cost": 4600,
-    "notes": "",
+    "notes": "Using Bloodpact leaves you drained for 40 seconds and can't benefit from Bloodpact again during that time.",
     "attrib": [],
     "mc": false,
     "cd": 40,
@@ -3932,7 +3931,7 @@
   },
   "nullifier": {
     "hint": [
-      "Active: Nullify Dispels the target and applies a debuff for 5 seconds. Continuously dispels the target. Anytime the target is attacked, it will be slowed by 80% for 0.5 seconds.Dispel Type: Basic Dispel"
+      "Active: Nullify Dispels the target and applies a debuff for 5 seconds. Continuously dispels the target.Dispel Type: Basic Dispel"
     ],
     "id": 225,
     "img": "/apps/dota2/images/items/nullifier_lg.png?t=1593393829403",
@@ -3986,7 +3985,7 @@
   },
   "aeon_disk": {
     "hint": [
-      "Passive: Combo Breaker When you take damage and your health falls below 70%, a strong dispel is applied and you gain a 2.5 second buff that provides +75% Status Resistance and causes all damage you deal and are dealt to be reduced to zero. Only triggers on player based damage. Cooldown increases every time it triggers."
+      "Passive: Combo Breaker When you take damage and your health falls below 70%, a strong dispel is applied and you gain a 2.5 second buff that provides +75% Status Resistance and causes all damage you deal and are dealt to be reduced to zero. Only triggers on player based damage. Cooldown increases every time it triggers.Dispel Type: Strong Dispel"
     ],
     "id": 256,
     "img": "/apps/dota2/images/items/aeon_disk_lg.png?t=1593393829403",
@@ -4552,36 +4551,23 @@
     "created": true,
     "charges": false
   },
-  "recipe_radiance": {
-    "id": 136,
-    "img": "/apps/dota2/images/items/recipe_lg.png?t=1593393829403",
-    "dname": "Radiance Recipe",
-    "cost": 1350,
-    "notes": "",
-    "attrib": [],
-    "mc": false,
-    "cd": false,
-    "lore": "",
-    "components": null,
-    "created": false,
-    "charges": false
-  },
   "radiance": {
     "hint": [
-      "Toggle: Burn When active, scorches enemies for %aura_damage% magical damage per second, and causes them to miss %blind_pct%%% of their attacks. Illusions deal %aura_damage_illusions% magical damage per second.Radius: %aura_radius%"
+      "Toggle: Burn When active, scorches enemies for %aura_damage% magical damage per second and causes them to miss %blind_pct%%% of their attacks. Illusions deal %aura_damage_illusions% magical damage per second.Radius: %aura_radius%"
     ],
     "id": 137,
     "img": "/apps/dota2/images/items/radiance_lg.png?t=1593393829403",
     "dname": "Radiance",
     "qual": "epic",
-    "cost": 5100,
+    "cost": 5050,
     "notes": "",
     "attrib": [],
     "mc": false,
     "cd": false,
     "lore": "A divine weapon that causes damage and a bright burning effect that lays waste to nearby enemies.",
     "components": [
-      "relic"
+      "relic",
+      "talisman_of_evasion"
     ],
     "created": true,
     "charges": false
@@ -4695,7 +4681,7 @@
     "dname": "Skull Basher",
     "qual": "epic",
     "cost": 2875,
-    "notes": "Does not stack with other sources of Bash, however it will stack with Mini-Bash.\nThe following heroes cannot trigger Bash on this item: Spirit Breaker, Faceless Void, and Slardar.",
+    "notes": "Does not stack with other sources of Bash.\nThe following heroes cannot trigger Bash on this item: Spirit Breaker, Faceless Void, and Slardar.",
     "attrib": [
       {
         "key": "bonus_damage",
@@ -5473,7 +5459,8 @@
   },
   "desolator": {
     "hint": [
-      "Passive: Corruption Your attacks reduce the target's armor by %corruption_armor% for %corruption_duration% seconds."
+      "Passive: Corruption Your attacks reduce the target's armor by %corruption_armor% for %corruption_duration% seconds.",
+      "Passive: Soul Stealer Desolator gains +%bonus_damage_per_kill% damage per hero kill and +%bonus_damage_per_assist% damage per assist while equipped up to a maximum of %max_damage%."
     ],
     "id": 168,
     "img": "/apps/dota2/images/items/desolator_lg.png?t=1593393829403",
@@ -5603,7 +5590,7 @@
     "dname": "Diffusal Blade",
     "qual": "artifact",
     "cost": 2500,
-    "notes": "Does not stack with other manabreak abilities.",
+    "notes": "Does not stack with other diffusal blades.",
     "attrib": [],
     "mc": false,
     "cd": 15,
@@ -5615,119 +5602,10 @@
     "created": true,
     "charges": false
   },
-  "recipe_diffusal_blade_2": {
-    "id": 965,
-    "img": "/apps/dota2/images/items/recipe_lg.png?t=1593393829403",
-    "cost": 200,
-    "notes": "",
-    "attrib": [],
-    "mc": false,
-    "cd": false,
-    "lore": "",
-    "components": null,
-    "created": false,
-    "charges": false
-  },
-  "diffusal_blade_2": {
-    "id": 196,
-    "img": "/apps/dota2/images/items/diffusal_blade_2_lg.png?3",
-    "dname": "Diffusal Blade",
-    "qual": "artifact",
-    "cost": 3850,
-    "desc": "Active: Purge Targets an enemy, removing buffs from the target and slowing it for 4 seconds.Range: 600\nPassive: ManabreakEach attack burns 50 mana from the target, and deals 0.8 physical damage per burned mana. Burns 16 mana per attack from melee illusions and 8 mana per attack from ranged illusions. Dispel Type: Basic Dispel",
-    "notes": "Does not stack with other manabreak abilities.",
-    "attrib": [
-      {
-        "key": "bonus_agility",
-        "header": "",
-        "value": [
-          "25",
-          "35"
-        ],
-        "footer": "Agility"
-      },
-      {
-        "key": "bonus_intellect",
-        "header": "",
-        "value": [
-          "10",
-          "15"
-        ],
-        "footer": "Intelligence"
-      },
-      {
-        "key": "initial_charges",
-        "header": "INITIAL CHARGES:",
-        "value": "8",
-        "generated": true
-      },
-      {
-        "key": "feedback_mana_burn",
-        "header": "FEEDBACK MANA BURN:",
-        "value": "50",
-        "generated": true
-      },
-      {
-        "key": "feedback_mana_burn_illusion_melee",
-        "header": "FEEDBACK MANA BURN ILLUSION MELEE:",
-        "value": "16",
-        "generated": true
-      },
-      {
-        "key": "feedback_mana_burn_illusion_ranged",
-        "header": "FEEDBACK MANA BURN ILLUSION RANGED:",
-        "value": "8",
-        "generated": true
-      },
-      {
-        "key": "purge_summoned_damage",
-        "header": "PURGE SUMMONED DAMAGE:",
-        "value": "99999",
-        "generated": true
-      },
-      {
-        "key": "purge_rate",
-        "header": "PURGE RATE:",
-        "value": "5",
-        "generated": true
-      },
-      {
-        "key": "purge_root_duration",
-        "header": "PURGE ROOT DURATION:",
-        "value": "3",
-        "generated": true
-      },
-      {
-        "key": "purge_slow_duration",
-        "header": "PURGE SLOW DURATION:",
-        "value": "4",
-        "generated": true
-      },
-      {
-        "key": "damage_per_burn",
-        "header": "DAMAGE PER BURN:",
-        "value": "0.8",
-        "generated": true
-      },
-      {
-        "key": "cast_range_tooltip",
-        "header": "CAST RANGE TOOLTIP:",
-        "value": "600",
-        "generated": true
-      }
-    ],
-    "mc": false,
-    "cd": 4,
-    "lore": "An enchanted blade that allows the user to cut straight into the enemy's soul.",
-    "components": [
-      "diffusal_blade",
-      "recipe_diffusal_blade"
-    ],
-    "created": true
-  },
   "recipe_ethereal_blade": {
     "id": 175,
     "img": "/apps/dota2/images/items/recipe_lg.png?t=1593393829403",
+    "dname": "Ethereal Blade Recipe",
     "cost": 1100,
     "notes": "",
     "attrib": [],
@@ -5740,14 +5618,14 @@
   },
   "ethereal_blade": {
     "hint": [
-      "Active: Ether BlastConverts the target unit to ethereal form, rendering them immune to physical damage, but unable to attack and %ethereal_damage_bonus%%% more vulnerable to magic damage.  Lasts for %duration_ally% seconds on allies and %duration% seconds on enemies.  Enemy targets are also slowed by %blast_movement_slow%%%, and take %blast_agility_multiplier%x your primary attribute + %blast_damage_base% as magical damage.Range: %abilitycastrange%"
+      "Active: Ether BlastConverts the target unit to ethereal form, rendering them immune to physical damage, but unable to attack and %ethereal_damage_bonus%%% more vulnerable to magic damage.  Enemy targets are also slowed by %blast_movement_slow%%%, and take %blast_agility_multiplier%x your target's primary attribute + %blast_damage_base% as magical damage.Range: %abilitycastrange%Duration: %duration% seconds"
     ],
     "id": 176,
     "img": "/apps/dota2/images/items/ethereal_blade_lg.png?t=1593393829403",
     "dname": "Ethereal Blade",
     "qual": "epic",
     "cost": 4650,
-    "notes": "Shares cooldown with Ghost Scepter.\nEthereal units take 40% bonus magic damage.\nLasts an extra second on Self or Allied cast.\nUsing a Town Portal Scroll or Boots of Travel will not dispel Ethereal Form.",
+    "notes": "Shares cooldown with Ghost Scepter.\nEthereal units take %ethereal_damage_bonus%%% bonus magic damage.",
     "attrib": [],
     "mc": 100,
     "cd": 22,
@@ -5955,53 +5833,6 @@
     "created": true,
     "charges": false
   },
-  "voidwalker_scythe": {
-    "id": 904,
-    "img": "/apps/dota2/images/items/voidwalker_scythe_lg.png?t=1593393829403",
-    "qual": "rare",
-    "cost": 3900,
-    "notes": "",
-    "attrib": [],
-    "mc": false,
-    "cd": false,
-    "lore": "",
-    "components": [
-      "eagle",
-      "javelin"
-    ],
-    "created": true,
-    "charges": false
-  },
-  "recipe_tenderizer": {
-    "id": 833,
-    "img": "/apps/dota2/images/items/recipe_lg.png?t=1593393829403",
-    "cost": 425,
-    "notes": "",
-    "attrib": [],
-    "mc": false,
-    "cd": false,
-    "lore": "",
-    "components": null,
-    "created": false,
-    "charges": false
-  },
-  "tenderizer": {
-    "id": 906,
-    "img": "/apps/dota2/images/items/tenderizer_lg.png?t=1593393829403",
-    "qual": "rare",
-    "cost": 6100,
-    "notes": "",
-    "attrib": [],
-    "mc": false,
-    "cd": 2,
-    "lore": "",
-    "components": [
-      "basher",
-      "eagle"
-    ],
-    "created": true,
-    "charges": false
-  },
   "recipe_falcon_blade": {
     "id": 599,
     "img": "/apps/dota2/images/items/recipe_lg.png?t=1593393829403",
@@ -6086,7 +5917,7 @@
   },
   "ancient_janggo": {
     "hint": [
-      "Active: Endurance Consumes a charge and gives +45 attack speed and +13% movement speed to nearby allies for 6 seconds. Comes with 8 charges.Radius: 1200  ",
+      "Active: Endurance Consumes a charge and gives +45 attack speedand +13% movement speed to nearby allies for 6 seconds. Comes with 8 charges.Radius: 1200  ",
       "",
       "Passive: Swiftness AuraGrants 20 movement speed to allies.  Radius: 1200"
     ],
@@ -6124,6 +5955,7 @@
   "recipe_boots_of_bearing": {
     "id": 930,
     "img": "/apps/dota2/images/items/recipe_lg.png?t=1593393829403",
+    "dname": "Boots of Bearing Recipe",
     "cost": 1500,
     "notes": "",
     "attrib": [],
@@ -6135,15 +5967,21 @@
     "charges": false
   },
   "boots_of_bearing": {
+    "hint": [
+      "Active: Endurance Consumes a charge and gives +%bonus_attack_speed_pct% attack speed, +%bonus_movement_speed_pct%%% Movement Speed to nearby allies for %duration% seconds For the first 2 seconds allies are immune to slows.Starts with 8 Charges. Gains 1 Charge every 3 minutes. Radius: %radius%  ",
+      "",
+      "Passive: Swiftness AuraGrants %aura_movement_speed% movement speed to allies.  Radius: %radius%"
+    ],
     "id": 931,
     "img": "/apps/dota2/images/items/boots_of_bearing_lg.png?t=1593393829403",
+    "dname": "Boots of Bearing",
     "qual": "rare",
     "cost": 4125,
     "notes": "",
     "attrib": [],
     "mc": false,
     "cd": 30,
-    "lore": "",
+    "lore": "Resplendent footwear fashioned for the ancient herald that first dared spread the glory of Stonehall beyond the original borders of its nascent claim.",
     "components": [
       "tranquil_boots",
       "ancient_janggo"
@@ -6330,6 +6168,7 @@
   "recipe_revenants_brooch": {
     "id": 910,
     "img": "/apps/dota2/images/items/recipe_lg.png?t=1593393829403",
+    "dname": "Revenant's Brooch Recipe",
     "cost": 800,
     "notes": "",
     "attrib": [],
@@ -6341,15 +6180,20 @@
     "charges": false
   },
   "revenants_brooch": {
+    "hint": [
+      "Active: Phantom ProvinceYour next %number_of_attacks% attacks have True Strike and deal magic damage. Expires after %active_duration% seconds. Can attack Ethereal units and deals no damage to Magic Immune targets.",
+      "Passive: Witch Blade Causes your next attack to apply a poison for %slow_duration% seconds, slowing by %slow%%% and dealing %int_damage_multiplier%x your intelligence as damage every second. Can only trigger once every %passive_cooldown% seconds."
+    ],
     "id": 911,
     "img": "/apps/dota2/images/items/revenants_brooch_lg.png?t=1593393829403",
+    "dname": "Revenant's Brooch",
     "qual": "rare",
     "cost": 6200,
     "notes": "",
     "attrib": [],
     "mc": 250,
     "cd": 45,
-    "lore": "",
+    "lore": "The cursed brooch of a fallen guardian who stalks forever between the veil of life and death.",
     "components": [
       "witch_blade",
       "mystic_staff"
@@ -6374,7 +6218,7 @@
   "guardian_greaves": {
     "hint": [
       "Active: MendRestores 300 health and 200 mana to nearby allies, and removes most negative effects from the caster.Radius: 1200Dispel Type: Basic Dispel",
-      "Passive: Guardian Aura Grants 2.5 health regeneration and 3 armor to allied units. If an allied hero's health falls below 20%, they receive 18.5 health regeneration and 10 armor. Radius: 1200 ",
+      "Passive: Guardian Aura Grants 2.5 health regeneration and 3 armor to allied units. If an allied hero's health falls below 20%, this is increased to 18.5 health regeneration and 10 armor. Radius: 1200 ",
       "Movement speed bonuses from multiple pairs of boots do not stack."
     ],
     "id": 231,
@@ -6647,7 +6491,7 @@
     "dname": "Ring of Aquila",
     "qual": "rare",
     "cost": 0,
-    "notes": "Does not stack with armor auras from Ring of Basilius or Ring of Aquila.\nMultiple instances of Aquila Aura do not stack.",
+    "notes": "Multiple instances of Aquila Aura do not stack.",
     "attrib": [],
     "mc": false,
     "cd": false,
@@ -7212,8 +7056,8 @@
   },
   "force_field": {
     "hint": [
-      "Active: Mega Shield Force Field Aura Grants 35% Damage Reflection for 5 seconds.",
-      "Passive: Shield Grants +%bonus_aoe_armor% armor and +%bonus_aoe_mres%%% Magic Resistance to all allies within %bonus_aoe_radius% radius."
+      "Active: Mega Shield Force Field Aura Grants %active_reflection_pct%%% Damage Reflection for 5 seconds.",
+      "Passive: Shield Grants +%bonus_aoe_armor% armor and +%bonus_aoe_mres%%% Magic Resistance to all other allies within %bonus_aoe_radius% radius."
     ],
     "id": 829,
     "img": "/apps/dota2/images/items/force_field_lg.png?t=1593393829403",
@@ -7695,7 +7539,7 @@
   },
   "spider_legs": {
     "hint": [
-      "Active: Scurry Grants you %bonus_movement_speed_active%%% bonus movement speed and free pathing for %duration% seconds. Walking over trees causes them to be destroyed."
+      "Active: Skitter Grants you %bonus_movement_speed_active%%% bonus movement speed and free pathing for %duration% seconds. Walking over trees causes them to be destroyed."
     ],
     "id": 326,
     "img": "/apps/dota2/images/items/spider_legs_lg.png?t=1593393829403",
@@ -9316,5 +9160,102 @@
     "created": false,
     "charges": false,
     "tier": 2
+  },
+  "diffusal_blade_2": {
+    "id": 196,
+    "img": "/apps/dota2/images/items/diffusal_blade_2_lg.png?3",
+    "dname": "Diffusal Blade",
+    "qual": "artifact",
+    "cost": 3850,
+    "desc": "Active: Purge Targets an enemy, removing buffs from the target and slowing it for 4 seconds.Range: 600\nPassive: ManabreakEach attack burns 50 mana from the target, and deals 0.8 physical damage per burned mana. Burns 16 mana per attack from melee illusions and 8 mana per attack from ranged illusions. Dispel Type: Basic Dispel",
+    "notes": "Does not stack with other manabreak abilities.",
+    "attrib": [
+      {
+        "key": "bonus_agility",
+        "header": "",
+        "value": [
+          "25",
+          "35"
+        ],
+        "footer": "Agility"
+      },
+      {
+        "key": "bonus_intellect",
+        "header": "",
+        "value": [
+          "10",
+          "15"
+        ],
+        "footer": "Intelligence"
+      },
+      {
+        "key": "initial_charges",
+        "header": "INITIAL CHARGES:",
+        "value": "8",
+        "generated": true
+      },
+      {
+        "key": "feedback_mana_burn",
+        "header": "FEEDBACK MANA BURN:",
+        "value": "50",
+        "generated": true
+      },
+      {
+        "key": "feedback_mana_burn_illusion_melee",
+        "header": "FEEDBACK MANA BURN ILLUSION MELEE:",
+        "value": "16",
+        "generated": true
+      },
+      {
+        "key": "feedback_mana_burn_illusion_ranged",
+        "header": "FEEDBACK MANA BURN ILLUSION RANGED:",
+        "value": "8",
+        "generated": true
+      },
+      {
+        "key": "purge_summoned_damage",
+        "header": "PURGE SUMMONED DAMAGE:",
+        "value": "99999",
+        "generated": true
+      },
+      {
+        "key": "purge_rate",
+        "header": "PURGE RATE:",
+        "value": "5",
+        "generated": true
+      },
+      {
+        "key": "purge_root_duration",
+        "header": "PURGE ROOT DURATION:",
+        "value": "3",
+        "generated": true
+      },
+      {
+        "key": "purge_slow_duration",
+        "header": "PURGE SLOW DURATION:",
+        "value": "4",
+        "generated": true
+      },
+      {
+        "key": "damage_per_burn",
+        "header": "DAMAGE PER BURN:",
+        "value": "0.8",
+        "generated": true
+      },
+      {
+        "key": "cast_range_tooltip",
+        "header": "CAST RANGE TOOLTIP:",
+        "value": "600",
+        "generated": true
+      }
+    ],
+    "mc": false,
+    "cd": 4,
+    "lore": "An enchanted blade that allows the user to cut straight into the enemy's soul.",
+    "components": [
+      "diffusal_blade",
+      "recipe_diffusal_blade"
+    ],
+    "created": true
   }
 }

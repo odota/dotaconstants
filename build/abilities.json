@@ -43,7 +43,7 @@
     "behavior": "Passive",
     "dmg_type": "Physical",
     "bkbpierce": "No",
-    "desc": "Burns an opponent's mana on each attack.  Mana Break deals 50% of the mana burned as damage to the target. Mana Break has 50% effect if caused by illusions.",
+    "desc": "Burns an opponent's mana on each attack and deals damage equal to a percentage of the mana burnt. Enemies with no mana left are temporarily slowed.",
     "attrib": [
       {
         "key": "percent_damage_per_burn",
@@ -91,20 +91,18 @@
       },
       {
         "key": "move_slow",
-        "header": "MOVE SLOW:",
+        "header": "MOVE SPEED SLOW ON FULL DRAIN:",
         "value": [
-          "10",
-          "20",
-          "30",
-          "40"
-        ],
-        "generated": true
+          "10%",
+          "20%",
+          "30%",
+          "40%"
+        ]
       },
       {
         "key": "slow_duration",
         "header": "SLOW DURATION:",
-        "value": "0.75",
-        "generated": true
+        "value": "0.75"
       }
     ],
     "img": "/apps/dota2/images/abilities/antimage_mana_break_md.png"
@@ -370,7 +368,7 @@
     "behavior": "Unit Target",
     "dmg_type": "Physical",
     "bkbpierce": "No",
-    "desc": "Enrages an enemy unit, causing it to be slowed and take damage over time until it kills another unit or the duration ends. Axe gains movement speed for each unit affected with Battle Hunger, half speed from creeps.",
+    "desc": "Enrages an enemy unit, causing it to take damage over time until it kills another unit or the duration ends. The damage is increased by a factor of Axe's armor. The enemy is also slowed as long as he's facing away from Axe.",
     "attrib": [],
     "mc": [
       "50",
@@ -433,7 +431,7 @@
     "behavior": "Unit Target",
     "dmg_type": "Pure",
     "bkbpierce": "Yes",
-    "desc": "Axe spots a weakness and strikes, instantly killing an enemy unit with low health, or dealing moderate damage otherwise. When an enemy hero is killed with Culling Blade, its cooldown is reset, and Axe and nearby allied units gain bonus movement speed.",
+    "desc": "Axe spots a weakness and strikes, dealing pure damage. When an enemy hero is killed with Culling Blade, its cooldown is reset, Axe gains bonus armor permanently and all nearby allied units gain bonus movement speed. ",
     "attrib": [],
     "mc": [
       "100",
@@ -452,7 +450,7 @@
     "behavior": "Unit Target",
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Lowers the enemy's total attack damage, cast speed, and regeneration.",
+    "desc": "Lowers the enemy's total attack damage, cast range, and regeneration.",
     "attrib": [
       {
         "key": "damage_reduction",
@@ -476,7 +474,7 @@
       },
       {
         "key": "cast_reduction",
-        "header": "CAST SPEED REDUCTION:",
+        "header": "CAST RANGE REDUCTION:",
         "value": "30%"
       },
       {
@@ -743,10 +741,10 @@
         "key": "spell_amp",
         "header": "SPELL AMPLIFICATION:",
         "value": [
-          "15",
-          "20",
-          "25",
-          "30"
+          "15%",
+          "20%",
+          "25%",
+          "30%"
         ]
       },
       {
@@ -858,7 +856,7 @@
     "attrib": [
       {
         "key": "min_bonus_pct",
-        "header": "THIRST HEALTH THRESHHOLD:",
+        "header": "THIRST HEALTH THRESHOLD:",
         "value": "80%"
       },
       {
@@ -904,7 +902,7 @@
       },
       {
         "key": "visibility_threshold_pct",
-        "header": "VISIBILITY HEALTH THRESHHOLD:",
+        "header": "VISIBILITY HEALTH THRESHOLD:",
         "value": "25%"
       },
       {
@@ -989,12 +987,14 @@
     "img": "/apps/dota2/images/abilities/bloodseeker_rupture_md.png"
   },
   "bloodseeker_blood_mist": {
+    "dname": "Blood Mist",
     "behavior": [
       "No Target",
       null
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
+    "desc": "Bloodseeker sprays his blood in an area paying with his blood to damage and slow his enemies. While active, Thirst's healing is increased by 50%. Cannot be turned off while on Cooldown.",
     "attrib": [],
     "mc": "0",
     "cd": "4",
@@ -1203,7 +1203,7 @@
     "dname": "Gust",
     "behavior": "Point Target",
     "bkbpierce": "No",
-    "desc": "Releases a wave that silences and knocks back enemy units. Knockback distance is relative to how close they are to Drow.",
+    "desc": "Releases a wave that silences and knocks back enemy units. Knockback distance is relative to how close they are to Drow. Drow Gains Movement Speed for the same duration.",
     "attrib": [],
     "mc": "70",
     "cd": [
@@ -2158,7 +2158,7 @@
   "lina_fiery_soul": {
     "dname": "Fiery Soul",
     "behavior": "Passive",
-    "desc": "Grants bonus attack and movement speed each time Lina casts a spell. Stacks with itself. Lasts 15 seconds.",
+    "desc": "Grants bonus attack and movement speed each time Lina hits an enemy with a spell. Stacks with itself. Lasts 15 seconds.",
     "attrib": [
       {
         "key": "fiery_soul_attack_speed_bonus",
@@ -3258,7 +3258,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Shadow Fiend gathers his captured souls to release them as lines of demonic energy. Units near Shadow Fiend when the souls are released can be damaged by several lines of energy. Any unit damaged by Requiem of Souls will be feared and have its movement speed reduced for %requiem_slow_duration% seconds for each line hit up to a maximum of %requiem_slow_duration_max%. Lines of energy are created for every soul captured through Necromastery.  Requiem of Souls is automatically cast whenever Shadow Fiend dies, regardless of its cooldown.",
+    "desc": "Shadow Fiend gathers his captured souls to release them as lines of demonic energy. Units near Shadow Fiend when the souls are released can be damaged by several lines of energy. Any unit damaged by Requiem of Souls will be feared and have its movement speed and magic resistance reduced for %requiem_slow_duration% seconds for each line hit up to a maximum of %requiem_slow_duration_max%. Lines of energy are created for every soul captured through Necromastery.  Requiem of Souls is automatically cast whenever Shadow Fiend dies, regardless of its cooldown.",
     "dmg": [
       "80",
       "120",
@@ -3457,7 +3457,7 @@
   "phantom_lancer_juxtapose": {
     "dname": "Juxtapose",
     "behavior": "Passive",
-    "desc": "Phantom Lancer has a chance to fracture his presence, creating an illusion of himself. Illusions also have a chance to fracture further. Illusions created from Phantom Lancer last for 8 seconds, while illusions created from other illusions last 4 seconds.",
+    "desc": "Phantom Lancer has a chance to fracture his presence on an attack, creating an illusion of himself. Illusions also have a chance to fracture further. Illusions created from Phantom Lancer last for 8 seconds, while illusions created from other illusions last 4 seconds.",
     "attrib": [
       {
         "key": "max_illusions",
@@ -3651,7 +3651,7 @@
       null,
       "Instant Cast"
     ],
-    "desc": "Gives Pudge increased magic resistance, as well as bonus strength that increases each time Pudge kills an enemy Hero or it dies in his vicinity.  Flesh Heap is retroactive, meaning it can gain charges before it is skilled, which then become active.",
+    "desc": "Gives Pudge a guaranteed damage block against all types of attack. Passively grants bonus strength that increases each time Pudge kills an enemy Hero or it dies in his vicinity.  Flesh Heap is retroactive, meaning it can gain charges before it is skilled, which then become active.",
     "attrib": [],
     "mc": "50",
     "cd": [
@@ -4037,7 +4037,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "CHANNELED - Magically binds an enemy unit so that it cannot move or attack, while dealing damage over time.",
+    "desc": "CHANNELED - Magically binds an enemy unit so that it cannot move or attack, absorbing their life energy over time.",
     "attrib": [
       {
         "key": "tick_interval",
@@ -4047,7 +4047,7 @@
       },
       {
         "key": "total_damage",
-        "header": "TOTAL DAMAGE:",
+        "header": "TOTAL DAMAGE/HEAL:",
         "value": [
           "60",
           "130",
@@ -4152,9 +4152,8 @@
       },
       {
         "key": "hits_to_destroy_tooltip_creeps",
-        "header": "HITS TO DESTROY TOOLTIP CREEPS:",
-        "value": "4",
-        "generated": true
+        "header": "CREEP HITS TO DESTROY:",
+        "value": "4"
       },
       {
         "key": "abilitycastrange",
@@ -4552,7 +4551,7 @@
   "skeleton_king_vampiric_aura": {
     "dname": "Vampiric Spirit",
     "behavior": "No Target",
-    "desc": "Restore health based on the damage Wraith King deals when attacking enemy units. Can be cast to summon skeletons with Vampiric Spirit. Every two kills on an enemy unit adds a skeleton charge. Skeletons respawn once when killed. ",
+    "desc": "Restore health based on the damage Wraith King deals when attacking enemy units. Can be cast to summon skeletons with Vampiric Spirit. For every two kills Wraith King or any unit he controls accrue on enemy units, Vampiric Aura adds a skeleton charge. Skeletons respawn once when killed. ",
     "attrib": [
       {
         "key": "vampiric_aura",
@@ -5620,7 +5619,7 @@
       },
       {
         "key": "ball_lightning_travel_cost_percent",
-        "header": "MANA DRAIN PER UNIT:",
+        "header": "MANA DRAIN PER 100 UNITS:",
         "value": "0.65%"
       },
       {
@@ -5892,7 +5891,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Bombards an area with rocks, continously doing small intervals of damage and stun to enemy units. Avalanche does 2.5x damage to units being tossed.",
+    "desc": "Bombards an area with rocks, continously doing small intervals of damage and stun to enemy units. Avalanche does %toss_multiplier%x damage to units being tossed.",
     "attrib": [],
     "mc": "120",
     "cd": [
@@ -5912,7 +5911,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "Yes",
-    "desc": "Grabs the nearest unit in a %grab_radius% radius around Tiny, ally or enemy, and launches it at the target unit or rune to deal damage where they land.  If the tossed unit is an enemy, it will take an extra %bonus_damage_pct%%% damage.",
+    "desc": "Grabs the nearest unit in a %grab_radius% radius around Tiny, ally or enemy, and launches it at the target unit or rune to deal damage where they land.",
     "attrib": [],
     "mc": [
       "90",
@@ -5976,8 +5975,8 @@
       },
       {
         "key": "bonus_damage",
-        "header": "BONUS UNIT DAMAGE:",
-        "value": "20%"
+        "header": "BONUS BASE DAMAGE:",
+        "value": "20"
       },
       {
         "key": "bonus_damage_buildings",
@@ -6140,7 +6139,7 @@
   "tiny_grow": {
     "dname": "Grow",
     "behavior": "Passive",
-    "desc": "Tiny gains craggy mass, increasing his attack damage, and armor, while slowing his attack speed.",
+    "desc": "Tiny gains craggy mass, increasing his attack damage, and armor, and toss power while slowing his attack speed.",
     "attrib": [],
     "img": "/apps/dota2/images/abilities/tiny_grow_md.png"
   },
@@ -6151,7 +6150,7 @@
       "Instant Cast"
     ],
     "bkbpierce": "No",
-    "desc": "Jumps forward a distance of %hop_distance% units. Midway through the jump a Arc Lightning is cast on a an enemy within it’s cast range.",
+    "desc": "Zeus performs a Heavenly Jump shocking the closest visible nearby enemy (prioritizing heroes), Reducing their movement, attack speed and increasing their cast time. If Zeus was moving forward, he will jump towards that direction. Zeus gets 900 unobstructed vision around him for 3 seconds.",
     "attrib": [],
     "mc": [
       "50",
@@ -6368,7 +6367,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Zeus shocks any enemy hit by his abilities, causing damage proportional to their current health.",
+    "desc": "Zeus shocks any enemy that he attacks or is hit by his abilities, causing damage equal to 9% of their current health.",
     "attrib": [],
     "img": "/apps/dota2/images/abilities/zuus_static_field_md.png"
   },
@@ -6512,7 +6511,7 @@
     "behavior": "No Target",
     "dmg_type": "Physical",
     "bkbpierce": "No",
-    "desc": "Slams the ground, stunning and damaging nearby enemy land units.  After the stun, the affected units are slowed.",
+    "desc": "Slams the ground, stunning and damaging nearby enemy units.  After the stun, the affected units are slowed.",
     "attrib": [
       {
         "key": "crush_radius",
@@ -6636,7 +6635,7 @@
     "dname": "Corrosive Haze",
     "behavior": "Unit Target",
     "bkbpierce": "Yes",
-    "desc": "Reduces enemy armor to amplify physical damage and provides True Sight and vision of the targeted unit, revealing invisibility.",
+    "desc": "Reduces enemy armor to amplify physical damage and provides True Sight and vision of the targeted unit, revealing invisibility. The enemy unit leaves a trail of water behind it for 8 seconds.",
     "attrib": [],
     "mc": "25",
     "cd": "5",
@@ -7325,7 +7324,7 @@
   "crystal_maiden_brilliance_aura": {
     "dname": "Arcane Aura",
     "behavior": "Passive",
-    "desc": "Gives additional mana regeneration to all friendly units on the map. This bonus is increased for Crystal Maiden.",
+    "desc": "Gives additional mana regeneration to all friendly units on the map. This bonus is increased for Crystal Maiden. Whenever Crystal Maiden casts a spell, restores some mana to all friendly units within %radius% radius.",
     "attrib": [],
     "img": "/apps/dota2/images/abilities/crystal_maiden_brilliance_aura_md.png"
   },
@@ -7461,7 +7460,7 @@
       null
     ],
     "bkbpierce": "No",
-    "desc": "Summons a strong wind that pushes all enemies within 1000 radius by 250 units per second in the target direction for 3 seconds. Vector Targeted. Global Range. Mana Cost: 150 Cooldown: 40s",
+    "desc": "Summons a strong wind that pushes all enemies within 1000 radius by %wind_strength% units per second in the target direction for 3 seconds. Vector Targeted. Cast Range: %abilitycastrange% Mana Cost: %abilitymanacost% Cooldown: %abilitycooldown%s",
     "attrib": [],
     "mc": "150",
     "cd": "30",
@@ -7549,7 +7548,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Windranger charges her bow for up to %abilitychanneltime% second for a single powerful shot, which deals more damage the longer it is charged. The arrow damages enemies along its path. For each enemy that Powershot hits, its damage is reduced by %damage_reduction%%%.",
+    "desc": "Windranger charges her bow for up to %abilitychanneltime% second for a single powerful shot, which deals more damage the longer it is charged. The arrow damages enemies along its path. For each enemy that Powershot hits, its damage is reduced.",
     "attrib": [],
     "mc": [
       "90",
@@ -7619,7 +7618,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Blasts the target enemy unit with damaging frost, dealing area damage and slowing movement and attack rates for %abilityduration% seconds.  The primary target receives both base and area damage.",
+    "desc": "Blasts the target enemy unit with damaging frost, dealing area damage and slowing movement and attack rates for %abilityduration% seconds.  The primary target receives both base and area damage and extra attack speed slow.",
     "dmg": [
       "40",
       "80",
@@ -7863,7 +7862,7 @@
     "dname": "Frost Shield",
     "behavior": "Unit Target",
     "dmg_type": "Magical",
-    "desc": "Applies a magical frost shield around the target, reducing damage from attacks against you. While the shield is active, ice magic will affect nearby enemy units every 1 seconds, dealing minor damage and slowing them.",
+    "desc": "Applies a magical frost shield around the target, reducing damage from attacks against it. While the shield is active, ice magic will affect nearby enemy units every 1 seconds, dealing minor damage and slowing them.",
     "attrib": [
       {
         "key": "damage_reduction",
@@ -8398,7 +8397,7 @@
       "Point Target"
     ],
     "bkbpierce": "No",
-    "desc": "Throws down a smoke bomb, silencing enemies, and causing them to miss attacks.",
+    "desc": "Throws down a smoke bomb, silencing enemies, and causing them to miss attacks. Allies within the cloud have a chance to dodge projectiles aimed at them.",
     "attrib": [],
     "mc": [
       "65",
@@ -8419,7 +8418,7 @@
     "behavior": "Unit Target",
     "dmg_type": "Magical",
     "bkbpierce": "Yes",
-    "desc": "Teleports behind the target unit, striking for bonus damage if it is an enemy.",
+    "desc": "Teleports behind the target unit, momentarily slowing them and striking for bonus damage if it is an enemy.",
     "attrib": [],
     "mc": "50",
     "cd": "0.1",
@@ -8634,7 +8633,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "Yes",
-    "desc": "Steeps an area in dark resonance, damaging enemy units based on their max HP.",
+    "desc": "Steeps an area in dark resonance, damaging enemy units based on their current HP.",
     "attrib": [
       {
         "key": "radius",
@@ -9141,6 +9140,7 @@
     "img": "/apps/dota2/images/abilities/tinker_rearm_md.png"
   },
   "tinker_warp_grenade": {
+    "dname": "Warp Flare",
     "behavior": [
       "Unit Target",
       null,
@@ -9149,6 +9149,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
+    "desc": "Throws a flare towards an enemy, dealing %damage% damage, teleporting them %knockback_distance% units away and reducing their Cast and Attack Range by %range_reduction%%% for %debuff_duration% seconds",
     "attrib": [],
     "mc": "150",
     "cd": "15",
@@ -9692,7 +9693,7 @@
     "behavior": "Unit Target",
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Stuns the target enemy hero, then deals damage based on how much life it is missing. Heroes killed by Reaper's Scythe will have %respawn_constant% seconds added to their respawn timer. Any kill under this effect is credited to Necrophos.",
+    "desc": "Stuns the target enemy hero, then deals damage based on how much life it is missing. If Necrophos kills an enemy this way, he'll permanently gain Health and Mana Regen. Any kill under this effect is credited to Necrophos.",
     "attrib": [],
     "mc": [
       "200",
@@ -11032,7 +11033,7 @@
     "behavior": "No Target",
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "A spreading ring of poison that does damage over time to enemy units around Venomancer.  Poison Nova cannot deal lethal damage; targets will be left with at least 1 health.",
+    "desc": "A spreading ring of poison that slows attack speed and does damage over time to enemy units around Venomancer.  Poison Nova cannot deal lethal damage; targets will be left with at least 1 health. Enemies slowly recover attack speed over the duration of the buff.",
     "attrib": [],
     "mc": [
       "200",
@@ -11104,7 +11105,7 @@
       "Hidden",
       null
     ],
-    "desc": "Replaces Time Walk with Reverse Time Walk for 1.5 seconds after landing. If used in this period, you will reverse your time walk back to your previous cast location. Does not affect health or proc scepter hits.",
+    "desc": "Available for 1.5 seconds after landing Time Walk. If used in this period, you will reverse your time walk back to your previous cast location. Does not affect health or proc scepter hits.",
     "attrib": [
       {
         "key": "buff_duration",
@@ -11380,7 +11381,7 @@
       null
     ],
     "bkbpierce": "No",
-    "desc": "A powerful banishing spell that slows a unit and renders it unable to attack or be attacked. Afflicted units take extra magic damage.",
+    "desc": "A powerful banishing spell that slows a unit and renders it unable to attack or be attacked. Afflicted units take extra magic damage. Can be cast while channeling.",
     "attrib": [
       {
         "key": "bonus_spell_damage_pct_allies",
@@ -11453,7 +11454,7 @@
     "dname": "Nether Ward",
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Pugna places a Nether Ward at the target location. The ward will fire at any enemy hero who casts a spell dealing base damage plus the damage multiplier of the mana spent by the enemy hero. Nether Ward heals 25% of its total health every time it triggers.",
+    "desc": "Pugna places a Nether Ward at the target location. The ward will fire at any enemy hero who casts a spell dealing base damage plus the damage multiplier of the mana spent by the enemy hero. Heroes within its radius deal reduced damage from their spells.",
     "attrib": [
       {
         "key": "radius",
@@ -11494,8 +11495,7 @@
           "15",
           "20",
           "25"
-        ],
-        "generated": true
+        ]
       },
       {
         "key": "abilitycastrange",
@@ -12020,7 +12020,7 @@
       "Channeled",
       null
     ],
-    "desc": "Allows Templar Assassin to teleport from a nearby Psionic Trap to another after a brief channel. Does not break meld. Detonates both Psionic Traps on arrival.",
+    "desc": "Allows Templar Assassin to teleport to any Psionic Trap after channeling. Does not break Meld. Detonates the Psionic Trap on arrival.",
     "attrib": [
       {
         "key": "trap_radius",
@@ -13180,7 +13180,7 @@
   "dazzle_shallow_grave": {
     "dname": "Shallow Grave",
     "behavior": "Unit Target",
-    "desc": "An ally blessed with Shallow Grave, no matter how close to death, cannot die while under its protection.",
+    "desc": "An ally blessed with Shallow Grave, no matter how close to death, cannot die while under its protection. Healing on that ally is also amplified for the duration based on the hero's HP",
     "attrib": [
       {
         "key": "duration",
@@ -13205,14 +13205,13 @@
       },
       {
         "key": "heal_amplify",
-        "header": "HEAL AMPLIFY:",
+        "header": "HEAL AMPLIFICATION PER 10% MISSING:",
         "value": [
-          "2",
-          "4",
-          "6",
-          "8"
-        ],
-        "generated": true
+          "2%",
+          "4%",
+          "6%",
+          "8%"
+        ]
       },
       {
         "key": "abilitycastrange",
@@ -13250,7 +13249,7 @@
     "behavior": "Unit Target",
     "dmg_type": "Physical",
     "bkbpierce": "Yes",
-    "desc": "Sends out a bolt of power that arcs between allies, healing them while damaging any units standing nearby.  Dazzle is always healed by Shadow Wave.",
+    "desc": "Sends out a bolt of power that arcs between allies, healing them while damaging any enemy units standing nearby.  Dazzle is always healed by Shadow Wave.",
     "attrib": [
       {
         "key": "bounce_radius",
@@ -13370,7 +13369,7 @@
     "dname": "Bad Juju",
     "behavior": "No Target",
     "bkbpierce": "No",
-    "desc": "Passively reduces cooldowns on Dazzle's abilities and items. Anytime he casts a spell, all nearby enemies will have their armor reduced. Debuff stacks and refreshes duration.",
+    "desc": "Whenever a Unit is affected by Dazzle's spells they temporarily gain/lose armor.\n  Can be activated to heal/deal physical damage to units based on the amount of charges they have.",
     "attrib": [],
     "mc": [
       "50",
@@ -13381,7 +13380,9 @@
     "img": "/apps/dota2/images/abilities/dazzle_bad_juju_md.png"
   },
   "dazzle_good_juju": {
+    "dname": "Good Juju",
     "behavior": "Passive",
+    "desc": "Whenever Dazzle Casts a Spell, all of its abilities cooldowns are reduced.",
     "attrib": [],
     "img": "/apps/dota2/images/abilities/dazzle_good_juju_md.png"
   },
@@ -13826,7 +13827,7 @@
     ],
     "dmg_type": "Physical",
     "bkbpierce": "No",
-    "desc": "Causes all nearby enemies in 450 AoE to turn ethereal, preventing them from attacking, causing them to take 30% more magic damage and be slowed by 30% for 4 seconds. Increases Leshrac's speed rather than reducing it. Does not cause you to take amplified damage.",
+    "desc": "Causes Leshrac and all nearby enemies in 450 AoE to turn ethereal, preventing them from attacking, causing them to take 30% more magic damage and be slowed by 30% for 4 seconds. Increases Leshrac's speed rather than reducing it. Does not cause you to take amplified damage.",
     "attrib": [
       {
         "key": "duration",
@@ -14289,7 +14290,7 @@
       null
     ],
     "bkbpierce": "No",
-    "desc": "Lifestealer rends an enemy unit, slowing the victim's movement speed and allowing all allies to regain health for a percentage of the damage they deal to that unit. All damage dealt will steal life, including damage from spells. The victim recovers movement speed over the duration. Deals 2% of the target's max health per attack on the target from real heroes.",
+    "desc": "Lifestealer rends an enemy unit, slowing the victim's movement speed and allowing all allies to regain health for a percentage of the damage they deal to that unit. All damage dealt will steal life, including damage from spells. The victim recovers movement speed over the duration. Deals 2% of the target's max health per attack on the target from real heroes. After receiving %damage_threshold% damage, the Open Wounds fester and spread to a non-infected random enemy within %spread_radius% radius",
     "attrib": [],
     "mc": "75",
     "cd": "15",
@@ -14495,7 +14496,7 @@
       "Hidden",
       null
     ],
-    "desc": "Grants Normal Punch. Passive cooldown attack. Causes Dark Seer's next attack on a hero to have True Strike, knock an illusion out of the victim and stun them for up to 2.25 seconds, 350 distance and 300 magic damage based on how far Dark Seer has moved in the past 3 seconds. Max power is reached after 900 distance moved. Illusions lasts for 8 seconds. Cooldown: 14",
+    "desc": "Passive cooldown attack. Causes Dark Seer's next attack on a hero to have True Strike, knock an illusion out of the victim and stun them for up to 2.25 seconds, 350 distance and 300 magic damage based on how far Dark Seer has moved in the past 3 seconds. Max power is reached after 900 distance moved. Illusions lasts for 8 seconds. Cooldown: 14",
     "attrib": [],
     "cd": "14",
     "img": "/apps/dota2/images/abilities/dark_seer_normal_punch_md.png"
@@ -15036,7 +15037,7 @@
     ],
     "dmg_type": "Pure",
     "bkbpierce": "No",
-    "desc": "Causes Omniknight's next attack to deal bonus pure damage based on %bonus_damage% plus %base_damage%%% of his base damage and reduces all outgoing damage from the target by 60% for the next 4 seconds. Cooldown: 10",
+    "desc": "Omniknight fires his hammer to a target to deal pure damage based on a percentage of his base damage and slows the target.",
     "dmg": "0",
     "attrib": [],
     "mc": [
@@ -15232,7 +15233,9 @@
     "img": "/apps/dota2/images/abilities/omniknight_degen_aura_md.png"
   },
   "omniknight_martyr": {
+    "dname": "Heavenly Grace",
     "behavior": "Unit Target",
+    "desc": "Applies a strong dispel on an ally and grants both them and Omniknight bonus Strength and HP Regen based on the amount of Debuffs dispelled.",
     "attrib": [],
     "mc": [
       "80",
@@ -15370,7 +15373,7 @@
     "dname": "Enchant",
     "behavior": "Unit Target",
     "bkbpierce": "No",
-    "desc": "Enchantress charms an enemy. If the enemy is a hero, they are slowed. If the enemy is a creep, she brings it under her control, increasing its attack damage and max health.\n\nDISPEL TYPE: Basic Dispel",
+    "desc": "Enchantress charms an enemy. If the enemy is a hero, they are slowed. If the enemy is a creep, she brings it under her control, increasing its attack damage and max health. Only one creep can be controlled at a time.\n\nDISPEL TYPE: Basic Dispel",
     "attrib": [
       {
         "key": "dominate_duration",
@@ -15477,7 +15480,7 @@
     ],
     "dmg_type": "Pure",
     "bkbpierce": "No",
-    "desc": "Places an enchantment on each attack while activated, causing it to deal additional damage based on how far away the target is.  The farther the target, the greater the damage dealt.",
+    "desc": "Places an enchantment on each attack while activated, causing it to deal additional damage based on how far away the target is.  The farther the target, the greater the damage dealt. Deals double damage to creeps and illusions.",
     "attrib": [],
     "mc": "50",
     "cd": [
@@ -15682,9 +15685,8 @@
       },
       {
         "key": "abilitycastrange",
-        "header": "ABILITYCASTRANGE:",
-        "value": "450",
-        "generated": true
+        "header": "CAST RANGE:",
+        "value": "450"
       },
       {
         "key": "abilitycastpoint",
@@ -15700,7 +15702,7 @@
   "huskar_berserkers_blood": {
     "dname": "Berserker's Blood",
     "behavior": "Passive",
-    "desc": "Huskar's injuries feed his power, giving increased attack speed and health regen based on missing health. Health regen is a percentage of your strength.",
+    "desc": "Huskar's injuries feed his power, giving increased attack speed, magic resistance and health regen based on missing health. Health regen is a percentage of your strength.",
     "attrib": [
       {
         "key": "maximum_attack_speed",
@@ -15729,14 +15731,13 @@
       },
       {
         "key": "maximum_magic_resist",
-        "header": "MAXIMUM MAGIC RESIST:",
+        "header": "MAX MAGIC RESIST:",
         "value": [
-          "10",
-          "15",
-          "20",
-          "25"
-        ],
-        "generated": true
+          "10%",
+          "15%",
+          "20%",
+          "25%"
+        ]
       }
     ],
     "img": "/apps/dota2/images/abilities/huskar_berserkers_blood_md.png"
@@ -15746,7 +15747,7 @@
     "behavior": "Unit Target",
     "dmg_type": "Magical",
     "bkbpierce": "Yes",
-    "desc": "Huskar draws upon his health to break an enemy's life, leaping at a target within attack range to shatter a percentage of that hero's current health, and slowing them.  While leaping, Huskar is Spell Immune.\n\nDISPEL TYPE: Basic Dispel",
+    "desc": "Huskar draws upon his health to break an enemy's life, leaping at a targe to shatter a percentage of that hero's current health, and slowing them.  While leaping, Huskar is Spell Immune.\n\nDISPEL TYPE: Basic Dispel",
     "attrib": [
       {
         "key": "health_cost_percent",
@@ -15853,7 +15854,7 @@
     "behavior": "Unit Target",
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Creates a damaging void that slows an enemy unit and deals damage.  Void also mini-stuns, interrupting channeling abilities. The slowing effect lasts longer at night.",
+    "desc": "Creates a damaging void that slows an enemy unit and deals damage. At night, Void also mini-stuns, interrupting channeling abilities, and the slowing effect lasts longer.",
     "attrib": [],
     "mc": [
       "80",
@@ -15948,7 +15949,7 @@
       "Point Target",
       "AOE"
     ],
-    "desc": "Spins a large web that grants Broodmother a passive movement speed increase, and boosts regeneration while in its vicinity, as well as giving free movement. Spin Web charges restore every %charge_restore_time% seconds. Spin Web can be cast from anywhere as long as the new web touches an existing web. Webs never expire, and can be manually destroyed. When the maximum limit of webs is exceeded, the oldest web disappears. The movement bonus is proportional to the unit's HP",
+    "desc": "Spins a large web that grants Broodmother a passive movement speed increase, and boosts regeneration while in its vicinity, as well as giving free movement. Spin Web charges restore every %abilitychargerestoretime% seconds, with a max of %AbilityCharges% charges. Spin Web can be cast from anywhere as long as the new web touches an existing web. Webs never expire, and can be manually destroyed. When the maximum limit of webs is exceeded, the oldest web disappears. The movement bonus is proportional to the unit's HP",
     "attrib": [],
     "mc": "50",
     "cd": "0",
@@ -16047,7 +16048,7 @@
     "behavior": "Unit Target",
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Hurls a deadly shuriken at an enemy unit, dealing damage and mini-stunning the target.  The shuriken will bounce to any Tracked units who are within a 1200 radius of each other.",
+    "desc": "Hurls a deadly shuriken at an enemy unit, dealing damage and mini-stunning the target.  The shuriken will bounce to any Tracked units who are within a 1200 radius of each other.  Deals bonus damage to Tracked targets.",
     "attrib": [
       {
         "key": "bonus_damage",
@@ -16497,8 +16498,9 @@
     "attrib": [
       {
         "key": "cooldown_scepter",
-        "header": "SCEPTER COOLDOWN:",
-        "value": "40"
+        "header": "COOLDOWN SCEPTER:",
+        "value": "40",
+        "generated": true
       },
       {
         "key": "cast_range_tooltip_scepter",
@@ -16696,7 +16698,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Jakiro burns his enemies in an area of effect with fire added to his attack, while slowing their attacks.",
+    "desc": "Jakiro burns his enemies in an area of effect with fire added to his attack, while slowing their attacks. Deals 75% damage to buildings",
     "attrib": [
       {
         "key": "slow_attack_speed_pct",
@@ -16725,9 +16727,8 @@
       },
       {
         "key": "abilitycastrange",
-        "header": "ABILITYCASTRANGE:",
-        "value": "600",
-        "generated": true
+        "header": "CAST RANGE:",
+        "value": "600"
       },
       {
         "key": "abilityduration",
@@ -16796,9 +16797,8 @@
       },
       {
         "key": "abilitycastrange",
-        "header": "ABILITYCASTRANGE:",
-        "value": "600",
-        "generated": true
+        "header": "CAST RANGE:",
+        "value": "600"
       },
       {
         "key": "abilitycastpoint",
@@ -17397,7 +17397,7 @@
   "chen_hand_of_god": {
     "dname": "Hand of God",
     "behavior": "No Target",
-    "desc": "Heals all allied heroes on the map as well as all units under Chen's control.",
+    "desc": "Heals all allied heroes on the map as well as all units under Chen's control. A large heal is applied at first and a slow heal over time is applied for %hot_duration% afterwards.",
     "attrib": [],
     "mc": [
       "200",
@@ -17724,7 +17724,7 @@
       "Unit Target",
       "Autocast"
     ],
-    "desc": "Consumes an enemy or neutral creep, acquiring any special abilities that it possessed. If autocast is deactivated, Doom will not acquire the creep's abilities. Duration is equal to the cooldown.",
+    "desc": "Consumes an enemy or neutral creep, acquiring any special abilities that it possessed and gaining armor temporarily while it digests the creep. If autocast is deactivated, Doom will not acquire the creep's abilities. Duration is equal to the cooldown.",
     "attrib": [
       {
         "key": "bonus_gold",
@@ -17993,10 +17993,12 @@
     "img": "/apps/dota2/images/abilities/doom_bringer_empty2_md.png"
   },
   "clinkz_empty1": {
+    "dname": "Creep Ability",
     "behavior": [
       "Passive",
       null
     ],
+    "desc": "This slot will be replaced with abilities acquired using Death Pact.",
     "attrib": [],
     "img": "/apps/dota2/images/abilities/clinkz_empty1_md.png"
   },
@@ -18009,7 +18011,7 @@
     "attrib": [
       {
         "key": "damage",
-        "header": "DAMAGE PER TICK:",
+        "header": "DAMAGE PER SECOND:",
         "value": [
           "30",
           "50",
@@ -19185,7 +19187,7 @@
     ],
     "dmg_type": "Physical",
     "bkbpierce": "No",
-    "desc": "Alchemist brews up an unstable concoction that he can throw at an enemy hero, to stun and deal damage in an area around the explosion. The longer the concoction brews, the more damage it deals and the longer the stun. After 5 seconds, the brew reaches its maximum damage and stun time. However, after 5.5 seconds, the concoction will explode on Alchemist himself if not thrown.",
+    "desc": "Alchemist brews up an unstable concoction that he can throw at an enemy hero, to stun and deal damage in an area around the explosion. The longer the concoction brews, the more damage it deals and the longer the stun. Alchemist is faster while charging the concoction. After 5 seconds, the brew reaches its maximum damage and stun time. However, after 5.5 seconds, the concoction will explode on Alchemist himself if not thrown.",
     "attrib": [
       {
         "key": "brew_time",
@@ -19238,14 +19240,13 @@
       },
       {
         "key": "move_speed",
-        "header": "MOVE SPEED:",
+        "header": "MOVE SPEED BONUS:",
         "value": [
-          "5",
-          "10",
-          "15",
-          "20"
-        ],
-        "generated": true
+          "5%",
+          "10%",
+          "15%",
+          "20%"
+        ]
       },
       {
         "key": "abilitycastrange",
@@ -19500,7 +19501,7 @@
       "No Target",
       "Instant Cast"
     ],
-    "desc": "Allows manipulation of ice elements. Each Quas instance provides increased health regeneration.\n",
+    "desc": "Allows manipulation of ice elements. Passively grants +2 Strength per level. Each Quas instance provides increased health regeneration.\n",
     "attrib": [
       {
         "key": "health_regen_per_instance",
@@ -19526,7 +19527,7 @@
       "No Target",
       "Instant Cast"
     ],
-    "desc": "Allows manipulation of storm elements. Each Wex instance provides increased attack speed and movement speed.",
+    "desc": "Allows manipulation of storm elements. Passively grants +2 Agility per level. Each Wex instance provides increased attack speed and movement speed.",
     "attrib": [],
     "mc": "0",
     "cd": "0",
@@ -19538,7 +19539,7 @@
       "No Target",
       "Instant Cast"
     ],
-    "desc": "Allows manipulation of fire elements. Each Exort instance provides increased attack damage.",
+    "desc": "Allows manipulation of fire elements. Passively grants +2 Intelligence per level. Each Exort instance provides increased attack damage.",
     "attrib": [
       {
         "key": "bonus_damage_per_instance",
@@ -20222,7 +20223,7 @@
       },
       {
         "key": "max_armor_removed",
-        "header": "MAX ARMOR REMOVED:",
+        "header": "MAX STACKS:",
         "value": "20"
       },
       {
@@ -21150,7 +21151,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Curses the target area, causing enemy heroes to take damage and slowing their movement speed. Silenced enemies take 2x slow and damage. Anytime affected enemies cast a spell, the duration is increased. The cooldown is paused as long as the target is silenced.",
+    "desc": "Curses the target area, causing enemy heroes to take damage and slowing their movement speed. Silenced enemies take 1.7x slow and damage. Anytime affected enemies cast a spell, the duration is increased. The cooldown is paused as long as the target is silenced.",
     "attrib": [
       {
         "key": "damage",
@@ -21845,7 +21846,7 @@
   "lone_druid_spirit_bear": {
     "dname": "Summon Spirit Bear",
     "behavior": "No Target",
-    "desc": "Summons a powerful Spirit Bear companion that can equip items.  If the bear moves 1100 distance away from the Lone Druid, it cannot attack.  Lone Druid suffers 20% of his max health as backlash damage if the Spirit Bear dies. Spirit Bear does not benefit from attributes.\nSpirit Bear has the Return, Demolish and Entangling Roots abilities.",
+    "desc": "Summons a powerful Spirit Bear companion that can equip items.  If the bear moves 1100 distance away from the Lone Druid, it cannot attack.  Lone Druid suffers 20% of his max health as backlash damage if the Spirit Bear dies. Spirit Bear does not benefit from attributes.\nSpirit Bear has the Return, Demolish and Entangling Claws abilities.",
     "attrib": [
       {
         "key": "bear_hp",
@@ -21961,7 +21962,7 @@
   "lone_druid_spirit_link": {
     "dname": "Spirit Link",
     "behavior": "Passive",
-    "desc": "Links Lone Druid and the Spirit Bear, increasing the attack speed of both and causing damage dealt by the Spirit Bear to heal Lone Druid.",
+    "desc": "Links Lone Druid and the Spirit Bear, sharing a percentage of their armor with each other, increasing the attack speed of both and causing damage dealt by the Spirit Bear to heal Lone Druid. ",
     "attrib": [],
     "img": "/apps/dota2/images/abilities/lone_druid_spirit_link_md.png"
   },
@@ -22067,7 +22068,7 @@
   "lone_druid_true_form": {
     "dname": "True Form",
     "behavior": "No Target",
-    "desc": "Lone Druid learns to morph himself into a raging bear, losing his ranged advantage, but gaining increased resistance, and improved versions of Entangling Roots and Demolish.",
+    "desc": "Lone Druid learns to morph himself into a raging bear, losing his ranged advantage, but gaining increased resistance, and improved versions of Entangling Claws and Demolish.",
     "attrib": [
       {
         "key": "bonus_armor",
@@ -22375,7 +22376,7 @@
       },
       {
         "key": "duration",
-        "header": "HERO DURATION:",
+        "header": "DURATION:",
         "value": "4"
       },
       {
@@ -22463,7 +22464,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Drenches an area in alcohol, causing enemy units to move slower and ignited once they take any spell damage. Duration is increased by 3 seconds when ignited.",
+    "desc": "Drenches himself and an area in alcohol, causing enemy units to move slower and ignited once they take any spell damage. Duration is increased by 3 seconds when enemies are ignited. While Brewmaster is Brewed Up, His Drunken Brawler Stances are stronger.",
     "attrib": [
       {
         "key": "duration",
@@ -22535,7 +22536,7 @@
       "No Target",
       "Instant Cast"
     ],
-    "desc": "Brewmaster passively gains a chance to evade physical attacks and deal critical damage when attacking.  When activated, Brewmaster goes into a drunken brawler state, granting him increased chance to evade or deal critical damage. Brewmaster moves with a varying amount of movement speed, alternating between %min_movement%%% slower and %max_movement%%% faster. Lasts %duration% seconds.",
+    "desc": "Brewmaster can switch stances based on the elements he controls gaining passive bonuses that improve against enemies affected by Cinder Brew.\nEarth Brawler - Grants %armor% armor and %magic_resist%%% Magic Resistance. Bonuses are %active_multiplier%x when Brewed Up.\nStorm Brawler - Grants %dodge_chance%%% evasion and %bonus_move_speed%%% Bonus Move Speed. Bonuses are %active_multiplier%x when Brewed Up\nFire Brawler Grants %crit_chance%%% chance to crit for %crit_multiplier%%% of your attack damage. Chance is %active_multiplier%x when Brewed Up.",
     "attrib": [],
     "mc": "0",
     "cd": "0",
@@ -22661,29 +22662,26 @@
     "behavior": "No Target",
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Damages, Disarms and Slows enemies within a 500 radius",
+    "desc": "Disarms and Slows nearby enemies.",
     "attrib": [
       {
         "key": "radius",
-        "header": "RADIUS:",
-        "value": "500",
-        "generated": true
+        "header": "RADIUS",
+        "value": "500"
       },
       {
         "key": "duration",
-        "header": "DURATION:",
-        "value": "2.5",
-        "generated": true
+        "header": "DURATION",
+        "value": "2.5"
       },
       {
         "key": "slow",
-        "header": "SLOW:",
+        "header": "SLOW",
         "value": [
-          "20",
-          "30",
-          "40"
-        ],
-        "generated": true
+          "20%",
+          "30%",
+          "40%"
+        ]
       },
       {
         "key": "abilitycastrange",
@@ -23221,9 +23219,11 @@
     "img": "/apps/dota2/images/abilities/shadow_demon_demonic_purge_md.png"
   },
   "shadow_demon_demonic_cleanse": {
+    "dname": "Demonic Cleanse",
     "behavior": "Unit Target",
     "dmg_type": "Magical",
     "bkbpierce": "Yes",
+    "desc": "Cleanses the target allied unit, removing negative buffs for the duration.  At the end of the duration, the unit is healed. Units under the effect of Disruption can still be affected by Demonic Cleanse. Gains Charges with Scepter.\n\nDISPEL TYPE: Basic Dispel",
     "attrib": [],
     "mc": [
       "150",
@@ -23392,7 +23392,7 @@
     "dname": "Chaos Strike",
     "behavior": "Passive",
     "bkbpierce": "Yes",
-    "desc": "Chaos Knight's attacks have a chance to deal a critical strike of varying strength, in addition to a lifesteal for percentage of the damage.",
+    "desc": "Chaos Knight and his illusions' attacks have a chance to deal a critical strike of varying strength, in addition to a lifesteal for percentage of the damage. Deals %creep_multiplier%x damage to creeps",
     "attrib": [],
     "img": "/apps/dota2/images/abilities/chaos_knight_chaos_strike_md.png"
   },
@@ -23685,7 +23685,7 @@
     "behavior": "Passive",
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Meepo summons an imperfect, semi-autonomous duplicate of himself, which can gain gold and experience as he does and shares his experience, attributes and abilities. However, the clones cannot wield any items but the boots that Meepo himself wears.  If any of the clones die, they all die.",
+    "desc": "Meepo summons an imperfect, semi-autonomous duplicate of himself, which can gain gold and experience as he does and shares his experience, attributes and abilities. However, the clones cannot wield any items but the boots that Meepo himself wears.  If any of the clones die, they all die. Divided We Stand grants all Meepos bonus Magic Resistance",
     "dmg": "100",
     "attrib": [],
     "mc": "0",
@@ -24132,7 +24132,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Creates a shield around the target ally, absorbing 85% of the damage of next 3 attacks. Launches fireballs at the attacker, dealing 125 damage.Lasts 25 seconds.",
+    "desc": "Creates a shield around the target ally, absorbing 85% of the damage of next 3 attacks from heroes. Launches fireballs at the attacker, dealing 125 damage.Lasts 25 seconds.",
     "attrib": [
       {
         "key": "damage",
@@ -24428,7 +24428,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Undying steals strength from all enemy heroes in an area, dealing base damage as he claims the enemy's strength for himself.",
+    "desc": "Undying steals strength from all enemy heroes in an area, dealing base damage as he claims the enemy's strength for himself. Deals 2x damage to creeps.",
     "attrib": [
       {
         "key": "decay_damage",
@@ -25821,7 +25821,7 @@
     "behavior": "Passive",
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "The Naga Siren and her images have a chance on attack to hit all nearby units with a damaging wave of water that lowers armor for %duration% seconds.",
+    "desc": "Every %hits% attack on a unit, the Naga Siren and her images will hit all nearby units with a damaging wave of water that lowers armor for %duration% seconds.",
     "attrib": [],
     "img": "/apps/dota2/images/abilities/naga_siren_rip_tide_md.png"
   },
@@ -26427,7 +26427,7 @@
       null
     ],
     "bkbpierce": "No",
-    "desc": "A blinding light flashes over the targeted area, knocking back and blinding the units in the area, causing them to miss some attacks. Knockback is 400 range over 0.8 seconds,",
+    "desc": "A blinding light flashes over the targeted area, knocking back and blinding the units in the area, causing them to miss some attacks. Knockback is 400 range over 0.8 seconds.",
     "attrib": [
       {
         "key": "miss_rate",
@@ -27030,7 +27030,7 @@
   "wisp_tether": {
     "dname": "Tether",
     "behavior": "Unit Target",
-    "desc": "Tethers Io to an allied unit, granting bonus movement speed to both. When Io restores health or mana, tethered units target gains a larger portion of that amount. The tether breaks when the allied unit moves too far away, or Io cancels the tether.",
+    "desc": "Tethers Io to an allied unit, granting bonus movement speed to both. When Io restores health or mana, the tethered unit gains a larger portion of that amount. The tether breaks when the allied unit moves too far away, or Io cancels the tether.",
     "attrib": [],
     "mc": "40",
     "cd": "12",
@@ -27212,7 +27212,7 @@
     "img": "/apps/dota2/images/abilities/wisp_tether_break_md.png"
   },
   "wisp_spirits_in": {
-    "dname": "Spirits Movement",
+    "dname": "Spirits In",
     "behavior": [
       "Instant Cast",
       null,
@@ -27390,7 +27390,7 @@
     "behavior": "No Target",
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Slark leaps forward, grabbing the first hero he connects with.  That unit is leashed, and can only move a limited distance away from Slark's landing position.",
+    "desc": "Slark leaps forward, grabbing the first hero he connects with dealing damage to it.  That unit is leashed, and can only move a limited distance away from Slark's landing position.",
     "attrib": [],
     "mc": "75",
     "cd": [
@@ -28071,7 +28071,7 @@
       "Instant Cast"
     ],
     "dmg_type": "Magical",
-    "desc": "Centaur leads all allies into a vicious charge causing them to move through units at max speed and stop any enemy units they trample. Trampled enemies take damage based on Centaur Warrunner's strength. Each enemy can be trampled once.",
+    "desc": "Centaur leads all allies into a vicious charge causing them to move through units at max speed and slow any enemy units they trample. Trampled enemies take damage based on Centaur Warrunner's strength. Each enemy can be trampled once.",
     "attrib": [],
     "mc": [
       "150",
@@ -28796,9 +28796,8 @@
       },
       {
         "key": "scepter_bonus_damage",
-        "header": "SCEPTER BONUS DAMAGE:",
-        "value": "20",
-        "generated": true
+        "header": "SCEPTER BONUS DAMAGE PER SECOND:",
+        "value": "20"
       },
       {
         "key": "abilitycastrange",
@@ -28903,9 +28902,8 @@
       },
       {
         "key": "scepter_bonus_damage",
-        "header": "SCEPTER BONUS DAMAGE:",
-        "value": "20",
-        "generated": true
+        "header": "SCEPTER BONUS DAMAGE PER SECOND:",
+        "value": "20"
       },
       {
         "key": "abilitycastrange",
@@ -28943,7 +28941,7 @@
     "img": "/apps/dota2/images/abilities/shredder_return_chakram_md.png"
   },
   "shredder_return_chakram_2": {
-    "dname": "Return Chakram",
+    "dname": "Return Second Chakram",
     "behavior": [
       "No Target",
       "Instant Cast",
@@ -29394,8 +29392,9 @@
       },
       {
         "key": "snowball_windup_radius",
-        "header": "GATHER RADIUS:",
-        "value": "100"
+        "header": "SNOWBALL WINDUP RADIUS:",
+        "value": "100",
+        "generated": true
       },
       {
         "key": "snowball_duration",
@@ -29422,9 +29421,8 @@
       },
       {
         "key": "snowball_grab_radius",
-        "header": "SNOWBALL GRAB RADIUS:",
-        "value": "350",
-        "generated": true
+        "header": "GATHER RADIUS:",
+        "value": "350"
       },
       {
         "key": "snowball_speed_bonus",
@@ -29645,7 +29643,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "Yes",
-    "desc": "Kicks the closest enemy unit in a targeted direction, stunning and damaging them.",
+    "desc": "Kicks the closest enemy unit in a targeted direction, stunning and damaging them. Also deals damage to all heroes within %search_radius% radius of its landing area. Cooldown is reduced by 50% if kicking a creep.",
     "attrib": [],
     "mc": "100",
     "cd": "12",
@@ -30306,6 +30304,7 @@
     "img": "/apps/dota2/images/abilities/elder_titan_return_spirit_md.png"
   },
   "elder_titan_move_spirit": {
+    "dname": "Move Astral Spirit",
     "behavior": [
       "Instant Cast",
       null,
@@ -30313,6 +30312,7 @@
       "Hidden",
       null
     ],
+    "desc": "Moves the Astral Spirit to target location.",
     "attrib": [],
     "cd": "0",
     "img": "/apps/dota2/images/abilities/elder_titan_move_spirit_md.png"
@@ -30735,7 +30735,7 @@
     ],
     "dmg_type": "Physical",
     "bkbpierce": "Yes",
-    "desc": "Ember Spirit dashes around with blazing speed, attacking all enemies in the targeted area of effect, then returning to his start location.  Deals bonus damage to heroes, and less damage to creeps.",
+    "desc": "Ember Spirit dashes around with blazing speed, attacking all enemies in the targeted area of effect, then returning to his start location.  Deals bonus damage to heroes.",
     "attrib": [
       {
         "key": "radius",
@@ -30765,7 +30765,8 @@
       {
         "key": "creep_damage_penalty",
         "header": "CREEP DAMAGE PENALTY:",
-        "value": "0%"
+        "value": "0",
+        "generated": true
       },
       {
         "key": "AbilityCharges",
@@ -30800,7 +30801,7 @@
     "behavior": "No Target",
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Ember Spirit surrounds himself with a ring of fire that consumes incoming magic damage, leaving him unharmed.  Flame Guard deals damage per second in an area around Ember Spirit while Flame Guard is active.  If the shield is broken, the damage is also lost.",
+    "desc": "Ember Spirit surrounds himself with a ring of fire that consumes incoming magic damage, absorbing a percentage of the damage taken.  Flame Guard deals damage per second in an area around Ember Spirit while Flame Guard is active.  If the shield is broken, the damage is also lost.",
     "attrib": [],
     "mc": [
       "80",
@@ -30816,7 +30817,7 @@
     "behavior": "Point Target",
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Ember Spirit generates Fire Remnant charges every 38 seconds, with a max of 3 charges. Releasing a charge sends a Fire Remnant that runs to the target location at 250% Ember Spirit's speed.  Using Activate Fire Remnant, Ember Spirit can dash out to his Remnants, dealing damage along the way and exploding them upon arrival.  The targeted Remnant will be arrived at last.",
+    "desc": "Ember Spirit generates Fire Remnant charges every 38 seconds, with a max of %AbilityCharges% charges. Releasing a charge sends a Fire Remnant that runs to the target location at 250% Ember Spirit's speed.  Using Activate Fire Remnant, Ember Spirit can dash out to his Remnants, dealing damage along the way and exploding them upon arrival.  The targeted Remnant will be arrived at last.",
     "attrib": [
       {
         "key": "speed_multiplier",
@@ -31082,7 +31083,7 @@
     "behavior": "Point Target",
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Earth Spirit gathers himself into a boulder and, after a 0.5s delay, rolls toward the target location, damaging and stunning enemy units. He will stop if he collides with an enemy hero or is stunned. If he rolls over a Stone Remnant, he will travel further and faster, and stun enemies for longer.",
+    "desc": "Earth Spirit gathers himself into a boulder and, after a 0.5s delay, rolls toward the target location, dealing 30 + 100% STR damage and stunning enemy units. He will stop if he collides with an enemy hero or is stunned. If he rolls over a Stone Remnant, he will travel further and faster, and stun enemies for longer.",
     "attrib": [
       {
         "key": "radius",
@@ -31107,9 +31108,8 @@
       },
       {
         "key": "rock_distance_multiplier",
-        "header": "ROCK DISTANCE MULTIPLIER:",
-        "value": "2",
-        "generated": true
+        "header": "DISTANCE MULTIPLIER (REMNANT):",
+        "value": "2"
       },
       {
         "key": "delay",
@@ -31309,7 +31309,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Earth Spirit temporarily enchants a hero, granting them the properties of a Stone Remnant. After a short duration the remnant shatters, releasing the hero and damaging nearby enemies. Can be cast on Stone Remnants. Has a 5 second cooldown when used that way.",
+    "desc": "Earth Spirit temporarily enchants a hero, granting them the properties of a Stone Remnant. After a short duration the remnant shatters, releasing the hero and damaging nearby enemies. Can be cast on Stone Remnants. Has a 5 second cooldown when used that way.Has a larger cast range when cast on an ally hero.",
     "attrib": [],
     "mc": "150",
     "cd": "45",
@@ -31458,9 +31458,8 @@
       },
       {
         "key": "speed_bonus",
-        "header": "SPEED BONUS:",
-        "value": "40",
-        "generated": true
+        "header": "SCEPTER SLOW:",
+        "value": "40%"
       },
       {
         "key": "abilitycastrange",
@@ -31637,7 +31636,7 @@
       null
     ],
     "bkbpierce": "No",
-    "desc": "Opens 2 portals, one next to Underlord and one in the target location up to 4000 range. Allies can channel a portal for 2 seconds to teleport to the other side.",
+    "desc": "Opens 2 portals, one next to Underlord and one in the target location. Heroes can channel a portal for 2 seconds to teleport to the other side. Allies that pass through the portal temporarily gain Damage Reduction and Movement Speed. Portals have to be at least %minimum_distance% away from each other",
     "attrib": [],
     "mc": "100",
     "cd": [
@@ -32596,12 +32595,14 @@
     "img": "/apps/dota2/images/abilities/oracle_false_promise_md.png"
   },
   "oracle_rain_of_destiny": {
+    "dname": "Rain of Destiny",
     "behavior": [
       "Point Target",
       "AOE"
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
+    "desc": "Brings forth rain on a %radius% unit area for %duration% seconds. Enemies standing in the area receive %damage% damage per second and have %heal_amp%%% reduced heal amplification. Allies heal %damage% health per second and have %heal_amp%%% increased incoming heal amplification",
     "attrib": [],
     "mc": "150",
     "cd": "40",
@@ -33081,7 +33082,7 @@
     "dname": "Jingu Mastery",
     "behavior": "Passive",
     "bkbpierce": "Yes",
-    "desc": "Monkey King's attacks awaken the Jingu Bang's power. Upon the fourth hit on the same enemy hero, Monkey King earns four charged attacks that have bonus damage and lifesteal.",
+    "desc": "Monkey King's attacks awaken the Jingu Bang's power. Upon the fourth hit on the same enemy hero, Monkey King earns four charged attacks that have bonus damage and lifesteal. Monkey King Soldiers also increase the counter.",
     "attrib": [
       {
         "key": "required_hits",
@@ -33667,8 +33668,7 @@
       {
         "key": "damage_per_tick",
         "header": "DAMAGE PER TICK:",
-        "value": "50",
-        "generated": true
+        "value": "50"
       },
       {
         "key": "latch_creation_interval",
@@ -35727,16 +35727,16 @@
     "dname": "+6 Mortimer Kisses Launched"
   },
   "special_bonus_unique_snapfire_2": {
-    "dname": "+1s Scatterblast Slow Duration"
+    "dname": "+{s:bonus_buffed_attacks} Lil Shredder attacks"
   },
   "special_bonus_unique_snapfire_3": {
-    "dname": "Scatterblast Applies {s:value}s Disarm"
+    "dname": "+{s:bonus_impact_stun_duration}s Firesnap Cookie Stun"
   },
   "special_bonus_unique_snapfire_4": {
     "dname": "+20% Mortimer Kisses Movement Slow"
   },
   "special_bonus_unique_snapfire_5": {
-    "dname": "Firesnap Cookie Restores {s:value} Health"
+    "dname": "Firesnap Cookie Restores {s:bonus_target_heal} Health"
   },
   "special_bonus_unique_snapfire_6": {
     "dname": "Lil' Shredder Uses Your Attack Damage"
@@ -35757,7 +35757,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Tosses a boomerang at the target enemy in an arc. Upon contact, it returns to Hoodwink.  The boomerang will deal damage as it passes through or hits enemies, and apply a Hunter's Mark that causes affected enemies to be slowed and be more vulnerable to spell damage and have reduced status resistance.",
+    "desc": "Tosses a boomerang in an arc. Upon contact, it returns to Hoodwink.  The boomerang will deal damage as it passes through or hits enemies, and apply a Hunter's Mark that causes affected enemies to be slowed and be more vulnerable to spell damage and have reduced status resistance.",
     "attrib": [
       {
         "key": "speed",
@@ -36234,7 +36234,9 @@
   "special_bonus_unique_hoodwink_sharpshooter_pure_damage": {
     "dname": "Sharpshooter Pierces Spell Immunity"
   },
-  "special_bonus_unique_hoodwink_bushwhack_radius": {},
+  "special_bonus_unique_hoodwink_bushwhack_radius": {
+    "dname": "+{s:bonus_trap_radius} Bushwhack Radius"
+  },
   "special_bonus_unique_hoodwink_bushwhack_cooldown": {
     "dname": "-4s Bushwhack Cooldown"
   },
@@ -36242,7 +36244,7 @@
     "dname": "+60 Bushwhack Damage"
   },
   "special_bonus_unique_hoodwink_scurry_duration": {
-    "dname": "+1 Scurry Duration"
+    "dname": "+1s Scurry Duration"
   },
   "special_bonus_unique_hoodwink_acorn_shot_bounces": {
     "dname": "+2 Acorn Shot Bounces"
@@ -36264,12 +36266,12 @@
       },
       {
         "key": "swipe_radius",
-        "header": "SWIPE RADIUS:",
+        "header": "SWIPE/SMASH RADIUS:",
         "value": "300"
       },
       {
         "key": "swipe_damage",
-        "header": "SWIPE BONUS DAMAGE:",
+        "header": "SWIPE/SMASH BONUS DAMAGE:",
         "value": [
           "25",
           "40",
@@ -36280,17 +36282,19 @@
       {
         "key": "smash_radius",
         "header": "SMASH RADIUS:",
-        "value": "300"
+        "value": "300",
+        "generated": true
       },
       {
         "key": "smash_damage",
-        "header": "SMASH BONUS DAMAGE:",
+        "header": "SMASH DAMAGE:",
         "value": [
           "25",
           "40",
           "55",
           "70"
-        ]
+        ],
+        "generated": true
       },
       {
         "key": "movement_speed",
@@ -37573,36 +37577,43 @@
     "img": "/apps/dota2/images/abilities/centaur_khan_war_stomp_md.png"
   },
   "ogre_bruiser_ogre_smash": {
+    "dname": "Ogre Smash!",
     "behavior": [
       "Point Target",
       null
     ],
     "dmg_type": "Magical",
+    "desc": "Ogre slowly charges a big attack stunning for %hero_stun_duration% seconds and dealing %damage% + %damage_pct%%% of their current HP damage to all units in front of him.",
     "attrib": [],
     "mc": "0",
     "cd": "12",
     "img": "/apps/dota2/images/abilities/ogre_bruiser_ogre_smash_md.png"
   },
   "giant_wolf_intimidate": {
+    "dname": "Intimidate",
     "behavior": "No Target",
     "dmg_type": "Magical",
+    "desc": "The Giant Wolf's ferocious roar reduces all nearby enemies total attack damage.",
     "attrib": [
       {
         "key": "radius",
         "header": "RADIUS:",
-        "value": "300",
-        "generated": true
+        "value": "300"
       },
       {
         "key": "damage_reduction",
-        "header": "DAMAGE REDUCTION:",
-        "value": "50",
-        "generated": true
+        "header": "TOTAL ATTACK DAMAGE REDUCTION:",
+        "value": "50%"
       },
       {
         "key": "duration",
         "header": "DURATION:",
-        "value": "4",
+        "value": "4"
+      },
+      {
+        "key": "abilitycastpoint",
+        "header": "ABILITYCASTPOINT:",
+        "value": "0.2",
         "generated": true
       }
     ],
@@ -37611,40 +37622,43 @@
     "img": "/apps/dota2/images/abilities/giant_wolf_intimidate_md.png"
   },
   "fel_beast_haunt": {
+    "dname": "Vex",
     "behavior": "Unit Target",
     "dmg_type": "Magical",
     "bkbpierce": "No",
+    "desc": "Silences target unit.",
     "attrib": [],
     "mc": "75",
     "cd": "15",
     "img": "/apps/dota2/images/abilities/fel_beast_haunt_md.png"
   },
   "hill_troll_rally": {
+    "dname": "Rally",
     "behavior": "Passive",
+    "desc": "Skeleton's allies gain bonus attack damage. This Aura stacks.",
     "attrib": [
       {
         "key": "radius",
         "header": "RADIUS:",
-        "value": "1200",
-        "generated": true
+        "value": "1200"
       },
       {
         "key": "damage_bonus",
-        "header": "DAMAGE BONUS:",
-        "value": "3",
-        "generated": true
+        "header": "BONUS DAMAGE:",
+        "value": "3"
       }
     ],
     "img": "/apps/dota2/images/abilities/hill_troll_rally_md.png"
   },
   "berserker_troll_break": {
+    "dname": "Break",
     "behavior": "Passive",
+    "desc": "Whenever Hill Troll Berserker attacks a unit it applies break to it.",
     "attrib": [
       {
         "key": "duration",
         "header": "DURATION:",
-        "value": "3",
-        "generated": true
+        "value": "3"
       }
     ],
     "cd": "10",
@@ -37722,12 +37736,13 @@
     "dname": "Envenomed Weapon",
     "behavior": "Passive",
     "dmg_type": "Magical",
-    "desc": "The Vhoul Assassin has soaked his weapons in his own blend of painful predator venoms. Heroes recover from the poison more quickly.",
+    "desc": "The Vhoul Assassin has soaked his weapons in his own blend of painful predator venoms that causes his enemies' natural regeneration to work against themselves. Heroes recover from the poison more quickly.",
     "attrib": [
       {
         "key": "damage_per_second",
         "header": "DAMAGE PER SECOND:",
-        "value": "0"
+        "value": "0",
+        "generated": true
       },
       {
         "key": "non_hero_duration",
@@ -37899,7 +37914,7 @@
   "dark_troll_warlord_raise_dead": {
     "dname": "Raise Dead",
     "behavior": "No Target",
-    "desc": "The Dark Troll Summoner stirs the ground underfoot, raising the remains of trolls long dead, bringing to life two skeleton Warriors who will fight at his side.",
+    "desc": "The Dark Troll Summoner stirs the ground underfoot, raising the remains of trolls long dead, bringing to life three skeleton Warriors who will fight at his side.",
     "attrib": [
       {
         "key": "duration",
@@ -37962,12 +37977,14 @@
     "img": "/apps/dota2/images/abilities/mud_golem_rock_destroy_md.png"
   },
   "warpine_raider_seed_shot": {
+    "dname": "Seed Shot",
     "behavior": [
       "Unit Target",
       null
     ],
     "dmg_type": "Magical",
     "bkbpierce": "Yes",
+    "desc": "Hucks a seed at a target, slowing and damaging it. The seed can bounce multiple times to nearby targets.",
     "attrib": [],
     "mc": "100",
     "cd": "15",
@@ -37978,7 +37995,7 @@
     "behavior": "Unit Target",
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Hurls a boulder at the target, damaging and stunning them. Golems do not do this unless commanded to.",
+    "desc": "Hurls a boulder at the target, damaging and stunning them.",
     "attrib": [],
     "mc": "0",
     "cd": "30",
@@ -38028,26 +38045,34 @@
     "img": "/apps/dota2/images/abilities/alpha_wolf_command_aura_md.png"
   },
   "frostbitten_golem_time_warp_aura": {
+    "dname": "Time Warp Aura",
     "behavior": "Passive",
+    "desc": "Coming from a different era, the Frostbitten Golem has an innate control of time, speeding up the cooldowns of all nearby allies.",
     "attrib": [],
     "img": "/apps/dota2/images/abilities/frostbitten_golem_time_warp_aura_md.png"
   },
   "ice_shaman_incendiary_bomb": {
+    "dname": "Icefire Bomb",
     "behavior": "Unit Target",
     "dmg_type": "Magical",
     "bkbpierce": "No",
+    "desc": "The Ice Shaman chucks a blue flame towards an enemy unit or building, dealing damage over time.",
     "attrib": [],
     "mc": "100",
     "cd": "30",
     "img": "/apps/dota2/images/abilities/ice_shaman_incendiary_bomb_md.png"
   },
   "ancient_rock_golem_weakening_aura": {
+    "dname": "Weakening Aura",
     "behavior": "Passive",
+    "desc": "The Rock Golem's imposing figure makes enemies more susceptible to Physical Damage.",
     "attrib": [],
     "img": "/apps/dota2/images/abilities/ancient_rock_golem_weakening_aura_md.png"
   },
   "black_drake_magic_amplification_aura": {
+    "dname": "Magic Amplification Aura",
     "behavior": "Passive",
+    "desc": "The Black Drakes' gaze make enemies more susceptible to Spell Damage.",
     "attrib": [],
     "img": "/apps/dota2/images/abilities/black_drake_magic_amplification_aura_md.png"
   },
@@ -38102,17 +38127,23 @@
     "img": "/apps/dota2/images/abilities/neutral_upgrade_md.png"
   },
   "creep_siege": {
+    "dname": "Reinforced",
     "behavior": "Passive",
+    "desc": "Reinforced Units and Buildings Deal Bonus Damage to other Reinforced Units and Buildings and take less attack damage from other units.",
     "attrib": [],
     "img": "/apps/dota2/images/abilities/creep_siege_md.png"
   },
   "creep_piercing": {
+    "dname": "Piercing",
     "behavior": "Passive",
+    "desc": "Piercing Units Deal Bonus Damage to non-hero, non-heavy units and reduced damage to heroes and heavy units",
     "attrib": [],
     "img": "/apps/dota2/images/abilities/creep_piercing_md.png"
   },
   "creep_irresolute": {
+    "dname": "Runty",
     "behavior": "Passive",
+    "desc": "Runty Units Deal reduced damage to hero units",
     "attrib": [],
     "img": "/apps/dota2/images/abilities/creep_irresolute_md.png"
   },
@@ -38123,18 +38154,17 @@
       null
     ],
     "dmg_type": "Magical",
-    "desc": "CHANNELED - The Wildwing Ripper calls on the spirit of the wind, creating a sentient Tornado that he can control. The Tornado slows nearby enemies and does damage. It is invulnerable and can move anywhere.",
+    "desc": "CHANNELED - The Wildwing calls on the spirit of the wind, creating a sentient Tornado that he can control. The Tornado slows nearby enemies and does damage. It is invulnerable and can move anywhere.",
     "attrib": [
       {
         "key": "duration",
-        "header": "MAX DURATION:",
+        "header": "MAX CHANNEL DURATION:",
         "value": "15"
       },
       {
         "key": "linger_duration",
-        "header": "LINGER DURATION:",
-        "value": "5",
-        "generated": true
+        "header": "DURATION AFTER CHANNEL:",
+        "value": "5"
       },
       {
         "key": "abilitycastrange",
@@ -38160,17 +38190,30 @@
     "img": "/apps/dota2/images/abilities/enraged_wildkin_tornado_md.png"
   },
   "enraged_wildkin_hurricane": {
+    "dname": "Hurricane",
     "behavior": [
       "Unit Target",
       null
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
+    "desc": "The Wildwing Ripper calls on the spirit of the wind, creating a hurricane that can push a unit in the direction of Wildwing Ripper's choice.",
     "attrib": [
       {
         "key": "distance",
-        "header": "DISTANCE:",
+        "header": "DISTANCE PUSHED:",
+        "value": "400"
+      },
+      {
+        "key": "abilitycastrange",
+        "header": "ABILITYCASTRANGE:",
         "value": "400",
+        "generated": true
+      },
+      {
+        "key": "abilitycastpoint",
+        "header": "ABILITYCASTPOINT:",
+        "value": "0",
         "generated": true
       }
     ],
@@ -38179,13 +38222,14 @@
     "img": "/apps/dota2/images/abilities/enraged_wildkin_hurricane_md.png"
   },
   "kobold_disarm": {
+    "dname": "Steal Weapon",
     "behavior": "Passive",
+    "desc": "Every third attack Kobold Soldier will disarm its target temporarily. Attack counter doesn't increase while ability is on cooldown",
     "attrib": [
       {
         "key": "duration",
         "header": "DURATION:",
-        "value": "3",
-        "generated": true
+        "value": "3"
       }
     ],
     "cd": "9",
@@ -38462,21 +38506,27 @@
     "img": "/apps/dota2/images/abilities/forest_troll_high_priest_heal_md.png"
   },
   "harpy_scout_take_off": {
+    "dname": "Take Off",
     "behavior": [
       "No Target",
       null
     ],
+    "desc": "Harpy Scout gains flying movement at the cost of movement speed. Consumes mana while active.",
     "attrib": [
       {
         "key": "move_speed_penalty",
-        "header": "MOVE SPEED PENALTY:",
-        "value": "50",
-        "generated": true
+        "header": "MOVEMENT SPEED PENALTY:",
+        "value": "50%"
       },
       {
         "key": "cost_per_second",
-        "header": "COST PER SECOND:",
-        "value": "2.5",
+        "header": "MAX MANA COST PER SECOND:",
+        "value": "2.5%"
+      },
+      {
+        "key": "abilitycastpoint",
+        "header": "ABILITYCASTPOINT:",
+        "value": "1.5",
         "generated": true
       }
     ],
@@ -38485,67 +38535,65 @@
     "img": "/apps/dota2/images/abilities/harpy_scout_take_off_md.png"
   },
   "furbolg_enrage_attack_speed": {
+    "dname": "Death Throe: Rush",
     "behavior": "Passive",
+    "desc": "When Hellbear dies, all nearby allies go into a frenzy gaining attack speed for a short amount of time.",
     "attrib": [
       {
         "key": "bonus_aspd",
-        "header": "BONUS ASPD:",
-        "value": "100",
-        "generated": true
+        "header": "ATTACK SPEED:",
+        "value": "100"
       },
       {
         "key": "duration",
         "header": "DURATION:",
-        "value": "5",
-        "generated": true
+        "value": "5"
       },
       {
         "key": "radius",
         "header": "RADIUS:",
-        "value": "700",
-        "generated": true
+        "value": "700"
       }
     ],
     "img": "/apps/dota2/images/abilities/furbolg_enrage_attack_speed_md.png"
   },
   "furbolg_enrage_damage": {
+    "dname": "Death Throe: Power",
     "behavior": "Passive",
+    "desc": "When Hellbear Smasher dies, all nearby allies go into a rampage gaining bonus attack damage for a short amount of time.",
     "attrib": [
       {
         "key": "bonus_dmg_pct",
-        "header": "BONUS DMG PCT:",
-        "value": "50",
-        "generated": true
+        "header": "BASE ATTACK DAMAGE BONUS:",
+        "value": "50%"
       },
       {
         "key": "duration",
         "header": "DURATION:",
-        "value": "5",
-        "generated": true
+        "value": "5"
       },
       {
         "key": "radius",
         "header": "RADIUS:",
-        "value": "700",
-        "generated": true
+        "value": "700"
       }
     ],
     "img": "/apps/dota2/images/abilities/furbolg_enrage_damage_md.png"
   },
   "kobold_tunneler_prospecting": {
+    "dname": "Prospecting Aura",
     "behavior": "Passive",
+    "desc": "Kobolds are adept at finding gold, increasing nearby allied heroes' GPM.",
     "attrib": [
       {
         "key": "gpm_aura",
-        "header": "GPM AURA:",
-        "value": "20",
-        "generated": true
+        "header": "GOLD PER MINUTE:",
+        "value": "20"
       },
       {
         "key": "radius",
         "header": "RADIUS:",
-        "value": "1200",
-        "generated": true
+        "value": "1200"
       }
     ],
     "img": "/apps/dota2/images/abilities/kobold_tunneler_prospecting_md.png"
@@ -38925,19 +38973,19 @@
     "img": "/apps/dota2/images/abilities/forest_troll_high_priest_mana_aura_md.png"
   },
   "forest_troll_high_priest_heal_amp_aura": {
+    "dname": "Heal Amplification Aura",
     "behavior": "Passive",
+    "desc": "Provides bonus Heal Amplification to all nearby allies.",
     "attrib": [
       {
         "key": "heal_amp",
-        "header": "HEAL AMP:",
-        "value": "15",
-        "generated": true
+        "header": "HEAL AMPLIFICATION:",
+        "value": "15%"
       },
       {
         "key": "radius",
         "header": "RADIUS:",
-        "value": "1200",
-        "generated": true
+        "value": "1200"
       }
     ],
     "img": "/apps/dota2/images/abilities/forest_troll_high_priest_heal_amp_aura_md.png"
@@ -40999,7 +41047,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Plant an invisible mine that cannot be detected by True Sight, but is visible if an enemy is within the active %radius% AoE of the mine. Mines detonate if an enemy is standing within the active AoE for %proximity_threshold% seconds. The explosion deals full damage in the blast radius, and deals %building_damage_pct%%% damage to buildings.",
+    "desc": "Plant an invisible mine that cannot be detected by True Sight, but is visible if an enemy is within the active %radius% AoE of the mine. Mines detonate if an enemy is standing within the active AoE for %proximity_threshold% seconds dealing damage and temporarily reducing the enemy's Magic Resistance. The explosion deals full damage if the target is within %min_distance% radius and decreases up to %outer_damage%%% on the edge. Deals %building_damage_pct%%% damage to buildings.",
     "attrib": [],
     "mc": [
       "110",
@@ -41103,7 +41151,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Techies hurtle themselves into the enemy's midst, detonating charges upon impact which deal massive area of effect damage and silence enemies. Upon landing, the assault deals Techies damage equal to 50% of their max health.",
+    "desc": "Techies hurtle themselves into the enemy's midst, detonating charges upon impact which deal massive area of effect damage and silence enemies. Upon landing, the assault deals Techies non-lethal damage equal to a percentage of their max health.",
     "attrib": [
       {
         "key": "radius",
@@ -41174,12 +41222,14 @@
     "img": "/apps/dota2/images/abilities/techies_suicide_md.png"
   },
   "techies_sticky_bomb": {
+    "dname": "Sticky Bomb",
     "behavior": [
       "Point Target",
       "AOE"
     ],
     "dmg_type": "Magical",
     "bkbpierce": "Yes",
+    "desc": "Lobs a Sticky Bomb towards the target area. If it lands next to an enemy unit, the bomb will stick to it, slowing its movement speed. After a few seconds the bomb will explode, dealing damage in an area around the detonation.",
     "attrib": [],
     "mc": [
       "100",
@@ -41196,8 +41246,10 @@
     "img": "/apps/dota2/images/abilities/techies_sticky_bomb_md.png"
   },
   "techies_reactive_tazer": {
+    "dname": "Reactive Tazer",
     "behavior": "No Target",
     "dmg_type": "Magical",
+    "desc": "Techies trigger an electric charge giving them bonus movement speed for a short period of time. Enemies attacking Techies are temporarily disarmed. At the end of the effect, the charge explodes, disarming all enemies within the radius.",
     "attrib": [],
     "mc": "60",
     "cd": [
@@ -42186,7 +42238,7 @@
   "arc_warden_tempest_double": {
     "dname": "Tempest Double",
     "behavior": "No Target",
-    "desc": "Briefly refocusing its fractured elements into a single form, the Arc Warden is able to create a perfect electrical duplication of itself. The duplicate can use all of Arc Warden's current items and spells, except most consumables and items that drop on death. The duplicate has separate item and ability cooldowns.  The Tempest Double gives bounty gold to enemies when killed.",
+    "desc": "Briefly refocusing its fractured elements into a single form, the Arc Warden is able to create a perfect electrical duplication of itself. The duplicate can use all of Arc Warden's current items and spells, except most consumables and items that drop on death. The duplicate has separate item and ability cooldowns.  The Tempest Double gives bounty gold to enemies when killed. The Tempest Double loses its sense of self if he is too far away from Arc Warden and deals less attack damage.",
     "attrib": [
       {
         "key": "duration",
@@ -42209,14 +42261,12 @@
       {
         "key": "penalty_distance",
         "header": "PENALTY DISTANCE:",
-        "value": "2000",
-        "generated": true
+        "value": "2000"
       },
       {
         "key": "attack_damage_penalty",
         "header": "ATTACK DAMAGE PENALTY:",
-        "value": "50",
-        "generated": true
+        "value": "50%"
       },
       {
         "key": "abilitycastpoint",
@@ -42233,9 +42283,11 @@
     "img": "/apps/dota2/images/abilities/arc_warden_tempest_double_md.png"
   },
   "primal_beast_onslaught": {
+    "dname": "Onslaught",
     "behavior": "Point Target",
     "dmg_type": "Physical",
     "bkbpierce": "No",
+    "desc": "Primal Beast charges up and then runs in the chosen direction, knocking back enemies and allies alike. Enemy units are damaged and stunned on impact. The longer the charge duration, the farther Primal Beast's momentum will carry him. \n\n Can be cancelled at any time with the Stop command.",
     "attrib": [],
     "mc": "120",
     "cd": [
@@ -42247,6 +42299,7 @@
     "img": "/apps/dota2/images/abilities/primal_beast_onslaught_md.png"
   },
   "primal_beast_onslaught_release": {
+    "dname": "Begin Onslaught",
     "behavior": [
       "Instant Cast",
       "No Target",
@@ -42254,11 +42307,13 @@
       "Hidden",
       null
     ],
+    "desc": "Begins the rush to the specified location.",
     "attrib": [],
     "cd": "0.3",
     "img": "/apps/dota2/images/abilities/primal_beast_onslaught_release_md.png"
   },
   "primal_beast_trample": {
+    "dname": "Trample",
     "behavior": [
       "No Target",
       "Instant Cast",
@@ -42266,6 +42321,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
+    "desc": "Primal Beast stomps over everything. For every %step_distance% units traveled, all enemies around the Beast receive damage. Deals base damage plus a multiplier of Primal Beast's attack damage. Primal Beast is disarmed for the duration of the ability.",
     "attrib": [],
     "mc": [
       "90",
@@ -42282,12 +42338,15 @@
     "img": "/apps/dota2/images/abilities/primal_beast_trample_md.png"
   },
   "primal_beast_uproar": {
+    "dname": "Uproar",
     "behavior": "No Target",
+    "desc": "The Beast's temper passively provides base bonus damage. Additionally, for every instance of %damage_limit% damage or more Primal Beast takes from enemy heroes, he accumulates stacks of Uproar. \n\n When activated, Primal Beast releases a roar that slows surrounding enemies and grants the Beast additional attack damage and armor for %roar_duration% seconds based on his current stacks of Uproar.",
     "attrib": [],
     "cd": "0",
     "img": "/apps/dota2/images/abilities/primal_beast_uproar_md.png"
   },
   "primal_beast_pulverize": {
+    "dname": "Pulverize",
     "behavior": [
       null,
       "Unit Target",
@@ -42295,6 +42354,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
+    "desc": "Primal Beast channels his rage, grabbing the target enemy and slamming them into the ground repeatedly, damaging and mini-stunning any enemies caught in the AoE. Lasts %channel_time% seconds.",
     "dmg": [
       "150",
       "210",
@@ -42314,6 +42374,7 @@
     "img": "/apps/dota2/images/abilities/primal_beast_pulverize_md.png"
   },
   "primal_beast_rock_throw": {
+    "dname": "Rock Throw",
     "behavior": [
       "Point Target",
       "AOE",
@@ -42322,6 +42383,7 @@
     ],
     "dmg_type": "Physical",
     "bkbpierce": "No",
+    "desc": "Primal Beast throws a rock at the target location that stuns and damages enemies. The rock cannot be thrown within a minimum range of Primal Beast.",
     "attrib": [],
     "mc": "85",
     "cd": "25",
@@ -42329,9 +42391,15 @@
   },
   "special_bonus_unique_primal_beast_roar_dispells": {},
   "special_bonus_unique_primal_beast_onslaught_damage": {},
-  "special_bonus_unique_primal_beast_trample_attack_damage": {},
-  "special_bonus_unique_primal_beast_pulverize_duration": {},
-  "special_bonus_unique_primal_beast_uproar_armor": {},
+  "special_bonus_unique_primal_beast_trample_attack_damage": {
+    "dname": "+{s:bonus_attack_damage}% Trample Attack Multiplier"
+  },
+  "special_bonus_unique_primal_beast_pulverize_duration": {
+    "dname": "+{s:bonus_channel_time}% Pulverize Duration"
+  },
+  "special_bonus_unique_primal_beast_uproar_armor": {
+    "dname": "+{s:bonus_roared_bonus_armor} Uproar Armor Per Stack"
+  },
   "special_bonus_undefined": {
     "dname": "Pending Replacement"
   },
@@ -43648,7 +43716,7 @@
     "dname": "0.25s Battery Assault Interval"
   },
   "special_bonus_unique_clockwerk_2": {
-    "dname": "+{s:value} Rocket Flare Damage"
+    "dname": "Power Cogs Leash Units Inside"
   },
   "special_bonus_unique_clockwerk_3": {
     "dname": "+24 Battery Assault Damage"
@@ -43672,16 +43740,16 @@
     "dname": "+160 Purification Damage/Heal"
   },
   "special_bonus_unique_omniknight_2": {
-    "dname": "-4% Degen Aura"
+    "dname": "+4 Heavenly Grace Strength/HP Regen per Stack"
   },
   "special_bonus_unique_omniknight_3": {
-    "dname": "-4s Heavenly Grace Cooldown"
+    "dname": "-4s Hammer of Purity Cooldown"
   },
   "special_bonus_unique_omniknight_4": {
-    "dname": "+80 Purification AoE"
+    "dname": "+{s:bonus_base_damage}% Hammer of Purity Damage"
   },
   "special_bonus_unique_omniknight_5": {
-    "dname": "+4 Heavenly Grace HP Regen"
+    "dname": "+4s Heavenly Grace Duration"
   },
   "special_bonus_unique_omniknight_6": {
     "dname": "-2s Purification Cooldown"
@@ -43696,7 +43764,7 @@
     "dname": "+1s Hoof Stomp Duration"
   },
   "special_bonus_unique_centaur_3": {
-    "dname": "+{s:value} Retaliate Damage"
+    "dname": "+{s:bonus_return_damage} Retaliate Damage"
   },
   "special_bonus_unique_centaur_4": {
     "dname": "+40% Double Edge Strength Damage"
@@ -43735,7 +43803,7 @@
     "dname": "-2.5s Death Pulse Cooldown"
   },
   "special_bonus_unique_necrophos_2": {
-    "dname": "+0.5  Heartstopper Aura"
+    "dname": "+0.5% Heartstopper Aura"
   },
   "special_bonus_unique_necrophos_3": {
     "dname": "+24% Ghost Shroud Slow"
@@ -43774,7 +43842,7 @@
     "dname": "+0.7s Mana Void Stun"
   },
   "special_bonus_unique_mirana_1": {
-    "dname": "+{s:value} Leap Attack Speed"
+    "dname": "+{s:bonus_leap_speedbonus_as} Leap Attack Speed"
   },
   "special_bonus_unique_mirana_2": {
     "dname": "+2 Multishot Sacred Arrows"
@@ -43786,10 +43854,10 @@
     "dname": "-20s Moonlight Shadow Cooldown"
   },
   "special_bonus_unique_mirana_5": {
-    "dname": "Moonlight Shadow gives +20 Evasion"
+    "dname": "Moonlight Shadow gives +20% Evasion"
   },
   "special_bonus_unique_mirana_6": {
-    "dname": "+{s:value} Leap Distance"
+    "dname": "+{s:bonus_leap_distance} Leap Distance"
   },
   "special_bonus_unique_mirana_7": {
     "dname": "+200 Starstorm Damage"
@@ -43807,7 +43875,7 @@
     "dname": "+40 Jinada Damage"
   },
   "special_bonus_unique_bounty_hunter_5": {
-    "dname": "+{s:value}s Shadow Walk Slow Duration"
+    "dname": "+{s:value}% Shadow Walk Slow"
   },
   "special_bonus_unique_bounty_hunter_6": {
     "dname": "Half Track Bonus Speed to Allies"
@@ -43936,16 +44004,16 @@
     "dname": "+30 Plasma Field Damage"
   },
   "special_bonus_unique_razor_5": {
-    "dname": "+26% Storm Surge and Unlocks Max Speed"
+    "dname": "+26% Storm Surge Move Speed"
   },
   "special_bonus_unique_razor_6": {
-    "dname": "+2 Eye of the Storm Target"
+    "dname": "2 Static Link Charges"
   },
   "special_bonus_unique_visage_1": {
-    "dname": "+1.5 Familiar Attack Per Charge"
+    "dname": "+1.5 Corruption to Visage and Familiars"
   },
   "special_bonus_unique_visage_2": {
-    "dname": "+30 Familiars Movement Speed"
+    "dname": "+30 Visage and Familiars Movement Speed"
   },
   "special_bonus_unique_visage_3": {
     "dname": "Soul Assumption Hits 2 Targets"
@@ -43954,13 +44022,13 @@
     "dname": "+20 Soul Assumption Damage Per Charge"
   },
   "special_bonus_unique_visage_5": {
-    "dname": "+10 Gravekeeper's Cloak Stacks"
+    "dname": "Gravekeeper's Cloak  grants +10 Armor"
   },
   "special_bonus_unique_visage_6": {
     "dname": "+1 Familiar"
   },
   "special_bonus_unique_visage_7": {
-    "dname": "+8 Grave Chill Duration"
+    "dname": "+8 Visage and Familiars Attack Damage"
   },
   "special_bonus_unique_visage_8": {
     "dname": "-3s Grave Chill Cooldown"
@@ -43983,7 +44051,9 @@
   "special_bonus_unique_earthshaker_6": {
     "dname": "+50 Aftershock Damage"
   },
-  "special_bonus_unique_earthshaker_totem_damage": {},
+  "special_bonus_unique_earthshaker_totem_damage": {
+    "dname": "+{s:bonus_totem_damage_percentage}% Enchant Totem Damage"
+  },
   "special_bonus_unique_lich_1": {
     "dname": "Frost Shield Provides +50 HP Regen"
   },
@@ -44039,7 +44109,7 @@
     "dname": "+50% God's Strength Damage"
   },
   "special_bonus_unique_sven_3": {
-    "dname": "Storm Hammer Dispels Enemies"
+    "dname": "-15s God's Strength Cooldown"
   },
   "special_bonus_unique_sven_4": {
     "dname": "+1.25s Storm Hammer Stun Duration"
@@ -44111,7 +44181,7 @@
     "dname": "+250 Heal On Shallow Grave End"
   },
   "special_bonus_unique_shadow_shaman_1": {
-    "dname": "+2 Serpent Wards Max HP"
+    "dname": "+1 Serpent Wards Max HP"
   },
   "special_bonus_unique_shadow_shaman_2": {
     "dname": "+1s Shackles Duration"
@@ -44156,7 +44226,7 @@
     "dname": "+25 Shadow Word Damage/Heal"
   },
   "special_bonus_unique_warlock_8": {
-    "dname": "+{s:value} Chaotic Offering Golems Movement Speed"
+    "dname": "+{s:bonus_duration} Shadow Word Duration"
   },
   "special_bonus_unique_warlock_9": {
     "dname": "+2 Fatal Bond Targets"
@@ -44198,13 +44268,13 @@
     "dname": "-8% Poison Sting Slow"
   },
   "special_bonus_unique_venomancer_3": {
-    "dname": "-6 Venomous Gale CD"
+    "dname": "-6s Venomous Gale CD"
   },
   "special_bonus_unique_venomancer_4": {
     "dname": "+5s Poison Nova Duration"
   },
   "special_bonus_unique_venomancer_5": {
-    "dname": "Gale Hero Impact Summons 2 Wards"
+    "dname": "Poison Nova reduces {s:bonus_aspd_slow} Attack Speed"
   },
   "special_bonus_unique_venomancer_6": {
     "dname": "+640 Poison Nova AoE"
@@ -44357,9 +44427,11 @@
     "dname": "-4 Presence Aura Armor"
   },
   "special_bonus_unique_nevermore_6": {
-    "dname": "+0.4s Requiem Fear per line."
+    "dname": "+0.4s Requiem Fear per line"
   },
-  "special_bonus_unique_nevermore_7": {},
+  "special_bonus_unique_nevermore_7": {
+    "dname": "+{s:bonus_stack_bonus_damage} Shadowraze Stack Damage"
+  },
   "special_bonus_unique_templar_assassin": {
     "dname": "+7 Refraction Instances"
   },
@@ -44382,7 +44454,7 @@
     "dname": "1s Meld Hit Bash"
   },
   "special_bonus_unique_templar_assassin_8": {
-    "dname": "+120 Psi Blades Range"
+    "dname": "+120 Psi Blades Attack and Spill Range"
   },
   "special_bonus_unique_crystal_maiden_1": {
     "dname": "+1.25s Frostbite Duration"
@@ -44394,7 +44466,7 @@
     "dname": "+50 Freezing Field Damage"
   },
   "special_bonus_unique_crystal_maiden_4": {
-    "dname": "+{s:value}% Magic Resistance Arcane Aura"
+    "dname": "+{s:bonus_mana_per_cast} Arcane Aura Mana per Cast"
   },
   "special_bonus_unique_crystal_maiden_5": {
     "dname": "-3s Crystal Nova Cooldown"
@@ -44439,7 +44511,7 @@
     "dname": "+1s Thunder Clap Slow"
   },
   "special_bonus_unique_brewmaster_4": {
-    "dname": "+1.5% Drunken Brawler Critical Strike Damage"
+    "dname": "Cinder Brew applies Fear when ignited"
   },
   "special_bonus_unique_brewmaster_5": {
     "dname": "+30% Cinder Brew Damage/Duration"
@@ -44477,8 +44549,12 @@
   "special_bonus_unique_furion_5": {
     "dname": "+30 Wrath of Nature Base Damage"
   },
-  "special_bonus_unique_furion_6": {},
-  "special_bonus_unique_furion_7": {},
+  "special_bonus_unique_furion_6": {
+    "dname": "-8s Nature's Call Cooldown"
+  },
+  "special_bonus_unique_furion_7": {
+    "dname": "Sprout Leashes"
+  },
   "special_bonus_unique_phoenix_1": {
     "dname": "+3 Supernova Hit Count"
   },
@@ -44513,7 +44589,7 @@
     "dname": "-65 Untouchable Slow"
   },
   "special_bonus_unique_enchantress_4": {
-    "dname": "+{s:value}% Impetus Damage"
+    "dname": "+{s:bonus_distance_damage_pct}% Impetus Damage"
   },
   "special_bonus_unique_enchantress_5": {
     "dname": "+20 Nature's Attendants Heal"
@@ -44522,13 +44598,13 @@
     "dname": "+6.5s Firefly Duration"
   },
   "special_bonus_unique_batrider_2": {
-    "dname": "-{s:value}s Flamebreak Cooldown"
+    "dname": "Flamebreak applies {s:bonus_napalm_stacks} Sticky Napalm Stacks"
   },
   "special_bonus_unique_batrider_3": {
-    "dname": "+1s Flamebreak Burn Duration"
+    "dname": "+{s:bonus_knockback_distance} Flamebreak Knockback Distance"
   },
   "special_bonus_unique_batrider_4": {
-    "dname": "+{s:value} Sticky Napalm Damage"
+    "dname": "+{s:bonus_damage} Sticky Napalm Damage"
   },
   "special_bonus_unique_batrider_5": {
     "dname": "2 Flamebreak Charges"
@@ -44537,7 +44613,7 @@
     "dname": "-10s Flaming Lasso Cooldown"
   },
   "special_bonus_unique_batrider_7": {
-    "dname": "+{s:value}% Sticky Napalm Slow"
+    "dname": "+{s:bonus_radius} Sticky Napalm Radius"
   },
   "special_bonus_unique_wraith_king_1": {
     "dname": "No Reincarnation Manacost"
@@ -44588,7 +44664,7 @@
     "dname": "-2s Tidebringer Cooldown"
   },
   "special_bonus_unique_kunkka_6": {
-    "dname": "+150 Tidebringer Damage"
+    "dname": "+{s:bonus_ally_ms}% X Mark the Spot Move Speed"
   },
   "special_bonus_unique_kunkka_7": {
     "dname": "+0.4s Torrent Knock Up/Stun Duration"
@@ -44648,7 +44724,7 @@
     "dname": "-25s Ghost Walk Cooldown"
   },
   "special_bonus_unique_invoker_11": {
-    "dname": "+50 Forged Spirit Armor Reduction"
+    "dname": "+50 Forged Spirit Attack Speed"
   },
   "special_bonus_unique_invoker_12": {
     "dname": "Vector Target Ice Wall"
@@ -44663,7 +44739,7 @@
     "dname": "+50 Mist Coil Heal/Damage"
   },
   "special_bonus_unique_abaddon_3": {
-    "dname": "-{s:value} Curse of Avernus Attacks Required"
+    "dname": "-{s:bonus_hit_count} Curse of Avernus Attacks Required"
   },
   "special_bonus_unique_abaddon_4": {
     "dname": "400 AoE Mist Coil"
@@ -44690,22 +44766,22 @@
     "dname": "+50 Chemical Rage Movement Speed"
   },
   "special_bonus_unique_axe": {
-    "dname": "+{s:value} Battle Hunger DPS"
+    "dname": "{s:bonus_armor_multiplier}x Battle Hunger Armor Multiplier"
   },
   "special_bonus_unique_axe_2": {
     "dname": "+100 Berserker's Call AoE"
   },
   "special_bonus_unique_axe_3": {
-    "dname": "Attacking Procs Counter Helix"
+    "dname": "+{s:bonus_armor_per_stack} Bonus Armor per Culling Blade Stack"
   },
   "special_bonus_unique_axe_4": {
     "dname": "+30 Counter Helix Damage"
   },
   "special_bonus_unique_axe_5": {
-    "dname": "+150 Culling Blade Threshold"
+    "dname": "+{s:bonus_damage} Culling Blade Damage"
   },
   "special_bonus_unique_axe_6": {
-    "dname": "-{s:value}s Berserker's Call Cooldown"
+    "dname": "+{s:bonus_slow}% Battle Hunger Slow"
   },
   "special_bonus_unique_beastmaster": {
     "dname": "+50 Wild Axes Damage"
@@ -44720,7 +44796,7 @@
     "dname": "+30 Inner Beast Attack Speed"
   },
   "special_bonus_unique_beastmaster_5": {
-    "dname": "+{s:value} Hawk Vision"
+    "dname": "+25 Movespeed Beastmaster Controlled"
   },
   "special_bonus_unique_beastmaster_6": {
     "dname": "+250 Health Beastmaster Controlled"
@@ -44738,13 +44814,13 @@
     "dname": "+20 Searing Arrows Damage"
   },
   "special_bonus_unique_clinkz_2": {
-    "dname": "+3s Skeleton Walk Attack Speed Duration"
+    "dname": "Death Pact Steal creep abilities"
   },
   "special_bonus_unique_clinkz_3": {
     "dname": "Searing Arrows Multishot"
   },
   "special_bonus_unique_clinkz_4": {
-    "dname": "Burning Army Truestrike"
+    "dname": "+{s:bonus_damage_pct}% Burning Barrage Damage"
   },
   "special_bonus_unique_clinkz_5": {
     "dname": "-30s Burning Army Cooldown"
@@ -44756,7 +44832,7 @@
     "dname": "+50 Strafe Attack Speed"
   },
   "special_bonus_unique_clinkz_8": {
-    "dname": "+25/0% Death Pact Health/Damage"
+    "dname": "+25% Death Pact Health"
   },
   "special_bonus_unique_clinkz_9": {
     "dname": "Skeleton Walk Exit Summons A Burning Army Skeleton"
@@ -44780,12 +44856,14 @@
     "dname": "+150 Blade Fury DPS"
   },
   "special_bonus_unique_juggernaut_4": {
-    "dname": "+{s:value} Blade Fury Movement Speed"
+    "dname": "+{s:bonus_duration}s Blade Fury Duration"
   },
   "special_bonus_unique_juggernaut_5": {
     "dname": "-20s Healing Ward Cooldown"
   },
-  "special_bonus_unique_juggernaut_blade_dance_lifesteal": {},
+  "special_bonus_unique_juggernaut_blade_dance_lifesteal": {
+    "dname": "+{s:bonus_blade_dance_lifesteal}% Blade Dance Lifesteal"
+  },
   "special_bonus_unique_winter_wyvern_1": {
     "dname": "+12% Arctic Burn Slow"
   },
@@ -44811,18 +44889,20 @@
     "dname": "-34s Sunder Cooldown"
   },
   "special_bonus_unique_terrorblade_2": {
-    "dname": "+{s:value}s Reflection Duration"
+    "dname": "+{s:bonus_illusion_duration}s Reflection Duration"
   },
   "special_bonus_unique_terrorblade_3": {
     "dname": "+20s Metamorphosis Duration"
   },
   "special_bonus_unique_terrorblade_4": {
-    "dname": "+{s:value}% Reflection Illusion Damage"
+    "dname": "+{s:bonus_illusion_outgoing_damage}% Conjure Image Damage"
   },
   "special_bonus_unique_terrorblade_5": {
-    "dname": "+{s:value}s Conjure Image Duration"
+    "dname": "+{s:bonus_illusion_duration}s Conjure Image Duration"
   },
-  "special_bonus_unique_terrorblade_6": {},
+  "special_bonus_unique_terrorblade_6": {
+    "dname": "+{s:bonus_move_slow}% Reflection Slow"
+  },
   "special_bonus_unique_luna_1": {
     "dname": "+100 Lucent Beam Damage"
   },
@@ -44845,7 +44925,7 @@
     "dname": "-8% Moon Glaives Damage Reduction"
   },
   "special_bonus_unique_luna_8": {
-    "dname": "Global Lunar Blessing"
+    "dname": "Lunar Blessing Global and +{s:bonus_bonus_night_vision} Night Vision"
   },
   "special_bonus_unique_faceless_void": {
     "dname": "+120 Attack Speed during Chronosphere"
@@ -44860,7 +44940,7 @@
     "dname": "+20% Backtrack"
   },
   "special_bonus_unique_faceless_void_5": {
-    "dname": "-1.5s Time Walk"
+    "dname": "-1.5s Time Walk Cooldown"
   },
   "special_bonus_unique_faceless_void_6": {
     "dname": "+6 Time Dilation DPS per cooldown"
@@ -44875,25 +44955,25 @@
     "dname": "-50s Dark Ascension Cooldown"
   },
   "special_bonus_unique_night_stalker_2": {
-    "dname": "+{s:value} Hunter In The Night Attack Speed"
+    "dname": "+{s:bonus_bonus_attack_speed_night} Hunter In The Night Attack Speed"
   },
   "special_bonus_unique_night_stalker_3": {
-    "dname": "+{s:value} Dark Ascension Damage"
+    "dname": "+{s:bonus_bonus_damage} Dark Ascension Damage"
   },
   "special_bonus_unique_night_stalker_4": {
-    "dname": "+{s:value} Void Damage"
+    "dname": "+{s:bonus_damage} Void Damage"
   },
   "special_bonus_unique_night_stalker_5": {
-    "dname": "+{s:value}% Hunter In The Night Movement Speed"
+    "dname": "+{s:bonus_bonus_movement_speed_pct_night}% Hunter In The Night Movement Speed"
   },
   "special_bonus_unique_night_stalker_6": {
     "dname": "-5s Crippling Fear Cooldown"
   },
   "special_bonus_unique_night_stalker_7": {
-    "dname": "+{s:value}s Dark Ascension Duration"
+    "dname": "+{s:bonus_duration}s Dark Ascension Duration"
   },
   "special_bonus_unique_nyx": {
-    "dname": "+75% Spiked Carapace Damage"
+    "dname": "{s:bonus_aoe} Mana Burn Radius"
   },
   "special_bonus_unique_nyx_2": {
     "dname": "+130 Impale Damage"
@@ -44905,7 +44985,7 @@
     "dname": "+0.25s Impale Stun Duration"
   },
   "special_bonus_unique_nyx_5": {
-    "dname": "-{s:value}s Spiked Carapace Cooldown"
+    "dname": "+{s:bonus_float_multiplier}x Mana Burn Intelligence Multiplier"
   },
   "special_bonus_unique_nyx_6": {
     "dname": "+0.6s Spiked Carapace Stun Duration"
@@ -44977,40 +45057,40 @@
     "dname": "-3s Chaos Bolt Cooldown"
   },
   "special_bonus_unique_lycan_1": {
-    "dname": "+{s:value}s Shapeshift Duration"
+    "dname": "+{s:bonus_duration}s Shapeshift Duration"
   },
   "special_bonus_unique_lycan_2": {
-    "dname": "+{s:value} Wolves Summoned"
+    "dname": "+{s:bonus_tooltip_wolf_count} Wolves Summoned"
   },
   "special_bonus_unique_lycan_3": {
-    "dname": "+{s:value} Feral HP Regen"
+    "dname": "+{s:bonus_bonus_damage} Wolves Damage"
   },
   "special_bonus_unique_lycan_4": {
-    "dname": "+{s:value}% Feral Impulse Damage"
+    "dname": "+{s:bonus_bonus_damage}% Feral Impulse Damage"
   },
   "special_bonus_unique_lycan_5": {
-    "dname": "+{s:value}% Chance Shapeshift Critical Strike"
+    "dname": "+{s:bonus_crit_chance}% Chance Shapeshift Critical Strike"
   },
   "special_bonus_unique_lycan_6": {
-    "dname": "+{s:value} Summon Wolves Damage"
+    "dname": "+{s:bonus_attack_damage_reduction}% Howl Attack Damage Reduction"
   },
   "special_bonus_unique_lycan_7": {
-    "dname": "+{s:value} Summon Wolves Health"
+    "dname": "+{s:bonus_bonus_health} Summon Wolves Health"
   },
   "special_bonus_unique_lycan_8": {
     "dname": "-15s Shapeshift Cooldown"
   },
   "special_bonus_unique_windranger": {
-    "dname": "Undispellable Windrun"
+    "dname": "+{s:bonus_radius} Windrun Radius"
   },
   "special_bonus_unique_windranger_2": {
     "dname": "Focus Fire Kills Advance Cooldown by 20s."
   },
   "special_bonus_unique_windranger_3": {
-    "dname": "+{s:value} Powershot Damage"
+    "dname": "-{s:bonus_damage_reduction}% Powershot Damage Reduction"
   },
   "special_bonus_unique_windranger_4": {
-    "dname": "+4% Ministun Focus Fire"
+    "dname": "-4s Windrun Cooldown"
   },
   "special_bonus_unique_windranger_5": {
     "dname": "+2 Shackleshot Target"
@@ -45034,7 +45114,7 @@
     "dname": "+300 Phantom Rush Range"
   },
   "special_bonus_unique_phantom_lancer_2": {
-    "dname": "+100 Spirit Lance Damage"
+    "dname": "+{s:bonus_agility_duration} Phantom Rush Bonus Agi Duration"
   },
   "special_bonus_unique_phantom_lancer_3": {
     "dname": "+5 Max Juxtapose Illusions"
@@ -45072,7 +45152,9 @@
   "special_bonus_unique_slark_7": {
     "dname": "+75 Shadow Dance Attack Speed"
   },
-  "special_bonus_unique_slark_8": {},
+  "special_bonus_unique_slark_8": {
+    "dname": "+{s:bonus_bonus_regen_pct}% Shadow Dance Regen"
+  },
   "special_bonus_unique_spectre": {
     "dname": "-4s Spectral Dagger Cooldown"
   },
@@ -45191,7 +45273,7 @@
     "dname": "+5 Tree Grab Attack Charges"
   },
   "special_bonus_unique_tiny_7": {
-    "dname": "+{s:value}% Tree Grab Unit Damage Bonus"
+    "dname": "+{s:bonus_tree_bonus_damage_pct}% Tree Grow Bonus Damage"
   },
   "special_bonus_unique_troll_warlord": {
     "dname": "+7 Berserker's Rage Armor"
@@ -45208,9 +45290,11 @@
   "special_bonus_unique_troll_warlord_5": {
     "dname": "+5 Fervor Attack Speed"
   },
-  "special_bonus_unique_troll_warlord_6": {},
+  "special_bonus_unique_troll_warlord_6": {
+    "dname": "Whirling Axes Pierce Magic Immunity"
+  },
   "special_bonus_unique_troll_warlord_7": {
-    "dname": "+15s Battle Trance Duration"
+    "dname": "-15s Battle Trance Cooldown"
   },
   "special_bonus_unique_undying": {
     "dname": "+25 Tombstone Zombie Damage"
@@ -45237,16 +45321,16 @@
     "dname": "+55 Decay Damage"
   },
   "special_bonus_unique_viper_1": {
-    "dname": "+13 Corrosive Skin Stats"
+    "dname": "+13 Corrosive Skin Damage"
   },
   "special_bonus_unique_viper_2": {
     "dname": "+80 Viper Strike DPS"
   },
   "special_bonus_unique_viper_3": {
-    "dname": "+40 Nethertoxin Max Damage"
+    "dname": "+40 Nethertoxin Min/Max Damage"
   },
   "special_bonus_unique_viper_4": {
-    "dname": "Poison Attack Affects Buildings"
+    "dname": "+{s:bonus_magic_resistance} Poison Attack Magic Resistance Reduction"
   },
   "special_bonus_unique_viper_5": {
     "dname": "-11s Nethertoxin Cooldown"
@@ -45255,7 +45339,7 @@
     "dname": "2x Corrosive Skin Slow and Resistance"
   },
   "special_bonus_unique_zeus": {
-    "dname": "+2% Static Field Damage"
+    "dname": "+{s:bonus_targets} Heavenly Jump Target"
   },
   "special_bonus_unique_zeus_2": {
     "dname": "+100 Arc Lightning Damage"
@@ -45270,9 +45354,11 @@
     "dname": "325 AOE Lightning Bolt"
   },
   "special_bonus_unique_elder_titan": {
-    "dname": "+{s:value} Astral Spirit Hero Attack"
+    "dname": "+{s:bonus_damage_heroes} Astral Spirit Hero Attack"
   },
-  "special_bonus_unique_elder_titan_bonus_spirit_speed": {},
+  "special_bonus_unique_elder_titan_bonus_spirit_speed": {
+    "dname": "+{s:bonus_move_pct_heroes}% Ancestral Spirit Move Speed Per Hero"
+  },
   "special_bonus_unique_elder_titan_2": {
     "dname": "+100 Echo Stomp Damage"
   },
@@ -45391,10 +45477,10 @@
     "dname": "+2s Stone Gaze Duration"
   },
   "special_bonus_unique_medusa_2": {
-    "dname": "+{s:value} Split Shot Targets"
+    "dname": "-{s:bonus_damage_modifier}% Split Shot Damage Penalty"
   },
   "special_bonus_unique_medusa_3": {
-    "dname": "+{s:value}% Mystic Snake Mana Gain"
+    "dname": "+{s:bonus_snake_jumps} Mystic Snake Bounces"
   },
   "special_bonus_unique_medusa_4": {
     "dname": "Split Shot Uses Modifiers"
@@ -45402,7 +45488,9 @@
   "special_bonus_unique_medusa_5": {
     "dname": "-1.5s Mystic Snake Cooldown"
   },
-  "special_bonus_unique_medusa_6": {},
+  "special_bonus_unique_medusa_6": {
+    "dname": "+{s:bonus_damage_per_mana} Mana Shield Damage per Mana"
+  },
   "special_bonus_unique_ogre_magi": {
     "dname": "+25 Bloodlust AS"
   },
@@ -45435,7 +45523,7 @@
     "dname": "+8% Arcane Curse Slow"
   },
   "special_bonus_unique_silencer_7": {
-    "dname": "-20s Arcane Curse Cooldown"
+    "dname": "-20s Global Silence Cooldown"
   },
   "special_bonus_unique_death_prophet": {
     "dname": "+8 Exorcism Spirits"
@@ -45465,7 +45553,7 @@
     "dname": "+1s Phantom Strike Duration"
   },
   "special_bonus_unique_phantom_assassin_5": {
-    "dname": "+{s:value}s Stifling Dagger Slow"
+    "dname": "+{s:bonus_attack_factor}% Stifling Dagger Damage"
   },
   "special_bonus_unique_phantom_assassin_6": {
     "dname": "+250 Phantom Strike Cast Range"
@@ -45483,16 +45571,16 @@
     "dname": "+0.5 Backstab Multiplier"
   },
   "special_bonus_unique_riki_2": {
-    "dname": "-{s:value}s Smoke Screen Cooldown"
+    "dname": "+{s:bonus_slow}s Blink Strike Slow"
   },
   "special_bonus_unique_riki_3": {
-    "dname": "+4 Blink Strike Cast Range"
+    "dname": "-4s Smoke Screen Cooldown"
   },
   "special_bonus_unique_riki_4": {
     "dname": "+300 Tricks of the Trade AoE"
   },
   "special_bonus_unique_riki_5": {
-    "dname": "Cloak and Dagger Doesn't Reveal"
+    "dname": "Tricks of the Trade Applies a Basic Dispel"
   },
   "special_bonus_unique_riki_6": {
     "dname": "-4 Tricks of the Trade Cooldown"
@@ -45546,7 +45634,7 @@
     "dname": "+125 Take Aim Range"
   },
   "special_bonus_unique_magnus": {
-    "dname": "-4s Shockwave Cooldown"
+    "dname": "+{s:bonus_shock_damage} Shockwave Damage"
   },
   "special_bonus_unique_magnus_2": {
     "dname": "+10% Empower Damage/Cleave"
@@ -45603,7 +45691,7 @@
     "dname": "+325 Rolling Boulder Distance"
   },
   "special_bonus_unique_earth_spirit_5": {
-    "dname": "+3 Geomagnetic Grip Silence"
+    "dname": "+3s Geomagnetic Grip Silence"
   },
   "special_bonus_unique_earth_spirit_6": {
     "dname": "+2s Magnetize Duration"
@@ -45637,7 +45725,7 @@
     "dname": "+1 Mirror Image Illusion"
   },
   "special_bonus_unique_naga_siren_2": {
-    "dname": "-{s:value}s Ensnare Cooldown"
+    "dname": "+{s:bonus_damage} Rip Tide Damage"
   },
   "special_bonus_unique_naga_siren_3": {
     "dname": "-7 Rip Tide Armor"
@@ -45646,7 +45734,7 @@
     "dname": "+13% Mirror Image Damage"
   },
   "special_bonus_unique_naga_siren_5": {
-    "dname": "+12% Rip Tide Chance"
+    "dname": "-12 Rip Tide Hits"
   },
   "special_bonus_unique_naga_siren_6": {
     "dname": "-10s Mirror Image Cooldown"
@@ -45655,7 +45743,7 @@
     "dname": "Song of the Siren heals allies 7% Max HP/s"
   },
   "special_bonus_unique_oracle": {
-    "dname": "+1.5 False Promise Duration"
+    "dname": "+1.5s False Promise Duration"
   },
   "special_bonus_unique_oracle_2": {
     "dname": "+0.4s Fortune's End Duration"
@@ -45688,13 +45776,13 @@
     "dname": "+20 Sand Storm DPS"
   },
   "special_bonus_unique_sand_king_3": {
-    "dname": "150 Sand Storm Radius"
+    "dname": "+150 Sand Storm Radius"
   },
   "special_bonus_unique_sand_king_4": {
     "dname": "40% Sand Storm Slow and Blind"
   },
   "special_bonus_unique_sand_king_5": {
-    "dname": "+20 Epicenter Damage Per Pulse"
+    "dname": "+{s:bonus_epicenter_radius} Epicenter Radius"
   },
   "special_bonus_unique_sand_king_6": {
     "dname": "+12% Caustic Finale Slow"
@@ -45745,10 +45833,10 @@
     "dname": "-4s Slithereen Crush Cooldown"
   },
   "special_bonus_unique_slardar_5": {
-    "dname": "{s:value} Corrosive Haze Armor"
+    "dname": "-{s:bonus_armor_reduction} Corrosive Haze Armor"
   },
   "special_bonus_unique_slardar_6": {
-    "dname": "+{s:value}s Corrosive Haze Duration"
+    "dname": "Corrosive Hazed targets leave Puddle trails"
   },
   "special_bonus_unique_slardar_7": {
     "dname": "-3s Guardian Sprint Cooldown"
@@ -45823,7 +45911,7 @@
     "dname": "+275 Glimpse Arrival Damage"
   },
   "special_bonus_unique_gyrocopter_1": {
-    "dname": "-6 Flak Cannon Cooldown"
+    "dname": "-6s Flak Cannon Cooldown"
   },
   "special_bonus_unique_gyrocopter_2": {
     "dname": "+2 Flak Cannon Attacks"
@@ -45918,9 +46006,11 @@
   "special_bonus_unique_legion_commander_7": {
     "dname": "+200 Duel Cast Range"
   },
-  "special_bonus_unique_legion_commander_8": {},
+  "special_bonus_unique_legion_commander_8": {
+    "dname": "Press the Attack grants 2s Spell Immunity"
+  },
   "special_bonus_unique_puck": {
-    "dname": "+{s:value} Illusory Orb Distance"
+    "dname": "-{s:value}s Dream Coil Cooldown"
   },
   "special_bonus_unique_puck_2": {
     "dname": "-6s Waning Rift Cooldown"
@@ -45929,13 +46019,13 @@
     "dname": "Dream Coil Rapid Fire"
   },
   "special_bonus_unique_puck_4": {
-    "dname": "+{s:value} Waning Rift Damage"
+    "dname": "+{s:bonus_coil_stun_duration}s Dream Coil Stun Duration"
   },
   "special_bonus_unique_puck_5": {
-    "dname": "Phase Shift Attack"
+    "dname": "Dream Coil Pierces Magic Immunity"
   },
   "special_bonus_unique_puck_6": {
-    "dname": "+100 Waning Rift AoE and Range"
+    "dname": "+{s:bonus_damage} Waning Rift Damge"
   },
   "special_bonus_unique_puck_7": {
     "dname": "+0.75s Waning Rift Silence Duration"
@@ -45950,10 +46040,10 @@
     "dname": "+160 Nether Blast Damage"
   },
   "special_bonus_unique_pugna_3": {
-    "dname": "+1.75 Netherward Damage Per Mana"
+    "dname": "+1.75 Nether Ward Damage Per Mana"
   },
   "special_bonus_unique_pugna_4": {
-    "dname": "-1s Netherblast Cooldown"
+    "dname": "-1s Nether Blast Cooldown"
   },
   "special_bonus_unique_pugna_5": {
     "dname": "+1.5s Decrepify Duration"
@@ -45994,28 +46084,32 @@
   "special_bonus_unique_bloodseeker_7": {
     "dname": "+10% Rupture Initial Damage"
   },
-  "special_bonus_unique_bloodseeker_rupture_charges": {},
+  "special_bonus_unique_bloodseeker_rupture_charges": {
+    "dname": "{s:value} Rupture Charges"
+  },
   "special_bonus_unique_broodmother_1": {
-    "dname": "+{s:value} Insatiable Hunger Damage/Lifesteal"
+    "dname": "+{s:bonus_lifesteal_pct} Insatiable Hunger Damage/Lifesteal"
   },
   "special_bonus_unique_broodmother_2": {
-    "dname": "+{s:value} Spiders Health"
+    "dname": "+{s:bonus_hp_bonus} Spiders Health"
   },
   "special_bonus_unique_broodmother_3": {
-    "dname": "+{s:value} Spawn Spiderlings Damage"
+    "dname": "+{s:bonus_damage} Spawn Spiderlings Damage"
   },
   "special_bonus_unique_broodmother_4": {
-    "dname": "+{s:value}% Spiders Damage to Buildings"
+    "dname": "+{s:bonus_movement_speed}% Silken Bola Slow"
   },
   "special_bonus_unique_broodmother_5": {
-    "dname": "-{s:value}s Spin Web Recharge Time"
+    "dname": "-{s:bonus_AbilityChargeRestoreTime}s Spin Web Recharge Time"
   },
-  "special_bonus_unique_broodmother_6": {},
+  "special_bonus_unique_broodmother_6": {
+    "dname": "+{s:bonus_count} Spin Web Simultaneous Webs"
+  },
   "special_bonus_unique_chen_1": {
     "dname": "+3 Holy Persuasion Max Units and Charges"
   },
   "special_bonus_unique_chen_2": {
-    "dname": "+{s:value} Hand of God Heal"
+    "dname": "+{s:bonus_heal_amount}/+{s:bonus_heal_per_second} Hand of God Heal/Heal Over Time"
   },
   "special_bonus_unique_chen_3": {
     "dname": "-7s Divine Favor Cooldown"
@@ -46054,7 +46148,7 @@
     "dname": "+1.5s Entangle Duration"
   },
   "special_bonus_unique_lone_druid_4": {
-    "dname": "-10 Savage Roar Cooldown"
+    "dname": "-10s Savage Roar Cooldown"
   },
   "special_bonus_unique_lone_druid_5": {
     "dname": "+40% Spirit Bear Magic Resistance"
@@ -46069,7 +46163,7 @@
     "dname": "-50s True Form Cooldown"
   },
   "special_bonus_unique_lone_druid_9": {
-    "dname": "0 Entangle Cooldown"
+    "dname": "0 Entangling Claws Cooldown"
   },
   "special_bonus_unique_lone_druid_10": {
     "dname": "0.1 Spirit Bear Attack Time"
@@ -46087,7 +46181,7 @@
     "dname": "Tether Stuns"
   },
   "special_bonus_unique_wisp_3": {
-    "dname": "+{s:value} Spirits Max Range"
+    "dname": "+{s:bonus_movespeed}% Tether Movement Speed"
   },
   "special_bonus_unique_wisp_4": {
     "dname": "Attack Tethered Ally's Target"
@@ -46101,20 +46195,26 @@
   "special_bonus_unique_wisp_7": {
     "dname": "Spirits Apply Slow"
   },
-  "special_bonus_unique_wisp_8": {},
-  "special_bonus_unique_wisp_9": {},
-  "special_bonus_unique_wisp_10": {},
+  "special_bonus_unique_wisp_8": {
+    "dname": "+15 Attack Damage to Tethered Units"
+  },
+  "special_bonus_unique_wisp_9": {
+    "dname": "+400 Health to Tethered Units"
+  },
+  "special_bonus_unique_wisp_10": {
+    "dname": "+{s:bonus_hp_regen}% Overcharge Max HP Regen Bonus"
+  },
   "special_bonus_unique_techies": {
     "dname": "+200 Blast Off! Damage"
   },
   "special_bonus_unique_techies_2": {
-    "dname": "+{s:value} Extra Minefield Sign"
+    "dname": "+{s:bonus_damage} Sticky Bomb Damage"
   },
   "special_bonus_unique_techies_3": {
     "dname": "-3s Proximity Mines Cooldown"
   },
   "special_bonus_unique_techies_4": {
-    "dname": "+{s:value} Mines Movement Speed"
+    "dname": "-{s:bonus_activation_delay} Proximity Mines Activation Delay"
   },
   "special_bonus_unique_techies_5": {
     "dname": "-15s Blast Off! Cooldown"
@@ -46129,15 +46229,17 @@
     "dname": "+40 Magnetic Field Attack Speed"
   },
   "special_bonus_unique_arc_warden_4": {
-    "dname": "Global Flux"
+    "dname": "+{s:bonus_duration}s Flux Duration"
   },
   "special_bonus_unique_arc_warden_5": {
-    "dname": "+{s:value} Flux Cast Range"
+    "dname": "+{s:bonus_abilitycastrange} Flux Cast Range"
   },
   "special_bonus_unique_arc_warden_6": {
     "dname": "+12s Tempest Double Duration"
   },
-  "special_bonus_unique_arc_warden_7": {},
+  "special_bonus_unique_arc_warden_7": {
+    "dname": "+{s:value}% Tempest Double Cooldown Reduction"
+  },
   "special_bonus_unique_meepo": {
     "dname": "-4s Poof Cooldown"
   },
@@ -46148,7 +46250,7 @@
     "dname": "-3s Earthbind Cooldown"
   },
   "special_bonus_unique_meepo_4": {
-    "dname": "+1 Earthbind Cast Range"
+    "dname": "Earthbind grants True Strike on Targets"
   },
   "special_bonus_unique_meepo_5": {
     "dname": "+1 Divided We Stand Clone"
