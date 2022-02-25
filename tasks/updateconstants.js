@@ -462,7 +462,7 @@ const sources = [
               if (abilityNum < 10) {
                 newHero["abilities"].push(DOTAHeroes[heroKey][key]);
 
-                const exceptions = ["npc_dota_hero_nevermore", "npc_dota_hero_beastmaster", "npc_dota_hero_morphling", "npc_dota_hero_troll_warlord"];
+                const exceptions = ["npc_dota_hero_nevermore", "npc_dota_hero_beastmaster", "npc_dota_hero_morphling", "npc_dota_hero_troll_warlord", "npc_dota_hero_monkey_king"];
 
                 // handle heroes that are exceptions
                 if (exceptions.includes(heroKey)) {
