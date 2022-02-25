@@ -1,12 +1,12 @@
 {
   "name": "dotaconstants",
-  "version": "7.7.0",
+  "version": "7.9.0",
   "description": "Constant data for Dota 2 applications",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node tasks/updateconstants",
-    "newpatch": "node tasks/newpatch"
+    "patch": "node tasks/newpatch"
   },
   "repository": {
     "type": "git",
