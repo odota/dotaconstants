@@ -327,14 +327,6 @@ const sources = [
             );
           }
 
-          // Clean Dname
-          if (ability.dname) {
-            ability.dname = ability.dname
-              .replace(/\+\+/g, '+')
-              .replace(/\-\-/g, '-')
-              .replace(/\+\-/g, '-');
-          }
-
           ability.behavior =
             formatBehavior(scripts[key].AbilityBehavior) || undefined;
           ability.dmg_type =
@@ -976,7 +968,8 @@ function replaceSValues(template, attribs) {
     });
     Object.keys(values).forEach((key) => {
       if (typeof values[key] != 'object') { // TODO: fix special_bonus_unique_bloodseeker_rupture_charges
-        template = template.replace(`{s:${key}}`, values[key]);
+        template = template
+          .replace(`{s:${key}}`, values[key]);
       }
     });
   }
@@ -987,11 +980,17 @@ function replaceBonusSValues(key, template, attribs) {
   if (template && attribs) {
     Object.keys(attribs).forEach((bonus) => {
       if (typeof attribs[bonus] == 'object' && attribs[bonus].hasOwnProperty(key)) {
+        // remove redundant signs
+        var bonus_value = attribs[bonus][key]
+          .replace('+', '')
+          .replace('-', '')
+          .replace('x', '');
+
         template = template
           // Most of the time, the bonus value template is named bonus_<bonus_key>
-          .replace(`{s:bonus_${bonus}}`, attribs[bonus][key])
+          .replace(`{s:bonus_${bonus}}`, bonus_value)
           // But sometimes, it's just value
-          .replace(`{s:value}`, attribs[bonus][key]);
+          .replace(`{s:value}`, bonus_value);
       }
     });
   }
