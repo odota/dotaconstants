@@ -2582,6 +2582,20 @@
     "created": true,
     "charges": false
   },
+  "recipe_orchid": {
+    "id": 97,
+    "img": "/apps/dota2/images/items/recipe_lg.png?t=1593393829403",
+    "dname": "Orchid Malevolence Recipe",
+    "cost": 300,
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": false,
+    "lore": "",
+    "components": null,
+    "created": false,
+    "charges": false
+  },
   "orchid": {
     "hint": [
       "Active: Soul BurnSilences the target unit for %silence_duration% seconds. At the end of the silence, %silence_damage_percent%%% of the damage received while silenced is inflicted as bonus magical damage.Range: %abilitycastrange%"
@@ -2590,7 +2604,7 @@
     "img": "/apps/dota2/images/items/orchid_lg.png?t=1593393829403",
     "dname": "Orchid Malevolence",
     "qual": "rare",
-    "cost": 3175,
+    "cost": 3475,
     "notes": "",
     "attrib": [],
     "mc": 100,
@@ -2627,7 +2641,7 @@
     "img": "/apps/dota2/images/items/bloodthorn_lg.png?t=1593393829403",
     "dname": "Bloodthorn",
     "qual": "epic",
-    "cost": 6500,
+    "cost": 6800,
     "notes": "",
     "attrib": [],
     "mc": 100,
@@ -5917,7 +5931,7 @@
   },
   "ancient_janggo": {
     "hint": [
-      "Active: Endurance Consumes a charge and gives +45 attack speedand +13% movement speed to nearby allies for 6 seconds. Comes with 8 charges.Radius: 1200  ",
+      "Active: Endurance Consumes a charge and gives +45 attack speed and +13% movement speed to nearby allies for 6 seconds. Comes with 8 charges.Radius: 1200  ",
       "",
       "Passive: Swiftness AuraGrants 20 movement speed to allies.  Radius: 1200"
     ],
@@ -5968,7 +5982,7 @@
   },
   "boots_of_bearing": {
     "hint": [
-      "Active: Endurance Consumes a charge and gives +%bonus_attack_speed_pct% attack speed, +%bonus_movement_speed_pct%%% Movement Speed to nearby allies for %duration% seconds For the first 2 seconds allies are immune to slows.Starts with 8 Charges. Gains 1 Charge every 3 minutes. Radius: %radius%  ",
+      "Active: Endurance Consumes a charge and gives +%bonus_attack_speed_pct% attack speed, +%bonus_movement_speed_pct%%% Movement Speed to nearby allies for %duration% seconds For the first %bonus_ms_duration% seconds allies are immune to slows.Starts with 8 Charges. Gains 1 Charge every 3 minutes. Radius: %radius%  ",
       "",
       "Passive: Swiftness AuraGrants %aura_movement_speed% movement speed to allies.  Radius: %radius%"
     ],

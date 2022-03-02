@@ -15268,7 +15268,7 @@
       "Reworked bounty gold streak formula ",
       "Old:<br>&nbsp;&nbsp;&nbsp;&nbsp;Streak gold = (35x-5) where x = current streak<br>New:<br>&nbsp;&nbsp;&nbsp;&nbsp;Streak gold= (5x^2 + 5x) where x = current streak<br><br>Streak gold goes from<br>&nbsp;&nbsp;&nbsp;&nbsp;100/135/170/205/240/275/310/345<br>to<br>&nbsp;&nbsp;&nbsp;&nbsp;60/100/150/210/280/360/450/550",
       "Reworked XP streak formula ",
-      "Old:<br>&nbsp;&nbsp;&nbsp;&nbsp;Streak XP = 10(x-1) * L, where x = current streak and L = hero level<br>New:<br>&nbsp;&nbsp;&nbsp;&nbsp;Streak XP= ( x^2 - x + 10) * L, where x = current streak and L = hero level<br><br>Streak bounty goes from<br>&nbsp;&nbsp;&nbsp;&nbsp;20/30/40/50/60/70/80/90 * L<br>to<br>&nbsp;&nbsp;&nbsp;&nbsp;14/20/28/38/50/64/80/98 * L",
+      "Old:<br>&nbsp;&nbsp;&nbsp;&nbsp;Streak XP = 10(x-1) * L, where x = current streak and L = hero level<br>New:<br>&nbsp;&nbsp;&nbsp;&nbsp;Streak XP= ( x^2 - x + 8) * L, where x = current streak and L = hero level<br><br>Streak bounty goes from<br>&nbsp;&nbsp;&nbsp;&nbsp;20/30/40/50/60/70/80/90 * L<br>to<br>&nbsp;&nbsp;&nbsp;&nbsp;14/20/28/38/50/64/80/98 * L",
       "<br>",
       "Cooldown reduction now stacks diminishingly",
       "Moved the bounty runes from the triangle to the primary jungle",
@@ -15508,7 +15508,7 @@
         "Impact radius increased from 315 to 400"
       ],
       "nullifier": [
-        "No longer pierces magic immunity",
+        "Now pierces magic immunity",
         "No longer slows the enemy",
         "No longer has a mana cost"
       ],
@@ -16453,6 +16453,7 @@
       "omniknight": [
         "Intelligence rescaled from 15+1.8 to 16+2.1",
         "Reworked Shard: Grants Degen Aura. Slows enemies within 400 radius of Omniknight by 40%",
+        "Increased Cast Range from 500 to 700",
         "No longer grants Status Resist",
         "Is now also applied to Omniknight if casted on an ally",
         "Grants an additional 3/4/5/6 Strength and HP Regen for each debuff dispelled",
@@ -16499,7 +16500,8 @@
       ],
       "phantom_lancer": [
         "Cooldown decreased from 16/12/8/4 to 13/10/7/4",
-        "Level 10 Talent +15 Attack Speed replaced with +2.5s Phantom Rush Bonus Agi Duration"
+        "Level 10 Talent +15 Attack Speed replaced with +2.5s Phantom Rush Bonus Agi Duration",
+        "Level 15 Talent +16% Evasion replaced with +15 Strength"
       ],
       "phoenix": [
         "Strength gain increased from 3.5 to 3.6",
@@ -16831,7 +16833,7 @@
         "Bonus attack speed rescaled from +475 to +300/400/500",
         "Reworked Scepter: Windrun is undispellable, slow is increased by 20% and enemies affected by it are blinded by 40%",
         "Level 10 Talent +1.5 mana regen replaced with -5% Powershot damage reduction per unit",
-        "Level 15 Talent +100 Powershot damage replaced with -3s Windrun cooldown",
+        "Level 15 Talent +100 Powershot damage replaced with -4s Windrun cooldown",
         "Level 15 Talent Windrun undispellable replaced with +225 Windrun radius"
       ],
       "winter_wyvern": [
@@ -16855,6 +16857,110 @@
         "Now granted by Shard. Whenever Zeus attacks or casts an ability on an enemy, it deals 9% of their current HP in damage",
         "Now a basic ability. Zeus performs a Heavenly Jump, shocking the closest visible nearby enemy (prioritizing heroes) within 700/800/900/1000 range, Reducing their movement by 100%, attack speed by 100 and increasing their cast time by 50% for 1/1.5/2/2.5s. Zeus gets 900 unobstructed vision around him for 3 seconds. Can't be cast while leashed. Mana cost: 50/60/70/80. Cooldown: 25/20/15/10s",
         "Level 15 Talent: +1.2% Static Field Damage replaced with +1 Heavenly Jump Target"
+      ]
+    }
+  },
+  "7_31b": {
+    "general": [
+      "Mana cost reduction now stacks diminishingly"
+    ],
+    "items": {
+      "boots": [
+        "Endurance unslowable duration reduced from 2s to 1.5s"
+      ],
+      "orchid": [
+        "Now requires a 300 gold recipe (Bloodthorn total cost also increased by 300)"
+      ],
+      "misericorde": [
+        "Bonus Damage per missing HP is now physical instead of magical"
+      ]
+    },
+    "heroes": {
+      "batrider": [
+        "Shard now has a 50% chance of applying Sticky Napalm on attack",
+        "Mana Cost decreased from 175/200/225 to 150/175/200",
+        "Movement Speed increased from 300 to 310",
+        "Level 15 talent +25 Movement Speed reduced to +20"
+      ],
+      "huskar": [
+        "Agility reduced from 13 + 1.6 to 10 + 1.5",
+        "Cooldown increased from 14/13/12/11 to 17/15/13/11",
+        "Level 15 Talent +5 Burning Spears DPS reduced to +4"
+      ],
+      "lina": [
+        "Agility Growth increased from 2.1 to 2.4",
+        "Intelligence Growth increased from 3.7 to 3.8",
+        "Damage increased from 80/130/180/230 to 100/150/200/250",
+        "Manacost reduced from 250/400/550 to 150/300/450"
+      ],
+      "lone_druid": [
+        "Attack speed bonus decreased from 16/34/52/70 to 16/32/48/64",
+        "Shared Armor reduced from 10/15/20/25% to 8/12/16/20%",
+        "Level 15 talent -10s Savage Roar Cooldown decreased to -8s"
+      ],
+      "lycan": [
+        "Damage reduced from 24-28/32-36/40-44/48-52 to 17-20/23-26/29-32/35-38",
+        "Shard wolf damage reduced from 48-52 to 35-38"
+      ],
+      "meepo": [
+        "Agility Growth decreased from 2.4 to 2.2",
+        "Level 10 Talent +6 Strength no longer applies twice to Clones"
+      ],
+      "morphling": [
+        "Base Move Speed increased from 280 to 285",
+        "Turn Rate improved from 0.6 to 0.7"
+      ],
+      "naga_siren": [
+        "Hit threshold increased from 5 to 6",
+        "Now triggers on Naga and all of her illusions every 6 attacks from Naga and her illusions combined (enemies hit by multiple rip tides only receive 1 instance of damage)",
+        "Damage decreased from 40/50/60/70 to 40/45/50/55",
+        "Level 10 Talent +20 Rip Tide Damage increased to +30"
+      ],
+      "puck": [
+        "Base Mana Regen increased from 0 to 0.5",
+        "Turn Rate increased from 0.8 to 0.9",
+        "Max Distance increased from 300 to 400"
+      ],
+      "pudge": [
+        "Is no longer Dispellable",
+        "Cooldown decreased from 30/25/20/15 to 20/18/16/14",
+        "Duration rescaled from 7 to 5/6/7/8",
+        "Mana cost decreased from 50 to 35/40/45/50",
+        "Level 25 Talent +1.5 Flesh Heap Stack Str replaced with 1.6x Flesh Heap Stack Str and Damage Block bonuses"
+      ],
+      "riki": [
+        "Mana cost increased from 50 to 50/55/60/65",
+        "Base Move Speed reduced from 320 to 315",
+        "Shard Sleep duration reduced from 4s to 3s"
+      ],
+      "storm_spirit": [
+        "Cooldown reduced from 22/20/18/16s to 20/18/16/14s"
+      ],
+      "terrorblade": [
+        "Cooldown reduced from 155s to 150s",
+        "Radius increased from 475 to 500",
+        "Illusion Damage taken reduced from 320% to 300%"
+      ],
+      "tiny": [
+        "Bonus armor reduced from 12/18/24 to 10/15/20",
+        "Tree Bonus Damage decreased from 50% to 40/45/50%",
+        "Level 15 talent decreased from +50% Grow Bonus Damage With Tree to +40%"
+      ],
+      "undying": [
+        "Zombie Damage reduced from 44-48 to 33-36"
+      ],
+      "techies": [
+        "Now deals self damage based on Techies' current HP, rather than max HP",
+        "Self damage decreased from 50/45/40/35% to 35/30/25/20%",
+        "Enemy damage decreased from 275/350/425/500 to 200/300/400/500",
+        "Cooldown decreased from 45/40/35/30 to 39/36/33/30",
+        "Explosion now slows enemies within the explosion radius by 15/25/35/45% for 2 seconds",
+        "Level 20 talent +100 Sticky Bomb Damage replaced with +125 Sticky Bomb Latch/Explosion Radius",
+        "Disarm duration rescaled from 3 to 2.4/2.7/3.0/3.3s"
+      ],
+      "zuus": [
+        "Now deals 20/50/75/100 damage",
+        "Now grants vision before applying the slow/damage"
       ]
     }
   }

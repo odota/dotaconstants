@@ -6150,7 +6150,7 @@
       "Instant Cast"
     ],
     "bkbpierce": "No",
-    "desc": "Zeus performs a Heavenly Jump shocking the closest visible nearby enemy (prioritizing heroes), Reducing their movement, attack speed and increasing their cast time. If Zeus was moving forward, he will jump towards that direction. Zeus gets 900 unobstructed vision around him for 3 seconds.",
+    "desc": "Zeus performs a Heavenly Jump shocking the closest visible nearby enemy (prioritizing heroes), dealing damage, reducing their movement, attack speed and increasing their cast time. If Zeus was moving forward, he will jump towards that direction. Zeus gets 900 unobstructed vision around him for 3 seconds.",
     "attrib": [],
     "mc": [
       "50",
@@ -25821,7 +25821,7 @@
     "behavior": "Passive",
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Every %hits% attack on a unit, the Naga Siren and her images will hit all nearby units with a damaging wave of water that lowers armor for %duration% seconds.",
+    "desc": "Every %hits% attack from naga and her illusions, the Naga Siren and her images will hit all nearby units with a damaging wave of water that lowers armor for %duration% seconds.",
     "attrib": [],
     "img": "/apps/dota2/images/abilities/naga_siren_rip_tide_md.png"
   },
@@ -41151,7 +41151,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Techies hurtle themselves into the enemy's midst, detonating charges upon impact which deal massive area of effect damage and silence enemies. Upon landing, the assault deals Techies non-lethal damage equal to a percentage of their max health.",
+    "desc": "Techies hurtle themselves into the enemy's midst, detonating charges upon impact which deal massive area of effect damage and silence enemies. Upon landing, the assault deals Techies non-lethal damage equal to a percentage of their current health.",
     "attrib": [
       {
         "key": "radius",
@@ -41180,7 +41180,7 @@
       },
       {
         "key": "hp_cost",
-        "header": "MAX HP SELF DAMAGE:",
+        "header": "CURRENT HP SELF DAMAGE:",
         "value": [
           "50%",
           "45%",
@@ -41229,7 +41229,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "Yes",
-    "desc": "Lobs a Sticky Bomb towards the target area. If it lands next to an enemy unit, the bomb will stick to it, slowing its movement speed. After a few seconds the bomb will explode, dealing damage in an area around the detonation.",
+    "desc": "Lobs a Sticky Bomb towards the target area. If it lands next to an enemy unit, the bomb will stick to it, slowing its movement speed. After a few seconds the bomb will explode, dealing damage in an area around the detonation and applying a secondary slow for %secondary_slow_duration% seconds.",
     "attrib": [],
     "mc": [
       "100",
@@ -42340,7 +42340,7 @@
   "primal_beast_uproar": {
     "dname": "Uproar",
     "behavior": "No Target",
-    "desc": "The Beast's temper passively provides base bonus damage. Additionally, for every instance of %damage_limit% damage or more Primal Beast takes from enemy heroes, he accumulates stacks of Uproar. \n\n When activated, Primal Beast releases a roar that slows surrounding enemies and grants the Beast additional attack damage and armor for %roar_duration% seconds based on his current stacks of Uproar.",
+    "desc": "The Beast's temper passively provides bonus damage. Additionally, for every instance of %damage_limit% damage or more Primal Beast takes from enemy heroes, he accumulates stacks of Uproar. \n\n When activated, Primal Beast releases a roar that slows surrounding enemies and grants the Beast additional attack damage and armor for %roar_duration% seconds based on his current stacks of Uproar.",
     "attrib": [],
     "cd": "0",
     "img": "/apps/dota2/images/abilities/primal_beast_uproar_md.png"
@@ -43932,7 +43932,7 @@
     "dname": "+50% Atrophy Allied Hero Bonus"
   },
   "special_bonus_unique_pudge_1": {
-    "dname": "+1.5 Flesh Heap Stack Str"
+    "dname": "{s:bonus_flesh_heap_strength_buff_amount}x Flesh Heap Stack Str and Damage Block bonuses"
   },
   "special_bonus_unique_pudge_2": {
     "dname": "+30 Rot Damage"
@@ -45273,7 +45273,7 @@
     "dname": "+5 Tree Grab Attack Charges"
   },
   "special_bonus_unique_tiny_7": {
-    "dname": "+{s:bonus_tree_bonus_damage_pct}% Tree Grow Bonus Damage"
+    "dname": "+{s:bonus_tree_bonus_damage_pct}% Grow Bonus Damage With Tree"
   },
   "special_bonus_unique_troll_warlord": {
     "dname": "+7 Berserker's Rage Armor"
@@ -45725,7 +45725,7 @@
     "dname": "+1 Mirror Image Illusion"
   },
   "special_bonus_unique_naga_siren_2": {
-    "dname": "+{s:bonus_damage} Rip Tide Damage"
+    "dname": "+{s:value} Rip Tide Damage"
   },
   "special_bonus_unique_naga_siren_3": {
     "dname": "-7 Rip Tide Armor"
@@ -46208,7 +46208,7 @@
     "dname": "+200 Blast Off! Damage"
   },
   "special_bonus_unique_techies_2": {
-    "dname": "+{s:bonus_damage} Sticky Bomb Damage"
+    "dname": "+{s:bonus_radius} Sticky Bomb Latch/Explosion Radius"
   },
   "special_bonus_unique_techies_3": {
     "dname": "-3s Proximity Mines Cooldown"
