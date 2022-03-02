@@ -318,16 +318,13 @@ const sources = [
           );
           
           // Check for bonus s-values
-          if (ability.dname.includes('bonus_')) {
-            if (scripts[key].ad_linked_abilities && scripts[scripts[key].ad_linked_abilities]) {
-              ability.dname = replaceBonusSValues(
-                key,
-                ability.dname,
-                scripts[scripts[key].ad_linked_abilities].AbilityValues
-              );
-            } else {
-              // TODO: find talent bonus values from heroe's base abilities
-            }
+          // TODO: find other missing talent bonus values from heroe's base abilities
+          if (scripts[key].ad_linked_abilities && scripts[scripts[key].ad_linked_abilities]) {
+            ability.dname = replaceBonusSValues(
+              key,
+              ability.dname,
+              scripts[scripts[key].ad_linked_abilities].AbilityValues
+            );
           }
 
           ability.behavior =
