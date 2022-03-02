@@ -317,8 +317,8 @@ const sources = [
             scripts[key].AbilitySpecial ?? (scripts[key].AbilityValues ? [scripts[key].AbilityValues] : undefined)
           );
           
-          // Check for bonus s-values
-          // TODO: find other missing talent bonus values from heroe's base abilities
+          // Check for unreplaced `s:bonus_<talent>`
+          // TODO: Create a replace function for the remaining `s:bonus_<talent>` templates whose values are placed in one of the hero's base abilities.
           if (scripts[key].ad_linked_abilities && scripts[scripts[key].ad_linked_abilities]) {
             ability.dname = replaceBonusSValues(
               key,
