@@ -327,6 +327,14 @@ const sources = [
             );
           }
 
+          // Clean Dname
+          if (ability.dname) {
+            ability.dname = ability.dname
+              .replace(/\+\+/g, '+')
+              .replace(/\-\-/g, '-')
+              .replace(/\+\-/g, '-');
+          }
+
           ability.behavior =
             formatBehavior(scripts[key].AbilityBehavior) || undefined;
           ability.dmg_type =
@@ -967,7 +975,9 @@ function replaceSValues(template, attribs) {
       values[key] = attrib[key];
     });
     Object.keys(values).forEach((key) => {
-      template = template.replace(`{s:${key}}`, values[key]);
+      if (typeof values[key] != 'object') { // TODO: fix special_bonus_unique_bloodseeker_rupture_charges
+        template = template.replace(`{s:${key}}`, values[key]);
+      }
     });
   }
   return template;
@@ -981,10 +991,7 @@ function replaceBonusSValues(key, template, attribs) {
           // Most of the time, the bonus value template is named bonus_<bonus_key>
           .replace(`{s:bonus_${bonus}}`, attribs[bonus][key])
           // But sometimes, it's just value
-          .replace(`{s:value}`, attribs[bonus][key])
-          // And sometimes, the + and - signs are doubled
-          .replace(`++`, '+')
-          .replace(`--`, '-');
+          .replace(`{s:value}`, attribs[bonus][key]);
       }
     });
   }
