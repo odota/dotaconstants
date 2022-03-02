@@ -468,10 +468,11 @@ const sources = [
           const newHero = { abilities: [], talents: [] };
           let talentCounter = 2;
           Object.keys(DOTAHeroes[heroKey]).forEach(function (key) {
+            var talentIndexStart = DOTAHeroes[heroKey]['AbilityTalentStart'] != undefined ? DOTAHeroes[heroKey]['AbilityTalentStart'] : 10
             var abilityRegexMatch = key.match(/Ability([0-9]+)/);
-            if (abilityRegexMatch) {
+            if (abilityRegexMatch && DOTAHeroes[heroKey][key] != '') {
               var abilityNum = parseInt(abilityRegexMatch[1]);
-              if (abilityNum < 10) {
+              if (abilityNum < talentIndexStart) {
                 newHero["abilities"].push(DOTAHeroes[heroKey][key]);
               } else {
                 // -8 not -10 because going from 0-based index -> 1 and flooring divison result
