@@ -312,11 +312,23 @@ const sources = [
         .filter((key) => !not_abilities.includes(key))
         .forEach((key) => {
           var ability = {};
-
           ability.dname = replaceSValues(
-            strings[`DOTA_Tooltip_ability_${key}`],
-            scripts[key].AbilitySpecial
+            strings[`DOTA_Tooltip_ability_${key}`] ?? strings[`DOTA_Tooltip_Ability_${key}`],
+            scripts[key].AbilitySpecial ?? (scripts[key].AbilityValues ? [scripts[key].AbilityValues] : undefined)
           );
+          
+          // Check for bonus s-values
+          if (ability.dname.includes('bonus_')) {
+            if (scripts[key].ad_linked_abilities && scripts[scripts[key].ad_linked_abilities]) {
+              ability.dname = replaceBonusSValues(
+                key,
+                ability.dname,
+                scripts[scripts[key].ad_linked_abilities].AbilityValues
+              );
+            } else {
+              // TODO: find talent bonus values from heroe's base abilities
+            }
+          }
 
           ability.behavior =
             formatBehavior(scripts[key].AbilityBehavior) || undefined;
@@ -958,6 +970,24 @@ function replaceSValues(template, attribs) {
     });
     Object.keys(values).forEach((key) => {
       template = template.replace(`{s:${key}}`, values[key]);
+    });
+  }
+  return template;
+}
+
+function replaceBonusSValues(key, template, attribs) {
+  if (template && attribs) {
+    Object.keys(attribs).forEach((bonus) => {
+      if (typeof attribs[bonus] == 'object' && attribs[bonus].hasOwnProperty(key)) {
+        template = template
+          // Most of the time, the bonus value template is named bonus_<bonus_key>
+          .replace(`{s:bonus_${bonus}}`, attribs[bonus][key])
+          // But sometimes, it's just value
+          .replace(`{s:value}`, attribs[bonus][key])
+          // And sometimes, the + and - signs are doubled
+          .replace(`++`, '+')
+          .replace(`--`, '-');
+      }
     });
   }
   return template;
