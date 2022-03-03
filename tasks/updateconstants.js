@@ -312,11 +312,20 @@ const sources = [
         .filter((key) => !not_abilities.includes(key))
         .forEach((key) => {
           var ability = {};
-
           ability.dname = replaceSValues(
-            strings[`DOTA_Tooltip_ability_${key}`],
-            scripts[key].AbilitySpecial
+            strings[`DOTA_Tooltip_ability_${key}`] ?? strings[`DOTA_Tooltip_Ability_${key}`],
+            scripts[key].AbilitySpecial ?? (scripts[key].AbilityValues ? [scripts[key].AbilityValues] : undefined)
           );
+          
+          // Check for unreplaced `s:bonus_<talent>`
+          // TODO: Create a replace function for the remaining `s:bonus_<talent>` templates whose values are placed in one of the hero's base abilities.
+          if (scripts[key].ad_linked_abilities && scripts[scripts[key].ad_linked_abilities]) {
+            ability.dname = replaceBonusSValues(
+              key,
+              ability.dname,
+              scripts[scripts[key].ad_linked_abilities].AbilityValues
+            );
+          }
 
           ability.behavior =
             formatBehavior(scripts[key].AbilityBehavior) || undefined;
@@ -958,7 +967,31 @@ function replaceSValues(template, attribs) {
       values[key] = attrib[key];
     });
     Object.keys(values).forEach((key) => {
-      template = template.replace(`{s:${key}}`, values[key]);
+      if (typeof values[key] != 'object') { // TODO: fix special_bonus_unique_bloodseeker_rupture_charges
+        template = template
+          .replace(`{s:${key}}`, values[key]);
+      }
+    });
+  }
+  return template;
+}
+
+function replaceBonusSValues(key, template, attribs) {
+  if (template && attribs) {
+    Object.keys(attribs).forEach((bonus) => {
+      if (typeof attribs[bonus] == 'object' && attribs[bonus].hasOwnProperty(key)) {
+        // remove redundant signs
+        var bonus_value = attribs[bonus][key]
+          .replace('+', '')
+          .replace('-', '')
+          .replace('x', '');
+
+        template = template
+          // Most of the time, the bonus value template is named bonus_<bonus_key>
+          .replace(`{s:bonus_${bonus}}`, bonus_value)
+          // But sometimes, it's just value
+          .replace(`{s:value}`, bonus_value);
+      }
     });
   }
   return template;
