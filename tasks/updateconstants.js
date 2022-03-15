@@ -1,62 +1,62 @@
-const request = require('request')
-const async = require('async')
-const fs = require('fs')
-const simplevdf = require('simple-vdf')
-const { mapAbilities } = require('../utils')
-const hero_list = require('../build/heroes.json')
+const request = require("request")
+const async = require("async")
+const fs = require("fs")
+const simplevdf = require("simple-vdf")
+const { mapAbilities } = require("../utils")
+const hero_list = require("../build/heroes.json")
 
 const extraStrings = {
-  DOTA_ABILITY_BEHAVIOR_NONE: 'None',
-  DOTA_ABILITY_BEHAVIOR_PASSIVE: 'Passive',
-  DOTA_ABILITY_BEHAVIOR_UNIT_TARGET: 'Unit Target',
-  DOTA_ABILITY_BEHAVIOR_CHANNELLED: 'Channeled',
-  DOTA_ABILITY_BEHAVIOR_POINT: 'Point Target',
-  DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES: 'Root',
-  DOTA_ABILITY_BEHAVIOR_AOE: 'AOE',
-  DOTA_ABILITY_BEHAVIOR_NO_TARGET: 'No Target',
-  DOTA_ABILITY_BEHAVIOR_AUTOCAST: 'Autocast',
-  DOTA_ABILITY_BEHAVIOR_ATTACK: 'Attack Modifier',
-  DOTA_ABILITY_BEHAVIOR_IMMEDIATE: 'Instant Cast',
-  DOTA_ABILITY_BEHAVIOR_HIDDEN: 'Hidden',
-  DAMAGE_TYPE_PHYSICAL: 'Physical',
-  DAMAGE_TYPE_MAGICAL: 'Magical',
-  DAMAGE_TYPE_PURE: 'Pure',
-  SPELL_IMMUNITY_ENEMIES_YES: 'Yes',
-  SPELL_IMMUNITY_ENEMIES_NO: 'No',
-  SPELL_IMMUNITY_ALLIES_YES: 'Yes',
-  SPELL_IMMUNITY_ALLIES_NO: 'No',
-  SPELL_DISPELLABLE_YES: 'Yes',
-  SPELL_DISPELLABLE_NO: 'No',
-  DOTA_UNIT_TARGET_TEAM_BOTH: 'Both',
-  DOTA_UNIT_TARGET_TEAM_ENEMY: 'Enemy',
-  DOTA_UNIT_TARGET_TEAM_FRIENDLY: 'Friendly',
-  DOTA_UNIT_TARGET_HERO: 'Hero',
-  DOTA_UNIT_TARGET_BASIC: 'Basic',
-  DOTA_UNIT_TARGET_BUILDING: 'Building',
-  DOTA_UNIT_TARGET_TREE: 'Tree'
+  DOTA_ABILITY_BEHAVIOR_NONE: "None",
+  DOTA_ABILITY_BEHAVIOR_PASSIVE: "Passive",
+  DOTA_ABILITY_BEHAVIOR_UNIT_TARGET: "Unit Target",
+  DOTA_ABILITY_BEHAVIOR_CHANNELLED: "Channeled",
+  DOTA_ABILITY_BEHAVIOR_POINT: "Point Target",
+  DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES: "Root",
+  DOTA_ABILITY_BEHAVIOR_AOE: "AOE",
+  DOTA_ABILITY_BEHAVIOR_NO_TARGET: "No Target",
+  DOTA_ABILITY_BEHAVIOR_AUTOCAST: "Autocast",
+  DOTA_ABILITY_BEHAVIOR_ATTACK: "Attack Modifier",
+  DOTA_ABILITY_BEHAVIOR_IMMEDIATE: "Instant Cast",
+  DOTA_ABILITY_BEHAVIOR_HIDDEN: "Hidden",
+  DAMAGE_TYPE_PHYSICAL: "Physical",
+  DAMAGE_TYPE_MAGICAL: "Magical",
+  DAMAGE_TYPE_PURE: "Pure",
+  SPELL_IMMUNITY_ENEMIES_YES: "Yes",
+  SPELL_IMMUNITY_ENEMIES_NO: "No",
+  SPELL_IMMUNITY_ALLIES_YES: "Yes",
+  SPELL_IMMUNITY_ALLIES_NO: "No",
+  SPELL_DISPELLABLE_YES: "Yes",
+  SPELL_DISPELLABLE_NO: "No",
+  DOTA_UNIT_TARGET_TEAM_BOTH: "Both",
+  DOTA_UNIT_TARGET_TEAM_ENEMY: "Enemy",
+  DOTA_UNIT_TARGET_TEAM_FRIENDLY: "Friendly",
+  DOTA_UNIT_TARGET_HERO: "Hero",
+  DOTA_UNIT_TARGET_BASIC: "Basic",
+  DOTA_UNIT_TARGET_BUILDING: "Building",
+  DOTA_UNIT_TARGET_TREE: "Tree"
 }
 
 const ignoreStrings = [
-  'DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES',
-  'DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK',
-  'DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT',
-  'DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING',
-  'DOTA_ABILITY_BEHAVIOR_TOGGLE',
-  'DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE',
-  'DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES'
+  "DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES",
+  "DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK",
+  "DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT",
+  "DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING",
+  "DOTA_ABILITY_BEHAVIOR_TOGGLE",
+  "DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE",
+  "DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
 ]
 
-const badNames = ['Version', 'npc_dota_hero_base', 'npc_dota_hero_target_dummy']
+const badNames = ["Version", "npc_dota_hero_base", "npc_dota_hero_target_dummy"]
 
 const extraAttribKeys = [
-  'AbilityCastRange',
-  'AbilityChargeRestoreTime',
-  'AbilityDuration',
-  'AbilityChannelTime',
-  'AbilityCastPoint',
-  'AbilityCharges',
-  'AbilityManaCost',
-  'AbilityCooldown'
+  "AbilityCastRange",
+  "AbilityChargeRestoreTime",
+  "AbilityDuration",
+  "AbilityChannelTime",
+  "AbilityCastPoint",
+  "AbilityCharges",
+  "AbilityManaCost",
+  "AbilityCooldown"
 ]
 
 const now = Number(new Date())
@@ -65,17 +65,17 @@ const aghs_desc_urls = []
 
 for (const hero_id in hero_list) {
   aghs_desc_urls.push(
-    'http://www.dota2.com/datafeed/herodata?language=english&hero_id=' + hero_id
+    "http://www.dota2.com/datafeed/herodata?language=english&hero_id=" + hero_id
   )
 }
 
 const sources = [
   {
-    key: 'items',
+    key: "items",
     url: [
-      'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/abilities_english.json',
-      'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/items.json',
-      'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/neutral_items.txt'
+      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/abilities_english.json",
+      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/items.json",
+      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/neutral_items.txt"
     ],
     transform: (respObj) => {
       const strings = mapAbilities(respObj[0].lang.Tokens)
@@ -86,9 +86,9 @@ const sources = [
 
       // Fix places where valve doesnt care about correct case
       Object.keys(strings).forEach((key) => {
-        if (key.includes('DOTA_Tooltip_Ability_')) {
+        if (key.includes("DOTA_Tooltip_Ability_")) {
           strings[
-            key.replace('DOTA_Tooltip_Ability_', 'DOTA_Tooltip_ability_')
+            key.replace("DOTA_Tooltip_Ability_", "DOTA_Tooltip_ability_")
           ] = strings[key]
         }
       })
@@ -98,8 +98,8 @@ const sources = [
       Object.keys(scripts)
         .filter((key) => {
           return (
-            !(key.includes('item_recipe') && scripts[key].ItemCost === '0') &&
-            key !== 'Version'
+            !(key.includes("item_recipe") && scripts[key].ItemCost === "0") &&
+            key !== "Version"
           )
         })
         .forEach((key) => {
@@ -116,9 +116,9 @@ const sources = [
           item.id = parseInt(scripts[key].ID)
           item.img = `/apps/dota2/images/items/${key.replace(
             /^item_/,
-            ''
+            ""
           )}_lg.png?t=${1593393829403}`
-          if (key.includes('item_recipe')) {
+          if (key.includes("item_recipe")) {
             item.img = `/apps/dota2/images/items/recipe_lg.png?t=${1593393829403}`
           }
 
@@ -135,20 +135,20 @@ const sources = [
             notes.push(strings[`DOTA_Tooltip_ability_${key}_Note${i}`])
           }
 
-          item.notes = notes.join('\n')
+          item.notes = notes.join("\n")
 
           item.attrib = formatAttrib(
             scripts[key].AbilitySpecial,
             strings,
             `DOTA_Tooltip_ability_${key}_`
-          ).filter((attr) => !attr.generated || attr.key === 'lifetime')
+          ).filter((attr) => !attr.generated || attr.key === "lifetime")
 
           item.mc = parseInt(scripts[key].AbilityManaCost) || false
           item.cd = parseInt(scripts[key].AbilityCooldown) || false
 
           item.lore = (
-            strings[`DOTA_Tooltip_ability_${key}_Lore`] || ''
-          ).replace(/\\n/g, '\r\n')
+            strings[`DOTA_Tooltip_ability_${key}_Lore`] || ""
+          ).replace(/\\n/g, "\r\n")
 
           item.components = null
           item.created = false
@@ -156,7 +156,7 @@ const sources = [
           if (neutralItemNameTierMap[key]) {
             item.tier = neutralItemNameTierMap[key]
           }
-          items[key.replace(/^item_/, '')] = item
+          items[key.replace(/^item_/, "")] = item
         })
 
       // Load recipes
@@ -165,115 +165,115 @@ const sources = [
           (key) => scripts[key].ItemRequirements && scripts[key].ItemResult
         )
         .forEach((key) => {
-          result_key = scripts[key].ItemResult.replace(/^item_/, '')
+          result_key = scripts[key].ItemResult.replace(/^item_/, "")
           items[result_key].components = scripts[key].ItemRequirements[0]
-            .split(';')
-            .map((item) => item.replace(/^item_/, '').replace('*', ''))
+            .split(";")
+            .map((item) => item.replace(/^item_/, "").replace("*", ""))
           items[result_key].created = true
         })
 
       //Manually Adding DiffBlade2 for match data prior to 7.07
-      items['diffusal_blade_2'] = {
+      items["diffusal_blade_2"] = {
         id: 196,
-        img: '/apps/dota2/images/items/diffusal_blade_2_lg.png?3',
-        dname: 'Diffusal Blade',
-        qual: 'artifact',
+        img: "/apps/dota2/images/items/diffusal_blade_2_lg.png?3",
+        dname: "Diffusal Blade",
+        qual: "artifact",
         cost: 3850,
-        desc: 'Active: Purge Targets an enemy, removing buffs from the target and slowing it for 4 seconds.Range: 600\nPassive: ManabreakEach attack burns 50 mana from the target, and deals 0.8 physical damage per burned mana. Burns 16 mana per attack from melee illusions and 8 mana per attack from ranged illusions. Dispel Type: Basic Dispel',
-        notes: 'Does not stack with other manabreak abilities.',
+        desc: "Active: Purge Targets an enemy, removing buffs from the target and slowing it for 4 seconds.Range: 600\nPassive: ManabreakEach attack burns 50 mana from the target, and deals 0.8 physical damage per burned mana. Burns 16 mana per attack from melee illusions and 8 mana per attack from ranged illusions. Dispel Type: Basic Dispel",
+        notes: "Does not stack with other manabreak abilities.",
         attrib: [
           {
-            key: 'bonus_agility',
-            header: '',
-            value: ['25', '35'],
-            footer: 'Agility'
+            key: "bonus_agility",
+            header: "",
+            value: ["25", "35"],
+            footer: "Agility"
           },
           {
-            key: 'bonus_intellect',
-            header: '',
-            value: ['10', '15'],
-            footer: 'Intelligence'
+            key: "bonus_intellect",
+            header: "",
+            value: ["10", "15"],
+            footer: "Intelligence"
           },
           {
-            key: 'initial_charges',
-            header: 'INITIAL CHARGES:',
-            value: '8',
+            key: "initial_charges",
+            header: "INITIAL CHARGES:",
+            value: "8",
             generated: true
           },
           {
-            key: 'feedback_mana_burn',
-            header: 'FEEDBACK MANA BURN:',
-            value: '50',
+            key: "feedback_mana_burn",
+            header: "FEEDBACK MANA BURN:",
+            value: "50",
             generated: true
           },
           {
-            key: 'feedback_mana_burn_illusion_melee',
-            header: 'FEEDBACK MANA BURN ILLUSION MELEE:',
-            value: '16',
+            key: "feedback_mana_burn_illusion_melee",
+            header: "FEEDBACK MANA BURN ILLUSION MELEE:",
+            value: "16",
             generated: true
           },
           {
-            key: 'feedback_mana_burn_illusion_ranged',
-            header: 'FEEDBACK MANA BURN ILLUSION RANGED:',
-            value: '8',
+            key: "feedback_mana_burn_illusion_ranged",
+            header: "FEEDBACK MANA BURN ILLUSION RANGED:",
+            value: "8",
             generated: true
           },
           {
-            key: 'purge_summoned_damage',
-            header: 'PURGE SUMMONED DAMAGE:',
-            value: '99999',
+            key: "purge_summoned_damage",
+            header: "PURGE SUMMONED DAMAGE:",
+            value: "99999",
             generated: true
           },
           {
-            key: 'purge_rate',
-            header: 'PURGE RATE:',
-            value: '5',
+            key: "purge_rate",
+            header: "PURGE RATE:",
+            value: "5",
             generated: true
           },
           {
-            key: 'purge_root_duration',
-            header: 'PURGE ROOT DURATION:',
-            value: '3',
+            key: "purge_root_duration",
+            header: "PURGE ROOT DURATION:",
+            value: "3",
             generated: true
           },
           {
-            key: 'purge_slow_duration',
-            header: 'PURGE SLOW DURATION:',
-            value: '4',
+            key: "purge_slow_duration",
+            header: "PURGE SLOW DURATION:",
+            value: "4",
             generated: true
           },
           {
-            key: 'damage_per_burn',
-            header: 'DAMAGE PER BURN:',
-            value: '0.8',
+            key: "damage_per_burn",
+            header: "DAMAGE PER BURN:",
+            value: "0.8",
             generated: true
           },
           {
-            key: 'cast_range_tooltip',
-            header: 'CAST RANGE TOOLTIP:',
-            value: '600',
+            key: "cast_range_tooltip",
+            header: "CAST RANGE TOOLTIP:",
+            value: "600",
             generated: true
           }
         ],
         mc: false,
         cd: 4,
         lore: "An enchanted blade that allows the user to cut straight into the enemy's soul.",
-        components: ['diffusal_blade', 'recipe_diffusal_blade'],
+        components: ["diffusal_blade", "recipe_diffusal_blade"],
         created: true
       }
 
       //Manually added for match data prior to 7.07
-      items['recipe_iron_talon'] = {
+      items["recipe_iron_talon"] = {
         id: 238,
-        img: '/apps/dota2/images/items/recipe_lg.png?3',
-        dname: 'Iron Talon Recipe',
+        img: "/apps/dota2/images/items/recipe_lg.png?3",
+        dname: "Iron Talon Recipe",
         cost: 125,
-        desc: '',
-        notes: '',
+        desc: "",
+        notes: "",
         attrib: [],
         mc: false,
         cd: false,
-        lore: '',
+        lore: "",
         components: null,
         created: false
       }
@@ -282,39 +282,39 @@ const sources = [
     }
   },
   {
-    key: 'item_ids',
-    url: 'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/items.json',
+    key: "item_ids",
+    url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/items.json",
     transform: (respObj) => {
       const items = respObj.DOTAAbilities
       const itemIds = {}
       for (const key in items) {
         const item = items[key]
-        if (typeof item === 'object' && 'ID' in item) {
-          itemIds[item.ID] = key.replace('item_', '')
+        if (typeof item === "object" && "ID" in item) {
+          itemIds[item.ID] = key.replace("item_", "")
         }
       }
       //manually adding DiffBlade2
-      itemIds[196] = 'diffusal_blade_2'
+      itemIds[196] = "diffusal_blade_2"
 
       return itemIds
     }
   },
   {
-    key: 'abilities',
+    key: "abilities",
     url: [
-      'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/abilities_english.json',
-      'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_abilities.json'
+      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/abilities_english.json",
+      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_abilities.json"
     ],
     transform: (respObj) => {
       const strings = respObj[0].lang.Tokens
       const scripts = respObj[1].DOTAAbilities
 
       var not_abilities = [
-        'Version',
-        'ability_base',
-        'default_attack',
-        'attribute_bonus',
-        'ability_deward'
+        "Version",
+        "ability_base",
+        "default_attack",
+        "attribute_bonus",
+        "ability_deward"
       ]
 
       var abilities = {}
@@ -333,7 +333,7 @@ const sources = [
           )
 
           // Check for unreplaced `s:bonus_<talent>`
-          // TODO: Create a replace function for the remaining `s:bonus_<talent>` templates whose values are placed in one of the hero's base abilities.
+          // TODO: Create a replace function for the remaining `s:bonus_<talent>` templates whose values are placed in one of the hero"s base abilities.
           if (
             scripts[key].ad_linked_abilities &&
             scripts[scripts[key].ad_linked_abilities]
@@ -385,20 +385,20 @@ const sources = [
               ability.mc = formatValues(
                 scripts[key].AbilityManaCost,
                 false,
-                '/'
+                "/"
               )
             }
             if (scripts[key].AbilityCooldown) {
               ability.cd = formatValues(
                 scripts[key].AbilityCooldown,
                 false,
-                '/'
+                "/"
               )
             }
           }
 
           ability.img = `/apps/dota2/images/abilities/${key}_md.png`
-          if (key.indexOf('special_bonus') === 0) {
+          if (key.indexOf("special_bonus") === 0) {
             ability = { dname: ability.dname }
           }
           abilities[key] = ability
@@ -407,8 +407,8 @@ const sources = [
     }
   },
   {
-    key: 'ability_ids',
-    url: 'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_abilities.json',
+    key: "ability_ids",
+    url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_abilities.json",
     transform: (respObj) => {
       const abilityIds = {}
       for (const key in respObj.DOTAAbilities) {
@@ -421,10 +421,10 @@ const sources = [
     }
   },
   {
-    key: 'heroes',
+    key: "heroes",
     url: [
-      'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/dota_english.json',
-      'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.json'
+      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/dota_english.json",
+      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.json"
       // "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/dota_english.json",
     ],
     transform: (respObj) => {
@@ -435,7 +435,7 @@ const sources = [
       keys.forEach((name) => {
         let h = formatVpkHero(name, respObj[1], respObj[0].lang.Tokens[name])
         h.localized_name =
-          h.localized_name || respObj[1]['DOTAHeroes'][name].workshop_guide_name
+          h.localized_name || respObj[1]["DOTAHeroes"][name].workshop_guide_name
         // h.localized_name = h.localized_name || respObj[2].lang.Tokens[name];
         heroes.push(h)
       })
@@ -449,10 +449,10 @@ const sources = [
     }
   },
   {
-    key: 'hero_names',
+    key: "hero_names",
     url: [
-      'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/dota_english.json',
-      'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.json'
+      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/dota_english.json",
+      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.json"
       // "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/dota_english.json",
     ],
     transform: (respObj) => {
@@ -463,7 +463,7 @@ const sources = [
       keys.forEach((name) => {
         let h = formatVpkHero(name, respObj[1], respObj[0].lang.Tokens[name])
         h.localized_name =
-          h.localized_name || respObj[1]['DOTAHeroes'][name].workshop_guide_name
+          h.localized_name || respObj[1]["DOTAHeroes"][name].workshop_guide_name
         // h.localized_name = h.localized_name || respObj[2].lang.Tokens[name];
         heroes.push(h)
       })
@@ -477,32 +477,32 @@ const sources = [
     }
   },
   {
-    key: 'hero_abilities',
-    url: 'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.json',
+    key: "hero_abilities",
+    url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.json",
     transform: (respObj) => {
       var DOTAHeroes = respObj.DOTAHeroes
       const heroAbilities = {}
       Object.keys(DOTAHeroes).forEach(function (heroKey) {
         if (
-          heroKey != 'Version' &&
-          heroKey != 'npc_dota_hero_base' &&
-          heroKey != 'npc_dota_hero_target_dummy'
+          heroKey != "Version" &&
+          heroKey != "npc_dota_hero_base" &&
+          heroKey != "npc_dota_hero_target_dummy"
         ) {
           const newHero = { abilities: [], talents: [] }
           let talentCounter = 2
           Object.keys(DOTAHeroes[heroKey]).forEach(function (key) {
             var talentIndexStart =
-              DOTAHeroes[heroKey]['AbilityTalentStart'] != undefined
-                ? DOTAHeroes[heroKey]['AbilityTalentStart']
+              DOTAHeroes[heroKey]["AbilityTalentStart"] != undefined
+                ? DOTAHeroes[heroKey]["AbilityTalentStart"]
                 : 10
             var abilityRegexMatch = key.match(/Ability([0-9]+)/)
-            if (abilityRegexMatch && DOTAHeroes[heroKey][key] != '') {
+            if (abilityRegexMatch && DOTAHeroes[heroKey][key] != "") {
               var abilityNum = parseInt(abilityRegexMatch[1])
               if (abilityNum < talentIndexStart) {
-                newHero['abilities'].push(DOTAHeroes[heroKey][key])
+                newHero["abilities"].push(DOTAHeroes[heroKey][key])
               } else {
                 // -8 not -10 because going from 0-based index -> 1 and flooring divison result
-                newHero['talents'].push({
+                newHero["talents"].push({
                   name: DOTAHeroes[heroKey][key],
                   level: Math.floor(talentCounter / 2)
                 })
@@ -517,26 +517,26 @@ const sources = [
     }
   },
   {
-    key: 'region',
-    url: 'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/regions.json',
+    key: "region",
+    url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/regions.json",
     transform: (respObj) => {
       const region = {}
       const regions = respObj.regions
       for (const key in regions) {
         if (Number(regions[key].region) > 0) {
           region[regions[key].region] = regions[key].display_name
-            .slice('#dota_region_'.length)
-            .split('_')
+            .slice("#dota_region_".length)
+            .split("_")
             .map((s) => s.toUpperCase())
-            .join(' ')
+            .join(" ")
         }
       }
       return region
     }
   },
   {
-    key: 'cluster',
-    url: 'https://api.stratz.com/api/v1/Cluster',
+    key: "cluster",
+    url: "https://api.stratz.com/api/v1/Cluster",
     transform: (respObj) => {
       const cluster = {}
       respObj.forEach(({ id, regionId }) => {
@@ -546,8 +546,8 @@ const sources = [
     }
   },
   {
-    key: 'countries',
-    url: 'https://raw.githubusercontent.com/mledoze/countries/master/countries.json',
+    key: "countries",
+    url: "https://raw.githubusercontent.com/mledoze/countries/master/countries.json",
     transform: (respObj) => {
       const countries = {}
       respObj
@@ -564,11 +564,11 @@ const sources = [
     }
   },
   {
-    key: 'chat_wheel',
+    key: "chat_wheel",
     url: [
-      'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/chat_wheel.txt',
-      'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/dota_english.json',
-      'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/hero_chat_wheel_english.txt'
+      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/chat_wheel.txt",
+      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/dota_english.json",
+      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/hero_chat_wheel_english.txt"
     ],
     transform: (respObj) => {
       const chat_wheel = respObj[0]
@@ -581,7 +581,7 @@ const sources = [
         if (!/^#/.test(input)) {
           return input
         }
-        var key = input.replace(/^#/, '')
+        var key = input.replace(/^#/, "")
         return lang[key] || chat_wheel_lang[key] || key
       }
 
@@ -589,7 +589,7 @@ const sources = [
         var data = {
           id: parseInt(message.message_id),
           name: key,
-          all_chat: message.all_chat == '1' ? true : undefined,
+          all_chat: message.all_chat == "1" ? true : undefined,
           label: localize(message.label),
           message: localize(message.message),
           image: message.image,
@@ -598,14 +598,14 @@ const sources = [
         if (message.sound) {
           if (/^soundboard\./.test(message.sound) || /^wisp_/.test(key)) {
             // All of the soundboard clips and the IO responses are wav files
-            data.sound_ext = 'wav'
+            data.sound_ext = "wav"
           } else if (message.message_id / 1000 >= 121) {
             // Gets the hero id from the message id
             // If the hero is grimstroke or newer, the files are aac
-            data.sound_ext = 'aac'
+            data.sound_ext = "aac"
           } else {
             // All other response clips used are mp3s
-            data.sound_ext = 'mp3'
+            data.sound_ext = "mp3"
           }
         }
         result[data.id] = data
@@ -623,19 +623,19 @@ const sources = [
     }
   },
   {
-    key: 'patchnotes',
-    url: 'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/patchnotes/patchnotes_english.txt',
+    key: "patchnotes",
+    url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/patchnotes/patchnotes_english.txt",
     transform: (respObj) => {
-      let items = Object.keys(require('../build/items.json'))
-      let heroes = Object.keys(require('../build/hero_names.json')).map(
-        (hero) => hero.replace('npc_dota_hero_', '')
+      let items = Object.keys(require("../build/items.json"))
+      let heroes = Object.keys(require("../build/hero_names.json")).map(
+        (hero) => hero.replace("npc_dota_hero_", "")
       )
 
       let result = {}
       let keys = Object.keys(respObj)
       for (let key of keys) {
-        let keyArr = key.replace('dota_patch_', '').split('_')
-        let patch = keyArr.splice(0, 2).join('_')
+        let keyArr = key.replace("dota_patch_", "").split("_")
+        let patch = keyArr.splice(0, 2).join("_")
         if (!result[patch])
           result[patch] = {
             general: [],
@@ -643,9 +643,9 @@ const sources = [
             heroes: {}
           }
 
-        if (keyArr[0].toLowerCase() == 'general') {
+        if (keyArr[0].toLowerCase() == "general") {
           result[patch].general.push(respObj[key])
-        } else if (keyArr[0] == 'item') {
+        } else if (keyArr[0] == "item") {
           let searchName = keyArr.slice(1)
           let itemName = parseNameFromArray(searchName, items)
           if (itemName) {
@@ -673,7 +673,7 @@ const sources = [
     }
   },
   {
-    key: 'aghs_desc',
+    key: "aghs_desc",
     url: aghs_desc_urls,
     transform: (respObj) => {
       const herodata = respObj
@@ -692,19 +692,19 @@ const sources = [
           hero_id: hd_hero.id,
 
           has_scepter: false,
-          scepter_desc: '',
-          scepter_skill_name: '',
+          scepter_desc: "",
+          scepter_skill_name: "",
           scepter_new_skill: false,
 
           has_shard: false,
-          shard_desc: '',
-          shard_skill_name: '',
+          shard_desc: "",
+          shard_skill_name: "",
           shard_new_skill: false
         }
 
         hd_hero.abilities.forEach((ability) => {
           // skip unused skills
-          if (ability.name_loc == '' || ability.desc_loc == '') {
+          if (ability.name_loc == "" || ability.desc_loc == "") {
             return // i guess this is continue in JS :|
           }
 
@@ -717,7 +717,7 @@ const sources = [
             aghs_element.has_scepter = true
           } else if (
             ability.ability_has_scepter &&
-            !(ability.scepter_loc == '')
+            !(ability.scepter_loc == "")
           ) {
             // scepter ugprades an ability
             aghs_element.scepter_desc = ability.scepter_loc
@@ -732,7 +732,7 @@ const sources = [
             aghs_element.shard_skill_name = ability.name_loc
             aghs_element.shard_new_skill = true
             aghs_element.has_shard = true
-          } else if (ability.ability_has_shard && !(ability.shard_loc == '')) {
+          } else if (ability.ability_has_shard && !(ability.shard_loc == "")) {
             // scepter ugprades an ability
             aghs_element.shard_desc = ability.shard_loc
             aghs_element.shard_skill_name = ability.name_loc
@@ -745,22 +745,22 @@ const sources = [
         if (!aghs_element.has_shard) {
           console.log(
             aghs_element.hero_name +
-              '[' +
+              "[" +
               aghs_element.hero_id +
-              ']' +
+              "]" +
               ": Didn't find a scepter..."
           )
         }
         if (!aghs_element.has_scepter) {
           console.log(
             aghs_element.hero_name +
-              '[' +
+              "[" +
               aghs_element.hero_id +
-              ']' +
+              "]" +
               ": Didn't find a shard..."
           )
         }
-        // push the current hero's element into the array
+        // push the current hero"s element into the array
         aghs_desc_arr.push(aghs_element)
       })
 
@@ -769,7 +769,7 @@ const sources = [
   }
 ]
 
-const patches = JSON.parse(fs.readFileSync('./json/patch.json'))
+const patches = JSON.parse(fs.readFileSync("./json/patch.json"))
 const newPatches = []
 const lastPatch = patches[patches.length - 1]
 const today = new Date()
@@ -790,7 +790,7 @@ if (dayDifference > 14) {
   }
 }
 */
-fs.writeFileSync('./json/patch.json', JSON.stringify(newPatches, null, 1))
+fs.writeFileSync("./json/patch.json", JSON.stringify(newPatches, null, 1))
 
 // "heropickerdata": "http://www.dota2.com/jsfeed/heropickerdata?l=english",
 // "heropediadata": "http://www.dota2.com/jsfeed/heropediadata?feeds=herodata",
@@ -801,7 +801,7 @@ async.each(
     const url = s.url
     //grab raw data from each url and save
     console.log(url)
-    if (typeof url === 'object') {
+    if (typeof url === "object") {
       async.map(
         url,
         (urlString, cb) => {
@@ -853,7 +853,7 @@ async.each(
         body = s.transform(body)
       }
       fs.writeFileSync(
-        './build/' + s.key + '.json',
+        "./build/" + s.key + ".json",
         JSON.stringify(body, null, 2)
       )
       cb(err)
@@ -864,28 +864,28 @@ async.each(
       throw err
     }
     // Copy manual json files to build
-    const jsons = fs.readdirSync('./json')
+    const jsons = fs.readdirSync("./json")
     jsons.forEach((filename) => {
       fs.writeFileSync(
-        './build/' + filename,
-        fs.readFileSync('./json/' + filename, 'utf-8')
+        "./build/" + filename,
+        fs.readFileSync("./json/" + filename, "utf-8")
       )
     })
     // Reference built files in index.js
-    const cfs = fs.readdirSync('./build')
-    // Exports aren't supported in Node yet, so use old export syntax for now
-    // const code = cfs.map((filename) => `export const ${filename.split('.')[0]} = require(__dirname + '/json/${filename.split('.')[0]}.json');`).join('\n';
+    const cfs = fs.readdirSync("./build")
+    // Exports aren"t supported in Node yet, so use old export syntax for now
+    // const code = cfs.map((filename) => `export const ${filename.split(".")[0]} = require(__dirname + "/json/${filename.split(".")[0]}.json");`).join("\n";
     const code = `module.exports = {
 ${cfs
   .map(
     (filename) =>
-      `${filename.split('.')[0]}: require(__dirname + '/build/${
-        filename.split('.')[0]
-      }.json')`
+      `${filename.split(".")[0]}: require(__dirname + "/build/${
+        filename.split(".")[0]
+      }.json")`
   )
-  .join(',\n')}
+  .join(",\n")}
 };`
-    fs.writeFileSync('./index.js', code)
+    fs.writeFileSync("./index.js", code)
     process.exit(0)
   }
 )
@@ -905,20 +905,20 @@ function expandItemGroup(key, items) {
 }
 
 function replaceUselessDecimals(strToReplace) {
-  return strToReplace.replace(/\.0+(\D)/, '$1')
+  return strToReplace.replace(/\.0+(\D)/, "$1")
 }
 
 // Formats something like "20 21 22" or [ 20, 21, 22 ] to be "20 / 21 / 22"
-function formatValues(value, percent = false, separator = ' / ') {
-  var values = Array.isArray(value) ? value : String(value).split(' ')
+function formatValues(value, percent = false, separator = " / ") {
+  var values = Array.isArray(value) ? value : String(value).split(" ")
   if (values.every((v) => v == values[0])) {
     values = [values[0]]
   }
   if (percent) {
-    values = values.map((v) => v + '%')
+    values = values.map((v) => v + "%")
   }
   let len = values.length
-  let res = values.join(separator).replace(/\.0+(\D|$)/g, '$1')
+  let res = values.join(separator).replace(/\.0+(\D|$)/g, "$1")
   return len > 1 ? res.split(separator) : res
 }
 
@@ -938,7 +938,7 @@ function formatAttrib(attributes, strings, strings_prefix) {
         }
         return {
           key: key,
-          header: `${key.replace(/_/g, ' ').toUpperCase()}:`,
+          header: `${key.replace(/_/g, " ").toUpperCase()}:`,
           value: formatValues(attr[key]),
           generated: true
         }
@@ -950,13 +950,13 @@ function formatAttrib(attributes, strings, strings_prefix) {
       header = match[3]
 
       if (match[2]) {
-        final.header = '+'
+        final.header = "+"
         final.value = formatValues(attr[key], match[1])
         final.footer = strings[`dota_ability_variable_${header}`]
-        if ('dota_ability_variable_attack_range'.includes(header))
-          final.footer = final.footer.replace(/<[^>]*>/g, '')
+        if ("dota_ability_variable_attack_range".includes(header))
+          final.footer = final.footer.replace(/<[^>]*>/g, "")
       } else {
-        final.header = header.replace(/<[^>]*>/g, '')
+        final.header = header.replace(/<[^>]*>/g, "")
         final.value = formatValues(attr[key], match[1])
       }
 
@@ -968,10 +968,10 @@ function formatAttrib(attributes, strings, strings_prefix) {
 function catogerizeItemAbilities(abilities) {
   const itemAbilities = {}
   abilities.forEach((ability) => {
-    if (!ability.includes('<h1>')) {
+    if (!ability.includes("<h1>")) {
       ;(itemAbilities.hint = itemAbilities.hint || []).push(ability)
     } else {
-      ability = ability.replace(/<[^h1>]*>/gi, '')
+      ability = ability.replace(/<[^h1>]*>/gi, "")
       const regExp = /<h1>\s*(.*)\s*:\s*(.*)\s*<\/h1>\s*([\s\S]*)/gi
       try {
         const [_, type, name, desc] = regExp.exec(ability)
@@ -996,7 +996,7 @@ function replaceSValues(template, attribs) {
       values[key] = attrib[key]
     })
     Object.keys(values).forEach((key) => {
-      if (typeof values[key] != 'object') {
+      if (typeof values[key] != "object") {
         // TODO: fix special_bonus_unique_bloodseeker_rupture_charges
         template = template.replace(`{s:${key}}`, values[key])
       }
@@ -1009,19 +1009,19 @@ function replaceBonusSValues(key, template, attribs) {
   if (template && attribs) {
     Object.keys(attribs).forEach((bonus) => {
       if (
-        typeof attribs[bonus] == 'object' &&
+        typeof attribs[bonus] == "object" &&
         attribs[bonus].hasOwnProperty(key)
       ) {
         // remove redundant signs
         var bonus_value = attribs[bonus][key]
-          .replace('+', '')
-          .replace('-', '')
-          .replace('x', '')
+          .replace("+", "")
+          .replace("-", "")
+          .replace("x", "")
 
         template = template
           // Most of the time, the bonus value template is named bonus_<bonus_key>
           .replace(`{s:bonus_${bonus}}`, bonus_value)
-          // But sometimes, it's just value
+          // But sometimes, it"s just value
           .replace(`{s:value}`, bonus_value)
       }
     })
@@ -1029,7 +1029,7 @@ function replaceBonusSValues(key, template, attribs) {
   return template
 }
 
-// Formats templates like "Storm's movement speed is %storm_move_speed%" with "Storm's movement speed is 32"
+// Formats templates like "Storm"s movement speed is %storm_move_speed%" with "Storm"s movement speed is 32"
 // args are the template, and a list of attribute dictionaries, like the ones in AbilitySpecial for each ability in the npc_abilities.json from the vpk
 function replaceSpecialAttribs(
   template,
@@ -1043,7 +1043,7 @@ function replaceSpecialAttribs(
   }
   // Fix weird attrib formatting on very rare cases.
   // e.g.: spirit_breaker_empowering_haste
-  if (!Array.isArray(attribs) && typeof attribs == 'object') {
+  if (!Array.isArray(attribs) && typeof attribs == "object") {
     attribs = Object.keys(attribs).map((key) => {
       return attribs[key]
     })
@@ -1052,50 +1052,50 @@ function replaceSpecialAttribs(
     //additional special ability keys being catered
     extraAttribKeys.forEach((abilitykey) => {
       if (abilitykey in allData) {
-        let value = allData[abilitykey].split(' ') //can have multiple values
+        let value = allData[abilitykey].split(" ") //can have multiple values
         value =
           value.length === 1 ? Number(value[0]) : value.map((v) => Number(v))
         attribs.push({ [abilitykey.toLowerCase()]: value })
         //these are also present with another attrib name
-        if (abilitykey === 'AbilityChargeRestoreTime') {
+        if (abilitykey === "AbilityChargeRestoreTime") {
           attribs.push({ charge_restore_time: value })
         }
-        if (abilitykey === 'AbilityCharges') {
+        if (abilitykey === "AbilityCharges") {
           attribs.push({ max_charges: value })
         }
       }
     })
 
-    if (template.includes('%customval_team_tomes_used%')) {
+    if (template.includes("%customval_team_tomes_used%")) {
       //in-game line not required in tooltip
-      template = template.replace(/[ a-zA-Z]+: %\w+%/g, '')
+      template = template.replace(/[ a-zA-Z]+: %\w+%/g, "")
     }
 
     template = template.replace(/%([^% ]*)%/g, function (str, name) {
-      if (name == '') {
-        return '%'
+      if (name == "") {
+        return "%"
       }
       if (!Array.isArray(attribs)) attribs = Object.values(attribs)
       var attr = attribs.find((attr) => name in attr)
-      if (!attr && name[0] === 'd') {
+      if (!attr && name[0] === "d") {
         // Because someone at valve messed up in 4 places
         name = name.substr(1)
         attr = attribs.find((attr) => name in attr)
       }
       if (!attr) {
-        if (name === 'lifesteal') {
+        if (name === "lifesteal") {
           //special cases, in terms of template context and dota2 gamepedia
-          return attribs.find((obj) => 'lifesteal_percent' in obj)
+          return attribs.find((obj) => "lifesteal_percent" in obj)
             .lifesteal_percent
-        } else if (name === 'movement_slow') {
-          return attribs.find((obj) => 'damage_pct' in obj).damage_pct
+        } else if (name === "movement_slow") {
+          return attribs.find((obj) => "damage_pct" in obj).damage_pct
         }
 
         console.log(`cant find attribute %${name}% in %${key}%`)
         return `%${name}%`
       }
 
-      if (typeof attr[name] == 'object') {
+      if (typeof attr[name] == "object") {
         return attr[name].value
       }
 
@@ -1103,11 +1103,11 @@ function replaceSpecialAttribs(
     })
   }
   if (isItem) {
-    template = template.replace(/<br>/gi, '\n')
-    const abilities = template.split('\\n')
+    template = template.replace(/<br>/gi, "\n")
+    const abilities = template.split("\\n")
     return catogerizeItemAbilities(abilities)
   }
-  template = template.replace(/\\n/g, '\n').replace(/<[^>]*>/g, '')
+  template = template.replace(/\\n/g, "\n").replace(/<[^>]*>/g, "")
   return template
 }
 
@@ -1115,7 +1115,7 @@ function formatBehavior(string) {
   if (!string) return false
 
   let split = string
-    .split(' | ')
+    .split(" | ")
     .filter(
       (a) =>
         !ignoreStrings.includes(a.trim()) &&
@@ -1142,23 +1142,23 @@ function formatVpkHero(key, vpkr, localized_name) {
   h.name = key
   h.localized_name = localized_name
 
-  h.primary_attr = vpkrh.AttributePrimary.replace('DOTA_ATTRIBUTE_', '')
+  h.primary_attr = vpkrh.AttributePrimary.replace("DOTA_ATTRIBUTE_", "")
     .slice(0, 3)
     .toLowerCase()
   h.attack_type =
-    vpkrh.AttackCapabilities == 'DOTA_UNIT_CAP_MELEE_ATTACK'
-      ? 'Melee'
-      : 'Ranged'
-  h.roles = vpkrh.Role.split(',')
+    vpkrh.AttackCapabilities == "DOTA_UNIT_CAP_MELEE_ATTACK"
+      ? "Melee"
+      : "Ranged"
+  h.roles = vpkrh.Role.split(",")
 
   h.img =
-    '/apps/dota2/images/dota_react/heroes/' +
-    key.replace('npc_dota_hero_', '') +
-    '.png?'
+    "/apps/dota2/images/dota_react/heroes/" +
+    key.replace("npc_dota_hero_", "") +
+    ".png?"
   h.icon =
-    '/apps/dota2/images/dota_react/heroes/icons/' +
-    key.replace('npc_dota_hero_', '') +
-    '.png?'
+    "/apps/dota2/images/dota_react/heroes/icons/" +
+    key.replace("npc_dota_hero_", "") +
+    ".png?"
   h.url = vpkrh.url
 
   h.base_health = Number(vpkrh.StatusHealth || baseHero.StatusHealth)
@@ -1188,7 +1188,7 @@ function formatVpkHero(key, vpkr, localized_name) {
   h.move_speed = Number(vpkrh.MovementSpeed)
   h.turn_rate = Number(vpkrh.MovementTurnRate)
 
-  h.cm_enabled = vpkrh.CMEnabled === '1' ? true : false
+  h.cm_enabled = vpkrh.CMEnabled === "1" ? true : false
   h.legs = Number(vpkrh.Legs || baseHero.Legs)
 
   return h
@@ -1197,7 +1197,7 @@ function formatVpkHero(key, vpkr, localized_name) {
 function parseNameFromArray(array, names) {
   let final = []
   for (let i = 1; i <= array.length; i++) {
-    let name = array.slice(0, i).join('_')
+    let name = array.slice(0, i).join("_")
     if (names.includes(name)) {
       final.push(name)
     }
@@ -1210,7 +1210,7 @@ const getNeutralItemNameTierMap = (neutrals) => {
   Object.keys(neutrals).forEach((tier) => {
     var items = neutrals[tier].items
     Object.keys(items).forEach((itemName) => {
-      ret[itemName] = ret[itemName.replace(/recipe_/gi, '')] = parseInt(tier)
+      ret[itemName] = ret[itemName.replace(/recipe_/gi, "")] = parseInt(tier)
     })
   })
   return ret
