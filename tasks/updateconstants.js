@@ -17,12 +17,22 @@ const extraStrings = {
   DOTA_ABILITY_BEHAVIOR_AUTOCAST: "Autocast",
   DOTA_ABILITY_BEHAVIOR_ATTACK: "Attack Modifier",
   DOTA_ABILITY_BEHAVIOR_IMMEDIATE: "Instant Cast",
+  DOTA_ABILITY_BEHAVIOR_HIDDEN: "Hidden",
   DAMAGE_TYPE_PHYSICAL: "Physical",
   DAMAGE_TYPE_MAGICAL: "Magical",
   DAMAGE_TYPE_PURE: "Pure",
   SPELL_IMMUNITY_ENEMIES_YES: "Yes",
   SPELL_IMMUNITY_ENEMIES_NO: "No",
-  DOTA_ABILITY_BEHAVIOR_HIDDEN: "Hidden",
+  SPELL_DISPELLABLE_YES: "Yes",
+  SPELL_DISPELLABLE_NO: "No",
+  DOTA_UNIT_TARGET_TEAM_BOTH: "Both",
+  DOTA_UNIT_TARGET_TEAM_ENEMY: "Enemy",
+  DOTA_UNIT_TARGET_TEAM_ENEMY: "Enemy",
+  DOTA_UNIT_TARGET_TEAM_FRIENDLY: "Friendly",
+  DOTA_UNIT_TARGET_HERO: "Hero",
+  DOTA_UNIT_TARGET_BASIC: "Basic",
+  DOTA_UNIT_TARGET_BUILDING: "Building",
+  DOTA_UNIT_TARGET_TREE: "Tree",
 };
 
 const ignoreStrings = [
@@ -32,6 +42,7 @@ const ignoreStrings = [
   "DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING",
   "DOTA_ABILITY_BEHAVIOR_TOGGLE",
   "DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE",
+  "DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
 ];
 
 const badNames = [
@@ -47,6 +58,8 @@ const extraAttribKeys = [
   "AbilityChannelTime",
   "AbilityCastPoint",
   "AbilityCharges",
+  "AbilityManaCost",
+  "AbilityCooldown",
 ];
 
 const now = Number(new Date());
@@ -98,7 +111,8 @@ const sources = [
               strings[`DOTA_Tooltip_ability_${key}_Description`],
               scripts[key].AbilitySpecial,
               true,
-              scripts[key]
+              scripts[key],
+              key
             ),
           };
 
@@ -333,14 +347,19 @@ const sources = [
             formatBehavior(scripts[key].AbilityUnitDamageType) || undefined;
           ability.bkbpierce =
             formatBehavior(scripts[key].SpellImmunityType) || undefined;
-          ability.target_type =
+          ability.dispellable =
+            formatBehavior(scripts[key].SpellImmunityType) || undefined;
+          ability.target_team =
             formatBehavior(scripts[key].AbilityUnitTargetTeam) || undefined;
+          ability.target_type =
+            formatBehavior(scripts[key].AbilityUnitTargetType) || undefined;
 
           ability.desc = replaceSpecialAttribs(
             strings[`DOTA_Tooltip_ability_${key}_Description`],
-            scripts[key].AbilitySpecial,
+            scripts[key].AbilitySpecial ?? (scripts[key].AbilityValues ? [scripts[key].AbilityValues] : undefined),
             false,
-            scripts[key]
+            scripts[key],
+            key
           );
           ability.dmg =
             scripts[key].AbilityDamage &&
@@ -351,6 +370,8 @@ const sources = [
             strings,
             `DOTA_Tooltip_ability_${key}_`
           );
+
+          ability.lore = strings[`DOTA_Tooltip_ability_${key}_Lore`]
 
           if (scripts[key].AbilityManaCost || scripts[key].AbilityCooldown) {
             if (scripts[key].AbilityManaCost) {
@@ -1003,10 +1024,18 @@ function replaceSpecialAttribs(
   template,
   attribs,
   isItem = false,
-  allData = {}
+  allData = {},
+  key // For error tracing
 ) {
   if (!template) {
     return template;
+  }
+  // Fix weird attrib formatting on very rare cases.
+  // e.g.: spirit_breaker_empowering_haste
+  if (!Array.isArray(attribs) && typeof attribs == 'object') {
+    attribs = Object.keys(attribs).map((key) => {
+      return attribs[key]
+    })
   }
   if (attribs) {
     //additional special ability keys being catered
@@ -1051,9 +1080,14 @@ function replaceSpecialAttribs(
           return attribs.find((obj) => "damage_pct" in obj).damage_pct;
         }
 
-        console.log(`cant find attribute %${name}%`);
+        console.log(`cant find attribute %${name}% in %${key}%`);
         return `%${name}%`;
       }
+
+      if (typeof attr[name] == 'object') {
+        return attr[name].value;
+      }
+
       return attr[name];
     });
   }
@@ -1071,14 +1105,10 @@ function formatBehavior(string) {
 
   let split = string
     .split(" | ")
+    .filter((a) => !ignoreStrings.includes(a.trim()) && extraStrings.hasOwnProperty(a.trim()))
     .map((item) => {
-      if (!~ignoreStrings.indexOf(item)) {
-        return extraStrings[item];
-      } else {
-        return null;
-      }
-    })
-    .filter((a) => a !== null);
+      return extraStrings[item.trim()];
+    });
 
   if (split.length === 1) {
     return split[0];
