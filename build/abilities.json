@@ -2521,7 +2521,7 @@
     "dmg_type": "Magical",
     "bkbpierce": "No",
     "dispellable": [],
-    "desc": "Fires a long-range arrow with deadly precision, which stuns and damages the first enemy unit it strikes. The stun duration ranges from 0.01 to undefined seconds, with bonus damage up to 180 added, based on the distance the arrow travels to its target. Instantly kills the first non-ancient creep it hits.",
+    "desc": "Fires a long-range arrow with deadly precision, which stuns and damages the first enemy unit it strikes. The stun duration ranges from 0.01 to 3.2,3.8,4.4,5 seconds, with bonus damage up to 180 added, based on the distance the arrow travels to its target. Instantly kills the first non-ancient creep it hits.",
     "dmg": [
       "60",
       "150",
@@ -8152,7 +8152,7 @@
       "Hero",
       "Basic"
     ],
-    "desc": "Shackles the target to an enemy unit or tree in a line directly behind it.  If no unit or tree is present, the stun duration is reduced to undefined.",
+    "desc": "Shackles the target to an enemy unit or tree in a line directly behind it.  If no unit or tree is present, the stun duration is reduced to 0.75,0.75,0.75,0.75.",
     "dmg": "0",
     "attrib": [
       {
@@ -9000,7 +9000,7 @@
       "Hero",
       "Basic"
     ],
-    "desc": "Focuses Enigma's power on a target, causing it to take damage and become repeatedly stunned for multiple instances.  An instance strikes every undefined seconds.",
+    "desc": "Focuses Enigma's power on a target, causing it to take damage and become repeatedly stunned for multiple instances.  An instance strikes every 2,2,2,2 seconds.",
     "attrib": [
       {
         "key": "tick_rate",
@@ -9377,7 +9377,7 @@
     ],
     "target_team": "Friendly",
     "target_type": "Building",
-    "desc": "After channeling for undefineds teleport to a target friendly structure. Level 2 allows teleporting to friendly units and Level 3 to friendly heroes.",
+    "desc": "After channeling for 4.5,4,3.5s teleport to a target friendly structure. Level 2 allows teleporting to friendly units and Level 3 to friendly heroes.",
     "attrib": [
       {
         "key": "minimun_distance",
@@ -10132,7 +10132,7 @@
       "Instant Cast"
     ],
     "dispellable": "Yes",
-    "desc": "Extends the attack range of Sniper's rifle. Can be activated to provide 100% Headshot chance for 3 seconds. Slows you by undefined% for the duration.",
+    "desc": "Extends the attack range of Sniper's rifle. Can be activated to provide 100% Headshot chance for 3 seconds. Slows you by 45,40,35,30% for the duration.",
     "attrib": [
       {
         "key": "bonus_attack_range",
@@ -10685,7 +10685,7 @@
     ],
     "bkbpierce": "No",
     "dispellable": "Yes",
-    "desc": "CHANNELED - A powerful slowing current that grows stronger as it's channelled. Lasts up to undefined seconds.  Enemies are slowed for 3 seconds after leaving the area or the spell ends.",
+    "desc": "CHANNELED - A powerful slowing current that grows stronger as it's channelled. Lasts up to 10,12,14,16 seconds.  Enemies are slowed for 3 seconds after leaving the area or the spell ends.",
     "dmg": "0",
     "attrib": [
       {
@@ -10789,7 +10789,7 @@
     "dmg_type": "Magical",
     "bkbpierce": "Yes",
     "dispellable": [],
-    "desc": "Summons a Golem from the depths, stunning enemies for one second. The Golem lives undefined seconds, takes reduced damage from spells, has Permanent Immolation and Flaming Fists on attack.",
+    "desc": "Summons a Golem from the depths, stunning enemies for one second. The Golem lives 60,60,60 seconds, takes reduced damage from spells, has Permanent Immolation and Flaming Fists on attack.",
     "attrib": [
       {
         "key": "golem_duration",
@@ -12406,7 +12406,7 @@
     "behavior": "No Target",
     "bkbpierce": "No",
     "dispellable": "Yes",
-    "desc": "Faceless Void traps all nearby enemies in a time dilation field for undefined seconds, extending their cooldowns and slowing their movement and attack speed by 10% for each cooldown extended. Deals damage per second for each cooldown.",
+    "desc": "Faceless Void traps all nearby enemies in a time dilation field for 8,9,10,11 seconds, extending their cooldowns and slowing their movement and attack speed by 10% for each cooldown extended. Deals damage per second for each cooldown.",
     "attrib": [
       {
         "key": "radius",
@@ -14256,7 +14256,7 @@
     "dmg_type": "Magical",
     "bkbpierce": [],
     "dispellable": "No",
-    "desc": "Dragon Knight takes the form of one of three powerful elder dragons, increasing his speed, and Dragon Tail's range, while granting him new powers.\nLEVEL 1 Green Dragon - Corrosive Breath: attacks deal undefined poison damage per second for undefined seconds. Works on structures.\nLEVEL 2 Red Dragon - Splash Attack: attacks damage all enemy units in a 350 radius for undefined% damage, with Corrosive Breath added to the targets.\nLEVEL 3 Blue Dragon - Frost Breath: slows movement speed by undefined% and attack speed by undefined of enemy units in Splash Attack range for undefined seconds, with Corrosive Breath added to the targets.",
+    "desc": "Dragon Knight takes the form of one of three powerful elder dragons, increasing his speed, and Dragon Tail's range, while granting him new powers.\nLEVEL 1 Green Dragon - Corrosive Breath: attacks deal 20,20,20,30 poison damage per second for 5,5,5 seconds. Works on structures.\nLEVEL 2 Red Dragon - Splash Attack: attacks damage all enemy units in a 350 radius for 75,75,75,100% damage, with Corrosive Breath added to the targets.\nLEVEL 3 Blue Dragon - Frost Breath: slows movement speed by -40,-40,-40,-60% and attack speed by -40,-40,-40,-60 of enemy units in Splash Attack range for 3,3,3 seconds, with Corrosive Breath added to the targets.",
     "attrib": [
       {
         "key": "duration",
@@ -17710,7 +17710,7 @@
     "dispellable": "Yes",
     "target_team": "Friendly",
     "target_type": "Hero",
-    "desc": "Unlocks the regenerative power of a friendly unit, with healing based upon its primary attribute. If the target is below 35%, it will heal faster.  Lasts undefined seconds.",
+    "desc": "Unlocks the regenerative power of a friendly unit, with healing based upon its primary attribute. If the target is below 35%, it will heal faster.  Lasts 16,16,16,16 seconds.",
     "attrib": [
       {
         "key": "heal",
@@ -18707,7 +18707,7 @@
     "dmg_type": "Physical",
     "bkbpierce": "No",
     "dispellable": "No",
-    "desc": "Weaver launches a swarm of undefined young Weavers that latch on any enemy unit in their path, attacking and reducing armor until it is killed.",
+    "desc": "Weaver launches a swarm of 12,12,12,12 young Weavers that latch on any enemy unit in their path, attacking and reducing armor until it is killed.",
     "attrib": [
       {
         "key": "damage",
@@ -27639,7 +27639,7 @@
       "Hero",
       "Basic"
     ],
-    "desc": "Repeatedly strikes the targeted unit with lightning.  Each strike damages nearby enemy units in a small radius and slows enemy movement and attack speed by 100% for undefined seconds.  Provides vision of its target.",
+    "desc": "Repeatedly strikes the targeted unit with lightning.  Each strike damages nearby enemy units in a small radius and slows enemy movement and attack speed by 100% for 0.1,0.2,0.3,0.4 seconds.  Provides vision of its target.",
     "attrib": [
       {
         "key": "radius",
@@ -32615,7 +32615,7 @@
       "Hero",
       "Basic"
     ],
-    "desc": "Tusk compresses shards of ice into a ball of frozen energy that damages all enemies it comes in contact with. When the ball reaches its target destination the shards are released, creating a barrier that lasts for undefined seconds.",
+    "desc": "Tusk compresses shards of ice into a ball of frozen energy that damages all enemies it comes in contact with. When the ball reaches its target destination the shards are released, creating a barrier that lasts for 4,5,6,7 seconds.",
     "attrib": [
       {
         "key": "shard_width",
@@ -46853,7 +46853,7 @@
     "dmg_type": "Magical",
     "bkbpierce": "No",
     "dispellable": "No",
-    "desc": "Winter Wyvern soars upon an arctic wind, granting her unobstructed movement and allowing her to exhale a blistering chill into each attack. While soaring, her attacks travel further and faster, and slow enemies with a magical freeze that strips them of undefined% of their current health each second. Her sight is also hardened against night's chill, granting her 400 additional vision range at night while soaring.",
+    "desc": "Winter Wyvern soars upon an arctic wind, granting her unobstructed movement and allowing her to exhale a blistering chill into each attack. While soaring, her attacks travel further and faster, and slow enemies with a magical freeze that strips them of 6,7,8,9% of their current health each second. Her sight is also hardened against night's chill, granting her 400 additional vision range at night while soaring.",
     "attrib": [
       {
         "key": "duration",

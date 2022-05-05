@@ -2,7 +2,7 @@ const request = require("request");
 const async = require("async");
 const fs = require("fs");
 const simplevdf = require("simple-vdf");
-const { mapAbilities } = require("../utils");
+const { mapAbilities, cleanupArray } = require("../utils");
 const hero_list = require("../build/heroes.json");
 
 const extraStrings = {
@@ -116,7 +116,6 @@ const sources = [
               key
             )
           };
-
           item.id = parseInt(scripts[key].ID);
           item.img = `/apps/dota2/images/items/${key.replace(
             /^item_/,
@@ -971,29 +970,6 @@ function formatAttrib(attributes, strings, strings_prefix) {
     .filter((a) => a);
 }
 
-function catogerizeItemAbilities(abilities) {
-  const itemAbilities = {};
-  abilities.forEach((ability) => {
-    if (!ability.includes("<h1>")) {
-      (itemAbilities.hint = itemAbilities.hint || []).push(ability);
-    } else {
-      ability = ability.replace(/<[^h1>]*>/gi, "");
-      const regExp = /<h1>\s*(.*)\s*:\s*(.*)\s*<\/h1>\s*([\s\S]*)/gi;
-      try {
-        const [_, type, name, desc] = regExp.exec(ability);
-        (itemAbilities[type.toLowerCase()] =
-          itemAbilities[type.toLowerCase()] || []).push({
-          name: name,
-          desc: desc
-        });
-      } catch (e) {
-        console.log(e);
-      }
-    }
-  });
-  return itemAbilities;
-}
-
 function replaceSValues(template, attribs) {
   let values = {};
   if (template && attribs && Array.isArray(attribs)) {
@@ -1047,6 +1023,7 @@ function replaceSpecialAttribs(
   if (!template) {
     return template;
   }
+
   // Fix weird attrib formatting on very rare cases.
   // e.g.: spirit_breaker_empowering_haste
   if (!Array.isArray(attribs) && typeof attribs == "object") {
@@ -1101,7 +1078,7 @@ function replaceSpecialAttribs(
         return `%${name}%`;
       }
 
-      if (typeof attr[name] == "object") {
+      if (attr[name].value) {
         return attr[name].value;
       }
 
@@ -1111,7 +1088,9 @@ function replaceSpecialAttribs(
   if (isItem) {
     template = template.replace(/<br>/gi, "\n");
     const abilities = template.split("\\n");
-    return catogerizeItemAbilities(abilities);
+    return {
+      hint: cleanupArray(abilities)
+    };
   }
   template = template.replace(/\\n/g, "\n").replace(/<[^>]*>/g, "");
   return template;
