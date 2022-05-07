@@ -12794,7 +12794,7 @@
       "techies": [
         "Movement speed increased from 310 to 320",
         "Remote Mines cast time improved from 1 to 0.75",
-        "Minefield Sign can no longer be placed in fountain areas",
+        "Can no longer be placed in fountain areas",
         "Shard cast range reduced from +600 to +300",
         "Shard stun radius increased from 200 to 400 (same as damage radius)",
         "Shard stun duration increased from 1.5 to 1.75",
@@ -16961,6 +16961,228 @@
       "zuus": [
         "Now deals 20/50/75/100 damage",
         "Now grants vision before applying the slow/damage"
+      ]
+    }
+  },
+  "7_31c": {
+    "general": [],
+    "items": {
+      "desolator": [
+        "Soul Stealer max stacks reduced from 25 to 20"
+      ],
+      "skadi": [
+        "Movement/Attack Speed slow against melee heroes rescaled from 25/25% to 20/30%",
+        "Movement/Attack Speed slow against ranged heroes rescaled from 50/50% to 40/60%"
+      ],
+      "spirit_vessel": [
+        "Recipe cost increased from 1000 to 1100"
+      ],
+      "satanic": [
+        "Reduced attack damage bonus from 45 to 38"
+      ],
+      "urn_of_shadows": [
+        "Recipe cost increased from 335 to 375"
+      ],
+      "vladmir": [
+        "Recipe cost reduced from 400 to 250"
+      ],
+      "helm_of_the_overlord": [
+        "Bonus lifesteal increased from 15% to 18%",
+        "Mana regen increased from 1.75 to 2"
+      ],
+      "wraith_pact": [
+        "Vladmir's Aura radius increased from 900 to 1200",
+        "Wraith's Reprisal Damage Reduction increased from 25% to 30%",
+        "Wraith's Reprisal DPS increased from 25 to 30",
+        "Casting Wraith's Reprisal deletes any previous totems spawned by the ability",
+        "Bonus lifesteal increased from 15% to 18%",
+        "Mana regen increased from 1.75 to 2"
+      ]
+    },
+    "heroes": {
+      "misc": [
+        "Take Off max mana cost per second increased from 2.5% to 4%",
+        "Vision reduced from 1800/1800 to 1200/800",
+        "Raise Dead cooldown increased from 18 to 20",
+        "Raise Dead duration decreased from 40 to 35",
+        "Armor reduced from 1 to 0"
+      ],
+      "arc_warden": [
+        "Base damage increased from 47-57 to 51-57"
+      ],
+      "axe": [
+        "Base Health regeneration reduced from 2.75 to 2.5",
+        "Bonus Armor reduced from 30 to 25"
+      ],
+      "bane": [
+        "Max Channel time reduced from 6 to 5/5.5/6s"
+      ],
+      "bloodseeker": [
+        "Self damage is now magical instead of Pure",
+        "Damage to enemies increased from 5% to 7%",
+        "Cooldown reduced from 4s to 3s"
+      ],
+      "broodmother": [
+        "Mana Cost reduced from 50 to 40"
+      ],
+      "chaos_knight": [
+        "Shard bonus range decreased from 300 to 150",
+        "No longer applies Bonus damage to Creep Heroes and Roshan."
+      ],
+      "chen": [
+        "Cooldown decreased from 160/140/120 to 150/130/110",
+        "Base Movement Speed increased from 300 to 305"
+      ],
+      "crystal_maiden": [
+        "Explosion damage radius increased from 300 to 320",
+        "Move Speed slow increased from 30% to 40%",
+        "Cooldown reduced from 110/100/90 to 90"
+      ],
+      "death_prophet": [
+        "Shard fear duration decreased from 2s to 1.5s",
+        "Base health drain per second reduced from 16 to 10/12/14/16",
+        "Now does 50% damage to buildings"
+      ],
+      "disruptor": [
+        "Mana cost decreased from 130/140/150/160 to 125/130/135/140"
+      ],
+      "dragon_knight": [
+        "Shard Damage Per Second decreased from 80 to 75"
+      ],
+      "earthshaker": [
+        "Mana Cost reduced from 125/140/155/170 to 120/130/140/150"
+      ],
+      "ember_spirit": [
+        "Damage reduced from 60/90/120/150 to 45/80/115/150"
+      ],
+      "enchantress": [
+        "Can now only dominate creeps up to level 4/5/6/6"
+      ],
+      "enigma": [
+        "Eidolon magic resistance increased from 50% to 60%",
+        "Eidolon bounty decreased from 20-26 to 18-24",
+        "Eidolon Experienced reduced from 12 to 10"
+      ],
+      "huskar": [
+        "Strength as max health regeneration bonus decreased from 20%/40%/60%/80% to 16%/34%/52%/70%"
+      ],
+      "keeper_of_the_light": [
+        "Mana restored reduced from 100/180/260/340 to 80/160/240/320",
+        "Knockback duration reduced from 0.8s to 0.6s",
+        "Base movement speed reduced from 330 to 320"
+      ],
+      "lycan": [
+        "Base Attack Speed increased from 100 to 110",
+        "Increased attack damage from 17-20/23-26/29-32/35-38 to 20-23/26-29/32-34/38-40",
+        "Shard Lane Wolf increased Attack Damage from 35-38 to 38-40"
+      ],
+      "medusa": [
+        "Damage reduced from 50/60/70/80% to 45/55/65/75%",
+        "Mana cost increased from 100 to 150"
+      ],
+      "necrolyte": [
+        "Permanent heath regeneration decreased from 3/6/9 to 2/4/6",
+        "Cooldown increased from 14 to 16",
+        "Manacost increased from 100 to 125",
+        "Heal reduced from 60/85/110/135 to 55/80/105/130"
+      ],
+      "nyx_assassin": [
+        "Mana Cost reduced from 105/120/135/150 to 100/110/120/130",
+        "Spike radius increased from 125 to 140"
+      ],
+      "omniknight": [
+        "Mana Cost increased from 80/90/100/110 to 95/105/115/125"
+      ],
+      "phoenix": [
+        "Damage per second increased from 10/30/50/70 to 15/35/55/75"
+      ],
+      "primal_beast": [
+        "Has a sound audible through Fog of War",
+        "Attack damage per stack decreased from 15/25/35/45 to 10/20/30/40",
+        "Move speed slow per stack reduced from 10% to 8%",
+        "Damage threshhold increased from 35 to 50",
+        "Base damage reduced from 20/35/50/65 to 12/28/44/60",
+        "Attack Damage Percentage reduced from 40% to 35%",
+        "Level 20 Talent Trample Attack Damage Percentage bonus reduced from +30% to +25%",
+        "Shard damage increased from 275 to 300."
+      ],
+      "pudge": [
+        "Damage per second rescaled from 60/90/120 to 80/100/120"
+      ],
+      "pugna": [
+        "Cast range reduced from 400/500/600/700 to 400/475/550/625",
+        "Cooldown increased from 15/12/9/6 to 16/13/10/7",
+        "Radius reduced from 1600 to 1400",
+        "Level 20 Decrepify Duration Talent reduced from +1.5s to +1s"
+      ],
+      "sand_king": [
+        "Damage per second rescaled from 20/45/70/95 to 25/45/65/85",
+        "Mana cost increased from 70/75/80/85 to 85",
+        "Level 10 Talent +20 Sandstorm Damage per Second reduced  to +15",
+        "Level 15 Talent +150 Sand Storm Radius reduced to +125",
+        "Level 25 Talent +40% bonus Sandstorm Blind/Slow reduced to 35%",
+        "Shard Epicenter Bonus Damage Per Pulse reduced from 20 to 10"
+      ],
+      "slark": [
+        "Mana Cost reduced from 75 to 65",
+        "Outgoing Damage rescaled from 75/150/225/300 to  90/160/230/300"
+      ],
+      "storm_spirit": [
+        "Damage decreased from 40/60/80/100 to 30/50/70/90",
+        "Base armor reduced by 1",
+        "Level 10 mana regeneration talent reduced from +1.75 to +1.5"
+      ],
+      "spectre": [
+        "Base HP regen increased from 1.5 to 2.0",
+        "Base Agility increased from 23 to 25",
+        "Radius thresholds increased from 300-700 to 400-800"
+      ],
+      "sven": [
+        "Movement Speed bonus increased from 8%/12%/16%/20% to 10%/14%/18%/22%",
+        "Shard Passive Armor increased from 5 to 7",
+        "Stun duration rescaled from 1.25/1.5/1.75/2.0s to 1.4/1.6/1.8/2.0s",
+        "Manacost decreased from 110/120/130/140 to 110/115/120/125"
+      ],
+      "templar_assassin": [
+        "Bonus damage reduced from 25/50/75/100 to 25/45/65/85"
+      ],
+      "troll_warlord": [
+        "Melee Form Base Attack Time improved from 1.45 to 1.4",
+        "Fixed Troll sometimes not properly getting sight of its target in Fog of War."
+      ],
+      "shredder": [
+        "Stat loss percentage decreased from 12% to 10%",
+        "Stat loss duration decreased from 13/14/15/16 to 12/13/14/15"
+      ],
+      "tinker": [
+        "Base Strength increased from 18 to 19",
+        "Mana Cost reduced from 110/130/150/170 to 105/120/135/150"
+      ],
+      "tiny": [
+        "Bonus Building Damage reduced from 55/70/85/100% to 40/55/70/85%",
+        "Tree attack damage multiplier reduced from 40/45/50% to 20/30/40%",
+        "Level 15 Talent +40% Grow Damage with Tree replaced with +10% Status Resistance",
+        "Level 20 Talent +15% Status Resistance replaced with +40% Grow Damage with Tree",
+        "Slow now also applies to Tree Volley damage."
+      ],
+      "warlock": [
+        "Golem Health icreased from 1200/2100/3000 to 1400/2300/3200 (Aghanim increased from 800/1600/2400 to 900/1700/2600)"
+      ],
+      "winter_wyvern": [
+        "Duration increased from 8s to 10s",
+        "Secondary projectile speed increased from 650 to 800"
+      ],
+      "witch_doctor": [
+        "Damage per Second increased from 7/14/21/28 to 12/18/24/30"
+      ],
+      "undying": [
+        "Cast Range reduced from 600 to 500",
+        "Zombie spawn interval increased from 4/3.5/3/2.5 to 4/3.6/3.2/2.8"
+      ],
+      "zuus": [
+        "Distance increased from 450 to 500",
+        "Damage increased from 80/110/140/170 to 90/120/150/180",
+        "Cast Point reduced from 0.4s to 0.3s"
       ]
     }
   }

@@ -235,7 +235,7 @@
         "key": "bonus_regen",
         "header": "+",
         "value": "5",
-        "footer": "HP Regeneration"
+        "footer": "Health Regeneration"
       }
     ],
     "mc": false,
@@ -472,7 +472,7 @@
   "moon_shard": {
     "hint": [
       "Use: Consume Consume the Moon Shard to permanently gain 60 attack speed and 200 bonus night vision. Max 1 use.",
-      "Passive: Shade SightGrants 400 bonus night vision."
+      "Passive: Shade SightGrants bonus night vision."
     ],
     "id": 247,
     "img": "/apps/dota2/images/items/moon_shard_lg.png?t=1593393829403",
@@ -486,6 +486,11 @@
         "header": "+",
         "value": "140",
         "footer": "Attack Speed"
+      },
+      {
+        "key": "bonus_night_vision",
+        "header": "+Bonus Night Vision",
+        "value": "400"
       }
     ],
     "mc": false,
@@ -833,7 +838,7 @@
   },
   "lifesteal": {
     "hint": [
-      "Passive: LifestealHeals the attacker for 15% of attack damage dealt."
+      "Passive: LifestealHeals the attacker for a percentage of attack damage dealt."
     ],
     "id": 26,
     "img": "/apps/dota2/images/items/lifesteal_lg.png?t=1593393829403",
@@ -841,7 +846,14 @@
     "qual": "component",
     "cost": 900,
     "notes": "",
-    "attrib": [],
+    "attrib": [
+      {
+        "key": "lifesteal_percent",
+        "header": "+",
+        "value": "15%",
+        "footer": "Lifesteal"
+      }
+    ],
     "mc": false,
     "cd": false,
     "lore": "A mask that drains the energy of those caught in its gaze.",
@@ -851,7 +863,7 @@
   },
   "voodoo_mask": {
     "hint": [
-      "Passive: Spell Lifesteal10% of spell damage dealt to enemy heroes is returned to the caster as health, regardless of spell damage type.  Lifesteal reduced to 2% against creeps."
+      "Passive: Spell LifestealSpell damage dealt to enemy heroes is returned to the caster as health, regardless of spell damage type.  Lifesteal reduced against creeps."
     ],
     "id": 473,
     "img": "/apps/dota2/images/items/voodoo_mask_lg.png?t=1593393829403",
@@ -859,7 +871,14 @@
     "qual": "component",
     "cost": 700,
     "notes": "",
-    "attrib": [],
+    "attrib": [
+      {
+        "key": "spell_lifesteal",
+        "header": "+",
+        "value": "10%",
+        "footer": "Spell Lifesteal"
+      }
+    ],
     "mc": false,
     "cd": false,
     "lore": "A mask tuned to sip the arcane bindings that pass between caster and foe.",
@@ -879,7 +898,7 @@
         "key": "bonus_health_regen",
         "header": "+",
         "value": "1.25",
-        "footer": "HP Regeneration"
+        "footer": "Health Regeneration"
       }
     ],
     "mc": false,
@@ -907,7 +926,7 @@
         "key": "bonus_health_regen",
         "header": "+",
         "value": "4",
-        "footer": "HP Regeneration"
+        "footer": "Health Regeneration"
       }
     ],
     "mc": false,
@@ -1165,7 +1184,7 @@
         "key": "hp_regen",
         "header": "+",
         "value": "0.6",
-        "footer": "HP Regeneration"
+        "footer": "Health Regeneration"
       }
     ],
     "mc": false,
@@ -1614,7 +1633,7 @@
         "key": "bonus_health_regen",
         "header": "+",
         "value": "6.5",
-        "footer": "HP Regeneration"
+        "footer": "Health Regeneration"
       }
     ],
     "mc": false,
@@ -1977,7 +1996,7 @@
         "key": "bonus_health_regen",
         "header": "+",
         "value": "6.5",
-        "footer": "HP Regeneration"
+        "footer": "Health Regeneration"
       },
       {
         "key": "bonus_mana_regen",
@@ -2198,7 +2217,7 @@
     "id": 80,
     "img": "/apps/dota2/images/items/recipe_lg.png?t=1593393829403",
     "dname": "Vladmir's Offering Recipe",
-    "cost": 400,
+    "cost": 250,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -2216,7 +2235,7 @@
     "img": "/apps/dota2/images/items/vladmir_lg.png?t=1593393829403",
     "dname": "Vladmir's Offering",
     "qual": "rare",
-    "cost": 2600,
+    "cost": 2450,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -2254,7 +2273,7 @@
     "img": "/apps/dota2/images/items/wraith_pact_lg.png?t=1593393829403",
     "dname": "Wraith Pact",
     "qual": "rare",
-    "cost": 4200,
+    "cost": 4050,
     "notes": "",
     "attrib": [],
     "mc": 100,
@@ -2420,7 +2439,7 @@
         "key": "health_regen",
         "header": "+",
         "value": "8.5",
-        "footer": "HP Regeneration"
+        "footer": "Health Regeneration"
       },
       {
         "key": "magic_resistance",
@@ -2443,7 +2462,7 @@
     "id": 91,
     "img": "/apps/dota2/images/items/recipe_lg.png?t=1593393829403",
     "dname": "Urn of Shadows Recipe",
-    "cost": 335,
+    "cost": 375,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -2461,7 +2480,7 @@
     "img": "/apps/dota2/images/items/urn_of_shadows_lg.png?t=1593393829403",
     "dname": "Urn of Shadows",
     "qual": "rare",
-    "cost": 840,
+    "cost": 880,
     "notes": "Empty urns gain 2 charges.\nIf used on a hero with Soul Release already active on them, it will refresh its duration.",
     "attrib": [
       {
@@ -2523,7 +2542,7 @@
         "key": "health_regen",
         "header": "+",
         "value": "0.5",
-        "footer": "HP Regeneration"
+        "footer": "Health Regeneration"
       }
     ],
     "mc": false,
@@ -2831,7 +2850,7 @@
   },
   "aether_lens": {
     "hint": [
-      "Passive: Aethereal Focus Increases targeted spell and item cast range by 225."
+      "Passive: Aethereal Focus Increases targeted spell and item cast range."
     ],
     "id": 232,
     "img": "/apps/dota2/images/items/aether_lens_lg.png?t=1593393829403",
@@ -2851,6 +2870,12 @@
         "header": "+",
         "value": "2.5",
         "footer": "Mana Regeneration"
+      },
+      {
+        "key": "cast_range_bonus",
+        "header": "+",
+        "value": "225",
+        "footer": "Cast Range"
       }
     ],
     "mc": false,
@@ -2915,7 +2940,7 @@
   "hurricane_pike": {
     "hint": [
       "Active: Hurricane Thrust Pushes you and target enemy %enemy_length% units away from each other, and for %range_duration% seconds, allows you to make %max_attacks% attacks against the target without range restrictions and with +%bonus_attack_speed% attack speed.Works like Force Staff when used on self or allies.Allied Range: %abilitycastrange%Enemy Range: %cast_range_enemy%",
-      "Passive:  Dragon's Reach Increases attack range of ranged heroes by %base_attack_range%."
+      "Passive:  Dragon's Reach Increases attack range of ranged heroes."
     ],
     "id": 263,
     "img": "/apps/dota2/images/items/hurricane_pike_lg.png?t=1593393829403",
@@ -2950,7 +2975,7 @@
   },
   "dagon": {
     "hint": [
-      "Active: Energy Burst Emits a powerful burst of magical damage upon a targeted enemy unit. Upgradable.Damage: 400,500,600,700,800Range: 700,750,800,850,900Mana Cost: 120,140,160,180,200"
+      "Active: Energy Burst Emits a powerful burst of magical damage upon a targeted enemy unit. Upgradable.Damage: undefinedRange: undefinedMana Cost: undefined"
     ],
     "id": 104,
     "img": "/apps/dota2/images/items/dagon_lg.png?t=1593393829403",
@@ -3008,7 +3033,7 @@
   },
   "dagon_2": {
     "hint": [
-      "Active: Energy Burst Emits a powerful burst of magical damage upon a targeted enemy unit. Upgradable.Damage: 400,500,600,700,800Range: 700,750,800,850,900Mana Cost: 120,140,160,180,200"
+      "Active: Energy Burst Emits a powerful burst of magical damage upon a targeted enemy unit. Upgradable.Damage: undefinedRange: undefinedMana Cost: undefined"
     ],
     "id": 201,
     "img": "/apps/dota2/images/items/dagon_2_lg.png?t=1593393829403",
@@ -3066,7 +3091,7 @@
   },
   "dagon_3": {
     "hint": [
-      "Active: Energy Burst Emits a powerful burst of magical damage upon a targeted enemy unit. Upgradable.Damage: 400,500,600,700,800Range: 700,750,800,850,900Mana Cost: 120,140,160,180,200"
+      "Active: Energy Burst Emits a powerful burst of magical damage upon a targeted enemy unit. Upgradable.Damage: undefinedRange: undefinedMana Cost: undefined"
     ],
     "id": 202,
     "img": "/apps/dota2/images/items/dagon_3_lg.png?t=1593393829403",
@@ -3124,7 +3149,7 @@
   },
   "dagon_4": {
     "hint": [
-      "Active: Energy Burst Emits a powerful burst of magical damage upon a targeted enemy unit. Upgradable.Damage: 400,500,600,700,800Range: 700,750,800,850,900Mana Cost: 120,140,160,180,200"
+      "Active: Energy Burst Emits a powerful burst of magical damage upon a targeted enemy unit. Upgradable.Damage: undefinedRange: undefinedMana Cost: undefined"
     ],
     "id": 203,
     "img": "/apps/dota2/images/items/dagon_4_lg.png?t=1593393829403",
@@ -3182,7 +3207,7 @@
   },
   "dagon_5": {
     "hint": [
-      "Active: Energy Burst Emits a powerful burst of magical damage upon a targeted enemy unit.Damage: 400,500,600,700,800Range: 700,750,800,850,900Mana Cost: 120,140,160,180,200"
+      "Active: Energy Burst Emits a powerful burst of magical damage upon a targeted enemy unit.Damage: undefinedRange: undefinedMana Cost: undefined"
     ],
     "id": 204,
     "img": "/apps/dota2/images/items/dagon_5_lg.png?t=1593393829403",
@@ -3254,7 +3279,7 @@
   },
   "necronomicon": {
     "hint": [
-      "Active: Demonic SummoningSummons a Warrior and an Archer to fight for you for 60 seconds.Warrior:Burns mana every hit, and deals magical damage to whoever kills it.  Gains True Sight at level 3.Health: 800,1200,1600Damage: 25,45,65Mana Break Damage: 30,40,50Last Will Damage: 600,700,800Archer:Has a passive movement and attack speed aura. Gains Purge at Level 3.Health: 800,1200,1600Damage: 37,57,75Aura Move Speed: 5,7,9Aura Radius: 1200"
+      "Active: Demonic SummoningSummons a Warrior and an Archer to fight for you for 60 seconds.Warrior:Burns mana every hit, and deals magical damage to whoever kills it.  Gains True Sight at level 3.Health: undefinedDamage: undefinedMana Break Damage: undefinedLast Will Damage: undefinedArcher:Has a passive movement and attack speed aura. Gains Purge at Level 3.Health: undefinedDamage: undefinedAura Move Speed: undefinedAura Radius: 1200"
     ],
     "id": 106,
     "img": "/apps/dota2/images/items/necronomicon_lg.png?t=1593393829403",
@@ -3297,7 +3322,7 @@
   },
   "necronomicon_2": {
     "hint": [
-      "Active: Demonic SummoningSummons a Warrior and an Archer to fight for you for 60 seconds.Warrior:Burns mana every hit, and deals magical damage to whoever kills it.  Gains True Sight at level 3.Health: 800,1200,1600Damage: 25,45,65Mana Break Damage: 30,40,50Last Will Damage: 600,700,800Archer:Has a passive movement and attack speed aura. Gains Purge at Level 3.Health: 800,1200,1600Damage: 37,57,75Aura Move Speed: 5,7,9Aura Radius: 1200"
+      "Active: Demonic SummoningSummons a Warrior and an Archer to fight for you for 60 seconds.Warrior:Burns mana every hit, and deals magical damage to whoever kills it.  Gains True Sight at level 3.Health: undefinedDamage: undefinedMana Break Damage: undefinedLast Will Damage: undefinedArcher:Has a passive movement and attack speed aura. Gains Purge at Level 3.Health: undefinedDamage: undefinedAura Move Speed: undefinedAura Radius: 1200"
     ],
     "id": 193,
     "img": "/apps/dota2/images/items/necronomicon_2_lg.png?t=1593393829403",
@@ -3339,7 +3364,7 @@
   },
   "necronomicon_3": {
     "hint": [
-      "Active: Demonic SummoningSummons a Warrior and an Archer to fight for you for 60 seconds.Warrior:Burns mana every hit, and deals magical damage to whoever kills it.  Gains True Sight at level 3.Health: 800,1200,1600Damage: 25,45,65Mana Break Damage: 30,40,50Last Will Damage: 600,700,800Archer:Has a passive movement and attack speed aura. Gains Purge at Level 3.Health: 800,1200,1600Damage: 37,57,75Aura Move Speed: 5,7,9Aura Radius: 1200"
+      "Active: Demonic SummoningSummons a Warrior and an Archer to fight for you for 60 seconds.Warrior:Burns mana every hit, and deals magical damage to whoever kills it.  Gains True Sight at level 3.Health: undefinedDamage: undefinedMana Break Damage: undefinedLast Will Damage: undefinedArcher:Has a passive movement and attack speed aura. Gains Purge at Level 3.Health: undefinedDamage: undefinedAura Move Speed: undefinedAura Radius: 1200"
     ],
     "id": 194,
     "img": "/apps/dota2/images/items/necronomicon_3_lg.png?t=1593393829403",
@@ -3538,7 +3563,7 @@
         "key": "bonus_health_regen",
         "header": "+",
         "value": "13",
-        "footer": "HP Regeneration"
+        "footer": "Health Regeneration"
       },
       {
         "key": "bonus_mana_regen",
@@ -3672,7 +3697,7 @@
   },
   "black_king_bar": {
     "hint": [
-      "Active: Avatar Grants Spell Immunity.  Duration decreases with each use. Duration: 9,8,7,6 Dispel Type: Basic Dispel"
+      "Active: Avatar Grants Spell Immunity.  Duration decreases with each use. Duration: undefined Dispel Type: Basic Dispel"
     ],
     "id": 116,
     "img": "/apps/dota2/images/items/black_king_bar_lg.png?t=1593393829403",
@@ -3842,7 +3867,7 @@
         "key": "bonus_health_regen",
         "header": "+",
         "value": "7",
-        "footer": "HP Regeneration"
+        "footer": "Health Regeneration"
       },
       {
         "key": "bonus_mana_regen",
@@ -3882,7 +3907,7 @@
         "key": "bonus_health_regen",
         "header": "+",
         "value": "6.5",
-        "footer": "HP Regeneration"
+        "footer": "Health Regeneration"
       },
       {
         "key": "bonus_mana_regen",
@@ -3970,7 +3995,7 @@
         "key": "bonus_regen",
         "header": "+",
         "value": "6",
-        "footer": "HP Regeneration"
+        "footer": "Health Regeneration"
       }
     ],
     "mc": false,
@@ -4120,7 +4145,7 @@
       },
       {
         "key": "hp_regen_amp",
-        "header": "+Self HP Regen and Lifesteal Amp",
+        "header": "+Health Regen and Lifesteal Amp",
         "value": "30%"
       },
       {
@@ -4186,7 +4211,7 @@
     "id": 266,
     "img": "/apps/dota2/images/items/recipe_lg.png?t=1593393829403",
     "dname": "Spirit Vessel Recipe",
-    "cost": 1000,
+    "cost": 1100,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -4204,7 +4229,7 @@
     "img": "/apps/dota2/images/items/spirit_vessel_lg.png?t=1593393829403",
     "dname": "Spirit Vessel",
     "qual": "rare",
-    "cost": 2840,
+    "cost": 2980,
     "notes": "",
     "attrib": [
       {
@@ -4263,7 +4288,7 @@
         "key": "bonus_health_regen",
         "header": "+",
         "value": "7",
-        "footer": "HP Regeneration"
+        "footer": "Health Regeneration"
       }
     ],
     "mc": false,
@@ -4463,19 +4488,13 @@
         "key": "bonus_health_regen",
         "header": "+",
         "value": "8.5",
-        "footer": "HP Regeneration"
+        "footer": "Health Regeneration"
       },
       {
-        "key": "hero_lifesteal",
+        "key": "spell_lifesteal",
         "header": "+",
         "value": "20%",
-        "footer": "Spell Lifesteal (Heroes)"
-      },
-      {
-        "key": "creep_lifesteal",
-        "header": "+",
-        "value": "4%",
-        "footer": "Spell Lifesteal (Creeps)"
+        "footer": "Spell Lifesteal"
       }
     ],
     "mc": 50,
@@ -4695,7 +4714,7 @@
     "dname": "Skull Basher",
     "qual": "epic",
     "cost": 2875,
-    "notes": "Does not stack with other sources of Bash.\nThe following heroes cannot trigger Bash on this item: Spirit Breaker, Faceless Void, and Slardar.",
+    "notes": "Does not stack with other sources of Bash.\nThe following heroes cannot trigger Bash on this item: Spirit Breaker, Faceless Void, and Slardar.\nDoes not grant Bash to Clones and Tempest Doubles.",
     "attrib": [
       {
         "key": "bonus_damage",
@@ -4743,7 +4762,7 @@
         "key": "bonus_health_regen",
         "header": "+",
         "value": "7.5",
-        "footer": "HP Regeneration"
+        "footer": "Health Regeneration"
       },
       {
         "key": "bonus_mana_regen",
@@ -4874,7 +4893,7 @@
   },
   "dragon_lance": {
     "hint": [
-      "Passive: Dragon's Reach Increases attack range of ranged heroes by 140."
+      "Passive: Dragon's Reach Increases attack range of ranged heroes."
     ],
     "id": 236,
     "img": "/apps/dota2/images/items/dragon_lance_lg.png?t=1593393829403",
@@ -4894,6 +4913,12 @@
         "header": "+",
         "value": "12",
         "footer": "Strength"
+      },
+      {
+        "key": "base_attack_range",
+        "header": "+",
+        "value": "140",
+        "footer": "Attack Range (Ranged Only)"
       }
     ],
     "mc": false,
@@ -5066,7 +5091,7 @@
       },
       {
         "key": "hp_regen_amp",
-        "header": "+Self HP Regen and Lifesteal Amp",
+        "header": "+Health Regen and Lifesteal Amp",
         "value": "22%"
       }
     ],
@@ -5118,8 +5143,8 @@
   },
   "satanic": {
     "hint": [
-      "Active: Unholy RageIncreases Lifesteal percentage to 200% for 6 seconds. Dispel Type: Basic Dispel ",
-      "Passive: LifestealHeals the attacker for 25% of attack damage dealt."
+      "Active: Unholy RageIncreases Lifesteal percentage to %unholy_lifesteal_total_tooltip%%% for %unholy_duration% seconds. Dispel Type: Basic Dispel ",
+      "Passive: LifestealHeals the attacker for a percentage of attack damage dealt."
     ],
     "id": 156,
     "img": "/apps/dota2/images/items/satanic_lg.png?t=1593393829403",
@@ -5127,20 +5152,7 @@
     "qual": "artifact",
     "cost": 5050,
     "notes": "",
-    "attrib": [
-      {
-        "key": "bonus_strength",
-        "header": "+",
-        "value": "25",
-        "footer": "Strength"
-      },
-      {
-        "key": "bonus_damage",
-        "header": "+",
-        "value": "45",
-        "footer": "Damage"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": 30,
     "lore": "Immense power at the cost of your soul.",
@@ -5203,7 +5215,7 @@
   },
   "skadi": {
     "hint": [
-      "Passive: Cold Attack Attacks lower enemy movement and attack speed and reduces heals, health regeneration, lifesteal and spell lifesteal by %heal_reduction%%% for %cold_duration% seconds. Slows enemy ranged units by %cold_slow_ranged%%% movement speed and by %cold_slow_ranged% attack speed. Slows enemy melee units by %cold_slow_melee%%% movement speed and by %cold_slow_melee% attack speed. "
+      "Passive: Cold Attack Attacks lower enemy movement and attack speed and reduces heals, health regeneration, lifesteal and spell lifesteal by %heal_reduction%%% for %cold_duration% seconds. Slows enemy ranged units by %cold_slow_ranged%%% movement speed and by %cold_attack_slow_ranged% attack speed. Slows enemy melee units by %cold_slow_melee%%% movement speed and by %cold_attack_slow_melee% attack speed. "
     ],
     "id": 160,
     "img": "/apps/dota2/images/items/skadi_lg.png?t=1593393829403",
@@ -5258,7 +5270,7 @@
       },
       {
         "key": "hp_regen_amp",
-        "header": "+Self HP Regen and Lifesteal Amp",
+        "header": "+Health Regen and Lifesteal Amp",
         "value": "20%"
       }
     ],
@@ -5313,7 +5325,7 @@
         "key": "bonus_regen",
         "header": "+",
         "value": "6",
-        "footer": "HP Regeneration"
+        "footer": "Health Regeneration"
       }
     ],
     "mc": false,
@@ -5343,13 +5355,13 @@
   "helm_of_the_overlord": {
     "hint": [
       "Active: DominateTakes control of one neutral target unit and sets its movement speed to 400 and max health to a minimum of 1800. Also provides the unit with +80 base attack damage, +12 health regen, +4 mana regen and +8 armor. Dominated units with a max health of greater than 1800 retain their original max health.  Dominated unit's bounty is set to 250 gold.Range: 700",
-      "Passive: Vladmir's AuraGrants 15% lifesteal, 18% bonus damage, 1.75 mana regeneration, and 3 armor to nearby allies."
+      "Passive: Vladmir's AuraGrants 18% lifesteal, 18% bonus damage, 2 mana regeneration, and 3 armor to nearby allies."
     ],
     "id": 635,
     "img": "/apps/dota2/images/items/helm_of_the_overlord_lg.png?t=1593393829403",
     "dname": "Helm of the Overlord",
     "qual": "artifact",
-    "cost": 6325,
+    "cost": 6175,
     "notes": "Can dominate up to two at a time. \nCan also Dominate enemy lane creeps and summoned units.\nSelling will cause dominated units to die.",
     "attrib": [
       {
@@ -5368,7 +5380,7 @@
         "key": "bonus_regen",
         "header": "+",
         "value": "7",
-        "footer": "HP Regeneration"
+        "footer": "Health Regeneration"
       }
     ],
     "mc": false,
@@ -5474,7 +5486,7 @@
   "desolator": {
     "hint": [
       "Passive: Corruption Your attacks reduce the target's armor by %corruption_armor% for %corruption_duration% seconds.",
-      "Passive: Soul Stealer Desolator gains +%bonus_damage_per_kill% damage per hero kill and +%bonus_damage_per_assist% damage per assist while equipped up to a maximum of %max_damage%."
+      "Passive: Soul Stealer Desolator gains +%bonus_damage_per_kill% damage every time an enemy hero dies while affected by Corruption, to a maximum of %max_damage%."
     ],
     "id": 168,
     "img": "/apps/dota2/images/items/desolator_lg.png?t=1593393829403",
@@ -5548,7 +5560,7 @@
   "mask_of_madness": {
     "hint": [
       "Active: BerserkGives 110 attack speed and 30 movement speed, but reduces your armor by 8 and silences you.  Lasts 6 seconds.",
-      "Passive: LifestealHeals the attacker for 20% of attack damage dealt."
+      "Passive: LifestealHeals the attacker for a percentage of attack damage dealt."
     ],
     "id": 172,
     "img": "/apps/dota2/images/items/mask_of_madness_lg.png?t=1593393829403",
@@ -5568,6 +5580,12 @@
         "header": "+",
         "value": "10",
         "footer": "Attack Speed"
+      },
+      {
+        "key": "lifesteal_percent",
+        "header": "+",
+        "value": "20%",
+        "footer": "Lifesteal"
       }
     ],
     "mc": 25,
@@ -5724,7 +5742,7 @@
   },
   "octarine_core": {
     "hint": [
-      "Passive: Cooldown ReductionReduces the cooldown time of all spells and items by 25%."
+      "Passive: Cooldown ReductionReduces the cooldown time of all spells and items."
     ],
     "id": 235,
     "img": "/apps/dota2/images/items/octarine_core_lg.png?t=1593393829403",
@@ -5733,6 +5751,12 @@
     "cost": 5275,
     "notes": "",
     "attrib": [
+      {
+        "key": "bonus_cooldown",
+        "header": "+",
+        "value": "25%",
+        "footer": "Cooldown Reduction"
+      },
       {
         "key": "cast_range_bonus",
         "header": "+",
@@ -5982,7 +6006,7 @@
   },
   "boots_of_bearing": {
     "hint": [
-      "Active: Endurance Consumes a charge and gives +%bonus_attack_speed_pct% attack speed, +%bonus_movement_speed_pct%%% Movement Speed to nearby allies for %duration% seconds For the first %bonus_ms_duration% seconds allies are immune to slows.Starts with 8 Charges. Gains 1 Charge every 3 minutes. Radius: %radius%  ",
+      "Active: Endurance Consumes a charge and gives +%bonus_attack_speed_pct% attack speed, +%bonus_movement_speed_pct%%%. Movement Speed to nearby allies for %duration% seconds For the first %bonus_ms_duration% seconds allies are immune to slows.Starts with 8 Charges. Gains 1 Charge every 3 minutes. Radius: %radius%  ",
       "",
       "Passive: Swiftness AuraGrants %aura_movement_speed% movement speed to allies.  Radius: %radius%"
     ],
@@ -6400,7 +6424,7 @@
     "dname": "Abyssal Blade",
     "qual": "epic",
     "cost": 6250,
-    "notes": "The stun is melee range.\nDoes not stack with other bashes.\nMultiple sources of damage block do not stack.",
+    "notes": "The stun is melee range.\nDoes not stack with other bashes, and does not grant bash to Clones and Tempest Doubles.\nMultiple sources of damage block do not stack.",
     "attrib": [
       {
         "key": "bonus_damage",
@@ -6418,7 +6442,7 @@
         "key": "bonus_health_regen",
         "header": "+",
         "value": "10",
-        "footer": "HP Regeneration"
+        "footer": "Health Regeneration"
       },
       {
         "key": "bonus_strength",
@@ -6481,7 +6505,7 @@
       },
       {
         "key": "hp_regen_amp",
-        "header": "+Self HP Regen and Lifesteal Amp",
+        "header": "+Health Regen and Lifesteal Amp",
         "value": "20%"
       }
     ],
@@ -6537,7 +6561,7 @@
         "key": "bonus_health_regen",
         "header": "+",
         "value": "14",
-        "footer": "HP Regeneration"
+        "footer": "Health Regeneration"
       }
     ],
     "mc": false,
@@ -6845,7 +6869,7 @@
   },
   "quickening_charm": {
     "hint": [
-      "Passive: Cooldown ReductionReduces the cooldown time of all spells and items by %bonus_cooldown%%%"
+      "Passive: Cooldown ReductionReduces the cooldown time of all spells and items."
     ],
     "id": 289,
     "img": "/apps/dota2/images/items/quickening_charm_lg.png?t=1593393829403",
@@ -6915,7 +6939,7 @@
         "key": "hp_regen",
         "header": "+",
         "value": "30",
-        "footer": "HP Regeneration"
+        "footer": "Health Regeneration"
       }
     ],
     "mc": 75,
@@ -6986,7 +7010,7 @@
       },
       {
         "key": "vision_bonus",
-        "header": "+Vision Bonus",
+        "header": "+Bonus Vision",
         "value": "350"
       },
       {
@@ -7346,7 +7370,7 @@
         "key": "hp_regen",
         "header": "+",
         "value": "25",
-        "footer": "HP Regeneration"
+        "footer": "Health Regeneration"
       }
     ],
     "mc": false,
@@ -7417,7 +7441,7 @@
   },
   "spell_prism": {
     "hint": [
-      "Passive: Cooldown ReductionReduces the cooldown time of all spells and items by %bonus_cooldown%%%."
+      "Passive: Cooldown ReductionReduces the cooldown time of all spells and items."
     ],
     "id": 311,
     "img": "/apps/dota2/images/items/spell_prism_lg.png?t=1593393829403",
@@ -7771,7 +7795,7 @@
         "key": "bonus_hp_regen",
         "header": "+",
         "value": "5",
-        "footer": "HP Regeneration"
+        "footer": "Health Regeneration"
       }
     ],
     "mc": false,
@@ -8029,7 +8053,7 @@
         "key": "bonus_hp_regen",
         "header": "+",
         "value": "60",
-        "footer": "HP Regeneration"
+        "footer": "Health Regeneration"
       }
     ],
     "mc": false,
@@ -8367,7 +8391,7 @@
         "key": "hp_regen",
         "header": "+",
         "value": "4",
-        "footer": "HP Regeneration"
+        "footer": "Health Regeneration"
       }
     ],
     "mc": false,
@@ -8620,7 +8644,7 @@
         "key": "hp_regen",
         "header": "+",
         "value": "7",
-        "footer": "HP Regeneration"
+        "footer": "Health Regeneration"
       },
       {
         "key": "mana_regen_amp",
@@ -8758,7 +8782,7 @@
         "key": "bonus_health_regen",
         "header": "+",
         "value": "3",
-        "footer": "HP Regeneration"
+        "footer": "Health Regeneration"
       },
       {
         "key": "bonus_mana_regen",
@@ -8859,8 +8883,9 @@
     "attrib": [
       {
         "key": "bonus_strength",
-        "header": "+Strength",
-        "value": "35"
+        "header": "+",
+        "value": "35",
+        "footer": "Strength"
       },
       {
         "key": "movement_speed",
