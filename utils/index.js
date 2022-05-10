@@ -7,3 +7,15 @@ exports.mapAbilities = (tokens) => {
   );
   return tokens;
 };
+
+const removeExtraneousWhitespacesFromString = (string) => {
+  if (!string) { return ''; }
+
+  return string.replace(/\s+/g, ' ').trim();
+}
+
+exports.cleanupArray = (array) => {
+  if (!array) { return []; }
+
+  return array.filter(n => removeExtraneousWhitespacesFromString(n));
+}
