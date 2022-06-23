@@ -1196,13 +1196,13 @@
   },
   "flask": {
     "hint": [
-      "Use: Salve Grants 30 health regeneration to the target for 13 seconds.If the unit is attacked by an enemy hero or Roshan, the effect is lost.Range: 250"
+      "Use: Salve Grants 30 health regeneration to the target for 13 seconds.If the unit is attacked by an enemy hero or Roshan, the effect is lost.Heals for half the amount when cast on an ally.Range: 250"
     ],
     "id": 39,
     "img": "/apps/dota2/images/dota_react/items/flask.png?t=1593393829403",
     "dname": "Healing Salve",
     "qual": "consumable",
-    "cost": 110,
+    "cost": 100,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -2266,7 +2266,7 @@
   },
   "wraith_pact": {
     "hint": [
-      "Active: Wraith's ReprisalSummons a movable totem in your location for %abilityduration% seconds that reduces all damage of enemies within %aura_radius% radius by %damage_penalty_aura%%% and deals %aura_dps% damage per second. Totem can be destroyed in 5 hits. Creeps deal half damage to the totem.",
+      "Active: Wraith's ReprisalSummons a movable totem in your location for %abilityduration% seconds that reduces all damage of enemies within %pact_aura_radius% radius by %damage_penalty_aura%%% and deals %aura_dps% damage per second. Totem can be destroyed in 5 hits. Creeps deal half damage to the totem.",
       "Passive: Vladmir's AuraGrants %lifesteal_aura%%% lifesteal, %damage_aura%%% bonus damage, %mana_regen_aura% mana regeneration, and %armor_aura% armor to nearby allies. Radius: %aura_radius%"
     ],
     "id": 908,
@@ -3718,7 +3718,7 @@
       }
     ],
     "mc": false,
-    "cd": 75,
+    "cd": 90,
     "lore": "A powerful staff imbued with the strength of giants.",
     "components": [
       "ogre_axe",
@@ -3820,7 +3820,7 @@
     "notes": "Using Bloodpact leaves you drained for 40 seconds and can't benefit from Bloodpact again during that time.",
     "attrib": [],
     "mc": false,
-    "cd": 40,
+    "cd": 30,
     "lore": "The Bloodstone's bright ruby color is unmistakable on the battlefield, as the owner seems to have infinite vitality and spirit.",
     "components": [
       "voodoo_mask",
@@ -3875,7 +3875,7 @@
       }
     ],
     "mc": false,
-    "cd": 12,
+    "cd": 14,
     "lore": "This magical sphere once protected one of the most famous heroes in history.",
     "components": [
       "ultimate_orb",
@@ -4479,7 +4479,7 @@
       {
         "key": "bonus_spell_resist",
         "header": "+",
-        "value": "20%",
+        "value": "25%",
         "footer": "Magic Resistance"
       },
       {
@@ -4496,7 +4496,7 @@
       }
     ],
     "mc": 50,
-    "cd": 60,
+    "cd": 45,
     "lore": "A pristine hood that feeds upon strife to empower its owner.",
     "components": [
       "voodoo_mask",
@@ -4614,7 +4614,7 @@
       {
         "key": "bonus_agility",
         "header": "+",
-        "value": "30",
+        "value": "35",
         "footer": "Agility"
       },
       {
@@ -6223,8 +6223,8 @@
     "cost": 6200,
     "notes": "",
     "attrib": [],
-    "mc": 250,
-    "cd": 45,
+    "mc": 300,
+    "cd": 25,
     "lore": "The cursed brooch of a fallen guardian who stalks forever between the veil of life and death.",
     "components": [
       "witch_blade",
