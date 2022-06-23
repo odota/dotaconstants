@@ -117,12 +117,12 @@ const sources = [
             )
           };
           item.id = parseInt(scripts[key].ID);
-          item.img = `/apps/dota2/images/items/${key.replace(
+          item.img = `/apps/dota2/images/dota_react/items/${key.replace(
             /^item_/,
             ""
-          )}_lg.png?t=${1593393829403}`;
+          )}.png?t=${1593393829403}`;
           if (key.includes("item_recipe")) {
-            item.img = `/apps/dota2/images/items/recipe_lg.png?t=${1593393829403}`;
+            item.img = `/apps/dota2/images/dota_react/items/recipe.png?t=${1593393829403}`;
           }
 
           item.dname = strings[`DOTA_Tooltip_ability_${key}`];
@@ -178,7 +178,7 @@ const sources = [
       //Manually Adding DiffBlade2 for match data prior to 7.07
       items["diffusal_blade_2"] = {
         id: 196,
-        img: "/apps/dota2/images/items/diffusal_blade_2_lg.png?3",
+        img: "/apps/dota2/images/dota_react/items/diffusal_blade_2.png?3",
         dname: "Diffusal Blade",
         qual: "artifact",
         cost: 3850,
@@ -268,7 +268,7 @@ const sources = [
       //Manually added for match data prior to 7.07
       items["recipe_iron_talon"] = {
         id: 238,
-        img: "/apps/dota2/images/items/recipe_lg.png?3",
+        img: "/apps/dota2/images/dota_react/items/recipe.png?3",
         dname: "Iron Talon Recipe",
         cost: 125,
         desc: "",
@@ -400,7 +400,7 @@ const sources = [
             }
           }
 
-          ability.img = `/apps/dota2/images/abilities/${key}_md.png`;
+          ability.img = `/apps/dota2/images/dota_react/abilities/${key}.png`;
           if (key.indexOf("special_bonus") === 0) {
             ability = { dname: ability.dname };
           }
