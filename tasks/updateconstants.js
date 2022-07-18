@@ -545,7 +545,6 @@ const sources = [
   {
     key: "cluster",
     url: "https://api.stratz.com/api/v1/Cluster",
-    origin: "stratz",
     transform: (respObj) => {
       const cluster = {};
       respObj.forEach(({ id, regionId }) => {
@@ -809,7 +808,7 @@ async.each(
   function (s, cb) {
     const url = s.url;
     const options = {};
-    if (s.origin === "stratz") {
+    if (url.includes("stratz")) {
       // if no token set, skip request to not overwrite data
       if (STRATZ_TOKEN.length === 0) return cb();
       options.auth = { bearer: STRATZ_TOKEN };
