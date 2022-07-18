@@ -808,7 +808,7 @@ async.each(
   function (s, cb) {
     const url = s.url;
     const options = {};
-    if (url.includes("stratz")) {
+    if (url.startsWith("https://api.stratz.com")) {
       // if no token set, skip request to not overwrite data
       if (STRATZ_TOKEN.length === 0) return cb();
       options.auth = { bearer: STRATZ_TOKEN };
