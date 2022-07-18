@@ -5,6 +5,9 @@ const simplevdf = require("simple-vdf");
 const { mapAbilities, cleanupArray } = require("../utils");
 const hero_list = require("../build/heroes.json");
 
+// Get your token from https://stratz.com/api
+const STRATZ_TOKEN = process.env.STRATZ_TOKEN || '';
+
 const extraStrings = {
   DOTA_ABILITY_BEHAVIOR_NONE: "None",
   DOTA_ABILITY_BEHAVIOR_PASSIVE: "Passive",
@@ -542,6 +545,7 @@ const sources = [
   {
     key: "cluster",
     url: "https://api.stratz.com/api/v1/Cluster",
+    origin: "stratz",
     transform: (respObj) => {
       const cluster = {};
       respObj.forEach(({ id, regionId }) => {
@@ -804,13 +808,19 @@ async.each(
   sources,
   function (s, cb) {
     const url = s.url;
+    const options = {};
+    if (s.origin === "stratz") {
+      // if no token set, skip request to not overwrite data
+      if (STRATZ_TOKEN.length === 0) return cb();
+      options.auth = { bearer: STRATZ_TOKEN };
+    }
     //grab raw data from each url and save
     console.log(url);
     if (typeof url === "object") {
       async.map(
         url,
         (urlString, cb) => {
-          request(urlString, (err, resp, body) => {
+          request(urlString, options, (err, resp, body) => {
             cb(err, parseJson(body));
           });
         },
@@ -825,7 +835,7 @@ async.each(
         }
       );
     } else {
-      request(url, handleResponse);
+      request(url, options, handleResponse);
     }
 
     function parseJson(text) {
