@@ -838,7 +838,7 @@
   },
   "lifesteal": {
     "hint": [
-      "Passive: LifestealHeals the attacker for a percentage of attack damage dealt."
+      "Passive: LifestealHeals the attacker for a percentage of attack damage dealt. Lifesteal from creeps is reduced by %creep_lifesteal_reduction_pct%%%."
     ],
     "id": 26,
     "img": "/apps/dota2/images/dota_react/items/lifesteal.png?t=1593393829403",
@@ -846,14 +846,7 @@
     "qual": "component",
     "cost": 900,
     "notes": "",
-    "attrib": [
-      {
-        "key": "lifesteal_percent",
-        "header": "+",
-        "value": "15%",
-        "footer": "Lifesteal"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": false,
     "lore": "A mask that drains the energy of those caught in its gaze.",
@@ -1854,7 +1847,7 @@
   },
   "hand_of_midas": {
     "hint": [
-      "Active: Transmute Kills a non-hero target for 160 gold and 2.1x experience.  Cannot be used on Ancient Creeps.Range: 600"
+      "Active: Transmute Kills a non-hero target for 160 gold and 2.1x experience. When used on a Neutral Creep, guarantees to create a neutral item if available.  Cannot be used on Ancient Creeps.Range: 600"
     ],
     "id": 65,
     "img": "/apps/dota2/images/dota_react/items/hand_of_midas.png?t=1593393829403",
@@ -1957,7 +1950,7 @@
       {
         "key": "bonus_intellect",
         "header": "+",
-        "value": "14",
+        "value": "12",
         "footer": "Intelligence"
       },
       {
@@ -2174,7 +2167,7 @@
     "id": 78,
     "img": "/apps/dota2/images/dota_react/items/recipe.png?t=1593393829403",
     "dname": "Mekansm Recipe",
-    "cost": 900,
+    "cost": 800,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -2186,25 +2179,18 @@
   },
   "mekansm": {
     "hint": [
-      "Active: RestoreHeals 275 health to allied units in a 1200 radius.",
-      "Passive: Mekansm AuraGrants 2.5 health regeneration to allied units in a 1200 radius."
+      "Active: RestoreRestores %heal_amount% health to allied units in a %heal_radius% radius.",
+      "Passive: Mekansm AuraGrants %aura_health_regen% health regeneration to allied units in a %aura_radius% radius."
     ],
     "id": 79,
     "img": "/apps/dota2/images/dota_react/items/mekansm.png?t=1593393829403",
     "dname": "Mekansm",
     "qual": "rare",
-    "cost": 1875,
-    "notes": "Restore does not affect units that have been affected by Restore in the last 25 seconds.\nMultiple instances of Mekansm Aura do not stack.",
-    "attrib": [
-      {
-        "key": "bonus_armor",
-        "header": "+",
-        "value": "4",
-        "footer": "Armor"
-      }
-    ],
+    "cost": 1775,
+    "notes": "Restore does not affect units that have been affected by Restore within Mekansm's cooldown.\nMultiple instances of Mekansm Aura do not stack.",
+    "attrib": [],
     "mc": 100,
-    "cd": 65,
+    "cd": 50,
     "lore": "A glowing jewel formed out of assorted parts that somehow fit together perfectly.",
     "components": [
       "headdress",
@@ -2229,7 +2215,7 @@
   },
   "vladmir": {
     "hint": [
-      "Passive: Vladmir's AuraGrants 15% lifesteal, 18% bonus damage, 1.75 mana regeneration, and 3 armor to nearby allies. Radius: 1200"
+      "Passive: Vladmir's AuraGrants %lifesteal_aura%%% lifesteal, %damage_aura%%% bonus damage, %mana_regen_aura% mana regeneration, and %armor_aura% armor to nearby allies. Lifesteal from creeps is reduced by %creep_lifesteal_reduction_pct%%%.Radius: %aura_radius%"
     ],
     "id": 81,
     "img": "/apps/dota2/images/dota_react/items/vladmir.png?t=1593393829403",
@@ -2267,7 +2253,7 @@
   "wraith_pact": {
     "hint": [
       "Active: Wraith's ReprisalSummons a movable totem in your location for %abilityduration% seconds that reduces all damage of enemies within %pact_aura_radius% radius by %damage_penalty_aura%%% and deals %aura_dps% damage per second. Totem can be destroyed in 5 hits. Creeps deal half damage to the totem.",
-      "Passive: Vladmir's AuraGrants %lifesteal_aura%%% lifesteal, %damage_aura%%% bonus damage, %mana_regen_aura% mana regeneration, and %armor_aura% armor to nearby allies. Radius: %aura_radius%"
+      "Passive: Vladmir's AuraGrants %lifesteal_aura%%% lifesteal, %damage_aura%%% bonus damage, %mana_regen_aura% mana regeneration, and %armor_aura% armor to nearby allies. Lifesteal from creeps is reduced by %creep_lifesteal_reduction_pct%%%.Radius: %aura_radius%"
     ],
     "id": 908,
     "img": "/apps/dota2/images/dota_react/items/wraith_pact.png?t=1593393829403",
@@ -2424,7 +2410,7 @@
   "pipe": {
     "hint": [
       "Active: BarrierGives a shield that blocks 400 magic damage to all nearby allies. Lasts 12 seconds.Radius: 1200",
-      "Passive: Insight Aura Gives allied units 2.5 health regeneration and 12% magic resistance.Radius: 1200"
+      "Passive: Insight Aura Gives allied units 2.5 health regeneration and 15% magic resistance.Radius: 1200"
     ],
     "id": 90,
     "img": "/apps/dota2/images/dota_react/items/pipe.png?t=1593393829403",
@@ -2912,7 +2898,7 @@
     "notes": "Self-cast will cause you to use Force on yourself.\nForce Staff doesn't interrupt the target's actions.\nWill not work on a unit inside Chronosphere, Duel, or Black Hole.",
     "attrib": [],
     "mc": 100,
-    "cd": 20,
+    "cd": 19,
     "lore": "Allows you to manipulate others, for good or evil.",
     "components": [
       "staff_of_wizardry",
@@ -2948,7 +2934,7 @@
     "notes": "Self-cast will use Hurricane Pike on yourself.\nHurricane Pike doesn't interrupt the target's actions.\nWill not work on a unit inside Chronosphere, Duel, or Black Hole.",
     "attrib": [],
     "mc": 100,
-    "cd": 20,
+    "cd": 19,
     "lore": "A legendary pike once held as royal sigil of the ancient wyvern riders.",
     "components": [
       "force_staff",
@@ -3570,8 +3556,8 @@
         "footer": "Mana Regeneration"
       }
     ],
-    "mc": 300,
-    "cd": 170,
+    "mc": 350,
+    "cd": 180,
     "lore": "A powerful artifact created for wizards.",
     "components": [
       "pers",
@@ -3717,7 +3703,7 @@
         "footer": "Damage"
       }
     ],
-    "mc": false,
+    "mc": 50,
     "cd": 90,
     "lore": "A powerful staff imbued with the strength of giants.",
     "components": [
@@ -3798,7 +3784,7 @@
     "id": 120,
     "img": "/apps/dota2/images/dota_react/items/recipe.png?t=1593393829403",
     "dname": "Bloodstone Recipe",
-    "cost": 900,
+    "cost": 700,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -3810,13 +3796,13 @@
   },
   "bloodstone": {
     "hint": [
-      "Active: Bloodpact Doubles Bloodstone's Spell Lifesteal and also converts the same percentage of damage dealt to mana. Lasts %buff_duration% seconds. Costs %hp_cost%%% of your current HP to activate"
+      "Active: Bloodpact Increases Bloodstone's Spell Lifesteal by %lifesteal_multiplier%x and also converts the same percentage of damage dealt to mana. Lasts %buff_duration% seconds. Costs %hp_cost%%% of your current HP to activate"
     ],
     "id": 121,
     "img": "/apps/dota2/images/dota_react/items/bloodstone.png?t=1593393829403",
     "dname": "Bloodstone",
     "qual": "epic",
-    "cost": 4600,
+    "cost": 4400,
     "notes": "Using Bloodpact leaves you drained for 40 seconds and can't benefit from Bloodpact again during that time.",
     "attrib": [],
     "mc": false,
@@ -3845,8 +3831,8 @@
   },
   "sphere": {
     "hint": [
-      "Passive: SpellblockBlocks most targeted spells once every 12 seconds.",
-      "Active: Transfer SpellblockTemporarily removes Spellblock from the item's owner and transfers it to an allied unit for 12 seconds.Range: 700"
+      "Passive: SpellblockBlocks most targeted spells once every %block_cooldown% seconds.",
+      "Active: Transfer SpellblockTemporarily removes Spellblock from the item's owner and transfers it to an allied unit for %block_cooldown% seconds.Range: %abilitycastrange%"
     ],
     "id": 123,
     "img": "/apps/dota2/images/dota_react/items/sphere.png?t=1593393829403",
@@ -3854,26 +3840,7 @@
     "qual": "epic",
     "cost": 4600,
     "notes": "",
-    "attrib": [
-      {
-        "key": "bonus_all_stats",
-        "header": "+",
-        "value": "16",
-        "footer": "All Attributes"
-      },
-      {
-        "key": "bonus_health_regen",
-        "header": "+",
-        "value": "7",
-        "footer": "Health Regeneration"
-      },
-      {
-        "key": "bonus_mana_regen",
-        "header": "+",
-        "value": "5",
-        "footer": "Mana Regeneration"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": 14,
     "lore": "This magical sphere once protected one of the most famous heroes in history.",
@@ -3986,7 +3953,7 @@
       {
         "key": "bonus_armor",
         "header": "+",
-        "value": "8",
+        "value": "10",
         "footer": "Armor"
       },
       {
@@ -3997,7 +3964,7 @@
       }
     ],
     "mc": false,
-    "cd": 11,
+    "cd": 10,
     "lore": "",
     "components": [
       "relic",
@@ -4198,7 +4165,7 @@
     "cost": 1000,
     "notes": "Refresher Shard is shareable.",
     "attrib": [],
-    "mc": false,
+    "mc": 200,
     "cd": 200,
     "lore": "",
     "components": null,
@@ -4351,7 +4318,7 @@
   },
   "blade_mail": {
     "hint": [
-      "Active: Damage ReturnFor 4.5 seconds, the damage returned from all sources is increased by 80%.",
+      "Active: Damage ReturnFor 5.5 seconds, the damage returned from all sources is increased by 80%.",
       "Passive: Damage ReturnEverytime you are attacked, you return 20 damage plus 20% of the attack damage dealt to you."
     ],
     "id": 127,
@@ -4889,6 +4856,19 @@
     "created": true,
     "charges": false
   },
+  "recipe_dragon_lance": {
+    "id": 234,
+    "img": "/apps/dota2/images/dota_react/items/recipe.png?t=1593393829403",
+    "cost": 450,
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": false,
+    "lore": "",
+    "components": null,
+    "created": false,
+    "charges": false
+  },
   "dragon_lance": {
     "hint": [
       "Passive: Dragon's Reach Increases attack range of ranged heroes."
@@ -4903,7 +4883,7 @@
       {
         "key": "bonus_agility",
         "header": "+",
-        "value": "16",
+        "value": "15",
         "footer": "Agility"
       },
       {
@@ -4915,7 +4895,7 @@
       {
         "key": "base_attack_range",
         "header": "+",
-        "value": "140",
+        "value": "150",
         "footer": "Attack Range (Ranged Only)"
       }
     ],
@@ -4923,9 +4903,8 @@
     "cd": false,
     "lore": "The forward charge of the wyvern host grants no quarter.",
     "components": [
-      "ogre_axe",
-      "boots_of_elves",
-      "boots_of_elves"
+      "blade_of_alacrity",
+      "belt_of_strength"
     ],
     "created": true,
     "charges": false
@@ -5142,7 +5121,7 @@
   "satanic": {
     "hint": [
       "Active: Unholy RageIncreases Lifesteal percentage to %unholy_lifesteal_total_tooltip%%% for %unholy_duration% seconds. Dispel Type: Basic Dispel ",
-      "Passive: LifestealHeals the attacker for a percentage of attack damage dealt."
+      "Passive: LifestealHeals the attacker for a percentage of attack damage dealt. Lifesteal from creeps is reduced by %creep_lifesteal_reduction_pct%%%."
     ],
     "id": 156,
     "img": "/apps/dota2/images/dota_react/items/satanic.png?t=1593393829403",
@@ -5178,8 +5157,8 @@
   },
   "mjollnir": {
     "hint": [
-      "Active: Static ChargePlaces a charged shield on a target unit for 15 seconds which has a 20% chance to release a 225 magical damage shocking bolt at a nearby attacker and 4 additional enemies.Range: 800",
-      "Passive: Chain LightningGrants a 30% chance on attack to release a bolt of electricity that leaps between 12 targets within a 650 radius, dealing 180 magical damage to each. Lightning proc pierces evasion."
+      "Active: Static ChargePlaces a charged shield on a target unit for %static_duration% seconds which has a %static_chance%%% chance to release a %static_damage% magical damage shocking bolt at a nearby attacker and %static_strikes% additional enemies.Range: %abilitycastrange%",
+      "Passive: Chain LightningGrants a %chain_chance%%% chance on attack to release a bolt of electricity that leaps between %chain_strikes% targets within a %chain_radius% radius, dealing %chain_damage% magical damage to each. Lightning proc pierces evasion."
     ],
     "id": 158,
     "img": "/apps/dota2/images/dota_react/items/mjollnir.png?t=1593393829403",
@@ -5187,20 +5166,7 @@
     "qual": "artifact",
     "cost": 5600,
     "notes": "Static Charge cannot trigger more than once per second.\nStatic Charge's shock deals magical damage centered on hero with the Static Charge. Static Charge's targets cannot be more than %static_seconary_radius% range away.\nStatic Charge procs will not bounce to heroes that are invisible or hidden by Fog of War.",
-    "attrib": [
-      {
-        "key": "bonus_damage",
-        "header": "+",
-        "value": "24",
-        "footer": "Damage"
-      },
-      {
-        "key": "bonus_attack_speed",
-        "header": "+",
-        "value": "70",
-        "footer": "Attack Speed"
-      }
-    ],
+    "attrib": [],
     "mc": 50,
     "cd": 35,
     "lore": "Thor's magical hammer, made for him by the dwarves Brok and Eitri.",
@@ -5352,8 +5318,8 @@
   },
   "helm_of_the_overlord": {
     "hint": [
-      "Active: DominateTakes control of one neutral target unit and sets its movement speed to 400 and max health to a minimum of 1800. Also provides the unit with +80 base attack damage, +12 health regen, +4 mana regen and +8 armor. Dominated units with a max health of greater than 1800 retain their original max health.  Dominated unit's bounty is set to 250 gold.Range: 700",
-      "Passive: Vladmir's AuraGrants 18% lifesteal, 18% bonus damage, 2 mana regeneration, and 3 armor to nearby allies."
+      "Active: DominateTakes control of one neutral target unit and sets its movement speed to %speed_base% and max health to a minimum of %health_min%. Also provides the unit with +%creep_bonus_damage% base attack damage, +%creep_bonus_hp_regen% health regen, +%creep_bonus_mp_regen% mana regen and +%creep_bonus_armor% armor. Dominated units with a max health of greater than %health_min% retain their original max health.  Dominated unit's bounty is set to %bounty_gold% gold.Range: %abilitycastrange%",
+      "Passive: Vladmir's AuraGrants %lifesteal_aura%%% lifesteal, %damage_aura%%% bonus damage, %mana_regen_aura% mana regeneration, and %armor_aura% armor to nearby allies."
     ],
     "id": 635,
     "img": "/apps/dota2/images/dota_react/items/helm_of_the_overlord.png?t=1593393829403",
@@ -5361,26 +5327,7 @@
     "qual": "artifact",
     "cost": 6175,
     "notes": "Can dominate up to two at a time. \nCan also Dominate enemy lane creeps and summoned units.\nSelling will cause dominated units to die.",
-    "attrib": [
-      {
-        "key": "bonus_stats",
-        "header": "+",
-        "value": "7",
-        "footer": "All Attributes"
-      },
-      {
-        "key": "bonus_armor",
-        "header": "+",
-        "value": "7",
-        "footer": "Armor"
-      },
-      {
-        "key": "bonus_regen",
-        "header": "+",
-        "value": "7",
-        "footer": "Health Regeneration"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": 45,
     "lore": "The powerful headpiece of a dead necromancer.",
@@ -5556,8 +5503,8 @@
   },
   "mask_of_madness": {
     "hint": [
-      "Active: BerserkGives 110 attack speed and 30 movement speed, but reduces your armor by 8 and silences you.  Lasts 6 seconds.",
-      "Passive: LifestealHeals the attacker for a percentage of attack damage dealt."
+      "Active: BerserkGives %berserk_bonus_attack_speed% attack speed and %berserk_bonus_movement_speed% movement speed, but reduces your armor by %berserk_armor_reduction% and silences you.  Lasts %berserk_duration% seconds.",
+      "Passive: LifestealHeals the attacker for a percentage of attack damage dealt. Lifesteal from creeps is reduced by %creep_lifesteal_reduction_pct%%%."
     ],
     "id": 172,
     "img": "/apps/dota2/images/dota_react/items/mask_of_madness.png?t=1593393829403",
@@ -5565,26 +5512,7 @@
     "qual": "artifact",
     "cost": 1775,
     "notes": "",
-    "attrib": [
-      {
-        "key": "bonus_damage",
-        "header": "+",
-        "value": "10",
-        "footer": "Damage"
-      },
-      {
-        "key": "bonus_attack_speed",
-        "header": "+",
-        "value": "10",
-        "footer": "Attack Speed"
-      },
-      {
-        "key": "lifesteal_percent",
-        "header": "+",
-        "value": "20%",
-        "footer": "Lifesteal"
-      }
-    ],
+    "attrib": [],
     "mc": 25,
     "cd": 16,
     "lore": "Once this mask is worn, its bearer becomes an uncontrollable aggressive force.",
@@ -5747,38 +5675,7 @@
     "qual": "rare",
     "cost": 5275,
     "notes": "",
-    "attrib": [
-      {
-        "key": "bonus_cooldown",
-        "header": "+",
-        "value": "25%",
-        "footer": "Cooldown Reduction"
-      },
-      {
-        "key": "cast_range_bonus",
-        "header": "+",
-        "value": "225",
-        "footer": "Cast Range"
-      },
-      {
-        "key": "bonus_health",
-        "header": "+",
-        "value": "425",
-        "footer": "Health"
-      },
-      {
-        "key": "bonus_mana",
-        "header": "+",
-        "value": "725",
-        "footer": "Mana"
-      },
-      {
-        "key": "bonus_mana_regen",
-        "header": "+",
-        "value": "3",
-        "footer": "Mana Regeneration"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": false,
     "lore": "At the core of spellcraft are spectrums only the very gifted can sense.",
@@ -6237,7 +6134,7 @@
     "id": 230,
     "img": "/apps/dota2/images/dota_react/items/recipe.png?t=1593393829403",
     "dname": "Guardian Greaves Recipe",
-    "cost": 1500,
+    "cost": 1550,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -6249,36 +6146,17 @@
   },
   "guardian_greaves": {
     "hint": [
-      "Active: MendRestores 300 health and 200 mana to nearby allies, and removes most negative effects from the caster.Radius: 1200Dispel Type: Basic Dispel",
-      "Passive: Guardian Aura Grants 2.5 health regeneration and 3 armor to allied units. If an allied hero's health falls below 20%, this is increased to 18.5 health regeneration and 10 armor. Radius: 1200 ",
+      "Active: MendRestores %replenish_health% health and %replenish_mana% mana to nearby allies, and removes most negative effects from the caster.Radius: %replenish_radius%Dispel Type: Basic Dispel",
+      "Passive: Guardian Aura Grants %aura_health_regen% health regeneration and %aura_armor% armor to allied units. If an allied hero's health falls below %aura_bonus_threshold%%%, this is increased to %aura_health_regen_bonus% health regeneration and %aura_armor_bonus% armor. Radius: %aura_radius% ",
       "Movement speed bonuses from multiple pairs of boots do not stack."
     ],
     "id": 231,
     "img": "/apps/dota2/images/dota_react/items/guardian_greaves.png?t=1593393829403",
     "dname": "Guardian Greaves",
     "qual": "rare",
-    "cost": 5100,
+    "cost": 5050,
     "notes": "The aura boost only applies to heroes.",
-    "attrib": [
-      {
-        "key": "bonus_movement",
-        "header": "+",
-        "value": "50",
-        "footer": "Movement Speed"
-      },
-      {
-        "key": "bonus_mana",
-        "header": "+",
-        "value": "250",
-        "footer": "Mana"
-      },
-      {
-        "key": "bonus_armor",
-        "header": "+",
-        "value": "4",
-        "footer": "Armor"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": 40,
     "lore": "One of many holy instruments constructed to honor the Omniscience.",
@@ -6471,7 +6349,7 @@
   },
   "heavens_halberd": {
     "hint": [
-      "Active: DisarmPrevents a target from attacking for 3 seconds on melee targets, and 5 seconds on ranged targets.Range: 600"
+      "Active: DisarmPrevents a target from attacking for 3 seconds on melee targets, and 5 seconds on ranged targets.Range: 650"
     ],
     "id": 210,
     "img": "/apps/dota2/images/dota_react/items/heavens_halberd.png?t=1593393829403",
@@ -6571,7 +6449,7 @@
   },
   "shadow_amulet": {
     "hint": [
-      "Active: FadeGrants invisibility to you or a target allied hero as long as the target unit remains still.  Has a 1.25 second fade time, and breaks instantly upon moving. There is no cooldown when using this item on yourself.Range: 600"
+      "Active: FadeGrants invisibility to you or a target allied hero as long as the target unit remains still for up to %fade_duration%s.  Has a %fade_time% second fade time, and breaks instantly upon moving. There is no cooldown when using this item on yourself.Range: %abilitycastrange%"
     ],
     "id": 215,
     "img": "/apps/dota2/images/dota_react/items/shadow_amulet.png?t=1593393829403",
@@ -6602,7 +6480,7 @@
   },
   "glimmer_cape": {
     "hint": [
-      "Active: Glimmer After a 0.6 second delay, grants invisibility and 50% magic resistance to you or a target allied unit for 5 seconds.Range: 550Can be cast while channelling."
+      "Active: Glimmer After a 0.5 second delay, grants invisibility and 50% magic resistance to you or a target allied unit for 5 seconds.Range: 600Can be cast while channelling."
     ],
     "id": 254,
     "img": "/apps/dota2/images/dota_react/items/glimmer_cape.png?t=1593393829403",
@@ -6614,7 +6492,7 @@
       {
         "key": "bonus_magical_armor",
         "header": "+",
-        "value": "15%",
+        "value": "20%",
         "footer": "Magic Resistance"
       }
     ],
@@ -6840,8 +6718,7 @@
     "lore": "Stolen from a tinker's shop ages ago, this handy lens has seen service to many owners.",
     "components": null,
     "created": false,
-    "charges": false,
-    "tier": 1
+    "charges": false
   },
   "grove_bow": {
     "hint": [
@@ -7217,7 +7094,7 @@
   },
   "mirror_shield": {
     "hint": [
-      "Passive: Echo Shield Block and reflect most targeted spells back to their caster once every 8 seconds."
+      "Passive: Echo Shield Block and reflect most targeted spells back to their caster once every 12 seconds."
     ],
     "id": 301,
     "img": "/apps/dota2/images/dota_react/items/mirror_shield.png?t=1593393829403",
@@ -7584,8 +7461,7 @@
     "lore": "A horrifying yet useful mixture of necromancy and artificing.",
     "components": null,
     "created": false,
-    "charges": false,
-    "tier": 3
+    "charges": false
   },
   "helm_of_the_undying": {
     "hint": [
@@ -7700,8 +7576,7 @@
     "lore": "A charm blessed by the Council of the Brine.",
     "components": null,
     "created": false,
-    "charges": false,
-    "tier": 1
+    "charges": false
   },
   "broom_handle": {
     "id": 355,
@@ -7715,8 +7590,7 @@
     "lore": "The surprisingly dangerous creation of an apprentice sorcerer with a strange fondness for brooms.",
     "components": null,
     "created": false,
-    "charges": false,
-    "tier": 1
+    "charges": false
   },
   "trusty_shovel": {
     "hint": [
@@ -7815,8 +7689,7 @@
     "lore": "An ancient bauble blessed by the breath of Verodicia.",
     "components": null,
     "created": false,
-    "charges": false,
-    "tier": 2
+    "charges": false
   },
   "clumsy_net": {
     "hint": [
@@ -7958,7 +7831,8 @@
     "lore": "",
     "components": null,
     "created": false,
-    "charges": false
+    "charges": false,
+    "tier": 4
   },
   "panic_button": {
     "hint": [
@@ -8188,7 +8062,7 @@
         "footer": "Armor"
       }
     ],
-    "mc": false,
+    "mc": 350,
     "cd": 25,
     "lore": "The remains of an ancient universe, preserved within a single sphere.",
     "components": null,
@@ -8315,8 +8189,7 @@
     "lore": "A demonic blade that struck the final blow to crack the gates of the Sanctum of Solanas.",
     "components": null,
     "created": false,
-    "charges": false,
-    "tier": 4
+    "charges": false
   },
   "arcane_ring": {
     "hint": [
@@ -8391,8 +8264,7 @@
     "lore": "It doesn't look like much, but it's oddly comfy.",
     "components": null,
     "created": false,
-    "charges": false,
-    "tier": 1
+    "charges": false
   },
   "wizard_glass": {
     "hint": [
@@ -8842,12 +8714,11 @@
     "lore": "An enchanted talisman brimming with a mysterious substance.",
     "components": null,
     "created": false,
-    "charges": false,
-    "tier": 2
+    "charges": false
   },
   "book_of_shadows": {
     "hint": [
-      "Active: ShadowsTarget an enemy, ally or self. Causes the target to become untargetable but also silenced, muted and disarmed for 3 seconds. Applies a Basic Dispel."
+      "Active: ShadowsTarget an enemy, ally or self. Causes the target to become untargetable but also silenced, muted and disarmed for %duration% seconds. Applies a Basic Dispel."
     ],
     "id": 677,
     "img": "/apps/dota2/images/dota_react/items/book_of_shadows.png?t=1593393829403",
@@ -9186,6 +9057,258 @@
     "mc": 25,
     "cd": 20,
     "lore": "Those marked for death by the fae shine brightly to all manner of creatures in the shadow realm.",
+    "components": null,
+    "created": false,
+    "charges": false
+  },
+  "seeds_of_serenity": {
+    "hint": [
+      "Active: Verdurous Dale  Target the ground with a %radius% radius. Provides +%aura_health_regen% health regeneration to all allied units while they are in the area of effect. Lasts %duration% seconds."
+    ],
+    "id": 945,
+    "img": "/apps/dota2/images/dota_react/items/seeds_of_serenity.png?t=1593393829403",
+    "dname": "Seeds of Serenity",
+    "cost": 0,
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": 40,
+    "lore": "An evergreen sprout treasured by the woodkin and highly coveted by interlopers and their like.",
+    "components": null,
+    "created": false,
+    "charges": false,
+    "tier": 1
+  },
+  "lance_of_pursuit": {
+    "hint": [
+      "Passive: Hound Attacking from behind slows enemies by %slow_pct_melee%%% (%slow_pct_ranged%%% if Ranged) and deals %backstab_damage% more damage. Slow lasts %slow_duration% second(s)."
+    ],
+    "id": 946,
+    "img": "/apps/dota2/images/dota_react/items/lance_of_pursuit.png?t=1593393829403",
+    "dname": "Lance of Pursuit",
+    "cost": 0,
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": false,
+    "lore": "The gleaming weapon of a tarnished knight haunted by his duties to an unworthy king.",
+    "components": null,
+    "created": false,
+    "charges": false,
+    "tier": 1
+  },
+  "occult_bracelet": {
+    "hint": [
+      "Passive: Rites of ElosharEach time the wearer is attacked, they gain a stack of %mana_regen% mana regen, up to %stack_limit% stacks. Stacks last for %stack_duration% seconds."
+    ],
+    "id": 947,
+    "img": "/apps/dota2/images/dota_react/items/occult_bracelet.png?t=1593393829403",
+    "dname": "Occult Bracelet",
+    "cost": 0,
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": false,
+    "lore": "A band that bears effigy of the dark goddess Eloshar's unsleeping eye.",
+    "components": null,
+    "created": false,
+    "charges": false,
+    "tier": 1
+  },
+  "tome_of_omniscience": {
+    "id": 948,
+    "img": "/apps/dota2/images/dota_react/items/tome_of_omniscience.png?t=1593393829403",
+    "cost": 0,
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": false,
+    "lore": "",
+    "components": null,
+    "created": false,
+    "charges": false
+  },
+  "ogre_seal_totem": {
+    "hint": [
+      "Active: Ogre Seal Flop Flop forward like an ogre seal %max_bounces% times, dealing %flop_damage% damage and slowing enemies in a %radius% radius by %slow%%% for %slow_duration% second on each bounce. %leap_distance% bounce distance. "
+    ],
+    "id": 949,
+    "img": "/apps/dota2/images/dota_react/items/ogre_seal_totem.png?t=1593393829403",
+    "dname": "Ogre Seal Totem",
+    "cost": 0,
+    "notes": "",
+    "attrib": [],
+    "mc": 75,
+    "cd": 40,
+    "lore": "",
+    "components": null,
+    "created": false,
+    "charges": false,
+    "tier": 3
+  },
+  "wand_of_the_brine": {
+    "id": 940,
+    "img": "/apps/dota2/images/dota_react/items/wand_of_the_brine.png?t=1593393829403",
+    "cost": 0,
+    "notes": "",
+    "attrib": [],
+    "mc": 90,
+    "cd": 35,
+    "lore": "",
+    "components": null,
+    "created": false,
+    "charges": false
+  },
+  "slime_vial": {
+    "id": 938,
+    "img": "/apps/dota2/images/dota_react/items/slime_vial.png?t=1593393829403",
+    "cost": 0,
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": 27,
+    "lore": "",
+    "components": null,
+    "created": false,
+    "charges": false
+  },
+  "harpoon": {
+    "id": 939,
+    "img": "/apps/dota2/images/dota_react/items/harpoon.png?t=1593393829403",
+    "cost": 0,
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": 10,
+    "lore": "",
+    "components": null,
+    "created": false,
+    "charges": false
+  },
+  "guardian_shell": {
+    "id": 950,
+    "img": "/apps/dota2/images/dota_react/items/guardian_shell.png?t=1593393829403",
+    "cost": 0,
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": 25,
+    "lore": "",
+    "components": null,
+    "created": false,
+    "charges": false
+  },
+  "arcane_scout": {
+    "id": 968,
+    "img": "/apps/dota2/images/dota_react/items/arcane_scout.png?t=1593393829403",
+    "cost": 0,
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": 40,
+    "lore": "",
+    "components": null,
+    "created": false,
+    "charges": false
+  },
+  "barricade": {
+    "id": 969,
+    "img": "/apps/dota2/images/dota_react/items/barricade.png?t=1593393829403",
+    "cost": 0,
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": 45,
+    "lore": "",
+    "components": null,
+    "created": false,
+    "charges": false
+  },
+  "eye_of_the_vizier": {
+    "id": 990,
+    "img": "/apps/dota2/images/dota_react/items/eye_of_the_vizier.png?t=1593393829403",
+    "dname": "Eye of the Vizier",
+    "cost": 0,
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": false,
+    "lore": "The ring of a cunning court mage who imprisoned a cadre of enemies to serve as his personal mana reserve.",
+    "components": null,
+    "created": false,
+    "charges": false,
+    "tier": 2
+  },
+  "manacles_of_power": {
+    "id": 998,
+    "img": "/apps/dota2/images/dota_react/items/manacles_of_power.png?t=1593393829403",
+    "cost": 0,
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": 20,
+    "lore": "",
+    "components": null,
+    "created": false,
+    "charges": false
+  },
+  "bottomless_chalice": {
+    "id": 1000,
+    "img": "/apps/dota2/images/dota_react/items/bottomless_chalice.png?t=1593393829403",
+    "cost": 0,
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": false,
+    "lore": "",
+    "components": null,
+    "created": false,
+    "charges": 6
+  },
+  "wand_of_sanctitude": {
+    "id": 1017,
+    "img": "/apps/dota2/images/dota_react/items/wand_of_sanctitude.png?t=1593393829403",
+    "cost": 0,
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": 40,
+    "lore": "",
+    "components": null,
+    "created": false,
+    "charges": false
+  },
+  "specialists_array": {
+    "hint": [
+      "Passive: Crackshot Ranged Only. The next attack fires projectiles at %count% additional targets within attack range. Does not trigger attack modifiers."
+    ],
+    "id": 1076,
+    "img": "/apps/dota2/images/dota_react/items/specialists_array.png?t=1593393829403",
+    "dname": "Specialist's Array",
+    "cost": 0,
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": 12,
+    "lore": "An impressive kit of trigger enhancements born in an aging assassin's idle mind.",
+    "components": null,
+    "created": false,
+    "charges": false,
+    "tier": 2
+  },
+  "dagger_of_ristul": {
+    "hint": [
+      "Active: Imbrue Consume %health_sacrifice% health to temporarily gain %bonus_damage% damage. Lasts %duration% seconds."
+    ],
+    "id": 1077,
+    "img": "/apps/dota2/images/dota_react/items/dagger_of_ristul.png?t=1593393829403",
+    "dname": "Dagger of Ristul",
+    "cost": 0,
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": 30,
+    "lore": "A sinister shiv that grants favor to those willing to stain its blade with a sacrifice of their own blood.",
     "components": null,
     "created": false,
     "charges": false,
