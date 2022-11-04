@@ -1334,7 +1334,6 @@ function replaceSpecialAttribs(
     });
   }
   template = template.replace(/<br>/gi, "\n").replace("%%", "%");
-  template = template.replace(/\\n/g, "\n");
   // replace close tags with a space, but not open tags
   template = template.replace(/(<(\/[^>]+)>)/gi, " ").replace(/(<([^>]+)>)/gi, "");
   // replace double spaces
@@ -1345,6 +1344,7 @@ function replaceSpecialAttribs(
       hint: cleanupArray(abilities)
     };
   }
+  template = template.replace(/\\n/g, "\n");
   return template;
 }
 
