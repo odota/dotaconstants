@@ -39,7 +39,7 @@ const extraStrings = {
   DOTA_UNIT_TARGET_TREE: "Tree"
 };
 
-const ignoreStrings = [
+const ignoreStrings = new Set([
   "DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES",
   "DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK",
   "DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT",
@@ -47,13 +47,13 @@ const ignoreStrings = [
   "DOTA_ABILITY_BEHAVIOR_TOGGLE",
   "DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE",
   "DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
-];
+]);
 
-const badNames = [
+const badNames = new Set([
   "Version",
   "npc_dota_hero_base",
   "npc_dota_hero_target_dummy"
-];
+]);
 
 const extraAttribKeys = [
   "AbilityCastRange",
@@ -65,6 +65,45 @@ const extraAttribKeys = [
   "AbilityManaCost",
   "AbilityCooldown"
 ];
+
+// Use standardized names for base attributes
+const generatedHeaders = {
+  "abilitycastrange": "CAST RANGE",
+  "abilitycastpoint": "CAST TIME"
+}
+
+// Already formatted for mc and cd
+const excludeAttributes = new Set(["abilitymanacost", "abilitycooldown"]);
+
+const notAbilities = new Set([
+  "Version",
+  "ability_base",
+  "default_attack",
+  "attribute_bonus",
+  "ability_deward"
+]);
+
+const itemQualOverrides = {
+  "fluffy_hat": "component",
+  "ring_of_health": "secret_shop",
+  "void_stone": "secret_shop",
+  "overwhelming_blink": "artifact",
+  "swift_blink": "artifact",
+  "arcane_blink": "artifact",
+  "moon_shard": "common",
+  "aghanims_shard": "consumable",
+  "kaya": "artifact",
+  "helm_of_the_dominator": "common",
+  "helm_of_the_overlord": "common",
+  "desolator": "epic",
+  "mask_of_madness": "common",
+  "orb_of_corrosion": "common",
+  "falcon_blade": "common",
+  "mage_slayer": "artifact",
+  "revenants_brooch": "epic"
+}
+
+let aghsAbilityValues = {};
 
 const now = Number(new Date());
 
@@ -85,7 +124,7 @@ const sources = [
       "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/neutral_items.txt"
     ],
     transform: (respObj) => {
-      const strings = mapAbilities(respObj[0].lang.Tokens);
+      const strings = respObj[0].lang.Tokens;
       const scripts = respObj[1].DOTAAbilities;
       const neutrals = respObj[2];
       // parse neutral items into name => tier map
@@ -100,7 +139,7 @@ const sources = [
         }
       });
 
-      var items = {};
+      let items = {};
 
       Object.keys(scripts)
         .filter((key) => {
@@ -110,10 +149,12 @@ const sources = [
           );
         })
         .forEach((key) => {
-          var item = {
+          const specialAttrs = getSpecialAttrs(scripts[key]);
+
+          let item = {
             ...replaceSpecialAttribs(
               strings[`DOTA_Tooltip_ability_${key}_Description`],
-              scripts[key].AbilitySpecial,
+              specialAttrs,
               true,
               scripts[key],
               key
@@ -129,16 +170,22 @@ const sources = [
           }
 
           item.dname = strings[`DOTA_Tooltip_ability_${key}`];
-          item.qual = scripts[key].ItemQuality;
+          item.qual = itemQualOverrides[key] ?? scripts[key].ItemQuality;
           item.cost = parseInt(scripts[key].ItemCost);
 
-          var notes = [];
+          let notes = [];
           for (
             let i = 0;
             strings[`DOTA_Tooltip_ability_${key}_Note${i}`];
             i++
           ) {
-            notes.push(strings[`DOTA_Tooltip_ability_${key}_Note${i}`]);
+            notes.push(replaceSpecialAttribs(
+              strings[`DOTA_Tooltip_ability_${key}_Note${i}`],
+              specialAttrs,
+              false,
+              scripts[key],
+              key
+            ));
           }
 
           item.notes = notes.join("\n");
@@ -315,31 +362,23 @@ const sources = [
       const strings = respObj[0].lang.Tokens;
       const scripts = respObj[1].DOTAAbilities;
 
-      var not_abilities = [
-        "Version",
-        "ability_base",
-        "default_attack",
-        "attribute_bonus",
-        "ability_deward"
-      ];
-
-      var abilities = {};
+      let abilities = {};
 
       Object.keys(scripts)
-        .filter((key) => !not_abilities.includes(key))
+        .filter((key) => !notAbilities.has(key))
         .forEach((key) => {
-          var ability = {};
+          let ability = {};
+
+          let specialAttr = getSpecialAttrs(scripts[key]);
+
           ability.dname = replaceSValues(
             strings[`DOTA_Tooltip_ability_${key}`] ??
               strings[`DOTA_Tooltip_Ability_${key}`],
-            scripts[key].AbilitySpecial ??
-              (scripts[key].AbilityValues
-                ? [scripts[key].AbilityValues]
-                : undefined)
+            specialAttr,
+            key
           );
 
           // Check for unreplaced `s:bonus_<talent>`
-          // TODO: Create a replace function for the remaining `s:bonus_<talent>` templates whose values are placed in one of the hero"s base abilities.
           if (
             scripts[key].ad_linked_abilities &&
             scripts[scripts[key].ad_linked_abilities]
@@ -366,10 +405,7 @@ const sources = [
 
           ability.desc = replaceSpecialAttribs(
             strings[`DOTA_Tooltip_ability_${key}_Description`],
-            scripts[key].AbilitySpecial ??
-              (scripts[key].AbilityValues
-                ? [scripts[key].AbilityValues]
-                : undefined),
+            specialAttr,
             false,
             scripts[key],
             key
@@ -408,6 +444,68 @@ const sources = [
             ability = { dname: ability.dname };
           }
           abilities[key] = ability;
+          if (specialAttr) {
+            let aghsObj = {};
+            if (scripts[key].IsGrantedByScepter || scripts[key].IsGrantedByShard) {
+              // simple straight copy to lookup
+              for (const attrib of specialAttr) {
+                for (const key of Object.keys(attrib)) {
+                  const val = attrib[key];
+                  if (typeof val === "object") {
+                    aghsObj[key] = val["value"];
+                  } else {
+                    aghsObj[key] = val;
+                  }
+                }
+              }
+            } else {
+              for (const attrib of specialAttr) {
+                for (const key of Object.keys(attrib)) {
+                  const val = attrib[key];
+                  if (val === null) {
+                    continue;
+                  }
+                  // handle bonus objects
+                  if (typeof val === "object") {
+                    // first case: standard attribute with aghs bonus
+                    for (const bonus of Object.keys(val)) {
+                      if (bonus.indexOf("scepter") !== -1 || bonus.indexOf("shard") !== -1) {
+                        const rawBonus = val[bonus].replace("+", "")
+                        .replace("-", "")
+                        .replace("x", "")
+                        .replace("%", "");
+                        // bonus_bonus doesn't exist, it's shard_bonus or scepter_bonus at that point
+                        const aghsPrefix = bonus.indexOf("scepter") !== -1 ? "scepter" : "shard";
+                        const bonusKey = key.startsWith("bonus_") ? `${aghsPrefix}_${key}` : `bonus_${key}`;
+                        aghsObj[bonusKey] = rawBonus;
+                        aghsObj[`${key}`] = calculateValueFromBonus(val["value"], val[bonus]);
+                      }
+                    }
+                    // second case: aghs bonus attribute
+                    if (key.indexOf("scepter") !== -1 || key.indexOf("shard") !== -1) {
+                      const bonus = Object.keys(val).filter(k => k !== key).find(k => k.indexOf("scepter") !== -1 || k.indexOf("shard") !== -1);
+                      if (bonus) {
+                        aghsObj[key] = calculateValueFromBonus(val["value"] ?? val[key], val[bonus]);
+                      } else {
+                        aghsObj[key] = val["value"] ?? val[key];
+                      }
+                    }
+                    // third case: value requires aghs
+                    if (Object.keys(val).length == 2) {
+                      // value and requires attr
+                      if (val["value"] && val["RequiresScepter"] || val["RequiresShard"]) {
+                        aghsObj[key] = val["value"];
+                      }
+                    }
+                  } else {
+                    // simple key to value
+                    aghsObj[key] = val;
+                  }
+                }
+              }
+            }
+            aghsAbilityValues[key] = aghsObj;
+          }
         });
       return abilities;
     }
@@ -436,7 +534,7 @@ const sources = [
     transform: (respObj) => {
       let heroes = [];
       let keys = Object.keys(respObj[1].DOTAHeroes).filter(
-        (name) => !badNames.includes(name)
+        (name) => !badNames.has(name)
       );
       keys.forEach((name) => {
         let h = formatVpkHero(name, respObj[1], respObj[0].lang.Tokens[name]);
@@ -465,7 +563,7 @@ const sources = [
     transform: (respObj) => {
       let heroes = [];
       let keys = Object.keys(respObj[1].DOTAHeroes).filter(
-        (name) => !badNames.includes(name)
+        (name) => !badNames.has(name)
       );
       keys.forEach((name) => {
         let h = formatVpkHero(name, respObj[1], respObj[0].lang.Tokens[name]);
@@ -488,7 +586,7 @@ const sources = [
     key: "hero_abilities",
     url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.json",
     transform: (respObj) => {
-      var DOTAHeroes = respObj.DOTAHeroes;
+      let DOTAHeroes = respObj.DOTAHeroes;
       const heroAbilities = {};
       Object.keys(DOTAHeroes).forEach(function (heroKey) {
         if (
@@ -499,13 +597,13 @@ const sources = [
           const newHero = { abilities: [], talents: [] };
           let talentCounter = 2;
           Object.keys(DOTAHeroes[heroKey]).forEach(function (key) {
-            var talentIndexStart =
+            let talentIndexStart =
               DOTAHeroes[heroKey]["AbilityTalentStart"] != undefined
                 ? DOTAHeroes[heroKey]["AbilityTalentStart"]
                 : 10;
-            var abilityRegexMatch = key.match(/Ability([0-9]+)/);
+            let abilityRegexMatch = key.match(/Ability([0-9]+)/);
             if (abilityRegexMatch && DOTAHeroes[heroKey][key] != "") {
-              var abilityNum = parseInt(abilityRegexMatch[1]);
+              let abilityNum = parseInt(abilityRegexMatch[1]);
               if (abilityNum < talentIndexStart) {
                 newHero["abilities"].push(DOTAHeroes[heroKey][key]);
               } else {
@@ -589,12 +687,12 @@ const sources = [
         if (!/^#/.test(input)) {
           return input;
         }
-        var key = input.replace(/^#/, "");
+        let key = input.replace(/^#/, "");
         return lang[key] || chat_wheel_lang[key] || key;
       }
 
       function addMessage(key, message) {
-        var data = {
+        let data = {
           id: parseInt(message.message_id),
           name: key,
           all_chat: message.all_chat == "1" ? true : undefined,
@@ -695,7 +793,7 @@ const sources = [
         hd_hero = hd_hero.result.data.heroes[0];
 
         // object to store data about aghs scepter/shard for a hero
-        var aghs_element = {
+        let aghs_element = {
           hero_name: hd_hero.name,
           hero_id: hd_hero.id,
 
@@ -716,11 +814,15 @@ const sources = [
             return; // i guess this is continue in JS :|
           }
 
+          let scepterName = null;
+          let shardName = null;
+
           // ------------- Scepter  -------------
           if (ability.ability_is_granted_by_scepter) {
             // scepter grants new ability
             aghs_element.scepter_desc = ability.desc_loc;
             aghs_element.scepter_skill_name = ability.name_loc;
+            scepterName = ability.name;
             aghs_element.scepter_new_skill = true;
             aghs_element.has_scepter = true;
           } else if (
@@ -730,6 +832,7 @@ const sources = [
             // scepter ugprades an ability
             aghs_element.scepter_desc = ability.scepter_loc;
             aghs_element.scepter_skill_name = ability.name_loc;
+            scepterName = ability.name;
             aghs_element.scepter_new_skill = false;
             aghs_element.has_scepter = true;
           }
@@ -738,15 +841,28 @@ const sources = [
             // scepter grants new ability
             aghs_element.shard_desc = ability.desc_loc;
             aghs_element.shard_skill_name = ability.name_loc;
+            shardName = ability.name;
             aghs_element.shard_new_skill = true;
             aghs_element.has_shard = true;
           } else if (ability.ability_has_shard && !(ability.shard_loc == "")) {
             // scepter ugprades an ability
             aghs_element.shard_desc = ability.shard_loc;
             aghs_element.shard_skill_name = ability.name_loc;
+            shardName = ability.name;
             aghs_element.shard_new_skill = false;
             aghs_element.has_shard = true;
           }
+          if (scepterName) {
+            const values = aghsAbilityValues[scepterName];
+            aghs_element.scepter_desc = aghs_element.scepter_desc.replace(/%([^% ]*)%/g, findAghsAbilityValue(values));
+          }
+          if (shardName) {
+            const values = aghsAbilityValues[shardName];
+            aghs_element.shard_desc = aghs_element.shard_desc.replace(/%([^% ]*)%/g, findAghsAbilityValue(values));
+          }
+          // clean up <br> and double % signs
+          aghs_element.scepter_desc = aghs_element.scepter_desc.replace(/<br>/gi, "\n").replace("%%", "%");
+          aghs_element.shard_desc = aghs_element.shard_desc.replace(/<br>/gi, "\n").replace("%%", "%");
         });
 
         // Error handling
@@ -776,6 +892,79 @@ const sources = [
     }
   }
 ];
+
+function getSpecialAttrs(entity) {
+  let specialAttr = entity.AbilitySpecial;
+  if (!specialAttr) {
+    specialAttr = entity.AbilityValues;
+    if (specialAttr) {
+      specialAttr = Object.keys(specialAttr).map((attr) => ({
+        [attr]: specialAttr[attr]
+      }));
+    }
+  } else {
+    // Fix weird attrib formatting on very rare cases.
+    // e.g.: spirit_breaker_empowering_haste
+    if (!Array.isArray(specialAttr) && typeof specialAttr == "object") {
+      specialAttr = Object.keys(specialAttr).map((key) => {
+        return specialAttr[key];
+      });
+    }
+  }
+  return specialAttr;
+}
+
+function calculateValueFromBonus(value, bonus) {
+  const rawBonus = bonus.replace("+", "")
+                        .replace("-", "")
+                        .replace("x", "")
+                        .replace("%", "");
+  if (value === undefined) {
+    return rawBonus;
+  }
+  const baseValue = parseFloat(value);
+  let ret = rawBonus;
+  // if the base value is non-zero
+  if (baseValue !== 0) {
+    let bonusMultiplier = bonus;
+    if (bonusMultiplier.indexOf("%") !== -1) {
+      bonusMultiplier = bonusMultiplier.replace("%", "");
+      if (bonusMultiplier[0] === "+") {
+        bonusMultiplier = bonusMultiplier.replace("+", "");
+        bonusMultiplier = 1 + parseFloat(bonusMultiplier) / 100.0;
+      } else if (bonusMultiplier[0] === "-") {
+        bonusMultiplier = bonusMultiplier.replace("-", "");
+        bonusMultiplier = parseFloat(bonusMultiplier) / 100.0;
+      }
+      return baseValue * bonusMultiplier;
+    } else if (bonusMultiplier[0] === "+" || bonusMultiplier[0] === "-") {
+      let bonusTerm = parseFloat(rawBonus);
+      if (bonusMultiplier[0] === "+") {
+        return baseValue + bonusTerm;
+      } else {
+        return baseValue - bonusTerm;
+      }
+    } else {
+      return baseValue + parseFloat(bonus);
+    }
+  }
+  let int = Math.floor(ret);
+  if (int == ret) {
+    return int;
+  }
+  return ret;
+}
+
+function findAghsAbilityValue(values) {
+  return function(str, name) {
+    if (name == "") {
+      return "%";
+    }
+    let orig = `%${name}%`;
+    name = name.toLowerCase();
+    return values[name] ?? orig;
+  }
+}
 
 const patches = JSON.parse(fs.readFileSync("./json/patch.json"));
 const newPatches = [];
@@ -924,7 +1113,7 @@ function replaceUselessDecimals(strToReplace) {
 
 // Formats something like "20 21 22" or [ 20, 21, 22 ] to be "20 / 21 / 22"
 function formatValues(value, percent = false, separator = " / ") {
-  var values = Array.isArray(value) ? value : String(value).split(" ");
+  let values = Array.isArray(value) ? value : String(value).split(" ");
   if (values.every((v) => v == values[0])) {
     values = [values[0]];
   }
@@ -941,25 +1130,27 @@ function formatAttrib(attributes, strings, strings_prefix) {
   if (attributes && !Array.isArray(attributes))
     attributes = Object.values(attributes);
   return (attributes || [])
+    .filter((attr) => !excludeAttributes.has(Object.keys(attr)[0].toLowerCase()))
     .map((attr) => {
       let key = Object.keys(attr).find(
-        (key) => `${strings_prefix}${key}` in strings
+        (key) => `${strings_prefix}${key.toLowerCase()}` in strings
       );
       if (!key) {
         for (item in attr) {
           key = item;
           break;
         }
+        const headerName = generatedHeaders[key] ?? key.replace(/_/g, " ").toUpperCase();
         return {
           key: key,
-          header: `${key.replace(/_/g, " ").toUpperCase()}:`,
+          header: `${headerName}:`,
           value: formatValues(attr[key]),
           generated: true
         };
       }
 
       let final = { key: key };
-      let header = strings[`${strings_prefix}${key}`];
+      let header = strings[`${strings_prefix}${key.toLowerCase()}`];
       let match = header.match(/(%)?(\+\$)?(.*)/);
       header = match[3];
 
@@ -967,7 +1158,7 @@ function formatAttrib(attributes, strings, strings_prefix) {
         final.header = "+";
         final.value = formatValues(attr[key], match[1]);
         final.footer = strings[`dota_ability_variable_${header}`];
-        if ("dota_ability_variable_attack_range".includes(header))
+        if (header.includes("attack_range"))
           final.footer = final.footer.replace(/<[^>]*>/g, "");
       } else {
         final.header = header.replace(/<[^>]*>/g, "");
@@ -979,16 +1170,42 @@ function formatAttrib(attributes, strings, strings_prefix) {
     .filter((a) => a);
 }
 
-function replaceSValues(template, attribs) {
-  let values = {};
-  if (template && attribs && Array.isArray(attribs)) {
-    attribs.forEach((attrib) => {
-      let key = Object.keys(attrib)[0];
-      values[key] = attrib[key];
+let specialBonusLookup = {};
+
+function replaceSValues(template, attribs, key) {
+  let values = specialBonusLookup[key] ?? {};
+  if (template && (attribs && Array.isArray(attribs) || Object.keys(values).length)) {
+    (attribs || []).forEach((attrib) => {
+      for (const key of Object.keys(attrib)) {
+        let val = attrib[key];
+        if (val === null) {
+          continue;
+        }
+        if (typeof val === "object") {
+          values[key] = val["value"];
+          const specialBonusKey = Object.keys(val).find(key => key.startsWith("special_bonus_"));
+          if (specialBonusKey) {
+            const bonusKey = `bonus_${key}`;
+            // remove redundant signs
+            const specialBonusVal = val[specialBonusKey]
+              .replace("+", "")
+              .replace("-", "")
+              .replace("x", "")
+              .replace("%", "");
+            if (specialBonusKey in specialBonusLookup) {
+              specialBonusLookup[specialBonusKey][bonusKey] = specialBonusVal;
+            } else {
+              // sometimes special bonuses look up by the value key rather than the bonus name.
+              specialBonusLookup[specialBonusKey] = {[bonusKey]: specialBonusVal, value: specialBonusVal};
+            }
+          }
+        } else {
+          values[key] = val;
+        }
+      }
     });
     Object.keys(values).forEach((key) => {
       if (typeof values[key] != "object") {
-        // TODO: fix special_bonus_unique_bloodseeker_rupture_charges
         template = template.replace(`{s:${key}}`, values[key]);
       }
     });
@@ -1004,7 +1221,7 @@ function replaceBonusSValues(key, template, attribs) {
         attribs[bonus]?.hasOwnProperty(key)
       ) {
         // remove redundant signs
-        var bonus_value = attribs[bonus][key]
+        let bonus_value = attribs[bonus][key]
           .replace("+", "")
           .replace("-", "")
           .replace("x", "");
@@ -1033,14 +1250,17 @@ function replaceSpecialAttribs(
     return template;
   }
 
-  // Fix weird attrib formatting on very rare cases.
-  // e.g.: spirit_breaker_empowering_haste
-  if (!Array.isArray(attribs) && typeof attribs == "object") {
-    attribs = Object.keys(attribs).map((key) => {
-      return attribs[key];
-    });
-  }
   if (attribs) {
+    attribs.forEach((attr) => {
+      const keys = Object.entries(attr);
+      for (const [key, val] of keys) {
+        const name = key.toLowerCase();
+        if (name !== key) {
+          delete attr[key];
+          attr[name] = val;
+        }
+      }
+    });
     //additional special ability keys being catered
     extraAttribKeys.forEach((abilitykey) => {
       if (abilitykey in allData) {
@@ -1067,8 +1287,10 @@ function replaceSpecialAttribs(
       if (name == "") {
         return "%";
       }
+      let orig = `%${name}%`;
+      name = name.toLowerCase();
       if (!Array.isArray(attribs)) attribs = Object.values(attribs);
-      var attr = attribs.find((attr) => name in attr);
+      let attr = attribs.find((attr) => name in attr);
       if (!attr && name[0] === "d") {
         // Because someone at valve messed up in 4 places
         name = name.substr(1);
@@ -1083,25 +1305,46 @@ function replaceSpecialAttribs(
           return attribs.find((obj) => "damage_pct" in obj).damage_pct;
         }
 
-        console.log(`cant find attribute %${name}% in %${key}%`);
+        console.log(`cant find attribute %${name}% in %${key}% with ${attribs.map(o => Object.keys(o)[0])}`);
         return `%${name}%`;
       }
 
-      if (attr[name].value) {
-        return attr[name].value;
+      let ret;
+
+      if (attr[name].value !== undefined) {
+        ret = attr[name].value;
+      } else {
+        ret = attr[name];
       }
 
-      return attr[name];
+      if (ret === undefined) {
+        return orig;
+      } else {
+        let float = parseFloat(ret);
+        if (float) {
+          let int = Math.floor(float);
+          if (ret == int) {
+            return int;
+          }
+          return float;
+        } else {
+          return ret;
+        }
+      }
     });
   }
+  template = template.replace(/<br>/gi, "\n").replace("%%", "%");
+  template = template.replace(/\\n/g, "\n");
+  // replace close tags with a space, but not open tags
+  template = template.replace(/(<(\/[^>]+)>)/gi, " ").replace(/(<([^>]+)>)/gi, "");
+  // replace double spaces
+  template = template.replace("  ", " ");
   if (isItem) {
-    template = template.replace(/<br>/gi, "\n");
     const abilities = template.split("\\n");
     return {
       hint: cleanupArray(abilities)
     };
   }
-  template = template.replace(/\\n/g, "\n").replace(/<[^>]*>/g, "");
   return template;
 }
 
@@ -1111,9 +1354,9 @@ function formatBehavior(string) {
   let split = string
     .split(" | ")
     .filter(
-      (a) =>
-        !ignoreStrings.includes(a.trim()) &&
-        extraStrings.hasOwnProperty(a.trim())
+      (item) =>
+        !ignoreStrings.has(item.trim()) &&
+        extraStrings.hasOwnProperty(item.trim())
     )
     .map((item) => {
       return extraStrings[item.trim()];
@@ -1202,9 +1445,9 @@ function parseNameFromArray(array, names) {
 }
 
 const getNeutralItemNameTierMap = (neutrals) => {
-  var ret = {};
+  let ret = {};
   Object.keys(neutrals).forEach((tier) => {
-    var items = neutrals[tier].items;
+    let items = neutrals[tier].items;
     Object.keys(items).forEach((itemName) => {
       ret[itemName] = ret[itemName.replace(/recipe_/gi, "")] = parseInt(tier);
     });
