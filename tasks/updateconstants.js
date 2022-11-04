@@ -2,7 +2,7 @@ const request = require("request");
 const async = require("async");
 const fs = require("fs");
 const simplevdf = require("simple-vdf");
-const { mapAbilities, cleanupArray } = require("../utils");
+const { cleanupArray } = require("../utils");
 const hero_list = require("../build/heroes.json");
 
 // Get your token from https://stratz.com/api
