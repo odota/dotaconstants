@@ -52,7 +52,17 @@ const ignoreStrings = new Set([
 const badNames = new Set([
   "Version",
   "npc_dota_hero_base",
-  "npc_dota_hero_target_dummy"
+  "npc_dota_hero_target_dummy",
+  "npc_dota_units_base",
+  "npc_dota_thinker",
+  "npc_dota_companion",
+  "npc_dota_loadout_generic",
+  "npc_dota_techies_remote_mine",
+  "npc_dota_treant_life_bomb",
+  "npc_dota_lich_ice_spire",
+  "npc_dota_mutation_pocket_roshan",
+  "npc_dota_scout_hawk",
+  "npc_dota_greater_hawk"
 ]);
 
 const extraAttribKeys = [
@@ -552,6 +562,106 @@ const sources = [
         }
       }
       return abilityIds;
+    }
+  },
+  {
+    key: "neutral_abilities",
+    url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_units.json",
+    transform: (respObj) => {
+      const abilitySlots = [
+        "Ability1",
+        "Ability2",
+        "Ability3",
+        "Ability4",
+        "Ability5",
+        "Ability6",
+        "Ability7",
+        "Ability8"
+      ];
+      // filter out placeholder abilities
+      const badNeutralAbilities = new Set([
+        "creep_piercing",
+        "creep_irresolute",
+        "flagbearer_creep_aura_effect",
+        "creep_siege",
+        "backdoor_protection",
+        "backdoor_protection_in_base",
+        "filler_ability",
+        "neutral_upgrade"
+      ]);
+      // filter out attachable units, couriers, buildings and siege creeps
+      const badUnitRelationships = new Set([
+        "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_ATTACHED",
+        "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_COURIER",
+        "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING",
+        "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BARRACKS",
+        "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_SIEGE"
+      ]);
+      const units = respObj.DOTAUnits;
+      const baseUnit = units["npc_dota_units_base"];
+      function getUnitProp(unit, prop, name = "") {
+        if (unit[prop] !== undefined) {
+          return unit[prop];
+        }
+        // include from other unit
+        if (unit.include_keys_from) {
+          return getUnitProp(units[unit.include_keys_from], prop);
+        }
+        // check if BaseClass is defined non-natively, if so, read from that
+        // also make sure we aren't reading from itself
+        if (unit.BaseClass && unit.BaseClass !== name && units[unit.BaseClass])
+        {
+          return getUnitProp(units[unit.BaseClass], prop, unit.BaseClass);
+        }
+        // Fallback to the base unit
+        return baseUnit[prop];
+      };
+      const keys = Object.keys(units)
+      .filter(
+        (name) => {
+          if (badNames.has(name)) {
+            return false;
+          }
+          const unit = units[name];
+          // only special units have a minimap icon
+          if (unit.MinimapIcon) {
+            return false;
+          }
+          if (getUnitProp(unit, "BountyXP") === "0") {
+            return false;
+          }
+          // if HasInventory=0 explicitly (derived from hero), then we can filter it out
+          // if it has an inventory, it's not an neutral
+          if (unit.HasInventory === "0" || getUnitProp(unit, "HasInventory") === "1") {
+            return false;
+          }
+          if (badUnitRelationships.has(getUnitProp(unit, "UnitRelationshipClass"))) {
+            return false;
+          }
+          let hasAbility = false;
+          for (const slot of abilitySlots) {
+            const ability = getUnitProp(unit, slot);
+            if (ability && !badNeutralAbilities.has(ability)) {
+              hasAbility = true;
+              break;
+            }
+          }
+          return hasAbility;
+        }
+      );
+      const neutralAbilities = {};
+      keys.forEach((key) => {
+        const unit = units[key];
+        for (const slot of abilitySlots) {
+          const ability = getUnitProp(unit, slot);
+          if (ability && !badNeutralAbilities.has(ability) && !neutralAbilities[ability]) {
+            neutralAbilities[ability] = {
+              img: `/assets/images/dota2/neutral_abilities/${ability}.png`
+            }
+          }
+        }
+      });
+      return neutralAbilities;
     }
   },
   {
