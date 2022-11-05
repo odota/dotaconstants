@@ -1451,12 +1451,17 @@ function formatVpkHero(key, vpkr, localized_name) {
     vpkrh.ProjectileSpeed || baseHero.ProjectileSpeed
   );
   h.attack_rate = Number(vpkrh.AttackRate || baseHero.AttackRate);
+  h.base_attack_time = Number(vpkrh.BaseAttackSpeed || baseHero.BaseAttackSpeed);
+  h.attack_point = Number(vpkrh.AttackAnimationPoint || baseHero.AttackAnimationPoint);
 
   h.move_speed = Number(vpkrh.MovementSpeed);
   h.turn_rate = Number(vpkrh.MovementTurnRate);
 
   h.cm_enabled = vpkrh.CMEnabled === "1" ? true : false;
   h.legs = Number(vpkrh.Legs || baseHero.Legs);
+
+  h.day_vision = Number(vpkrh.VisionDaytimeRange || baseHero.VisionDaytimeRange);
+  h.night_vision = Number(vpkrh.VisionNighttimeRange || baseHero.VisionNighttimeRange);
 
   return h;
 }
