@@ -2,7 +2,7 @@ const request = require("request");
 const async = require("async");
 const fs = require("fs");
 const simplevdf = require("simple-vdf");
-const { mapAbilities, cleanupArray } = require("../utils");
+const { cleanupArray } = require("../utils");
 const hero_list = require("../build/heroes.json");
 
 // Get your token from https://stratz.com/api
@@ -69,11 +69,23 @@ const extraAttribKeys = [
 // Use standardized names for base attributes
 const generatedHeaders = {
   "abilitycastrange": "CAST RANGE",
-  "abilitycastpoint": "CAST TIME"
-}
+  "abilitycastpoint": "CAST TIME",
+  "abilitycharges": "MAX CHARGES",
+  "max_charges": "MAX CHARGES",
+  "abilitychargerestoretime": "CHARGE RESTORE TIME",
+  "charge_restore_time": "CHARGE RESTORE TIME",
+  "abilityduration": "DURATION",
+  "abilitychanneltime": "CHANNEL TIME"
+};
 
 // Already formatted for mc and cd
 const excludeAttributes = new Set(["abilitymanacost", "abilitycooldown"]);
+
+// Some attributes we remap, so keep track of them if there's dupes
+const remapAttributes = {
+  "abilitychargerestoretime": "charge_restore_time",
+  "abilitycharges": "max_charges"
+};
 
 const notAbilities = new Set([
   "Version",
@@ -113,6 +125,10 @@ for (const hero_id in hero_list) {
   aghs_desc_urls.push(
     "http://www.dota2.com/datafeed/herodata?language=english&hero_id=" + hero_id
   );
+}
+
+function isObj(obj) {
+  return obj !== null && obj !== undefined && typeof obj === "object" && !Array.isArray(obj);
 }
 
 const sources = [
@@ -414,29 +430,43 @@ const sources = [
             scripts[key].AbilityDamage &&
             formatValues(scripts[key].AbilityDamage);
 
+          // Clean up duplicate remapped values (we needed dupes for the tooltip)
+          if (specialAttr) {
+            Object.entries(remapAttributes).forEach(([oldAttr, newAttr]) => {
+              const oldAttrIdx = specialAttr.findIndex((attr) => Object.keys(attr)[0] === oldAttr);
+              const newAttrIdx = specialAttr.findIndex((attr) => Object.keys(attr)[0] === newAttr);
+              if (oldAttrIdx !== -1 && newAttrIdx !== -1) {
+                specialAttr.splice(oldAttrIdx, 1);
+              }
+            });
+          }
+
           ability.attrib = formatAttrib(
-            scripts[key].AbilitySpecial,
+            specialAttr,
             strings,
             `DOTA_Tooltip_ability_${key}_`
           );
 
           ability.lore = strings[`DOTA_Tooltip_ability_${key}_Lore`];
 
-          if (scripts[key].AbilityManaCost || scripts[key].AbilityCooldown) {
-            if (scripts[key].AbilityManaCost) {
-              ability.mc = formatValues(
-                scripts[key].AbilityManaCost,
-                false,
-                "/"
-              );
-            }
-            if (scripts[key].AbilityCooldown) {
-              ability.cd = formatValues(
-                scripts[key].AbilityCooldown,
-                false,
-                "/"
-              );
-            }
+          const ManaCostKey = scripts[key].AbilityManaCost ?? scripts[key].AbilityValues?.AbilityManaCost;
+          const CooldownKey = scripts[key].AbilityCooldown ?? scripts[key].AbilityValues?.AbilityCooldown;
+
+          if (ManaCostKey) {
+            const manaCost = isObj(ManaCostKey) ? ManaCostKey["value"] : ManaCostKey;
+            ability.mc = formatValues(
+              manaCost,
+              false,
+              "/"
+            );
+          }
+          if (CooldownKey) {
+            const cooldown = isObj(CooldownKey) ? CooldownKey["value"] : CooldownKey;
+            ability.cd = formatValues(
+              cooldown,
+              false,
+              "/"
+            );
           }
 
           ability.img = `/apps/dota2/images/dota_react/abilities/${key}.png`;
@@ -451,7 +481,7 @@ const sources = [
               for (const attrib of specialAttr) {
                 for (const key of Object.keys(attrib)) {
                   const val = attrib[key];
-                  if (typeof val === "object") {
+                  if (isObj(val)) {
                     aghsObj[key] = val["value"];
                   } else {
                     aghsObj[key] = val;
@@ -466,7 +496,7 @@ const sources = [
                     continue;
                   }
                   // handle bonus objects
-                  if (typeof val === "object") {
+                  if (isObj(val)) {
                     // first case: standard attribute with aghs bonus
                     for (const bonus of Object.keys(val)) {
                       if (bonus.indexOf("scepter") !== -1 || bonus.indexOf("shard") !== -1) {
@@ -1140,11 +1170,19 @@ function formatAttrib(attributes, strings, strings_prefix) {
           key = item;
           break;
         }
+        if (attr[key] === null) {
+          return null;
+        }
         const headerName = generatedHeaders[key] ?? key.replace(/_/g, " ").toUpperCase();
+        const values = isObj(attr[key]) ? attr[key].value : attr[key];
+        if (values === undefined)
+        {
+          return null;
+        }
         return {
           key: key,
           header: `${headerName}:`,
-          value: formatValues(attr[key]),
+          value: formatValues(values),
           generated: true
         };
       }
@@ -1153,16 +1191,24 @@ function formatAttrib(attributes, strings, strings_prefix) {
       let header = strings[`${strings_prefix}${key.toLowerCase()}`];
       let match = header.match(/(%)?(\+\$)?(.*)/);
       header = match[3];
+      if (attr[key] === null) {
+        return null;
+      }
+      const values = isObj(attr[key]) ? attr[key].value : attr[key];
+      if (values === undefined)
+      {
+        return null;
+      }
 
       if (match[2]) {
         final.header = "+";
-        final.value = formatValues(attr[key], match[1]);
+        final.value = formatValues(values, match[1]);
         final.footer = strings[`dota_ability_variable_${header}`];
         if (header.includes("attack_range"))
           final.footer = final.footer.replace(/<[^>]*>/g, "");
       } else {
         final.header = header.replace(/<[^>]*>/g, "");
-        final.value = formatValues(attr[key], match[1]);
+        final.value = formatValues(values, match[1]);
       }
 
       return final;
@@ -1181,7 +1227,7 @@ function replaceSValues(template, attribs, key) {
         if (val === null) {
           continue;
         }
-        if (typeof val === "object") {
+        if (isObj(val)) {
           values[key] = val["value"];
           const specialBonusKey = Object.keys(val).find(key => key.startsWith("special_bonus_"));
           if (specialBonusKey) {
@@ -1264,16 +1310,15 @@ function replaceSpecialAttribs(
     //additional special ability keys being catered
     extraAttribKeys.forEach((abilitykey) => {
       if (abilitykey in allData) {
-        let value = allData[abilitykey].split(" "); //can have multiple values
+        let abilityValue = isObj(allData[abilitykey]) ? allData[abilitykey].value : allData[abilitykey];
+        let value = abilityValue.split(" "); //can have multiple values
         value =
           value.length === 1 ? Number(value[0]) : value.map((v) => Number(v));
-        attribs.push({ [abilitykey.toLowerCase()]: value });
-        //these are also present with another attrib name
-        if (abilitykey === "AbilityChargeRestoreTime") {
-          attribs.push({ charge_restore_time: value });
-        }
-        if (abilitykey === "AbilityCharges") {
-          attribs.push({ max_charges: value });
+        abilitykey = abilitykey.toLowerCase();
+        attribs.push({ [abilitykey]: value });
+        // these are also present with another attrib name
+        if (remapAttributes[abilitykey]) {
+          attribs.push({ [remapAttributes[abilitykey]]: value });
         }
       }
     });
@@ -1423,12 +1468,17 @@ function formatVpkHero(key, vpkr, localized_name) {
     vpkrh.ProjectileSpeed || baseHero.ProjectileSpeed
   );
   h.attack_rate = Number(vpkrh.AttackRate || baseHero.AttackRate);
+  h.base_attack_time = Number(vpkrh.BaseAttackSpeed || baseHero.BaseAttackSpeed);
+  h.attack_point = Number(vpkrh.AttackAnimationPoint || baseHero.AttackAnimationPoint);
 
   h.move_speed = Number(vpkrh.MovementSpeed);
   h.turn_rate = Number(vpkrh.MovementTurnRate);
 
   h.cm_enabled = vpkrh.CMEnabled === "1" ? true : false;
   h.legs = Number(vpkrh.Legs || baseHero.Legs);
+
+  h.day_vision = Number(vpkrh.VisionDaytimeRange || baseHero.VisionDaytimeRange);
+  h.night_vision = Number(vpkrh.VisionNighttimeRange || baseHero.VisionNighttimeRange);
 
   return h;
 }
