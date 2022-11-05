@@ -558,8 +558,8 @@ const sources = [
     key: "heroes",
     url: [
       "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/dota_english.json",
-      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.json"
-      // "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/dota_english.json",
+      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.json",
+      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/dota_english.json",
     ],
     transform: (respObj) => {
       let heroes = [];
@@ -567,11 +567,11 @@ const sources = [
         (name) => !badNames.has(name)
       );
       keys.forEach((name) => {
-        let h = formatVpkHero(name, respObj[1], respObj[0].lang.Tokens[name]);
+        let h = formatVpkHero(name, respObj[1], respObj[2].lang.Tokens[`${name}:n`]);
         h.localized_name =
           h.localized_name ||
           respObj[1]["DOTAHeroes"][name].workshop_guide_name;
-        // h.localized_name = h.localized_name || respObj[2].lang.Tokens[name];
+        h.localized_name = h.localized_name || respObj[0].lang.Tokens[name];
         heroes.push(h);
       });
       heroes = heroes.sort((a, b) => a.id - b.id);
@@ -587,8 +587,8 @@ const sources = [
     key: "hero_names",
     url: [
       "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/dota_english.json",
-      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.json"
-      // "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/dota_english.json",
+      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.json",
+      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/dota_english.json",
     ],
     transform: (respObj) => {
       let heroes = [];
@@ -596,11 +596,11 @@ const sources = [
         (name) => !badNames.has(name)
       );
       keys.forEach((name) => {
-        let h = formatVpkHero(name, respObj[1], respObj[0].lang.Tokens[name]);
+        let h = formatVpkHero(name, respObj[1], respObj[2].lang.Tokens[`${name}:n`]);
         h.localized_name =
           h.localized_name ||
           respObj[1]["DOTAHeroes"][name].workshop_guide_name;
-        // h.localized_name = h.localized_name || respObj[2].lang.Tokens[name];
+        h.localized_name = h.localized_name || respObj[0].lang.Tokens[name];
         heroes.push(h);
       });
       heroes = heroes.sort((a, b) => a.id - b.id);
@@ -610,6 +610,38 @@ const sources = [
         heroesObj[hero.name] = hero;
       }
       return heroesObj;
+    }
+  },
+  {
+    key: "hero_lore",
+    url: [
+      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/hero_lore_english.txt",
+      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.json",
+    ],
+    transform: (respObj) => {
+      let keys = Object.keys(respObj[1].DOTAHeroes).filter(
+        (name) => !badNames.has(name)
+      );
+      let sortedHeroes = [];
+      keys.forEach((name) => {
+        const hero = respObj[1].DOTAHeroes[name];
+        sortedHeroes.push({name, id: hero.HeroID})
+      })
+      sortedHeroes = sortedHeroes.sort((a, b) => a.id - b.id);
+      const lore = respObj[0].tokens;
+      const heroLore = {};
+      sortedHeroes.forEach((hero) => {
+        const heroKey = hero.name.replace("npc_dota_hero_", "");
+        heroLore[heroKey] = lore[`${hero.name}_bio`]
+          .replace(/\t+/g, " ")
+          .replace(/\n+/g, " ")
+          .replace(/<br>+/g, " ")
+          .replace(/\s+/g, " ")
+          .replace(/\\/g, "")
+          .replace(/"/g, "'")
+          .trim();
+      });
+      return heroLore;
     }
   },
   {
@@ -1080,7 +1112,6 @@ async.each(
       if (err || resp.statusCode !== 200) {
         return cb(err);
       }
-      let parsed;
       body = parseJson(body);
       if (s.transform) {
         body = s.transform(body);
