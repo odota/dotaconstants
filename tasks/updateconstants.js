@@ -70,15 +70,22 @@ const extraAttribKeys = [
 const generatedHeaders = {
   "abilitycastrange": "CAST RANGE",
   "abilitycastpoint": "CAST TIME",
+  "abilitycharges": "MAX CHARGES",
   "max_charges": "MAX CHARGES",
+  "abilitychargerestoretime": "CHARGE RESTORE TIME",
   "charge_restore_time": "CHARGE RESTORE TIME",
   "abilityduration": "DURATION",
   "abilitychanneltime": "CHANNEL TIME"
-}
+};
 
 // Already formatted for mc and cd
-// and we also already add standard charge_restore_time attr
-const excludeAttributes = new Set(["abilitymanacost", "abilitycooldown", "abilitychargerestoretime", "abilitycharges"]);
+const excludeAttributes = new Set(["abilitymanacost", "abilitycooldown"]);
+
+// Some attributes we remap, so keep track of them if there's dupes
+const remapAttributes = {
+  "abilitychargerestoretime": "charge_restore_time",
+  "abilitycharges": "max_charges"
+};
 
 const notAbilities = new Set([
   "Version",
@@ -422,6 +429,17 @@ const sources = [
           ability.dmg =
             scripts[key].AbilityDamage &&
             formatValues(scripts[key].AbilityDamage);
+
+          // Clean up duplicate remapped values (we needed dupes for the tooltip)
+          if (specialAttr) {
+            Object.entries(remapAttributes).forEach(([oldAttr, newAttr]) => {
+              const oldAttrIdx = specialAttr.findIndex((attr) => Object.keys(attr)[0] === oldAttr);
+              const newAttrIdx = specialAttr.findIndex((attr) => Object.keys(attr)[0] === newAttr);
+              if (oldAttrIdx !== -1 && newAttrIdx !== -1) {
+                specialAttr.splice(oldAttrIdx, 1);
+              }
+            });
+          }
 
           ability.attrib = formatAttrib(
             specialAttr,
@@ -1292,16 +1310,15 @@ function replaceSpecialAttribs(
     //additional special ability keys being catered
     extraAttribKeys.forEach((abilitykey) => {
       if (abilitykey in allData) {
-        let value = allData[abilitykey].split(" "); //can have multiple values
+        let abilityValue = isObj(allData[abilitykey]) ? allData[abilitykey].value : allData[abilitykey];
+        let value = abilityValue.split(" "); //can have multiple values
         value =
           value.length === 1 ? Number(value[0]) : value.map((v) => Number(v));
-        attribs.push({ [abilitykey.toLowerCase()]: value });
-        //these are also present with another attrib name
-        if (abilitykey === "AbilityChargeRestoreTime") {
-          attribs.push({ charge_restore_time: value });
-        }
-        if (abilitykey === "AbilityCharges") {
-          attribs.push({ max_charges: value });
+        abilitykey = abilitykey.toLowerCase();
+        attribs.push({ [abilitykey]: value });
+        // these are also present with another attrib name
+        if (remapAttributes[abilitykey]) {
+          attribs.push({ [remapAttributes[abilitykey]]: value });
         }
       }
     });
