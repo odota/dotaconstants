@@ -69,11 +69,16 @@ const extraAttribKeys = [
 // Use standardized names for base attributes
 const generatedHeaders = {
   "abilitycastrange": "CAST RANGE",
-  "abilitycastpoint": "CAST TIME"
+  "abilitycastpoint": "CAST TIME",
+  "max_charges": "MAX CHARGES",
+  "charge_restore_time": "CHARGE RESTORE TIME",
+  "abilityduration": "DURATION",
+  "abilitychanneltime": "CHANNEL TIME"
 }
 
 // Already formatted for mc and cd
-const excludeAttributes = new Set(["abilitymanacost", "abilitycooldown"]);
+// and we also already add standard charge_restore_time attr
+const excludeAttributes = new Set(["abilitymanacost", "abilitycooldown", "abilitychargerestoretime", "abilitycharges"]);
 
 const notAbilities = new Set([
   "Version",
@@ -113,6 +118,10 @@ for (const hero_id in hero_list) {
   aghs_desc_urls.push(
     "http://www.dota2.com/datafeed/herodata?language=english&hero_id=" + hero_id
   );
+}
+
+function isObj(obj) {
+  return obj !== null && obj !== undefined && typeof obj === "object" && !Array.isArray(obj);
 }
 
 const sources = [
@@ -415,28 +424,31 @@ const sources = [
             formatValues(scripts[key].AbilityDamage);
 
           ability.attrib = formatAttrib(
-            scripts[key].AbilitySpecial,
+            specialAttr,
             strings,
             `DOTA_Tooltip_ability_${key}_`
           );
 
           ability.lore = strings[`DOTA_Tooltip_ability_${key}_Lore`];
 
-          if (scripts[key].AbilityManaCost || scripts[key].AbilityCooldown) {
-            if (scripts[key].AbilityManaCost) {
-              ability.mc = formatValues(
-                scripts[key].AbilityManaCost,
-                false,
-                "/"
-              );
-            }
-            if (scripts[key].AbilityCooldown) {
-              ability.cd = formatValues(
-                scripts[key].AbilityCooldown,
-                false,
-                "/"
-              );
-            }
+          const ManaCostKey = scripts[key].AbilityManaCost ?? scripts[key].AbilityValues?.AbilityManaCost;
+          const CooldownKey = scripts[key].AbilityCooldown ?? scripts[key].AbilityValues?.AbilityCooldown;
+
+          if (ManaCostKey) {
+            const manaCost = isObj(ManaCostKey) ? ManaCostKey["value"] : ManaCostKey;
+            ability.mc = formatValues(
+              manaCost,
+              false,
+              "/"
+            );
+          }
+          if (CooldownKey) {
+            const cooldown = isObj(CooldownKey) ? CooldownKey["value"] : CooldownKey;
+            ability.cd = formatValues(
+              cooldown,
+              false,
+              "/"
+            );
           }
 
           ability.img = `/apps/dota2/images/dota_react/abilities/${key}.png`;
@@ -451,7 +463,7 @@ const sources = [
               for (const attrib of specialAttr) {
                 for (const key of Object.keys(attrib)) {
                   const val = attrib[key];
-                  if (typeof val === "object") {
+                  if (isObj(val)) {
                     aghsObj[key] = val["value"];
                   } else {
                     aghsObj[key] = val;
@@ -466,7 +478,7 @@ const sources = [
                     continue;
                   }
                   // handle bonus objects
-                  if (typeof val === "object") {
+                  if (isObj(val)) {
                     // first case: standard attribute with aghs bonus
                     for (const bonus of Object.keys(val)) {
                       if (bonus.indexOf("scepter") !== -1 || bonus.indexOf("shard") !== -1) {
@@ -1140,11 +1152,19 @@ function formatAttrib(attributes, strings, strings_prefix) {
           key = item;
           break;
         }
+        if (attr[key] === null) {
+          return null;
+        }
         const headerName = generatedHeaders[key] ?? key.replace(/_/g, " ").toUpperCase();
+        const values = isObj(attr[key]) ? attr[key].value : attr[key];
+        if (values === undefined)
+        {
+          return null;
+        }
         return {
           key: key,
           header: `${headerName}:`,
-          value: formatValues(attr[key]),
+          value: formatValues(values),
           generated: true
         };
       }
@@ -1153,16 +1173,24 @@ function formatAttrib(attributes, strings, strings_prefix) {
       let header = strings[`${strings_prefix}${key.toLowerCase()}`];
       let match = header.match(/(%)?(\+\$)?(.*)/);
       header = match[3];
+      if (attr[key] === null) {
+        return null;
+      }
+      const values = isObj(attr[key]) ? attr[key].value : attr[key];
+      if (values === undefined)
+      {
+        return null;
+      }
 
       if (match[2]) {
         final.header = "+";
-        final.value = formatValues(attr[key], match[1]);
+        final.value = formatValues(values, match[1]);
         final.footer = strings[`dota_ability_variable_${header}`];
         if (header.includes("attack_range"))
           final.footer = final.footer.replace(/<[^>]*>/g, "");
       } else {
         final.header = header.replace(/<[^>]*>/g, "");
-        final.value = formatValues(attr[key], match[1]);
+        final.value = formatValues(values, match[1]);
       }
 
       return final;
@@ -1181,7 +1209,7 @@ function replaceSValues(template, attribs, key) {
         if (val === null) {
           continue;
         }
-        if (typeof val === "object") {
+        if (isObj(val)) {
           values[key] = val["value"];
           const specialBonusKey = Object.keys(val).find(key => key.startsWith("special_bonus_"));
           if (specialBonusKey) {
