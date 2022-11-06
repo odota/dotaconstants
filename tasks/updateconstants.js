@@ -665,6 +665,82 @@ const sources = [
     }
   },
   {
+    key: "ancients",
+    url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_units.json",
+    transform: (respObj) => {
+      // filter out attachable units, couriers, buildings and siege creeps
+      const badUnitRelationships = new Set([
+        "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_ATTACHED",
+        "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_COURIER",
+        "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING",
+        "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BARRACKS",
+        "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_SIEGE"
+      ]);
+      const units = respObj.DOTAUnits;
+      const baseUnit = units["npc_dota_units_base"];
+      function getUnitProp(unit, prop, name = "") {
+        if (unit[prop] !== undefined) {
+          return unit[prop];
+        }
+        // include from other unit
+        if (unit.include_keys_from) {
+          return getUnitProp(units[unit.include_keys_from], prop);
+        }
+        // check if BaseClass is defined non-natively, if so, read from that
+        // also make sure we aren't reading from itself
+        if (unit.BaseClass && unit.BaseClass !== name && units[unit.BaseClass])
+        {
+          return getUnitProp(units[unit.BaseClass], prop, unit.BaseClass);
+        }
+        // Fallback to the base unit
+        return baseUnit[prop];
+      };
+      const keys = Object.keys(units)
+      .filter(
+        (name) => {
+          if (badNames.has(name)) {
+            return false;
+          }
+          const unit = units[name];
+          // only special units have a minimap icon
+          if (unit.MinimapIcon) {
+            return false;
+          }
+          if (getUnitProp(unit, "BountyXP") === "0") {
+            return false;
+          }
+          // if HasInventory=0 explicitly (derived from hero), then we can filter it out
+          // if it has an inventory, it's not an neutral
+          if (unit.HasInventory === "0" || getUnitProp(unit, "HasInventory") === "1") {
+            return false;
+          }
+          if (getUnitProp(unit, "UnitRelationshipClass") !== "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT") {
+            return false;
+          }
+          const level = getUnitProp(unit, "Level");
+          if (level === "0" || level === "1") {
+            return false;
+          }
+          if (getUnitProp(unit, "TeamName") !== "DOTA_TEAM_NEUTRALS") {
+            return false;
+          }
+          if (getUnitProp(unit, "IsNeutralUnitType") === "0") {
+            return false;
+          }
+          if (getUnitProp(unit, "IsRoshan") === "1") {
+            return false;
+          }
+          return getUnitProp(unit, "IsAncient") === "1";
+        }
+      );
+      const ancients = {};
+      keys.forEach((key) => {
+        ancients[key] = 1;
+      });
+      return ancients;
+    }
+  },
+  {
     key: "heroes",
     url: [
       "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/dota_english.json",
