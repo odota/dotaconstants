@@ -1245,11 +1245,11 @@ async.each(
   function (s, cb) {
     const url = s.url;
     const options = {};
-    // if (url.startsWith("https://api.stratz.com")) {
-    //   // if no token set, skip request to not overwrite data
-    //   if (STRATZ_TOKEN.length === 0) return cb();
-    //   options.auth = { bearer: STRATZ_TOKEN };
-    // }
+     if (typeof url === 'string' && url.startsWith("https://api.stratz.com")) {
+       // if no token set, skip request to not overwrite data
+       if (STRATZ_TOKEN.length === 0) return cb();
+       options.auth = { bearer: STRATZ_TOKEN };
+     }
     //grab raw data from each url and save
     console.log(url);
     if (typeof url === "object") {
