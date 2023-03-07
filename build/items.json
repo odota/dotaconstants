@@ -1176,7 +1176,7 @@
       {
         "key": "hp_regen",
         "header": "+",
-        "value": "0.6",
+        "value": "0.4",
         "footer": "Health Regeneration"
       }
     ],
@@ -1226,14 +1226,14 @@
   "bottle": {
     "hint": [
       "Active: Regenerate Consumes a charge to restore 110 health and 60 mana over 2.7 seconds. If the hero is attacked by an enemy hero or Roshan, the effect is lost.\n\nThe Bottle automatically refills at the fountain.\n\nHold Control to use on an allied hero.\n\nRange: 350",
-      "Passive: Store Rune Runes can be stored in the bottle for later use by right-clicking them. Unused runes will automatically activate after 90 seconds.\n\nUsing a stored rune fully refills the Bottle."
+      "Passive: Store Rune Runes can be stored in the Bottle for later use by right-clicking them. Unused runes will automatically activate after 90 seconds.\n\nUsing a stored rune fully refills the Bottle."
     ],
     "id": 41,
     "img": "/apps/dota2/images/dota_react/items/bottle.png?t=1593393829403",
     "dname": "Bottle",
     "qual": "common",
     "cost": 675,
-    "notes": "Bottle is shareable. Stored runes cannot be shared.",
+    "notes": "Bottle is shareable. Stored runes cannot be shared.\nUsing a stored Bounty or Water rune fully refills the bottle if the bottle was full when the rune was stored; otherwise, it refills two charges.",
     "attrib": [],
     "mc": false,
     "cd": false,
@@ -1575,13 +1575,13 @@
     "img": "/apps/dota2/images/dota_react/items/relic.png?t=1593393829403",
     "dname": "Sacred Relic",
     "qual": "secret_shop",
-    "cost": 3750,
+    "cost": 3400,
     "notes": "",
     "attrib": [
       {
         "key": "bonus_damage",
         "header": "+",
-        "value": "60",
+        "value": "55",
         "footer": "Damage"
       }
     ],
@@ -1847,7 +1847,7 @@
   },
   "hand_of_midas": {
     "hint": [
-      "Active: Transmute Kills a non-hero target for 160 gold and 2.1x experience. When used on a Neutral Creep, guarantees to create a neutral item if available. \n\n Cannot be used on Ancient Creeps.\n\nRange: 600"
+      "Active: Transmute Kills a non-hero target for 160 gold and 2.1x experience. When used on a neutral creep, guarantees to create a neutral item if available. \n\n Cannot be used on Ancient creeps.\n\nRange: 600"
     ],
     "id": 65,
     "img": "/apps/dota2/images/dota_react/items/hand_of_midas.png?t=1593393829403",
@@ -2187,7 +2187,7 @@
     "dname": "Mekansm",
     "qual": "rare",
     "cost": 1775,
-    "notes": "Restore does not affect units that have been affected by Restore within Mekansm's cooldown.\nMultiple instances of Mekansm Aura do not stack.",
+    "notes": "Restore does not affect units that have been affected by Restore or Guardian Greaves Mend within Mekansm's cooldown.\nMultiple instances of Mekansm Aura do not stack.",
     "attrib": [],
     "mc": 100,
     "cd": 50,
@@ -2252,7 +2252,7 @@
   },
   "wraith_pact": {
     "hint": [
-      "Active: Wraith's Reprisal Summons a movable totem in your location for 25 seconds that reduces all damage of enemies within 900 radius by 30% and deals 30 damage per second.\n\n Totem can be destroyed in 5 hits. Creeps deal half damage to the totem.",
+      "Active: Wraith's Reprisal Summons a movable totem in your location for 25 seconds that reduces all physical damage of enemies within 900 radius by 30% and deals 30 damage per second.\n\n Totem can be destroyed in 4 hits. Creeps deal half damage to the totem.",
       "Passive: Vladmir's Aura Grants 24% lifesteal, 18% bonus damage, 2 mana regeneration, and 3 armor to nearby allies. Lifesteal from creeps is reduced by 50%.\n\nRadius: 1200"
     ],
     "id": 908,
@@ -2409,7 +2409,7 @@
   },
   "pipe": {
     "hint": [
-      "Active: Barrier Gives a shield that blocks 400 magic damage to all nearby allies. Lasts 12 seconds.\n\nRadius: 1200",
+      "Active: Barrier Gives a shield that blocks 450 magic damage to all nearby allies. Lasts 12 seconds.\n\nRadius: 1200",
       "Passive: Insight Aura Gives allied units 2.5 health regeneration and 15% magic resistance.\n\nRadius: 1200"
     ],
     "id": 90,
@@ -2418,20 +2418,7 @@
     "qual": "rare",
     "cost": 3475,
     "notes": "Multiple instances of Barrier do not stack.\nStacks multiplicatively with other sources of magic resistance.",
-    "attrib": [
-      {
-        "key": "health_regen",
-        "header": "+",
-        "value": "8.5",
-        "footer": "Health Regeneration"
-      },
-      {
-        "key": "magic_resistance",
-        "header": "+",
-        "value": "30%",
-        "footer": "Magic Resistance"
-      }
-    ],
+    "attrib": [],
     "mc": 100,
     "cd": 60,
     "lore": "A powerful artifact of mysterious origin, it creates barriers against magical forces.",
@@ -2637,7 +2624,7 @@
   },
   "bloodthorn": {
     "hint": [
-      "Active: Soul Rend Silences a target for 5 seconds. At the end of the silence, an additional 30% of all damage taken during the silence will be dealt to the target as magical damage.\n\nAll attacks on the silenced target will have True Strike and 100% chance to crit for 130% damage.\n\nRange: 900",
+      "Active: Soul Rend Silences a target for 5 seconds. At the end of the silence, an additional 30% of all damage taken during the silence will be dealt to the target as magical damage.\n\nAll attacks on the silenced target will have True Strike and 100% chance to critical strike for 130% damage.\n\nRange: 900",
       "Passive: Mage Slayer Places a debuff when you attack enemies, causing them to do 35% less spell damage for 6 seconds."
     ],
     "id": 250,
@@ -2732,7 +2719,7 @@
     "dname": "Eul's Scepter of Divinity",
     "qual": "rare",
     "cost": 2725,
-    "notes": "You cannot cyclone allies.\nCyclones cast on yourself go through spell immunity.\nCyclone can purge some buffs and debuffs.",
+    "notes": "You cannot cyclone allies.\nCyclones cast on yourself go through spell immunity.\nCyclone can dispel some buffs and debuffs.\nCyclone duration is unaffected by status resistance.",
     "attrib": [
       {
         "key": "bonus_intellect",
@@ -2787,7 +2774,7 @@
     "dname": "Wind Waker",
     "qual": "rare",
     "cost": 6825,
-    "notes": "Cyclone can purge some buffs and debuffs.\nWhen cast on yourself, the cyclone can be moved anywhere at a speed of 360.",
+    "notes": "Cyclone can dispel some buffs and debuffs.\nWhen cast on yourself, the cyclone can be moved anywhere at a speed of 360.\nCyclone duration is unaffected by status resistance.",
     "attrib": [
       {
         "key": "bonus_movement_speed",
@@ -2897,7 +2884,7 @@
     "cost": 2200,
     "notes": "Self-cast will cause you to use Force on yourself.\nForce Staff doesn't interrupt the target's actions.\nWill not work on a unit inside Chronosphere, Duel, or Black Hole.",
     "attrib": [],
-    "mc": 100,
+    "mc": 150,
     "cd": 19,
     "lore": "Allows you to manipulate others, for good or evil.",
     "components": [
@@ -2933,7 +2920,7 @@
     "cost": 4450,
     "notes": "Self-cast will use Hurricane Pike on yourself.\nHurricane Pike doesn't interrupt the target's actions.\nWill not work on a unit inside Chronosphere, Duel, or Black Hole.",
     "attrib": [],
-    "mc": 100,
+    "mc": 150,
     "cd": 19,
     "lore": "A legendary pike once held as royal sigil of the ancient wyvern riders.",
     "components": [
@@ -3534,7 +3521,7 @@
   },
   "refresher": {
     "hint": [
-      "Active: Reset Cooldowns Resets the cooldowns of all your items and abilities."
+      "Active: Reset Cooldowns Resets the cooldowns of all your items and abilities. Shares a cooldown with Refresher Shard. This item's cooldown only progresses in your hero's main inventory."
     ],
     "id": 110,
     "img": "/apps/dota2/images/dota_react/items/refresher.png?t=1593393829403",
@@ -3796,7 +3783,7 @@
   },
   "bloodstone": {
     "hint": [
-      "Active: Bloodpact Increases Bloodstone's Spell Lifesteal by 2.5x and also converts the same percentage of damage dealt to mana. Lasts 6 seconds. Costs 0% of your current HP to activate"
+      "Active: Bloodpact Increases Bloodstone's Spell Lifesteal by 2.5x and also converts the same percentage of damage dealt to mana. Lasts 5 seconds."
     ],
     "id": 121,
     "img": "/apps/dota2/images/dota_react/items/bloodstone.png?t=1593393829403",
@@ -3914,7 +3901,7 @@
   },
   "meteor_hammer": {
     "hint": [
-      "Active: Meteor Hammer CHANNELED - After a successful channel, summons a meteor that strikes a 400 AoE, stunning enemies for 1.25 seconds and dealing impact damage. Continues to deal damage over time to enemies units and buildings for 6 seconds.\n\nBuilding Impact Damage: 75 \nBuilding Over Time Damage: 60 \n\nNon-Building Impact Damage: 150 \nNon-Building Over Time Damage: 60 \n\nChannel Duration: 2.5 seconds.\nLanding Time: 0.5 seconds."
+      "Active: Meteor Hammer CHANNELED - After a successful channel, summons a meteor that strikes a 400 AoE, stunning enemies for 1.25 seconds and dealing impact damage. Continues to deal damage over time to enemies units and buildings for 6 seconds.\n\nBuilding Impact Damage: 75 \nBuilding Over Time Damage: 60 \n\nNon-Building Impact Damage: 150 \nNon-Building Over Time Damage: 60 \n\nChannel Duration: 2 seconds.\nLanding Time: 0.5 seconds."
     ],
     "id": 223,
     "img": "/apps/dota2/images/dota_react/items/meteor_hammer.png?t=1593393829403",
@@ -3941,13 +3928,13 @@
     "img": "/apps/dota2/images/dota_react/items/nullifier.png?t=1593393829403",
     "dname": "Nullifier",
     "qual": "epic",
-    "cost": 4725,
-    "notes": "",
+    "cost": 4375,
+    "notes": "Can be cast on invulnerable units.\nPierces magic immunity.",
     "attrib": [
       {
         "key": "bonus_damage",
         "header": "+",
-        "value": "80",
+        "value": "75",
         "footer": "Damage"
       },
       {
@@ -4156,7 +4143,7 @@
   },
   "refresher_shard": {
     "hint": [
-      "Use: Reset Cooldowns Resets the cooldowns of all your items and abilities."
+      "Use: Reset Cooldowns Resets the cooldowns of all your items and abilities. Shares a cooldown with Refresher Orb. This item's cooldown only progresses in your hero's main inventory."
     ],
     "id": 260,
     "img": "/apps/dota2/images/dota_react/items/refresher_shard.png?t=1593393829403",
@@ -4318,7 +4305,7 @@
   },
   "blade_mail": {
     "hint": [
-      "Active: Damage Return For 5.5 seconds, the damage returned from all sources is increased by 80%.",
+      "Active: Damage Return For 5.5 seconds, the damage returned from all sources is increased by 85%.",
       "Passive: Damage Return Everytime you are attacked, you return 20 damage plus 20% of the attack damage dealt to you."
     ],
     "id": 127,
@@ -4480,7 +4467,7 @@
     "img": "/apps/dota2/images/dota_react/items/rapier.png?t=1593393829403",
     "dname": "Divine Rapier",
     "qual": "epic",
-    "cost": 5950,
+    "cost": 5600,
     "notes": "If Divine Rapier is dropped and picked up by an enemy of its original owner, it cannot be dropped again except by death.",
     "attrib": [
       {
@@ -4557,7 +4544,7 @@
     "img": "/apps/dota2/images/dota_react/items/radiance.png?t=1593393829403",
     "dname": "Radiance",
     "qual": "epic",
-    "cost": 5050,
+    "cost": 4700,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -4680,20 +4667,7 @@
     "qual": "epic",
     "cost": 2875,
     "notes": "Does not stack with other sources of Bash.\nThe following heroes cannot trigger Bash on this item: Spirit Breaker, Faceless Void, and Slardar.\nDoes not grant Bash to Clones and Tempest Doubles.",
-    "attrib": [
-      {
-        "key": "bonus_damage",
-        "header": "+",
-        "value": "25",
-        "footer": "Damage"
-      },
-      {
-        "key": "bonus_strength",
-        "header": "+",
-        "value": "10",
-        "footer": "Strength"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": 2,
     "lore": "A feared weapon in the right hands, this maul's ability to shatter the defenses of its opponents should not be underestimated.",
@@ -5153,7 +5127,7 @@
   },
   "skadi": {
     "hint": [
-      "Passive: Cold Attack Attacks lower enemy movement and attack speed and reduces heals, health regeneration, lifesteal and spell lifesteal by 40% for 3 seconds. Slows enemy ranged units by -40% movement speed and by -60 attack speed. Slows enemy melee units by -20% movement speed and by -30 attack speed. "
+      "Passive: Cold Attack Attacks lower enemy movement and attack speed and reduces heals, health regeneration, lifesteal and spell lifesteal by 40% for 3 seconds. Slows enemy ranged units by -50% movement speed and by -60 attack speed. Slows enemy melee units by -20% movement speed and by -30 attack speed. "
     ],
     "id": 160,
     "img": "/apps/dota2/images/dota_react/items/skadi.png?t=1593393829403",
@@ -5314,7 +5288,7 @@
   },
   "maelstrom": {
     "hint": [
-      "Passive: Chain Lightning Grants a 30% chance on attack to release a bolt of electricity that leaps between 4 targets within a 650 radius, dealing 140 magical damage to each. Lightning proc pierces evasion."
+      "Passive: Chain Lightning Grants a 30% chance on attack to release a bolt of electricity that leaps between 4 targets within a 650 radius, dealing 135 magical damage to each. Lightning proc pierces evasion."
     ],
     "id": 166,
     "img": "/apps/dota2/images/dota_react/items/maelstrom.png?t=1593393829403",
@@ -5356,7 +5330,7 @@
   },
   "gungir": {
     "hint": [
-      "Active: Eternal Chains Roots all enemies in a target 450 radius for 2 seconds and deals 220 damage.\n\nRange: 1100 ",
+      "Active: Eternal Chains Roots all enemies in a target 400 radius for 2 seconds and deals 180 damage.\n\nRange: 1100 ",
       "Passive: Chain Lightning Grants a 30% chance on attack to release a bolt of electricity that leaps between 4 targets within a 650 radius, dealing 160 magical damage to each. Lightning proc pierces evasion."
     ],
     "id": 1466,
@@ -5365,32 +5339,7 @@
     "qual": "artifact",
     "cost": 6150,
     "notes": "",
-    "attrib": [
-      {
-        "key": "bonus_damage",
-        "header": "+",
-        "value": "30",
-        "footer": "Damage"
-      },
-      {
-        "key": "bonus_intellect",
-        "header": "+",
-        "value": "24",
-        "footer": "Intelligence"
-      },
-      {
-        "key": "bonus_strength",
-        "header": "+",
-        "value": "14",
-        "footer": "Strength"
-      },
-      {
-        "key": "bonus_agility",
-        "header": "+",
-        "value": "14",
-        "footer": "Agility"
-      }
-    ],
+    "attrib": [],
     "mc": 200,
     "cd": 18,
     "lore": "Bindings forged by impossible means to leash an ancient evil.",
@@ -5811,7 +5760,7 @@
     "id": 184,
     "img": "/apps/dota2/images/dota_react/items/recipe.png?t=1593393829403",
     "dname": "Drum of Endurance Recipe",
-    "cost": 550,
+    "cost": 500,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -5830,22 +5779,9 @@
     "img": "/apps/dota2/images/dota_react/items/ancient_janggo.png?t=1593393829403",
     "dname": "Drum of Endurance",
     "qual": "rare",
-    "cost": 1700,
+    "cost": 1650,
     "notes": "",
-    "attrib": [
-      {
-        "key": "bonus_str",
-        "header": "+",
-        "value": "7",
-        "footer": "Strength"
-      },
-      {
-        "key": "bonus_int",
-        "header": "+",
-        "value": "7",
-        "footer": "Intelligence"
-      }
-    ],
+    "attrib": [],
     "mc": false,
     "cd": 30,
     "lore": "A relic that enchants the bodies of those around it for swifter movement in times of crisis.",
@@ -5873,14 +5809,14 @@
   },
   "boots_of_bearing": {
     "hint": [
-      "Active: Endurance Consumes a charge and gives +50 attack speed, +15%. Movement Speed to nearby allies for 6 seconds. For the first 1.5 seconds allies are immune to slows.\n\nStarts with 8 Charges. Gains 1 Charge every 3 minutes.\n\n Radius: 1200  ",
+      "Active: Endurance Gives +50 attack speed and +15% movement speed to nearby allies for 6 seconds. For the first 1.5 seconds allies are immune to slows.\n\n Radius: 1200  ",
       "Passive: Swiftness Aura Grants 20 movement speed to allies.  \n\nRadius: 1200"
     ],
     "id": 931,
     "img": "/apps/dota2/images/dota_react/items/boots_of_bearing.png?t=1593393829403",
     "dname": "Boots of Bearing",
     "qual": "rare",
-    "cost": 4125,
+    "cost": 4075,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -5891,7 +5827,7 @@
       "ancient_janggo"
     ],
     "created": true,
-    "charges": 8
+    "charges": false
   },
   "medallion_of_courage": {
     "hint": [
@@ -5902,7 +5838,7 @@
     "dname": "Medallion of Courage",
     "qual": "rare",
     "cost": 1025,
-    "notes": "",
+    "notes": "Shares cooldown with Solar Crest.",
     "attrib": [
       {
         "key": "bonus_armor",
@@ -5951,7 +5887,7 @@
     "dname": "Solar Crest",
     "qual": "rare",
     "cost": 2625,
-    "notes": "",
+    "notes": "Shares cooldown with Medallion of Courage.",
     "attrib": [
       {
         "key": "bonus_armor",
@@ -5962,13 +5898,13 @@
       {
         "key": "bonus_all_stats",
         "header": "+",
-        "value": "5",
+        "value": "6",
         "footer": "All Attributes"
       },
       {
         "key": "self_movement_speed",
         "header": "+",
-        "value": "20",
+        "value": "25",
         "footer": "Movement Speed"
       },
       {
@@ -6054,7 +5990,7 @@
       {
         "key": "bonus_all_stats",
         "header": "+",
-        "value": "4",
+        "value": "5",
         "footer": "All Attributes"
       }
     ],
@@ -6084,7 +6020,7 @@
   },
   "revenants_brooch": {
     "hint": [
-      "Active: Phantom Province Your next 5 attacks have True Strike and deal magic damage. Expires after 15 seconds.\n\n Can attack Ethereal units and deals no damage to Magic Immune targets.",
+      "Active: Phantom Province Increases attack speed by 60 and your next 5 attacks have True Strike and deal magic damage. Expires after 15 seconds.\n\n Can attack Ethereal units and deals no damage to Magic Immune targets.",
       "Passive: Witch Blade Causes your next attack to apply a poison for 4 seconds, slowing by 25% and dealing 1x your intelligence as damage every second. Can only trigger once every 9 seconds."
     ],
     "id": 911,
@@ -6108,7 +6044,7 @@
     "id": 230,
     "img": "/apps/dota2/images/dota_react/items/recipe.png?t=1593393829403",
     "dname": "Guardian Greaves Recipe",
-    "cost": 1550,
+    "cost": 1450,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -6121,15 +6057,15 @@
   "guardian_greaves": {
     "hint": [
       "Active: Mend Restores 350 health and 200 mana to nearby allies, and removes most negative effects from the caster.\n\nRadius: 1200\nDispel Type: Basic Dispel ",
-      "Passive: Guardian Aura Grants 2.5 health regeneration and 3 armor to allied units. If an allied hero's health falls below 20%, this is increased to 18.5 health regeneration and 10 armor. \n\nRadius: 1200 ",
+      "Passive: Guardian Aura Grants 2.5 health regeneration and 3 armor to allied units. If an allied hero's health falls below 25%, this is increased to 14.5 health regeneration and 8 armor. \n\nRadius: 1200 ",
       "Movement speed bonuses from multiple pairs of boots do not stack."
     ],
     "id": 231,
     "img": "/apps/dota2/images/dota_react/items/guardian_greaves.png?t=1593393829403",
     "dname": "Guardian Greaves",
     "qual": "rare",
-    "cost": 5050,
-    "notes": "The aura boost only applies to heroes.",
+    "cost": 4950,
+    "notes": "The aura boost only applies to heroes.\nMend does not affect units that have been affected by Mend or Mekansm Restore within Guardian Greaves' cooldown.",
     "attrib": [],
     "mc": false,
     "cd": 40,
@@ -6219,7 +6155,7 @@
     "img": "/apps/dota2/images/dota_react/items/iron_talon.png?t=1593393829403",
     "dname": "Iron Talon",
     "qual": "common",
-    "cost": 301,
+    "cost": 0,
     "notes": "Has a 4 second cooldown on Trees.",
     "attrib": [
       {
@@ -6275,7 +6211,7 @@
       {
         "key": "bonus_damage",
         "header": "+",
-        "value": "25",
+        "value": "30",
         "footer": "Damage"
       },
       {
@@ -6373,7 +6309,6 @@
     "id": 212,
     "img": "/apps/dota2/images/dota_react/items/ring_of_aquila.png?t=1593393829403",
     "dname": "Ring of Aquila",
-    "qual": "rare",
     "cost": 0,
     "notes": "Multiple instances of Aquila Aura do not stack.",
     "attrib": [],
@@ -6454,7 +6389,7 @@
   },
   "glimmer_cape": {
     "hint": [
-      "Active: Glimmer After a 0.5 second delay, grants invisibility and 50% magic resistance to you or a target allied unit for 5 seconds.\n\nRange: 600\n\nCan be cast while channelling."
+      "Active: Glimmer After a 0.5 second delay, grants invisibility and 50% magic resistance to you or a target allied unit for 5 seconds.\n\nRange: 600\n\nCan be cast while channeling."
     ],
     "id": 254,
     "img": "/apps/dota2/images/dota_react/items/glimmer_cape.png?t=1593393829403",
@@ -6764,7 +6699,7 @@
   },
   "force_boots": {
     "hint": [
-      "Active: Force Dispels the user and pushes them 750 units in the direction they are facing.",
+      "Active: Force Dispels the user and pushes them 750 units in the direction they are facing.\n\nDispel Type: Basic Dispel ",
       "Passive: Speed Unlock Completely removes the speed limit for the wearer ",
       "Movement speed bonuses from multiple pairs of boots do not stack."
     ],
@@ -7112,7 +7047,7 @@
     "id": 304,
     "img": "/apps/dota2/images/dota_react/items/ironwood_tree.png?t=1593393829403",
     "dname": "Ironwood Tree",
-    "cost": 151,
+    "cost": 0,
     "notes": "",
     "attrib": [
       {
@@ -7379,7 +7314,7 @@
   },
   "flicker": {
     "hint": [
-      "Active: Flicker Dispells debuffs and blinks you in a random forward direction for a random distance between 200 and 600. If cast within 3 seconds of receving player damage, it will blink in place."
+      "Active: Flicker Dispells debuffs and blinks you in a random forward direction for a random distance between 200 and 600. If cast within 3 seconds of receiving player damage, it will blink in place.\n\nDispel Type: Basic Dispel "
     ],
     "id": 335,
     "img": "/apps/dota2/images/dota_react/items/flicker.png?t=1593393829403",
@@ -7404,7 +7339,7 @@
   },
   "spy_gadget": {
     "hint": [
-      "Passive: Prescient Aura Lowers Scan cooldown by 50% . Increases attack and cast range of allies in a 1200 unit radius."
+      "Passive: Prescient Aura Lowers Scan cooldown by 50% . Increases attack range (Ranged only) and cast range of allies in a 1200 unit radius."
     ],
     "id": 336,
     "img": "/apps/dota2/images/dota_react/items/spy_gadget.png?t=1593393829403",
@@ -7575,7 +7510,7 @@
     "img": "/apps/dota2/images/dota_react/items/trusty_shovel.png?t=1593393829403",
     "dname": "Trusty Shovel",
     "cost": 0,
-    "notes": "",
+    "notes": "16% chance for a Bounty Rune.\n28% chance each for a Flask, an Enchanted Mango, or an enemy kobold.\nThe same Trusty Shovel cannot find the same reward twice in a row.",
     "attrib": [],
     "mc": false,
     "cd": 50,
@@ -8693,7 +8628,8 @@
   },
   "book_of_shadows": {
     "hint": [
-      "Active: Shadows Target an enemy, ally or self. Causes the target to become untargetable but also silenced, muted and disarmed for 4 seconds. Applies a Basic Dispel."
+      "Active: Shadows Target an enemy, ally or self. Causes the target to become untargetable but also silenced, muted and disarmed for 4 seconds. Applies a Basic Dispel.",
+      "Dispel Type: Basic Dispel "
     ],
     "id": 677,
     "img": "/apps/dota2/images/dota_react/items/book_of_shadows.png?t=1593393829403",
@@ -8776,7 +8712,7 @@
   },
   "stormcrafter": {
     "hint": [
-      "Active: Whirlwind Cyclones your hero for 0.75 seconds. ",
+      "Active: Whirlwind Cyclones your hero for 0.75 seconds.\n\nDispel Type: Basic Dispel ",
       "Passive: Bottled Lightning  Zaps an enemy within 700 range, dealing 200 damage and a 40% slow for 0.3 seconds. Strikes every 3 seconds."
     ],
     "id": 585,
@@ -8945,7 +8881,7 @@
   },
   "heavy_blade": {
     "hint": [
-      "Active: Cleanse Purge Target Enemy or Ally.",
+      "Active: Cleanse Dispel Target Enemy or Ally.\n\nDispel Type: Basic Dispel ",
       "Passive: Subjugate Your attacks deal bonus damage equal to 4% of your target Max Mana."
     ],
     "id": 837,
@@ -9288,6 +9224,74 @@
     "created": false,
     "charges": false,
     "tier": 2
+  },
+  "ofrenda": {
+    "hint": [
+      "Active: Honor the Dead Place this Offering on an Altar to honor the dead with a memory from those they left behind."
+    ],
+    "id": 4300,
+    "img": "/apps/dota2/images/dota_react/items/ofrenda.png?t=1593393829403",
+    "dname": "Beloved Memory",
+    "cost": 0,
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": 3,
+    "lore": "Take joy in remembering those beloved who've passed now beyond the veil.",
+    "components": null,
+    "created": false,
+    "charges": false
+  },
+  "ofrenda_shovel": {
+    "hint": [
+      "Active: Dig Search the map for Offerings to the dead."
+    ],
+    "id": 4301,
+    "img": "/apps/dota2/images/dota_react/items/ofrenda_shovel.png?t=1593393829403",
+    "dname": "Scrying Shovel",
+    "cost": 0,
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": 8,
+    "lore": "You don't know where it came from, but it knows where you need to go. All you need to do is dig.",
+    "components": null,
+    "created": false,
+    "charges": false
+  },
+  "ofrenda_pledge": {
+    "hint": [
+      "Active: Undying Promise Signal to the spirits of the other realm your commitment to honoring them. If everyone in the battle makes an Undying Promise before the fight begins, the dead might be willing to listen."
+    ],
+    "id": 4302,
+    "img": "/apps/dota2/images/dota_react/items/ofrenda_pledge.png?t=1593393829403",
+    "dname": "Forebearer's Fortune",
+    "cost": 0,
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": false,
+    "lore": "This item seems unstable. Like it might just disappear.",
+    "components": null,
+    "created": false,
+    "charges": false
+  },
+  "muertas_gun": {
+    "hint": [
+      "Active: Dead Shot Fires a ghostly bullet at an enemy unit or tree. When the bullet strikes it will deal 300 damage and slow the target by -100% for 0.5 seconds, then ricochet in the vector-targeted direction. The ricochet will damage all units that it passes through, stopping when it hits a hero. Heroes hit by the ricochet will be feared for 2 seconds in the direction of the shot."
+    ],
+    "id": 1090,
+    "img": "/apps/dota2/images/dota_react/items/muertas_gun.png?t=1593393829403",
+    "dname": "Mercy & Grace",
+    "cost": 0,
+    "notes": "Feared enemies are phased and unslowable.\nThe ricochet will travel 1x Dead Shot's cast range.",
+    "attrib": [],
+    "mc": 160,
+    "cd": 10,
+    "lore": "One to deliver the body, the other to claim the soul.",
+    "components": null,
+    "created": false,
+    "charges": false
   },
   "diffusal_blade_2": {
     "id": 196,
