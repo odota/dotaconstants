@@ -19888,27 +19888,35 @@
       "<br>"
     ],
     "items": {
-      "misc": [
+      "blood_grenade": [
         "<span class=\\\"New\\\">New Item</span>",
         "New basic Consumable item. Cost: 65",
         "+50 Health",
         "Active: Throw Grenade. Throws a grenade at the target area. Enemies in the area will take 50 damage on impact, be slowed by 15% and take 15 damage per second. Duration: 5s. Radius: 300. Cast Range: 900. Cooldown: 10s. Health Cost: 75",
         "Active effects don't stack",
-        "Max stock of 3 (120s restock time)",
+        "Max stock of 3 (120s restock time)"
+      ],
+      "diadem": [
         "<span class=\\\"New\\\">New Item</span>",
         "New basic Attributes item. Cost: 1000",
-        "+6 All Attributes",
+        "+6 All Attributes"
+      ],
+      "cornucopia": [
         "<span class=\\\"New\\\">New Item</span>",
         "New basic Secret Shop item. Cost: 1200",
         "+5 Health Regen",
         "+2 Mana Regen",
-        "+7 Damage",
+        "+7 Damage"
+      ],
+      "pavise": [
         "<span class=\\\"New\\\">New Item</span>",
         "Requires Void Stone (700), Ring of Protection (175), Fluffy Hat (250), Recipe (275). Total Cost 1400",
         "+3 Armor",
         "+2.5 Mana Regen",
         "+175 Health",
-        "Active: Protect. When cast on an ally, grants them a barrier that absorbs 300 physical damage. Duration: 8s. Cooldown: 18s. Mana Cost: 75",
+        "Active: Protect. When cast on an ally, grants them a barrier that absorbs 300 physical damage. Duration: 8s. Cooldown: 18s. Mana Cost: 75"
+      ],
+      "disperser": [
         "<span class=\\\"New\\\">New Item</span>",
         "Requires Diffusal Blade (2500), Demon Edge (2200), Recipe (800). Total Cost 5700",
         "+20 Agility",
@@ -19916,42 +19924,7 @@
         "+45 Damage",
         "Passive: Manabreak. Each attack burns 40 mana and deals 1.0 damage per mana burned",
         "Active: Suppress. If targeting an enemy, slows it for 4 seconds. If targeting an ally, applies a basic dispel and increases their movement speed by 100%, making them unslowable for 4s. Cooldown: 15s. Mana Cost: 75",
-        "Active effect on both allies and enemies gradually fades away over the duration of the buff",
-        "<span class=\\\"New\\\">New Item</span>",
-        "Requires Diadem (1000), Point Booster (1200), Recipe (200). Total Cost 2400",
-        "+7 All Attributes",
-        "+200 Health",
-        "+200 Mana",
-        "Passive: Empower Spell. The next single target spell you cast on an enemy deals a separate 125 bonus damage to the target and slows them by 50% for 1.2 seconds. Cooldown: 6s",
-        "Passive effect doesn't proc on spells that don't give Magic Stick charges (such as Hand of Midas) and doesn't stack from multiple sources",
-        "Passive is applied when the spell connects with its target",
-        "<span class=\\\"New\\\">New Item</span>",
-        "New Tier 1 Neutral item",
-        "Passive: Courage. Provides +10 damage when the owner is above 50% health, and 5 armor when they are below that threshold",
-        "<span class=\\\"New\\\">New Item</span>",
-        "New Tier 1 Neutral item",
-        "Provides +10 Damage",
-        "Passive: Boldness. Grants +15 attack speed as long as there's no enemy heroes within 900 units",
-        "<span class=\\\"New\\\">New Item</span>",
-        "New Tier 2 Neutral item",
-        "Provides +20 Movement Speed",
-        "Passive: Sixth Sense. Automatically dodge the next attack from a hero. Cooldown: 5s",
-        "<span class=\\\"New\\\">New Item</span>",
-        "New Tier 3 Neutral item",
-        "+300 Mana, +25 Movement Speed",
-        "Passive: Magical Damage Block. Consumes a charge to block 300 magic damage from damage instances over 75 damage. Cooldown: 12s",
-        "<span class=\\\"New\\\">New Item</span>",
-        "New Tier 3 Neutral item",
-        "Provides +7 All Attributes and +5 Armor",
-        "Passive: Reciprocity When attacked, the hero counter-attacks a target within their attack range. Cooldown: 5s",
-        "<span class=\\\"New\\\">New Item</span>",
-        "New Tier 3 Neutral item",
-        "Provides +25 Attack Speed",
-        "Passive: Vengeance. Provides +30 damage if equipped hero is Silenced and +12 armor if equipped hero is Stunned",
-        "<span class=\\\"New\\\">New Item</span>",
-        "New Tier 4 Neutral item",
-        "+20% Magic Resistance",
-        "Active: Martyrdom. Redirects 20% of all damage dealt to allied heroes within 900 radius towards you for 8 seconds. Cooldown: 40s"
+        "Active effect on both allies and enemies gradually fades away over the duration of the buff"
       ],
       "harpoon": [
         "<span class=\\\"New\\\">New Item</span>",
@@ -19964,6 +19937,16 @@
         "+2 Mana Regen",
         "Active: Draw Forth. When targeting an enemy, fire an un-disjointable harpoon projectile at them, that pulls you and the target closer together. Ranged heroes pull the target up to 35% of the distance between them. Melee heroes always pull the target to their attack range. Enemy creeps are killed after the pull. Cast Range: 700. Cooldown: 19s",
         "Passive: Echo Strike. Causes melee attacks to attack twice in quick succession. The double attacks apply a 100% movement slow for 1 second on each strike"
+      ],
+      "phylactery": [
+        "<span class=\\\"New\\\">New Item</span>",
+        "Requires Diadem (1000), Point Booster (1200), Recipe (200). Total Cost 2400",
+        "+7 All Attributes",
+        "+200 Health",
+        "+200 Mana",
+        "Passive: Empower Spell. The next single target spell you cast on an enemy deals a separate 125 bonus damage to the target and slows them by 50% for 1.2 seconds. Cooldown: 6s",
+        "Passive effect doesn't proc on spells that don't give Magic Stick charges (such as Hand of Midas) and doesn't stack from multiple sources",
+        "Passive is applied when the spell connects with its target"
       ],
       "enchanted_mango": [
         "Now has an initial and max stock of 4 and a restock time of 120s"
@@ -20232,6 +20215,17 @@
       "trusty_shovel": [
         "Summoned Kobold is now controllable by the player that dug it up"
       ],
+      "spark_of_courage": [
+        "<span class=\\\"New\\\">New Item</span>",
+        "New Tier 1 Neutral item",
+        "Passive: Courage. Provides +10 damage when the owner is above 50% health, and 5 armor when they are below that threshold"
+      ],
+      "duelist_gloves": [
+        "<span class=\\\"New\\\">New Item</span>",
+        "New Tier 1 Neutral item",
+        "Provides +10 Damage",
+        "Passive: Boldness. Grants +15 attack speed as long as there's no enemy heroes within 900 units"
+      ],
       "misericorde": [
         "Item cycled out"
       ],
@@ -20259,6 +20253,12 @@
         "Item re-added",
         "Lifesteal against creeps is now reduced by 50%"
       ],
+      "gossamer_cape": [
+        "<span class=\\\"New\\\">New Item</span>",
+        "New Tier 2 Neutral item",
+        "Provides +20 Movement Speed",
+        "Passive: Sixth Sense. Automatically dodge the next attack from a hero. Cooldown: 5s"
+      ],
       "black_powder_bag": [
         "Item removed from the game"
       ],
@@ -20267,6 +20267,24 @@
       ],
       "enchanted_quiver": [
         "Now provides +50 Attack Range (ranged heroes only)"
+      ],
+      "dandelion_amulet": [
+        "<span class=\\\"New\\\">New Item</span>",
+        "New Tier 3 Neutral item",
+        "+300 Mana, +25 Movement Speed",
+        "Passive: Magical Damage Block. Consumes a charge to block 300 magic damage from damage instances over 75 damage. Cooldown: 12s"
+      ],
+      "defiant_shell": [
+        "<span class=\\\"New\\\">New Item</span>",
+        "New Tier 3 Neutral item",
+        "Provides +7 All Attributes and +5 Armor",
+        "Passive: Reciprocity When attacked, the hero counter-attacks a target within their attack range. Cooldown: 5s"
+      ],
+      "vindicators_axe": [
+        "<span class=\\\"New\\\">New Item</span>",
+        "New Tier 3 Neutral item",
+        "Provides +25 Attack Speed",
+        "Passive: Vengeance. Provides +30 damage if equipped hero is Silenced and +12 armor if equipped hero is Stunned"
       ],
       "flicker": [
         "Item removed from the game"
@@ -20287,6 +20305,12 @@
       "stormcrafter": [
         "Now provides +25 Movement Speed",
         "No longer has an active. Passive Bottled Lightning now hits up to 2 targets"
+      ],
+      "martyrs_plate": [
+        "<span class=\\\"New\\\">New Item</span>",
+        "New Tier 4 Neutral item",
+        "+20% Magic Resistance",
+        "Active: Martyrdom. Redirects 20% of all damage dealt to allied heroes within 900 radius towards you for 8 seconds. Cooldown: 40s"
       ],
       "apex": [
         "Now provides +25 to all attributes for Universal Heroes"
