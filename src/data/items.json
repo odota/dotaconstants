@@ -362,7 +362,7 @@
     "img": "/apps/dota2/images/dota_react/items/faerie_fire.png?t=1593393829403",
     "dname": "Faerie Fire",
     "qual": "consumable",
-    "cost": 70,
+    "cost": 65,
     "notes": "",
     "attrib": [
       {
@@ -846,7 +846,7 @@
   },
   "lifesteal": {
     "hint": [
-      "Passive: Lifesteal Heals the attacker for a percentage of attack damage dealt. Lifesteal from creeps is reduced by 50%."
+      "Passive: Lifesteal Heals the attacker for a percentage of attack damage dealt. Lifesteal from creeps is reduced by 40%."
     ],
     "id": 26,
     "img": "/apps/dota2/images/dota_react/items/lifesteal.png?t=1593393829403",
@@ -1367,7 +1367,7 @@
   },
   "ward_sentry": {
     "hint": [
-      "Use: Plant Plants a Sentry Ward, an invisible watcher that grants True Sight, the ability to see invisible enemy units and wards, to any existing allied vision within a 900 radius.\nLasts 7 minutes.\n\nDoes not grant ground vision.\nHold Control to give one Sentry Ward to an allied hero. Range: 500"
+      "Use: Plant Plants a Sentry Ward, an invisible watcher that grants True Sight, the ability to see invisible enemy units and wards, to any existing allied vision within a 1000 radius.\nLasts 7 minutes.\n\nDoes not grant ground vision.\nHold Control to give one Sentry Ward to an allied hero. Range: 500"
     ],
     "id": 43,
     "img": "/apps/dota2/images/dota_react/items/ward_sentry.png?t=1593393829403",
@@ -1707,7 +1707,7 @@
       {
         "key": "bonus_health_regen",
         "header": "+",
-        "value": "5.25",
+        "value": "4.75",
         "footer": "Health Regeneration"
       }
     ],
@@ -2027,28 +2027,15 @@
     "created": true,
     "charges": false
   },
-  "recipe_phylactery": {
-    "id": 1106,
-    "img": "/apps/dota2/images/dota_react/items/recipe.png?t=1593393829403",
-    "cost": 200,
-    "notes": "",
-    "attrib": [],
-    "mc": false,
-    "cd": false,
-    "lore": "",
-    "components": null,
-    "created": false,
-    "charges": false
-  },
   "phylactery": {
     "hint": [
-      "Passive: Empower Spell The next Unit Target spell you cast on an enemy deals a separate 125 bonus damage to the target, and slows them by 50% for 1.2s."
+      "Passive: Empower Spell The next Unit Target spell you cast on an enemy deals a separate 150 bonus damage to the target, and slows them by 50% for 1.5s."
     ],
     "id": 1107,
     "img": "/apps/dota2/images/dota_react/items/phylactery.png?t=1593393829403",
     "dname": "Phylactery",
     "qual": "common",
-    "cost": 2400,
+    "cost": 2375,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -2056,7 +2043,8 @@
     "lore": "",
     "components": [
       "point_booster",
-      "diadem"
+      "diadem",
+      "sobi_mask"
     ],
     "created": true,
     "charges": false
@@ -2462,7 +2450,7 @@
   },
   "vladmir": {
     "hint": [
-      "Passive: Vladmir's Aura Grants 20% lifesteal, 18% bonus damage, 1.75 mana regeneration, and 3 armor to nearby allies. Lifesteal from creeps is reduced by 50%.\n\nRadius: 1200"
+      "Passive: Vladmir's Aura Grants 20% lifesteal, 18% bonus damage, 1.75 mana regeneration, and 3 armor to nearby allies. Lifesteal from creeps is reduced by 40%.\n\nRadius: 1200"
     ],
     "id": 81,
     "img": "/apps/dota2/images/dota_react/items/vladmir.png?t=1593393829403",
@@ -2665,7 +2653,7 @@
     "cost": 3375,
     "notes": "Multiple instances of Barrier do not stack.\nStacks multiplicatively with other sources of magic resistance.",
     "attrib": [],
-    "mc": 100,
+    "mc": 150,
     "cd": 60,
     "lore": "A powerful artifact of mysterious origin, it creates barriers against magical forces.",
     "components": [
@@ -3132,7 +3120,7 @@
   },
   "hurricane_pike": {
     "hint": [
-      "Active: Hurricane Thrust Pushes you and target enemy 450 units away from each other, and for 6 seconds, allows you to make 5 attacks against the target without range restrictions and with +100 attack speed.\n\nWorks like Force Staff when used on self or allies.\nEnemy Range: 450",
+      "Active: Hurricane Thrust Pushes you and target enemy 450 units away from each other, and for 6 seconds, allows you to make 5 attacks against the target without range restrictions and with +100 attack speed.\n\nCan be cast on self or allies to push the target 600 units in the direction it is facing.\nEnemy Range: 450",
       "Passive:  Dragon's Reach  Increases attack range of ranged heroes."
     ],
     "id": 263,
@@ -3834,6 +3822,7 @@
   "recipe_lotus_orb": {
     "id": 221,
     "img": "/apps/dota2/images/dota_react/items/recipe.png?t=1593393829403",
+    "dname": "Lotus Orb Recipe",
     "cost": 250,
     "notes": "",
     "attrib": [],
@@ -4227,7 +4216,7 @@
   },
   "vanguard": {
     "hint": [
-      "Passive: Damage Block Grants a 60% chance to block 64 damage from incoming attacks on melee heroes, and 32 damage on ranged."
+      "Passive: Damage Block Grants a 60% chance to block 56 damage from incoming attacks on melee heroes, and 28 damage on ranged."
     ],
     "id": 125,
     "img": "/apps/dota2/images/dota_react/items/vanguard.png?t=1593393829403",
@@ -4245,7 +4234,7 @@
       {
         "key": "bonus_health_regen",
         "header": "+",
-        "value": "5.5",
+        "value": "4.75",
         "footer": "Health Regeneration"
       }
     ],
@@ -4263,7 +4252,7 @@
     "id": 243,
     "img": "/apps/dota2/images/dota_react/items/recipe.png?t=1593393829403",
     "dname": "Crimson Guard Recipe",
-    "cost": 925,
+    "cost": 1050,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -4275,17 +4264,17 @@
   },
   "crimson_guard": {
     "hint": [
-      "Active: Guard For 8 seconds, grant nearby allied heroes and buildings a 100% chance to block damage equal to 70 plus 60% of the casters Strength value from each incoming attack.\nUnits may only be affected by Guard once every 35 seconds.\n\nRadius: 1200",
+      "Active: Guard For 8 seconds, grant nearby allied heroes and buildings a 100% chance to block damage equal to 70 plus 50% of the casters Strength value from each incoming attack.\nUnits may only be affected by Guard once every 35 seconds.\n\nRadius: 1200",
       "Passive: Damage Block  Grants a 60% chance to block 75 damage from incoming attacks on melee heroes, and 50 damage on ranged."
     ],
     "id": 242,
     "img": "/apps/dota2/images/dota_react/items/crimson_guard.png?t=1593393829403",
     "dname": "Crimson Guard",
     "qual": "epic",
-    "cost": 3600,
+    "cost": 3725,
     "notes": "Multiple sources of damage block do not stack.",
     "attrib": [],
-    "mc": false,
+    "mc": 75,
     "cd": 35,
     "lore": "A cuirass originally built to protect against the dreaded Year Beast.",
     "components": [
@@ -5001,7 +4990,7 @@
   "satanic": {
     "hint": [
       "Active: Unholy Rage Increases Lifesteal percentage to 175% for 6 seconds. \n\nDispel Type: Basic Dispel ",
-      "Passive: Lifesteal Heals the attacker for a percentage of attack damage dealt. Lifesteal from creeps is reduced by 50%."
+      "Passive: Lifesteal Heals the attacker for a percentage of attack damage dealt. Lifesteal from creeps is reduced by 40%."
     ],
     "id": 156,
     "img": "/apps/dota2/images/dota_react/items/satanic.png?t=1593393829403",
@@ -5359,7 +5348,7 @@
   "mask_of_madness": {
     "hint": [
       "Active: Berserk Gives 110 attack speed and 30 movement speed, but reduces your armor by 8 and silences you. Lasts 6 seconds.",
-      "Passive: Lifesteal Heals the attacker for a percentage of attack damage dealt. Lifesteal from creeps is reduced by 50%."
+      "Passive: Lifesteal Heals the attacker for a percentage of attack damage dealt. Lifesteal from creeps is reduced by 40%."
     ],
     "id": 172,
     "img": "/apps/dota2/images/dota_react/items/mask_of_madness.png?t=1593393829403",
@@ -5501,7 +5490,7 @@
   },
   "soul_ring": {
     "hint": [
-      "Active: Sacrifice Consume %health_sacrifice% health to temporarily gain 150 mana.  Lasts 10 seconds.\n\nIf the mana gained cannot fit in your mana pool, it creates a buffer of mana that will be used before your mana pool."
+      "Active: Sacrifice Consume %abilityhealthcost% health to temporarily gain 150 mana.  Lasts 10 seconds.\n\nIf the mana gained cannot fit in your mana pool, it creates a buffer of mana that will be used before your mana pool."
     ],
     "id": 178,
     "img": "/apps/dota2/images/dota_react/items/soul_ring.png?t=1593393829403",
@@ -5779,7 +5768,7 @@
     "id": 930,
     "img": "/apps/dota2/images/dota_react/items/recipe.png?t=1593393829403",
     "dname": "Boots of Bearing Recipe",
-    "cost": 1500,
+    "cost": 1700,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -5798,7 +5787,7 @@
     "img": "/apps/dota2/images/dota_react/items/boots_of_bearing.png?t=1593393829403",
     "dname": "Boots of Bearing",
     "qual": "rare",
-    "cost": 4075,
+    "cost": 4275,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -7362,12 +7351,12 @@
       {
         "key": "bonus_primary_stat",
         "header": "+Main Vambrace Attribute",
-        "value": "10"
+        "value": "8"
       },
       {
         "key": "bonus_secondary_stat",
         "header": "+Other Attributes",
-        "value": "5"
+        "value": "4"
       }
     ],
     "mc": false,
@@ -7438,7 +7427,7 @@
   },
   "spark_of_courage": {
     "hint": [
-      "Passive: Courage Provides 10 damage when the hero is above 50% Health, and 5 armor when they are below that threshold."
+      "Passive: Courage Provides 18 damage when the hero is above 50% Health, and 7 armor when they are below that threshold."
     ],
     "id": 1124,
     "img": "/apps/dota2/images/dota_react/items/spark_of_courage.png?t=1593393829403",
@@ -7480,7 +7469,7 @@
     "notes": "16% chance for a Bounty Rune.\n28% chance each for a Flask, an Enchanted Mango, or a kobold.\nThe same Trusty Shovel cannot find the same reward twice in a row.",
     "attrib": [],
     "mc": false,
-    "cd": 50,
+    "cd": 40,
     "lore": "Former plaything of a young deity, received as a gift from his uncle.",
     "components": null,
     "created": false,
@@ -7521,7 +7510,7 @@
   },
   "dragon_scale": {
     "hint": [
-      "Passive: Afterburn Causes attacks to burn the enemy, dealing 18 damage per second for 3 seconds. Affects buildings."
+      "Passive: Afterburn Causes attacks to burn the enemy, dealing 22 damage per second for 3 seconds. Affects buildings."
     ],
     "id": 358,
     "img": "/apps/dota2/images/dota_react/items/dragon_scale.png?t=1593393829403",
@@ -7681,7 +7670,7 @@
   },
   "havoc_hammer": {
     "hint": [
-      "Active: Havoc Knocks back enemies in 400 range around you, slowing them by 50% for 3 seconds and dealing 175 + 1x your str as magical damage."
+      "Active: Havoc Knocks back enemies in 400 range around you, slowing them by 50% for 3 seconds and dealing 175 + 1.5x your str as magical damage."
     ],
     "id": 364,
     "img": "/apps/dota2/images/dota_react/items/havoc_hammer.png?t=1593393829403",
@@ -7692,13 +7681,13 @@
       {
         "key": "bonus_damage",
         "header": "+",
-        "value": "14",
+        "value": "16",
         "footer": "Damage"
       },
       {
         "key": "bonus_strength",
         "header": "+",
-        "value": "14",
+        "value": "16",
         "footer": "Strength"
       }
     ],
@@ -7850,20 +7839,6 @@
     "charges": false,
     "tier": 5
   },
-  "recipe_fallen_sky": {
-    "id": 317,
-    "img": "/apps/dota2/images/dota_react/items/recipe.png?t=1593393829403",
-    "dname": "Recipe: Fallen Sky",
-    "cost": 1,
-    "notes": "",
-    "attrib": [],
-    "mc": false,
-    "cd": false,
-    "lore": "",
-    "components": null,
-    "created": false,
-    "charges": false
-  },
   "fallen_sky": {
     "hint": [
       "Active: Fallen Sky Transform into a meteor that strikes down at the target area after 1 seconds in a 315 AoE, stunning enemies for 1.6 seconds and dealing impact damage. Continues to deal damage every 1 seconds to enemy units and buildings for 6 seconds.\n\nBuilding Impact Damage: 75 \nBuilding Over Time Damage: 60 \n\nNon-Building Impact Damage: 150 \nNon-Building Over Time Damage: 60\n\n Range: 1200"
@@ -7871,18 +7846,14 @@
     "id": 371,
     "img": "/apps/dota2/images/dota_react/items/fallen_sky.png?t=1593393829403",
     "dname": "Fallen Sky",
-    "cost": 4751,
+    "cost": 0,
     "notes": "",
     "attrib": [],
     "mc": false,
     "cd": 15,
     "lore": "One of the few surviving creations of the acolytes of the Wyrmforge.",
-    "components": [
-      "blink",
-      "meteor_hammer",
-      ""
-    ],
-    "created": true,
+    "components": null,
+    "created": false,
     "charges": false,
     "tier": 5
   },
@@ -7956,7 +7927,7 @@
       {
         "key": "bonus_mana",
         "header": "+",
-        "value": "200",
+        "value": "125",
         "footer": "Mana"
       },
       {
@@ -8679,7 +8650,7 @@
   },
   "stormcrafter": {
     "hint": [
-      "Passive: Bottled Lightning Zaps 2 enemy targets within 700 range, dealing 200 damage and a 40% slow for 0.3 seconds. Strikes every 3 seconds."
+      "Passive: Bottled Lightning Zaps 2 enemy targets within 700 range, dealing 200 damage and a 40% slow for 0.4 seconds. Strikes every 3 seconds."
     ],
     "id": 585,
     "img": "/apps/dota2/images/dota_react/items/stormcrafter.png?t=1593393829403",
@@ -8762,7 +8733,7 @@
   },
   "ascetic_cap": {
     "hint": [
-      "Passive: Endurance Whenever a debuff would be applied to the owner, grant 40% Status resistance for 3 seconds."
+      "Passive: Endurance Whenever a debuff would be applied to the owner, grant 40% Status resistance for 5 seconds."
     ],
     "id": 825,
     "img": "/apps/dota2/images/dota_react/items/ascetic_cap.png?t=1593393829403",
@@ -8771,7 +8742,7 @@
     "notes": "",
     "attrib": [],
     "mc": false,
-    "cd": 30,
+    "cd": 25,
     "lore": "An austere hat thought to be of Turstarkuri origin.",
     "components": null,
     "created": false,
@@ -8931,7 +8902,7 @@
   },
   "seeds_of_serenity": {
     "hint": [
-      "Active: Verdurous Dale  Target the ground with a 350 radius. Provides +10 health regeneration to all allied units while they are in the area of effect. Lasts 14 seconds."
+      "Active: Verdurous Dale  Target the ground with a 400 radius. Provides +10 health regeneration to all allied units while they are in the area of effect. Lasts 14 seconds."
     ],
     "id": 945,
     "img": "/apps/dota2/images/dota_react/items/seeds_of_serenity.png?t=1593393829403",
@@ -8940,7 +8911,7 @@
     "notes": "",
     "attrib": [],
     "mc": false,
-    "cd": 40,
+    "cd": 35,
     "lore": "An evergreen sprout treasured by the woodkin and highly coveted by interlopers and their like.",
     "components": null,
     "created": false,
@@ -8998,7 +8969,7 @@
   },
   "ogre_seal_totem": {
     "hint": [
-      "Active: Ogre Seal Flop Flop forward like an ogre seal 2 times, dealing 150 damage and slowing enemies in a 225 radius by -100% for 1 second on each bounce. 400 bounce distance. "
+      "Active: Ogre Seal Flop Flop forward like an ogre seal 2 times, dealing 150 damage and slowing enemies in a 275 radius by -100% for 1.5 second on each bounce. 400 bounce distance. "
     ],
     "id": 949,
     "img": "/apps/dota2/images/dota_react/items/ogre_seal_totem.png?t=1593393829403",
@@ -9043,6 +9014,7 @@
   "recipe_harpoon": {
     "id": 1101,
     "img": "/apps/dota2/images/dota_react/items/recipe.png?t=1593393829403",
+    "dname": "Harpoon Recipe",
     "cost": 1000,
     "notes": "",
     "attrib": [],
@@ -9174,7 +9146,7 @@
   },
   "specialists_array": {
     "hint": [
-      "Passive: Crackshot Ranged Only. The next attack fires projectiles at 2 additional targets within attack range. Does not trigger attack modifiers."
+      "Passive: Crackshot Ranged Only. The next attack fires projectiles that deal 20 bonus damage at 2 additional targets within attack range plus a 225 range bonus. Does not trigger attack modifiers."
     ],
     "id": 1076,
     "img": "/apps/dota2/images/dota_react/items/specialists_array.png?t=1593393829403",
@@ -9362,7 +9334,7 @@
   },
   "vindicators_axe": {
     "hint": [
-      "Passive: Vengeance Provides 30 damage if equipped hero is Silenced and 15 armor if equipped hero is Stunned."
+      "Passive: Vengeance Provides 30 damage if equipped hero is Silenced and 20 armor if equipped hero is Stunned."
     ],
     "id": 2096,
     "img": "/apps/dota2/images/dota_react/items/vindicators_axe.png?t=1593393829403",
@@ -9380,7 +9352,7 @@
   },
   "duelist_gloves": {
     "hint": [
-      "Passive: Boldness Grants 15 attack speed as long as there are enemy heroes within 900 units."
+      "Passive: Boldness Grants 20 attack speed as long as there are enemy heroes within 1200 units."
     ],
     "id": 2097,
     "img": "/apps/dota2/images/dota_react/items/duelist_gloves.png?t=1593393829403",
@@ -9494,7 +9466,7 @@
     "notes": "",
     "attrib": [],
     "mc": false,
-    "cd": 5,
+    "cd": 4,
     "lore": "",
     "components": null,
     "created": false,
