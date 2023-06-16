@@ -1,0 +1,12 @@
+{
+  "include": ["./src/index.ts", "./types"],
+  "compilerOptions": {
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "outDir": "./dist",
+    "typeRoots": ["./node_modules/@types", "./types"],
+  },
+  "exclude": ["node_modules"]
+}

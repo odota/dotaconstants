@@ -19762,6 +19762,7 @@
       "Outposts no longer provide vision or True Sight around them",
       "<br>",
       "Added 8 Watchers to the map. Inactive Watchers can be right-clicked by any hero and channeled for 1.5s in order to turn them on. When on, Watcher grants 800 radius vision over its area for 7 minutes after which it deactivates and becomes neutral again. A hero from the opposing team can channel an active Watcher for 1.5s to destroy it. Watchers respawn 2 minutes after being destroyed",
+      "When Roshan is killed, all Watchers (including the destroyed ones) are automatically captured for the killer's team",
       "Watchers are located in the center of each main jungle, next to each Roshan pit, in the center of each triangle near the Secret Shop and by each Tormentor",
       "<br>",
       "Added 2 Lotus Pools on the edges of the map near the river. Every 3 minutes each Lotus Pool spawns 1 Healing Lotus, up to a total of 6 available at a time. Lotus Pools can be channeled to grant 1 Healing Lotus per second. Healing Lotus is a stackable consumable that replenishes 125 HP and 125 Mana on use. Healing Lotus use cooldown: 5s",
@@ -19834,7 +19835,7 @@
       "Example 3: Your BKB is active. Silencer attacks you with Glaives of Wisdom (pure, doesn't pierce Debuff Immunity). You won't take any pure damage.",
       "Example 4: Your BKB is active. Bane casts Fiend's Grip (pure, pierces immunity) on you. You will be stunned and will take 100% of the pure damage.",
       "Example 5: Your BKB is active but expires in 1s. Someone used Orchid Malevolence (doesn't pierce immunity) on you. You won't be silenced for that 1 second, but you will be silenced as soon as Avatar expires.",
-      "Example 6: Your BKB is active and you're using TP. Vengeful Spirit casts Magic Missile (magical, doesn't pierce immunity). You won't be stunned or interrupted but will still take damage. It will be reduced by your Magic Resistance which is increased by BKB.",
+      "Example 6: Your BKB is active and you're using TP. Crystal Maiden casts Frostbite (magical, doesn't pierce immunity) on you. You won't be rooted or interrupted unless the Avatar expires before the Frostbite debuff.",
       "<br>",
       "<span class=\\\"Subtitle\\\">Other</span>",
       "Changed Gold bounty for lane creeps:",
@@ -20064,9 +20065,12 @@
         "Guard Blocked Damage rescaled from 75 to 70 + 60% of caster's Strength",
         "Guard Duration decreased from 12s to 8s"
       ],
+      "assault": [
+        "Assault Aura now pierces Debuff Immunity"
+      ],
       "dagon": [
         "Recipe changed. Now requires Diadem (1000), Voodoo Mask (700), Recipe (1150). (Total cost rescaled from 2700/3950/5200/6450/7700 to 2850/4000/5150/6300/7450)",
-        "+7/9/11/13/15 Intelligence replaced with +7/9/11/13/15 All Attributes",
+        "+14/16/18/20/22 Intelligence and +6/8/10/12/14 Strength/Agility replaced with +7/9/11/13/15 All Attributes",
         "Now also provides +11/12/13/14/15% Spell Lifesteal",
         "Energy Burst now spell lifesteals 75% of damage done",
         "Energy Burst now instantly kills non-Ancient creeps"
@@ -20075,7 +20079,7 @@
         "Strength bonus decreased from +12 to +10"
       ],
       "ethereal_blade": [
-        "Ether Blast will use 60% of the total sum of the target's attributes as their primary attribute when targeting Universal Heroes."
+        "When targeting Universal Heroes, Ether Blast now uses 60% of the total sum of the target's attributes as their primary attribute"
       ],
       "cyclone": [
         "Recipe cost increased from 650 to 775 (Total cost unchanged)"
@@ -20111,9 +20115,9 @@
       ],
       "holy_locket": [
         "Recipe Changed. Now requires Diadem (1000), Magic Wand (450), Headdress (425), Recipe (525) (total cost unchanged)",
-        "No longer provides Bonus Health",
-        "No longer provides Bonus Mana",
-        "Bonus Attributes increased from +3 to +10",
+        "No longer provides Health bonus",
+        "No longer provides Mana bonus",
+        "All Attributes bonus increased from +3 to +10",
         "Energy Charge now has a visual effect when used on allies"
       ],
       "sphere": [
@@ -20233,13 +20237,13 @@
         "Item cycled out"
       ],
       "nether_shawl": [
-        "Item removed from the game"
+        "Item cycled out"
       ],
       "pupils_gift": [
         "Now provides half the value to All Attributes for Universal Heroes"
       ],
       "philosophers_stone": [
-        "GPM bonus reduced from 80 to 75"
+        "GPM bonus decreased from 80 to 75"
       ],
       "orb_of_destruction": [
         "Item re-added and moved from Tier 3 to Tier 2",
@@ -20260,7 +20264,7 @@
         "Passive: Sixth Sense. Automatically dodge the next attack from a hero. Cooldown: 5s"
       ],
       "black_powder_bag": [
-        "Item removed from the game"
+        "Item cycled out"
       ],
       "ceremonial_robe": [
         "Mana bonus increased from 250 to 350"
@@ -20272,7 +20276,7 @@
         "<span class=\\\"New\\\">New Item</span>",
         "New Tier 3 Neutral item",
         "+300 Mana, +25 Movement Speed",
-        "Passive: Magical Damage Block. Consumes a charge to block 300 magic damage from damage instances over 75 damage. Cooldown: 12s"
+        "Passive: Magical Damage Block. Blocks 300 magic damage from damage instances over 75 damage. Cooldown: 12s"
       ],
       "defiant_shell": [
         "<span class=\\\"New\\\">New Item</span>",
@@ -20284,13 +20288,13 @@
         "<span class=\\\"New\\\">New Item</span>",
         "New Tier 3 Neutral item",
         "Provides +25 Attack Speed",
-        "Passive: Vengeance. Provides +30 damage if equipped hero is Silenced and +12 armor if equipped hero is Stunned"
+        "Passive: Vengeance. Provides +30 damage if equipped hero is Silenced and +15 armor if equipped hero is Stunned"
       ],
       "flicker": [
-        "Item removed from the game"
+        "Item cycled out"
       ],
       "heavy_blade": [
-        "Item removed from the game"
+        "Item cycled out"
       ],
       "havoc_hammer": [
         "Damage bonus increased from 12 to 14",
@@ -20446,7 +20450,7 @@
         "The upheaval has attuned Arc Warden to the Ancients. When playing on Dire side, Arc Warden will have the Tempest abilities by default and his Tempest Double will have its normal abilities. This condition is temporary and will go away once Zet adapts to the new paradigm.",
         "Tempest version provides higher damage (15/30/45/60 -> 20/45/70/95) but lower movement speed penalty to the enemy (14/21/28/35% -> 6/10/14/18%)",
         "Tempest version provides +150 attack range (ranged heroes only), adds 20/40/60/80 magic damage to attacks made by allies from the field and has an increased duration of 5/6/7/8s",
-        "Tempest version has a shorter activation delay (2s -> 1s), a faster moving Wraith (400 -> 725), longer Slow duration (0.4/0.5/0.6/0.7 -> 0.6/0.8/1.0/1.2 ) but has a lower damage (100/180/260/340 -> 75/135/195/255)",
+        "Tempest version has a shorter activation delay (2s -> 1s), a faster moving Wraith (400 -> 725), longer slow duration (0.4/0.5/0.6/0.7 -> 0.6/0.8/1.0/1.2 ) but has a lower damage (100/180/260/340 -> 75/135/195/255)",
         "Cooldown decreased from 60/50/40s to 56/48/40s",
         "Level 15 Talent +40 Magnetic Field Attack Speed also grants to +40 Magnetic Field Magic Damage (Tempest Version)",
         "Level 20 Talent +40 Flux Damage replaced with -9s Magnetic Field Cooldown",
@@ -20470,7 +20474,6 @@
         "Attack Damage Reduction increased from 45/50/55/60% to 55/60/65/70%",
         "Mana Cost increased from 40/50/60/70 to 120/135/150/165",
         "Duration rescaled from 8/9/10/11s to 9s",
-        "Now pierces Debuff Immunity",
         "No longer deals damage",
         "Duration decreased from 4/5/6/7s to 3.5/4.5/5.5/6.5s ",
         "Duration decreased as a part of the comprehensive Disables Reduction",
@@ -20716,7 +20719,6 @@
       "death_prophet": [
         "Aghanim's Shard Fear Duration decreased from 1.5s to 1.2s ",
         "Duration decreased as a part of the comprehensive Disables Reduction",
-        "Spirits now deal more damage the closer Death Prophet is to the target, and need to return back to her in order to attack again",
         "Level 20 Talent Spirit Siphon Move Speed Slow increased from 20% to 25%",
         "Level 25 Talent Spirit Siphon Replenish Time improved from -20s to -22s"
       ],
@@ -20750,9 +20752,9 @@
       ],
       "drow_ranger": [
         "Hypothermia effect is now granted by Aghanim's Scepter instead of Aghanim's Shard",
-        "Hypothermia Bonus Damage per stack increased from 5 to 15. Max Stacks increased from 7 to 9. Regen Reduction per stack increased from 8 to 10",
+        "Hypothermia Bonus Damage per stack increased from 5 to 15. Max Stacks increased from 7 to 9. Regen Reduction per stack increased from 8% to 10%",
         "New ability granted by Aghanim's Shard",
-        "Drow Ranger creates a hill of ice beneath her, pushing enemies away from it. Any unit that stands on the hill gains 175 bonus attack range and high ground advantage - they cannot miss and gain flying vision. The front of the hill obscures vision and cannot be moved through. Duration: 8s. Mana Cost: 75. Cooldown: 25s"
+        "Drow Ranger creates a hill of ice beneath her. While standing on the hill, attackers gain bonus attack range and high ground advantage - they cannot miss and gain flying vision. Drow Ranger additionally gets 1 bonus Multishot arrow per wave while on the hill. The front of the hill obscures vision and cannot be moved through. Duration: 8s. Mana Cost: 75. Cooldown: 25s"
       ],
       "earth_spirit": [
         "Aghanim's Shard Upgrade removed",
@@ -20908,8 +20910,6 @@
         "Now an area of effect ability centered around the hero",
         "No longer increases movement speed. Instead provides flat 65/90/115/140 attack speed bonus that doesn't require the ability to hit any enemies",
         "Radius increased from 330/340/350/360 to 600",
-        "Now automatically triggered upon the Duel cast if not on cooldown ",
-        "Does not consume any mana when cast automatically",
         "Can now be cast during the Duel",
         "Aghanim's Shard Duration decreased from 15s to 8s",
         "No longer increases attack speed. Instead provides 10/14/18/22% movement speed bonus",
@@ -21005,7 +21005,7 @@
         "Now granted by Aghanim's Scepter",
         "Now stuns for 0.75s instead of slowing",
         "Damage increased from 200 to 275",
-        "Level 15 Talent +16 Strength per hero hit with Reverse Polarity replaced with +5 all stats per hero hit with Reverse Polarity",
+        "Level 15 Talent +16 Strength per hero hit with Reverse Polarity replaced with +5 All Stats per hero hit with Reverse Polarity",
         "Level 25 Talent Reverse Polarity Stun Duration decreased from +1s to +0.8s"
       ],
       "marci": [
@@ -21091,7 +21091,7 @@
         "Now grants bonus Strength (same values as Attribute Shift before)",
         "Stun Max decreased from 1.5/2/2.5/3s to 1.2/1.6/2/2.4s ",
         "Duration decreased as a part of the comprehensive Disables Reduction",
-        "Aghanim's Scepter effect now steals an additional 20% of all stats when targeting Universal Heroes.",
+        "Aghanim's Scepter effect now steals an additional 20% of all stats when targeting Universal Heroes",
         "Level 20 Talent Adaptive Strike Stun Duration decreased from +1s to +0.8s"
       ],
       "muerta": [
@@ -21332,7 +21332,7 @@
         "Duration decreased as a part of the comprehensive Disables Reduction",
         "Cooldown decreased from 13s to 12s",
         "Mana Cost decreased from 140/150/160/170 to 125/140/155/170",
-        "Duration decreased from 2.75/3.5/4.25/5 to 2.4/3.0/3.6/4.2 ",
+        "Duration decreased from 2.75/3.5/4.25/5s to 2.4/3.0/3.6/4.2s ",
         "Duration decreased as a part of the comprehensive Disables Reduction",
         "Aghanim's Scepter no longer increases Serpent Wards' attack range",
         "Level 10 Talent Hex Cooldown reduction decreased from 3s to 2s",
@@ -21459,7 +21459,7 @@
         "Now upgradable by Aghanim's Scepter",
         "Can be activated to gain max stacks and 200 HP barrier. This barrier gains 100HP/s and increases by 75 HP per second for each enemy hero within 600 radius of Timbersaw up to a maximum of 800. Doesn't count illusions. After 8 seconds, Timbersaw loses the barrier and deals damage to every hero within 600 radius equal to 200 + the remaining barrier HP",
         "Aghanim's Scepter Upgrade removed",
-        "Whirling Death Makes Universal Heroes lose 5% of each attribute",
+        "Whirling Death now makes Universal Heroes lose 5% of each attribute",
         "Level 20 Talent +16 Strength replaced with +20% Magic Resistance",
         "Level 25 Talent +12% Whirling Death Attribute Reduction replaced with Second Chakram"
       ],
@@ -21635,6 +21635,643 @@
         "Level 20 Talent Lightning Bolt Ministun decreased from +0.4s to +0.3s",
         "Level 20 Talent +100 Thundergod's Wrath Damage replaced with +4% Arc Lightning Current Health as Damage",
         "Level 25 Talent +100 Arc Lightning Damage replaced with +150 Thundergod's Wrath Damage"
+      ]
+    }
+  },
+  "7_33b": {
+    "general": [
+      "Increased channel time for Twin Gates by 1 second",
+      "Tormentors' Reflect doesn't count illusions when dividing up damage. Illusions still take damage, but do not reduce the amount of damage taken by other units in the area.",
+      "Tormentors' Unyielding Shield base barrier amount now increases by 200 every time they respawn",
+      "Night Bonus Movement Speed is now also disabled when a hero damages an enemy controlled unit"
+    ],
+    "items": {
+      "blood_grenade": [
+        "Now can be stacked in a single inventory slot up to 3 times"
+      ],
+      "travel_boots": [
+        "Town Portal Scroll Cooldown increased from 30s to 40s (same as regular Boots of Travel)"
+      ],
+      "crimson_guard": [
+        "Guard Strength to blocked damage decreased from 60% to 50%"
+      ],
+      "disperser": [
+        "Self- or Ally targeted Suppress can now be dispelled by enemies"
+      ],
+      "phylactery": [
+        "Recipe Changed: Recipe (200) replaced with Sage's Mask (175), Total Cost decreased from 2400 to 2375",
+        "Now provides +0.7 Mana Regen",
+        "Empower Spell Bonus Damage increased from 125 to 150",
+        "Empower Spell Slow Duration increased from 1.2s to 1.5s"
+      ],
+      "faded_broach": [
+        "Mana bonus decreased from +200 to +125"
+      ],
+      "seeds_of_serenity": [
+        "Verdurous Dale Radius increased from 350 to 400",
+        "Verdurous Dale Cooldown decreased from 40s to 35s"
+      ],
+      "eye_of_the_vizier": [
+        "Now provides +0.5 Mana Regen"
+      ],
+      "specialists_array": [
+        "Damage bonus increased from +10 to +12",
+        "Crackshot now has a bonus 225 range search radius for secondary targets"
+      ],
+      "ogre_seal_totem": [
+        "Ogre Seal Flop Slow Duration increased from 1s to 1.5s",
+        "Ogre Seal Flop Radius increased from 225 to 275"
+      ],
+      "vindicators_axe": [
+        "Attack Speed bonus increased from +25 to +30",
+        "Vengeance Armor bonus when the hero is stunned increased from 15 to 20"
+      ],
+      "ascetic_cap": [
+        "Endurance Cooldown decreased from 30s to 25s",
+        "Endurance Duration increased from 3s to 4s"
+      ],
+      "havoc_hammer": [
+        "Strength bonus increased from +14 to +16",
+        "Damage bonus increased from +14 to +16"
+      ],
+      "stormcrafter": [
+        "Movement Speed bonus increased from +25 to +30",
+        "Bottled Lightning Slow Duration increased from 0.3s to 0.4s"
+      ],
+      "spy_gadget": [
+        "Attack and Cast Range bonus increased from +100 to +125"
+      ]
+    },
+    "heroes": {
+      "misc": [
+        "If you already have a neutral token or an item for the tier, newly dropped tokens of this tier are automatically teleported to the neutral item stash",
+        "You can now convert neutral item tokens that are in your stash",
+        "Granite Aura Bonus HP Percentage decreased from 15/16.5/18/21% to 15/16/17/19%",
+        "Cloak Aura Magic Resistance (Heroes) decreased from 15/17/19/23% to 10/12/14/16%",
+        "Cloak Aura Magic Resistance (Creeps) decreased from 30/34/38/46% to 20/24/28/32%",
+        "Speed Aura Movespeed reduced from 12/15/18/24% to 12/13/14/16%",
+        "Ice Armor Armor Bonus decreased from 5/6/7/9 to 4/5/6/8",
+        "Ice Armor Move Slow decreased from 25/28/31/37% to 22/24/26/30%",
+        "Ice Armor Attack Slow decreased from 25/28/31/37 to 22/24/26/30"
+      ],
+      "alchemist": [
+        "Base Movement Speed reduced from 305 to 300",
+        "Radius decreased from 475/525/575/625 to 400/475/550/625",
+        "Armor reduction reduced from 4/5/6/7 to 3/4/5/6"
+      ],
+      "ancient_apparition": [
+        "Cooldown increased from 12/11/10/9s to 15/13/11/9s"
+      ],
+      "batrider": [
+        "Strength gain increased from 2.0 to 2.2",
+        "No longer amplifies the damage of Blood Grenade",
+        "Damage per second increased from 25/50/75/100 to 30/60/90/120",
+        "Mana Cost decreased from 125 to 100",
+        "Mana Cost decreased from 150/175/200 to 125/150/175"
+      ],
+      "beastmaster": [
+        "Base Strength increased from 23 to 25",
+        "Mana Cost decreased from 60/65/70/75 to 60"
+      ],
+      "bristleback": [
+        "Damage Threshold increased from 200 to 225",
+        "Max Stacks increased from 6/8/10 to 8/10/12",
+        "Damage per stack decreased from 20/25/30 to 15/20/25",
+        "Movement Speed per stack decreased from 3/4/5% to 2/3/4%"
+      ],
+      "broodmother": [
+        "Base Damage increased by 3",
+        "Base Attack Range increased from 150 to 175",
+        "Strength gain increased from 2.0 to 2.3",
+        "Base Attack Damage Bonus increased from 30/40/50/60% to 40/50/60/70%",
+        "Radius increased from 900 to 1200",
+        "Mana Cost decreased from 120 to 100"
+      ],
+      "chen": [
+        "Base Strength decreased from 25 to 23",
+        "Bonus Attack Speed decreased from 25/50/75/100 to 20/40/60/80"
+      ],
+      "clinkz": [
+        "Base Agility increased from 22 to 25",
+        "Base Intelligence increased from 18 to 21",
+        "Projectile Speed increased from 1500 to 2000",
+        "Radius increased from 275 to 325",
+        "Bonus Health increased from 125/200/275/350 to 175/250/325/400"
+      ],
+      "rattletrap": [
+        "Base Strength increased from 26 to 27",
+        "Mana Cost decreased from 80 to 70",
+        "Level 10 Talent Power Cogs Cooldown Reduction increased from 2s to 3s"
+      ],
+      "dark_seer": [
+        "Cooldown increased from 18/15/12/9s to 21/17/13/9s"
+      ],
+      "dazzle": [
+        "Base Mana Regen increased by 0.3",
+        "Mana Cost decreased from 120/130/140/150 to 100/110/120/130"
+      ],
+      "enigma": [
+        "Mana Cost decreased from 100/120/140/160 to 100/110/120/130",
+        "Level 15 Talent Malefice Instance Damage increased from +30 to +35"
+      ],
+      "legion_commander": [
+        "Cooldown increased from 50s to 60/55/50s",
+        "Level 15 Talent +75 Overwhelming Odds Damage reduced to +60",
+        "Level 15 Talent +40 Press the Attack HP Regen reduced to +30"
+      ],
+      "magnataur": [
+        "Strength gain increased from 3.0 to 3.1",
+        "Agility gain increased from 1.9 to 2.0",
+        "Level 15 Talent All Stats per hero hit with Reverse Polarity increased from +5 to +6"
+      ],
+      "marci": [
+        "Strength gain increased from 3.0 to 3.2",
+        "Mana Cost decreased from 90 to 75/80/85/90",
+        "Level 20 Talent Rebound Stun Duration increased from +0.5s to +0.75s"
+      ],
+      "medusa": [
+        "Base Intelligence increased from 23 to 27",
+        "Outgoing Damage increased from 45/55/65/75% to 55/65/75/85%",
+        "Main Gain increased from 11/14/17/20% to 16/18/20/22%",
+        "Damage Per Mana increased from 2/2.3/2.6/2.9/3.2 to 2/2.5/3/3.5/4",
+        "Illusions now benefit from Mana Shield"
+      ],
+      "meepo": [
+        "No longer pulls Meepos out of Duel Black Hole and Chronosphere"
+      ],
+      "muerta": [
+        "Base Agility decreased from 22 to 20",
+        "Agility gain decreased from 3.0 to 2.7"
+      ],
+      "pangolier": [
+        "Base Strength increased from 17 to 19",
+        "Mana Cost decreased from 75/80/85/90 to 75",
+        "Mana Cost decreased from 100/150/200 to 100/125/150"
+      ],
+      "phantom_lancer": [
+        "Base Movement Speed decreased by 5",
+        "Agility gain decreased from 3.2 to 2.8",
+        "Damage decreased from 100/160/220/280 to 70/140/210/280",
+        "Cooldown increased from 19/16/13/10s to 22/18/14/10s"
+      ],
+      "omniknight": [
+        "Base Strength bonus decreased from 8/16/24/32 to 7/14/21/28"
+      ],
+      "oracle": [
+        "Mana Cost increased from 50 to 80/90/100/110",
+        "Heal Amplification decreased from 25% to 20%",
+        "Level 15 Talent Purifying Flames Cooldown Reduction decreased from 1.25s to 1s"
+      ],
+      "riki": [
+        "Aghanim's Shard Armor Reduction decreased from 7 to 6",
+        "Slow Duration rescaled from 0.2/0.4/0.6/0.8s to 0.4s",
+        "Backstab Agility Damage Multiplier decreased from 1.4/1.8/2.2 to 1.2/1.6/2.0",
+        "Tormentors are now immune to being backstabbed",
+        "Level 10 Talent Smoke Screen Radius decreased from +60 to +50",
+        "Level 15 Talent Smoke Screen Cooldown Reduction decreased from 4s to 3s",
+        "Level 15 Talent Tricks of the Trade Agility Increase decreased from +50% to +40%",
+        "Level 20 Talent Backstab Multiplier decreased from +0.5 to +0.4"
+      ],
+      "silencer": [
+        "Radius rescaled from 340/360/380/400 to 350"
+      ],
+      "snapfire": [
+        "Base Strength increased from 20 to 21",
+        "Mana Cost decreased from 100 to 85/90/95/100"
+      ],
+      "spirit_breaker": [
+        "Charge Bonus Speed increased from 300/325/350/375 to 325/350/375/400",
+        "Bonus Damage increased from 125/200/275 to 150/225/300",
+        "Level 20 Talent Greater Bash Chance increased from +13% to +17%"
+      ],
+      "shredder": [
+        "Strength gain increased from 2.9 to 3.2",
+        "Agility gain increased from 1.0 to 1.3"
+      ],
+      "abyssal_underlord": [
+        "Damage Reduction rescaled from 5/15/25/35% to 6/14/22/30%",
+        "Channel Time increased from 3s to 3.5s"
+      ],
+      "vengefulspirit": [
+        "Base Strength increased from 19 + 2.0 to 20 + 2.1",
+        "Base Agility increased from 20 + 2.0 to 21 + 2.1",
+        "Mana Cost decreased from 100/110/120/130 to 90/95/100/105",
+        "Level 15 Talent Wave of Terror Armor increased from -2 to -3"
+      ],
+      "venomancer": [
+        "Max HP as Damage decreased from 5/6/7% to 4/5/6%",
+        "Magic Resist Reduction decreased from 30% to 20%"
+      ],
+      "visage": [
+        "Mana Cost decreased from 125 to 110",
+        "Level 20 Talent Soul Assumption Damage Per Charge increased from +20 to +25"
+      ],
+      "void_spirit": [
+        "Base Movement Speed decreased from 295 to 290",
+        "Damage decreased from 70/120/170/220 to 60/110/160/210"
+      ]
+    }
+  },
+  "7_33c": {
+    "general": [
+      "Picking up a wisdom rune now also grants experience to the lowest-level hero on the team (if the lowest-level hero picks up the rune, experience goes to the second-lowest-level hero)",
+      "Observer Ward experience bounty increased from 50+6/min to 70+8/min",
+      "When a stacked camp is killed, the player that did the stacking receives 30% of experience gained (same percentage as gold bounty)",
+      "Tormentor Reflect now always affects attacking hero, regardless of distance",
+      "Cleared multiple tree paths that led to dead ends and deceptive looking terrain",
+      "Heroes bonus attribute points can now be skilled starting at level 6",
+      "Universal Heroes damage per attribute increased from 0.6 to 0.7"
+    ],
+    "items": {
+      "boots": [
+        "Recipe cost increased from 1500 to 1700"
+      ],
+      "bracer": [
+        "Damage bonus increased from 2/4 to 3/6"
+      ],
+      "crimson_guard": [
+        "Recipe cost increased from 925 to 1050. Total cost increased from 3600 to 3725",
+        "Guard now costs 75 mana to activate"
+      ],
+      "eternal_shroud": [
+        "Strength bonus increased from 12 to 14",
+        "Shroud now also converts physical damage from spells to mana"
+      ],
+      "faerie_fire": [
+        "Cost decreased from 70 to 65"
+      ],
+      "pavise": [
+        "Protect now also blocks physical damage from spells"
+      ],
+      "pipe": [
+        "Health Regen bonus decreased from 8.5 to 6",
+        "Magic Resistance bonus decreased from 25% to 20%",
+        "Barrier Mana Cost increased from 100 to 150"
+      ],
+      "ring_of_health": [
+        "Health Regen bonus decreased from 5.25 to 4.75"
+      ],
+      "ward_sentry": [
+        "True Sight Radius increased from 900 to 1000"
+      ],
+      "vanguard": [
+        "Health Regen bonus decreased from +5.5 to +4.75",
+        "Damage Block (Melee heroes) decreased from 64 to 56",
+        "Damage Block (Ranged heroes) decreased from 32 to 28"
+      ],
+      "duelist_gloves": [
+        "Boldness Attack Speed increased from 15 to 20",
+        "Boldness Enemy hero search range increased from 900 to 1200"
+      ],
+      "seeds_of_serenity": [
+        "Now provides +3 Health Regen bonus"
+      ],
+      "spark_of_courage": [
+        "Courage Damage increased from 10 to 18",
+        "Courage Armor increased from 5 to 7"
+      ],
+      "trusty_shovel": [
+        "Dig Cooldown decreased from 50s to 40s"
+      ],
+      "dragon_scale": [
+        "Afterburn Burn Damage increased from 18 to 22"
+      ],
+      "eye_of_the_vizier": [
+        "Mana Regen bonus increased from +0.5 to +1.25"
+      ],
+      "gossamer_cape": [
+        "Sixth Sense Cooldown decreased from 5s to 4s"
+      ],
+      "specialists_array": [
+        "Crackshot now deals 20 bonus damage",
+        "Crackshot now prioritizes heroes as secondary targets"
+      ],
+      "vambrace": [
+        "Primary Attribute bonus decreased from +10 to +8",
+        "Other Attributes bonus decreased from +5 to +4"
+      ],
+      "vampire_fangs": [
+        "Spell Lifesteal increased from +6% to +10%"
+      ],
+      "defiant_shell": [
+        "Armor bonus increased from +5 to +7"
+      ],
+      "enchanted_quiver": [
+        "Attack Range bonus increased from +50 to +75"
+      ],
+      "vindicators_axe": [
+        "Attack Speed bonus increased from +30 to +35"
+      ],
+      "ascetic_cap": [
+        "Health Regen bonus increased from +15 to +20",
+        "Endurance Duration increased from 4s to 5s"
+      ],
+      "havoc_hammer": [
+        "Havoc Damage Strength multiplier increased from 1x to 1.5x"
+      ],
+      "martyrs_plate": [
+        "Magic Resistance bonus increased from +20% to +25%"
+      ],
+      "spell_prism": [
+        "All Attributes bonus decreased from +8 to +6"
+      ],
+      "stormcrafter": [
+        "Movement Speed bonus increased from +30 to +35"
+      ]
+    },
+    "heroes": {
+      "misc": [
+        "Lifesteal from creeps on both Purchasable and Neutral items increased from 50% to 60%"
+      ],
+      "abaddon": [
+        "Base Damage decreased by 7 (Level 1 damage unchanged)"
+      ],
+      "alchemist": [
+        "Base Movement Speed decreased from 300 to 295",
+        "Cooldown increased from 13s to 15s",
+        "Base Bonus Gold decreased from +3 to +2",
+        "Extra Bonus Gold decreased from +3 to +2",
+        "Bonus Movement Speed decreased from 40/50/60 to 20/40/60",
+        "Level 15 Talent Damage per Greevil's Greed stack decreased from +3 to +2"
+      ],
+      "ancient_apparition": [
+        "Intelligence gain decreased from 3.4 to 3.1"
+      ],
+      "bane": [
+        "Base Damage decreased by 7 (Level 1 damage unchanged)"
+      ],
+      "batrider": [
+        "Base Damage decreased by 4 (Level 1 damage increased by 2)"
+      ],
+      "beastmaster": [
+        "Base Damage decreased by 9 (Level 1 damage decreased by 3)",
+        "Hawk Vision decreased from 750/800/850/900 to 600/700/800/900"
+      ],
+      "bounty_hunter": [
+        "Base Health Regen decreased from 1.25 to 0.75",
+        "Cooldown increased from 4s to 6/5/4s"
+      ],
+      "brewmaster": [
+        "Base Damage decreased by 5 (Level 1 damage unchanged)"
+      ],
+      "broodmother": [
+        "Base Damage decreased by 5 (Level 1 damage unchanged)"
+      ],
+      "chaos_knight": [
+        "Base Strength increased from 22 to 24",
+        "Minimum Damage increased from 60/90/120/150 to 90/120/150/180",
+        "Lifesteal from creeps increased from 50% to 60%",
+        "Level 10 Talent Chaos Strike Lifesteal increased from +25% to +30%",
+        "Level 15 Talent Phantasm Illusion Incoming Damage Reduction increased from 75% to 100%"
+      ],
+      "chen": [
+        "Base Damage decreased by 5 (Level 1 damage unchanged)"
+      ],
+      "rattletrap": [
+        "Base Damage decreased by 4 (Level 1 damage increased by 2)",
+        "Agility gain increased from 1.8 to 2.1",
+        "Intelligence gain increased from 1.3 to 1.7"
+      ],
+      "crystal_maiden": [
+        "Damage decreased from 130/170/210/260 to 110/160/210/260"
+      ],
+      "dark_seer": [
+        "Base Damage decreased by 6 (Level 1 damage unchanged)"
+      ],
+      "dark_willow": [
+        "Base Damage decreased by 4 (Level 1 damage increased by 2)"
+      ],
+      "dawnbreaker": [
+        "Healing from creeps increased from 50% to 60%"
+      ],
+      "dazzle": [
+        "Base Damage decreased by 7 (Level 1 damage unchanged)",
+        "Level 10 Talent Attack Speed increased from +30 to +35",
+        "Level 20 Talent Poison Touch DPS increased from +45 to +60"
+      ],
+      "death_prophet": [
+        "Damage increased from 85/160/235/310 to 85/165/245/325",
+        "Radius increased from 425 to 450",
+        "Duration increased from 35s to 40s"
+      ],
+      "doom_bringer": [
+        "Bonus Gold decreased from 50/100/150/200 to 30/85/140/195",
+        "Aghanim's Shard Bonus Damage decreased from 150 to 125"
+      ],
+      "dragon_knight": [
+        "Base Movement Speed increased from 310 to 315",
+        "Base Attack Time improved from 1.7s to 1.6s"
+      ],
+      "earthshaker": [
+        "Fissure Range increased from 1400 to 1600",
+        "Cast Point improved from 0.6s to 0.5s",
+        "Stun Duration increased from 0.9/1.0/1.1/1.2s to 1.0/1.1/1.2/1.3s",
+        "Echo Damage increased from 70/90/110 to 85/105/125",
+        "Radius increased from 600 to 700",
+        "Cooldown decreased from 150/130/110s to 130/120/110s"
+      ],
+      "enigma": [
+        "Cooldown decreased from 50/45/40/35s to 40/35/30/25s"
+      ],
+      "gyrocopter": [
+        "Base Movement Speed increased from 315 to 320"
+      ],
+      "hoodwink": [
+        "Slow Duration increased from 0.35s to 0.45s",
+        "Mana Cost decreased from 75/85/95/105 to 70/75/80/85",
+        "Damage increased from 75/150/225/300 to 90/160/230/300"
+      ],
+      "huskar": [
+        "Base Strength increased from 20 to 23"
+      ],
+      "invoker": [
+        "Base Strength increased from 18 to 19",
+        "Duration decreased from 3/3.5/4/4.5/5/5.5/6/6.5s to 3/3.4/3.8/4.2/4.6/5.0/5.4/5.8s",
+        "Freeze Duration increased from 0.3s to 0.4s",
+        "Travel Distance increased from 800/1200/1600/2000/2400/2800/3200/3600 to 1500/1800/2100/2400/2700/3000/3300/3600",
+        "Aghanim's Shard Pull Speed increased from 100 to 175",
+        "Contact Damage increased from 52/71/90/109/128/147/166/185 to 55/80/105/130/155/180/205/220",
+        "Burn Damage per second increased from 10/14/18/22/26/30/34/38 to 10/15/20/25/30/35/40/45"
+      ],
+      "wisp": [
+        "Base Damage decreased by 3 (Level 1 damage increased by 2)"
+      ],
+      "keeper_of_the_light": [
+        "Damage decreased from 100/140/180/220 to 85/130/175/220",
+        "Radius decreased from 500 to 425/450/475/500",
+        "Cast Range rescaled from 500/550/600/650 to 400/500/600/700",
+        "Cooldown increased from 22/20/18/16s to 25/22/19/16s",
+        "Level 15 Talent Chakra Magic Cooldown Reduction decreased from 4s to 3s"
+      ],
+      "legion_commander": [
+        "Strength gain decreased from 3.3 to 3.1",
+        "Bonus Attack Speed decreased from 65/90/115/140 to 50/80/110/140",
+        "Health Regen decreased from 30/40/50/60 to 24/36/48/60"
+      ],
+      "life_stealer": [
+        "Cooldown decreased from 21/20/19/18s to 20/19/18/17s",
+        "Movement Slow increased from 10/15/20/25% to 15/20/25/30%",
+        "Cooldown decreased from 100/75/50s to 80/65/50s"
+      ],
+      "lina": [
+        "Damage increased from 85/160/235/310 to 85/165/245/325",
+        "Damage increased from 100/150/200/250 to 110/160/210/260",
+        "Level 15 Talent Light Strike Array Damage increased from +130 to +150",
+        "Level 15 Talent Health increased from +250 to +275"
+      ],
+      "lion": [
+        "Base Intelligence increased from 18 to 20",
+        "Cooldown decreased from 12s to 11s",
+        "Damage increased from 100/160/220/280 to 105/170/235/300",
+        "Aghanim's Shard Magic Resistance increased from 50% to 80%"
+      ],
+      "lone_druid": [
+        "Base Damage decreased by 3 (Level 1 damage increased by 2)"
+      ],
+      "lycan": [
+        "Base Damage decreased by 4 (Level 1 damage increased by 2)"
+      ],
+      "magnataur": [
+        "Base Damage decreased by 8 (Level 1 damage decreased by 2)"
+      ],
+      "marci": [
+        "Base Damage decreased by 8 (Level 1 damage decreased by 2)"
+      ],
+      "mars": [
+        "Cooldown decreased from 15/14/13/12s to 14/13/12/11s",
+        "Aghanim's Shard Damage per second increased from 35 to 40",
+        "Bonus Damage vs Heroes increased from 5/10/15/20 to 10/15/20/25"
+      ],
+      "medusa": [
+        "Cooldown increased from 10s to 13/12/11/10s",
+        "Level 2 now can be learned on level 1 instead of level 3",
+        "Damage per Mana decreased from 2/2.5/3/3.5/4 to 2/2.4/2.8/3.2/3.6",
+        "Bonus Mana decreased from 200/225/250/275/300 to 0/50/100/150/200"
+      ],
+      "mirana": [
+        "Base Damage decreased by 11 (Level 1 damage decreased by 4)"
+      ],
+      "naga_siren": [
+        "Level 15 Talent Mirror Image Damage decreased from +13% to +10%"
+      ],
+      "furion": [
+        "Cooldown decreased from 65/55/45/35s to 60/50/40/30s",
+        "Max Stacks increased from 3/6/9/12 to 6/8/10/12",
+        "Damage increased from 105/145/185 to 120/155/190"
+      ],
+      "nyx_assassin": [
+        "Base Damage decreased by 6 (Level 1 damage unchanged)",
+        "Level 10 Talent Spell Amplification decreased from +8% to +6%"
+      ],
+      "oracle": [
+        "Cooldown increased from 15/12/9/6s to 18/14/10/6s",
+        "Mana Cost increased from 80/90/100/110 to 95/100/105/110"
+      ],
+      "pangolier": [
+        "Base Damage decreased by 10 (Level 1 damage decreased by 4)",
+        "Dash Range decreased from 850 to 550/650/750/850",
+        "Chance increased from 15% to 17%"
+      ],
+      "phantom_lancer": [
+        "Cooldown increased from 7s to 10/9/8/7s"
+      ],
+      "phoenix": [
+        "Base Damage decreased by 5 (Level 1 damage unchanged)"
+      ],
+      "primal_beast": [
+        "Intelligence gain increased from 1.4 to 1.7",
+        "Roar Bonus Armor per stack increased from 1/2/3/4 to 2/3/4/5",
+        "Hit Damage increased from 100/150/200 to 125/175/225",
+        "Level 20 Talent Uproar Armor Per Stack increased from +4 to +6"
+      ],
+      "razor": [
+        "Agility gain increased from 2.6 to 2.8",
+        "Base Armor increased by 1",
+        "Bonus Speed increased from 6/12/18/24% to 10/15/20/25%"
+      ],
+      "riki": [
+        "Base Armor decreased by 1",
+        "Aghanim's Shard Armor Reduction decreased from 6 to 5",
+        "Base Charge Restore Time increased from 25/20/15/10s to 25/21/17/13s"
+      ],
+      "sand_king": [
+        "Base Damage decreased by 6 (Level 1 damage unchanged)"
+      ],
+      "nevermore": [
+        "Level 15 Talent Shadowraze Damage increased from +100 to +115"
+      ],
+      "silencer": [
+        "Mana Cost increased from 15 to 20"
+      ],
+      "skywrath_mage": [
+        "Base Intelligence decreased from 25 to 23"
+      ],
+      "slark": [
+        "Aghanim's Scepter Distance decreased from 1100 to 1000"
+      ],
+      "snapfire": [
+        "Base Damage decreased by 4 (Level 1 damage increased by 2)"
+      ],
+      "sniper": [
+        "Now provides +200 attack range when active"
+      ],
+      "spirit_breaker": [
+        "Strength gain increased from 3.0 to 3.3",
+        "Mana Cost decreased from 120 to 100",
+        "Can no longer target debuff immune enemies without Aghanim's Scepter",
+        "Status Resistance increased from 35/45/55/65% to 40/50/60/70%",
+        "Cooldown decreased from 1.5s to 1.2s",
+        "Movement Speed as Damage increased from 15/20/25/30% to 20/25/30/35%",
+        "Cooldown decreased from 90/70/50s to 70/50/30s"
+      ],
+      "techies": [
+        "Base Damage decreased by 6 (Level 1 damage unchanged)"
+      ],
+      "templar_assassin": [
+        "Base Movement Speed increased from 305 to 310",
+        "Damage increased from 80/120/160/200 to 80/130/180/230"
+      ],
+      "terrorblade": [
+        "Can no longer target debuff immune enemies"
+      ],
+      "shredder": [
+        "Base Damage decreased by 3 (Level 1 damage increased by 3)"
+      ],
+      "abyssal_underlord": [
+        "Mana Cost increased from 100 to 200",
+        "Level 10 Talent Firestorm Radius decreased from +100 to +75",
+        "Level 15 Talent Firestorm Cooldown Reduction decreased from 4s to 3s"
+      ],
+      "vengefulspirit": [
+        "Base Damage decreased by 3 (Level 1 damage increased by 3)"
+      ],
+      "venomancer": [
+        "Base Damage decreased by 10 (Level 1 damage decreased by 4)"
+      ],
+      "visage": [
+        "Base Damage decreased by 3 (Level 1 damage increased by 2)"
+      ],
+      "void_spirit": [
+        "Base Damage decreased by 11 (Level 1 damage decreased by 5)",
+        "Damage decreased from 80/130/180/230 to 70/120/170/220",
+        "Damage decreased from 60/110/160/210 to 60/105/150/195",
+        "Level 10 Talent Mana Regen decreased from +1.75 to +1.5",
+        "Level 25 Talent Astral Step Crit decreased from 160% to 140%"
+      ],
+      "windrunner": [
+        "Base Damage decreased by 6 (Level 1 damage unchanged)"
+      ],
+      "winter_wyvern": [
+        "Base Damage decreased by 2 (Level 1 damage increased by 4)"
+      ],
+      "skeleton_king": [
+        "Lifesteal from creeps increased from 50% to 60%"
+      ],
+      "zuus": [
+        "Mana Cost decreased from 80/85/90/95 to 75/80/85/90",
+        "Damage increased from 300/425/550 to 350/475/600",
+        "Level 20 Talent Lightning Bolt Ministun increased from +0.3s to +0.5s",
+        "Level 20 Talent Arc Lightning Current Health As Damage increased from +4% to +6%"
       ]
     }
   }

@@ -1,5 +1,5 @@
-const patches = require('../json/patch.json');
-const fs = require('fs');
+const patches = require("../src/json/patch.json");
+const fs = require("fs");
 
 const last = patches.slice(-1)[0];
 
@@ -9,5 +9,4 @@ patches.push({
   id: last.id + 1,
 });
 
-
-fs.writeFileSync('./json/patch.json', JSON.stringify(patches, null, 1));
+fs.writeFileSync("./src/json/patch.json", JSON.stringify(patches, null, 1));
