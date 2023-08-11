@@ -4139,7 +4139,12 @@
       "60",
       "70"
     ],
-    "cd": "10",
+    "cd": [
+      "16",
+      "14",
+      "12",
+      "10"
+    ],
     "img": "/apps/dota2/images/dota_react/abilities/morphling_adaptive_strike_agi.png"
   },
   "morphling_adaptive_strike_str": {
@@ -4225,7 +4230,12 @@
       "60",
       "70"
     ],
-    "cd": "10",
+    "cd": [
+      "16",
+      "14",
+      "12",
+      "10"
+    ],
     "img": "/apps/dota2/images/dota_react/abilities/morphling_adaptive_strike_str.png"
   },
   "morphling_morph": {
@@ -7375,7 +7385,7 @@
     "dmg_type": "Physical",
     "bkbpierce": "Yes",
     "dispellable": "No",
-    "desc": "Unleashes evil spirits to drain the life of nearby enemy units and structures. Spirits need to return back to Death Prophet in order to attack again. At the end of the spell's duration, Death Prophet is healed in proportion to the damage dealt. Deals 50% damage to buildings. Lasts 40 seconds. Passively grants Movement Speed.",
+    "desc": "Unleashes evil spirits to drain the life of nearby enemy units and structures. Spirits need to return back to Death Prophet in order to attack again. At the end of the spell's duration, Death Prophet is healed in proportion to the damage dealt. Deals 50% damage to buildings. Lasts 40 seconds.Passively grants Movement Speed.",
     "attrib": [
       {
         "key": "radius",
@@ -16466,9 +16476,9 @@
     ],
     "lore": "The Arts of Oblivion include a deafening blast of emerald flames from the Nether Reaches.",
     "mc": [
-      "85",
-      "105",
-      "125",
+      "100",
+      "115",
+      "130",
       "145"
     ],
     "cd": "5",
@@ -23513,9 +23523,9 @@
         "key": "movement_speed",
         "header": "SLOW:",
         "value": [
+          "10%",
           "25%",
-          "35%",
-          "45%",
+          "40%",
           "55%"
         ]
       },
@@ -23698,17 +23708,12 @@
       }
     ],
     "lore": "While most of her prey is wrapped in silken cocoons and saved for her young, the Broodmother herself has a taste for wandering heroes.",
-    "mc": [
-      "50",
-      "60",
-      "70",
-      "80"
-    ],
+    "mc": "80",
     "cd": [
+      "45",
       "40",
       "35",
-      "30",
-      "25"
+      "30"
     ],
     "img": "/apps/dota2/images/dota_react/abilities/broodmother_insatiable_hunger.png"
   },
@@ -26071,7 +26076,7 @@
       "60",
       "70"
     ],
-    "cd": "60",
+    "cd": "65",
     "img": "/apps/dota2/images/dota_react/abilities/doom_bringer_devour.png"
   },
   "doom_bringer_scorched_earth": {
@@ -38702,10 +38707,10 @@
         "key": "damage_modifier_tooltip",
         "header": "OUTGOING DAMAGE:",
         "value": [
-          "55%",
+          "35%",
+          "50%",
           "65%",
-          "75%",
-          "85%"
+          "80%"
         ]
       },
       {
@@ -40500,10 +40505,10 @@
         "key": "bonus_hp_regen",
         "header": "BONUS HP REGEN:",
         "value": [
+          "0.3",
           "0.4",
           "0.5",
-          "0.6",
-          "0.7"
+          "0.6"
         ]
       },
       {
@@ -43322,10 +43327,10 @@
         "key": "absorb_amount",
         "header": "MAGIC BARRIER:",
         "value": [
-          "65",
-          "145",
-          "225",
-          "305"
+          "60",
+          "135",
+          "210",
+          "285"
         ]
       },
       {
@@ -57363,7 +57368,7 @@
       "Hero",
       "Basic"
     ],
-    "desc": "Infuses a lone enemy unit with swirling, volatile energy, dealing damage over time. The damage is not applied if another enemy unit is near the target. \n\n Arc Warden: Slows the target's movement speed. \n\nTempest Double:  Movement speed slow is decreased, but damage is increased.",
+    "desc": "Infuses a lone enemy unit with swirling, volatile energy, dealing damage over time. The damage is not applied if another enemy unit is near the target. \n\nArc Warden: Slows the target's movement speed. \n\nTempest Double:  Movement speed slow is decreased, but damage is increased.",
     "attrib": [
       {
         "key": "duration",
@@ -57450,7 +57455,7 @@
       "AOE"
     ],
     "bkbpierce": "Yes",
-    "desc": "Arc Warden: Generates a circular distortion field of magnetic energy that grants bonus attack speed and protects allied heroes and buildings within it by evading attacks coming from outside the field. \n\n Tempest Double:  Allies gain bonus attack range and deal bonus damage with their attacks. Duration is increased.",
+    "desc": "Arc Warden: Generates a circular distortion field of magnetic energy that grants bonus attack speed and protects allied heroes and buildings within it by evading attacks coming from outside the field. \n\nTempest Double:  Allies gain bonus attack range and deal bonus damage with their attacks. Duration is increased.",
     "attrib": [
       {
         "key": "radius",
@@ -57559,7 +57564,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Arc Warden: Summons a Spark Wraith that slowly materializes and patrols a targeted area until an enemy comes within its range. Once a target has been found the wraith fuses with them, dealing magical damage and slowing the unit.\n\n Tempest Double:  Increased Wraith Speed and slow duration, decreased Activation Delay and Damage.",
+    "desc": "Arc Warden: Summons a Spark Wraith that slowly materializes and patrols a targeted area until an enemy comes within its range. Once a target has been found the wraith fuses with them, dealing magical damage and slowing the unit.\n\nTempest Double:  Increased Wraith Speed and slow duration, decreased Activation Delay and Damage.",
     "attrib": [
       {
         "key": "radius",
