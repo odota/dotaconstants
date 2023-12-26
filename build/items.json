@@ -3355,7 +3355,7 @@
     "img": "/apps/dota2/images/dota_react/items/spirit_vessel.png?t=1593393829403",
     "dname": "Spirit Vessel",
     "qual": "rare",
-    "cost": 2980,
+    "cost": 2780,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -3364,7 +3364,7 @@
     "components": [
       "urn_of_shadows",
       "crown",
-      "crown"
+      "fluffy_hat"
     ],
     "created": true,
     "charges": false
@@ -4364,8 +4364,8 @@
   },
   "disperser": {
     "hint": [
-      "Active: Suppress Affects all units in a 350 AoE around the target. All enemies around the target are slowed for 4 seconds.\n\n All allies around the target receive a basic dispel, increase their movement speed, and are unslowable for 4 seconds.\n\nBoth movement speed reduction and increase start at 100% and gradually decrease to 0% over the course of the buff duration.\n\nRange: 600",
-      "Passive: Manabreak Each attack burns 40 mana from the target, and deals 1 physical damage per burned mana. \n\nBurns 8 mana per attack from melee illusions and 8 mana per attack from ranged illusions. \n\nDispel Type: Basic Dispel "
+      "Active: Suppress Affects all units in a 350 AoE around the target. All enemies around the target are slowed for 4 seconds.\n\n All allies around the target receive a basic dispel, increase their movement speed, and are unslowable for 4 seconds.\n\nBoth movement speed reduction and increase start at 100% and gradually decrease to 0% over the course of the buff duration.\n\nRange: 600\nDispel Type: Basic Dispel ",
+      "Passive: Manabreak Each attack burns 40 mana from the target, and deals 1 physical damage per burned mana. \n\nBurns 8 mana per attack from melee illusions and 8 mana per attack from ranged illusions."
     ],
     "id": 1097,
     "img": "/apps/dota2/images/dota_react/items/disperser.png?t=1593393829403",
@@ -4503,7 +4503,7 @@
     "notes": "",
     "attrib": [],
     "mc": false,
-    "cd": 6,
+    "cd": false,
     "lore": "At the core of spellcraft are spectrums only the very gifted can sense.",
     "components": [
       "void_stone",
@@ -4764,7 +4764,7 @@
   },
   "solar_crest": {
     "hint": [
-      "Active: Shine When cast on an ally, grants them 7 armor, 70 attack speed, and 18% movement speed. When cast on an enemy, removes 7 armor, 70 attack speed, and 18% movement speed.\n\nRemoves 7 armor from the caster when used. \n\nRange: 1000\n\nDuration: 8"
+      "Active: Shine When cast on an ally, grants them 7 armor, 70 attack speed, and 15% movement speed. When cast on an enemy, removes 7 armor, 70 attack speed, and 15% movement speed.\n\nRemoves 7 armor from the caster when used. \n\nRange: 1000\n\nDuration: 8"
     ],
     "id": 229,
     "img": "/apps/dota2/images/dota_react/items/solar_crest.png?t=1593393829403",
@@ -5124,8 +5124,7 @@
     "lore": "The ring of the fallen Warlord Aquila continues to support armies in battle.",
     "components": null,
     "created": false,
-    "charges": false,
-    "tier": 2
+    "charges": false
   },
   "tranquil_boots": {
     "hint": [
@@ -5193,7 +5192,7 @@
     "notes": "",
     "attrib": [],
     "mc": 90,
-    "cd": 12,
+    "cd": 14,
     "lore": "The stolen cape of a master illusionist.",
     "components": [
       "shadow_amulet",
@@ -5436,8 +5435,7 @@
     "lore": "An evergreen amulet of druidic origins.",
     "components": null,
     "created": false,
-    "charges": false,
-    "tier": 3
+    "charges": false
   },
   "philosophers_stone": {
     "id": 290,
@@ -5641,7 +5639,8 @@
     "lore": "",
     "components": null,
     "created": false,
-    "charges": false
+    "charges": false,
+    "tier": 3
   },
   "greater_faerie_fire": {
     "hint": [
@@ -5762,7 +5761,8 @@
     "lore": "To those who harvest olgru jelly, success serves more than mere profit--it's often the means to survival--for only the jelly itself can cure the ravages that follow a sting from the vigilant denizens of the giant hives.",
     "components": null,
     "created": false,
-    "charges": 2
+    "charges": 2,
+    "tier": 1
   },
   "pupils_gift": {
     "hint": [
@@ -5868,8 +5868,7 @@
     "lore": "Even the slightest flaw in the components of a spell prism can result in the death of its user.",
     "components": null,
     "created": false,
-    "charges": false,
-    "tier": 4
+    "charges": false
   },
   "princes_knife": {
     "hint": [
@@ -6066,7 +6065,7 @@
   },
   "spark_of_courage": {
     "hint": [
-      "Passive: Courage Provides 18 damage when the hero is above 50% Health, and 7 armor when they are below that threshold."
+      "Passive: Courage Provides 16 damage when the hero is above 50% Health, and 7 armor when they are below that threshold."
     ],
     "id": 1124,
     "img": "/apps/dota2/images/dota_react/items/spark_of_courage.png?t=1593393829403",
@@ -6268,7 +6267,8 @@
     "lore": "",
     "components": null,
     "created": false,
-    "charges": false
+    "charges": false,
+    "tier": 5
   },
   "apex": {
     "id": 366,
@@ -6368,8 +6368,7 @@
     "lore": "One of the few surviving creations of the acolytes of the Wyrmforge.",
     "components": null,
     "created": false,
-    "charges": false,
-    "tier": 5
+    "charges": false
   },
   "pirate_hat": {
     "hint": [
@@ -6421,8 +6420,7 @@
     "lore": "The remains of an ancient universe, preserved within a single sphere.",
     "components": null,
     "created": false,
-    "charges": false,
-    "tier": 5
+    "charges": false
   },
   "faded_broach": {
     "id": 375,
@@ -6536,8 +6534,7 @@
     "lore": "Though many desire this brilliant shard for its obvious qualities, a school of study exists to determine the true size and purpose of its incomprehensible whole.",
     "components": null,
     "created": false,
-    "charges": false,
-    "tier": 3
+    "charges": false
   },
   "chipped_vest": {
     "hint": [
@@ -6735,8 +6732,7 @@
     "lore": "The final, twisted work of a severely pious blacksmith, completed immediately before the taking of his own life. ",
     "components": null,
     "created": false,
-    "charges": false,
-    "tier": 4
+    "charges": false
   },
   "oakheart": {
     "hint": [
@@ -7103,8 +7099,7 @@
     "lore": "An antique plaything found in the ruins of an Ozenja circus bazaar.",
     "components": null,
     "created": false,
-    "charges": false,
-    "tier": 1
+    "charges": false
   },
   "paintball": {
     "hint": [
@@ -7161,7 +7156,7 @@
   },
   "occult_bracelet": {
     "hint": [
-      "Passive: Rites of Eloshar Each time the wearer is attacked, they gain a stack of 0.5 mana regen, up to 5 stacks. Stacks last for 10 seconds."
+      "Passive: Rites of Eloshar Each time the wearer is attacked, they gain a stack of 0.5 mana regen, up to 5 stacks. Stacks last for 5 seconds."
     ],
     "id": 947,
     "img": "/apps/dota2/images/dota_react/items/occult_bracelet.png?t=1593393829403",

@@ -137,6 +137,12 @@ for (const hero_id in hero_list) {
   );
 }
 
+// Freeze the data files because the item ID values disappeared in December 2023
+// We might have to link them up with the separate npc_ability_ids file now
+const itemsURL = "https://github.com/dotabuff/d2vpkr/raw/5a0a6aaf54f7b729f01774c13dfdaa38c294b15a/dota/scripts/npc/items.json";
+// "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/items.json"
+const abilitiesURL = "https://github.com/dotabuff/d2vpkr/raw/5a0a6aaf54f7b729f01774c13dfdaa38c294b15a/dota/resource/localization/abilities_english.json";
+// "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/abilities_english.json"
 function isObj(obj) {
   return obj !== null && obj !== undefined && typeof obj === "object" && !Array.isArray(obj);
 }
@@ -145,8 +151,8 @@ const sources = [
   {
     key: "items",
     url: [
-      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/abilities_english.json",
-      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/items.json",
+      abilitiesURL,
+      itemsURL,
       "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/neutral_items.txt"
     ],
     transform: (respObj) => {
@@ -362,26 +368,24 @@ const sources = [
   },
   {
     key: "item_ids",
-    url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/items.json",
+    url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_ability_ids.txt",
     transform: (respObj) => {
-      const items = respObj.DOTAAbilities;
+      const data = respObj.itemabilities.Locked;
+      // Flip the keys and values
       const itemIds = {};
-      for (const key in items) {
-        const item = items[key];
-        if (typeof item === "object" && "ID" in item) {
-          itemIds[item.ID] = key.replace("item_", "");
-        }
-      }
+      Object.entries(data).forEach(([key, val]) => {
+        // Remove item_ prefix
+        itemIds[val] = key.replace('item_', '');
+      });
       //manually adding DiffBlade2
       itemIds[196] = "diffusal_blade_2";
-
       return itemIds;
     }
   },
   {
     key: "abilities",
     url: [
-      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/abilities_english.json",
+      abilitiesURL,
       "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_abilities.json"
     ],
     transform: (respObj) => {
@@ -552,15 +556,14 @@ const sources = [
   },
   {
     key: "ability_ids",
-    url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_abilities.json",
+    url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_ability_ids.txt",
     transform: (respObj) => {
+      const data = respObj.unitabilities.Locked;
+      // Flip the keys and values
       const abilityIds = {};
-      for (const key in respObj.DOTAAbilities) {
-        const block = respObj.DOTAAbilities[key];
-        if (block && block.ID) {
-          abilityIds[block.ID] = key;
-        }
-      }
+      Object.entries(data).forEach(([key, val]) => {
+        abilityIds[val] = key;
+      });
       return abilityIds;
     }
   },
@@ -1210,7 +1213,7 @@ function findAghsAbilityValue(values) {
     }
     let orig = `%${name}%`;
     name = name.toLowerCase();
-    return values[name] ?? orig;
+    return values?.[name] ?? orig;
   }
 }
 
