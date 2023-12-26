@@ -139,10 +139,12 @@ for (const hero_id in hero_list) {
 
 // Freeze the data files because the item ID values disappeared in December 2023
 // We might have to link them up with the separate npc_ability_ids file now
-const itemsURL = "https://github.com/dotabuff/d2vpkr/raw/5a0a6aaf54f7b729f01774c13dfdaa38c294b15a/dota/scripts/npc/items.json";
+const itemsURL = "https://github.com/dotabuff/d2vpkr/raw/0e28e61414d822b5f2252a3d6caa8a142f217653/dota/scripts/npc/items.json";
 // "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/items.json"
-const abilitiesURL = "https://github.com/dotabuff/d2vpkr/raw/5a0a6aaf54f7b729f01774c13dfdaa38c294b15a/dota/resource/localization/abilities_english.json";
+const abilitiesURL = "https://github.com/dotabuff/d2vpkr/raw/0e28e61414d822b5f2252a3d6caa8a142f217653/dota/resource/localization/abilities_english.json";
 // "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/abilities_english.json"
+const npcAbilitiesURL = "https://raw.githubusercontent.com/dotabuff/d2vpkr/0e28e61414d822b5f2252a3d6caa8a142f217653/dota/scripts/npc/npc_abilities.json";
+// "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_abilities.json"
 function isObj(obj) {
   return obj !== null && obj !== undefined && typeof obj === "object" && !Array.isArray(obj);
 }
@@ -386,7 +388,7 @@ const sources = [
     key: "abilities",
     url: [
       abilitiesURL,
-      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_abilities.json"
+      npcAbilitiesURL,
     ],
     transform: (respObj) => {
       const strings = respObj[0].lang.Tokens;
