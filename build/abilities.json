@@ -1663,7 +1663,7 @@
       },
       {
         "key": "bonus_movespeed",
-        "header": "BONUS MOVESPEED:",
+        "header": "BONUS MOVEMENT SPEED:",
         "value": "10%"
       },
       {
@@ -16434,7 +16434,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "An exploding pulse deals damage to enemies and structures in the area. Deals half damage to structures.",
+    "desc": "An exploding pulse deals damage to enemies and structures in the area. Deals 0.5% damage to structures.",
     "attrib": [
       {
         "key": "structure_damage_mod",
@@ -16997,13 +16997,14 @@
       },
       {
         "key": "scepter_cooldown",
-        "header": "COOLDOWN:",
-        "value": "10"
+        "header": "COOLDOWN REDUCTION:",
+        "value": "10%"
       },
       {
         "key": "scepter_fade_duration",
-        "header": "VANISH BUFFER:",
-        "value": "0.75"
+        "header": "SCEPTER FADE DURATION:",
+        "value": "0.75",
+        "generated": true
       },
       {
         "key": "abilitycastrange",
@@ -26980,7 +26981,7 @@
     "dmg_type": "Magical",
     "bkbpierce": "Yes",
     "dispellable": [],
-    "desc": "Gives a chance to stun and knockback an enemy unit on an attack. Deals a percentage of movement speed as damage. Deals 1.5x damage to creeps.",
+    "desc": "Gives a chance to stun and knockback an enemy unit on an attack. Deals a percentage of movement speed as damage. Deals 1.3x damage to creeps.",
     "attrib": [
       {
         "key": "chance_pct",
@@ -28841,7 +28842,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Invoker builds up a charge of electromagnetic energy at a targeted location which automatically detonates after 2.9 seconds. The detonation covers an area, draining mana based on the level of Wex . Deals damage for each point of mana drained. If EMP drains mana from an enemy hero, Invoker gains 50% of the mana drained.",
+    "desc": "Invoker builds up a charge of electromagnetic energy at a targeted location which automatically detonates after 2.9 seconds. The detonation covers an area, draining mana based on the level of Wex . Deals damage for each point of mana drained. If EMP drains mana from an enemy hero, Invoker gains %self_mana_restore_pct% of the mana drained.",
     "attrib": [
       {
         "key": "delay",
@@ -31384,7 +31385,7 @@
   "lone_druid_spirit_bear": {
     "dname": "Summon Spirit Bear",
     "behavior": "No Target",
-    "desc": "Summons a powerful Spirit Bear companion that can equip items. If the bear moves 1100 distance away from the Lone Druid, it cannot attack.  Lone Druid suffers 20% of his max health as backlash damage if the Spirit Bear dies. Spirit Bear does not benefit from attributes.\nSpirit Bear has the Return, Demolish and Entangling Claws abilities.",
+    "desc": "Summons a powerful Spirit Bear companion that can equip items. If the bear moves 1100 distance away from the Lone Druid, it cannot attack.  Lone Druid suffers 20% of his max health as backlash damage if the Spirit Bear dies.\nSpirit Bear has the Return, Demolish and Entangling Claws abilities.",
     "attrib": [
       {
         "key": "bear_hp",
@@ -33986,8 +33987,7 @@
       {
         "key": "duration",
         "header": "DURATION:",
-        "value": "20",
-        "generated": true
+        "value": "20"
       },
       {
         "key": "model_scale",
@@ -57564,7 +57564,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Arc Warden: Summons a Spark Wraith that slowly materializes and patrols a targeted area until an enemy comes within its range. Once a target has been found the wraith fuses with them, dealing magical damage and slowing the unit.\n\nTempest Double:  Increased Wraith Speed and slow duration, decreased Activation Delay and Damage.",
+    "desc": "Arc Warden: Summons a Spark Wraith that slowly materializes and patrols a targeted area until an enemy comes within its range. Once a target has been found the wraith fuses with them, dealing magical damage and slowing the unit. Non-hero units receive %creep_damage_bonus_pct% more damage. \n\nTempest Double:  Increased Wraith Speed and slow duration, decreased Activation Delay and Damage.",
     "attrib": [
       {
         "key": "radius",

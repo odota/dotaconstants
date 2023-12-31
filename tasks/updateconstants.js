@@ -137,14 +137,12 @@ for (const hero_id in hero_list) {
   );
 }
 
-// Freeze the data files because the item ID values disappeared in December 2023
-// We might have to link them up with the separate npc_ability_ids file now
-const itemsURL = "https://github.com/dotabuff/d2vpkr/raw/0e28e61414d822b5f2252a3d6caa8a142f217653/dota/scripts/npc/items.json";
-// "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/items.json"
-const abilitiesURL = "https://github.com/dotabuff/d2vpkr/raw/0e28e61414d822b5f2252a3d6caa8a142f217653/dota/resource/localization/abilities_english.json";
-// "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/abilities_english.json"
-const npcAbilitiesURL = "https://raw.githubusercontent.com/dotabuff/d2vpkr/0e28e61414d822b5f2252a3d6caa8a142f217653/dota/scripts/npc/npc_abilities.json";
+const itemsURL = "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/items.json";
+const abilitiesURL = "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/abilities_english.json";
+// The hero abilities were moved to individual hero files, e.g. https://github.com/dotabuff/d2vpkr/blob/master/dota/scripts/npc/heroes/npc_dota_hero_abaddon.txt
 // "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_abilities.json"
+const npcAbilitiesURL = "https://raw.githubusercontent.com/dotabuff/d2vpkr/0e28e61414d822b5f2252a3d6caa8a142f217653/dota/scripts/npc/npc_abilities.json";
+const idsURL = "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_ability_ids.txt";
 function isObj(obj) {
   return obj !== null && obj !== undefined && typeof obj === "object" && !Array.isArray(obj);
 }
@@ -155,12 +153,14 @@ const sources = [
     url: [
       abilitiesURL,
       itemsURL,
-      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/neutral_items.txt"
+      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/neutral_items.txt",
+      idsURL,
     ],
     transform: (respObj) => {
       const strings = respObj[0].lang.Tokens;
       const scripts = respObj[1].DOTAAbilities;
       const neutrals = respObj[2];
+      const idLookup = respObj[3].itemabilities.Locked;
       // parse neutral items into name => tier map
       const neutralItemNameTierMap = getNeutralItemNameTierMap(neutrals);
 
@@ -194,7 +194,7 @@ const sources = [
               key
             )
           };
-          item.id = parseInt(scripts[key].ID);
+          item.id = Number(idLookup[key]);
           item.img = `/apps/dota2/images/dota_react/items/${key.replace(
             /^item_/,
             ""
@@ -370,7 +370,7 @@ const sources = [
   },
   {
     key: "item_ids",
-    url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_ability_ids.txt",
+    url: idsURL,
     transform: (respObj) => {
       const data = respObj.itemabilities.Locked;
       // Flip the keys and values
@@ -558,7 +558,7 @@ const sources = [
   },
   {
     key: "ability_ids",
-    url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_ability_ids.txt",
+    url: idsURL,
     transform: (respObj) => {
       const data = respObj.unitabilities.Locked;
       // Flip the keys and values
