@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node tasks/updateconstants",
-    "patch": "node tasks/newpatch"
+    "patch": "node tasks/newpatch",
+    "prettier": "prettier --write tasks"
   },
   "repository": {
     "type": "git",
@@ -18,10 +19,9 @@
     "url": "https://github.com/odota/dotaconstants/issues"
   },
   "homepage": "https://github.com/odota/dotaconstants#readme",
-  "dependencies": {},
   "devDependencies": {
-    "async": "^2.6.1",
-    "request": "^2.88.0",
+    "axios": "^1.6.3",
+    "prettier": "^3.1.1",
     "simple-vdf": "^1.1.1"
   }
 }
