@@ -848,39 +848,6 @@ async function start() {
       },
     },
     {
-      key: "hero_names",
-      url: [
-        "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/dota_english.json",
-        "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.json",
-        "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/dota_english.json",
-      ],
-      transform: (respObj) => {
-        let heroes = [];
-        let keys = Object.keys(respObj[1].DOTAHeroes).filter(
-          (name) => !badNames.has(name),
-        );
-        keys.forEach((name) => {
-          let h = formatVpkHero(
-            name,
-            respObj[1],
-            respObj[2].lang.Tokens[`${name}:n`],
-          );
-          h.localized_name =
-            h.localized_name ||
-            respObj[1]["DOTAHeroes"][name].workshop_guide_name;
-          h.localized_name = h.localized_name || respObj[0].lang.Tokens[name];
-          heroes.push(h);
-        });
-        heroes = heroes.sort((a, b) => a.id - b.id);
-        let heroesObj = {};
-        for (hero of heroes) {
-          hero.id = Number(hero.id);
-          heroesObj[hero.name] = hero;
-        }
-        return heroesObj;
-      },
-    },
-    {
       key: "hero_lore",
       url: [
         "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/hero_lore_english.txt",
@@ -1058,14 +1025,13 @@ async function start() {
         return result;
       },
     },
+    // Requires items and hero names so needs to run after
     {
       key: "patchnotes",
       url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/patchnotes/patchnotes_english.txt",
       transform: (respObj) => {
         let items = Object.keys(require("../build/items.json"));
-        let heroes = Object.keys(require("../build/hero_names.json")).map(
-          (hero) => hero.replace("npc_dota_hero_", ""),
-        );
+        let heroes = Object.keys(require("../build/hero_lore.json"));
 
         let result = {};
         let keys = Object.keys(respObj);
