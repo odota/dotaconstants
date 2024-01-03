@@ -97,6 +97,7 @@ const remapAttributes = {
 
 const notAbilities = new Set([
   "Version",
+  "version",
   "ability_base",
   "default_attack",
   "attribute_bonus",
@@ -123,1105 +124,1119 @@ const itemQualOverrides = {
   revenants_brooch: "epic",
 };
 
-let aghsAbilityValues = {};
-const aghs_desc_urls = [];
-
 const itemsURL =
   "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/items.json";
-const abilitiesURL =
+const abilitiesLoc =
   "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/abilities_english.json";
-// The hero abilities were moved to individual hero files, e.g. https://github.com/dotabuff/d2vpkr/blob/master/dota/scripts/npc/heroes/npc_dota_hero_abaddon.txt
-// "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_abilities.json"
 const npcAbilitiesURL =
-  "https://raw.githubusercontent.com/dotabuff/d2vpkr/0e28e61414d822b5f2252a3d6caa8a142f217653/dota/scripts/npc/npc_abilities.json";
+  "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_abilities.json";
 const idsURL =
   "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_ability_ids.txt";
-function isObj(obj) {
-  return (
-    obj !== null &&
-    obj !== undefined &&
-    typeof obj === "object" &&
-    !Array.isArray(obj)
-  );
-}
 
-const sources = [
-  {
-    key: "items",
-    url: [
-      abilitiesURL,
-      itemsURL,
-      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/neutral_items.txt",
-      idsURL,
-    ],
-    transform: (respObj) => {
-      const strings = respObj[0].lang.Tokens;
-      const scripts = respObj[1].DOTAAbilities;
-      const neutrals = respObj[2];
-      const idLookup = respObj[3].itemabilities.Locked;
-      // parse neutral items into name => tier map
-      const neutralItemNameTierMap = getNeutralItemNameTierMap(neutrals);
-
-      // Fix places where valve doesnt care about correct case
-      Object.keys(strings).forEach((key) => {
-        if (key.includes("DOTA_Tooltip_Ability_")) {
-          strings[
-            key.replace("DOTA_Tooltip_Ability_", "DOTA_Tooltip_ability_")
-          ] = strings[key];
-        }
-      });
-
-      let items = {};
-
-      Object.keys(scripts)
-        .filter((key) => {
-          return (
-            !(key.includes("item_recipe") && scripts[key].ItemCost === "0") &&
-            key !== "Version"
-          );
-        })
-        .forEach((key) => {
-          const specialAttrs = getSpecialAttrs(scripts[key]);
-
-          let item = {
-            ...replaceSpecialAttribs(
-              strings[`DOTA_Tooltip_ability_${key}_Description`],
-              specialAttrs,
-              true,
-              scripts[key],
-              key,
-            ),
-          };
-          item.id = Number(idLookup[key]);
-          item.img = `/apps/dota2/images/dota_react/items/${key.replace(
-            /^item_/,
-            "",
-          )}.png?t=${1593393829403}`;
-          if (key.includes("item_recipe")) {
-            item.img = `/apps/dota2/images/dota_react/items/recipe.png?t=${1593393829403}`;
-          }
-
-          item.dname = strings[`DOTA_Tooltip_ability_${key}`];
-          item.qual = itemQualOverrides[key] ?? scripts[key].ItemQuality;
-          item.cost = parseInt(scripts[key].ItemCost);
-
-          let notes = [];
-          for (
-            let i = 0;
-            strings[`DOTA_Tooltip_ability_${key}_Note${i}`];
-            i++
-          ) {
-            notes.push(
-              replaceSpecialAttribs(
-                strings[`DOTA_Tooltip_ability_${key}_Note${i}`],
-                specialAttrs,
-                false,
-                scripts[key],
-                key,
-              ),
-            );
-          }
-
-          item.notes = notes.join("\n");
-
-          item.attrib = formatAttrib(
-            scripts[key].AbilitySpecial,
-            strings,
-            `DOTA_Tooltip_ability_${key}_`,
-          ).filter((attr) => !attr.generated || attr.key === "lifetime");
-
-          item.mc = parseInt(scripts[key].AbilityManaCost) || false;
-          item.cd = parseInt(scripts[key].AbilityCooldown) || false;
-
-          item.lore = (
-            strings[`DOTA_Tooltip_ability_${key}_Lore`] || ""
-          ).replace(/\\n/g, "\r\n");
-
-          item.components = null;
-          item.created = false;
-          item.charges = parseInt(scripts[key].ItemInitialCharges) || false;
-          if (neutralItemNameTierMap[key]) {
-            item.tier = neutralItemNameTierMap[key];
-          }
-          items[key.replace(/^item_/, "")] = item;
-        });
-
-      // Load recipes
-      Object.keys(scripts)
-        .filter(
-          (key) => scripts[key].ItemRequirements && scripts[key].ItemResult,
-        )
-        .forEach((key) => {
-          result_key = scripts[key].ItemResult.replace(/^item_/, "");
-          items[result_key].components = scripts[key].ItemRequirements[0]
-            .split(";")
-            .map((item) => item.replace(/^item_/, "").replace("*", ""));
-          items[result_key].created = true;
-        });
-
-      //Manually Adding DiffBlade2 for match data prior to 7.07
-      items["diffusal_blade_2"] = {
-        id: 196,
-        img: "/apps/dota2/images/dota_react/items/diffusal_blade_2.png?3",
-        dname: "Diffusal Blade",
-        qual: "artifact",
-        cost: 3850,
-        desc: "Active: Purge Targets an enemy, removing buffs from the target and slowing it for 4 seconds.Range: 600\nPassive: ManabreakEach attack burns 50 mana from the target, and deals 0.8 physical damage per burned mana. Burns 16 mana per attack from melee illusions and 8 mana per attack from ranged illusions. Dispel Type: Basic Dispel",
-        notes: "Does not stack with other manabreak abilities.",
-        attrib: [
-          {
-            key: "bonus_agility",
-            header: "",
-            value: ["25", "35"],
-            footer: "Agility",
-          },
-          {
-            key: "bonus_intellect",
-            header: "",
-            value: ["10", "15"],
-            footer: "Intelligence",
-          },
-          {
-            key: "initial_charges",
-            header: "INITIAL CHARGES:",
-            value: "8",
-            generated: true,
-          },
-          {
-            key: "feedback_mana_burn",
-            header: "FEEDBACK MANA BURN:",
-            value: "50",
-            generated: true,
-          },
-          {
-            key: "feedback_mana_burn_illusion_melee",
-            header: "FEEDBACK MANA BURN ILLUSION MELEE:",
-            value: "16",
-            generated: true,
-          },
-          {
-            key: "feedback_mana_burn_illusion_ranged",
-            header: "FEEDBACK MANA BURN ILLUSION RANGED:",
-            value: "8",
-            generated: true,
-          },
-          {
-            key: "purge_summoned_damage",
-            header: "PURGE SUMMONED DAMAGE:",
-            value: "99999",
-            generated: true,
-          },
-          {
-            key: "purge_rate",
-            header: "PURGE RATE:",
-            value: "5",
-            generated: true,
-          },
-          {
-            key: "purge_root_duration",
-            header: "PURGE ROOT DURATION:",
-            value: "3",
-            generated: true,
-          },
-          {
-            key: "purge_slow_duration",
-            header: "PURGE SLOW DURATION:",
-            value: "4",
-            generated: true,
-          },
-          {
-            key: "damage_per_burn",
-            header: "DAMAGE PER BURN:",
-            value: "0.8",
-            generated: true,
-          },
-          {
-            key: "cast_range_tooltip",
-            header: "CAST RANGE TOOLTIP:",
-            value: "600",
-            generated: true,
-          },
-        ],
-        mc: false,
-        cd: 4,
-        lore: "An enchanted blade that allows the user to cut straight into the enemy's soul.",
-        components: ["diffusal_blade", "recipe_diffusal_blade"],
-        created: true,
-      };
-
-      //Manually added for match data prior to 7.07
-      items["recipe_iron_talon"] = {
-        id: 238,
-        img: "/apps/dota2/images/dota_react/items/recipe.png?3",
-        dname: "Iron Talon Recipe",
-        cost: 125,
-        desc: "",
-        notes: "",
-        attrib: [],
-        mc: false,
-        cd: false,
-        lore: "",
-        components: null,
-        created: false,
-      };
-
-      return items;
-    },
-  },
-  {
-    key: "item_ids",
-    url: idsURL,
-    transform: (respObj) => {
-      const data = respObj.itemabilities.Locked;
-      // Flip the keys and values
-      const itemIds = {};
-      Object.entries(data).forEach(([key, val]) => {
-        // Remove item_ prefix
-        itemIds[val] = key.replace("item_", "");
-      });
-      //manually adding DiffBlade2
-      itemIds[196] = "diffusal_blade_2";
-      return itemIds;
-    },
-  },
-  {
-    key: "abilities",
-    url: [abilitiesURL, npcAbilitiesURL],
-    transform: (respObj) => {
-      const strings = respObj[0].lang.Tokens;
-      const scripts = respObj[1].DOTAAbilities;
-
-      let abilities = {};
-
-      Object.keys(scripts)
-        .filter((key) => !notAbilities.has(key))
-        .forEach((key) => {
-          let ability = {};
-
-          let specialAttr = getSpecialAttrs(scripts[key]);
-
-          ability.dname = replaceSValues(
-            strings[`DOTA_Tooltip_ability_${key}`] ??
-              strings[`DOTA_Tooltip_Ability_${key}`],
-            specialAttr,
-            key,
-          );
-
-          // Check for unreplaced `s:bonus_<talent>`
-          if (
-            scripts[key].ad_linked_abilities &&
-            scripts[scripts[key].ad_linked_abilities]
-          ) {
-            ability.dname = replaceBonusSValues(
-              key,
-              ability.dname,
-              scripts[scripts[key].ad_linked_abilities].AbilityValues,
-            );
-          }
-
-          ability.behavior =
-            formatBehavior(scripts[key].AbilityBehavior) || undefined;
-          ability.dmg_type =
-            formatBehavior(scripts[key].AbilityUnitDamageType) || undefined;
-          ability.bkbpierce =
-            formatBehavior(scripts[key].SpellImmunityType) || undefined;
-          ability.dispellable =
-            formatBehavior(scripts[key].SpellDispellableType) || undefined;
-          ability.target_team =
-            formatBehavior(scripts[key].AbilityUnitTargetTeam) || undefined;
-          ability.target_type =
-            formatBehavior(scripts[key].AbilityUnitTargetType) || undefined;
-
-          ability.desc = replaceSpecialAttribs(
-            strings[`DOTA_Tooltip_ability_${key}_Description`],
-            specialAttr,
-            false,
-            scripts[key],
-            key,
-          );
-          ability.dmg =
-            scripts[key].AbilityDamage &&
-            formatValues(scripts[key].AbilityDamage);
-
-          // Clean up duplicate remapped values (we needed dupes for the tooltip)
-          if (specialAttr) {
-            Object.entries(remapAttributes).forEach(([oldAttr, newAttr]) => {
-              const oldAttrIdx = specialAttr.findIndex(
-                (attr) => Object.keys(attr)[0] === oldAttr,
-              );
-              const newAttrIdx = specialAttr.findIndex(
-                (attr) => Object.keys(attr)[0] === newAttr,
-              );
-              if (oldAttrIdx !== -1 && newAttrIdx !== -1) {
-                specialAttr.splice(oldAttrIdx, 1);
-              }
-            });
-          }
-
-          ability.attrib = formatAttrib(
-            specialAttr,
-            strings,
-            `DOTA_Tooltip_ability_${key}_`,
-          );
-
-          ability.lore = strings[`DOTA_Tooltip_ability_${key}_Lore`];
-
-          const ManaCostKey =
-            scripts[key].AbilityManaCost ??
-            scripts[key].AbilityValues?.AbilityManaCost;
-          const CooldownKey =
-            scripts[key].AbilityCooldown ??
-            scripts[key].AbilityValues?.AbilityCooldown;
-
-          if (ManaCostKey) {
-            const manaCost = isObj(ManaCostKey)
-              ? ManaCostKey["value"]
-              : ManaCostKey;
-            ability.mc = formatValues(manaCost, false, "/");
-          }
-          if (CooldownKey) {
-            const cooldown = isObj(CooldownKey)
-              ? CooldownKey["value"]
-              : CooldownKey;
-            ability.cd = formatValues(cooldown, false, "/");
-          }
-
-          ability.img = `/apps/dota2/images/dota_react/abilities/${key}.png`;
-          if (key.indexOf("special_bonus") === 0) {
-            ability = { dname: ability.dname };
-          }
-          abilities[key] = ability;
-          if (specialAttr) {
-            let aghsObj = {};
-            if (
-              scripts[key].IsGrantedByScepter ||
-              scripts[key].IsGrantedByShard
-            ) {
-              // simple straight copy to lookup
-              for (const attrib of specialAttr) {
-                for (const key of Object.keys(attrib)) {
-                  const val = attrib[key];
-                  if (isObj(val)) {
-                    aghsObj[key] = val["value"];
-                  } else {
-                    aghsObj[key] = val;
-                  }
-                }
-              }
-            } else {
-              for (const attrib of specialAttr) {
-                for (const key of Object.keys(attrib)) {
-                  const val = attrib[key];
-                  if (val === null) {
-                    continue;
-                  }
-                  // handle bonus objects
-                  if (isObj(val)) {
-                    // first case: standard attribute with aghs bonus
-                    for (const bonus of Object.keys(val)) {
-                      if (
-                        bonus.indexOf("scepter") !== -1 ||
-                        bonus.indexOf("shard") !== -1
-                      ) {
-                        const rawBonus = val[bonus]
-                          .replace("+", "")
-                          .replace("-", "")
-                          .replace("x", "")
-                          .replace("%", "");
-                        // bonus_bonus doesn't exist, it's shard_bonus or scepter_bonus at that point
-                        const aghsPrefix =
-                          bonus.indexOf("scepter") !== -1 ? "scepter" : "shard";
-                        const bonusKey = key.startsWith("bonus_")
-                          ? `${aghsPrefix}_${key}`
-                          : `bonus_${key}`;
-                        aghsObj[bonusKey] = rawBonus;
-                        aghsObj[`${key}`] = calculateValueFromBonus(
-                          val["value"],
-                          val[bonus],
-                        );
-                      }
-                    }
-                    // second case: aghs bonus attribute
-                    if (
-                      key.indexOf("scepter") !== -1 ||
-                      key.indexOf("shard") !== -1
-                    ) {
-                      const bonus = Object.keys(val)
-                        .filter((k) => k !== key)
-                        .find(
-                          (k) =>
-                            k.indexOf("scepter") !== -1 ||
-                            k.indexOf("shard") !== -1,
-                        );
-                      if (bonus) {
-                        aghsObj[key] = calculateValueFromBonus(
-                          val["value"] ?? val[key],
-                          val[bonus],
-                        );
-                      } else {
-                        aghsObj[key] = val["value"] ?? val[key];
-                      }
-                    }
-                    // third case: value requires aghs
-                    if (Object.keys(val).length == 2) {
-                      // value and requires attr
-                      if (
-                        (val["value"] && val["RequiresScepter"]) ||
-                        val["RequiresShard"]
-                      ) {
-                        aghsObj[key] = val["value"];
-                      }
-                    }
-                  } else {
-                    // simple key to value
-                    aghsObj[key] = val;
-                  }
-                }
-              }
-            }
-            aghsAbilityValues[key] = aghsObj;
-          }
-        });
-      return abilities;
-    },
-  },
-  {
-    key: "ability_ids",
-    url: idsURL,
-    transform: (respObj) => {
-      const data = respObj.unitabilities.Locked;
-      // Flip the keys and values
-      const abilityIds = {};
-      Object.entries(data).forEach(([key, val]) => {
-        abilityIds[val] = key;
-      });
-      return abilityIds;
-    },
-  },
-  {
-    key: "neutral_abilities",
-    url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_units.json",
-    transform: (respObj) => {
-      const abilitySlots = [
-        "Ability1",
-        "Ability2",
-        "Ability3",
-        "Ability4",
-        "Ability5",
-        "Ability6",
-        "Ability7",
-        "Ability8",
-      ];
-      // filter out placeholder abilities
-      const badNeutralAbilities = new Set([
-        "creep_piercing",
-        "creep_irresolute",
-        "flagbearer_creep_aura_effect",
-        "creep_siege",
-        "backdoor_protection",
-        "backdoor_protection_in_base",
-        "filler_ability",
-        "neutral_upgrade",
-      ]);
-      // filter out attachable units, couriers, buildings and siege creeps
-      const badUnitRelationships = new Set([
-        "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_ATTACHED",
-        "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_COURIER",
-        "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING",
-        "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BARRACKS",
-        "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_SIEGE",
-      ]);
-      const units = respObj.DOTAUnits;
-      const baseUnit = units["npc_dota_units_base"];
-      function getUnitProp(unit, prop, name = "") {
-        if (unit[prop] !== undefined) {
-          return unit[prop];
-        }
-        // include from other unit
-        if (unit.include_keys_from) {
-          return getUnitProp(units[unit.include_keys_from], prop);
-        }
-        // check if BaseClass is defined non-natively, if so, read from that
-        // also make sure we aren't reading from itself
-        if (
-          unit.BaseClass &&
-          unit.BaseClass !== name &&
-          units[unit.BaseClass]
-        ) {
-          return getUnitProp(units[unit.BaseClass], prop, unit.BaseClass);
-        }
-        // Fallback to the base unit
-        return baseUnit[prop];
-      }
-      const keys = Object.keys(units).filter((name) => {
-        if (badNames.has(name)) {
-          return false;
-        }
-        const unit = units[name];
-        // only special units have a minimap icon
-        if (unit.MinimapIcon) {
-          return false;
-        }
-        if (getUnitProp(unit, "BountyXP") === "0") {
-          return false;
-        }
-        // if HasInventory=0 explicitly (derived from hero), then we can filter it out
-        // if it has an inventory, it's not an neutral
-        if (
-          unit.HasInventory === "0" ||
-          getUnitProp(unit, "HasInventory") === "1"
-        ) {
-          return false;
-        }
-        if (
-          badUnitRelationships.has(getUnitProp(unit, "UnitRelationshipClass"))
-        ) {
-          return false;
-        }
-        let hasAbility = false;
-        for (const slot of abilitySlots) {
-          const ability = getUnitProp(unit, slot);
-          if (ability && !badNeutralAbilities.has(ability)) {
-            hasAbility = true;
-            break;
-          }
-        }
-        return hasAbility;
-      });
-      const neutralAbilities = {};
-      keys.forEach((key) => {
-        const unit = units[key];
-        for (const slot of abilitySlots) {
-          const ability = getUnitProp(unit, slot);
-          if (
-            ability &&
-            !badNeutralAbilities.has(ability) &&
-            !neutralAbilities[ability]
-          ) {
-            neutralAbilities[ability] = {
-              img: `/assets/images/dota2/neutral_abilities/${ability}.png`,
-            };
-          }
-        }
-      });
-      return neutralAbilities;
-    },
-  },
-  {
-    key: "ancients",
-    url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_units.json",
-    transform: (respObj) => {
-      // filter out attachable units, couriers, buildings and siege creeps
-      const badUnitRelationships = new Set([
-        "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_ATTACHED",
-        "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_COURIER",
-        "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING",
-        "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BARRACKS",
-        "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_SIEGE",
-      ]);
-      const units = respObj.DOTAUnits;
-      const baseUnit = units["npc_dota_units_base"];
-      function getUnitProp(unit, prop, name = "") {
-        if (unit[prop] !== undefined) {
-          return unit[prop];
-        }
-        // include from other unit
-        if (unit.include_keys_from) {
-          return getUnitProp(units[unit.include_keys_from], prop);
-        }
-        // check if BaseClass is defined non-natively, if so, read from that
-        // also make sure we aren't reading from itself
-        if (
-          unit.BaseClass &&
-          unit.BaseClass !== name &&
-          units[unit.BaseClass]
-        ) {
-          return getUnitProp(units[unit.BaseClass], prop, unit.BaseClass);
-        }
-        // Fallback to the base unit
-        return baseUnit[prop];
-      }
-      const keys = Object.keys(units).filter((name) => {
-        if (badNames.has(name)) {
-          return false;
-        }
-        const unit = units[name];
-        // only special units have a minimap icon
-        if (unit.MinimapIcon) {
-          return false;
-        }
-        if (getUnitProp(unit, "BountyXP") === "0") {
-          return false;
-        }
-        // if HasInventory=0 explicitly (derived from hero), then we can filter it out
-        // if it has an inventory, it's not an neutral
-        if (
-          unit.HasInventory === "0" ||
-          getUnitProp(unit, "HasInventory") === "1"
-        ) {
-          return false;
-        }
-        if (
-          getUnitProp(unit, "UnitRelationshipClass") !==
-          "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
-        ) {
-          return false;
-        }
-        const level = getUnitProp(unit, "Level");
-        if (level === "0" || level === "1") {
-          return false;
-        }
-        if (getUnitProp(unit, "TeamName") !== "DOTA_TEAM_NEUTRALS") {
-          return false;
-        }
-        if (getUnitProp(unit, "IsNeutralUnitType") === "0") {
-          return false;
-        }
-        if (getUnitProp(unit, "IsRoshan") === "1") {
-          return false;
-        }
-        return getUnitProp(unit, "IsAncient") === "1";
-      });
-      const ancients = {};
-      keys.forEach((key) => {
-        ancients[key] = 1;
-      });
-      return ancients;
-    },
-  },
-  {
-    key: "heroes",
-    url: [
-      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/dota_english.json",
-      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.json",
-      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/dota_english.json",
-    ],
-    transform: (respObj) => {
-      let heroes = [];
-      let keys = Object.keys(respObj[1].DOTAHeroes).filter(
-        (name) => !badNames.has(name),
-      );
-      keys.forEach((name) => {
-        let h = formatVpkHero(
-          name,
-          respObj[1],
-          respObj[2].lang.Tokens[`${name}:n`],
-        );
-        h.localized_name =
-          h.localized_name ||
-          respObj[1]["DOTAHeroes"][name].workshop_guide_name;
-        h.localized_name = h.localized_name || respObj[0].lang.Tokens[name];
-        heroes.push(h);
-      });
-      heroes = heroes.sort((a, b) => a.id - b.id);
-      let heroesObj = {};
-      for (hero of heroes) {
-        hero.id = Number(hero.id);
-        heroesObj[hero.id] = hero;
-      }
-      return heroesObj;
-    },
-  },
-  {
-    key: "hero_names",
-    url: [
-      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/dota_english.json",
-      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.json",
-      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/dota_english.json",
-    ],
-    transform: (respObj) => {
-      let heroes = [];
-      let keys = Object.keys(respObj[1].DOTAHeroes).filter(
-        (name) => !badNames.has(name),
-      );
-      keys.forEach((name) => {
-        let h = formatVpkHero(
-          name,
-          respObj[1],
-          respObj[2].lang.Tokens[`${name}:n`],
-        );
-        h.localized_name =
-          h.localized_name ||
-          respObj[1]["DOTAHeroes"][name].workshop_guide_name;
-        h.localized_name = h.localized_name || respObj[0].lang.Tokens[name];
-        heroes.push(h);
-      });
-      heroes = heroes.sort((a, b) => a.id - b.id);
-      let heroesObj = {};
-      for (hero of heroes) {
-        hero.id = Number(hero.id);
-        heroesObj[hero.name] = hero;
-      }
-      return heroesObj;
-    },
-  },
-  {
-    key: "hero_lore",
-    url: [
-      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/hero_lore_english.txt",
-      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.json",
-    ],
-    transform: (respObj) => {
-      let keys = Object.keys(respObj[1].DOTAHeroes).filter(
-        (name) => !badNames.has(name),
-      );
-      let sortedHeroes = [];
-      keys.forEach((name) => {
-        const hero = respObj[1].DOTAHeroes[name];
-        sortedHeroes.push({ name, id: hero.HeroID });
-      });
-      sortedHeroes = sortedHeroes.sort((a, b) => a.id - b.id);
-      const lore = respObj[0].tokens;
-      const heroLore = {};
-      sortedHeroes.forEach((hero) => {
-        const heroKey = hero.name.replace("npc_dota_hero_", "");
-        heroLore[heroKey] = lore[`${hero.name}_bio`]
-          .replace(/\t+/g, " ")
-          .replace(/\n+/g, " ")
-          .replace(/<br>+/g, " ")
-          .replace(/\s+/g, " ")
-          .replace(/\\/g, "")
-          .replace(/"/g, "'")
-          .trim();
-      });
-      return heroLore;
-    },
-  },
-  {
-    key: "hero_abilities",
-    url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.json",
-    transform: (respObj) => {
-      let DOTAHeroes = respObj.DOTAHeroes;
-      const heroAbilities = {};
-      Object.keys(DOTAHeroes).forEach(function (heroKey) {
-        if (
-          heroKey != "Version" &&
-          heroKey != "npc_dota_hero_base" &&
-          heroKey != "npc_dota_hero_target_dummy"
-        ) {
-          const newHero = { abilities: [], talents: [] };
-          let talentCounter = 2;
-          Object.keys(DOTAHeroes[heroKey]).forEach(function (key) {
-            let talentIndexStart =
-              DOTAHeroes[heroKey]["AbilityTalentStart"] != undefined
-                ? DOTAHeroes[heroKey]["AbilityTalentStart"]
-                : 10;
-            let abilityRegexMatch = key.match(/Ability([0-9]+)/);
-            if (abilityRegexMatch && DOTAHeroes[heroKey][key] != "") {
-              let abilityNum = parseInt(abilityRegexMatch[1]);
-              if (abilityNum < talentIndexStart) {
-                newHero["abilities"].push(DOTAHeroes[heroKey][key]);
-              } else {
-                // -8 not -10 because going from 0-based index -> 1 and flooring divison result
-                newHero["talents"].push({
-                  name: DOTAHeroes[heroKey][key],
-                  level: Math.floor(talentCounter / 2),
-                });
-                talentCounter++;
-              }
-            }
-          });
-          heroAbilities[heroKey] = newHero;
-        }
-      });
-      return heroAbilities;
-    },
-  },
-  {
-    key: "region",
-    url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/regions.json",
-    transform: (respObj) => {
-      const region = {};
-      const regions = respObj.regions;
-      for (const key in regions) {
-        if (Number(regions[key].region) > 0) {
-          region[regions[key].region] = regions[key].display_name
-            .slice("#dota_region_".length)
-            .split("_")
-            .map((s) => s.toUpperCase())
-            .join(" ");
-        }
-      }
-      return region;
-    },
-  },
-  // {
-  //   key: "cluster",
-  //   url: "https://api.stratz.com/api/v1/Cluster",
-  //   transform: (respObj) => {
-  //     const cluster = {};
-  //     respObj.forEach(({ id, regionId }) => {
-  //       cluster[id] = regionId;
-  //     });
-  //     return cluster;
-  //   },
-  // },
-  {
-    key: "countries",
-    url: "https://raw.githubusercontent.com/mledoze/countries/master/countries.json",
-    transform: (respObj) => {
-      const countries = {};
-      respObj
-        .map((c) => ({
-          name: {
-            common: c.name.common,
-          },
-          cca2: c.cca2,
-        }))
-        .forEach((c) => {
-          countries[c.cca2] = c;
-        });
-      return countries;
-    },
-  },
-  {
-    key: "chat_wheel",
-    url: [
-      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/chat_wheel.txt",
-      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/dota_english.json",
-      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/hero_chat_wheel_english.txt",
-    ],
-    transform: (respObj) => {
-      const chat_wheel = respObj[0];
-      const lang = respObj[1].lang.Tokens;
-      const chat_wheel_lang = respObj[2];
-
-      const result = {};
-
-      function localize(input) {
-        if (!/^#/.test(input)) {
-          return input;
-        }
-        let key = input.replace(/^#/, "");
-        return lang[key] || chat_wheel_lang[key] || key;
-      }
-
-      function addMessage(key, message) {
-        let data = {
-          id: parseInt(message.message_id),
-          name: key,
-          all_chat: message.all_chat == "1" ? true : undefined,
-          label: localize(message.label),
-          message: localize(message.message),
-          image: message.image,
-          badge_tier: message.unlock_hero_badge_tier,
-        };
-        if (message.sound) {
-          if (/^soundboard\./.test(message.sound) || /^wisp_/.test(key)) {
-            // All of the soundboard clips and the IO responses are wav files
-            data.sound_ext = "wav";
-          } else if (message.message_id / 1000 >= 121) {
-            // Gets the hero id from the message id
-            // If the hero is grimstroke or newer, the files are aac
-            data.sound_ext = "aac";
-          } else {
-            // All other response clips used are mp3s
-            data.sound_ext = "mp3";
-          }
-        }
-        result[data.id] = data;
-      }
-
-      for (let key in chat_wheel.messages) {
-        addMessage(key, chat_wheel.messages[key]);
-      }
-      for (let hero_id in chat_wheel.hero_messages) {
-        for (let key in chat_wheel.hero_messages[hero_id]) {
-          addMessage(key, chat_wheel.hero_messages[hero_id][key]);
-        }
-      }
-      return result;
-    },
-  },
-  {
-    key: "patchnotes",
-    url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/patchnotes/patchnotes_english.txt",
-    transform: (respObj) => {
-      let items = Object.keys(require("../build/items.json"));
-      let heroes = Object.keys(require("../build/hero_names.json")).map(
-        (hero) => hero.replace("npc_dota_hero_", ""),
-      );
-
-      let result = {};
-      let keys = Object.keys(respObj);
-      for (let key of keys) {
-        let keyArr = key.replace("dota_patch_", "").split("_");
-        let patch = keyArr.splice(0, 2).join("_");
-        if (!result[patch])
-          result[patch] = {
-            general: [],
-            items: {},
-            heroes: {},
-          };
-
-        if (keyArr[0].toLowerCase() == "general") {
-          result[patch].general.push(respObj[key]);
-        } else if (keyArr[0] == "item") {
-          let searchName = keyArr.slice(1);
-          let itemName = parseNameFromArray(searchName, items);
-          if (itemName) {
-            if (!result[patch].items[itemName])
-              result[patch].items[itemName] = [];
-            result[patch].items[itemName].push(respObj[key]);
-          } else {
-            if (!result[patch].items.misc) result[patch].items.misc = [];
-            result[patch].items.misc.push(respObj[key]);
-          }
-        } else {
-          let heroName = parseNameFromArray(keyArr, heroes);
-          if (heroName) {
-            if (!result[patch].heroes[heroName])
-              result[patch].heroes[heroName] = [];
-            result[patch].heroes[heroName].push(respObj[key]);
-          } else {
-            if (!result[patch].heroes.misc) result[patch].heroes.misc = [];
-            result[patch].heroes.misc.push(respObj[key]);
-          }
-        }
-      }
-
-      return result;
-    },
-  },
-  {
-    key: "aghs_desc",
-    url: aghs_desc_urls,
-    transform: (respObj) => {
-      const herodata = respObj;
-      const aghs_desc_arr = [];
-
-      // for every hero
-      herodata.forEach((hd_hero) => {
-        if (!hd_hero) {
-          return;
-        }
-        hd_hero = hd_hero.result.data.heroes[0];
-
-        // object to store data about aghs scepter/shard for a hero
-        let aghs_element = {
-          hero_name: hd_hero.name,
-          hero_id: hd_hero.id,
-
-          has_scepter: false,
-          scepter_desc: "",
-          scepter_skill_name: "",
-          scepter_new_skill: false,
-
-          has_shard: false,
-          shard_desc: "",
-          shard_skill_name: "",
-          shard_new_skill: false,
-        };
-
-        hd_hero.abilities.forEach((ability) => {
-          // skip unused skills
-          if (ability.name_loc == "" || ability.desc_loc == "") {
-            return; // i guess this is continue in JS :|
-          }
-
-          let scepterName = null;
-          let shardName = null;
-
-          // ------------- Scepter  -------------
-          if (ability.ability_is_granted_by_scepter) {
-            // scepter grants new ability
-            aghs_element.scepter_desc = ability.desc_loc;
-            aghs_element.scepter_skill_name = ability.name_loc;
-            scepterName = ability.name;
-            aghs_element.scepter_new_skill = true;
-            aghs_element.has_scepter = true;
-          } else if (
-            ability.ability_has_scepter &&
-            !(ability.scepter_loc == "")
-          ) {
-            // scepter ugprades an ability
-            aghs_element.scepter_desc = ability.scepter_loc;
-            aghs_element.scepter_skill_name = ability.name_loc;
-            scepterName = ability.name;
-            aghs_element.scepter_new_skill = false;
-            aghs_element.has_scepter = true;
-          }
-          // -------------- Shard  --------------
-          if (ability.ability_is_granted_by_shard) {
-            // scepter grants new ability
-            aghs_element.shard_desc = ability.desc_loc;
-            aghs_element.shard_skill_name = ability.name_loc;
-            shardName = ability.name;
-            aghs_element.shard_new_skill = true;
-            aghs_element.has_shard = true;
-          } else if (ability.ability_has_shard && !(ability.shard_loc == "")) {
-            // scepter ugprades an ability
-            aghs_element.shard_desc = ability.shard_loc;
-            aghs_element.shard_skill_name = ability.name_loc;
-            shardName = ability.name;
-            aghs_element.shard_new_skill = false;
-            aghs_element.has_shard = true;
-          }
-          if (scepterName) {
-            const values = aghsAbilityValues[scepterName];
-            aghs_element.scepter_desc = aghs_element.scepter_desc.replace(
-              /%([^% ]*)%/g,
-              findAghsAbilityValue(values),
-            );
-          }
-          if (shardName) {
-            const values = aghsAbilityValues[shardName];
-            aghs_element.shard_desc = aghs_element.shard_desc.replace(
-              /%([^% ]*)%/g,
-              findAghsAbilityValue(values),
-            );
-          }
-          // clean up <br> and double % signs
-          aghs_element.scepter_desc = aghs_element.scepter_desc
-            .replace(/<br>/gi, "\n")
-            .replace("%%", "%");
-          aghs_element.shard_desc = aghs_element.shard_desc
-            .replace(/<br>/gi, "\n")
-            .replace("%%", "%");
-        });
-
-        // Error handling
-        if (!aghs_element.has_shard) {
-          console.log(
-            aghs_element.hero_name +
-              "[" +
-              aghs_element.hero_id +
-              "]" +
-              ": Didn't find a scepter...",
-          );
-        }
-        if (!aghs_element.has_scepter) {
-          console.log(
-            aghs_element.hero_name +
-              "[" +
-              aghs_element.hero_id +
-              "]" +
-              ": Didn't find a shard...",
-          );
-        }
-        // push the current hero"s element into the array
-        aghs_desc_arr.push(aghs_element);
-      });
-
-      return aghs_desc_arr;
-    },
-  },
-];
+let aghsAbilityValues = {};
+const aghs_desc_urls = [];
+const abilitiesUrls = [abilitiesLoc, npcAbilitiesURL];
 
 start();
 async function start() {
   const resp = await axios.get(
     "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.json",
   );
-  let keys = Object.keys(resp.data.DOTAHeroes)
+  let ids = Object.keys(resp.data.DOTAHeroes)
     .filter((name) => !badNames.has(name))
     .map((key) => resp.data.DOTAHeroes[key].HeroID)
     .sort((a, b) => Number(a) - Number(b));
-  keys.forEach((key) => {
+  ids.forEach((key) => {
     aghs_desc_urls.push(
       "http://www.dota2.com/datafeed/herodata?language=english&hero_id=" + key,
     );
   });
+  let names = Object.keys(resp.data.DOTAHeroes).filter(
+    (name) => !badNames.has(name),
+  );
+  names.forEach((name) => {
+    // The hero abilities were moved to individual hero files, e.g. https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/heroes/npc_dota_hero_abaddon.txt
+    abilitiesUrls.push(
+      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/heroes/" +
+        name +
+        ".txt",
+    );
+  });
+
+  const sources = [
+    {
+      key: "items",
+      url: [
+        abilitiesLoc,
+        itemsURL,
+        "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/neutral_items.txt",
+        idsURL,
+      ],
+      transform: (respObj) => {
+        const strings = respObj[0].lang.Tokens;
+        const scripts = respObj[1].DOTAAbilities;
+        const neutrals = respObj[2];
+        const idLookup = respObj[3].itemabilities.Locked;
+        // parse neutral items into name => tier map
+        const neutralItemNameTierMap = getNeutralItemNameTierMap(neutrals);
+
+        // Fix places where valve doesnt care about correct case
+        Object.keys(strings).forEach((key) => {
+          if (key.includes("DOTA_Tooltip_Ability_")) {
+            strings[
+              key.replace("DOTA_Tooltip_Ability_", "DOTA_Tooltip_ability_")
+            ] = strings[key];
+          }
+        });
+
+        let items = {};
+
+        Object.keys(scripts)
+          .filter((key) => {
+            return (
+              !(key.includes("item_recipe") && scripts[key].ItemCost === "0") &&
+              key !== "Version"
+            );
+          })
+          .forEach((key) => {
+            const specialAttrs = getSpecialAttrs(scripts[key]);
+
+            let item = {
+              ...replaceSpecialAttribs(
+                strings[`DOTA_Tooltip_ability_${key}_Description`],
+                specialAttrs,
+                true,
+                scripts[key],
+                key,
+              ),
+            };
+            item.id = Number(idLookup[key]);
+            item.img = `/apps/dota2/images/dota_react/items/${key.replace(
+              /^item_/,
+              "",
+            )}.png?t=${1593393829403}`;
+            if (key.includes("item_recipe")) {
+              item.img = `/apps/dota2/images/dota_react/items/recipe.png?t=${1593393829403}`;
+            }
+
+            item.dname = strings[`DOTA_Tooltip_ability_${key}`];
+            item.qual = itemQualOverrides[key] ?? scripts[key].ItemQuality;
+            item.cost = parseInt(scripts[key].ItemCost);
+
+            let notes = [];
+            for (
+              let i = 0;
+              strings[`DOTA_Tooltip_ability_${key}_Note${i}`];
+              i++
+            ) {
+              notes.push(
+                replaceSpecialAttribs(
+                  strings[`DOTA_Tooltip_ability_${key}_Note${i}`],
+                  specialAttrs,
+                  false,
+                  scripts[key],
+                  key,
+                ),
+              );
+            }
+
+            item.notes = notes.join("\n");
+
+            item.attrib = formatAttrib(
+              scripts[key].AbilitySpecial,
+              strings,
+              `DOTA_Tooltip_ability_${key}_`,
+            ).filter((attr) => !attr.generated || attr.key === "lifetime");
+
+            item.mc = parseInt(scripts[key].AbilityManaCost) || false;
+            item.cd = parseInt(scripts[key].AbilityCooldown) || false;
+
+            item.lore = (
+              strings[`DOTA_Tooltip_ability_${key}_Lore`] || ""
+            ).replace(/\\n/g, "\r\n");
+
+            item.components = null;
+            item.created = false;
+            item.charges = parseInt(scripts[key].ItemInitialCharges) || false;
+            if (neutralItemNameTierMap[key]) {
+              item.tier = neutralItemNameTierMap[key];
+            }
+            items[key.replace(/^item_/, "")] = item;
+          });
+
+        // Load recipes
+        Object.keys(scripts)
+          .filter(
+            (key) => scripts[key].ItemRequirements && scripts[key].ItemResult,
+          )
+          .forEach((key) => {
+            result_key = scripts[key].ItemResult.replace(/^item_/, "");
+            items[result_key].components = scripts[key].ItemRequirements[0]
+              .split(";")
+              .map((item) => item.replace(/^item_/, "").replace("*", ""));
+            items[result_key].created = true;
+          });
+
+        //Manually Adding DiffBlade2 for match data prior to 7.07
+        items["diffusal_blade_2"] = {
+          id: 196,
+          img: "/apps/dota2/images/dota_react/items/diffusal_blade_2.png?3",
+          dname: "Diffusal Blade",
+          qual: "artifact",
+          cost: 3850,
+          desc: "Active: Purge Targets an enemy, removing buffs from the target and slowing it for 4 seconds.Range: 600\nPassive: ManabreakEach attack burns 50 mana from the target, and deals 0.8 physical damage per burned mana. Burns 16 mana per attack from melee illusions and 8 mana per attack from ranged illusions. Dispel Type: Basic Dispel",
+          notes: "Does not stack with other manabreak abilities.",
+          attrib: [
+            {
+              key: "bonus_agility",
+              header: "",
+              value: ["25", "35"],
+              footer: "Agility",
+            },
+            {
+              key: "bonus_intellect",
+              header: "",
+              value: ["10", "15"],
+              footer: "Intelligence",
+            },
+            {
+              key: "initial_charges",
+              header: "INITIAL CHARGES:",
+              value: "8",
+              generated: true,
+            },
+            {
+              key: "feedback_mana_burn",
+              header: "FEEDBACK MANA BURN:",
+              value: "50",
+              generated: true,
+            },
+            {
+              key: "feedback_mana_burn_illusion_melee",
+              header: "FEEDBACK MANA BURN ILLUSION MELEE:",
+              value: "16",
+              generated: true,
+            },
+            {
+              key: "feedback_mana_burn_illusion_ranged",
+              header: "FEEDBACK MANA BURN ILLUSION RANGED:",
+              value: "8",
+              generated: true,
+            },
+            {
+              key: "purge_summoned_damage",
+              header: "PURGE SUMMONED DAMAGE:",
+              value: "99999",
+              generated: true,
+            },
+            {
+              key: "purge_rate",
+              header: "PURGE RATE:",
+              value: "5",
+              generated: true,
+            },
+            {
+              key: "purge_root_duration",
+              header: "PURGE ROOT DURATION:",
+              value: "3",
+              generated: true,
+            },
+            {
+              key: "purge_slow_duration",
+              header: "PURGE SLOW DURATION:",
+              value: "4",
+              generated: true,
+            },
+            {
+              key: "damage_per_burn",
+              header: "DAMAGE PER BURN:",
+              value: "0.8",
+              generated: true,
+            },
+            {
+              key: "cast_range_tooltip",
+              header: "CAST RANGE TOOLTIP:",
+              value: "600",
+              generated: true,
+            },
+          ],
+          mc: false,
+          cd: 4,
+          lore: "An enchanted blade that allows the user to cut straight into the enemy's soul.",
+          components: ["diffusal_blade", "recipe_diffusal_blade"],
+          created: true,
+        };
+
+        //Manually added for match data prior to 7.07
+        items["recipe_iron_talon"] = {
+          id: 238,
+          img: "/apps/dota2/images/dota_react/items/recipe.png?3",
+          dname: "Iron Talon Recipe",
+          cost: 125,
+          desc: "",
+          notes: "",
+          attrib: [],
+          mc: false,
+          cd: false,
+          lore: "",
+          components: null,
+          created: false,
+        };
+
+        return items;
+      },
+    },
+    {
+      key: "item_ids",
+      url: idsURL,
+      transform: (respObj) => {
+        const data = respObj.itemabilities.Locked;
+        // Flip the keys and values
+        const itemIds = {};
+        Object.entries(data).forEach(([key, val]) => {
+          // Remove item_ prefix
+          itemIds[val] = key.replace("item_", "");
+        });
+        //manually adding DiffBlade2
+        itemIds[196] = "diffusal_blade_2";
+        return itemIds;
+      },
+    },
+    {
+      key: "abilities",
+      url: abilitiesUrls,
+      transform: (respObj) => {
+        const strings = respObj[0].lang.Tokens;
+        let scripts = respObj[1].DOTAAbilities;
+        // Merge into scripts all the hero abilities (the rest of the array)
+        for (let i = 2; i < respObj.length; i++) {
+          // console.log(respObj[i]);
+          const heroAbs = respObj[i];
+          scripts = { ...scripts, ...heroAbs };
+        }
+        let abilities = {};
+
+        Object.keys(scripts)
+          .filter((key) => !notAbilities.has(key))
+          .forEach((key) => {
+            let ability = {};
+
+            let specialAttr = getSpecialAttrs(scripts[key]);
+
+            ability.dname = replaceSValues(
+              strings[`DOTA_Tooltip_ability_${key}`] ??
+                strings[`DOTA_Tooltip_Ability_${key}`],
+              specialAttr,
+              key,
+            );
+
+            // Check for unreplaced `s:bonus_<talent>`
+            if (
+              scripts[key].ad_linked_abilities &&
+              scripts[scripts[key].ad_linked_abilities]
+            ) {
+              ability.dname = replaceBonusSValues(
+                key,
+                ability.dname,
+                scripts[scripts[key].ad_linked_abilities].AbilityValues,
+              );
+            }
+
+            ability.behavior =
+              formatBehavior(scripts[key].AbilityBehavior) || undefined;
+            ability.dmg_type =
+              formatBehavior(scripts[key].AbilityUnitDamageType) || undefined;
+            ability.bkbpierce =
+              formatBehavior(scripts[key].SpellImmunityType) || undefined;
+            ability.dispellable =
+              formatBehavior(scripts[key].SpellDispellableType) || undefined;
+            ability.target_team =
+              formatBehavior(scripts[key].AbilityUnitTargetTeam) || undefined;
+            ability.target_type =
+              formatBehavior(scripts[key].AbilityUnitTargetType) || undefined;
+
+            ability.desc = replaceSpecialAttribs(
+              strings[`DOTA_Tooltip_ability_${key}_Description`],
+              specialAttr,
+              false,
+              scripts[key],
+              key,
+            );
+            ability.dmg =
+              scripts[key].AbilityDamage &&
+              formatValues(scripts[key].AbilityDamage);
+
+            // Clean up duplicate remapped values (we needed dupes for the tooltip)
+            if (specialAttr) {
+              Object.entries(remapAttributes).forEach(([oldAttr, newAttr]) => {
+                const oldAttrIdx = specialAttr.findIndex(
+                  (attr) => Object.keys(attr)[0] === oldAttr,
+                );
+                const newAttrIdx = specialAttr.findIndex(
+                  (attr) => Object.keys(attr)[0] === newAttr,
+                );
+                if (oldAttrIdx !== -1 && newAttrIdx !== -1) {
+                  specialAttr.splice(oldAttrIdx, 1);
+                }
+              });
+            }
+
+            ability.attrib = formatAttrib(
+              specialAttr,
+              strings,
+              `DOTA_Tooltip_ability_${key}_`,
+            );
+
+            ability.lore = strings[`DOTA_Tooltip_ability_${key}_Lore`];
+
+            const ManaCostKey =
+              scripts[key].AbilityManaCost ??
+              scripts[key].AbilityValues?.AbilityManaCost;
+            const CooldownKey =
+              scripts[key].AbilityCooldown ??
+              scripts[key].AbilityValues?.AbilityCooldown;
+
+            if (ManaCostKey) {
+              const manaCost = isObj(ManaCostKey)
+                ? ManaCostKey["value"]
+                : ManaCostKey;
+              ability.mc = formatValues(manaCost, false, "/");
+            }
+            if (CooldownKey) {
+              const cooldown = isObj(CooldownKey)
+                ? CooldownKey["value"]
+                : CooldownKey;
+              ability.cd = formatValues(cooldown, false, "/");
+            }
+
+            ability.img = `/apps/dota2/images/dota_react/abilities/${key}.png`;
+            if (key.indexOf("special_bonus") === 0) {
+              ability = { dname: ability.dname };
+            }
+            abilities[key] = ability;
+            if (specialAttr) {
+              let aghsObj = {};
+              if (
+                scripts[key].IsGrantedByScepter ||
+                scripts[key].IsGrantedByShard
+              ) {
+                // simple straight copy to lookup
+                for (const attrib of specialAttr) {
+                  for (const key of Object.keys(attrib)) {
+                    const val = attrib[key];
+                    if (isObj(val)) {
+                      aghsObj[key] = val["value"];
+                    } else {
+                      aghsObj[key] = val;
+                    }
+                  }
+                }
+              } else {
+                for (const attrib of specialAttr) {
+                  for (const key of Object.keys(attrib)) {
+                    const val = attrib[key];
+                    if (val === null) {
+                      continue;
+                    }
+                    // handle bonus objects
+                    if (isObj(val)) {
+                      // first case: standard attribute with aghs bonus
+                      for (const bonus of Object.keys(val)) {
+                        if (
+                          bonus.indexOf("scepter") !== -1 ||
+                          bonus.indexOf("shard") !== -1
+                        ) {
+                          const rawBonus = val[bonus]
+                            .replace("+", "")
+                            .replace("-", "")
+                            .replace("x", "")
+                            .replace("%", "");
+                          // bonus_bonus doesn't exist, it's shard_bonus or scepter_bonus at that point
+                          const aghsPrefix =
+                            bonus.indexOf("scepter") !== -1
+                              ? "scepter"
+                              : "shard";
+                          const bonusKey = key.startsWith("bonus_")
+                            ? `${aghsPrefix}_${key}`
+                            : `bonus_${key}`;
+                          aghsObj[bonusKey] = rawBonus;
+                          aghsObj[`${key}`] = calculateValueFromBonus(
+                            val["value"],
+                            val[bonus],
+                          );
+                        }
+                      }
+                      // second case: aghs bonus attribute
+                      if (
+                        key.indexOf("scepter") !== -1 ||
+                        key.indexOf("shard") !== -1
+                      ) {
+                        const bonus = Object.keys(val)
+                          .filter((k) => k !== key)
+                          .find(
+                            (k) =>
+                              k.indexOf("scepter") !== -1 ||
+                              k.indexOf("shard") !== -1,
+                          );
+                        if (bonus) {
+                          aghsObj[key] = calculateValueFromBonus(
+                            val["value"] ?? val[key],
+                            val[bonus],
+                          );
+                        } else {
+                          aghsObj[key] = val["value"] ?? val[key];
+                        }
+                      }
+                      // third case: value requires aghs
+                      if (Object.keys(val).length == 2) {
+                        // value and requires attr
+                        if (
+                          (val["value"] && val["RequiresScepter"]) ||
+                          val["RequiresShard"]
+                        ) {
+                          aghsObj[key] = val["value"];
+                        }
+                      }
+                    } else {
+                      // simple key to value
+                      aghsObj[key] = val;
+                    }
+                  }
+                }
+              }
+              aghsAbilityValues[key] = aghsObj;
+            }
+          });
+        return abilities;
+      },
+    },
+    {
+      key: "ability_ids",
+      url: idsURL,
+      transform: (respObj) => {
+        const data = respObj.unitabilities.Locked;
+        // Flip the keys and values
+        const abilityIds = {};
+        Object.entries(data).forEach(([key, val]) => {
+          abilityIds[val] = key;
+        });
+        return abilityIds;
+      },
+    },
+    {
+      key: "neutral_abilities",
+      url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_units.json",
+      transform: (respObj) => {
+        const abilitySlots = [
+          "Ability1",
+          "Ability2",
+          "Ability3",
+          "Ability4",
+          "Ability5",
+          "Ability6",
+          "Ability7",
+          "Ability8",
+        ];
+        // filter out placeholder abilities
+        const badNeutralAbilities = new Set([
+          "creep_piercing",
+          "creep_irresolute",
+          "flagbearer_creep_aura_effect",
+          "creep_siege",
+          "backdoor_protection",
+          "backdoor_protection_in_base",
+          "filler_ability",
+          "neutral_upgrade",
+        ]);
+        // filter out attachable units, couriers, buildings and siege creeps
+        const badUnitRelationships = new Set([
+          "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_ATTACHED",
+          "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_COURIER",
+          "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING",
+          "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BARRACKS",
+          "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_SIEGE",
+        ]);
+        const units = respObj.DOTAUnits;
+        const baseUnit = units["npc_dota_units_base"];
+        function getUnitProp(unit, prop, name = "") {
+          if (unit[prop] !== undefined) {
+            return unit[prop];
+          }
+          // include from other unit
+          if (unit.include_keys_from) {
+            return getUnitProp(units[unit.include_keys_from], prop);
+          }
+          // check if BaseClass is defined non-natively, if so, read from that
+          // also make sure we aren't reading from itself
+          if (
+            unit.BaseClass &&
+            unit.BaseClass !== name &&
+            units[unit.BaseClass]
+          ) {
+            return getUnitProp(units[unit.BaseClass], prop, unit.BaseClass);
+          }
+          // Fallback to the base unit
+          return baseUnit[prop];
+        }
+        const keys = Object.keys(units).filter((name) => {
+          if (badNames.has(name)) {
+            return false;
+          }
+          const unit = units[name];
+          // only special units have a minimap icon
+          if (unit.MinimapIcon) {
+            return false;
+          }
+          if (getUnitProp(unit, "BountyXP") === "0") {
+            return false;
+          }
+          // if HasInventory=0 explicitly (derived from hero), then we can filter it out
+          // if it has an inventory, it's not an neutral
+          if (
+            unit.HasInventory === "0" ||
+            getUnitProp(unit, "HasInventory") === "1"
+          ) {
+            return false;
+          }
+          if (
+            badUnitRelationships.has(getUnitProp(unit, "UnitRelationshipClass"))
+          ) {
+            return false;
+          }
+          let hasAbility = false;
+          for (const slot of abilitySlots) {
+            const ability = getUnitProp(unit, slot);
+            if (ability && !badNeutralAbilities.has(ability)) {
+              hasAbility = true;
+              break;
+            }
+          }
+          return hasAbility;
+        });
+        const neutralAbilities = {};
+        keys.forEach((key) => {
+          const unit = units[key];
+          for (const slot of abilitySlots) {
+            const ability = getUnitProp(unit, slot);
+            if (
+              ability &&
+              !badNeutralAbilities.has(ability) &&
+              !neutralAbilities[ability]
+            ) {
+              neutralAbilities[ability] = {
+                img: `/assets/images/dota2/neutral_abilities/${ability}.png`,
+              };
+            }
+          }
+        });
+        return neutralAbilities;
+      },
+    },
+    {
+      key: "ancients",
+      url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_units.json",
+      transform: (respObj) => {
+        // filter out attachable units, couriers, buildings and siege creeps
+        const badUnitRelationships = new Set([
+          "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_ATTACHED",
+          "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_COURIER",
+          "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING",
+          "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BARRACKS",
+          "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_SIEGE",
+        ]);
+        const units = respObj.DOTAUnits;
+        const baseUnit = units["npc_dota_units_base"];
+        function getUnitProp(unit, prop, name = "") {
+          if (unit[prop] !== undefined) {
+            return unit[prop];
+          }
+          // include from other unit
+          if (unit.include_keys_from) {
+            return getUnitProp(units[unit.include_keys_from], prop);
+          }
+          // check if BaseClass is defined non-natively, if so, read from that
+          // also make sure we aren't reading from itself
+          if (
+            unit.BaseClass &&
+            unit.BaseClass !== name &&
+            units[unit.BaseClass]
+          ) {
+            return getUnitProp(units[unit.BaseClass], prop, unit.BaseClass);
+          }
+          // Fallback to the base unit
+          return baseUnit[prop];
+        }
+        const keys = Object.keys(units).filter((name) => {
+          if (badNames.has(name)) {
+            return false;
+          }
+          const unit = units[name];
+          // only special units have a minimap icon
+          if (unit.MinimapIcon) {
+            return false;
+          }
+          if (getUnitProp(unit, "BountyXP") === "0") {
+            return false;
+          }
+          // if HasInventory=0 explicitly (derived from hero), then we can filter it out
+          // if it has an inventory, it's not an neutral
+          if (
+            unit.HasInventory === "0" ||
+            getUnitProp(unit, "HasInventory") === "1"
+          ) {
+            return false;
+          }
+          if (
+            getUnitProp(unit, "UnitRelationshipClass") !==
+            "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+          ) {
+            return false;
+          }
+          const level = getUnitProp(unit, "Level");
+          if (level === "0" || level === "1") {
+            return false;
+          }
+          if (getUnitProp(unit, "TeamName") !== "DOTA_TEAM_NEUTRALS") {
+            return false;
+          }
+          if (getUnitProp(unit, "IsNeutralUnitType") === "0") {
+            return false;
+          }
+          if (getUnitProp(unit, "IsRoshan") === "1") {
+            return false;
+          }
+          return getUnitProp(unit, "IsAncient") === "1";
+        });
+        const ancients = {};
+        keys.forEach((key) => {
+          ancients[key] = 1;
+        });
+        return ancients;
+      },
+    },
+    {
+      key: "heroes",
+      url: [
+        "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/dota_english.json",
+        "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.json",
+        "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/dota_english.json",
+      ],
+      transform: (respObj) => {
+        let heroes = [];
+        let keys = Object.keys(respObj[1].DOTAHeroes).filter(
+          (name) => !badNames.has(name),
+        );
+        keys.forEach((name) => {
+          let h = formatVpkHero(
+            name,
+            respObj[1],
+            respObj[2].lang.Tokens[`${name}:n`],
+          );
+          h.localized_name =
+            h.localized_name ||
+            respObj[1]["DOTAHeroes"][name].workshop_guide_name;
+          h.localized_name = h.localized_name || respObj[0].lang.Tokens[name];
+          heroes.push(h);
+        });
+        heroes = heroes.sort((a, b) => a.id - b.id);
+        let heroesObj = {};
+        for (hero of heroes) {
+          hero.id = Number(hero.id);
+          heroesObj[hero.id] = hero;
+        }
+        return heroesObj;
+      },
+    },
+    {
+      key: "hero_names",
+      url: [
+        "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/dota_english.json",
+        "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.json",
+        "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/dota_english.json",
+      ],
+      transform: (respObj) => {
+        let heroes = [];
+        let keys = Object.keys(respObj[1].DOTAHeroes).filter(
+          (name) => !badNames.has(name),
+        );
+        keys.forEach((name) => {
+          let h = formatVpkHero(
+            name,
+            respObj[1],
+            respObj[2].lang.Tokens[`${name}:n`],
+          );
+          h.localized_name =
+            h.localized_name ||
+            respObj[1]["DOTAHeroes"][name].workshop_guide_name;
+          h.localized_name = h.localized_name || respObj[0].lang.Tokens[name];
+          heroes.push(h);
+        });
+        heroes = heroes.sort((a, b) => a.id - b.id);
+        let heroesObj = {};
+        for (hero of heroes) {
+          hero.id = Number(hero.id);
+          heroesObj[hero.name] = hero;
+        }
+        return heroesObj;
+      },
+    },
+    {
+      key: "hero_lore",
+      url: [
+        "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/hero_lore_english.txt",
+        "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.json",
+      ],
+      transform: (respObj) => {
+        let keys = Object.keys(respObj[1].DOTAHeroes).filter(
+          (name) => !badNames.has(name),
+        );
+        let sortedHeroes = [];
+        keys.forEach((name) => {
+          const hero = respObj[1].DOTAHeroes[name];
+          sortedHeroes.push({ name, id: hero.HeroID });
+        });
+        sortedHeroes = sortedHeroes.sort((a, b) => a.id - b.id);
+        const lore = respObj[0].tokens;
+        const heroLore = {};
+        sortedHeroes.forEach((hero) => {
+          const heroKey = hero.name.replace("npc_dota_hero_", "");
+          heroLore[heroKey] = lore[`${hero.name}_bio`]
+            .replace(/\t+/g, " ")
+            .replace(/\n+/g, " ")
+            .replace(/<br>+/g, " ")
+            .replace(/\s+/g, " ")
+            .replace(/\\/g, "")
+            .replace(/"/g, "'")
+            .trim();
+        });
+        return heroLore;
+      },
+    },
+    {
+      key: "hero_abilities",
+      url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.json",
+      transform: (respObj) => {
+        let DOTAHeroes = respObj.DOTAHeroes;
+        const heroAbilities = {};
+        Object.keys(DOTAHeroes).forEach(function (heroKey) {
+          if (
+            heroKey != "Version" &&
+            heroKey != "npc_dota_hero_base" &&
+            heroKey != "npc_dota_hero_target_dummy"
+          ) {
+            const newHero = { abilities: [], talents: [] };
+            let talentCounter = 2;
+            Object.keys(DOTAHeroes[heroKey]).forEach(function (key) {
+              let talentIndexStart =
+                DOTAHeroes[heroKey]["AbilityTalentStart"] != undefined
+                  ? DOTAHeroes[heroKey]["AbilityTalentStart"]
+                  : 10;
+              let abilityRegexMatch = key.match(/Ability([0-9]+)/);
+              if (abilityRegexMatch && DOTAHeroes[heroKey][key] != "") {
+                let abilityNum = parseInt(abilityRegexMatch[1]);
+                if (abilityNum < talentIndexStart) {
+                  newHero["abilities"].push(DOTAHeroes[heroKey][key]);
+                } else {
+                  // -8 not -10 because going from 0-based index -> 1 and flooring divison result
+                  newHero["talents"].push({
+                    name: DOTAHeroes[heroKey][key],
+                    level: Math.floor(talentCounter / 2),
+                  });
+                  talentCounter++;
+                }
+              }
+            });
+            heroAbilities[heroKey] = newHero;
+          }
+        });
+        return heroAbilities;
+      },
+    },
+    {
+      key: "region",
+      url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/regions.json",
+      transform: (respObj) => {
+        const region = {};
+        const regions = respObj.regions;
+        for (const key in regions) {
+          if (Number(regions[key].region) > 0) {
+            region[regions[key].region] = regions[key].display_name
+              .slice("#dota_region_".length)
+              .split("_")
+              .map((s) => s.toUpperCase())
+              .join(" ");
+          }
+        }
+        return region;
+      },
+    },
+    // {
+    //   key: "cluster",
+    //   url: "https://api.stratz.com/api/v1/Cluster",
+    //   transform: (respObj) => {
+    //     const cluster = {};
+    //     respObj.forEach(({ id, regionId }) => {
+    //       cluster[id] = regionId;
+    //     });
+    //     return cluster;
+    //   },
+    // },
+    {
+      key: "countries",
+      url: "https://raw.githubusercontent.com/mledoze/countries/master/countries.json",
+      transform: (respObj) => {
+        const countries = {};
+        respObj
+          .map((c) => ({
+            name: {
+              common: c.name.common,
+            },
+            cca2: c.cca2,
+          }))
+          .forEach((c) => {
+            countries[c.cca2] = c;
+          });
+        return countries;
+      },
+    },
+    {
+      key: "chat_wheel",
+      url: [
+        "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/chat_wheel.txt",
+        "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/dota_english.json",
+        "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/hero_chat_wheel_english.txt",
+      ],
+      transform: (respObj) => {
+        const chat_wheel = respObj[0];
+        const lang = respObj[1].lang.Tokens;
+        const chat_wheel_lang = respObj[2];
+
+        const result = {};
+
+        function localize(input) {
+          if (!/^#/.test(input)) {
+            return input;
+          }
+          let key = input.replace(/^#/, "");
+          return lang[key] || chat_wheel_lang[key] || key;
+        }
+
+        function addMessage(key, message) {
+          let data = {
+            id: parseInt(message.message_id),
+            name: key,
+            all_chat: message.all_chat == "1" ? true : undefined,
+            label: localize(message.label),
+            message: localize(message.message),
+            image: message.image,
+            badge_tier: message.unlock_hero_badge_tier,
+          };
+          if (message.sound) {
+            if (/^soundboard\./.test(message.sound) || /^wisp_/.test(key)) {
+              // All of the soundboard clips and the IO responses are wav files
+              data.sound_ext = "wav";
+            } else if (message.message_id / 1000 >= 121) {
+              // Gets the hero id from the message id
+              // If the hero is grimstroke or newer, the files are aac
+              data.sound_ext = "aac";
+            } else {
+              // All other response clips used are mp3s
+              data.sound_ext = "mp3";
+            }
+          }
+          result[data.id] = data;
+        }
+
+        for (let key in chat_wheel.messages) {
+          addMessage(key, chat_wheel.messages[key]);
+        }
+        for (let hero_id in chat_wheel.hero_messages) {
+          for (let key in chat_wheel.hero_messages[hero_id]) {
+            addMessage(key, chat_wheel.hero_messages[hero_id][key]);
+          }
+        }
+        return result;
+      },
+    },
+    {
+      key: "patchnotes",
+      url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/patchnotes/patchnotes_english.txt",
+      transform: (respObj) => {
+        let items = Object.keys(require("../build/items.json"));
+        let heroes = Object.keys(require("../build/hero_names.json")).map(
+          (hero) => hero.replace("npc_dota_hero_", ""),
+        );
+
+        let result = {};
+        let keys = Object.keys(respObj);
+        for (let key of keys) {
+          let keyArr = key.replace("dota_patch_", "").split("_");
+          let patch = keyArr.splice(0, 2).join("_");
+          if (!result[patch])
+            result[patch] = {
+              general: [],
+              items: {},
+              heroes: {},
+            };
+
+          if (keyArr[0].toLowerCase() == "general") {
+            result[patch].general.push(respObj[key]);
+          } else if (keyArr[0] == "item") {
+            let searchName = keyArr.slice(1);
+            let itemName = parseNameFromArray(searchName, items);
+            if (itemName) {
+              if (!result[patch].items[itemName])
+                result[patch].items[itemName] = [];
+              result[patch].items[itemName].push(respObj[key]);
+            } else {
+              if (!result[patch].items.misc) result[patch].items.misc = [];
+              result[patch].items.misc.push(respObj[key]);
+            }
+          } else {
+            let heroName = parseNameFromArray(keyArr, heroes);
+            if (heroName) {
+              if (!result[patch].heroes[heroName])
+                result[patch].heroes[heroName] = [];
+              result[patch].heroes[heroName].push(respObj[key]);
+            } else {
+              if (!result[patch].heroes.misc) result[patch].heroes.misc = [];
+              result[patch].heroes.misc.push(respObj[key]);
+            }
+          }
+        }
+
+        return result;
+      },
+    },
+    // NOTE: This needs to run after abilities since it depends on aghsAbilityValues
+    {
+      key: "aghs_desc",
+      url: aghs_desc_urls,
+      transform: (respObj) => {
+        const herodata = respObj;
+        const aghs_desc_arr = [];
+
+        // for every hero
+        herodata.forEach((hd_hero) => {
+          if (!hd_hero) {
+            return;
+          }
+          hd_hero = hd_hero.result.data.heroes[0];
+
+          // object to store data about aghs scepter/shard for a hero
+          let aghs_element = {
+            hero_name: hd_hero.name,
+            hero_id: hd_hero.id,
+
+            has_scepter: false,
+            scepter_desc: "",
+            scepter_skill_name: "",
+            scepter_new_skill: false,
+
+            has_shard: false,
+            shard_desc: "",
+            shard_skill_name: "",
+            shard_new_skill: false,
+          };
+
+          hd_hero.abilities.forEach((ability) => {
+            // skip unused skills
+            if (ability.name_loc == "" || ability.desc_loc == "") {
+              return; // i guess this is continue in JS :|
+            }
+
+            let scepterName = null;
+            let shardName = null;
+
+            // ------------- Scepter  -------------
+            if (ability.ability_is_granted_by_scepter) {
+              // scepter grants new ability
+              aghs_element.scepter_desc = ability.desc_loc;
+              aghs_element.scepter_skill_name = ability.name_loc;
+              scepterName = ability.name;
+              aghs_element.scepter_new_skill = true;
+              aghs_element.has_scepter = true;
+            } else if (
+              ability.ability_has_scepter &&
+              !(ability.scepter_loc == "")
+            ) {
+              // scepter ugprades an ability
+              aghs_element.scepter_desc = ability.scepter_loc;
+              aghs_element.scepter_skill_name = ability.name_loc;
+              scepterName = ability.name;
+              aghs_element.scepter_new_skill = false;
+              aghs_element.has_scepter = true;
+            }
+            // -------------- Shard  --------------
+            if (ability.ability_is_granted_by_shard) {
+              // scepter grants new ability
+              aghs_element.shard_desc = ability.desc_loc;
+              aghs_element.shard_skill_name = ability.name_loc;
+              shardName = ability.name;
+              aghs_element.shard_new_skill = true;
+              aghs_element.has_shard = true;
+            } else if (
+              ability.ability_has_shard &&
+              !(ability.shard_loc == "")
+            ) {
+              // scepter ugprades an ability
+              aghs_element.shard_desc = ability.shard_loc;
+              aghs_element.shard_skill_name = ability.name_loc;
+              shardName = ability.name;
+              aghs_element.shard_new_skill = false;
+              aghs_element.has_shard = true;
+            }
+            if (scepterName) {
+              const values = aghsAbilityValues[scepterName];
+              aghs_element.scepter_desc = aghs_element.scepter_desc.replace(
+                /%([^% ]*)%/g,
+                findAghsAbilityValue(values),
+              );
+            }
+            if (shardName) {
+              const values = aghsAbilityValues[shardName];
+              aghs_element.shard_desc = aghs_element.shard_desc.replace(
+                /%([^% ]*)%/g,
+                findAghsAbilityValue(values),
+              );
+            }
+            // clean up <br> and double % signs
+            aghs_element.scepter_desc = aghs_element.scepter_desc
+              .replace(/<br>/gi, "\n")
+              .replace("%%", "%");
+            aghs_element.shard_desc = aghs_element.shard_desc
+              .replace(/<br>/gi, "\n")
+              .replace("%%", "%");
+          });
+
+          // Error handling
+          if (!aghs_element.has_shard) {
+            console.log(
+              aghs_element.hero_name +
+                "[" +
+                aghs_element.hero_id +
+                "]" +
+                ": Didn't find a scepter...",
+            );
+          }
+          if (!aghs_element.has_scepter) {
+            console.log(
+              aghs_element.hero_name +
+                "[" +
+                aghs_element.hero_id +
+                "]" +
+                ": Didn't find a shard...",
+            );
+          }
+          // push the current hero"s element into the array
+          aghs_desc_arr.push(aghs_element);
+        });
+
+        return aghs_desc_arr;
+      },
+    },
+  ];
+
   for (let i = 0; i < sources.length; i++) {
     const s = sources[i];
     const url = s.url;
@@ -1231,6 +1246,8 @@ async function start() {
     const resps = await Promise.all(
       arr.map(async (url) => {
         const resp = await axios.get(url, { responseType: "text" });
+        // Fix kotl file
+        resp.data = resp.data.replace('"channel_vision_radius"	{', '"channel_vision_radius"\n{');
         return parseJsonOrVdf(resp.data);
       }),
     );
@@ -1269,6 +1286,15 @@ ${cfs
   process.exit(0);
 }
 
+function isObj(obj) {
+  return (
+    obj !== null &&
+    obj !== undefined &&
+    typeof obj === "object" &&
+    !Array.isArray(obj)
+  );
+}
+
 function parseJsonOrVdf(text) {
   try {
     return JSON.parse(text);
@@ -1283,7 +1309,7 @@ function parseJsonOrVdf(text) {
       }
       return normalized;
     } catch (e) {
-      console.error("Couldn't parse JSON or VDF");
+      console.error("Couldn't parse JSON or VDF", text);
       throw e;
     }
   }
