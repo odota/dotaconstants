@@ -292,13 +292,13 @@ async function start() {
             {
               key: "bonus_agility",
               header: "",
-              value: ["25", "35"],
+              value: "25 / 35",
               footer: "Agility",
             },
             {
               key: "bonus_intellect",
               header: "",
-              value: ["10", "15"],
+              value: "10 / 15",
               footer: "Intelligence",
             },
             {
