@@ -124,10 +124,10 @@ const itemQualOverrides = {
   revenants_brooch: "epic",
 };
 
-const itemsURL =
-  "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/items.json";
+// TODO update to VDF
 const abilitiesLoc =
   "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/abilities_english.json";
+// TODO update to VDF
 const npcAbilitiesURL =
   "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_abilities.json";
 const idsURL =
@@ -139,6 +139,7 @@ const abilitiesUrls = [abilitiesLoc, npcAbilitiesURL];
 
 start();
 async function start() {
+  // TODO update to VDF
   const resp = await axios.get(
     "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.json",
   );
@@ -168,13 +169,13 @@ async function start() {
       key: "items",
       url: [
         abilitiesLoc,
-        itemsURL,
+        "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/items.txt",
         "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/neutral_items.txt",
         idsURL,
       ],
       transform: (respObj) => {
         const strings = respObj[0].lang.Tokens;
-        const scripts = respObj[1].DOTAAbilities;
+        const scripts = respObj[1];
         const neutrals = respObj[2];
         const idLookup = respObj[3].itemabilities.Locked;
         // parse neutral items into name => tier map
@@ -273,8 +274,8 @@ async function start() {
           )
           .forEach((key) => {
             result_key = scripts[key].ItemResult.replace(/^item_/, "");
-            items[result_key].components = scripts[key].ItemRequirements[0]
-              .split(";")
+            items[result_key].components = scripts[key].ItemRequirements["01"]
+              ?.split(";")
               .map((item) => item.replace(/^item_/, "").replace("*", ""));
             items[result_key].created = true;
           });
@@ -627,6 +628,7 @@ async function start() {
     },
     {
       key: "neutral_abilities",
+      // TODO update to VDF
       url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_units.json",
       transform: (respObj) => {
         const abilitySlots = [
@@ -736,6 +738,7 @@ async function start() {
     },
     {
       key: "ancients",
+      // TODO update to VDF
       url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_units.json",
       transform: (respObj) => {
         // filter out attachable units, couriers, buildings and siege creeps
@@ -819,8 +822,11 @@ async function start() {
     {
       key: "heroes",
       url: [
+        // TODO update to VDF
         "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/dota_english.json",
+        // TODO update to VDF
         "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.json",
+        // TODO update to VDF
         "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/dota_english.json",
       ],
       transform: (respObj) => {
@@ -853,6 +859,7 @@ async function start() {
       key: "hero_lore",
       url: [
         "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/hero_lore_english.txt",
+        // TODO update to VDF
         "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.json",
       ],
       transform: (respObj) => {
@@ -883,6 +890,7 @@ async function start() {
     },
     {
       key: "hero_abilities",
+      // TODO update to VDF
       url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.json",
       transform: (respObj) => {
         let DOTAHeroes = respObj.DOTAHeroes;
@@ -923,6 +931,7 @@ async function start() {
     },
     {
       key: "region",
+      // TODO update to VDF
       url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/regions.json",
       transform: (respObj) => {
         const region = {};
@@ -972,6 +981,7 @@ async function start() {
       key: "chat_wheel",
       url: [
         "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/chat_wheel.txt",
+        // TODO update to VDF
         "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/dota_english.json",
         "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/hero_chat_wheel_english.txt",
       ],
@@ -1527,7 +1537,7 @@ function replaceBonusSValues(key, template, attribs) {
 }
 
 // Formats templates like "Storm"s movement speed is %storm_move_speed%" with "Storm"s movement speed is 32"
-// args are the template, and a list of attribute dictionaries, like the ones in AbilitySpecial for each ability in the npc_abilities.json from the vpk
+// args are the template, and a list of attribute dictionaries, like the ones in AbilitySpecial for each ability in the npc_abilities from the vpk
 function replaceSpecialAttribs(
   template,
   attribs,
