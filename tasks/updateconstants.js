@@ -124,35 +124,34 @@ const itemQualOverrides = {
   revenants_brooch: "epic",
 };
 
+const idsUrl =
+"https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_ability_ids.txt";
+const heroesUrl = "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.txt";
 // TODO update to VDF
 const abilitiesLoc =
   "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/abilities_english.json";
-// TODO update to VDF
-const npcAbilitiesURL =
+const npcAbilitiesUrl =
   "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_abilities.json";
-const idsURL =
-  "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_ability_ids.txt";
-
+const npcUnitsUrl = "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_units.json";
+const localizationUrl = "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/dota_english.json";
 let aghsAbilityValues = {};
 const aghs_desc_urls = [];
-const abilitiesUrls = [abilitiesLoc, npcAbilitiesURL];
+const abilitiesUrls = [abilitiesLoc, npcAbilitiesUrl];
 
 start();
 async function start() {
-  // TODO update to VDF
-  const resp = await axios.get(
-    "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.json",
-  );
-  let ids = Object.keys(resp.data.DOTAHeroes)
+  const resp = await axios.get(heroesUrl, { responseType: 'text' });
+  const heroesVdf = parseJsonOrVdf(resp.data);
+  let ids = Object.keys(heroesVdf.DOTAHeroes)
     .filter((name) => !badNames.has(name))
-    .map((key) => resp.data.DOTAHeroes[key].HeroID)
+    .map((key) => heroesVdf.DOTAHeroes[key].HeroID)
     .sort((a, b) => Number(a) - Number(b));
   ids.forEach((key) => {
     aghs_desc_urls.push(
       "http://www.dota2.com/datafeed/herodata?language=english&hero_id=" + key,
     );
   });
-  let names = Object.keys(resp.data.DOTAHeroes).filter(
+  let names = Object.keys(heroesVdf.DOTAHeroes).filter(
     (name) => !badNames.has(name),
   );
   names.forEach((name) => {
@@ -171,13 +170,13 @@ async function start() {
         abilitiesLoc,
         "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/items.txt",
         "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/neutral_items.txt",
-        idsURL,
+        idsUrl,
       ],
       transform: (respObj) => {
         const strings = respObj[0].lang.Tokens;
-        const scripts = respObj[1];
-        const neutrals = respObj[2];
-        const idLookup = respObj[3].itemabilities.Locked;
+        const scripts = respObj[1].DOTAAbilities;
+        const neutrals = respObj[2].neutral_items;
+        const idLookup = respObj[3].DOTAAbilityIDs.ItemAbilities.Locked;
         // parse neutral items into name => tier map
         const neutralItemNameTierMap = getNeutralItemNameTierMap(neutrals);
 
@@ -391,9 +390,9 @@ async function start() {
     },
     {
       key: "item_ids",
-      url: idsURL,
+      url: idsUrl,
       transform: (respObj) => {
-        const data = respObj.itemabilities.Locked;
+        const data = respObj.DOTAAbilityIDs.ItemAbilities.Locked;
         // Flip the keys and values
         const itemIds = {};
         Object.entries(data).forEach(([key, val]) => {
@@ -414,7 +413,7 @@ async function start() {
         // Merge into scripts all the hero abilities (the rest of the array)
         for (let i = 2; i < respObj.length; i++) {
           // console.log(respObj[i]);
-          const heroAbs = respObj[i];
+          const heroAbs = respObj[i].DOTAAbilities;
           scripts = { ...scripts, ...heroAbs };
         }
         let abilities = {};
@@ -615,9 +614,9 @@ async function start() {
     },
     {
       key: "ability_ids",
-      url: idsURL,
+      url: idsUrl,
       transform: (respObj) => {
-        const data = respObj.unitabilities.Locked;
+        const data = respObj.DOTAAbilityIDs.UnitAbilities.Locked;
         // Flip the keys and values
         const abilityIds = {};
         Object.entries(data).forEach(([key, val]) => {
@@ -628,8 +627,7 @@ async function start() {
     },
     {
       key: "neutral_abilities",
-      // TODO update to VDF
-      url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_units.json",
+      url: npcUnitsUrl,
       transform: (respObj) => {
         const abilitySlots = [
           "Ability1",
@@ -738,8 +736,7 @@ async function start() {
     },
     {
       key: "ancients",
-      // TODO update to VDF
-      url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_units.json",
+      url: npcUnitsUrl,
       transform: (respObj) => {
         // filter out attachable units, couriers, buildings and siege creeps
         const badUnitRelationships = new Set([
@@ -822,12 +819,8 @@ async function start() {
     {
       key: "heroes",
       url: [
-        // TODO update to VDF
-        "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/dota_english.json",
-        // TODO update to VDF
-        "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.json",
-        // TODO update to VDF
-        "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/dota_english.json",
+        localizationUrl,
+        heroesUrl,
       ],
       transform: (respObj) => {
         let heroes = [];
@@ -838,12 +831,8 @@ async function start() {
           let h = formatVpkHero(
             name,
             respObj[1],
-            respObj[2].lang.Tokens[`${name}:n`],
           );
-          h.localized_name =
-            h.localized_name ||
-            respObj[1]["DOTAHeroes"][name].workshop_guide_name;
-          h.localized_name = h.localized_name || respObj[0].lang.Tokens[name];
+          h.localized_name = respObj[1].DOTAHeroes[name].workshop_guide_name ?? respObj[0].lang.Tokens[name + ':n'];
           heroes.push(h);
         });
         heroes = heroes.sort((a, b) => a.id - b.id);
@@ -859,8 +848,7 @@ async function start() {
       key: "hero_lore",
       url: [
         "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/hero_lore_english.txt",
-        // TODO update to VDF
-        "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.json",
+        heroesUrl,
       ],
       transform: (respObj) => {
         let keys = Object.keys(respObj[1].DOTAHeroes).filter(
@@ -872,7 +860,7 @@ async function start() {
           sortedHeroes.push({ name, id: hero.HeroID });
         });
         sortedHeroes = sortedHeroes.sort((a, b) => a.id - b.id);
-        const lore = respObj[0].tokens;
+        const lore = respObj[0].lang.Tokens;
         const heroLore = {};
         sortedHeroes.forEach((hero) => {
           const heroKey = hero.name.replace("npc_dota_hero_", "");
@@ -890,12 +878,11 @@ async function start() {
     },
     {
       key: "hero_abilities",
-      // TODO update to VDF
-      url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.json",
+      url: heroesUrl,
       transform: (respObj) => {
-        let DOTAHeroes = respObj.DOTAHeroes;
+        let heroes = respObj.DOTAHeroes;
         const heroAbilities = {};
-        Object.keys(DOTAHeroes).forEach(function (heroKey) {
+        Object.keys(heroes).forEach(function (heroKey) {
           if (
             heroKey != "Version" &&
             heroKey != "npc_dota_hero_base" &&
@@ -903,20 +890,20 @@ async function start() {
           ) {
             const newHero = { abilities: [], talents: [] };
             let talentCounter = 2;
-            Object.keys(DOTAHeroes[heroKey]).forEach(function (key) {
+            Object.keys(heroes[heroKey]).forEach(function (key) {
               let talentIndexStart =
-                DOTAHeroes[heroKey]["AbilityTalentStart"] != undefined
-                  ? DOTAHeroes[heroKey]["AbilityTalentStart"]
+                heroes[heroKey]["AbilityTalentStart"] != undefined
+                  ? heroes[heroKey]["AbilityTalentStart"]
                   : 10;
               let abilityRegexMatch = key.match(/Ability([0-9]+)/);
-              if (abilityRegexMatch && DOTAHeroes[heroKey][key] != "") {
+              if (abilityRegexMatch && heroes[heroKey][key] != "") {
                 let abilityNum = parseInt(abilityRegexMatch[1]);
                 if (abilityNum < talentIndexStart) {
-                  newHero["abilities"].push(DOTAHeroes[heroKey][key]);
+                  newHero["abilities"].push(heroes[heroKey][key]);
                 } else {
                   // -8 not -10 because going from 0-based index -> 1 and flooring divison result
                   newHero["talents"].push({
-                    name: DOTAHeroes[heroKey][key],
+                    name: heroes[heroKey][key],
                     level: Math.floor(talentCounter / 2),
                   });
                   talentCounter++;
@@ -981,14 +968,13 @@ async function start() {
       key: "chat_wheel",
       url: [
         "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/chat_wheel.txt",
-        // TODO update to VDF
-        "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/dota_english.json",
+        localizationUrl,
         "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/hero_chat_wheel_english.txt",
       ],
       transform: (respObj) => {
-        const chat_wheel = respObj[0];
+        const chat_wheel = respObj[0].chat_wheel;
         const lang = respObj[1].lang.Tokens;
-        const chat_wheel_lang = respObj[2];
+        const chat_wheel_lang = respObj[2].hero_chat_wheel;
 
         const result = {};
 
@@ -1044,11 +1030,12 @@ async function start() {
       transform: (respObj) => {
         let items = Object.keys(require("../build/items.json"));
         let heroes = Object.keys(require("../build/hero_lore.json"));
+        const data = respObj.patch;
 
         let result = {};
-        let keys = Object.keys(respObj);
+        let keys = Object.keys(data);
         for (let key of keys) {
-          let keyArr = key.replace("dota_patch_", "").split("_");
+          let keyArr = key.replace("DOTA_Patch_", "").split("_");
           let patch = keyArr.splice(0, 2).join("_");
           if (!result[patch])
             result[patch] = {
@@ -1058,27 +1045,27 @@ async function start() {
             };
 
           if (keyArr[0].toLowerCase() == "general") {
-            result[patch].general.push(respObj[key]);
+            result[patch].general.push(data[key]);
           } else if (keyArr[0] == "item") {
             let searchName = keyArr.slice(1);
             let itemName = parseNameFromArray(searchName, items);
             if (itemName) {
               if (!result[patch].items[itemName])
                 result[patch].items[itemName] = [];
-              result[patch].items[itemName].push(respObj[key]);
+              result[patch].items[itemName].push(data[key]);
             } else {
               if (!result[patch].items.misc) result[patch].items.misc = [];
-              result[patch].items.misc.push(respObj[key]);
+              result[patch].items.misc.push(data[key]);
             }
           } else {
             let heroName = parseNameFromArray(keyArr, heroes);
             if (heroName) {
               if (!result[patch].heroes[heroName])
                 result[patch].heroes[heroName] = [];
-              result[patch].heroes[heroName].push(respObj[key]);
+              result[patch].heroes[heroName].push(data[key]);
             } else {
               if (!result[patch].heroes.misc) result[patch].heroes.misc = [];
-              result[patch].heroes.misc.push(respObj[key]);
+              result[patch].heroes.misc.push(data[key]);
             }
           }
         }
@@ -1279,13 +1266,7 @@ function parseJsonOrVdf(text) {
   } catch (err) {
     try {
       let vdf = simplevdf.parse(text);
-      vdf = vdf[Object.keys(vdf)[0]];
-      let keys = Object.keys(vdf);
-      let normalized = {};
-      for (let key of keys) {
-        normalized[key.toLowerCase()] = vdf[key];
-      }
-      return normalized;
+      return vdf;
     } catch (e) {
       console.error("Couldn't parse JSON or VDF", text);
       throw e;
@@ -1675,7 +1656,7 @@ function formatBehavior(string) {
   }
 }
 
-function formatVpkHero(key, vpkr, localized_name) {
+function formatVpkHero(key, vpkr) {
   let h = {};
 
   let vpkrh = vpkr.DOTAHeroes[key];
@@ -1683,7 +1664,6 @@ function formatVpkHero(key, vpkr, localized_name) {
 
   h.id = vpkrh.HeroID;
   h.name = key;
-  h.localized_name = localized_name;
 
   h.primary_attr = vpkrh.AttributePrimary.replace("DOTA_ATTRIBUTE_", "")
     .slice(0, 3)
