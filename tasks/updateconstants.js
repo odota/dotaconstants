@@ -127,13 +127,14 @@ const itemQualOverrides = {
 const idsUrl =
 "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_ability_ids.txt";
 const heroesUrl = "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.txt";
-// TODO update to VDF
 const abilitiesLoc =
-  "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/abilities_english.json";
+"https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/abilities_english.txt";
 const npcAbilitiesUrl =
-  "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_abilities.json";
-const npcUnitsUrl = "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_units.json";
+"https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_abilities.txt";
+const npcUnitsUrl = "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_units.txt";
+// TODO update to VDF
 const localizationUrl = "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/dota_english.json";
+
 let aghsAbilityValues = {};
 const aghs_desc_urls = [];
 const abilitiesUrls = [abilitiesLoc, npcAbilitiesUrl];
@@ -1284,13 +1285,16 @@ function getSpecialAttrs(entity) {
       }));
     }
   } else {
-    // Fix weird attrib formatting on very rare cases.
-    // e.g.: spirit_breaker_empowering_haste
-    if (!Array.isArray(specialAttr) && typeof specialAttr == "object") {
-      specialAttr = Object.keys(specialAttr).map((key) => {
-        return specialAttr[key];
-      });
-    }
+    specialAttr = Object.entries(specialAttr).map(([key, val]) => {
+      // val looks like the following, so just take the value of the second key
+      /*
+      {
+				"var_type"				"FIELD_INTEGER"
+				"bonus_movement"			"20"
+      }
+			*/
+      return { [Object.keys(val)[1]]: val[Object.keys(val)[1]] };
+    });
   }
   return specialAttr;
 }

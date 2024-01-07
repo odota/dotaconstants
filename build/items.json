@@ -2423,6 +2423,7 @@
   "tiara_of_selemene": {
     "id": 1802,
     "img": "/apps/dota2/images/dota_react/items/tiara_of_selemene.png?t=1593393829403",
+    "dname": "Tiara of Selemene",
     "qual": "component",
     "cost": 1800,
     "notes": "",
@@ -2435,7 +2436,7 @@
     ],
     "mc": false,
     "cd": false,
-    "lore": "",
+    "lore": "Tiara!",
     "components": null,
     "created": false,
     "charges": false
@@ -2934,6 +2935,7 @@
   "recipe_phylactery": {
     "id": 1106,
     "img": "/apps/dota2/images/dota_react/items/recipe.png?t=1593393829403",
+    "dname": "Phylactery Recipe",
     "cost": 200,
     "notes": "",
     "attrib": [],
@@ -2999,6 +3001,7 @@
   "recipe_angels_demise": {
     "id": 1807,
     "img": "/apps/dota2/images/dota_react/items/recipe.png?t=1593393829403",
+    "dname": "Khanda Recipe",
     "cost": 600,
     "notes": "",
     "attrib": [],
@@ -3010,11 +3013,16 @@
     "charges": false
   },
   "angels_demise": {
+    "hint": [
+      "Passive: Empower Spell The next Unit Target spell you cast on an enemy deals 100 + 75% of your attack damage as bonus damage to the target, and slows them by 50% for 1.5s.",
+      "Passive: Critical Strike Grants each attack a 30% chance to deal 160% damage."
+    ],
     "id": 1808,
     "img": "/apps/dota2/images/dota_react/items/angels_demise.png?t=1593393829403",
+    "dname": "Khanda",
     "qual": "common",
     "cost": 5000,
-    "notes": "",
+    "notes": "Critical Strike does not work against buildings.",
     "attrib": [
       {
         "key": "bonus_damage",
@@ -3254,14 +3262,15 @@
   },
   "aetherial_halo": {
     "hint": [
-      "Passive:Aetherial Foci Increases targeted spell and item Area of Effect by %aoe_bonus%."
+      "Active: Aetherial Hammer CHANNELED - After a successful channel, summons a meteor that strikes a 400 AoE, stunning enemies for 0.5 seconds and dealing impact damage. Continues to deal damage over time to enemies units and buildings for 6 seconds. Non-building units are also slowed for 20% for the duration of the burn. \n\nBuilding Impact Damage: 95 \nBuilding Over Time Damage: 60 \n\nNon-Building Impact Damage: 150 \nNon-Building Over Time Damage: 60 \n\nChannel Duration: 1.5 seconds.\nLanding Time: 0.5 seconds.",
+      "Passive:Foci  Increases targeted spell and item Area of Effect by %bonus_aoe%."
     ],
     "id": 1164,
     "img": "/apps/dota2/images/dota_react/items/aetherial_halo.png?t=1593393829403",
-    "dname": "Aetherial Halo",
+    "dname": "Aetherial Hammer",
     "qual": "common",
     "cost": 5900,
-    "notes": "Passive does not stack.",
+    "notes": "",
     "attrib": [
       {
         "key": "bonus_strength",
@@ -3356,7 +3365,7 @@
     ],
     "mc": 100,
     "cd": 24,
-    "lore": "Polished with the incantation of his final breath, the gift of a dying mage to his sickly son.",
+    "lore": "",
     "components": null,
     "created": false,
     "charges": false
@@ -4127,8 +4136,7 @@
   "holy_locket": {
     "hint": [
       "Active: Energy Charge Target an allied unit to instantly restore 17 health and mana per charge stored. \n\nAutomatically gains a charge every 8 seconds and whenever a visible enemy within 1200 range uses an ability.",
-      "Passive: Holy Blessing Amplifies heals you provide by 30%.",
-      "Passive: Regeneration Aura Grants %aura_health_regen% health regeneration to allies.\n\nRadius: %aura_radius%"
+      "Passive: Holy Blessing Amplifies heals you provide by 30%."
     ],
     "id": 269,
     "img": "/apps/dota2/images/dota_react/items/holy_locket.png?t=1593393829403",
@@ -4426,6 +4434,7 @@
   "recipe_sheepstick": {
     "id": 95,
     "img": "/apps/dota2/images/dota_react/items/recipe.png?t=1593393829403",
+    "dname": "Scythe of Vyse Recipe",
     "cost": 600,
     "notes": "",
     "attrib": [],
@@ -4484,11 +4493,15 @@
     "charges": false
   },
   "caster_rapier": {
+    "hint": [
+      "Passive: Everlasting Dropped on death, and cannot be destroyed.  \n\nBecomes unusable if picked up by an ally of its owner until it is returned to its owner. It is immediately usable by anybody if an enemy of the owner picks it up and is killed. A dropped Rapier cannot be picked up by a courier."
+    ],
     "id": 1801,
     "img": "/apps/dota2/images/dota_react/items/caster_rapier.png?t=1593393829403",
+    "dname": "Caster Rapier",
     "qual": "rare",
     "cost": 5600,
-    "notes": "",
+    "notes": "If Caster Rapier is dropped and picked up by an enemy of its original owner, it cannot be dropped again except by death.",
     "attrib": [
       {
         "key": "bonus_spell_amp",
@@ -4508,7 +4521,7 @@
     ],
     "mc": false,
     "cd": 9,
-    "lore": "",
+    "lore": "It's like a rapier for casters!",
     "components": null,
     "created": false,
     "charges": false
@@ -4600,8 +4613,8 @@
   },
   "bloodthorn": {
     "hint": [
-      "Active: Soul Rend Silences a target for 5 seconds. At the end of the silence, an additional 60% of all damage taken during the silence will be dealt to the target as magical damage.\n\nAll attacks on the silenced target will have True Strike.\n\nRange: 900",
-      "Passive: Mage Slayer Places a debuff when you attack enemies, causing them to do 35% less spell damage for 6 seconds."
+      "Active: Soul Rend Silences a target for 5 seconds. At the end of the silence, an additional 60% of all damage taken during the silence will be dealt to the target as magical damage.\n\nAll attacks on the silenced target will deal 60 extra damage and have True Strike.\n\nRange: 900",
+      "Passive: Pierce Grants each attack a 40% chance to pierce through evasion and deal 60 bonus magical damage."
     ],
     "id": 250,
     "img": "/apps/dota2/images/dota_react/items/bloodthorn.png?t=1593393829403",
@@ -5811,7 +5824,7 @@
     ],
     "id": 725,
     "img": "/apps/dota2/images/dota_react/items/aghanims_shard_roshan.png?t=1593393829403",
-    "dname": "Aghanim's Shard - Roshan",
+    "dname": "Aghanim's Shard - Consumable",
     "qual": "rare",
     "cost": 1400,
     "notes": "",
@@ -6106,7 +6119,7 @@
   },
   "shivas_guard": {
     "hint": [
-      "Active: Arctic Blast Emits a freezing wave that deals 200 magical damage to enemies and slows their movement by -40% for 4 seconds. Deals 150% damage to illusions.\n\nRadius: 900",
+      "Active: Arctic Blast Emits a freezing wave that causes enemies to take 15% more damage from spells for 16 seconds, deals 200 magical damage and slows their movement by -40% for 4 seconds. Deals 150% damage to illusions.\n\nRadius: 900",
       "Passive: Freezing Aura  Reduces the attack speed of all enemies by -45 and all heals, regeneration and lifesteal by 25%. \n\nRadius: 1200"
     ],
     "id": 119,
@@ -6223,7 +6236,7 @@
   },
   "bloodstone": {
     "hint": [
-      "Active: Bloodpact Increases Bloodstone's Spell Lifesteal by 2.5x and also converts the same percentage of damage dealt to mana. Lasts 6 seconds."
+      "Active: Bloodpact Increases Bloodstone's Spell Lifesteal by 2.5x. Lasts 6 seconds."
     ],
     "id": 121,
     "img": "/apps/dota2/images/dota_react/items/bloodstone.png?t=1593393829403",
@@ -7236,7 +7249,8 @@
   },
   "eternal_shroud": {
     "hint": [
-      "Passive: Shroud Restores mana equal to 20% of incoming enemy spell damage."
+      "Passive: Shroud Restores mana equal to 20% of incoming enemy spell damage before reductions.",
+      "Passive: Eternal Endurance  For every 300 spell damage that equipped hero receives, it gains a stack of Endurance for 6s up to a maximum of 6 charges. Each charge increases Eternal Shroud's magic resistance by 4% ."
     ],
     "id": 692,
     "img": "/apps/dota2/images/dota_react/items/eternal_shroud.png?t=1593393829403",
@@ -8084,8 +8098,7 @@
   },
   "silver_edge": {
     "hint": [
-      "Active: Shadow Walk Makes you invisible for 14 seconds, or until you attack or cast a spell. While invisible, you move 25% faster and can move through units.  \n\nAttacking to end the invisibility will deal 300 bonus physical damage and a guaranteed %crit_multiplier% critical strike to the target, and disable their passive abilities for 5 seconds.",
-      "Passive: Critical Strike Grants each attack a %crit_chance%% chance to deal %crit_multiplier%% damage."
+      "Active: Shadow Walk Makes you invisible for 14 seconds, or until you attack or cast a spell. While invisible, you move 25% faster and can move through units.  \n\nAttacking to end the invisibility will deal 300 bonus physical damage and disable their passive abilities for 5 seconds."
     ],
     "id": 249,
     "img": "/apps/dota2/images/dota_react/items/silver_edge.png?t=1593393829403",
@@ -8506,6 +8519,7 @@
   "recipe_skadi": {
     "id": 159,
     "img": "/apps/dota2/images/dota_react/items/recipe.png?t=1593393829403",
+    "dname": "Eye of Skadi Recipe",
     "cost": 1300,
     "notes": "",
     "attrib": [],
@@ -8518,7 +8532,7 @@
   },
   "skadi": {
     "hint": [
-      "Passive: Cold Attack Attacks lower enemy movement and attack speed and reduces heals, health regeneration, lifesteal and spell lifesteal by 40% for 3 seconds. Slows enemy ranged units by -50% movement speed and by -20 attack speed. Slows enemy melee units by -20% movement speed and by -10 attack speed. "
+      "Passive: Cold Attack Attacks lower enemy movement by -20% if they are melee and -50% if they are ranged, as well as their attack speed by -10% if they are melee and -20% if they are ranged. Additionally it reduces all healing, lifesteal and regen by 40% Lasts for 3 seconds."
     ],
     "id": 160,
     "img": "/apps/dota2/images/dota_react/items/skadi.png?t=1593393829403",
@@ -8748,8 +8762,7 @@
   },
   "helm_of_the_overlord": {
     "hint": [
-      "Active: Dominate Takes control of one neutral target unit and sets its movement speed to 380 and max health to a minimum of 1800. Also provides the unit with +70 base attack damage, +12 health regen, +4 mana regen, +7 armor, and levels up some abilities of the target by 1 level. \n\nDominated units with a max health of greater than 1800 retain their original max health. Dominated unit's bounty is set to 250 gold.\n\nRange: 700",
-      "Passive: Vladmir's Aura Grants %lifesteal_aura% lifesteal, %amage_aura%% bonus damage, %mana_regen_aura% mana regeneration, and %armor_aura% armor to nearby allies."
+      "Active: Dominate Takes control of one neutral target unit and sets its movement speed to 380 and max health to a minimum of 1800. Also provides the unit with +70 base attack damage, +12 health regen, +4 mana regen, +7 armor, and levels up some abilities of the target by 1 level. \n\nDominated units with a max health of greater than 1800 retain their original max health. Dominated unit's bounty is set to 250 gold.\n\nRange: 700"
     ],
     "id": 635,
     "img": "/apps/dota2/images/dota_react/items/helm_of_the_overlord.png?t=1593393829403",
@@ -9514,6 +9527,7 @@
   "recipe_arcane_boots": {
     "id": 179,
     "img": "/apps/dota2/images/dota_react/items/recipe.png?t=1593393829403",
+    "dname": "Arcane Boots Recipe",
     "cost": 375,
     "notes": "",
     "attrib": [],
@@ -9527,7 +9541,8 @@
   "arcane_boots": {
     "hint": [
       "Active: Replenish Mana Restores 175 mana to all nearby allies.\n\nRadius: 1200",
-      "Movement speed bonuses from multiple pairs of boots do not stack."
+      "Movement speed bonuses from multiple pairs of boots do not stack.",
+      "Passive: Basilius Aura Grants 1 mana regeneration to allies. \n\nRadius: 1200"
     ],
     "id": 180,
     "img": "/apps/dota2/images/dota_react/items/arcane_boots.png?t=1593393829403",
@@ -9699,7 +9714,7 @@
   },
   "orb_of_corrosion": {
     "hint": [
-      "Passive: Corrosion Dealing 5 damage per second, reducing armor by 3, and slowing movement by 13% if the equipped hero is melee, or by 4% if they are ranged.\n\nLasts for 3 seconds."
+      "Passive: Corrosion Dealing 5 damage per second, and slowing movement by 13% if the equipped hero is melee, or by 4% if they are ranged and reduces heals, health regeneration, lifesteal and spell lifesteal by 20% . Affects Buildings\n\nLasts for 3 seconds."
     ],
     "id": 569,
     "img": "/apps/dota2/images/dota_react/items/orb_of_corrosion.png?t=1593393829403",
@@ -9820,7 +9835,7 @@
   },
   "mage_slayer": {
     "hint": [
-      "Passive: Mage Slayer Places a debuff when you attack enemies, causing them to do 40% less spell damage for 6 seconds."
+      "Passive: Mage Slayer Places a debuff when you attack enemies, dealing 20 damage per second and causing them to do 40% less spell damage for 6 seconds."
     ],
     "id": 598,
     "img": "/apps/dota2/images/dota_react/items/mage_slayer.png?t=1593393829403",
@@ -10099,14 +10114,14 @@
   },
   "solar_crest": {
     "hint": [
-      "Active: Shine When cast on an ally, grants them 7 armor, 70 attack speed, and 15% movement speed. When cast on an enemy, removes 7 armor, 70 attack speed, and 15% movement speed.\n\nRemoves 7 armor from the caster when used. \n\nRange: 1000\n\nDuration: 8"
+      "Active: Shine When cast on an ally, grants them 7 armor, 70 attack speed, 15% movement speed and a 400 HP Barrier. \n\nDoes not grant bonus armor, movement or attack speed if used on self. \n\nRange: 1000\n\nDuration: 8"
     ],
     "id": 229,
     "img": "/apps/dota2/images/dota_react/items/solar_crest.png?t=1593393829403",
     "dname": "Solar Crest",
     "qual": "rare",
     "cost": 2700,
-    "notes": "Shares cooldown with Medallion of Courage.",
+    "notes": "Shares cooldown with Pavise.",
     "attrib": [
       {
         "key": "bonus_armor",
@@ -10326,8 +10341,7 @@
   },
   "veil_of_discord": {
     "hint": [
-      "Active: Magic Weakness Cast a 900 radius blast that causes enemy heroes to take 10% increased damage from spells and deals %shield_damage% damage to all barriers.\n\nRange: 900\nDuration: 16 seconds. ",
-      "Passive: Basilius Aura Grants %aura_mana_regen% mana regeneration to allies.  \n\nRadius: %aura_radius%"
+      "Active: Magic Weakness Cast a 900 radius blast that causes enemy heroes to take 10% increased damage from spells.\n\nDuration: 16 seconds."
     ],
     "id": 190,
     "img": "/apps/dota2/images/dota_react/items/veil_of_discord.png?t=1593393829403",
@@ -10393,8 +10407,7 @@
   },
   "revenants_brooch": {
     "hint": [
-      "Active: Phantom Province Your next %number_of_attacks% attacks have True Strike, apply a debuff that reduces their magical defenses by %active_mres_reduction% and deal magic damage.\n\n Can attack Ethereal units.",
-      "Passive: Witch Blade Causes your next attack to apply a poison for %slow_duration% seconds, slowing by %slow%% and dealing %int_damage_multiplier%x your intelligence as damage every second. Can only trigger once every %passive_cooldown% seconds."
+      "Toggle: Phantom Province When enabled, attacks cost 75 mana and deal magical damage."
     ],
     "id": 911,
     "img": "/apps/dota2/images/dota_react/items/revenants_brooch.png?t=1593393829403",
@@ -10430,8 +10443,13 @@
     "charges": false
   },
   "devastator": {
+    "hint": [
+      "Passive: Witch Blade Causes your next attack to have true strike, apply a poison for 4 seconds, slowing by 25% and dealing 1x your intelligence as damage every second.",
+      "Passive: Magic Corruption  Your attacks reduce the enemy's Magic resistance by 20% for 4 seconds."
+    ],
     "id": 1806,
     "img": "/apps/dota2/images/dota_react/items/devastator.png?t=1593393829403",
+    "dname": "Parasma",
     "qual": "rare",
     "cost": 5575,
     "notes": "",
@@ -10489,7 +10507,7 @@
     ],
     "mc": false,
     "cd": 7,
-    "lore": "",
+    "lore": "Devastating.",
     "components": [
       "witch_blade",
       "mystic_staff"
@@ -10514,7 +10532,7 @@
   "guardian_greaves": {
     "hint": [
       "Active: Mend Restores 350 health and 200 mana to nearby allies, and removes most negative effects from the caster.\n\nRadius: 1200\nDispel Type: Basic Dispel ",
-      "Passive: Guardian Aura Grants 2.5 health regeneration and 3 armor to allied units. If an allied hero's health falls below 25%, this is increased to 14.5 health regeneration and 8 armor. \n\nRadius: 1200 ",
+      "Passive: Guardian Aura Grants 2.5 health regeneration, 1.5 mana regeneration and 3 armor to allied units. If an allied hero's health falls below 25%, this is increased to 14.5 health regeneration, 5 mana regeneration and 8 armor. \n\nRadius: 1200 ",
       "Movement speed bonuses from multiple pairs of boots do not stack."
     ],
     "id": 231,
@@ -11840,7 +11858,7 @@
   },
   "craggy_coat": {
     "hint": [
-      "Increases the wearer's armor, while reducing their attack speed."
+      "Active: Toughen Up Grants you an extra 12 bonus armor at the cost of -30 movement speed. Lasts 8 seconds."
     ],
     "id": 298,
     "img": "/apps/dota2/images/dota_react/items/craggy_coat.png?t=1593393829403",
@@ -12042,7 +12060,7 @@
   },
   "royal_jelly": {
     "hint": [
-      "Use: Consume Grants a target allied unit a permanent buff that provides +2 Health Regen and +1 Mana Regen.\n\nDoes not stack on the same unit."
+      "Active: Consume Consumes all charges and grants a target allied unit a buff that provides +2 Health Regen and +1 Mana Regen per charge for 10s. \n\nIf the unit is attacked by an enemy hero or Roshan, the effect is lost."
     ],
     "id": 305,
     "img": "/apps/dota2/images/dota_react/items/royal_jelly.png?t=1593393829403",
@@ -15336,7 +15354,7 @@
   "harpoon": {
     "hint": [
       "Active: Draw Forth When targeting an enemy, fire a harpoon at them, that pulls you and the target closer together, up to 35% of the distance between you and your target. If the caster is melee, the hero and target are always pulled to within melee distance of each other.",
-      "Passive: Echo Strike  Causes melee attacks to attack twice in quick succession. The double attacks apply a 100% movement slow for 1 seconds on each strike."
+      "Passive: Echo Strike  Causes melee attacks to attack twice in quick succession. The double attacks apply a 100% movement slow for 1 seconds on each strike. Echo Strike cooldown: 5s"
     ],
     "id": 939,
     "img": "/apps/dota2/images/dota_react/items/harpoon.png?t=1593393829403",
@@ -16122,8 +16140,12 @@
     "tier": 1
   },
   "ancient_guardian": {
+    "hint": [
+      "Passive: Ancient Power Grants 50 extra bonus damage as long as the unit is within 2000 range of an ancient."
+    ],
     "id": 1156,
     "img": "/apps/dota2/images/dota_react/items/ancient_guardian.png?t=1593393829403",
+    "dname": "Ancient Guardian",
     "cost": 0,
     "notes": "",
     "attrib": [
@@ -16152,8 +16174,12 @@
     "tier": 4
   },
   "safety_bubble": {
+    "hint": [
+      "Passive: Bubbled Up Equipped Hero has a 100 HP Barrier. Barrier fully regenerates after not receiving damage for 5 seconds"
+    ],
     "id": 1157,
     "img": "/apps/dota2/images/dota_react/items/safety_bubble.png?t=1593393829403",
+    "dname": "Safety Bubble",
     "cost": 0,
     "notes": "",
     "attrib": [
@@ -16182,8 +16208,12 @@
     "tier": 1
   },
   "whisper_of_the_dread": {
+    "hint": [
+      "Passive: Tunnel Vision Equipped Hero has their daytime vision reduced by 15% but their Spell damage increased by 10%."
+    ],
     "id": 1158,
     "img": "/apps/dota2/images/dota_react/items/whisper_of_the_dread.png?t=1593393829403",
+    "dname": "Whisper of the Dread",
     "cost": 0,
     "notes": "",
     "attrib": [
@@ -16212,8 +16242,13 @@
     "tier": 2
   },
   "nemesis_curse": {
+    "hint": [
+      "Passive: Glass Cannon Hero takes 8% more damage from all sources.",
+      "Passive: Glassify  When attacking a hero, apply a debuff increasing the damage received by that hero by 12% for 5 seconds. Only one target can be affected by Glassify at the same time. "
+    ],
     "id": 1159,
     "img": "/apps/dota2/images/dota_react/items/nemesis_curse.png?t=1593393829403",
+    "dname": "Nemesis Curse",
     "cost": 0,
     "notes": "",
     "attrib": [
@@ -16247,8 +16282,12 @@
     "tier": 3
   },
   "avianas_feather": {
+    "hint": [
+      "Passive: Free Bird When equipped hero is below 30% HP, they gain flying movement."
+    ],
     "id": 1160,
     "img": "/apps/dota2/images/dota_react/items/avianas_feather.png?t=1593393829403",
+    "dname": "Aviana's Feather",
     "cost": 0,
     "notes": "",
     "attrib": [
@@ -16277,8 +16316,12 @@
     "tier": 4
   },
   "unwavering_condition": {
+    "hint": [
+      "Passive: Unwavering Hero's Max Health is set to 1500 and can't be altered by other effects or attributes."
+    ],
     "id": 1161,
     "img": "/apps/dota2/images/dota_react/items/unwavering_condition.png?t=1593393829403",
+    "dname": "Unwavering Condition",
     "cost": 0,
     "notes": "",
     "attrib": [
@@ -16520,6 +16563,7 @@
   "light_collector": {
     "id": 1167,
     "img": "/apps/dota2/images/dota_react/items/light_collector.png?t=1593393829403",
+    "dname": "Light Collector",
     "cost": 0,
     "notes": "",
     "attrib": [
@@ -16573,8 +16617,12 @@
     "tier": 2
   },
   "rattlecage": {
+    "hint": [
+      "Passive: Reverberate After taking 180 damage from any source, the wearer fires a projectile at up to 2 random enemies in a 600 radius, prioritizing heroes, that deal 125 physical damage and slow the targets movement and attack speed by 100% for 0.2s. "
+    ],
     "id": 1168,
     "img": "/apps/dota2/images/dota_react/items/rattlecage.png?t=1593393829403",
+    "dname": "Rattlecage",
     "cost": 0,
     "notes": "",
     "attrib": [
@@ -16633,8 +16681,12 @@
     "tier": 4
   },
   "doubloon": {
+    "hint": [
+      "Toggle: Flip Toggle to convert 20% of your Max Health to Max Mana, or 20% of your Max Mana to  Max Health."
+    ],
     "id": 1803,
     "img": "/apps/dota2/images/dota_react/items/doubloon.png?t=1593393829403",
+    "dname": "Doubloon",
     "cost": 0,
     "notes": "",
     "attrib": [
@@ -16663,8 +16715,12 @@
     "tier": 3
   },
   "roshans_banner": {
+    "hint": [
+      "Use: Place Banner Creates a banner anywhere on the map. Lane creeps passing by the banner will get a 45s increase of damage and health. Lasts 300 seconds. Can be destroyed "
+    ],
     "id": 1804,
     "img": "/apps/dota2/images/dota_react/items/roshans_banner.png?t=1593393829403",
+    "dname": "Roshan's Banner",
     "qual": "artifact",
     "cost": 0,
     "notes": "",
