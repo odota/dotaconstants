@@ -132,8 +132,7 @@ const abilitiesLoc =
 const npcAbilitiesUrl =
 "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_abilities.txt";
 const npcUnitsUrl = "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_units.txt";
-// TODO update to VDF
-const localizationUrl = "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/dota_english.json";
+const localizationUrl = "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/dota_english.txt";
 
 let aghsAbilityValues = {};
 const aghs_desc_urls = [];
@@ -919,8 +918,7 @@ async function start() {
     },
     {
       key: "region",
-      // TODO update to VDF
-      url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/regions.json",
+      url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/regions.txt",
       transform: (respObj) => {
         const region = {};
         const regions = respObj.regions;
