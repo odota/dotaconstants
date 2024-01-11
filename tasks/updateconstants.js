@@ -1058,6 +1058,7 @@ async function start() {
             }
           } else {
             let heroName = parseNameFromArray(keyArr, heroes);
+
             // Extracting ability name
             let abilityName = keyArr.length > 1 ? keyArr.join("_").replace(`${heroName}_`, '') : "general";
             abilityName = !abilityName || abilityName === heroName ? "general" : abilityName;
@@ -1072,8 +1073,12 @@ async function start() {
                 if (!result[patch].heroes[heroName].talents) result[patch].heroes[heroName].talents = [];
                 result[patch].heroes[heroName].talents.push(data[key].replace("Talent:", "").trim());
               } else {
-                // set abilityName to strip _n where n is a number, from the end of the abilityName
-                abilityName = abilityName.replace(/_[0-9]+$/, '');
+                // DOTA_Patch_7_32_shredder_shredder_chakram_2_2
+                // DOTA_Patch_7_32_tinker_tinker_rearm_3_info
+                // remove everything to the right of the first _n that is found, where n is a number
+                abilityName = abilityName.replace(/_[0-9]+.*/, '');
+                // if abilityName is just an underscore and number like "_n" then set it to general
+                abilityName = parseInt(abilityName.replace(/_/, '')) ? "general" : abilityName;
                 if (!result[patch].heroes[heroName][abilityName]) result[patch].heroes[heroName][abilityName] = [];
                 result[patch].heroes[heroName][abilityName].push(data[key].trim());
               }
