@@ -1058,10 +1058,14 @@ async function start() {
             }
           } else {
             let heroName = parseNameFromArray(keyArr, heroes);
+            // Extracting ability name
+            let abilityName = keyArr.length > 1 ? keyArr.join("_") : "general";
             if (heroName) {
               if (!result[patch].heroes[heroName])
-                result[patch].heroes[heroName] = [];
-              result[patch].heroes[heroName].push(data[key]);
+                result[patch].heroes[heroName] = {};
+              if (!result[patch].heroes[heroName][abilityName])
+                result[patch].heroes[heroName][abilityName] = [];
+              result[patch].heroes[heroName][abilityName].push(data[key]);
             } else {
               if (!result[patch].heroes.misc) result[patch].heroes.misc = [];
               result[patch].heroes.misc.push(data[key]);
