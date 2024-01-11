@@ -1066,15 +1066,14 @@ async function start() {
             if (heroName) {
               if (!result[patch].heroes[heroName])
                 result[patch].heroes[heroName] = {};
-              if (!result[patch].heroes[heroName][abilityName])
-                result[patch].heroes[heroName][abilityName] = [];
 
-              if (data[key].startsWith("Talent:")) {
-                if (!result[patch].heroes[heroName].talents)
-                  result[patch].heroes[heroName].talents = [];
-
+              let isTalent = data[key].startsWith("Talent:");
+              isTalent = isTalent || abilityName.startsWith("talent");
+              if (isTalent) {
+                if (!result[patch].heroes[heroName].talents) result[patch].heroes[heroName].talents = [];
                 result[patch].heroes[heroName].talents.push(data[key].replace("Talent:", "").trim());
               } else {
+                if (!result[patch].heroes[heroName][abilityName]) result[patch].heroes[heroName][abilityName] = [];
                 result[patch].heroes[heroName][abilityName].push(data[key].trim());
               }
             } else {
