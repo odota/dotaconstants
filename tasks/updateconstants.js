@@ -1062,7 +1062,6 @@ async function start() {
             let abilityName = keyArr.length > 1 ? keyArr.join("_").replace(`${heroName}_`, '') : "general";
             abilityName = !abilityName || abilityName === heroName ? "general" : abilityName;
 
-
             if (heroName) {
               if (!result[patch].heroes[heroName])
                 result[patch].heroes[heroName] = {};
@@ -1073,6 +1072,8 @@ async function start() {
                 if (!result[patch].heroes[heroName].talents) result[patch].heroes[heroName].talents = [];
                 result[patch].heroes[heroName].talents.push(data[key].replace("Talent:", "").trim());
               } else {
+                // set abilityName to strip _n where n is a number, from the end of the abilityName
+                abilityName = abilityName.replace(/_[0-9]+$/, '');
                 if (!result[patch].heroes[heroName][abilityName]) result[patch].heroes[heroName][abilityName] = [];
                 result[patch].heroes[heroName][abilityName].push(data[key].trim());
               }
