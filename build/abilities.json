@@ -20677,7 +20677,7 @@
   },
   "enigma_demonic_conversion": {
     "dname": "Demonic Summoning",
-    "behavior": [],
+    "behavior": "Point Target",
     "desc": "Summons three fragments of Enigma himself at the cost of health. The eidolons health is increased by 4% of Enigma's current health. These eidolons are all under Enigma's control, and repeated successful attacks cause them to multiply.  When this happens, the eidolons have their health restored.",
     "attrib": [
       {
@@ -53924,6 +53924,7 @@
     "dname": "Move Astral Spirit",
     "behavior": [
       "Instant Cast",
+      "Point Target",
       "Hidden"
     ],
     "desc": "Moves the Astral Spirit to target location.",
@@ -58202,7 +58203,7 @@
   },
   "arc_warden_tempest_double": {
     "dname": "Tempest Double",
-    "behavior": [],
+    "behavior": "Point Target",
     "desc": "Briefly refocusing its fractured elements into a single form, the Arc Warden is able to create a perfect electrical duplication of itself. The duplicate can use all of Arc Warden's current items and special Tempest Double versions of his spells, except most consumables and items that drop on death. The duplicate has separate item and ability cooldowns. The Tempest Double gives bounty gold to enemies when killed. The Tempest Double loses its sense of self if he is too far away from Arc Warden and deals less attack damage.",
     "attrib": [
       {
