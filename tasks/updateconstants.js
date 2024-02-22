@@ -1742,7 +1742,7 @@ function formatVpkHero(key, vpkr) {
   h.turn_rate = Number(vpkrh.MovementTurnRate);
 
   h.cm_enabled = vpkrh.CMEnabled === "1" ? true : false;
-  h.legs = Number(vpkrh.Legs || baseHero.Legs);
+  h.legs = Number(vpkrh.Adjectives.Legs || baseHero.Adjectives.Legs);
 
   h.day_vision = Number(
     vpkrh.VisionDaytimeRange || baseHero.VisionDaytimeRange,

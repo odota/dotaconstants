@@ -7178,7 +7178,7 @@
       }
     ],
     "mc": "0",
-    "cd": "1",
+    "cd": "10",
     "img": "/apps/dota2/images/dota_react/abilities/seasonal_summon_cny_balloon.png"
   },
   "seasonal_summon_dragon": {
@@ -7211,7 +7211,7 @@
       }
     ],
     "mc": "0",
-    "cd": "3",
+    "cd": "20",
     "img": "/apps/dota2/images/dota_react/abilities/seasonal_summon_dragon.png"
   },
   "seasonal_summon_cny_tree": {
@@ -7225,7 +7225,7 @@
         "generated": true
       }
     ],
-    "cd": "1.5",
+    "cd": "15",
     "img": "/apps/dota2/images/dota_react/abilities/seasonal_summon_cny_tree.png"
   },
   "seasonal_firecrackers": {
@@ -7255,7 +7255,7 @@
       }
     ],
     "mc": "0",
-    "cd": "1.5",
+    "cd": "20",
     "img": "/apps/dota2/images/dota_react/abilities/seasonal_firecrackers.png"
   },
   "high_five": {
@@ -15758,10 +15758,10 @@
       "105"
     ],
     "cd": [
-      "15",
-      "13",
-      "11",
-      "9"
+      "16",
+      "14",
+      "12",
+      "10"
     ],
     "img": "/apps/dota2/images/dota_react/abilities/vengefulspirit_magic_missile.png"
   },
@@ -15827,10 +15827,10 @@
         "key": "damage",
         "header": "DAMAGE:",
         "value": [
-          "85",
+          "60",
+          "80",
           "100",
-          "115",
-          "130"
+          "120"
         ]
       },
       {
@@ -18444,7 +18444,12 @@
       "130",
       "150"
     ],
-    "cd": "11",
+    "cd": [
+      "14",
+      "13",
+      "12",
+      "11"
+    ],
     "img": "/apps/dota2/images/dota_react/abilities/lion_impale.png"
   },
   "lion_voodoo": {
@@ -18559,10 +18564,10 @@
         "key": "movespeed",
         "header": "MOVEMENT SLOW/BONUS:",
         "value": [
+          "15%",
           "20%",
           "25%",
-          "30%",
-          "35%"
+          "30%"
         ]
       },
       {
@@ -20650,7 +20655,12 @@
       {
         "key": "abilitycastrange",
         "header": "CAST RANGE:",
-        "value": "600",
+        "value": [
+          "450",
+          "500",
+          "550",
+          "600"
+        ],
         "generated": true
       },
       {
@@ -24713,7 +24723,7 @@
       {
         "key": "duration_creep",
         "header": "DURATION CREEP:",
-        "value": "2",
+        "value": "0.5",
         "generated": true
       },
       {
@@ -24777,7 +24787,12 @@
       {
         "key": "cooldown_percentage",
         "header": "COOLDOWN PROGRESSION SLOW:",
-        "value": "60%"
+        "value": [
+          "30%",
+          "40%",
+          "50%",
+          "60%"
+        ]
       },
       {
         "key": "base_damage",
@@ -24879,13 +24894,13 @@
     "img": "/apps/dota2/images/dota_react/abilities/faceless_void_chronosphere.png"
   },
   "special_bonus_unique_faceless_void": {
-    "dname": "+95 Attack Speed during Chronosphere"
+    "dname": "+80 Attack Speed during Chronosphere"
   },
   "special_bonus_unique_faceless_void_2": {
     "dname": "+140 Chronosphere AoE"
   },
   "special_bonus_unique_faceless_void_3": {
-    "dname": "+40 Time Lock Damage"
+    "dname": "+30 Time Lock Damage"
   },
   "special_bonus_unique_faceless_void_4": {
     "dname": "+20% Backtrack"
@@ -25697,9 +25712,9 @@
         "key": "movement_bonus",
         "header": "ACTIVE MOVEMENT BONUS:",
         "value": [
+          "4%",
           "8%",
-          "12%",
-          "16%"
+          "12%"
         ]
       },
       {
@@ -25870,9 +25885,9 @@
         "key": "abilitycastrange",
         "header": "CAST RANGE:",
         "value": [
-          "550",
-          "750",
-          "950",
+          "700",
+          "850",
+          "1000",
           "1150"
         ]
       },
@@ -25919,8 +25934,9 @@
       },
       {
         "key": "lifesteal_pct",
-        "header": "LIFESTEAL:",
-        "value": "0%"
+        "header": "LIFESTEAL PCT:",
+        "value": "0",
+        "generated": true
       },
       {
         "key": "creep_lifesteal_penalty",
@@ -26940,9 +26956,9 @@
         "key": "max_damage",
         "header": "MAX DPS:",
         "value": [
-          "50",
-          "75",
-          "100",
+          "35",
+          "65",
+          "95",
           "125"
         ]
       },
@@ -27006,7 +27022,7 @@
     "dmg_type": "Magical",
     "bkbpierce": "No",
     "dispellable": "Yes",
-    "desc": "Viper exudes an infectious toxin that damages and slows the attack speed of any enemy that damages it in a 1400 radius. The acid exudate also increases Viper's resistance to magic.",
+    "desc": "Viper exudes an infectious toxin that damages and slows the attack speed of any enemy that damages it in a 1200 radius. The acid exudate also increases Viper's resistance to magic.",
     "attrib": [
       {
         "key": "duration",
@@ -27046,7 +27062,7 @@
       {
         "key": "max_range",
         "header": "MAX RANGE RADIUS:",
-        "value": "1400"
+        "value": "1200"
       },
       {
         "key": "effect_multiplier_distance",
@@ -27790,8 +27806,7 @@
           "100",
           "130",
           "160"
-        ],
-        "generated": true
+        ]
       },
       {
         "key": "damage_pct",
@@ -27880,7 +27895,7 @@
     "dmg_type": "Magical",
     "bkbpierce": [],
     "dispellable": "No",
-    "desc": "Dragon Knight takes the form of one of three powerful elder dragons, increasing his speed and Dragon Tail's range, while granting him new powers.\nLEVEL 1 Green Dragon - Corrosive Breath: attacks deal 25 poison damage per second for 5 seconds. Works on structures.\nLEVEL 2 Red Dragon  - Splash Attack: attacks damage all enemy units in a 350 radius for 75% damage, with Corrosive Breath added to the targets.\nLEVEL 3 Blue Dragon  - Frost Breath: slows movement speed by 0 0 -40 -60% and attack speed by 0 0 -40 -60 of enemy units in Splash Attack range for 0 0 3.0 3.0 seconds, with Corrosive Breath added to the targets.",
+    "desc": "Dragon Knight takes the form of one of three powerful elder dragons, increasing his speed and Dragon Tail's range, while granting him new powers.\nLEVEL 1 Green Dragon - Corrosive Breath: attacks deal 25 poison damage per second for 5 seconds. Works on structures.\nLEVEL 2 Red Dragon  - Splash Attack: attacks damage all enemy units in a 350 radius for 75% damage, with Corrosive Breath added to the targets.\nLEVEL 3 Blue Dragon  - Frost Breath: slows movement speed by 0 0 -30 -45% and attack speed by 0 0 -30 -45 of enemy units in Splash Attack range for 0 0 3.0 3.0 seconds, with Corrosive Breath added to the targets.",
     "attrib": [
       {
         "key": "duration",
@@ -27948,8 +27963,8 @@
         "value": [
           "0",
           "0",
-          "-40",
-          "-60"
+          "-30",
+          "-45"
         ],
         "generated": true
       },
@@ -27959,8 +27974,8 @@
         "value": [
           "0",
           "0",
-          "-40",
-          "-60"
+          "-30",
+          "-45"
         ],
         "generated": true
       },
@@ -27988,7 +28003,7 @@
           "0",
           "0",
           "0",
-          "25"
+          "20"
         ],
         "generated": true
       },
@@ -29193,10 +29208,10 @@
     ],
     "desc": "Saturates the area around Leshrac with magical explosions that deal pure damage to enemy units and structures. The fewer units available to attack, the more damage those units will take. Lasts 10 seconds.",
     "dmg": [
-      "9",
-      "16",
-      "23",
-      "30"
+      "10",
+      "18",
+      "26",
+      "34"
     ],
     "attrib": [
       {
@@ -29436,7 +29451,11 @@
       }
     ],
     "lore": "If necessary, the Tormented Soul can manipulate space time itself, ravaging lesser beings.",
-    "mc": "70",
+    "mc": [
+      "50",
+      "60",
+      "70"
+    ],
     "cd": "1",
     "img": "/apps/dota2/images/dota_react/abilities/leshrac_pulse_nova.png"
   },
@@ -29506,13 +29525,13 @@
         "generated": true
       },
       {
-        "key": "sprout_damage",
-        "header": "SPROUT DAMAGE:",
+        "key": "sprout_damage_per_second",
+        "header": "SPROUT DAMAGE PER SECOND:",
         "value": [
-          "14",
-          "20",
-          "26",
-          "32"
+          "25",
+          "40",
+          "55",
+          "70"
         ]
       },
       {
@@ -29658,9 +29677,9 @@
       "80"
     ],
     "cd": [
+      "75",
       "60",
-      "50",
-      "40",
+      "45",
       "30"
     ],
     "img": "/apps/dota2/images/dota_react/abilities/furion_teleportation.png"
@@ -34976,7 +34995,7 @@
       {
         "key": "explosion_radius",
         "header": "RADIUS:",
-        "value": "500"
+        "value": "450"
       },
       {
         "key": "collision_radius",
@@ -35471,6 +35490,7 @@
       }
     ],
     "lore": "Chen's zeal is infectious, blessing his allies with vitality and compelling them to his side.",
+    "mc": "75",
     "cd": [
       "20",
       "18",
@@ -35731,7 +35751,7 @@
     "dname": "Global Divine Favor Aura"
   },
   "special_bonus_unique_chen_11": {
-    "dname": "Penitence Deals 225 Damage"
+    "dname": "Penitence Deals 175 Damage"
   },
   "special_bonus_unique_chen_12": {
     "dname": "Hand of God applies a Strong Dispel"
@@ -36173,10 +36193,10 @@
         "key": "bonus_movement_speed_pct",
         "header": "BONUS MOVE SPEED:",
         "value": [
+          "7%",
           "8%",
           "9%",
-          "10%",
-          "11%"
+          "10%"
         ]
       },
       {
@@ -36319,7 +36339,11 @@
       {
         "key": "duration",
         "header": "DURATION:",
-        "value": "16"
+        "value": [
+          "12",
+          "14",
+          "16"
+        ]
       },
       {
         "key": "damage",
@@ -36404,7 +36428,7 @@
     "dname": "Devour grants 15% Magic Resistance"
   },
   "special_bonus_unique_doom_4": {
-    "dname": "+15 Scorched Earth Damage"
+    "dname": "+12 Scorched Earth Damage"
   },
   "special_bonus_unique_doom_5": {
     "dname": "+30 Doom DPS"
@@ -40020,9 +40044,9 @@
         "key": "mana_burned",
         "header": "MAX MANA BURNED:\\n",
         "value": [
-          "175",
-          "300",
-          "425",
+          "100",
+          "250",
+          "400",
           "550"
         ]
       },
@@ -40030,6 +40054,18 @@
         "key": "damage_per_mana_pct",
         "header": "BURN DAMAGE:",
         "value": "60%"
+      },
+      {
+        "key": "shard_drag_speed",
+        "header": "SHARD DRAG SPEED:",
+        "value": "175",
+        "generated": true
+      },
+      {
+        "key": "self_mana_restore_pct",
+        "header": "SELF MANA RESTORE PCT:",
+        "value": "25",
+        "generated": true
       },
       {
         "key": "abilitycastrange",
@@ -40573,7 +40609,7 @@
     "dname": "-5s Cold Snap Cooldown"
   },
   "special_bonus_unique_invoker_10": {
-    "dname": "+20% E.M.P. Mana Burnt"
+    "dname": "+{s:bonus_damage_per_mana_pct}% E.M.P. Mana Burnt"
   },
   "special_bonus_unique_invoker_11": {
     "dname": "+50 Forged Spirit Attack Speed"
@@ -41206,7 +41242,7 @@
       {
         "key": "scepter_max_mana_barrier_pct",
         "header": "SCEPTER MAX MANA BARRIER PCT:",
-        "value": "75",
+        "value": "70",
         "generated": true
       },
       {
@@ -43131,10 +43167,10 @@
         "key": "bear_movespeed",
         "header": "BEAR MOVESPEED:",
         "value": [
-          "340",
+          "300",
+          "330",
           "360",
-          "380",
-          "400"
+          "390"
         ]
       },
       {
@@ -43176,7 +43212,12 @@
     ],
     "lore": "Sylla's lifelong companion is symbiotic with his spirit and heart, coming to aid him in any time of need.",
     "mc": "75",
-    "cd": "120",
+    "cd": [
+      "150",
+      "140",
+      "130",
+      "120"
+    ],
     "img": "/apps/dota2/images/dota_react/abilities/lone_druid_spirit_bear.png"
   },
   "lone_druid_rabid": {
@@ -43939,10 +43980,10 @@
         "key": "pull_distance",
         "header": "PULL DISTANCE:",
         "value": [
-          "250",
           "300",
           "350",
-          "400"
+          "400",
+          "450"
         ]
       },
       {
@@ -44150,7 +44191,7 @@
     ],
     "bkbpierce": "Yes",
     "dispellable": "No",
-    "desc": "Digs into the ground for a short duration, dispelling Meepo and causing him to become invulnerable and untargetable for 3s. Restores 35% of his max health over that duration.\n\nDISPEL TYPE: Basic Dispel",
+    "desc": "Digs into the ground for a short duration, dispelling Meepo and causing him to become invulnerable and untargetable for 3s. Restores 25% of his max health over that duration.\n\nDISPEL TYPE: Basic Dispel",
     "attrib": [
       {
         "key": "duration",
@@ -44160,7 +44201,7 @@
       {
         "key": "hp_restore",
         "header": "MAX HP RESTORE:",
-        "value": "35%"
+        "value": "25%"
       },
       {
         "key": "abilitycastpoint",
@@ -44410,7 +44451,7 @@
       "No Target"
     ],
     "dispellable": "No",
-    "desc": "Primary Meepo mounts all other Meepos in a 600 radius around him on top of his shoulders. While in this form, he gains 50% of the other Meepo stats and can Fling them at enemies, dealing damage and slowing them.\n\n When cast, Earthbind generates additional nets and Poof deals bonus damage based on the amount of Meepos riding on top.",
+    "desc": "Primary Meepo mounts all other Meepos in a 600 radius around him on top of his shoulders. While in this form, he gains 40% of the other Meepo stats and can Fling them at enemies, dealing damage and slowing them.\n\n When cast, Earthbind generates additional nets and Poof deals bonus damage based on the amount of Meepos riding on top.",
     "attrib": [
       {
         "key": "radius",
@@ -44456,7 +44497,7 @@
       {
         "key": "stats_pct",
         "header": "STATS PCT:",
-        "value": "50",
+        "value": "40",
         "generated": true
       },
       {
@@ -49437,10 +49478,10 @@
     "lore": "Time in the Dark Reef made Slark a dangerous assassin; aggressive and fearless.",
     "mc": "75",
     "cd": [
-      "22",
-      "18",
-      "14",
-      "10"
+      "24",
+      "20",
+      "16",
+      "12"
     ],
     "img": "/apps/dota2/images/dota_react/abilities/slark_pounce.png"
   },
@@ -51334,7 +51375,7 @@
     "dname": "+10% Empower Damage/Cleave"
   },
   "special_bonus_unique_magnus_3": {
-    "dname": "+375 Skewer Range"
+    "dname": "+275 Skewer Range"
   },
   "special_bonus_unique_magnus_4": {
     "dname": "+10s Empower Duration"
@@ -51346,7 +51387,7 @@
     "dname": "+0.5s Shockwave Slow Duration"
   },
   "special_bonus_unique_magnus_7": {
-    "dname": "-7s Skewer Cooldown"
+    "dname": "-5s Skewer Cooldown"
   },
   "special_bonus_unique_magnus_reverse_polarity_stats": {
     "dname": "+10 All Stats per hero hit with Reverse Polarity"
@@ -51371,7 +51412,7 @@
       {
         "key": "damage_per_second",
         "header": "DAMAGE PER SECOND:",
-        "value": "80"
+        "value": "70"
       },
       {
         "key": "duration",
@@ -51948,7 +51989,7 @@
     "dname": "+4% Chakram Slow"
   },
   "special_bonus_unique_timbersaw_5": {
-    "dname": "+3% Whirling Death Stat Loss"
+    "dname": "+2.5% Whirling Death Stat Loss"
   },
   "special_bonus_unique_timbersaw_reactive_armor_regen_per_stack": {
     "dname": "+0.2 Reactive Armor Regeneration Per Stack"
@@ -53572,9 +53613,9 @@
     "lore": "The most unnatural of all the gifts of the Font of Avernus, this power defies mortal understanding.  What should hurt, instead heals; and what should kill gives strength anew.",
     "mc": "0",
     "cd": [
+      "80",
       "70",
-      "60",
-      "50"
+      "60"
     ],
     "img": "/apps/dota2/images/dota_react/abilities/abaddon_borrowed_time.png"
   },
@@ -54614,7 +54655,7 @@
       }
     ],
     "lore": "The studied warrior must whip and weave through its enemies, burning each without pause.",
-    "mc": "60",
+    "mc": "65",
     "cd": [
       "15",
       "12",
@@ -55497,10 +55538,10 @@
       "50"
     ],
     "cd": [
-      "25",
-      "22",
-      "19",
-      "16"
+      "23",
+      "20",
+      "17",
+      "14"
     ],
     "img": "/apps/dota2/images/dota_react/abilities/terrorblade_reflection.png"
   },
@@ -57871,26 +57912,6 @@
         "value": "6"
       },
       {
-        "key": "damage_per_second",
-        "header": "DAMAGE PER SECOND:",
-        "value": [
-          "15",
-          "30",
-          "45",
-          "60"
-        ]
-      },
-      {
-        "key": "tempest_damage_per_second",
-        "header": "TEMPEST DAMAGE PER SECOND:",
-        "value": [
-          "20",
-          "45",
-          "70",
-          "95"
-        ]
-      },
-      {
         "key": "search_radius",
         "header": "ALLY SEARCH RADIUS:",
         "value": "225"
@@ -57902,13 +57923,33 @@
         "generated": true
       },
       {
+        "key": "damage_per_second",
+        "header": "ARC DAMAGE PER SECOND:",
+        "value": [
+          "15",
+          "30",
+          "45",
+          "60"
+        ]
+      },
+      {
         "key": "move_speed_slow_pct",
-        "header": "MOVEMENT SPEED SLOW:",
+        "header": "ARC MOVEMENT SPEED SLOW:",
         "value": [
           "14%",
           "21%",
           "28%",
           "35%"
+        ]
+      },
+      {
+        "key": "tempest_damage_per_second",
+        "header": "TEMPEST DAMAGE PER SECOND:",
+        "value": [
+          "20",
+          "45",
+          "70",
+          "95"
         ]
       },
       {
@@ -57958,14 +57999,39 @@
         "value": "300"
       },
       {
+        "key": "shard_magic_resist",
+        "header": "MAGIC RESISTANCE:",
+        "value": "40%"
+      },
+      {
+        "key": "shard_slow_pct",
+        "header": "MOVEMENT SLOW:",
+        "value": "30%"
+      },
+      {
         "key": "duration",
-        "header": "DURATION:",
+        "header": "ARC DURATION:",
         "value": [
           "3.5",
           "4.5",
           "5.5",
           "6.5"
         ]
+      },
+      {
+        "key": "attack_speed_bonus",
+        "header": "ARC ATTACK SPEED BONUS:",
+        "value": [
+          "50",
+          "60",
+          "70",
+          "80"
+        ]
+      },
+      {
+        "key": "evasion_chance",
+        "header": "ARC EVASION BONUS:",
+        "value": "100%"
       },
       {
         "key": "tempest_duration",
@@ -57978,38 +58044,13 @@
         ]
       },
       {
-        "key": "attack_speed_bonus",
-        "header": "ATTACK SPEED BONUS:",
-        "value": [
-          "50",
-          "60",
-          "70",
-          "80"
-        ]
-      },
-      {
-        "key": "evasion_chance",
-        "header": "EVASION BONUS:",
-        "value": "100%"
-      },
-      {
-        "key": "shard_magic_resist",
-        "header": "MAGIC RESISTANCE:",
-        "value": "40%"
-      },
-      {
-        "key": "shard_slow_pct",
-        "header": "MOVEMENT SLOW:",
-        "value": "30%"
-      },
-      {
         "key": "attack_range_bonus",
-        "header": "BONUS ATTACK RANGE:",
+        "header": "TEMPEST BONUS ATTACK RANGE:",
         "value": "150"
       },
       {
-        "key": "attack_magic_damage",
-        "header": "BONUS ATTACK DAMAGE:",
+        "key": "attack_damage_bonus",
+        "header": "TEMPEST BONUS ATTACK DAMAGE:",
         "value": [
           "20",
           "40",
@@ -58018,8 +58059,8 @@
         ]
       },
       {
-        "key": "attack_damage_bonus",
-        "header": "ATTACK DAMAGE BONUS:",
+        "key": "attack_magic_damage",
+        "header": "ATTACK MAGIC DAMAGE:",
         "value": [
           "20",
           "40",
@@ -58072,8 +58113,23 @@
         "value": "375"
       },
       {
+        "key": "duration",
+        "header": "DURATION:",
+        "value": "16"
+      },
+      {
+        "key": "move_speed_slow_pct",
+        "header": "MOVEMENT SLOW:",
+        "value": "100%"
+      },
+      {
+        "key": "base_activation_delay",
+        "header": "ARC ACTIVATION DELAY:",
+        "value": "2"
+      },
+      {
         "key": "spark_damage_base",
-        "header": "DAMAGE:",
+        "header": "ARC DAMAGE:",
         "value": [
           "100",
           "180",
@@ -58082,19 +58138,24 @@
         ]
       },
       {
-        "key": "base_activation_delay",
-        "header": "ACTIVATION DELAY:",
-        "value": "2"
-      },
-      {
         "key": "wraith_speed_base",
-        "header": "WRAITH SPEED:",
+        "header": "ARC WRAITH SPEED:",
         "value": "400"
       },
       {
-        "key": "duration",
-        "header": "DURATION:",
-        "value": "45"
+        "key": "ministun_duration",
+        "header": "ARC SLOW DURATION:",
+        "value": [
+          "0.4",
+          "0.5",
+          "0.6",
+          "0.7"
+        ]
+      },
+      {
+        "key": "tempest_activation_delay",
+        "header": "TEMPEST ACTIVATION DELAY:",
+        "value": "1"
       },
       {
         "key": "spark_damage_tempest",
@@ -58107,14 +58168,19 @@
         ]
       },
       {
-        "key": "tempest_activation_delay",
-        "header": "TEMPEST ACTIVATION DELAY:",
-        "value": "1"
-      },
-      {
         "key": "wraith_speed_tempest",
         "header": "TEMPEST WRAITH SPEED:",
         "value": "725"
+      },
+      {
+        "key": "ministun_duration_tempest",
+        "header": "TEMPEST SLOW DURATION:",
+        "value": [
+          "0.6",
+          "0.8",
+          "1",
+          "1.2"
+        ]
       },
       {
         "key": "think_interval",
@@ -58133,31 +58199,6 @@
         "header": "WRAITH VISION DURATION:",
         "value": "3.34",
         "generated": true
-      },
-      {
-        "key": "ministun_duration",
-        "header": "SLOW DURATION:",
-        "value": [
-          "0.4",
-          "0.5",
-          "0.6",
-          "0.7"
-        ]
-      },
-      {
-        "key": "ministun_duration_tempest",
-        "header": "TEMPEST SLOW DURATION:",
-        "value": [
-          "0.6",
-          "0.8",
-          "1",
-          "1.2"
-        ]
-      },
-      {
-        "key": "move_speed_slow_pct",
-        "header": "MOVEMENT SLOW:",
-        "value": "100%"
       },
       {
         "key": "scepter_activation_delay",
@@ -62704,7 +62745,7 @@
       {
         "key": "debuff_duration",
         "header": "SLOW DURATION:",
-        "value": "0.45"
+        "value": "0.35"
       },
       {
         "key": "slow",
