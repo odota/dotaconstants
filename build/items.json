@@ -356,7 +356,7 @@
       {
         "key": "bonus_armor",
         "header": "BONUS ARMOR:",
-        "value": "5"
+        "value": "4"
       },
       {
         "key": "bonus_regen",
@@ -1080,7 +1080,7 @@
       {
         "key": "spell_lifesteal",
         "header": "SPELL LIFESTEAL:",
-        "value": "10"
+        "value": "12"
       }
     ],
     "mc": false,
@@ -1229,7 +1229,7 @@
       {
         "key": "bonus_evasion",
         "header": "BONUS EVASION:",
-        "value": "15"
+        "value": "20"
       }
     ],
     "mc": false,
@@ -3014,7 +3014,7 @@
   },
   "angels_demise": {
     "hint": [
-      "Passive: Empower Spell The next Unit Target spell you cast on an enemy deals 100 + 75% of your attack damage as bonus damage to the target, and slows them by 50% for 1.5s.",
+      "Passive: Empower Spell The next Unit Target spell you cast on an enemy deals 150 + 75% of your attack damage as bonus damage to the target, and slows them by 50% for 1.5s.",
       "Passive: Critical Strike Grants each attack a 30% chance to deal 160% damage."
     ],
     "id": 1808,
@@ -3042,7 +3042,7 @@
       {
         "key": "spell_crit_flat",
         "header": "SPELL CRIT FLAT:",
-        "value": "100"
+        "value": "150"
       },
       {
         "key": "crit_multiplier",
@@ -3727,7 +3727,7 @@
       {
         "key": "bonus_armor",
         "header": "BONUS ARMOR:",
-        "value": "2 / 4"
+        "value": "1.75 / 3.5"
       },
       {
         "key": "clock_time",
@@ -3875,7 +3875,7 @@
   },
   "vladmir": {
     "hint": [
-      "Passive: Vladmir's Aura Grants 20% lifesteal, 18% bonus damage, 1.75 mana regeneration, and 4 armor to nearby allies. Lifesteal from creeps is reduced by 40%.\n\nRadius: 1200"
+      "Passive: Vladmir's Aura Grants 20% lifesteal, 18% bonus damage, 1 mana regeneration, and 2 armor to nearby allies. Lifesteal from creeps is reduced by 40%.\n\nRadius: 1200"
     ],
     "id": 81,
     "img": "/apps/dota2/images/dota_react/items/vladmir.png?t=1593393829403",
@@ -3885,14 +3885,24 @@
     "notes": "",
     "attrib": [
       {
+        "key": "armor",
+        "header": "ARMOR:",
+        "value": "2"
+      },
+      {
+        "key": "mana_regen",
+        "header": "MANA REGEN:",
+        "value": "0.75"
+      },
+      {
         "key": "armor_aura",
         "header": "ARMOR AURA:",
-        "value": "4.0"
+        "value": "2.0"
       },
       {
         "key": "mana_regen_aura",
         "header": "MANA REGEN AURA:",
-        "value": "1.75"
+        "value": "1"
       },
       {
         "key": "lifesteal_aura",
@@ -4530,7 +4540,7 @@
     "id": 97,
     "img": "/apps/dota2/images/dota_react/items/recipe.png?t=1593393829403",
     "dname": "Orchid Malevolence Recipe",
-    "cost": 650,
+    "cost": 450,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -4548,7 +4558,7 @@
     "img": "/apps/dota2/images/dota_react/items/orchid.png?t=1593393829403",
     "dname": "Orchid Malevolence",
     "qual": "rare",
-    "cost": 3475,
+    "cost": 3275,
     "notes": "",
     "attrib": [
       {
@@ -4613,14 +4623,14 @@
   },
   "bloodthorn": {
     "hint": [
-      "Active: Soul Rend Silences a target for 5 seconds. At the end of the silence, an additional 60% of all damage taken during the silence will be dealt to the target as magical damage.\n\nAll attacks on the silenced target will deal 60 extra damage and have True Strike.\n\nRange: 900",
+      "Active: Soul Rend Silences a target for 5 seconds. At the end of the silence, an additional 60% of all damage taken during the silence will be dealt to the target as magical damage.\n\nAll attacks on the silenced target will deal 50 extra damage and have True Strike.\n\nRange: 900",
       "Passive: Pierce Grants each attack a 40% chance to pierce through evasion and deal 60 bonus magical damage."
     ],
     "id": 250,
     "img": "/apps/dota2/images/dota_react/items/bloodthorn.png?t=1593393829403",
     "dname": "Bloodthorn",
     "qual": "epic",
-    "cost": 6825,
+    "cost": 6625,
     "notes": "",
     "attrib": [
       {
@@ -4671,6 +4681,11 @@
       {
         "key": "proc_damage",
         "header": "PROC DAMAGE:",
+        "value": "50"
+      },
+      {
+        "key": "passive_proc_damage",
+        "header": "PASSIVE PROC DAMAGE:",
         "value": "60"
       },
       {
@@ -5148,7 +5163,7 @@
       {
         "key": "passive_spell_lifesteal",
         "header": "PASSIVE SPELL LIFESTEAL:",
-        "value": "11 / 12 / 13 / 14 / 15"
+        "value": "15"
       },
       {
         "key": "dagon_spell_lifesteal",
@@ -5157,7 +5172,7 @@
       }
     ],
     "mc": 120,
-    "cd": 35,
+    "cd": 27,
     "lore": "A lesser wand that grows in power the longer it is used, it brings magic to the fingertips of the user.",
     "components": [
       "diadem",
@@ -5168,7 +5183,7 @@
   },
   "dagon_2": {
     "hint": [
-      "Active: Energy Burst Emits a powerful burst of magical damage upon a targeted enemy unit. Upgradable.\n\nDamage: 400\nRange: 700\nMana Cost: 120"
+      "Active: Energy Burst Emits a powerful burst of magical damage upon a targeted enemy unit. Heals the caster 75% of damage dealt by Dagon. Upgradable.\n\nDamage: 400\nRange: 700\nMana Cost: 120"
     ],
     "id": 201,
     "img": "/apps/dota2/images/dota_react/items/dagon_2.png?t=1593393829403",
@@ -5215,7 +5230,7 @@
       {
         "key": "passive_spell_lifesteal",
         "header": "PASSIVE SPELL LIFESTEAL:",
-        "value": "11 / 12 / 13 / 14 / 15"
+        "value": "15"
       },
       {
         "key": "dagon_spell_lifesteal",
@@ -5224,14 +5239,14 @@
       }
     ],
     "mc": 120,
-    "cd": 35,
+    "cd": 27,
     "lore": "A lesser wand that grows in power the longer it is used, it brings magic to the fingertips of the user.",
     "created": true,
     "charges": false
   },
   "dagon_3": {
     "hint": [
-      "Active: Energy Burst Emits a powerful burst of magical damage upon a targeted enemy unit. Upgradable.\n\nDamage: 400\nRange: 700\nMana Cost: 120"
+      "Active: Energy Burst Emits a powerful burst of magical damage upon a targeted enemy unit. Heals the caster 75% of damage dealt by Dagon. Upgradable.\n\nDamage: 400\nRange: 700\nMana Cost: 120"
     ],
     "id": 202,
     "img": "/apps/dota2/images/dota_react/items/dagon_3.png?t=1593393829403",
@@ -5278,7 +5293,7 @@
       {
         "key": "passive_spell_lifesteal",
         "header": "PASSIVE SPELL LIFESTEAL:",
-        "value": "11 / 12 / 13 / 14 / 15"
+        "value": "15"
       },
       {
         "key": "dagon_spell_lifesteal",
@@ -5287,14 +5302,14 @@
       }
     ],
     "mc": 120,
-    "cd": 35,
+    "cd": 27,
     "lore": "A lesser wand that grows in power the longer it is used, it brings magic to the fingertips of the user.",
     "created": true,
     "charges": false
   },
   "dagon_4": {
     "hint": [
-      "Active: Energy Burst Emits a powerful burst of magical damage upon a targeted enemy unit. Upgradable.\n\nDamage: 400\nRange: 700\nMana Cost: 120"
+      "Active: Energy Burst Emits a powerful burst of magical damage upon a targeted enemy unit. Heals the caster 75% of damage dealt by Dagon. Upgradable.\n\nDamage: 400\nRange: 700\nMana Cost: 120"
     ],
     "id": 203,
     "img": "/apps/dota2/images/dota_react/items/dagon_4.png?t=1593393829403",
@@ -5341,7 +5356,7 @@
       {
         "key": "passive_spell_lifesteal",
         "header": "PASSIVE SPELL LIFESTEAL:",
-        "value": "11 / 12 / 13 / 14 / 15"
+        "value": "15"
       },
       {
         "key": "dagon_spell_lifesteal",
@@ -5350,14 +5365,14 @@
       }
     ],
     "mc": 120,
-    "cd": 35,
+    "cd": 27,
     "lore": "A lesser wand that grows in power the longer it is used, it brings magic to the fingertips of the user.",
     "created": true,
     "charges": false
   },
   "dagon_5": {
     "hint": [
-      "Active: Energy Burst Emits a powerful burst of magical damage upon a targeted enemy unit.\n\nDamage: 400\nRange: 700\nMana Cost: 120"
+      "Active: Energy Burst Emits a powerful burst of magical damage upon a targeted enemy unit. Heals the caster 75% of damage dealt by Dagon. Upgradable.\n\nDamage: 400\nRange: 700\nMana Cost: 120"
     ],
     "id": 204,
     "img": "/apps/dota2/images/dota_react/items/dagon_5.png?t=1593393829403",
@@ -5404,7 +5419,7 @@
       {
         "key": "passive_spell_lifesteal",
         "header": "PASSIVE SPELL LIFESTEAL:",
-        "value": "11 / 12 / 13 / 14 / 15"
+        "value": "15"
       },
       {
         "key": "dagon_spell_lifesteal",
@@ -5413,7 +5428,7 @@
       }
     ],
     "mc": 120,
-    "cd": 35,
+    "cd": 27,
     "lore": "A lesser wand that grows in power the longer it is used, it brings magic to the fingertips of the user.",
     "created": true,
     "charges": false
@@ -5980,7 +5995,7 @@
       {
         "key": "bonus_strength",
         "header": "BONUS STRENGTH:",
-        "value": "35"
+        "value": "40"
       },
       {
         "key": "health_regen_pct",
@@ -6014,7 +6029,7 @@
   },
   "black_king_bar": {
     "hint": [
-      "Active: Avatar Applies a basic dispel. Grants 50% Magic resistance and immunity to pure and reflected damage. For the duration of the effect, any negative effect from enemy spells has no effect. \n\nDuration: 9 \nDispel Type: Basic Dispel "
+      "Active: Avatar Applies a basic dispel. Grants 60% Magic resistance and immunity to pure and reflected damage. For the duration of the effect, any negative effect from enemy spells has no effect. \n\nDuration: 9 \nDispel Type: Basic Dispel "
     ],
     "id": 116,
     "img": "/apps/dota2/images/dota_react/items/black_king_bar.png?t=1593393829403",
@@ -6051,7 +6066,7 @@
       {
         "key": "magic_resist",
         "header": "MAGIC RESIST:",
-        "value": "50"
+        "value": "60"
       }
     ],
     "mc": 50,
@@ -6107,7 +6122,7 @@
     "id": 118,
     "img": "/apps/dota2/images/dota_react/items/recipe.png?t=1593393829403",
     "dname": "Shiva's Guard Recipe",
-    "cost": 1700,
+    "cost": 2050,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -6126,33 +6141,33 @@
     "img": "/apps/dota2/images/dota_react/items/shivas_guard.png?t=1593393829403",
     "dname": "Shiva's Guard",
     "qual": "epic",
-    "cost": 4825,
+    "cost": 5175,
     "notes": "The wave extends at a speed of 400 to a max size of 900.\nThe Arctic Blast follows its caster.\nMultiple instances of Freezing Aura do not stack.",
     "attrib": [
       {
         "key": "bonus_intellect",
         "header": "BONUS INTELLECT:",
-        "value": "6"
+        "value": "5"
       },
       {
         "key": "bonus_strength",
         "header": "BONUS STRENGTH:",
-        "value": "6"
+        "value": "5"
       },
       {
         "key": "bonus_agility",
         "header": "BONUS AGILITY:",
-        "value": "6"
+        "value": "5"
       },
       {
         "key": "bonus_hp_regen",
         "header": "BONUS HP REGEN:",
-        "value": "6"
+        "value": "5"
       },
       {
         "key": "bonus_armor",
         "header": "BONUS ARMOR:",
-        "value": "16"
+        "value": "15"
       },
       {
         "key": "aura_radius",
@@ -6220,20 +6235,6 @@
     "created": true,
     "charges": false
   },
-  "recipe_bloodstone": {
-    "id": 120,
-    "img": "/apps/dota2/images/dota_react/items/recipe.png?t=1593393829403",
-    "dname": "Bloodstone Recipe",
-    "cost": 700,
-    "notes": "",
-    "attrib": [],
-    "mc": false,
-    "cd": false,
-    "lore": "",
-    "components": null,
-    "created": false,
-    "charges": false
-  },
   "bloodstone": {
     "hint": [
       "Active: Bloodpact Increases Bloodstone's Spell Lifesteal by 2.5x. Lasts 6 seconds."
@@ -6261,6 +6262,11 @@
         "value": "500"
       },
       {
+        "key": "bonus_mp_regen",
+        "header": "BONUS MP REGEN:",
+        "value": "3"
+      },
+      {
         "key": "spell_lifesteal",
         "header": "SPELL LIFESTEAL:",
         "value": "30"
@@ -6286,7 +6292,8 @@
     "lore": "The Bloodstone's bright ruby color is unmistakable on the battlefield, as the owner seems to have infinite vitality and spirit.",
     "components": [
       "voodoo_mask",
-      "soul_booster"
+      "soul_booster",
+      "void_stone"
     ],
     "created": true,
     "charges": false
@@ -6424,7 +6431,7 @@
     "id": 222,
     "img": "/apps/dota2/images/dota_react/items/recipe.png?t=1593393829403",
     "dname": "Meteor Hammer Recipe",
-    "cost": 600,
+    "cost": 400,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -6442,7 +6449,7 @@
     "img": "/apps/dota2/images/dota_react/items/meteor_hammer.png?t=1593393829403",
     "dname": "Meteor Hammer",
     "qual": "epic",
-    "cost": 3100,
+    "cost": 2850,
     "notes": "",
     "attrib": [
       {
@@ -6580,7 +6587,7 @@
       {
         "key": "projectile_speed",
         "header": "PROJECTILE SPEED:",
-        "value": "1100"
+        "value": "1800"
       },
       {
         "key": "slow_pct",
@@ -6678,7 +6685,7 @@
     "id": 258,
     "img": "/apps/dota2/images/dota_react/items/recipe.png?t=1593393829403",
     "dname": "Kaya Recipe",
-    "cost": 600,
+    "cost": 550,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -6693,7 +6700,7 @@
     "img": "/apps/dota2/images/dota_react/items/kaya.png?t=1593393829403",
     "dname": "Kaya",
     "qual": "epic",
-    "cost": 2050,
+    "cost": 2000,
     "notes": "",
     "attrib": [
       {
@@ -6704,7 +6711,7 @@
       {
         "key": "spell_amp",
         "header": "SPELL AMP:",
-        "value": "8"
+        "value": "10"
       },
       {
         "key": "mana_regen_multiplier",
@@ -6714,7 +6721,7 @@
       {
         "key": "spell_lifesteal_amp",
         "header": "SPELL LIFESTEAL AMP:",
-        "value": "24"
+        "value": "20"
       }
     ],
     "mc": false,
@@ -7272,7 +7279,7 @@
       {
         "key": "bonus_health",
         "header": "BONUS HEALTH:",
-        "value": "300"
+        "value": "250"
       },
       {
         "key": "stack_threshold",
@@ -7347,7 +7354,7 @@
     "id": 134,
     "img": "/apps/dota2/images/dota_react/items/recipe.png?t=1593393829403",
     "dname": "Monkey King Bar Recipe",
-    "cost": 800,
+    "cost": 600,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -7365,7 +7372,7 @@
     "img": "/apps/dota2/images/dota_react/items/monkey_king_bar.png?t=1593393829403",
     "dname": "Monkey King Bar",
     "qual": "epic",
-    "cost": 4900,
+    "cost": 4700,
     "notes": "",
     "attrib": [
       {
@@ -7434,7 +7441,7 @@
       {
         "key": "evasion",
         "header": "EVASION:",
-        "value": "15"
+        "value": "20"
       },
       {
         "key": "blind_pct",
@@ -7746,7 +7753,7 @@
     "img": "/apps/dota2/images/dota_react/items/manta.png?t=1593393829403",
     "dname": "Manta Style",
     "qual": "epic",
-    "cost": 4600,
+    "cost": 4550,
     "notes": "Has a 0.1 second cast time during which you are invulnerable.\nMany effects are removed upon using Manta.\nYasha based movement speed bonuses from multiple items do not stack.",
     "attrib": [
       {
@@ -8178,7 +8185,7 @@
     "img": "/apps/dota2/images/dota_react/items/sange_and_yasha.png?t=1593393829403",
     "dname": "Sange and Yasha",
     "qual": "artifact",
-    "cost": 4100,
+    "cost": 4000,
     "notes": "Yasha-based movement speed bonuses from multiple items do not stack.",
     "attrib": [
       {
@@ -8194,7 +8201,7 @@
       {
         "key": "status_resistance",
         "header": "STATUS RESISTANCE:",
-        "value": "20"
+        "value": "25"
       },
       {
         "key": "bonus_attack_speed",
@@ -8209,7 +8216,7 @@
       {
         "key": "hp_regen_amp",
         "header": "HP REGEN AMP:",
-        "value": "22"
+        "value": "25"
       }
     ],
     "mc": false,
@@ -8227,7 +8234,7 @@
     "img": "/apps/dota2/images/dota_react/items/kaya_and_sange.png?t=1593393829403",
     "dname": "Kaya and Sange",
     "qual": "artifact",
-    "cost": 4100,
+    "cost": 4000,
     "notes": "",
     "attrib": [
       {
@@ -8243,7 +8250,7 @@
       {
         "key": "status_resistance",
         "header": "STATUS RESISTANCE:",
-        "value": "20"
+        "value": "25"
       },
       {
         "key": "mana_regen_multiplier",
@@ -8258,12 +8265,12 @@
       {
         "key": "hp_regen_amp",
         "header": "HP REGEN AMP:",
-        "value": "22"
+        "value": "25"
       },
       {
         "key": "spell_lifesteal_amp",
         "header": "SPELL LIFESTEAL AMP:",
-        "value": "30"
+        "value": "25"
       }
     ],
     "mc": false,
@@ -8281,7 +8288,7 @@
     "img": "/apps/dota2/images/dota_react/items/yasha_and_kaya.png?t=1593393829403",
     "dname": "Yasha and Kaya",
     "qual": "artifact",
-    "cost": 4100,
+    "cost": 4000,
     "notes": "",
     "attrib": [
       {
@@ -8317,7 +8324,7 @@
       {
         "key": "spell_lifesteal_amp",
         "header": "SPELL LIFESTEAL AMP:",
-        "value": "30"
+        "value": "25"
       }
     ],
     "mc": false,
@@ -8601,7 +8608,7 @@
     "id": 161,
     "img": "/apps/dota2/images/dota_react/items/recipe.png?t=1593393829403",
     "dname": "Sange Recipe",
-    "cost": 600,
+    "cost": 550,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -8616,7 +8623,7 @@
     "img": "/apps/dota2/images/dota_react/items/sange.png?t=1593393829403",
     "dname": "Sange",
     "qual": "artifact",
-    "cost": 2050,
+    "cost": 2000,
     "notes": "",
     "attrib": [
       {
@@ -8627,7 +8634,7 @@
       {
         "key": "status_resistance",
         "header": "STATUS RESISTANCE:",
-        "value": "12"
+        "value": "16"
       },
       {
         "key": "hp_regen_amp",
@@ -8750,7 +8757,7 @@
     "id": 633,
     "img": "/apps/dota2/images/dota_react/items/recipe.png?t=1593393829403",
     "dname": "Helm of the Overlord Recipe",
-    "cost": 775,
+    "cost": 300,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -8768,7 +8775,7 @@
     "img": "/apps/dota2/images/dota_react/items/helm_of_the_overlord.png?t=1593393829403",
     "dname": "Helm of the Overlord",
     "qual": "artifact",
-    "cost": 6200,
+    "cost": 5725,
     "notes": "Can also Dominate enemy lane creeps and summoned units.\nSelling will cause dominated units to die.",
     "attrib": [
       {
@@ -8919,7 +8926,7 @@
     "id": 1565,
     "img": "/apps/dota2/images/dota_react/items/recipe.png?t=1593393829403",
     "dname": "Gleipnir Recipe",
-    "cost": 450,
+    "cost": 250,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -8938,7 +8945,7 @@
     "img": "/apps/dota2/images/dota_react/items/gungir.png?t=1593393829403",
     "dname": "Gleipnir",
     "qual": "artifact",
-    "cost": 5650,
+    "cost": 5450,
     "notes": "",
     "attrib": [
       {
@@ -9080,7 +9087,7 @@
     "id": 169,
     "img": "/apps/dota2/images/dota_react/items/recipe.png?t=1593393829403",
     "dname": "Yasha Recipe",
-    "cost": 600,
+    "cost": 550,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -9095,7 +9102,7 @@
     "img": "/apps/dota2/images/dota_react/items/yasha.png?t=1593393829403",
     "dname": "Yasha",
     "qual": "artifact",
-    "cost": 2050,
+    "cost": 2000,
     "notes": "Yasha-based movement speed bonuses from multiple items do not stack.",
     "attrib": [
       {
@@ -9268,7 +9275,7 @@
     "id": 1096,
     "img": "/apps/dota2/images/dota_react/items/recipe.png?t=1593393829403",
     "dname": "Disperser Recipe",
-    "cost": 400,
+    "cost": 800,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -9280,14 +9287,14 @@
   },
   "disperser": {
     "hint": [
-      "Active: Suppress Affects all units in a 350 AoE around the target. All enemies around the target are slowed for 5 seconds.\n\n All allies around the target receive a basic dispel, increase their movement speed, and are unslowable for 5 seconds.\n\nBoth movement speed reduction and increase start at 100% and gradually decrease to 0% over the course of the buff duration.\n\nRange: 600\nDispel Type: Basic Dispel ",
+      "Active: Suppress Slows the target for 5 seconds if they are an enemy or grants bonus movespeed, applies Basic Dispel and makes them unslowable for 5 seconds if they are an ally. Caster is always granted the ally benefit on cast.\n\nBoth movement speed reduction and increase start at 100% and gradually decrease to 0% over the course of the buff duration.\n\nRange: 600\nDispel Type: Basic Dispel ",
       "Passive: Manabreak Each attack burns 40 mana from the target, and deals 1 physical damage per burned mana. \n\nBurns 8 mana per attack from melee illusions and 8 mana per attack from ranged illusions."
     ],
     "id": 1097,
     "img": "/apps/dota2/images/dota_react/items/disperser.png?t=1593393829403",
     "dname": "Disperser",
     "qual": "artifact",
-    "cost": 5700,
+    "cost": 6100,
     "notes": "",
     "attrib": [
       {
@@ -9339,11 +9346,6 @@
         "key": "ally_effect_duration",
         "header": "ALLY EFFECT DURATION:",
         "value": "5.0"
-      },
-      {
-        "key": "radius",
-        "header": "RADIUS:",
-        "value": "350"
       },
       {
         "key": "movement_speed_buff_rate",
@@ -9647,7 +9649,7 @@
     "img": "/apps/dota2/images/dota_react/items/orb_of_venom.png?t=1593393829403",
     "dname": "Orb of Venom",
     "qual": "component",
-    "cost": 275,
+    "cost": 250,
     "notes": "Does not stack with its upgrades.",
     "attrib": [
       {
@@ -9720,7 +9722,7 @@
     "img": "/apps/dota2/images/dota_react/items/orb_of_corrosion.png?t=1593393829403",
     "dname": "Orb of Corrosion",
     "qual": "rare",
-    "cost": 900,
+    "cost": 875,
     "notes": "",
     "attrib": [
       {
@@ -9823,7 +9825,7 @@
     "id": 597,
     "img": "/apps/dota2/images/dota_react/items/recipe.png?t=1593393829403",
     "dname": "Mage Slayer Recipe",
-    "cost": 200,
+    "cost": 400,
     "notes": "",
     "attrib": [],
     "mc": false,
@@ -9835,19 +9837,19 @@
   },
   "mage_slayer": {
     "hint": [
-      "Passive: Mage Slayer Places a debuff when you attack enemies, dealing 20 damage per second and causing them to do 40% less spell damage for 6 seconds."
+      "Passive: Mage Slayer Places a debuff when you attack enemies, dealing 25 damage per second and causing them to do 40% less spell damage for 3 seconds."
     ],
     "id": 598,
     "img": "/apps/dota2/images/dota_react/items/mage_slayer.png?t=1593393829403",
     "dname": "Mage Slayer",
     "qual": "rare",
-    "cost": 2625,
+    "cost": 2825,
     "notes": "",
     "attrib": [
       {
         "key": "bonus_magical_armor",
         "header": "BONUS MAGICAL ARMOR:",
-        "value": "25"
+        "value": "20"
       },
       {
         "key": "bonus_attack_speed",
@@ -9867,7 +9869,7 @@
       {
         "key": "duration",
         "header": "DURATION:",
-        "value": "6"
+        "value": "3"
       },
       {
         "key": "bonus_intellect",
@@ -9877,7 +9879,7 @@
       {
         "key": "dps",
         "header": "DPS:",
-        "value": "20"
+        "value": "25"
       }
     ],
     "mc": false,
@@ -10353,17 +10355,17 @@
       {
         "key": "bonus_all_stats",
         "header": "BONUS ALL STATS:",
-        "value": "5"
+        "value": "4"
       },
       {
         "key": "bonus_armor",
         "header": "BONUS ARMOR:",
-        "value": "5"
+        "value": "4"
       },
       {
         "key": "bonus_hp_regen",
         "header": "BONUS HP REGEN:",
-        "value": "5"
+        "value": "4"
       },
       {
         "key": "spell_amp",
@@ -10407,7 +10409,7 @@
   },
   "revenants_brooch": {
     "hint": [
-      "Toggle: Phantom Province When enabled, attacks cost 75 mana, deal magical damage, and can hit ethereal units."
+      "Toggle: Phantom Province When enabled, attacks cost 50 mana, deal magical damage, and can hit ethereal units."
     ],
     "id": 911,
     "img": "/apps/dota2/images/dota_react/items/revenants_brooch.png?t=1593393829403",
@@ -10429,7 +10431,7 @@
       {
         "key": "manacost_per_hit",
         "header": "MANACOST PER HIT:",
-        "value": "75"
+        "value": "50"
       }
     ],
     "mc": false,
@@ -10442,6 +10444,20 @@
     "created": true,
     "charges": false
   },
+  "recipe_devastator": {
+    "id": 1805,
+    "img": "/apps/dota2/images/dota_react/items/recipe.png?t=1593393829403",
+    "dname": "Parasma Recipe",
+    "cost": 400,
+    "notes": "",
+    "attrib": [],
+    "mc": false,
+    "cd": false,
+    "lore": "",
+    "components": null,
+    "created": false,
+    "charges": false
+  },
   "devastator": {
     "hint": [
       "Passive: Witch Blade Causes your next attack to have true strike, apply a poison for 4 seconds, slowing by 25% and dealing 1x your intelligence as damage every second.",
@@ -10451,13 +10467,13 @@
     "img": "/apps/dota2/images/dota_react/items/devastator.png?t=1593393829403",
     "dname": "Parasma",
     "qual": "rare",
-    "cost": 5575,
+    "cost": 5975,
     "notes": "",
     "attrib": [
       {
         "key": "bonus_intellect",
         "header": "BONUS INTELLECT:",
-        "value": "45"
+        "value": "40"
       },
       {
         "key": "bonus_attack_speed",
@@ -10871,13 +10887,13 @@
     "img": "/apps/dota2/images/dota_react/items/heavens_halberd.png?t=1593393829403",
     "dname": "Heaven's Halberd",
     "qual": "artifact",
-    "cost": 3550,
+    "cost": 3500,
     "notes": "",
     "attrib": [
       {
         "key": "bonus_evasion",
         "header": "BONUS EVASION:",
-        "value": "20"
+        "value": "25"
       },
       {
         "key": "bonus_strength",
@@ -10902,7 +10918,7 @@
       {
         "key": "hp_regen_amp",
         "header": "HP REGEN AMP:",
-        "value": "20"
+        "value": "25"
       }
     ],
     "mc": 100,
@@ -11869,7 +11885,7 @@
       {
         "key": "armor_bonus",
         "header": "ARMOR BONUS:",
-        "value": "6"
+        "value": "8"
       },
       {
         "key": "move_speed",
@@ -12737,7 +12753,7 @@
       {
         "key": "bonus_health",
         "header": "BONUS HEALTH:",
-        "value": "75"
+        "value": "90"
       },
       {
         "key": "chance_bounty_rune",
@@ -13116,7 +13132,7 @@
   },
   "panic_button": {
     "hint": [
-      "Passive: Rejuvenate  When the wearer's health falls below 20%, they will receive a hard dispel and be healed for 1000 health."
+      "Passive: Rejuvenate  When the wearer's health falls below 20%, they will receive a hard dispel and be healed for 1250 health."
     ],
     "id": 365,
     "img": "/apps/dota2/images/dota_react/items/panic_button.png?t=1593393829403",
@@ -13127,12 +13143,12 @@
       {
         "key": "bonus_health",
         "header": "BONUS HEALTH:",
-        "value": "300"
+        "value": "500"
       },
       {
         "key": "heal",
         "header": "HEAL:",
-        "value": "1000"
+        "value": "1250"
       },
       {
         "key": "health_threshold",
@@ -13641,7 +13657,7 @@
       {
         "key": "bonus_intelligence",
         "header": "BONUS INTELLIGENCE:",
-        "value": "7"
+        "value": "6"
       },
       {
         "key": "bonus_armor",
@@ -14226,12 +14242,12 @@
       {
         "key": "bonus_health_regen",
         "header": "BONUS HEALTH REGEN:",
-        "value": "3"
+        "value": "2.75"
       },
       {
         "key": "bonus_mana_regen",
         "header": "BONUS MANA REGEN:",
-        "value": "2.5"
+        "value": "2"
       },
       {
         "key": "duration",
@@ -14431,12 +14447,12 @@
       {
         "key": "bonus_strength",
         "header": "BONUS STRENGTH:",
-        "value": "35"
+        "value": "30"
       },
       {
         "key": "movement_speed",
         "header": "MOVEMENT SPEED:",
-        "value": "50"
+        "value": "45"
       },
       {
         "key": "model_scale",
@@ -14607,7 +14623,7 @@
       {
         "key": "bonus_health",
         "header": "BONUS HEALTH:",
-        "value": "75"
+        "value": "50"
       },
       {
         "key": "spell_amp",
@@ -15115,7 +15131,7 @@
       {
         "key": "bonus_all_stats",
         "header": "BONUS ALL STATS:",
-        "value": "4"
+        "value": "3"
       },
       {
         "key": "mana_regen",
@@ -15751,7 +15767,7 @@
       {
         "key": "all_stats",
         "header": "ALL STATS:",
-        "value": "7"
+        "value": "6"
       },
       {
         "key": "bonus_damage",
@@ -16175,7 +16191,7 @@
   },
   "safety_bubble": {
     "hint": [
-      "Passive: Bubbled Up Equipped Hero has a 100 HP Barrier against enemy damage. Barrier fully regenerates after not receiving damage for 5 seconds. Self-inflicted damage bypasses the barrier."
+      "Passive: Bubbled Up Equipped Hero has a 100 HP Barrier against enemy damage. Barrier fully regenerates after not receiving damage for 8 seconds. Self-inflicted damage bypasses the barrier."
     ],
     "id": 1157,
     "img": "/apps/dota2/images/dota_react/items/safety_bubble.png?t=1593393829403",
@@ -16191,12 +16207,12 @@
       {
         "key": "restore_time",
         "header": "RESTORE TIME:",
-        "value": "5"
+        "value": "8"
       },
       {
         "key": "bonus_hp_regen",
         "header": "BONUS HP REGEN:",
-        "value": "5"
+        "value": "2"
       }
     ],
     "mc": false,
@@ -16317,7 +16333,7 @@
   },
   "unwavering_condition": {
     "hint": [
-      "Passive: Unwavering Hero's Max Health is set to 1500 and can't be altered by other effects or attributes."
+      "Passive: Unwavering Hero's Max Health is set to 1800 and can't be altered by other effects or attributes."
     ],
     "id": 1161,
     "img": "/apps/dota2/images/dota_react/items/unwavering_condition.png?t=1593393829403",
@@ -16328,7 +16344,7 @@
       {
         "key": "max_health",
         "header": "MAX HEALTH:",
-        "value": "1500"
+        "value": "1800"
       },
       {
         "key": "magic_resist",
