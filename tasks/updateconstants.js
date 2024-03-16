@@ -275,14 +275,14 @@ async function start() {
                                     "",
                                   )}`
                                 ] || ""
-                              ).replace(/<[^>]*>/g, ""),
+                              ),
                           )
                         : undefined;
                     return {
                       key: abilityKey,
                       header:
                         abilityKey.toUpperCase().split("_").join(" ") + ":",
-                      display,
+                      display: display?.replace(/<[^>]*>/g, ""),
                       value: (val.value ?? val).split(" ").join(" / "),
                     };
                   },
@@ -1702,7 +1702,7 @@ function replaceSpecialAttribs(
     .replace(/(<(\/[^>]+)>)/gi, " ")
     .replace(/(<([^>]+)>)/gi, "");
   // replace double spaces
-  template = template.replace("  ", " ");
+  template = template.replace(/  +/g, " ");
   if (isItem) {
     const abilities = template.split("\\n");
     return {
