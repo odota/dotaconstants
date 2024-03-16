@@ -259,44 +259,35 @@ async function start() {
             item.notes = notes.join("\n");
 
             item.attrib = scripts[key].AbilityValues
-              ? Object.entries(scripts[key].AbilityValues).map(([key, val]) => {
-                  return {
-                    key,
-                    header: key.toUpperCase().split("_").join(" ") + ":",
-                    value: (val.value ?? val).split(" ").join(" / "),
-                  };
-                })
+              ? Object.entries(scripts[key].AbilityValues).map(
+                  ([abilityKey, val]) => {
+                    const tooltipKey = `DOTA_Tooltip_ability_${key}_${abilityKey}`;
+                    const display =
+                      tooltipKey in strings
+                        ? strings[tooltipKey].replace(
+                            /(%)?([+-])(\$\w+)?/,
+                            (str, pct, pm, variable) =>
+                              `${pm} {value}${pct || ""} ` +
+                              (
+                                strings[
+                                  `dota_ability_variable_${variable?.replace(
+                                    "$",
+                                    "",
+                                  )}`
+                                ] || ""
+                              ).replace(/<[^>]*>/g, ""),
+                          )
+                        : undefined;
+                    return {
+                      key: abilityKey,
+                      header:
+                        abilityKey.toUpperCase().split("_").join(" ") + ":",
+                      display,
+                      value: (val.value ?? val).split(" ").join(" / "),
+                    };
+                  },
+                )
               : [];
-
-            const display_attrib = [];
-
-            Object.entries(scripts[key].AbilityValues || []).forEach(
-              ([abilityKey, val]) => {
-                const tooltipKey = `DOTA_Tooltip_ability_${key}_${abilityKey}`;
-                if (tooltipKey in strings) {
-                  display_attrib.push({
-                    key: abilityKey,
-                    // Ex: '%+$move_speed' -> '+ {value}% Movement Speed'
-                    header: strings[tooltipKey].replace(
-                      /(%)?([+-])(\$\w+)?/,
-                      (str, pct, pm, variable) =>
-                        `${pm} {value}${pct || ""} ` +
-                        (
-                          strings[
-                            `dota_ability_variable_${variable?.replace(
-                              "$",
-                              "",
-                            )}`
-                          ] || ""
-                        ).replace(/<[^>]*>/g, ""),
-                    ),
-                    value: (val.value ?? val).split(" ").join(" / "),
-                  });
-                }
-              },
-            );
-
-            item.display_attrib = display_attrib;
 
             item.mc = parseInt(scripts[key].AbilityManaCost) || false;
             item.hc = parseInt(scripts[key].AbilityHealthCost) || false;
