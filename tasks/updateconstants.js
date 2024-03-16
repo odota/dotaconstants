@@ -1702,7 +1702,7 @@ function replaceSpecialAttribs(
     .replace(/(<(\/[^>]+)>)/gi, " ")
     .replace(/(<([^>]+)>)/gi, "");
   // replace double spaces
-  template = template.replace("  ", " ");
+  template = template.replace(/  +/g, " ");
   if (isItem) {
     const abilities = template.split("\\n");
     return {
