@@ -275,14 +275,14 @@ async function start() {
                                     "",
                                   )}`
                                 ] || ""
-                              ).replace(/<[^>]*>/g, ""),
+                              ),
                           )
                         : undefined;
                     return {
                       key: abilityKey,
                       header:
                         abilityKey.toUpperCase().split("_").join(" ") + ":",
-                      display,
+                      display: display?.replace(/<[^>]*>/g, ""),
                       value: (val.value ?? val).split(" ").join(" / "),
                     };
                   },
