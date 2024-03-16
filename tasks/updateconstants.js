@@ -27,6 +27,7 @@ const extraStrings = {
   SPELL_IMMUNITY_ALLIES_YES: "Yes",
   SPELL_IMMUNITY_ALLIES_NO: "No",
   SPELL_DISPELLABLE_YES: "Yes",
+  SPELL_DISPELLABLE_YES_STRONG: "Strong Dispels Only",
   SPELL_DISPELLABLE_NO: "No",
   DOTA_UNIT_TARGET_TEAM_BOTH: "Both",
   DOTA_UNIT_TARGET_TEAM_ENEMY: "Enemy",
@@ -106,8 +107,6 @@ const notAbilities = new Set([
 
 const itemQualOverrides = {
   fluffy_hat: "component",
-  ring_of_health: "secret_shop",
-  void_stone: "secret_shop",
   overwhelming_blink: "artifact",
   swift_blink: "artifact",
   arcane_blink: "artifact",
@@ -125,14 +124,17 @@ const itemQualOverrides = {
 };
 
 const idsUrl =
-"https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_ability_ids.txt";
-const heroesUrl = "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.txt";
+  "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_ability_ids.txt";
+const heroesUrl =
+  "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.txt";
 const abilitiesLoc =
-"https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/abilities_english.txt";
+  "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/abilities_english.txt";
 const npcAbilitiesUrl =
-"https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_abilities.txt";
-const npcUnitsUrl = "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_units.txt";
-const localizationUrl = "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/dota_english.txt";
+  "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_abilities.txt";
+const npcUnitsUrl =
+  "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_units.txt";
+const localizationUrl =
+  "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/dota_english.txt";
 
 let aghsAbilityValues = {};
 const aghs_desc_urls = [];
@@ -140,7 +142,7 @@ const abilitiesUrls = [abilitiesLoc, npcAbilitiesUrl];
 
 start();
 async function start() {
-  const resp = await axios.get(heroesUrl, { responseType: 'text' });
+  const resp = await axios.get(heroesUrl, { responseType: "text" });
   const heroesVdf = parseJsonOrVdf(resp.data);
   let ids = Object.keys(heroesVdf.DOTAHeroes)
     .filter((name) => !badNames.has(name))
@@ -223,6 +225,20 @@ async function start() {
             item.qual = itemQualOverrides[key] ?? scripts[key].ItemQuality;
             item.cost = parseInt(scripts[key].ItemCost);
 
+            const behavior = formatBehavior(scripts[key].AbilityBehavior);
+
+            item.behavior = behavior !== "Passive" ? behavior : undefined;
+            item.dmg_type =
+              formatBehavior(scripts[key].AbilityUnitDamageType) || undefined;
+            item.bkbpierce =
+              formatBehavior(scripts[key].SpellImmunityType) || undefined;
+            item.dispellable =
+              formatBehavior(scripts[key].SpellDispellableType) || undefined;
+            item.target_team =
+              formatBehavior(scripts[key].AbilityUnitTargetTeam) || undefined;
+            item.target_type =
+              formatBehavior(scripts[key].AbilityUnitTargetType) || undefined;
+
             let notes = [];
             for (
               let i = 0;
@@ -242,15 +258,39 @@ async function start() {
 
             item.notes = notes.join("\n");
 
-            item.attrib = scripts[key].AbilityValues ? Object.entries(scripts[key].AbilityValues).map(([key, val]) => {
-              return {
-                key,
-                header: key.toUpperCase().split('_').join(' ') + ':',
-                value: (val.value ?? val).split(' ').join(' / '),
-              }
-            }): [];
+            item.attrib = scripts[key].AbilityValues
+              ? Object.entries(scripts[key].AbilityValues).map(
+                  ([abilityKey, val]) => {
+                    const tooltipKey = `DOTA_Tooltip_ability_${key}_${abilityKey}`;
+                    const display =
+                      tooltipKey in strings
+                        ? strings[tooltipKey].replace(
+                            /(%)?([+-])(\$\w+)?/,
+                            (str, pct, pm, variable) =>
+                              `${pm} {value}${pct || ""} ` +
+                              (
+                                strings[
+                                  `dota_ability_variable_${variable?.replace(
+                                    "$",
+                                    "",
+                                  )}`
+                                ] || ""
+                              ).replace(/<[^>]*>/g, ""),
+                          )
+                        : undefined;
+                    return {
+                      key: abilityKey,
+                      header:
+                        abilityKey.toUpperCase().split("_").join(" ") + ":",
+                      display,
+                      value: (val.value ?? val).split(" ").join(" / "),
+                    };
+                  },
+                )
+              : [];
 
             item.mc = parseInt(scripts[key].AbilityManaCost) || false;
+            item.hc = parseInt(scripts[key].AbilityHealthCost) || false;
             item.cd = parseInt(scripts[key].AbilityCooldown) || false;
 
             item.lore = (
@@ -818,21 +858,17 @@ async function start() {
     },
     {
       key: "heroes",
-      url: [
-        localizationUrl,
-        heroesUrl,
-      ],
+      url: [localizationUrl, heroesUrl],
       transform: (respObj) => {
         let heroes = [];
         let keys = Object.keys(respObj[1].DOTAHeroes).filter(
           (name) => !badNames.has(name),
         );
         keys.forEach((name) => {
-          let h = formatVpkHero(
-            name,
-            respObj[1],
-          );
-          h.localized_name = respObj[1].DOTAHeroes[name].workshop_guide_name ?? respObj[0].lang.Tokens[name + ':n'];
+          let h = formatVpkHero(name, respObj[1]);
+          h.localized_name =
+            respObj[1].DOTAHeroes[name].workshop_guide_name ??
+            respObj[0].lang.Tokens[name + ":n"];
           heroes.push(h);
         });
         heroes = heroes.sort((a, b) => a.id - b.id);
@@ -1051,7 +1087,10 @@ async function start() {
             if (itemName) {
               if (!result[patch].items[itemName])
                 result[patch].items[itemName] = [];
-              result[patch].items[itemName].push(data[key]);
+              const cleanEntry = data[key].replace(/<[^>]*>/g, "");
+              if (cleanEntry !== "") {
+                result[patch].items[itemName].push(cleanEntry);
+              }
             } else {
               if (!result[patch].items.misc) result[patch].items.misc = [];
               result[patch].items.misc.push(data[key]);
@@ -1060,8 +1099,14 @@ async function start() {
             let heroName = parseNameFromArray(keyArr, heroes);
 
             // Extracting ability name
-            let abilityName = keyArr.length > 1 ? keyArr.join("_").replace(`${heroName}_`, '') : "general";
-            abilityName = !abilityName || abilityName === heroName ? "general" : abilityName;
+            let abilityName =
+              keyArr.length > 1
+                ? keyArr.join("_").replace(`${heroName}_`, "")
+                : "general";
+            abilityName =
+              !abilityName || abilityName === heroName
+                ? "general"
+                : abilityName;
 
             if (heroName) {
               if (!result[patch].heroes[heroName])
@@ -1070,17 +1115,25 @@ async function start() {
               let isTalent = data[key].startsWith("Talent:");
               isTalent = isTalent || abilityName.startsWith("talent");
               if (isTalent) {
-                if (!result[patch].heroes[heroName].talents) result[patch].heroes[heroName].talents = [];
-                result[patch].heroes[heroName].talents.push(data[key].replace("Talent:", "").trim());
+                if (!result[patch].heroes[heroName].talents)
+                  result[patch].heroes[heroName].talents = [];
+                result[patch].heroes[heroName].talents.push(
+                  data[key].replace("Talent:", "").trim(),
+                );
               } else {
                 // DOTA_Patch_7_32_shredder_shredder_chakram_2_2
                 // DOTA_Patch_7_32_tinker_tinker_rearm_3_info
                 // remove everything to the right of the first _n that is found, where n is a number
-                abilityName = abilityName.replace(/_[0-9]+.*/, '');
+                abilityName = abilityName.replace(/_[0-9]+.*/, "");
                 // if abilityName is just an underscore and number like "_n" then set it to general
-                abilityName = parseInt(abilityName.replace(/_/, '')) ? "general" : abilityName;
-                if (!result[patch].heroes[heroName][abilityName]) result[patch].heroes[heroName][abilityName] = [];
-                result[patch].heroes[heroName][abilityName].push(data[key].trim());
+                abilityName = parseInt(abilityName.replace(/_/, ""))
+                  ? "general"
+                  : abilityName;
+                if (!result[patch].heroes[heroName][abilityName])
+                  result[patch].heroes[heroName][abilityName] = [];
+                result[patch].heroes[heroName][abilityName].push(
+                  data[key].trim(),
+                );
               }
             } else {
               if (!result[patch].heroes.misc) result[patch].heroes.misc = [];
@@ -1231,7 +1284,10 @@ async function start() {
       arr.map(async (url) => {
         const resp = await axios.get(url, { responseType: "text" });
         // Fix kotl file
-        resp.data = resp.data.replace('"channel_vision_radius"	{', '"channel_vision_radius"\n{');
+        resp.data = resp.data.replace(
+          '"channel_vision_radius"	{',
+          '"channel_vision_radius"\n{',
+        );
         return parseJsonOrVdf(resp.data);
       }),
     );
