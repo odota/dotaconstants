@@ -262,20 +262,20 @@ async function start() {
               ? Object.entries(scripts[key].AbilityValues).map(
                   ([abilityKey, val]) => {
                     const tooltipKey = `DOTA_Tooltip_ability_${key}_${abilityKey}`;
+                    const string = strings[tooltipKey];
                     const display =
-                      tooltipKey in strings
-                        ? strings[tooltipKey].replace(
+                      tooltipKey in strings &&
+                      (string.includes("$") || /[a-z]/.test(string))
+                        ? string.replace(
                             /(%)?([+-])(\$\w+)?/,
                             (str, pct, pm, variable) =>
                               `${pm} {value}${pct || ""} ` +
-                              (
-                                strings[
-                                  `dota_ability_variable_${variable?.replace(
-                                    "$",
-                                    "",
-                                  )}`
-                                ] || ""
-                              ),
+                              (strings[
+                                `dota_ability_variable_${variable?.replace(
+                                  "$",
+                                  "",
+                                )}`
+                              ] || ""),
                           )
                         : undefined;
                     return {
