@@ -9950,7 +9950,7 @@
         "value": "150"
       }
     ],
-    "mc": "50",
+    "mc": "150",
     "cd": "10",
     "img": "/apps/dota2/images/dota_react/abilities/crystal_maiden_crystal_clone.png"
   },
@@ -10178,9 +10178,9 @@
     ],
     "cd": [
       "24",
-      "22",
-      "20",
-      "18"
+      "21",
+      "18",
+      "15"
     ],
     "img": "/apps/dota2/images/dota_react/abilities/drow_ranger_multishot.png"
   },
@@ -10595,7 +10595,7 @@
     "dname": "+50% Gust Blind"
   },
   "special_bonus_unique_drow_ranger_6": {
-    "dname": "-8s Multishot Cooldown"
+    "dname": "-6s Multishot Cooldown"
   },
   "special_bonus_unique_drow_ranger_7": {
     "dname": "-4s Gust Cooldown"
@@ -11710,12 +11710,7 @@
       }
     ],
     "lore": "Nevermore's trademark for harvesting souls.",
-    "mc": [
-      "75",
-      "80",
-      "85",
-      "90"
-    ],
+    "mc": "75",
     "cd": "10",
     "img": "/apps/dota2/images/dota_react/abilities/nevermore_shadowraze1.png"
   },
@@ -11799,12 +11794,7 @@
       }
     ],
     "lore": "Nevermore's trademark for harvesting souls.",
-    "mc": [
-      "75",
-      "80",
-      "85",
-      "90"
-    ],
+    "mc": "75",
     "cd": "10",
     "img": "/apps/dota2/images/dota_react/abilities/nevermore_shadowraze2.png"
   },
@@ -11888,12 +11878,7 @@
       }
     ],
     "lore": "Nevermore's trademark for harvesting souls.",
-    "mc": [
-      "75",
-      "80",
-      "85",
-      "90"
-    ],
+    "mc": "75",
     "cd": "10",
     "img": "/apps/dota2/images/dota_react/abilities/nevermore_shadowraze3.png"
   },
@@ -13282,7 +13267,7 @@
       {
         "key": "shard_attack_range_bonus",
         "header": "SHARD ATTACK RANGE BONUS:",
-        "value": "200",
+        "value": "0",
         "generated": true
       },
       {
@@ -13388,6 +13373,12 @@
       {
         "key": "coil_rapid_fire_z_offset",
         "header": "COIL RAPID FIRE Z OFFSET:",
+        "value": "0",
+        "generated": true
+      },
+      {
+        "key": "attack_rate_pct",
+        "header": "ATTACK RATE PCT:",
         "value": "0",
         "generated": true
       },
@@ -15412,9 +15403,9 @@
         "key": "bonus_damage",
         "header": "BONUS BASE DAMAGE:",
         "value": [
-          "20",
-          "25",
-          "30",
+          "14",
+          "21",
+          "28",
           "35"
         ]
       },
@@ -17371,7 +17362,7 @@
     "dname": "+25% X Marks the Spot Move Speed"
   },
   "special_bonus_unique_kunkka_7": {
-    "dname": "+30% Torrent Damage/Knock Up Duration"
+    "dname": "+25% Torrent Damage/Knock Up Duration"
   },
   "special_bonus_unique_kunkka_ghostship_cooldown": {
     "dname": "-15 Ghostship Cooldown"
@@ -18123,10 +18114,10 @@
         "key": "damage",
         "header": "DAMAGE:",
         "value": [
-          "20",
-          "30",
-          "40",
-          "50"
+          "18",
+          "32",
+          "46",
+          "60"
         ]
       },
       {
@@ -18288,7 +18279,7 @@
     ],
     "bkbpierce": "No",
     "dispellable": "No",
-    "desc": "Creates an Ice Spire at the target spot, slowing enemies around it. Can take 5 hero hits or 10 creep hits and when destroyed it will create a Frost Blast around it.\n\nChain Frost can bounce to the Spire if there are no other enemies in range.\n\nLich can cast Frost Shield on the Spire. Each Frost Shield tick will heal the spire by 1 hero attack.",
+    "desc": "Creates an Ice Spire at the target spot, slowing enemies around it. Can take 5 hero hits or 10 creep hits and when destroyed it will create a Frost Blast around it.\n\nChain Frost can be cast on the Spire and can bounce to the Spire if there are no other enemies in range.\n\nLich can cast Frost Shield on the Spire. Each Frost Shield tick will heal the spire by 1 hero attack.",
     "attrib": [
       {
         "key": "bonus_movespeed",
@@ -21101,7 +21092,12 @@
       {
         "key": "abilitycastrange",
         "header": "CAST RANGE:",
-        "value": "650",
+        "value": [
+          "700",
+          "750",
+          "800",
+          "850"
+        ],
         "generated": true
       },
       {
@@ -22361,16 +22357,16 @@
     "dname": "+20% Ghost Shroud Movement Slow"
   },
   "special_bonus_unique_necrophos_4": {
-    "dname": "+40 Death Pulse Heal"
+    "dname": "+50 Death Pulse Heal"
   },
   "special_bonus_unique_necrophos_5": {
     "dname": "+25% Heartstopper Regen Reduction"
   },
   "special_bonus_unique_necrophos_6": {
-    "dname": "+100 Reaper's Scythe Cast Range"
+    "dname": "+125 Reaper's Scythe Cast Range"
   },
   "special_bonus_unique_necrophos_heartstopper_regen_duration": {
-    "dname": "+2s Heartstopper Aura Stack Duration"
+    "dname": "+3s Heartstopper Aura Stack Duration"
   },
   "special_bonus_unique_necrophos_sadist_heal_bonus": {
     "dname": "+15% Ghost Shroud Self Restoration Amp"
@@ -23562,9 +23558,9 @@
         "header": "BONUS ATTACK SPEED:",
         "value": [
           "10",
-          "20",
-          "30",
-          "40"
+          "22",
+          "34",
+          "46"
         ]
       },
       {
@@ -24756,7 +24752,7 @@
     "dmg_type": "Magical",
     "bkbpierce": "No",
     "dispellable": "Yes",
-    "desc": "Faceless Void traps all nearby enemies in a time dilation field for 8 seconds, extending their cooldowns and slowing their movement and attack speed by 10% for each cooldown extended. Deals bonus damage per second for each cooldown. The debuff does not tick down while inside Chronosphere.",
+    "desc": "Faceless Void traps all nearby enemies in a time dilation field for 8 seconds, extending their cooldowns and slowing their movement and attack speed by 7% for each cooldown extended. Deals bonus damage per second for each cooldown. The debuff does not tick down while inside Chronosphere.",
     "attrib": [
       {
         "key": "radius",
@@ -24776,7 +24772,12 @@
       {
         "key": "slow",
         "header": "SLOW PER COOLDOWN:",
-        "value": "10%"
+        "value": [
+          "7%",
+          "8%",
+          "9%",
+          "10%"
+        ]
       },
       {
         "key": "cooldown_percentage",
@@ -24812,9 +24813,9 @@
       }
     ],
     "mc": [
-      "60",
-      "70",
+      "75",
       "80",
+      "85",
       "90"
     ],
     "cd": [
@@ -26511,9 +26512,9 @@
         "header": "BONUS DAMAGE:",
         "value": [
           "80",
-          "130",
-          "180",
-          "230"
+          "140",
+          "200",
+          "260"
         ]
       },
       {
@@ -27889,7 +27890,7 @@
     "dmg_type": "Magical",
     "bkbpierce": [],
     "dispellable": "No",
-    "desc": "Dragon Knight takes the form of one of three powerful elder dragons, increasing his speed and Dragon Tail's range, while granting him new powers.\nLEVEL 1 Green Dragon - Corrosive Breath: attacks deal 25 poison damage per second for 5 seconds. Works on structures.\nLEVEL 2 Red Dragon - Splash Attack: attacks damage all enemy units in a 350 radius for 75% damage, with Corrosive Breath added to the targets.\nLEVEL 3 Blue Dragon - Frost Breath: slows movement speed by 0 0 -30 -45% and attack speed by 0 0 -30 -45 of enemy units in Splash Attack range for 0 0 3.0 3.0 seconds, with Corrosive Breath added to the targets.",
+    "desc": "Dragon Knight takes the form of one of three powerful elder dragons, increasing his speed and Dragon Tail's range, while granting him new powers.\nLEVEL 1 Green Dragon - Corrosive Breath: attacks deal 25 poison damage per second for 3 seconds. Works on structures.\nLEVEL 2 Red Dragon - Splash Attack: attacks damage all enemy units in a 350 radius for 75% damage, with Corrosive Breath added to the targets.\nLEVEL 3 Blue Dragon - Frost Breath: slows movement speed by 0 0 -30 -45% and attack speed by 0 0 -30 -45 of enemy units in Splash Attack range for 0 0 3.0 3.0 seconds, with Corrosive Breath added to the targets.",
     "attrib": [
       {
         "key": "duration",
@@ -27931,7 +27932,7 @@
       {
         "key": "corrosive_breath_duration",
         "header": "CORROSIVE BREATH DURATION:",
-        "value": "5",
+        "value": "3",
         "generated": true
       },
       {
@@ -28798,7 +28799,7 @@
     "behavior": "No Target",
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Forms a barrier of energized cogs around Clockwerk, trapping any units that are near. Allies in the cogs when they are created receive a magic damage barrier. Enemies outside the trap that touch a cog are knocked back, losing health and mana. Once a cog has delivered a shock, it will power down. Cogs can be destroyed by enemy attacks, but Clockwerk can destroy them with just one.",
+    "desc": "Forms a barrier of energized cogs around Clockwerk, trapping any units that are near. Allies in the cogs when they are created receive a magic damage barrier. Enemies outside the trap that touch a cog are knocked back, losing health and mana. Damage is increased by 50% of the mana burned.\n\nOnce a cog has delivered a shock, it will power down. Cogs can be destroyed by enemy attacks, but Clockwerk can destroy them with just one.",
     "attrib": [
       {
         "key": "duration",
@@ -28829,6 +28830,12 @@
           "110",
           "140"
         ]
+      },
+      {
+        "key": "mana_burn_as_damage_pct",
+        "header": "MANA BURN AS DAMAGE PCT:",
+        "value": "50",
+        "generated": true
       },
       {
         "key": "magic_barrier",
@@ -29460,7 +29467,7 @@
     "dname": "Lightning Storm Can Bounce Twice On Units"
   },
   "special_bonus_unique_leshrac_3": {
-    "dname": "+40 Pulse Nova Damage"
+    "dname": "+35 Pulse Nova Damage"
   },
   "special_bonus_unique_leshrac_4": {
     "dname": "+20% Damage Reduction during Pulse Nova"
@@ -30093,10 +30100,10 @@
         "key": "movement_speed_bonus",
         "header": "MOVE SPEED BONUS:",
         "value": [
+          "6%",
           "9%",
           "12%",
-          "15%",
-          "18%"
+          "15%"
         ]
       },
       {
@@ -30240,7 +30247,7 @@
       {
         "key": "abilitycastrange",
         "header": "CAST RANGE:",
-        "value": "800"
+        "value": "600"
       },
       {
         "key": "abilitycastpoint",
@@ -34321,10 +34328,10 @@
         "key": "bonus_damage",
         "header": "GEMINATE ATTACK DAMAGE:",
         "value": [
-          "20",
-          "35",
-          "50",
-          "65"
+          "25",
+          "40",
+          "55",
+          "70"
         ]
       },
       {
@@ -34975,16 +34982,21 @@
         "key": "damage_per_second",
         "header": "DAMAGE PER SECOND:",
         "value": [
-          "10",
-          "20",
+          "25",
           "30",
+          "35",
           "40"
         ]
       },
       {
         "key": "damage_duration",
         "header": "BURN DURATION:",
-        "value": "5"
+        "value": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ]
       },
       {
         "key": "explosion_radius",
@@ -35239,7 +35251,7 @@
     "dname": "2 Flamebreak Charges"
   },
   "special_bonus_unique_batrider_6": {
-    "dname": "-10s Flaming Lasso Cooldown"
+    "dname": "-7s Flaming Lasso Cooldown"
   },
   "special_bonus_unique_batrider_7": {
     "dname": "+50 Sticky Napalm Radius"
@@ -35277,9 +35289,9 @@
         "header": "MOVEMENT SLOW:",
         "value": [
           "-12%",
-          "-20%",
-          "-28%",
-          "-36%"
+          "-18%",
+          "-24%",
+          "-30%"
         ]
       },
       {
@@ -35459,10 +35471,10 @@
         "key": "bonus_armor",
         "header": "ARMOR:",
         "value": [
+          "9",
           "12",
-          "16",
-          "20",
-          "24"
+          "15",
+          "18"
         ]
       },
       {
@@ -36513,7 +36525,12 @@
       }
     ],
     "lore": "Kaldr's presence draws those around him into a frozen void, threatening to lock them in an icy prison for eternity.",
-    "mc": "125",
+    "mc": [
+      "110",
+      "115",
+      "120",
+      "125"
+    ],
     "cd": [
       "15",
       "13",
@@ -37033,10 +37050,10 @@
         "key": "slow_resist",
         "header": "SLOW RESISTANCE:",
         "value": [
-          "15%",
+          "10%",
           "20%",
-          "25%",
-          "30%"
+          "30%",
+          "40%"
         ]
       },
       {
@@ -40747,9 +40764,9 @@
         "header": "INT STEAL:",
         "value": [
           "1",
-          "1",
           "2",
-          "3"
+          "3",
+          "4"
         ]
       },
       {
@@ -43964,10 +43981,10 @@
         "key": "cast_range",
         "header": "CAST RANGE:",
         "value": [
-          "550",
           "600",
           "650",
-          "700"
+          "700",
+          "750"
         ]
       },
       {
@@ -44028,7 +44045,7 @@
     "dname": "Chaos Strike",
     "behavior": "Passive",
     "bkbpierce": "Yes",
-    "desc": "Chaos Knight and his illusions' attacks have a chance to deal a critical strike of varying strength with bonus lifesteal. Deals 1.9x damage to creeps, but lifesteal from creeps is reduced by 70%.",
+    "desc": "Chaos Knight and his illusions' attacks have a chance to deal a critical strike of varying strength with bonus lifesteal. Deals 2x damage to creeps, but lifesteal from creeps is reduced by 70%.",
     "attrib": [
       {
         "key": "chance",
@@ -44063,7 +44080,7 @@
       {
         "key": "creep_multiplier",
         "header": "CREEP MULTIPLIER:",
-        "value": "1.9",
+        "value": "2",
         "generated": true
       },
       {
@@ -46456,7 +46473,7 @@
       "Hero",
       "Basic"
     ],
-    "desc": "Repeatedly strikes the targeted unit with lightning. Each strike damages nearby enemy units in a small radius and slows enemy movement and attack speed by 100% for 0.1 seconds. Provides vision of its target.",
+    "desc": "Repeatedly strikes the targeted unit with lightning. Each strike damages nearby enemy units in a small radius and slows enemy movement and attack speed by 100% for 0.4 seconds. Provides vision of its target.",
     "attrib": [
       {
         "key": "abilitycastrange",
@@ -46498,12 +46515,7 @@
       {
         "key": "slow_duration",
         "header": "SLOW DURATION:",
-        "value": [
-          "0.1",
-          "0.2",
-          "0.3",
-          "0.4"
-        ],
+        "value": "0.4",
         "generated": true
       },
       {
@@ -47582,7 +47594,7 @@
     "dname": "+1 Mirror Image Illusion"
   },
   "special_bonus_unique_naga_siren_2": {
-    "dname": "+25 Rip Tide Damage"
+    "dname": "+20 Rip Tide Damage"
   },
   "special_bonus_unique_naga_siren_3": {
     "dname": "--1 Attack to Trigger Rip Tide"
@@ -49943,7 +49955,7 @@
     "dname": "+1.5s Stone Gaze Duration"
   },
   "special_bonus_unique_medusa_2": {
-    "dname": "-10% Split Shot Damage Penalty"
+    "dname": "-8% Split Shot Damage Penalty"
   },
   "special_bonus_unique_medusa_3": {
     "dname": "+3 Mystic Snake Bounces"
@@ -50515,10 +50527,10 @@
         "key": "stomp_damage",
         "header": "STOMP DAMAGE:",
         "value": [
-          "90",
-          "160",
-          "230",
-          "300"
+          "70",
+          "140",
+          "210",
+          "280"
         ]
       },
       {
@@ -51576,10 +51588,10 @@
         "key": "damage",
         "header": "DAMAGE:",
         "value": [
-          "60",
-          "110",
-          "160",
-          "210"
+          "50",
+          "95",
+          "140",
+          "185"
         ]
       },
       {
@@ -51641,9 +51653,9 @@
         "key": "stack_limit",
         "header": "MAX STACKS:",
         "value": [
-          "15",
-          "24",
-          "33",
+          "12",
+          "22",
+          "32",
           "42"
         ]
       },
@@ -54763,7 +54775,7 @@
       {
         "key": "abilitychargerestoretime",
         "header": "CHARGE RESTORE TIME:",
-        "value": "38",
+        "value": "35",
         "generated": true
       },
       {
@@ -55050,7 +55062,7 @@
     "dmg_type": "Magical",
     "bkbpierce": "No",
     "dispellable": "Strong Dispels Only",
-    "desc": "Earth Spirit gathers himself into a boulder and, after a 0.6s delay, rolls toward the target location, dealing 30 + 100% STR damage and stunning enemy units. He will stop if he collides with an enemy hero or is stunned. If he rolls over a Stone Remnant, he will travel further and faster, and stun enemies for longer.",
+    "desc": "Earth Spirit gathers himself into a boulder and, after a 0.6s delay, rolls toward the target location, dealing 60 + 100% STR damage and stunning enemy units. He will stop if he collides with an enemy hero or is stunned. If he rolls over a Stone Remnant, he will travel further and faster, and stun enemies for longer.",
     "attrib": [
       {
         "key": "radius",
@@ -55087,7 +55099,7 @@
       {
         "key": "damage",
         "header": "DAMAGE:",
-        "value": "30"
+        "value": "60"
       },
       {
         "key": "stun_duration",
@@ -55469,9 +55481,9 @@
         "key": "illusion_outgoing_damage",
         "header": "ILLUSION OUTGOING DAMAGE:",
         "value": [
-          "-45",
-          "-30",
-          "-15",
+          "-60",
+          "-40",
+          "-20",
           "0"
         ],
         "generated": true
@@ -55480,9 +55492,9 @@
         "key": "illusion_outgoing_tooltip",
         "header": "REFLECTION DAMAGE:",
         "value": [
-          "55%",
-          "70%",
-          "85%",
+          "40%",
+          "60%",
+          "80%",
           "100%"
         ]
       },
@@ -55509,7 +55521,7 @@
       {
         "key": "range",
         "header": "RADIUS:",
-        "value": "500"
+        "value": "400"
       },
       {
         "key": "abilitycastrange",
@@ -57163,9 +57175,9 @@
       "145"
     ],
     "cd": [
+      "16",
       "13",
-      "11",
-      "9",
+      "10",
       "7"
     ],
     "img": "/apps/dota2/images/dota_react/abilities/techies_sticky_bomb.png"
@@ -58352,7 +58364,7 @@
     "dname": "No Damage Penalty Distance For Tempest Double"
   },
   "special_bonus_unique_arc_warden_9": {
-    "dname": "-8s Magnetic Field Cooldown"
+    "dname": "-7s Magnetic Field Cooldown"
   },
   "abyssal_underlord_firestorm": {
     "dname": "Firestorm",
@@ -58496,6 +58508,11 @@
         ]
       },
       {
+        "key": "speed_bonus",
+        "header": "MOVEMENT SLOW:",
+        "value": "0%"
+      },
+      {
         "key": "abilitycastrange",
         "header": "CAST RANGE:",
         "value": "675",
@@ -58551,10 +58568,10 @@
         "key": "bonus_damage_from_creep",
         "header": "BONUS DAMAGE(CREEP):",
         "value": [
-          "2",
-          "4",
-          "6",
-          "8"
+          "3",
+          "5",
+          "7",
+          "9"
         ]
       },
       {
@@ -58759,7 +58776,7 @@
     "dname": "-3s Firestorm Cooldown"
   },
   "special_bonus_unique_underlord_6": {
-    "dname": "+75 Pit of Malice AoE"
+    "dname": "Pit of Malice Slows by 30%"
   },
   "special_bonus_unique_underlord_7": {
     "dname": "+2 Firestorm Wave Count"
@@ -59384,10 +59401,10 @@
         "key": "damage",
         "header": "DAMAGE PER STRIKE:",
         "value": [
-          "25",
-          "45",
-          "65",
-          "85"
+          "30",
+          "60",
+          "90",
+          "120"
         ]
       },
       {
@@ -59416,7 +59433,7 @@
       {
         "key": "strikes",
         "header": "STRIKES:",
-        "value": "4"
+        "value": "3"
       },
       {
         "key": "abilitycastrange",
@@ -60063,7 +60080,7 @@
       {
         "key": "roaming_duration",
         "header": "ROAMING DURATION:",
-        "value": "5"
+        "value": "5.5"
       },
       {
         "key": "pierces_magic_immunity",
@@ -61355,7 +61372,11 @@
       "200",
       "250"
     ],
-    "cd": "90",
+    "cd": [
+      "100",
+      "95",
+      "90"
+    ],
     "img": "/apps/dota2/images/dota_react/abilities/mars_arena_of_blood.png"
   },
   "special_bonus_unique_mars_spear_bonus_damage": {
@@ -61368,7 +61389,7 @@
     "dname": "-3s Spear Cooldown"
   },
   "special_bonus_unique_mars_rebuke_cooldown": {
-    "dname": "-4s God's Rebuke Cooldown"
+    "dname": "-3s God's Rebuke Cooldown"
   },
   "special_bonus_unique_mars_spear_stun_duration": {
     "dname": "+0.6s Spear of Mars Stun"
@@ -61550,10 +61571,10 @@
     ],
     "desc": "Void Spirit temporarily fades into the aether, creating a number of portals through which he can reassemble himself. Upon exiting a portal, he damages all enemies in the area.",
     "dmg": [
-      "100",
-      "180",
-      "260",
-      "340"
+      "120",
+      "200",
+      "280",
+      "360"
     ],
     "attrib": [
       {
@@ -61850,7 +61871,7 @@
       "Hero",
       "Basic"
     ],
-    "desc": "Snapfire unloads with a wide blast that damages and slows enemies in a cone. Enemies caught at point-blank range take an extra 50% damage.",
+    "desc": "Snapfire unloads with a wide blast that damages and slows enemies in a cone. Damage, Movement Slow, Attack Slow and Slow Duration are increased by 50% for enemies caught at point-blank range.",
     "attrib": [
       {
         "key": "damage",
@@ -62288,7 +62309,7 @@
       {
         "key": "projectile_speed",
         "header": "PROJECTILE SPEED:",
-        "value": "1100",
+        "value": "1200",
         "generated": true
       },
       {
@@ -63157,7 +63178,7 @@
     "dname": "+135 Bushwhack Radius"
   },
   "special_bonus_unique_hoodwink_bushwhack_cooldown": {
-    "dname": "-3s Bushwhack Cooldown"
+    "dname": "-2s Bushwhack Cooldown"
   },
   "special_bonus_unique_hoodwink_bushwhack_damage": {
     "dname": "+60 Bushwhack Damage"
@@ -64294,9 +64315,9 @@
         "key": "knockback_damage",
         "header": "DAMAGE:",
         "value": [
-          "90",
-          "180",
-          "270",
+          "75",
+          "170",
+          "265",
           "360"
         ]
       },
@@ -64555,7 +64576,7 @@
       {
         "key": "projectile_damage",
         "header": "DAMAGE:",
-        "value": "100"
+        "value": "85"
       },
       {
         "key": "projectile_speed",
