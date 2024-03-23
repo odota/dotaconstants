@@ -402,7 +402,7 @@
   },
   "javelin": {
     "hint": [
-      "Passive: Pierce Grants each attack a 30% chance to pierce through evasion and deal 60 bonus magical damage."
+      "Passive: Pierce Grants each attack a 25% chance to pierce through evasion and deal 60 bonus magical damage."
     ],
     "id": 7,
     "img": "/apps/dota2/images/dota_react/items/javelin.png?t=1593393829403",
@@ -414,7 +414,7 @@
       {
         "key": "bonus_chance",
         "header": "BONUS CHANCE:",
-        "value": "30"
+        "value": "25"
       },
       {
         "key": "bonus_chance_damage",
@@ -1423,7 +1423,7 @@
     ],
     "mc": false,
     "hc": false,
-    "cd": 13,
+    "cd": 17,
     "lore": "A simple wand used to channel magic energies, it is favored by apprentice wizards and great warlocks alike.",
     "components": null,
     "created": false,
@@ -1484,7 +1484,7 @@
     ],
     "mc": false,
     "hc": false,
-    "cd": 13,
+    "cd": 15,
     "lore": "A simple wand used to channel magic energies, it is favored by apprentice wizards and great warlocks alike.",
     "components": [
       "magic_stick",
@@ -3786,7 +3786,7 @@
         "key": "bonus_mana_regen",
         "header": "BONUS MANA REGEN:",
         "display": "+ {value} Mana Regeneration",
-        "value": "1.25"
+        "value": "1.0"
       }
     ],
     "mc": false,
@@ -4231,7 +4231,7 @@
         "key": "bonus_mana_regen",
         "header": "BONUS MANA REGEN:",
         "display": "+ {value} Mana Regeneration",
-        "value": "0.75 / 1.5"
+        "value": "1.0 / 2.0"
       },
       {
         "key": "clock_time",
@@ -5106,7 +5106,7 @@
         "key": "bonus_mana_regen",
         "header": "BONUS MANA REGEN:",
         "display": "+ {value} Mana Regeneration",
-        "value": "3.5"
+        "value": "3.25"
       },
       {
         "key": "bonus_health_regen",
@@ -5118,7 +5118,7 @@
         "key": "bonus_intellect",
         "header": "BONUS INTELLECT:",
         "display": "+ {value} Intelligence",
-        "value": "12"
+        "value": "10"
       },
       {
         "key": "silence_damage_percent",
@@ -5131,7 +5131,7 @@
         "value": "5"
       }
     ],
-    "mc": 100,
+    "mc": 125,
     "hc": false,
     "cd": 18,
     "lore": "A garnet rod constructed from the essence of a fire demon.",
@@ -5182,7 +5182,7 @@
         "key": "bonus_intellect",
         "header": "BONUS INTELLECT:",
         "display": "+ {value} Intelligence",
-        "value": "15"
+        "value": "10"
       },
       {
         "key": "bonus_attack_speed",
@@ -5244,7 +5244,7 @@
         "value": "40"
       }
     ],
-    "mc": 100,
+    "mc": 125,
     "hc": false,
     "cd": 15,
     "lore": "A reviled blade that bites deeper with each wriggle of its victim's final throes.",
@@ -6798,7 +6798,7 @@
     ],
     "mc": 50,
     "hc": false,
-    "cd": 90,
+    "cd": 95,
     "lore": "A powerful staff imbued with the strength of giants.",
     "components": [
       "ogre_axe",
@@ -8196,6 +8196,7 @@
   },
   "rapier": {
     "hint": [
+      "Toggle: Transmute Toggle to gain either 25% bonus spell amplification or 250 bonus attack damage.",
       "Passive: Everlasting Dropped on death, and cannot be destroyed. \n\nBecomes unusable if picked up by an ally of its owner until it is returned to its owner. It is immediately usable by anybody if an enemy of the owner picks it up and is killed. A dropped Rapier cannot be picked up by a courier."
     ],
     "id": 133,
@@ -8203,24 +8204,29 @@
     "dname": "Divine Rapier",
     "qual": "epic",
     "cost": 5600,
+    "behavior": [],
     "notes": "If Divine Rapier is dropped and picked up by an enemy of its original owner, it cannot be dropped again except by death.",
     "attrib": [
       {
         "key": "bonus_spell_amp",
         "header": "BONUS SPELL AMP:",
-        "display": "+ {value}% Spell Amplification",
         "value": "25"
       },
       {
         "key": "bonus_damage",
         "header": "BONUS DAMAGE:",
+        "value": "250"
+      },
+      {
+        "key": "bonus_damage_base",
+        "header": "BONUS DAMAGE BASE:",
         "display": "+ {value} Damage",
-        "value": "350"
+        "value": "100"
       }
     ],
     "mc": false,
     "hc": false,
-    "cd": false,
+    "cd": 6,
     "lore": "So powerful, it cannot have a single owner.",
     "components": [
       "relic",
@@ -8756,7 +8762,7 @@
     ],
     "mc": 125,
     "hc": false,
-    "cd": 30,
+    "cd": 34,
     "lore": "An axe made of reflective materials that causes confusion amongst enemy ranks.",
     "components": [
       "yasha",
@@ -8979,7 +8985,7 @@
   },
   "invis_sword": {
     "hint": [
-      "Active: Shadow Walk Makes you invisible for 14 seconds, or until you attack or cast a spell. While Shadow Walk is active, you move 20% faster and can move through units. \n\nIf attacking to end the invisibility, you gain 175 bonus physical damage on that attack."
+      "Active: Shadow Walk Makes you invisible for 17 seconds, or until you attack or cast a spell. While Shadow Walk is active, you move 20% faster and can move through units. \n\nIf attacking to end the invisibility, you gain 175 bonus physical damage on that attack."
     ],
     "id": 152,
     "img": "/apps/dota2/images/dota_react/items/invis_sword.png?t=1593393829403",
@@ -9007,7 +9013,7 @@
       {
         "key": "windwalk_duration",
         "header": "WINDWALK DURATION:",
-        "value": "14.0"
+        "value": "17.0"
       },
       {
         "key": "windwalk_movement_speed",
@@ -9055,7 +9061,7 @@
   },
   "silver_edge": {
     "hint": [
-      "Active: Shadow Walk Makes you invisible for 14 seconds, or until you attack or cast a spell. While invisible, you move 25% faster and can move through units. \n\nAttacking to end the invisibility will deal 300 bonus physical damage and disable their passive abilities for 5 seconds."
+      "Active: Shadow Walk Makes you invisible for 17 seconds, or until you attack or cast a spell. While invisible, you move 25% faster and can move through units. \n\nAttacking to end the invisibility will deal 300 bonus physical damage and disable their passive abilities for 5 seconds."
     ],
     "id": 249,
     "img": "/apps/dota2/images/dota_react/items/silver_edge.png?t=1593393829403",
@@ -9098,7 +9104,7 @@
       {
         "key": "windwalk_duration",
         "header": "WINDWALK DURATION:",
-        "value": "14.0"
+        "value": "17.0"
       },
       {
         "key": "windwalk_movement_speed",
@@ -9404,7 +9410,7 @@
   "mjollnir": {
     "hint": [
       "Active: Static Charge Places a charged shield on a target unit for 15 seconds which has a 20% chance to release a 225 magical damage shocking bolt at a nearby attacker and 4 additional enemies.\n\nRange: 800",
-      "Passive: Chain Lightning Grants a 30% chance on attack to release a bolt of electricity that leaps between 12 targets within a 650 radius, dealing 180 magical damage to each. Lightning proc pierces evasion. Deals 150% damage to illusions."
+      "Passive: Chain Lightning Grants a 25% chance on attack to release a bolt of electricity that leaps between 12 targets within a 650 radius, dealing 180 magical damage to each. Lightning proc pierces evasion. Deals 150% damage to illusions."
     ],
     "id": 158,
     "img": "/apps/dota2/images/dota_react/items/mjollnir.png?t=1593393829403",
@@ -9475,7 +9481,7 @@
       {
         "key": "chain_chance",
         "header": "CHAIN CHANCE:",
-        "value": "30"
+        "value": "25"
       },
       {
         "key": "chain_damage",
@@ -9561,13 +9567,13 @@
         "key": "bonus_health",
         "header": "BONUS HEALTH:",
         "display": "+ {value} Health",
-        "value": "220"
+        "value": "250"
       },
       {
         "key": "bonus_mana",
         "header": "BONUS MANA:",
         "display": "+ {value} Mana",
-        "value": "220"
+        "value": "250"
       },
       {
         "key": "cold_slow_melee",
@@ -9683,7 +9689,7 @@
   },
   "helm_of_the_dominator": {
     "hint": [
-      "Active: Dominate Takes control of one neutral, non-ancient target unit and sets its movement speed to 380 and max health to a minimum of 1000. Also provides the unit with +25 base attack damage, +12 health regen, +4 mana regen and +4 armor. \n\nDominated units with a max health of greater than 1000 retain their original max health. Dominated unit's bounty is set to 100 gold.\n\nRange: 700"
+      "Active: Dominate Takes control of one neutral, non-ancient target unit and sets its movement speed to 380 and max health to a minimum of 1000. Also provides the unit with +25 base attack damage, +12 health regen, +4 mana regen and +4 armor. \n\nDominated units with a max health of greater than 1000 retain their original max health. Grants the caster the gold bounty of the dominated creep. Dominated unit's bounty is set to 100 gold.\n\nRange: 700"
     ],
     "id": 164,
     "img": "/apps/dota2/images/dota_react/items/helm_of_the_dominator.png?t=1593393829403",
@@ -9793,7 +9799,7 @@
   },
   "helm_of_the_overlord": {
     "hint": [
-      "Active: Dominate Takes control of one neutral target unit and sets its movement speed to 380 and max health to a minimum of 1800. Also provides the unit with +70 base attack damage, +12 health regen, +4 mana regen, +7 armor, and levels up some abilities of the target by 1 level. \n\nDominated units with a max health of greater than 1800 retain their original max health. Dominated unit's bounty is set to 250 gold.\n\nRange: 700"
+      "Active: Dominate Takes control of one neutral target unit and sets its movement speed to 380 and max health to a minimum of 1800. Also provides the unit with +70 base attack damage, +12 health regen, +4 mana regen, +7 armor, and levels up some abilities of the target by 1 level. \n\nDominated units with a max health of greater than 1800 retain their original max health. Grants the caster the gold bounty of the dominated creep. Dominated unit's bounty is set to 250 gold.\n\nRange: 700"
     ],
     "id": 635,
     "img": "/apps/dota2/images/dota_react/items/helm_of_the_overlord.png?t=1593393829403",
@@ -9887,7 +9893,7 @@
   },
   "maelstrom": {
     "hint": [
-      "Passive: Chain Lightning Grants a 30% chance on attack to release a bolt of electricity that leaps between 4 targets within a 650 radius, dealing 120 magical damage to each. Lightning proc pierces evasion. Deals 150% damage to illusions."
+      "Passive: Chain Lightning Grants a 25% chance on attack to release a bolt of electricity that leaps between 4 targets within a 650 radius, dealing 120 magical damage to each. Lightning proc pierces evasion. Deals 150% damage to illusions."
     ],
     "id": 166,
     "img": "/apps/dota2/images/dota_react/items/maelstrom.png?t=1593393829403",
@@ -9911,7 +9917,7 @@
       {
         "key": "chain_chance",
         "header": "CHAIN CHANCE:",
-        "value": "30"
+        "value": "25"
       },
       {
         "key": "chain_damage",
@@ -9975,7 +9981,7 @@
   "gungir": {
     "hint": [
       "Active: Eternal Chains Roots all enemies in a target 375 radius for 2 seconds and deals 180 damage.\n\nRange: 1100 ",
-      "Passive: Chain Lightning Grants a 30% chance on attack to release a bolt of electricity that leaps between 4 targets within a 650 radius, dealing 160 magical damage to each. Lightning proc pierces evasion. Deals 150% damage to illusions."
+      "Passive: Chain Lightning Grants a 25% chance on attack to release a bolt of electricity that leaps between 4 targets within a 650 radius, dealing 160 magical damage to each. Lightning proc pierces evasion. Deals 150% damage to illusions."
     ],
     "id": 1466,
     "img": "/apps/dota2/images/dota_react/items/gungir.png?t=1593393829403",
@@ -10009,7 +10015,7 @@
       {
         "key": "chain_chance",
         "header": "CHAIN CHANCE:",
-        "value": "30"
+        "value": "25"
       },
       {
         "key": "chain_damage",
@@ -11651,7 +11657,7 @@
   },
   "revenants_brooch": {
     "hint": [
-      "Toggle: Phantom Province When enabled, attacks cost 50 mana, deal magical damage, and can hit ethereal units."
+      "Toggle: Phantom Province When enabled, attacks cost 50 mana, deal magical damage, and can hit ethereal units, but cannot crit."
     ],
     "id": 911,
     "img": "/apps/dota2/images/dota_react/items/revenants_brooch.png?t=1593393829403",
@@ -11709,7 +11715,7 @@
   },
   "devastator": {
     "hint": [
-      "Passive: Witch Blade Causes your next attack to have true strike, apply a poison for 4 seconds, slowing by 25% and dealing 1x your intelligence as damage every second.",
+      "Passive: Witch Blade Causes your next attack to have true strike, apply a poison for 4 seconds, slowing by 25% and dealing 0.75x your intelligence as damage every second.",
       "Passive: Magic Corruption Your attacks reduce the enemy's Magic resistance by 20% for 4 seconds."
     ],
     "id": 1806,
@@ -11753,7 +11759,7 @@
       {
         "key": "int_damage_multiplier",
         "header": "INT DAMAGE MULTIPLIER:",
-        "value": "1"
+        "value": "0.75"
       },
       {
         "key": "slow",
@@ -12812,7 +12818,7 @@
         "key": "attack_range_bonus",
         "header": "ATTACK RANGE BONUS:",
         "display": "+ {value} Attack Range (Ranged Only)",
-        "value": "100"
+        "value": "75"
       },
       {
         "key": "attack_speed_bonus",
@@ -13532,7 +13538,7 @@
   },
   "royal_jelly": {
     "hint": [
-      "Active: Consume Consumes all charges and grants a target allied unit a buff that provides +2 Health Regen and +1 Mana Regen per charge for 10s. \n\nIf the unit is attacked by an enemy hero or Roshan, the effect is lost."
+      "Active: Consume Consumes all charges and grants a target allied unit a buff that provides +2.5 Health Regen and +1.25 Mana Regen per charge for 8s. \n\nIf the unit is attacked by an enemy hero or Roshan, the effect is lost."
     ],
     "id": 305,
     "img": "/apps/dota2/images/dota_react/items/royal_jelly.png?t=1593393829403",
@@ -13572,17 +13578,17 @@
       {
         "key": "health_regen",
         "header": "HEALTH REGEN:",
-        "value": "2.0"
+        "value": "2.5"
       },
       {
         "key": "mana_regen",
         "header": "MANA REGEN:",
-        "value": "1.0"
+        "value": "1.25"
       },
       {
         "key": "regen_duration",
         "header": "REGEN DURATION:",
-        "value": "10"
+        "value": "8"
       }
     ],
     "mc": false,
@@ -18568,12 +18574,12 @@
       {
         "key": "penalty",
         "header": "PENALTY:",
-        "value": "0.5"
+        "value": "75"
       },
       {
         "key": "movespeed_pct",
         "header": "MOVESPEED PCT:",
-        "value": "10"
+        "value": "5"
       },
       {
         "key": "radius",
@@ -18673,7 +18679,7 @@
   },
   "doubloon": {
     "hint": [
-      "Toggle: Flip Toggle to convert 20% of your Max Health to Max Mana, or 20% of your Max Mana to Max Health."
+      "Toggle: Flip Toggle to convert 20% of your Max Health to Max Mana, or 20% of your Max Mana to Max Health. Mana and health regeneration from Doubloon is increased by 50%, based on the which side is selected."
     ],
     "id": 1803,
     "img": "/apps/dota2/images/dota_react/items/doubloon.png?t=1593393829403",
@@ -18698,6 +18704,11 @@
         "header": "BONUS MANA REGEN:",
         "display": "+ {value} Mana Regeneration",
         "value": "2.5"
+      },
+      {
+        "key": "regen_bonus_pct",
+        "header": "REGEN BONUS PCT:",
+        "value": "50"
       }
     ],
     "mc": false,
