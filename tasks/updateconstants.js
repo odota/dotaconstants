@@ -269,21 +269,14 @@ async function start() {
                         // Normal attributes, e.g. + 25 Movement Speed
                         display = string.replace(
                           /(%)?([+-])?(\$\w+)?/,
-                          (str, pct = "", pm, variable) => {
-                            if (pm) {
-                              return (
-                                `${pm} {value}${pct} ` +
-                                (strings[
-                                  `dota_ability_variable_${variable?.replace(
-                                    "$",
-                                    "",
-                                  )}`
-                                ] || "")
-                              );
-                            } else {
-                              return ``;
-                            }
-                          },
+                          (str, pct = "", pm = "", variable) =>
+                            `${pm} {value}${pct} ` +
+                            (strings[
+                              `dota_ability_variable_${variable?.replace(
+                                "$",
+                                "",
+                              )}`
+                            ] || ""),
                         );
                       }
                       if (!/[a-z]/.test(string)) {
