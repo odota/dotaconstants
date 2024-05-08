@@ -280,8 +280,6 @@ async function start() {
                         : undefined;
                     return {
                       key: abilityKey,
-                      header:
-                        abilityKey.toUpperCase().split("_").join(" ") + ":",
                       display: display?.replace(/<[^>]*>/g, ""),
                       value: (val.value ?? val).split(" ").join(" / "),
                     };
