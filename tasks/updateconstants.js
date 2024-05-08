@@ -1697,7 +1697,7 @@ function replaceSpecialAttribs(
   template = template.replace(/<br>/gi, "\n").replace("%%", "%");
 
   // Remove html tags and double spaces from a string
-  function formatTemplate(template = '') {
+  function formatTemplate(template = "") {
     // replace close tags with a space, but not open tags
     template = template
       .replace(/(<(\/[^>]+)>)/gi, " ")
@@ -1710,20 +1710,21 @@ function replaceSpecialAttribs(
     const hint = [];
     const abilities = [];
     const desc = cleanupArray(template.split("\\n"));
-    console.log(desc);
     desc.forEach((line) => {
-      const ability = line.match(/<h1>(Use|Active|Passive|Toggle|Upgrade): (.+)<\/h1>([\S\s]+)/);
+      const ability = line.match(
+        /<h1>(Use|Active|Passive|Toggle|Upgrade): (.+)<\/h1>([\S\s]+)/,
+      );
       if (ability) {
         const [str, type, name, description] = ability;
         abilities.push({
           type: type.toLowerCase(),
           title: name.trim(),
           description: formatTemplate(description).trim(),
-        })
+        });
       } else {
         hint.push(formatTemplate(line));
       }
-    })
+    });
     return {
       abilities,
       hint,
