@@ -261,23 +261,41 @@ async function start() {
             item.attrib = scripts[key].AbilityValues
               ? Object.entries(scripts[key].AbilityValues).map(
                   ([abilityKey, val]) => {
+                    let display;
                     const tooltipKey = `DOTA_Tooltip_ability_${key}_${abilityKey}`;
                     const string = strings[tooltipKey];
-                    const display =
-                      tooltipKey in strings &&
-                      (string.includes("$") || /[a-z]/.test(string))
-                        ? string.replace(
-                            /(%)?([+-])(\$\w+)?/,
-                            (str, pct, pm, variable) =>
-                              `${pm} {value}${pct || ""} ` +
-                              (strings[
-                                `dota_ability_variable_${variable?.replace(
-                                  "$",
-                                  "",
-                                )}`
-                              ] || ""),
-                          )
-                        : undefined;
+                    if (tooltipKey in strings) {
+                      if (string.includes("$") || /[a-z]/.test(string)) {
+                        // Normal attributes, e.g. + 25 Movement Speed
+                        display = string.replace(
+                          /(%)?([+-])?(\$\w+)?/,
+                          (str, pct = "", pm, variable) => {
+                            if (pm) {
+                              return (
+                                `${pm} {value}${pct} ` +
+                                (strings[
+                                  `dota_ability_variable_${variable?.replace(
+                                    "$",
+                                    "",
+                                  )}`
+                                ] || "")
+                              );
+                            } else {
+                              return ``;
+                            }
+                          },
+                        );
+                      }
+                      if (!/[a-z]/.test(string)) {
+                        // Upper case stats, where the number is displayed in the end
+                        display = string.replace(
+                          /^(%)?(.+)/,
+                          (str, pct = "", rest) => {
+                            return `${rest} {value}${pct}`;
+                          },
+                        );
+                      }
+                    }
                     return {
                       key: abilityKey,
                       display: display?.replace(/<[^>]*>/g, ""),
