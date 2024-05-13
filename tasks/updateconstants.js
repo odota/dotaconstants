@@ -261,27 +261,36 @@ async function start() {
             item.attrib = scripts[key].AbilityValues
               ? Object.entries(scripts[key].AbilityValues).map(
                   ([abilityKey, val]) => {
+                    let display;
                     const tooltipKey = `DOTA_Tooltip_ability_${key}_${abilityKey}`;
                     const string = strings[tooltipKey];
-                    const display =
-                      tooltipKey in strings &&
-                      (string.includes("$") || /[a-z]/.test(string))
-                        ? string.replace(
-                            /(%)?([+-])(\$\w+)?/,
-                            (str, pct, pm, variable) =>
-                              `${pm} {value}${pct || ""} ` +
-                              (strings[
-                                `dota_ability_variable_${variable?.replace(
-                                  "$",
-                                  "",
-                                )}`
-                              ] || ""),
-                          )
-                        : undefined;
+                    if (tooltipKey in strings) {
+                      if (string.includes("$") || /[a-z]/.test(string)) {
+                        // Normal attributes, e.g. + 25 Movement Speed
+                        display = string.replace(
+                          /(%)?([+-])?(\$\w+)?/,
+                          (str, pct = "", pm = "", variable) =>
+                            `${pm} {value}${pct} ` +
+                            (strings[
+                              `dota_ability_variable_${variable?.replace(
+                                "$",
+                                "",
+                              )}`
+                            ] || ""),
+                        );
+                      }
+                      if (!/[a-z]/.test(string)) {
+                        // Upper case stats, where the number is displayed in the end
+                        display = string.replace(
+                          /^(%)?(.+)/,
+                          (str, pct = "", rest) => {
+                            return `${rest} {value}${pct}`;
+                          },
+                        );
+                      }
+                    }
                     return {
                       key: abilityKey,
-                      header:
-                        abilityKey.toUpperCase().split("_").join(" ") + ":",
                       display: display?.replace(/<[^>]*>/g, ""),
                       value: (val.value ?? val).split(" ").join(" / "),
                     };
@@ -1697,18 +1706,44 @@ function replaceSpecialAttribs(
     });
   }
   template = template.replace(/<br>/gi, "\n").replace("%%", "%");
-  // replace close tags with a space, but not open tags
-  template = template
-    .replace(/(<(\/[^>]+)>)/gi, " ")
-    .replace(/(<([^>]+)>)/gi, "");
-  // replace double spaces
-  template = template.replace(/  +/g, " ");
+
+  // Remove html tags and double spaces from a string
+  function formatTemplate(template = "") {
+    // replace close tags with a space, but not open tags
+    template = template
+      .replace(/(<(\/[^>]+)>)/gi, " ")
+      .replace(/(<([^>]+)>)/gi, "");
+    // replace double spaces
+    return template.replace(/  +/g, " ");
+  }
+
   if (isItem) {
-    const abilities = template.split("\\n");
+    const hint = [];
+    const abilities = [];
+    const desc = cleanupArray(template.split("\\n"));
+    desc.forEach((line) => {
+      const ability = line.match(
+        /<h1>(Use|Active|Passive|Toggle|Upgrade): (.+)<\/h1>([\S\s]+)/,
+      );
+      if (ability) {
+        const [str, type, name, description] = ability;
+        abilities.push({
+          type: type.toLowerCase(),
+          title: name.trim(),
+          description: formatTemplate(description).trim(),
+        });
+      } else {
+        hint.push(formatTemplate(line));
+      }
+    });
     return {
-      hint: cleanupArray(abilities),
+      abilities,
+      hint,
     };
   }
+
+  template = formatTemplate(template);
+
   template = template.replace(/\\n/g, "\n");
   return template;
 }
