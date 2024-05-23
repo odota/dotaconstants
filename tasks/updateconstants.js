@@ -933,7 +933,7 @@ async function start() {
             heroKey != "npc_dota_hero_base" &&
             heroKey != "npc_dota_hero_target_dummy"
           ) {
-            const newHero = { abilities: [], talents: [] };
+            const newHero = { abilities: [], talents: [], facets: [] };
             let talentCounter = 2;
             Object.keys(heroes[heroKey]).forEach(function (key) {
               let talentIndexStart =
@@ -955,6 +955,13 @@ async function start() {
                 }
               }
             });
+            newHero.facets = Object.entries(heroes[heroKey].Facets ?? []).map(([key, value]) => ({
+              name: key,
+              icon: value.Icon,
+              color: value.Color,
+              gradientId: value.GradientID,
+            }));
+          
             heroAbilities[heroKey] = newHero;
           }
         });
