@@ -1288,16 +1288,12 @@ async function start() {
     const url = s.url;
     // Make all urls into array
     const arr = [].concat(url);
-    console.log(arr);
+    // console.log(arr);
     const resps = await Promise.all(
       arr.map(async (url) => {
+        console.log(url);
         const resp = await axios.get(url, { responseType: "text" });
-        // Fix kotl file
-        resp.data = resp.data.replace(
-          '"channel_vision_radius"	{',
-          '"channel_vision_radius"\n{',
-        );
-        return parseJsonOrVdf(resp.data);
+        return parseJsonOrVdf(resp.data, url);
       }),
     );
     let final = resps;
@@ -1344,15 +1340,24 @@ function isObj(obj) {
   );
 }
 
-function parseJsonOrVdf(text) {
+function parseJsonOrVdf(text, url) {
   try {
     return JSON.parse(text);
   } catch (err) {
     try {
-      let vdf = simplevdf.parse(text);
+      let fixed = text;
+      // Fix kotl file
+      fixed = fixed.replace(
+        '"channel_vision_radius"	{',
+        '"channel_vision_radius"\n{',
+      );
+      fixed = fixed.replace(/\t\t"ItemRequirements"\r\n\t\t""/g, '');
+      fixed = fixed.replace(/\t\t\t"has_flying_movement"\t\r\n\t\t\t""/g, '');
+      fixed = fixed.replace(/\t\t\t"damage_reduction"\t\r\n\t\t\t""/g, '');
+      let vdf = simplevdf.parse(fixed);
       return vdf;
     } catch (e) {
-      console.error("Couldn't parse JSON or VDF", text);
+      console.error("Couldn't parse JSON or VDF", url);
       throw e;
     }
   }
