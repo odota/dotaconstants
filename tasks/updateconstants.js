@@ -925,7 +925,6 @@ async function start() {
       key: "hero_abilities",
       url: [...abilitiesUrls.slice(2, abilitiesUrls.length), heroesUrl, ...heroDataUrls],
       transform: (respObj) => {
-        // [npcAbilities, respObj, ...heroData]
         const heroAbils = respObj.splice(0, abilitiesUrls.length - 2);
         const [ heroObj, ...heroData ] = respObj;
         let scripts = {};
@@ -980,7 +979,7 @@ async function start() {
 
         heroData.forEach((hero) => {
           hero = hero.result.data.heroes[0];
-          const { name, facets, abilities } = hero;
+          const { name, facets, abilities, facet_abilities } = hero;
           facets?.forEach((facet) => {
             heroAbilities[name].facets.push({
               name: facet.name,
@@ -988,7 +987,7 @@ async function start() {
               color: facetColors[facet.color],
               gradient_id: facet.gradient_id,
               title: facet.title_loc,
-              description: facet.description_loc || '', // TODO - insert text variables here
+              description: facet.description_loc || '',
             });
           });
           abilities?.forEach((ability) => {
@@ -1002,6 +1001,17 @@ async function start() {
                   ability.name,
                 );
               }
+            });
+          });
+          facet_abilities?.forEach((facet_ability, i) => {
+            facet_ability?.abilities?.forEach((ability) => {
+              heroAbilities[name].facets[i].description = replaceSpecialAttribs(
+                heroAbilities[name].facets[i].description,
+                getSpecialAttrs(scripts[ability.name]),
+                false,
+                scripts[ability.name],
+                ability.name,
+              );
             });
           });
         });
