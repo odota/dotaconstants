@@ -137,7 +137,7 @@ const localizationUrl =
   "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/dota_english.txt";
 
 let aghsAbilityValues = {};
-const aghs_desc_urls = [];
+const heroDataUrls = [];
 const abilitiesUrls = [abilitiesLoc, npcAbilitiesUrl];
 
 start();
@@ -149,7 +149,7 @@ async function start() {
     .map((key) => heroesVdf.DOTAHeroes[key].HeroID)
     .sort((a, b) => Number(a) - Number(b));
   ids.forEach((key) => {
-    aghs_desc_urls.push(
+    heroDataUrls.push(
       "http://www.dota2.com/datafeed/herodata?language=english&hero_id=" + key,
     );
   });
@@ -923,9 +923,19 @@ async function start() {
     },
     {
       key: "hero_abilities",
-      url: heroesUrl,
+      url: [...abilitiesUrls.slice(2, abilitiesUrls.length), heroesUrl, ...heroDataUrls],
       transform: (respObj) => {
-        let heroes = respObj.DOTAHeroes;
+        // [npcAbilities, respObj, ...heroData]
+        const heroAbils = respObj.splice(0, abilitiesUrls.length - 2);
+        const [ heroObj, ...heroData ] = respObj;
+        let scripts = {};
+        // Merge into scripts all the hero abilities (the rest of the array)
+        for (let i = 0; i < heroAbils.length; i++) {
+          const heroAbs = heroAbils[i].DOTAAbilities;
+          scripts = { ...scripts, ...heroAbs };
+        }
+
+        let heroes = heroObj.DOTAHeroes;
         const heroAbilities = {};
         Object.keys(heroes).forEach(function (heroKey) {
           if (
@@ -955,16 +965,47 @@ async function start() {
                 }
               }
             });
-            newHero.facets = Object.entries(heroes[heroKey].Facets ?? []).map(([key, value]) => ({
-              name: key,
-              icon: value.Icon,
-              color: value.Color,
-              gradientId: value.GradientID,
-            }));
-          
             heroAbilities[heroKey] = newHero;
           }
         });
+
+        const facetColors = {
+          0: 'Red',
+          1: 'Yellow',
+          2: 'Green',
+          3: 'Blue',
+          4: 'Purple',
+          5: 'Gray',
+        };
+
+        heroData.forEach((hero) => {
+          hero = hero.result.data.heroes[0];
+          const { name, facets, abilities } = hero;
+          facets?.forEach((facet) => {
+            heroAbilities[name].facets.push({
+              name: facet.name,
+              icon: facet.icon,
+              color: facetColors[facet.color],
+              gradient_id: facet.gradient_id,
+              title: facet.title_loc,
+              description: facet.description_loc || '', // TODO - insert text variables here
+            });
+          });
+          abilities?.forEach((ability) => {
+            ability?.facets_loc?.forEach((str, i) => {
+              if (str.length > 0) {
+                heroAbilities[name].facets[i].description = replaceSpecialAttribs(
+                  str,
+                  getSpecialAttrs(scripts[ability.name]),
+                  false,
+                  scripts[ability.name],
+                  ability.name,
+                );
+              }
+            });
+          });
+        });
+
         return heroAbilities;
       },
     },
@@ -1164,7 +1205,7 @@ async function start() {
     // NOTE: This needs to run after abilities since it depends on aghsAbilityValues
     {
       key: "aghs_desc",
-      url: aghs_desc_urls,
+      url: heroDataUrls,
       transform: (respObj) => {
         const herodata = respObj;
         const aghs_desc_arr = [];
