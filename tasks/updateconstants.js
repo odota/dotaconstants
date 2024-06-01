@@ -923,10 +923,14 @@ async function start() {
     },
     {
       key: "hero_abilities",
-      url: [...abilitiesUrls.slice(2, abilitiesUrls.length), heroesUrl, ...heroDataUrls],
+      url: [
+        ...abilitiesUrls.slice(2, abilitiesUrls.length),
+        heroesUrl,
+        ...heroDataUrls,
+      ],
       transform: (respObj) => {
         const heroAbils = respObj.splice(0, abilitiesUrls.length - 2);
-        const [ heroObj, ...heroData ] = respObj;
+        const [heroObj, ...heroData] = respObj;
         let scripts = {};
         // Merge into scripts all the hero abilities (the rest of the array)
         for (let i = 0; i < heroAbils.length; i++) {
@@ -968,7 +972,14 @@ async function start() {
           }
         });
 
-        const facetColors = ['Red','Yellow','Green','Blue','Purple','Gray'];
+        const facetColors = [
+          "Red",
+          "Yellow",
+          "Green",
+          "Blue",
+          "Purple",
+          "Gray",
+        ];
 
         heroData.forEach((hero) => {
           hero = hero.result.data.heroes[0];
@@ -980,7 +991,7 @@ async function start() {
               color: facetColors[facet.color],
               gradient_id: facet.gradient_id,
               title: facet.title_loc,
-              description: facet.description_loc || '',
+              description: facet.description_loc || "",
             });
           });
 
@@ -991,13 +1002,14 @@ async function start() {
               let specialAttrs = getSpecialAttrs(scripts[ability.name]) || [];
               allAttribs.push(...specialAttrs);
               if (str.length > 0) {
-                heroAbilities[name].facets[i].description = replaceSpecialAttribs(
-                  str,
-                  specialAttrs,
-                  false,
-                  scripts[ability.name],
-                  ability.name,
-                );
+                heroAbilities[name].facets[i].description =
+                  replaceSpecialAttribs(
+                    str,
+                    specialAttrs,
+                    false,
+                    scripts[ability.name],
+                    ability.name,
+                  );
               }
             });
           });
@@ -1005,8 +1017,11 @@ async function start() {
           facet_abilities?.forEach((facet_ability, i) => {
             facet_ability?.abilities?.forEach((ability) => {
               let { description } = heroAbilities[name].facets[i];
-              if (description.includes('{s:facet_ability_name}')) {
-                description = description.replace('{s:facet_ability_name}', ability.name_loc);
+              if (description.includes("{s:facet_ability_name}")) {
+                description = description.replace(
+                  "{s:facet_ability_name}",
+                  ability.name_loc,
+                );
               }
 
               heroAbilities[name].facets[i].description = replaceSpecialAttribs(
@@ -1020,20 +1035,30 @@ async function start() {
           });
 
           // Insert {s:bonus_} values. Some attributes are tied to seemingly unrelated passives, so we need all abilities
-          heroAbilities[name].facets = heroAbilities[name].facets.map(({ description, ...rest}, i) => {
-            const matches = description.matchAll(/{s:bonus_(\w+)}/g);
-            for ([, bonusKey] of matches) {
-              const obj = allAttribs.find((obj) => bonusKey in obj)?.[bonusKey] ?? {};
-              const facetKey = Object.keys(obj).find(k => k.startsWith("special_bonus_facet") && k.includes(rest.name));
-              if (facetKey) {
-                description = description.replace(`{s:bonus_${bonusKey}}`, removeSigns(obj[facetKey]));
+          heroAbilities[name].facets = heroAbilities[name].facets.map(
+            ({ description, ...rest }) => {
+              const matches = description.matchAll(/{s:bonus_(\w+)}/g);
+              for ([, bonusKey] of matches) {
+                const obj =
+                  allAttribs.find((obj) => bonusKey in obj)?.[bonusKey] ?? {};
+                const facetKey = Object.keys(obj).find(
+                  (k) =>
+                    k.startsWith("special_bonus_facet") &&
+                    k.includes(rest.name),
+                );
+                if (facetKey) {
+                  description = description.replace(
+                    `{s:bonus_${bonusKey}}`,
+                    removeSigns(obj[facetKey]),
+                  );
+                }
               }
-            }
               return {
                 ...rest,
                 description,
-              }
-          });
+              };
+            },
+          );
         });
 
         return heroAbilities;
@@ -1429,9 +1454,9 @@ function parseJsonOrVdf(text, url) {
         '"channel_vision_radius"	{',
         '"channel_vision_radius"\n{',
       );
-      fixed = fixed.replace(/\t\t"ItemRequirements"\r\n\t\t""/g, '');
-      fixed = fixed.replace(/\t\t\t"has_flying_movement"\t\r\n\t\t\t""/g, '');
-      fixed = fixed.replace(/\t\t\t"damage_reduction"\t\r\n\t\t\t""/g, '');
+      fixed = fixed.replace(/\t\t"ItemRequirements"\r\n\t\t""/g, "");
+      fixed = fixed.replace(/\t\t\t"has_flying_movement"\t\r\n\t\t\t""/g, "");
+      fixed = fixed.replace(/\t\t\t"damage_reduction"\t\r\n\t\t\t""/g, "");
       let vdf = simplevdf.parse(fixed);
       return vdf;
     } catch (e) {
@@ -1617,7 +1642,7 @@ function removeSigns(template) {
     .replace("+", "")
     .replace("-", "")
     .replace("x", "")
-    .replace("=", "")
+    .replace("=", "");
 }
 
 let specialBonusLookup = {};
@@ -1763,7 +1788,9 @@ function replaceSpecialAttribs(
           // Some facets have an extra bonus_ at the start
           const newName = name.replace("bonus_", "");
           const obj = attribs.find((obj) => newName in obj)?.[newName] ?? {};
-          const facetKey = Object.keys(obj).find(k => k.startsWith("special_bonus_facet"));
+          const facetKey = Object.keys(obj).find((k) =>
+            k.startsWith("special_bonus_facet"),
+          );
           if (facetKey) {
             return obj[facetKey].replace("=", "");
           }
@@ -1785,7 +1812,9 @@ function replaceSpecialAttribs(
         ret = attr[name];
       }
 
-      const facetKey = Object.keys(attr[name]).find(k => k.startsWith("special_bonus_facet"));
+      const facetKey = Object.keys(attr[name]).find((k) =>
+        k.startsWith("special_bonus_facet"),
+      );
 
       if (facetKey) {
         ret = attr[name][facetKey].replace("=", "");
