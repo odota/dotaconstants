@@ -968,14 +968,7 @@ async function start() {
           }
         });
 
-        const facetColors = {
-          0: 'Red',
-          1: 'Yellow',
-          2: 'Green',
-          3: 'Blue',
-          4: 'Purple',
-          5: 'Gray',
-        };
+        const facetColors = ['Red','Yellow','Green','Blue','Purple','Gray'];
 
         heroData.forEach((hero) => {
           hero = hero.result.data.heroes[0];
@@ -990,12 +983,17 @@ async function start() {
               description: facet.description_loc || '',
             });
           });
+
+          const allAttribs = [];
+
           abilities?.forEach((ability) => {
             ability?.facets_loc?.forEach((str, i) => {
+              let specialAttrs = getSpecialAttrs(scripts[ability.name]) || [];
+              allAttribs.push(...specialAttrs);
               if (str.length > 0) {
                 heroAbilities[name].facets[i].description = replaceSpecialAttribs(
                   str,
-                  getSpecialAttrs(scripts[ability.name]),
+                  specialAttrs,
                   false,
                   scripts[ability.name],
                   ability.name,
@@ -1003,16 +1001,38 @@ async function start() {
               }
             });
           });
+
           facet_abilities?.forEach((facet_ability, i) => {
             facet_ability?.abilities?.forEach((ability) => {
+              let { description } = heroAbilities[name].facets[i];
+              if (description.includes('{s:facet_ability_name}')) {
+                description = description.replace('{s:facet_ability_name}', ability.name_loc);
+              }
+
               heroAbilities[name].facets[i].description = replaceSpecialAttribs(
-                heroAbilities[name].facets[i].description,
+                description,
                 getSpecialAttrs(scripts[ability.name]),
                 false,
                 scripts[ability.name],
                 ability.name,
               );
             });
+          });
+
+          // Insert {s:bonus_} values. Some attributes are tied to seemingly unrelated passives, so we need all abilities
+          heroAbilities[name].facets = heroAbilities[name].facets.map(({ description, ...rest}, i) => {
+            const matches = description.matchAll(/{s:bonus_(\w+)}/g);
+            for ([, bonusKey] of matches) {
+              const obj = allAttribs.find((obj) => bonusKey in obj)?.[bonusKey] ?? {};
+              const facetKey = Object.keys(obj).find(k => k.startsWith("special_bonus_facet") && k.includes(rest.name));
+              if (facetKey) {
+                description = description.replace(`{s:bonus_${bonusKey}}`, removeSigns(obj[facetKey]));
+              }
+            }
+              return {
+                ...rest,
+                description,
+              }
           });
         });
 
@@ -1592,6 +1612,14 @@ function formatAttrib(attributes, strings, strings_prefix) {
     .filter((a) => a);
 }
 
+function removeSigns(template) {
+  return template
+    .replace("+", "")
+    .replace("-", "")
+    .replace("x", "")
+    .replace("=", "")
+}
+
 let specialBonusLookup = {};
 
 function replaceSValues(template, attribs, key) {
@@ -1651,10 +1679,7 @@ function replaceBonusSValues(key, template, attribs) {
         attribs[bonus]?.hasOwnProperty(key)
       ) {
         // remove redundant signs
-        let bonus_value = attribs[bonus][key]
-          .replace("+", "")
-          .replace("-", "")
-          .replace("x", "");
+        let bonus_value = removeSigns(attribs[bonus][key]);
 
         template = template
           // Most of the time, the bonus value template is named bonus_<bonus_key>
