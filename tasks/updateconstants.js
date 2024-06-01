@@ -1734,6 +1734,14 @@ function replaceSpecialAttribs(
             .lifesteal_percent;
         } else if (name === "movement_slow") {
           return attribs.find((obj) => "damage_pct" in obj).damage_pct;
+        } else if (name.startsWith("bonus_")) {
+          // Some facets have an extra bonus_ at the start
+          const newName = name.replace("bonus_", "");
+          const obj = attribs.find((obj) => newName in obj)?.[newName] ?? {};
+          const facetKey = Object.keys(obj).find(k => k.startsWith("special_bonus_facet"));
+          if (facetKey) {
+            return obj[facetKey].replace("=", "");
+          }
         }
 
         console.log(
