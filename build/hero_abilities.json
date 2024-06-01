@@ -57,7 +57,7 @@
         "color": "Blue",
         "gradient_id": 3,
         "title": "Mana Thirst",
-        "description": "Passively grants attack damage when an enemy hero's mana falls below 0%, with the bonuses increasing as their mana falls further.\n\n If the enemies mana falls below 0% Anti-Mage gains the maximum amount of damage, as well as vision and True Sight of that hero. Applies to enemy heroes within 0 range. Bonuses stack per hero."
+        "description": "Passively grants attack damage when an enemy hero's mana falls below 60%, with the bonuses increasing as their mana falls further.\n\n If the enemies mana falls below 15% Anti-Mage gains the maximum amount of damage, as well as vision and True Sight of that hero. Applies to enemy heroes within 2500 range. Bonuses stack per hero."
       }
     ]
   },
@@ -425,7 +425,7 @@
         "color": "Red",
         "gradient_id": 1,
         "title": "Tectonic Buildup",
-        "description": "Aftershock radius is increased by 0 every 0 hero levels."
+        "description": "Aftershock radius is increased by 50 every 10 hero levels."
       },
       {
         "name": "earthshaker_slugger",
@@ -620,7 +620,7 @@
         "color": "Red",
         "gradient_id": 0,
         "title": "Shadowmire",
-        "description": "Applies a stacking 0% movement speed and 0 attack speed debuff on enemies hit."
+        "description": "Applies a stacking 10% movement speed and 10 attack speed debuff on enemies hit."
       }
     ]
   },
@@ -739,7 +739,7 @@
         "color": "Yellow",
         "gradient_id": 1,
         "title": "Convergence",
-        "description": "Spawns an additional illusion per 0% of health that Phantom Lancer is missing."
+        "description": "Spawns an additional illusion per 25% of health that Phantom Lancer is missing."
       },
       {
         "name": "phantom_lancer_divergence",
@@ -925,7 +925,7 @@
         "color": "Gray",
         "gradient_id": 0,
         "title": "Thunderhead",
-        "description": "While Eye of the Storm is active, strike chance is 0x as high and Lightning strikes all enemies within Eye of the Storm's radius. Does not apply to the same enemy twice from a single instance."
+        "description": "While Eye of the Storm is active, strike chance is 2x as high and Lightning strikes all enemies within Eye of the Storm's radius. Does not apply to the same enemy twice from a single instance."
       },
       {
         "name": "razor_spellamp",
@@ -995,7 +995,7 @@
         "color": "Yellow",
         "gradient_id": 1,
         "title": "Dust Devil",
-        "description": "Sand Storm follows Sand King at a rate of 0% of his movement speed and is still active at a distance of up to [object Object] units away from Sand King. Sand Storm moves to the location of Burrowstrike when cast."
+        "description": "Sand Storm follows Sand King at a rate of 70% of his movement speed and is still active at a distance of up to 2500 units away from Sand King. Sand Storm moves to the location of Burrowstrike when cast."
       }
     ]
   },
@@ -1050,7 +1050,7 @@
         "color": "Blue",
         "gradient_id": 1,
         "title": "Shock Collar",
-        "description": "Electric Vortex applies a debuff to the enemy that lasts for 0s that triggers an Overload Charge if they attack."
+        "description": "Electric Vortex applies a debuff to the enemy that lasts for 5s that triggers an Overload Charge if they attack."
       },
       {
         "name": "storm_spirit_static_slide",
@@ -1613,7 +1613,7 @@
         "color": "Purple",
         "gradient_id": 2,
         "title": "Essence Eater",
-        "description": "Mana Drain deals damage equal to 0% of mana stolen."
+        "description": "Mana Drain deals damage equal to 100% of mana stolen."
       },
       {
         "name": "lion_fist_of_death",
@@ -1621,7 +1621,7 @@
         "color": "Red",
         "gradient_id": 2,
         "title": "Fist of Death",
-        "description": "After casting Finger of Death, Lion switches from ranged to melee attacks and gains bonus damage and cleave. Enemy heroes killed within 0s of being punched will add Finger of Death stacks."
+        "description": "After casting Finger of Death, Lion switches from ranged to melee attacks and gains bonus damage and cleave. Enemy heroes killed within 3s of being punched will add Finger of Death stacks."
       }
     ]
   },
@@ -1683,7 +1683,7 @@
         "color": "Red",
         "gradient_id": 1,
         "title": "Massive Serpent Ward",
-        "description": "Summons a single massive Serpent Ward with %bonus_mega_ward_multiplier_tooltip%x damage and bounty values and [object Object]x health."
+        "description": "Summons a single massive Serpent Ward with %bonus_mega_ward_multiplier_tooltip%x damage and bounty values and 7.5x health."
       }
     ]
   },
@@ -1745,7 +1745,7 @@
         "color": "Purple",
         "gradient_id": 1,
         "title": "Brineguard",
-        "description": "Corrosive Haze increases Slardar's armor by 0% of the total armor reduced."
+        "description": "Corrosive Haze increases Slardar's armor by 40% of the total armor reduced."
       }
     ]
   },
@@ -1940,7 +1940,7 @@
         "color": "Purple",
         "gradient_id": 2,
         "title": "Exterminator",
-        "description": "Tricks of the Trade has 1x Agility Bonus when attacking non-hero units."
+        "description": "Tricks of the Trade has 3x Agility Bonus when attacking non-hero units."
       }
     ]
   },
@@ -2189,7 +2189,7 @@
         "color": "Green",
         "gradient_id": 3,
         "title": "Rapid Decay",
-        "description": "Necrophos gains movement speed equal to 0% of movement speed lost by enemies."
+        "description": "Necrophos gains movement speed equal to 25% of movement speed lost by enemies."
       }
     ]
   },
@@ -2430,7 +2430,7 @@
         "color": "Green",
         "gradient_id": 0,
         "title": "Patient Zero",
-        "description": "Noxious Plague spreads 1 times. Impact damage for spreads after the first one is reduced by [object Object]%."
+        "description": "Noxious Plague spreads 1 times. Impact damage for spreads after the first one is reduced by 100%."
       },
       {
         "name": "venomancer_plague_carrier",
@@ -2554,7 +2554,7 @@
         "color": "Yellow",
         "gradient_id": 0,
         "title": "Bone Guard",
-        "description": "When reincarnating, 0 skeletons are spawned and attack each nearby enemy hero."
+        "description": "When reincarnating, 2 skeletons are spawned and attack each nearby enemy hero."
       },
       {
         "name": "skeleton_king_facet_cursed_blade",
@@ -2686,7 +2686,7 @@
         "color": "Gray",
         "gradient_id": 0,
         "title": "Methodical",
-        "description": "Coup de Grace procs every [object Object] attacks on the same hero or [object Object] attacks on non hero units."
+        "description": "Coup de Grace procs every 6 attacks on the same hero or 4 attacks on non hero units."
       }
     ]
   },
@@ -2864,7 +2864,7 @@
         "color": "Green",
         "gradient_id": 0,
         "title": "Poison Burst",
-        "description": "After Poison Attack stacks expire, enemies around the target take additional damage equal to [object Object]% of the magic damage dealt by Poison Attack."
+        "description": "After Poison Attack stacks expire, enemies around the target take additional damage equal to 100% of the magic damage dealt by Poison Attack."
       },
       {
         "name": "viper_caustic_bath",
@@ -2935,7 +2935,7 @@
         "color": "Blue",
         "gradient_id": 1,
         "title": "Moonstorm",
-        "description": "Grants Luna an attack damage bonus buff every time an enemy hero is hit by Lucent Beam. Lucent Beams created by Eclipse grant [object Object]% of the damage amount."
+        "description": "Grants Luna an attack damage bonus buff every time an enemy hero is hit by Lucent Beam. Lucent Beams created by Eclipse grant 50% of the damage amount."
       }
     ]
   },
@@ -3068,7 +3068,7 @@
         "color": "Purple",
         "gradient_id": 0,
         "title": "Poison Bloom",
-        "description": "Every 0 attacks, the poison will deal additional damage and split to additional enemy units in a 0 AoE."
+        "description": "Every 4 attacks, the poison will deal additional damage and split to additional enemy units in a 450 AoE."
       }
     ]
   },
@@ -3247,7 +3247,7 @@
         "color": "Green",
         "gradient_id": 0,
         "title": "Soothing Saplings",
-        "description": "Allies inside and nearby on the outside of the sprout are healed over time. Allied buildings are healed at a 0% rate."
+        "description": "Allies inside and nearby on the outside of the sprout are healed over time. Allied buildings are healed at a 50% rate."
       },
       {
         "name": "furion_ironwood_treant",
@@ -3497,7 +3497,7 @@
         "color": "Gray",
         "gradient_id": 3,
         "title": "Omnipresent",
-        "description": "Omniknight's damage to a target is increased by 0% for every 0s they spend affected by the aura."
+        "description": "Omniknight's damage to a target is increased by 1% for every 0.5s they spend affected by the aura."
       },
       {
         "name": "omniknight_dmgheals",
@@ -3560,7 +3560,7 @@
         "color": "Green",
         "gradient_id": 0,
         "title": "Overprotective Wisps",
-        "description": "Whenever Enchantress takes more than 0 damage from enemy heroes, 0 wisps appear for 0s to heal her. A maximum of 0 overprotective wisps can exist at the same time."
+        "description": "Whenever Enchantress takes more than 250 damage from enemy heroes, 1 wisps appear for 4s to heal her. A maximum of 4 overprotective wisps can exist at the same time."
       },
       {
         "name": "enchantress_spellbound",
@@ -4144,7 +4144,7 @@
         "color": "Gray",
         "gradient_id": 0,
         "title": "Forsaken",
-        "description": "If an enemy has only non-hero allies nearby, it will take 0% of Desolate's damage."
+        "description": "If an enemy has only non-hero allies nearby, it will take 50% of Desolate's damage."
       },
       {
         "name": "spectre_twist_the_knife",
@@ -4207,7 +4207,7 @@
         "color": "Red",
         "gradient_id": 0,
         "title": "Gluttony",
-        "description": "Devour now has 0 charges and stolen creep abilities are upgraded by one level."
+        "description": "Devour now has 2 charges and stolen creep abilities are upgraded by one level."
       },
       {
         "name": "doom_bringer_boost_selling",
@@ -4458,7 +4458,7 @@
         "color": "Red",
         "gradient_id": 0,
         "title": "Secondary Strikes",
-        "description": "The delay between hits is decreased by %bonus_strike_delay%s. Any enemy hero hit by a call down missile strike will be marked, and another, tracking missile strike that has a 0 impact radius will be fired at them. This missile deals 0% damage."
+        "description": "The delay between hits is decreased by %bonus_strike_delay%s. Any enemy hero hit by a call down missile strike will be marked, and another, tracking missile strike that has a 200 impact radius will be fired at them. This missile deals 50% damage."
       },
       {
         "name": "gyrocopter_afterburner",
@@ -4529,7 +4529,7 @@
         "color": "Purple",
         "gradient_id": 2,
         "title": "Mixologist",
-        "description": "While Alchemist is affected by Chemical Rage, cooldown is reduced by 0%."
+        "description": "While Alchemist is affected by Chemical Rage, cooldown is reduced by 50%."
       }
     ]
   },
@@ -4605,7 +4605,7 @@
         "color": "Gray",
         "gradient_id": 0,
         "title": "Elitist",
-        "description": "Invoker applies a debuff that increases Spell Damage taken by the target for each Exort instance that lasts 0 seconds."
+        "description": "Invoker applies a debuff that increases Spell Damage taken by the target for each Exort instance that lasts 4 seconds."
       }
     ]
   },
@@ -4729,7 +4729,7 @@
         "color": "Blue",
         "gradient_id": 2,
         "title": "Overwhelming Devourer",
-        "description": "Affected Heroes gain a Mana Allergy Debuff for 0 seconds, healing Outworld Destroyer every time they cast a spell."
+        "description": "Affected Heroes gain a Mana Allergy Debuff for 7 seconds, healing Outworld Destroyer every time they cast a spell."
       }
     ]
   },
@@ -4783,7 +4783,7 @@
         "color": "Gray",
         "gradient_id": 1,
         "title": "Pack Leader",
-        "description": "Movement and critical strike bonuses are also applied to all units under Lycan's control. Enemy heroes killed by Lycan or his units extends Shapeshift duration by 0s."
+        "description": "Movement and critical strike bonuses are also applied to all units under Lycan's control. Enemy heroes killed by Lycan or his units extends Shapeshift duration by 5s."
       },
       {
         "name": "lycan_spirit_wolves",
@@ -4908,7 +4908,7 @@
         "color": "Gray",
         "gradient_id": 0,
         "title": "Promulgate",
-        "description": "If the target is an enemy, they lose 0% of their health, regaining half of it after the effect is lifted. If the target is an ally, increases their health by that amount instead."
+        "description": "If the target is an enemy, they lose 15% of their health, regaining half of it after the effect is lifted. If the target is an ally, increases their health by that amount instead."
       },
       {
         "name": "shadow_demon_facet_soul_mastery",
@@ -4978,7 +4978,7 @@
         "color": "Yellow",
         "gradient_id": 1,
         "title": "Unbearable",
-        "description": "Lone Druid morphs his Spirit Bear into an enraged form that gains bonus armor, a reduced base attack time, and a 0% cooldown on Entangling Claws."
+        "description": "Lone Druid morphs his Spirit Bear into an enraged form that gains bonus armor, a reduced base attack time, and a 75% cooldown on Entangling Claws."
       }
     ]
   },
@@ -5040,7 +5040,7 @@
         "color": "Gray",
         "gradient_id": 0,
         "title": "Irrationality",
-        "description": "Reality Rift has equal chances of applying Break, Disarm, or Nothing for 0% of the base debuff duration in addition to its normal effects."
+        "description": "Reality Rift has equal chances of applying Break, Disarm, or Nothing for 50% of the base debuff duration in addition to its normal effects."
       }
     ]
   },
@@ -5096,7 +5096,7 @@
         "color": "Blue",
         "gradient_id": 2,
         "title": "More Meepo",
-        "description": "Can now be upgraded at level 4 and every %bonus_levels_between_upgrades% levels afterwards to a max level of 3."
+        "description": "Can now be upgraded at level 3 and every %bonus_levels_between_upgrades% levels afterwards to a max level of 4."
       },
       {
         "name": "meepo_pack_rat",
@@ -5167,7 +5167,7 @@
         "color": "Green",
         "gradient_id": 2,
         "title": "Sapling",
-        "description": "Leech Seed can be ground targeted, planting a tree that heals allies and damages all enemies in the effect radius for the duration of the ability. Damage to creeps is reduced by 0%. If the tree is cut down, it immediately re-grows again."
+        "description": "Leech Seed can be ground targeted, planting a tree that heals allies and damages all enemies in the effect radius for the duration of the ability. Damage to creeps is reduced by 50%. If the tree is cut down, it immediately re-grows again."
       }
     ]
   },
@@ -5222,7 +5222,7 @@
         "color": "Red",
         "gradient_id": 0,
         "title": "Fat Chance",
-        "description": "Multicast chance is increased by 0% of Ogre Magi's Strength."
+        "description": "Multicast chance is increased by 0.05% of Ogre Magi's Strength."
       },
       {
         "name": "ogre_magi_learning_curve",
@@ -5484,7 +5484,7 @@
         "color": "Red",
         "gradient_id": 2,
         "title": "Scuttle",
-        "description": "For the first 0s of Vendetta, Nyx is hasted and has unobstructed pathing."
+        "description": "For the first 10s of Vendetta, Nyx is hasted and has unobstructed pathing."
       }
     ]
   },
@@ -5856,7 +5856,7 @@
         "color": "Green",
         "gradient_id": 1,
         "title": "Engorged",
-        "description": "Mystic Snakes returning to Medusa empower her next 0 attacks with +1 additional damage for each 0 mana restored. Lasts up to 0s."
+        "description": "Mystic Snakes returning to Medusa empower her next 3 attacks with +1 additional damage for each 6 mana restored. Lasts up to 5s."
       },
       {
         "name": "medusa_mana_pact",
@@ -5864,7 +5864,7 @@
         "color": "Blue",
         "gradient_id": 1,
         "title": "Mana Pact",
-        "description": "Mana Shield can be activated, draining 0% of max mana per second to gain 0% attack speed bonus per second, up to 0%. Maximum effect reached after 0s. Buff lasts 0s and Cooldown is 0s."
+        "description": "Mana Shield can be activated, draining 4% of max mana per second to gain 3% attack speed bonus per second, up to 30%. Maximum effect reached after 10s. Buff lasts 15s and Cooldown is 35s."
       }
     ]
   },
@@ -5926,7 +5926,7 @@
         "color": "Red",
         "gradient_id": 1,
         "title": "Bad Influence",
-        "description": "Battle Trance grants allied heroes 0% of the attack speed bonus."
+        "description": "Battle Trance grants allied heroes 30% of the attack speed bonus."
       }
     ]
   },
@@ -5981,7 +5981,7 @@
         "color": "Red",
         "gradient_id": 1,
         "title": "Counter-Strike",
-        "description": "Double Edge damage is increased by 0% of the damage Centaur took in the last 0s from enemy Heroes, up to a total of 0% bonus Double Edge damage. Damage resets when Double Edge is cast."
+        "description": "Double Edge damage is increased by 25% of the damage Centaur took in the last 6s from enemy Heroes, up to a total of 100% bonus Double Edge damage. Damage resets when Double Edge is cast."
       },
       {
         "name": "centaur_horsepower",
@@ -6108,7 +6108,7 @@
         "color": "Green",
         "gradient_id": 0,
         "title": "Shredder",
-        "description": "When Timbersaw collides with the target tree, it shatters, sending 0 splinters in all directions, up to 0 distance. If a splinter hits an enemy, they take damage and are slowed for a brief duration."
+        "description": "When Timbersaw collides with the target tree, it shatters, sending 10 splinters in all directions, up to 700 distance. If a splinter hits an enemy, they take damage and are slowed for a brief duration."
       },
       {
         "name": "shredder_second_chakram",
@@ -6365,7 +6365,7 @@
         "color": "Blue",
         "gradient_id": 1,
         "title": "Mephitic Shroud",
-        "description": "Damage barrier amount increased, but no longer bursts upon expiration. 0% of absorbed damage is dealt to nearby enemies."
+        "description": "Damage barrier amount increased, but no longer bursts upon expiration. 75% of absorbed damage is dealt to nearby enemies."
       }
     ]
   },
@@ -6420,7 +6420,7 @@
         "color": "Blue",
         "gradient_id": 2,
         "title": "Deconstruction",
-        "description": "Every [object Object]s that enemy heroes stay under the effect of Natural Order, their armor is reduced by [object Object], and magic resistance is reduced by [object Object]%. Stacks up to [object Object] times."
+        "description": "Every 1s that enemy heroes stay under the effect of Natural Order, their armor is reduced by 1, and magic resistance is reduced by 1%. Stacks up to 20 times."
       },
       {
         "name": "elder_titan_boost_atkspd",
@@ -6544,7 +6544,7 @@
         "color": "Red",
         "gradient_id": 0,
         "title": "Double Impact",
-        "description": "When Sleight of Fist connects with 0 or more enemies, the enemy closest to Ember Spirit will be attacked a second time. Damage for the second attack is reduced by 0%."
+        "description": "When Sleight of Fist connects with 2 or more enemies, the enemy closest to Ember Spirit will be attacked a second time. Damage for the second attack is reduced by 40%."
       },
       {
         "name": "ember_spirit_chain_gang",
@@ -6606,7 +6606,7 @@
         "color": "Green",
         "gradient_id": 0,
         "title": "Resonance",
-        "description": "Magnetizing a Stone Remnant gives Earth Spirit bonus attack damage for 0 seconds. Does not stack."
+        "description": "Magnetizing a Stone Remnant gives Earth Spirit bonus attack damage for 8 seconds. Does not stack."
       },
       {
         "name": "earth_spirit_stepping_stone",
@@ -6742,7 +6742,7 @@
         "color": "Red",
         "gradient_id": 1,
         "title": "Hotspot",
-        "description": "Sun Ray does more damage/heal to targets near the end of the beam. Beam intensity starts increasing at half the beam length, up to 0% of base damage/heal at 0 range. Increasing Sun Ray length to beyond 0 range will result in more than 0% damage and healing."
+        "description": "Sun Ray does more damage/heal to targets near the end of the beam. Beam intensity starts increasing at half the beam length, up to 150% of base damage/heal at 1200 range. Increasing Sun Ray length to beyond 1200 range will result in more than 150% damage and healing."
       }
     ]
   },
@@ -7116,7 +7116,7 @@
         "color": "Red",
         "gradient_id": 2,
         "title": "Wukong's Faithful",
-        "description": "Monkey King's soldiers do not disperse unless he spends more than 0 seconds outside the area."
+        "description": "Monkey King's soldiers do not disperse unless he spends more than 3 seconds outside the area."
       },
       {
         "name": "monkey_king_simian_stride",
@@ -7242,7 +7242,7 @@
         "color": "Purple",
         "gradient_id": 1,
         "title": "Throwing Shade",
-        "description": "While in Shadow Realm, Dark Willow emits a 0 radius aura that increases damage that she deals to enemies in its area of effect by up to 0%. Damage scales based on how long she remains under the effects of Shadow Realm."
+        "description": "While in Shadow Realm, Dark Willow emits a 600 radius aura that increases damage that she deals to enemies in its area of effect by up to 25%. Damage scales based on how long she remains under the effects of Shadow Realm."
       },
       {
         "name": "dark_willow_thorny_thicket",
@@ -7367,7 +7367,7 @@
         "color": "Red",
         "gradient_id": 2,
         "title": "Victory Feast",
-        "description": "If Mars is in the Arena when an enemy dies inside of it, he restores 0% of his max health and mana and gets a 0% attack damage buff for 0s."
+        "description": "If Mars is in the Arena when an enemy dies inside of it, he restores 20% of his max health and mana and gets a 20% attack damage buff for 15s."
       },
       {
         "name": "mars_arena",
@@ -7564,7 +7564,7 @@
         "color": "Green",
         "gradient_id": 0,
         "title": "Treebounce Trickshot",
-        "description": "If there are no bounce targets within range of Acorn Shot, it can bounce off a nearby tree and set the remaining number of bounces to 0."
+        "description": "If there are no bounce targets within range of Acorn Shot, it can bounce off a nearby tree and set the remaining number of bounces to 1."
       }
     ]
   },
@@ -7627,7 +7627,7 @@
         "color": "Yellow",
         "gradient_id": 1,
         "title": "Gleaming Hammer",
-        "description": "When Celestial Hammer is on the ground, it emits the healing and damaging effects of Solar Guardian, reduced by 0% in a 0 AoE around it. Increases the duration that the hammer can remain stationary to 2s."
+        "description": "When Celestial Hammer is on the ground, it emits the healing and damaging effects of Solar Guardian, reduced by 50% in a 200 AoE around it. Increases the duration that the hammer can remain stationary to 2s."
       }
     ]
   },
@@ -7752,7 +7752,7 @@
         "color": "Yellow",
         "gradient_id": 3,
         "title": "Ferocity",
-        "description": "When activated, Uproar provides 0% increased area of effect per stack."
+        "description": "When activated, Uproar provides 10% increased area of effect per stack."
       }
     ]
   },
@@ -7809,7 +7809,7 @@
         "color": "Green",
         "gradient_id": 1,
         "title": "Dance of the Dead",
-        "description": "Heroes killed inside The Calling refresh its duration, create another Revenant, and expand the radius of The Calling by 0."
+        "description": "Heroes killed inside The Calling refresh its duration, create another Revenant, and expand the radius of The Calling by 100."
       },
       {
         "name": "muerta_ofrenda",

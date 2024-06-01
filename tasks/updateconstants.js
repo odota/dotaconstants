@@ -1752,6 +1752,12 @@ function replaceSpecialAttribs(
         ret = attr[name];
       }
 
+      const facetKey = Object.keys(attr[name]).find(k => k.startsWith("special_bonus_facet"));
+
+      if (facetKey) {
+        ret = attr[name][facetKey].replace("=", "");
+      }
+
       if (ret === undefined) {
         return orig;
       } else {
