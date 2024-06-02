@@ -15591,9 +15591,8 @@
       },
       {
         "key": "aoe",
-        "header": "AOE:",
-        "value": "1200",
-        "generated": true
+        "header": "RADIUS:",
+        "value": "1200"
       },
       {
         "key": "charges_per_death",
@@ -17185,7 +17184,7 @@
       "Basic",
       "Building"
     ],
-    "desc": "Windranger channels the wind to gain 350 additional attack speed against a single enemy unit or structure, though with a reduction to her attack damage. Extra damage from secondary item effects is not reduced.",
+    "desc": "Windranger channels the wind to gain 0 additional attack speed against a single enemy unit or structure, though with a reduction to her attack damage. Extra damage from secondary item effects is not reduced.",
     "attrib": [
       {
         "key": "abilityduration",
@@ -18763,7 +18762,7 @@
       "Hidden"
     ],
     "dmg_type": "Magical",
-    "desc": "Lina's spells deal 125% total damage. 60% is dealt on impact and 65% is dealt as burn damage over [object Object]s.",
+    "desc": "Lina's spells deal 125% total damage. 60% is dealt on impact and 65% is dealt as burn damage over 3s.",
     "attrib": [
       {
         "key": "damage_penalty_tooltip",
@@ -63527,7 +63526,7 @@
       {
         "key": "incoming_damage_penalty",
         "header": "PENALTY INCREASED DAMAGE:",
-        "value": "75%"
+        "value": "60%"
       },
       {
         "key": "abilitycastrange",
@@ -65511,7 +65510,7 @@
       "Hero",
       "Basic"
     ],
-    "desc": "Dark Willow creates a 500 AoE maze of 8 brambles that grow in the target area after 0.3 seconds. Enemies that walk into a bramble are rooted and take damage over time. Lasts 15 seconds.",
+    "desc": "Dark Willow creates a 500 AoE maze of 4 brambles that grow in the target area after 0.3 seconds. Enemies that walk into a bramble are rooted and take damage over time. Lasts 15 seconds.",
     "attrib": [
       {
         "key": "placement_range",
@@ -66390,7 +66389,7 @@
       "Hero",
       "Basic"
     ],
-    "desc": "Grimstroke shrouds an allied unit in ink, increasing its movement speed. Enemies in range of the allied unit are damaged with inky tendrils over time. After 3 seconds it applies damage and stun in an area around the unit in proportion to how long ink tendril was near any hero.",
+    "desc": "Grimstroke shrouds an allied unit in ink, increasing its movement speed. Enemies in range of the allied unit are damaged with inky tendrils over time. After 1 seconds it applies damage and stun in an area around the unit in proportion to how long ink tendril was near any hero.",
     "attrib": [
       {
         "key": "buff_duration",
