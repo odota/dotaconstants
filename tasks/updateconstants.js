@@ -137,7 +137,7 @@ const localizationUrl =
   "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/dota_english.txt";
 
 let aghsAbilityValues = {};
-const aghs_desc_urls = [];
+const heroDataUrls = [];
 const abilitiesUrls = [abilitiesLoc, npcAbilitiesUrl];
 
 start();
@@ -149,7 +149,7 @@ async function start() {
     .map((key) => heroesVdf.DOTAHeroes[key].HeroID)
     .sort((a, b) => Number(a) - Number(b));
   ids.forEach((key) => {
-    aghs_desc_urls.push(
+    heroDataUrls.push(
       "http://www.dota2.com/datafeed/herodata?language=english&hero_id=" + key,
     );
   });
@@ -923,9 +923,22 @@ async function start() {
     },
     {
       key: "hero_abilities",
-      url: heroesUrl,
+      url: [
+        ...abilitiesUrls.slice(2, abilitiesUrls.length),
+        heroesUrl,
+        ...heroDataUrls,
+      ],
       transform: (respObj) => {
-        let heroes = respObj.DOTAHeroes;
+        const heroAbils = respObj.splice(0, abilitiesUrls.length - 2);
+        const [heroObj, ...heroData] = respObj;
+        let scripts = {};
+        // Merge into scripts all the hero abilities (the rest of the array)
+        for (let i = 0; i < heroAbils.length; i++) {
+          const heroAbs = heroAbils[i].DOTAAbilities;
+          scripts = { ...scripts, ...heroAbs };
+        }
+
+        let heroes = heroObj.DOTAHeroes;
         const heroAbilities = {};
         Object.keys(heroes).forEach(function (heroKey) {
           if (
@@ -955,16 +968,99 @@ async function start() {
                 }
               }
             });
-            newHero.facets = Object.entries(heroes[heroKey].Facets ?? []).map(([key, value]) => ({
-              name: key,
-              icon: value.Icon,
-              color: value.Color,
-              gradientId: value.GradientID,
-            }));
-          
             heroAbilities[heroKey] = newHero;
           }
         });
+
+        const facetColors = [
+          "Red",
+          "Yellow",
+          "Green",
+          "Blue",
+          "Purple",
+          "Gray",
+        ];
+
+        heroData.forEach((hero) => {
+          hero = hero.result.data.heroes[0];
+          const { name, facets, abilities, facet_abilities } = hero;
+          facets?.forEach((facet) => {
+            heroAbilities[name].facets.push({
+              name: facet.name,
+              icon: facet.icon,
+              color: facetColors[facet.color],
+              gradient_id: facet.gradient_id,
+              title: facet.title_loc,
+              description: facet.description_loc || "",
+            });
+          });
+
+          const allAttribs = [];
+
+          abilities?.forEach((ability) => {
+            ability?.facets_loc?.forEach((str, i) => {
+              let specialAttrs = getSpecialAttrs(scripts[ability.name]) || [];
+              allAttribs.push(...specialAttrs);
+              if (str.length > 0) {
+                heroAbilities[name].facets[i].description =
+                  replaceSpecialAttribs(
+                    str,
+                    specialAttrs,
+                    false,
+                    scripts[ability.name],
+                    ability.name,
+                  );
+              }
+            });
+          });
+
+          facet_abilities?.forEach((facet_ability, i) => {
+            facet_ability?.abilities?.forEach((ability) => {
+              let { description } = heroAbilities[name].facets[i];
+              if (description.includes("{s:facet_ability_name}")) {
+                description = description.replace(
+                  "{s:facet_ability_name}",
+                  ability.name_loc,
+                );
+              }
+
+              heroAbilities[name].facets[i].description = replaceSpecialAttribs(
+                description,
+                getSpecialAttrs(scripts[ability.name]),
+                false,
+                scripts[ability.name],
+                ability.name,
+              );
+            });
+          });
+
+          // Insert {s:bonus_} values. Some attributes are tied to seemingly unrelated passives, so we need all abilities
+          heroAbilities[name].facets = heroAbilities[name].facets.map(
+            ({ description, ...rest }) => {
+              const matches = description.matchAll(/{s:bonus_(\w+)}/g);
+              for ([, bonusKey] of matches) {
+                const obj =
+                  allAttribs.find((obj) => bonusKey in obj)?.[bonusKey] ?? {};
+                const facetKey = Object.keys(obj).find(
+                  (k) =>
+                    k.startsWith("special_bonus_facet") &&
+                    k.includes(rest.name),
+                );
+                if (facetKey) {
+                  description = description.replace(
+                    `{s:bonus_${bonusKey}}`,
+                    removeSigns(obj[facetKey]),
+                  );
+                }
+              }
+              return {
+                ...rest,
+                description,
+              };
+            },
+          );
+        });
+
         return heroAbilities;
       },
     },
@@ -1164,7 +1260,7 @@ async function start() {
     // NOTE: This needs to run after abilities since it depends on aghsAbilityValues
     {
       key: "aghs_desc",
-      url: aghs_desc_urls,
+      url: heroDataUrls,
       transform: (respObj) => {
         const herodata = respObj;
         const aghs_desc_arr = [];
@@ -1358,9 +1454,9 @@ function parseJsonOrVdf(text, url) {
         '"channel_vision_radius"	{',
         '"channel_vision_radius"\n{',
       );
-      fixed = fixed.replace(/\t\t"ItemRequirements"\r\n\t\t""/g, '');
-      fixed = fixed.replace(/\t\t\t"has_flying_movement"\t\r\n\t\t\t""/g, '');
-      fixed = fixed.replace(/\t\t\t"damage_reduction"\t\r\n\t\t\t""/g, '');
+      fixed = fixed.replace(/\t\t"ItemRequirements"\r\n\t\t""/g, "");
+      fixed = fixed.replace(/\t\t\t"has_flying_movement"\t\r\n\t\t\t""/g, "");
+      fixed = fixed.replace(/\t\t\t"damage_reduction"\t\r\n\t\t\t""/g, "");
       let vdf = simplevdf.parse(fixed);
       return vdf;
     } catch (e) {
@@ -1541,6 +1637,14 @@ function formatAttrib(attributes, strings, strings_prefix) {
     .filter((a) => a);
 }
 
+function removeSigns(template) {
+  return template
+    .replace("+", "")
+    .replace("-", "")
+    .replace("x", "")
+    .replace("=", "");
+}
+
 let specialBonusLookup = {};
 
 function replaceSValues(template, attribs, key) {
@@ -1600,10 +1704,7 @@ function replaceBonusSValues(key, template, attribs) {
         attribs[bonus]?.hasOwnProperty(key)
       ) {
         // remove redundant signs
-        let bonus_value = attribs[bonus][key]
-          .replace("+", "")
-          .replace("-", "")
-          .replace("x", "");
+        let bonus_value = removeSigns(attribs[bonus][key]);
 
         template = template
           // Most of the time, the bonus value template is named bonus_<bonus_key>
@@ -1683,6 +1784,16 @@ function replaceSpecialAttribs(
             .lifesteal_percent;
         } else if (name === "movement_slow") {
           return attribs.find((obj) => "damage_pct" in obj).damage_pct;
+        } else if (name.startsWith("bonus_")) {
+          // Some facets have an extra bonus_ at the start
+          const newName = name.replace("bonus_", "");
+          const obj = attribs.find((obj) => newName in obj)?.[newName] ?? {};
+          const facetKey = Object.keys(obj).find((k) =>
+            k.startsWith("special_bonus_facet"),
+          );
+          if (facetKey) {
+            return obj[facetKey].replace("=", "");
+          }
         }
 
         console.log(
@@ -1699,6 +1810,14 @@ function replaceSpecialAttribs(
         ret = attr[name].value;
       } else {
         ret = attr[name];
+      }
+
+      const facetKey = Object.keys(attr[name]).find((k) =>
+        k.startsWith("special_bonus_facet"),
+      );
+
+      if (facetKey) {
+        ret = attr[name][facetKey].replace("=", "");
       }
 
       if (ret === undefined) {

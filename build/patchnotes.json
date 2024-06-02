@@ -36307,7 +36307,7 @@
         ],
         "talents": [
           "Level 15 Talent Mana Drain Restores Allies replaced with -2s Hex Cooldown",
-          "Level 20 Talent -3s Hex Cooldown replaced with Earth Spike affects a 30º cone"
+          "Level 20 Talent -3s Hex Cooldown replaced with Earth Spike affects a 30 degree cone"
         ]
       },
       "lone_druid": {
@@ -41159,7 +41159,8 @@
       "Mana Cost Reduction effects no longer work on abilities that drain mana over time ",
       "Examples: Voodoo Restoration, Arctic Burn with Aghanim's Scepter, Ball Lightning, Chakram, Pulse Nova. Morphling's Morph already worked that way",
       "<br>",
-      "Attack Speed Display is no longer normalized to 1.7 BAT. This means heroes’ max attack speed is always 700, and a buff that grants 20 Attack Speed will display as +20 always instead of a different number based on the hero’s BAT (No actual gameplay change, just a display change)",
+      "Attack Speed Display is no longer normalized to 1.7 BAT. This means heroes’ max attack speed is no longer always 700, but a buff that grants 20 Attack Speed will display as +20 always instead of a different number based on the hero’s BAT (No actual gameplay change, just a display change)",
+      "Spell's Cast Range is now always listed with the new icon, which is located near Mana Costs and Cooldown",
       "Spell's Cast Range is now always listed with the new icon, which is located near Mana Costs and Cooldown",
       "Holding Alt displays the vision range of all Watchers in the map",
       "Experience gain from Abilities and Wisdom Rune will now show up separately in the post-game XP Breakdown for Dota Plus users",
@@ -41221,10 +41222,11 @@
       ],
       "sange": [
         "Recipe cost increased from 550 to 650. Total cost increased from 2000 to 2100",
-        "No longer provides +20% Status Resistance",
+        "No longer provides +16% Status Resistance",
         "Now provides +20% Slow Resistance",
         "Total cost increased from 4000 to 4200",
-        "Now also provides +25% Slow Resistance"
+        "Now also provides +25% Slow Resistance ",
+        "Still provides +25% Status Resistance"
       ],
       "yasha": [
         "Recipe cost increased from 550 to 650. Total cost increased from 2000 to 2100",
@@ -41303,7 +41305,7 @@
           "Seed Money",
           "Alchemist starts with 250 bonus gold",
           "Mixologist",
-          "Now decreases Berserk Potion cooldown by 50% and Unstable Concoction by 30% for the duration of Chemical Rage"
+          "Decreases Berserk Potion cooldown by 50% and Unstable Concoction by 30% for the duration of Chemical Rage"
         ],
         "alchemist_corrosive_weaponry": [
           "No longer reduces Status Resistance by 3/4/5/6% per stack",
@@ -41447,7 +41449,7 @@
         ],
         "axe_battle_hunger": [
           "Now applies immediately after applying and every 0.5s after",
-          "Aghanim's Scepter no longer provides armor to Axe. Now makes multiple Battle Hunger debuffs stackable"
+          "Aghanim's Scepter upgrade moved to Aghanim's Shard. No longer provides armor to Axe, but now makes multiple Battle Hunger debuffs stackable"
         ],
         "axe_battle_hunger_info": [
           "This provides one extra tick of half damage"
@@ -42288,7 +42290,7 @@
         ],
         "hero_innate_enigma_gravity_well": [
           "New Innate ability. Passive, can't be leveled up",
-          "Allies near Enigma have a Damage Reduction bonus that gradually increases with proximity to Enigma. Effect starts with 0% at 500 distance and increases up to 15% at 200 distance",
+          "Allies near Enigma have an Incoming Damage Reduction buff that gradually increases with proximity to Enigma. Effect starts with 0% at 500 distance and increases up to 15% at 200 distance",
           "Doesn't affect Enigma itself"
         ],
         "hero_facet": [
@@ -42459,12 +42461,14 @@
         ],
         "hero_facet": [
           "Agnostic",
-          "Passively adds a debuff to Invoker's attacks that deals 3/6/9/12/15/18/21 damage per second for 2 seconds. Active orbs grant no additional bonuses",
+          "Leveling up orbs provides Invoker with passive bonuses. Active orbs grant no additional effects",
+          "Passively adds a debuff to Invoker's attacks that deals 3/6/9/12/15/18/21 damage per second for 2 seconds",
           "Damage over time does not apply to buildings or allies",
-          "Passively grants 5/10/15/20/25/30/35 attack speed. Active orbs grant no additional bonuses",
-          "Passively grants 3/6/9/12/15/18/21 bonus attack damage. Active orbs grant no additional bonuses",
+          "Passively grants 5/10/15/20/25/30/35 attack speed",
+          "Passively grants 3/6/9/12/15/18/21 bonus attack damage",
           "Level 25 Talent is 2x Quas/Wex/Exort Passive Effects",
           "Elitist",
+          "Active orbs grant Invoker special bonuses. Leveling up orbs provides no additional effects",
           "Active Quas orbs imbue Invoker's attacks with flat lifesteal, restoring 2/4/6/8/10/12/14 health per orb",
           "Active Wex orbs grant +0.6/1.2/1.8/2.4/3/3.6/4.2% movement speed per orb",
           "Active Exort orbs make Invoker's attacks apply a 4s debuff that increases Spell Damage the enemy takes by 2/3/4/5/6/7/8% per orb",
@@ -43366,9 +43370,7 @@
           "Innate Ability"
         ],
         "hero_innate_night_stalker_heart_of_darkness": [
-          "New Innate ability. Passive, can't be leveled up"
-        ],
-        "general": [
+          "New Innate ability. Passive, can't be leveled up",
           "At night, Night Stalker's Health Regen is increased by 40%, but during the day it is decreased by 20%"
         ],
         "hero_facet": [
@@ -43390,7 +43392,7 @@
         "talents": [
           "Level 10 Talent Void Damage increased from +50 to +80",
           "Level 15 Talent Hunter in the Night Status Resistance increased from +25% to +35%",
-          "Level 20 Talent -50s Crippling Fear Cooldown replaced with +20 Crippling Fear DPS"
+          "Level 20 Talent -5s Crippling Fear Cooldown replaced with +20 Crippling Fear DPS"
         ]
       },
       "nyx_assassin": {
@@ -45113,6 +45115,522 @@
         ],
         "talents": [
           "Level 20 Talent +6% Arc Lightning Current Health As Damage replaced with +60 Arc Lightning Damage"
+        ]
+      }
+    }
+  },
+  "7_36a": {
+    "general": [
+      "Force Staff and similar abilities/items can no longer be used on Leashed targets",
+      "Slark's Pounce, Puck's Dream Coil, Faceless Void's Time Zone, etc.",
+      "Fixed a crash related to Lich's Chain Frost",
+      "Fixed a crash related to Lycan's Shapeshift",
+      "Fixed a crash related to Mars' Arena of Blood",
+      "Fixed a crash related to Morphling's Morph",
+      "Fixed a crash related to Silencer's Glaives of Wisdom",
+      "Fixed a crash related to Venomancer's Plague Ward",
+      "Fixed Light Collector incorrectly having a 25% penalty instead of 75%",
+      "Fixed Blade Mail reflecting Witch Doctor's Scepter Death Ward bounce damage back to him",
+      "Fixed Disperser applying 2 dispels if cast on self",
+      "Fixed Gris-Gris tooltip",
+      "Fixed Quelling Blade using flipped damage values for Melee/Ranged",
+      "Fixed Radiance not updating dynamically with changes to AoE bonus",
+      "Fixed Eye of Skadi slow values being inverted for Ranged vs Melee",
+      "Fixed Shiva's Guard not updating dynamically with changes to AoE bonus",
+      "Fixed Yasha and Kaya cast speed bonus stacking",
+      "Fixed Axe's Shard granting no Counter Helix cooldown instead of the Scepter",
+      "Fixed Axe's One Man Army losing HP when dispelled continuously",
+      "Fixed Abaddon's Curse of Avernus not giving the attack speed bonus to allies",
+      "Fixed Ancient Apparation's Chilling Touch not increasing in strength as it was leveled up",
+      "Fixed Batrider's Sticky Napalm first application damage incorrectly applying Napalm damage",
+      "Fixed Clinkz's Burning Barrage not auto-applying Tar Bomb",
+      "Fixed Clinkz's Skeleton Archers also applying Burning Barrage when cast",
+      "Fixed Dawnbreaker's Gleaming Hammer effects",
+      "Fixed Dragon Knight's Corrosive Dragon not applying Wyrm's Wrath to buildings while in Elder Dragon Form",
+      "Fixed Faceless Void's Distortion Field having some undesirable interactions",
+      "Fixed Huskar not being able to attack ethereal targets with Revenant's Brooch",
+      "Fixed Invoker's Mastermind not working properly",
+      "Fixed Invoker spell lifesteal effects showing erroneously",
+      "Fixed Leshrac's Level 15 Talent +10% Movement Speed during Pulse Nova not stacking its movement speed correctly with Yasha based items",
+      "Fixed Lich not being able to cast Frost Shield during Sinister Gaze",
+      "Fixed Lion not being granted Finger of Death stacks when killing a hero with cleave",
+      "Fixed Lone Druid's Unbearable not affecting BAT",
+      "Fixed Lone Druid's Level 20 and Level 25 Talents not properly applying to the Spirit Bear",
+      "Fixed Lycan's Spirit Wolves being able to attack things sometimes",
+      "Fixed Mars getting regen from invisible/FoW targets, revealing them",
+      "Fixed Meepo's Pack Rat being able to share Moon Shards",
+      "Fixed Meepo's Pack Rat sometimes not properly setting other Meepos' items on cooldown",
+      "Fixed Meepo's More Meepo making players miss a stat or talent point",
+      "Fixed Muerta respawning at her Ofrenda when dying with Aegis",
+      "Fixed Muerta's Dance of the Dead tooltip inaccuracy",
+      "Fixed Nyx Assassin's Burrow not stacking with Aether Lens",
+      "Fixed Nyx Assassin's Mana Burn working with Spirit Vessel",
+      "Fixed Ogre Magi's Learning Curve making players miss a stat or talent point",
+      "Fixed Phantom Assassin's Level 25 Talent +10% Coup de Grace Chance not working properly",
+      "Fixed Phantom Assassin's Mark of Death appearing twice",
+      "Fixed Phantom Assassin sometimes consuming its mark without casting a critical strike (note that critical strike is calculated at the beginning of the attack swing so if an attack starts swinging before dagger connect, that attack won't have a critical strike, but the next one will)",
+      "Fixed Phantom Assassin's Illusions creating and consuming Methodical charges",
+      "Fixed Phoenix's abilities sometimes applying one instance of blind less than intended",
+      "Fixed Pudge not gaining health from Flesh Heap stacks immediately",
+      "Fixed Puck's Curveball projectile sometimes traveling too fast",
+      "Fixed Puck's Puckish granting Puck mana and health whenever any unit disjointed a projectile",
+      "Fixed Shadow Demon's Level 25 Talent 2 Charges of Disruption not working properly",
+      "Fixed Silencer's Aghanim's Shard not increasing INT steal properly",
+      "Fixed Slark's Depth Shroud not healing allies",
+      "Fixed Sniper canceling taunts when Take Aim expired",
+      "Fixed Spirit Breaker's Planar Pocket having some undesirable interactions",
+      "Fixed Storm Spirit's Ball Lightning sometimes not costing mana",
+      "Fixed Storm Spirit's Shock Collar kills counting as denies",
+      "Fixed Storm Spirit losing Galvanized charges when dying with Aegis of the Immortal",
+      "Fixed Templar Assassin's Blink Dagger being muted when blocking damage with Refraction",
+      "Fixed Timbersaw's Whirling Death debuff not reducing attributes",
+      "Fixed Timbersaw's Chakram effects sometimes not appearing",
+      "Fixed Timbersaw's Exposure Therapy not working",
+      "Fixed Tiny's Grow Toss bonus damage only applying to the tossed target",
+      "Fixed Undying's Ceaseless Dirge triggering when dying from Aegis of the Immortal",
+      "Fixed Venomancer's Level 25 Talent 2.5x Plague Ward HP/Damage not working with Plague Attachment",
+      "Fixed Venomancer ministunning if Venomous Gale was dispelled without Shard",
+      "Fixed Vengeful Spirit's Soul Strike with Abyssal Blade using Ranged values",
+      "Fixed Warlock's Black Grimoire being able to be consumed early",
+      "Fixed Warlock's Champion of Gorroth burn damage stacking from multiple Hearts of Tarrasque",
+      "Fixed Warlock's Shadow Word tooltip not properly explaining that it applies its effect in an AoE",
+      "Fixed Windranger's Whirlwind getting disabled by Disarm during Debuff Immunity",
+      "Fixed Wraith King Spectral Blade's tooltip showing the incorrect damage type",
+      "Gris-Gris passive gold now ticks twice as fast in Turbo",
+      "Fixed Facets granting abilities when they shouldn't in Ability Draft",
+      "Fixed wrong Ability Draft keybinds"
+    ],
+    "items": {
+      "eternal_shroud": [
+        "Magic Resistance bonus decreased from 25% to 20%"
+      ]
+    },
+    "heroes": {
+      "abaddon": {
+        "abaddon_frostmourne": [
+          "Attack Speed decreased from 15/30/45/60 to 10/20/30/40"
+        ],
+        "abaddon_borrowed_time": [
+          "Aghanim's Scepter threshold damage is now reset after Mist Coil is fired"
+        ],
+        "hero_facet": [
+          "Mephitic Shroud",
+          "Damage Barrier decreased from 180/225/270/315 to 170/210/250/290",
+          "Absorbed amount to damage decreased from 80% to 75%"
+        ]
+      },
+      "ancient_apparition": {
+        "ancient_apparition_chilling_touch": [
+          "Death Rime Stacks decreased from 2 to 1"
+        ]
+      },
+      "arc_warden": {
+        "arc_warden_tempest_double": [
+          "Penalty Increased Damage decreased from 75% to 60%"
+        ],
+        "arc_warden_tempest_double_info": [
+          "When far away"
+        ]
+      },
+      "axe": {
+        "hero_facet": [
+          "One Man Army",
+          "Strength bonus decreased from 60% to 50% of Axe's armor"
+        ],
+        "axe_coat_of_blood": [
+          "Now levels with Culling Blade",
+          "Armor gain per kill decreased from 1 to 0.4/0.6/0.8/1.0"
+        ],
+        "talents": [
+          "Level 10 Talent Movement Speed per active Battle Hunger decreased from +12% to +10%",
+          "Level 15 Talent Battle Hunger Slow decreased from +12% to +10%"
+        ]
+      },
+      "batrider": {
+        "hero_facet": [
+          "Stoked",
+          "Now scales with Flaming Lasso",
+          "Spell Amplification rescaled from 8% to 2/4/6/8%",
+          "Movement Speed rescaled from 10% to 4/6/8/10%"
+        ],
+        "batrider_smoldering_resin": [
+          "No longer works on wards or couriers"
+        ],
+        "batrider_sticky_napalm": [
+          "No longer grants vision"
+        ]
+      },
+      "chen": {
+        "chen_summon_convert": [
+          "Creep maximum health increased from 200+80 per Chen level to 220+80 per Chen level"
+        ]
+      },
+      "crystal_maiden": {
+        "hero_facet": [
+          "Frozen Expanse",
+          "Now scales with Freezing Field instead of Arcane Aura",
+          "Cast Range Bonus rescaled from 50/75/100/125 to 75/100/125",
+          "AoE Bonus rescaled from 7/8/9/10% to 6/8/10%",
+          "AoE Bonus now only applies to Crystal Maiden"
+        ]
+      },
+      "dark_willow": {
+        "hero_facet": [
+          "Thorny Thicket",
+          "No longer increases spell amplification"
+        ]
+      },
+      "death_prophet": {
+        "hero_facet": [
+          "Suppress",
+          "Movement Slow increased from 10/15/20/25% to 15/20/25/30%",
+          "Spirit Collector",
+          "Now triggers from hero deaths globally instead of in a 2000 radius"
+        ]
+      },
+      "disruptor": {
+        "hero_facet": [
+          "Kinetic Fence",
+          "Formation Delay decreased from 0.75s to 0.4s"
+        ],
+        "disruptor_glimpse": [
+          "Can now be used on Lone Druid's Spirit Bear"
+        ]
+      },
+      "dragon_knight": {
+        "hero_facet": [
+          "Fire Dragon",
+          "Cleave Damage increased from 20/30/40/50% to 25/35/45/55%",
+          "Corrosive Dragon",
+          "Damage per second decreased from 10/15/20/25 to 5/10/15/20"
+        ]
+      },
+      "earth_spirit": {
+        "hero_facet": [
+          "Stepping Stone",
+          "Ending Rolling Boulder now creates a Stone Remnant in front of Earth Spirit",
+          "Mana Cost decreased from 15 to 0"
+        ]
+      },
+      "elder_titan": {
+        "hero_facet": [
+          "Momentum",
+          "Movement Speed as Attack Speed increased from 20% to 30%"
+        ]
+      },
+      "enchantress": {
+        "enchantress_natures_attendants": [
+          "Duration increased from 9/10/11/12s to 10/11/12/13s"
+        ]
+      },
+      "gyrocopter": {
+        "hero_facet": [
+          "Afterburner",
+          "Movement speed is now increased only by hitting heroes"
+        ]
+      },
+      "huskar": {
+        "general": [
+          "Base Armor increased by 1"
+        ],
+        "huskar_berserkers_blood": [
+          "Max Attack Speed increased from 160/210/260/310 to 170/220/270/320"
+        ]
+      },
+      "juggernaut": {
+        "hero_facet": [
+          "Bladeform",
+          "Linger duration decreased from 3s to 2s",
+          "Agility per stack decreased from 3% to 2%"
+        ],
+        "juggernaut_blade_fury": [
+          "Damage per tick decreased from 45/50/55/60 to 40/45/50/55"
+        ],
+        "juggernaut_omni_slash": [
+          "Bonus Damage decreased from 30/35/40 to 25/30/35"
+        ],
+        "juggernaut_swift_slash": [
+          "Mana Cost increased from 125 to 150",
+          "Cast Range decreased from 550 to 450"
+        ],
+        "talents": [
+          "Level 20 Talent Blade Dance Lifesteal decreased from +60% to +50%"
+        ]
+      },
+      "legion_commander": {
+        "hero_facet": [
+          "Stonehall Plate",
+          "Damage to Barrier decreased from 100% to 50%",
+          "No longer grants barrier from damaging illusions"
+        ],
+        "legion_commander_overwhelming_odds": [
+          "Aghanim's Shard Bonus Radius during Duel decreased from 250 to 200"
+        ],
+        "legion_commander_duel": [
+          "Aghanim's Scepter Cooldown increased from 40/35/30s to 50/45/40s"
+        ]
+      },
+      "leshrac": {
+        "hero_facet": [
+          "Chronoptic Nourishment",
+          "Now has a 50% mana restoration penalty when attacking creeps"
+        ]
+      },
+      "life_stealer": {
+        "hero_facet": [
+          "Unfettered",
+          "Magic Resistance increased from 50% to 60%",
+          "Status Resistance increased from 50% to 60%"
+        ]
+      },
+      "lina": {
+        "talents": [
+          "Level 25 Talent +150% Crit On Targets Affected By Dragon Slave replaced with +150% Crit On Targets Affected By Spells",
+          "Applied by Dragon Slave, Light Strike Array, and Laguna Blade. Lasts 3s"
+        ]
+      },
+      "lone_druid": {
+        "hero_facet": [
+          "Unbearable",
+          "Entangling Claws: Bear True Form cooldown reduction increased from 50% to 75%",
+          "Entangling Claws: Bear True Form entangle chance increased from 20% to 30%"
+        ]
+      },
+      "magnataur": {
+        "hero_facet": [
+          "Reverse Reverse Polarity",
+          "Effect Radius increased from 600 to 700",
+          "Max Knockback Distance increased from 700 to 850",
+          "Cooldown decreased from 120s to 100s"
+        ]
+      },
+      "meepo": {
+        "general": [
+          "Base Movement Speed decreased from 330 to 320"
+        ]
+      },
+      "mirana": {
+        "hero_facet": [
+          "Solar Flare",
+          "Duration increased from 14s to 18s",
+          "Same as Moonlight Shadow"
+        ]
+      },
+      "morphling": {
+        "morphling_waveform": [
+          "Mana Cost decreased from 130 to 115",
+          "Now attacks all targets it goes through with 50% of Morphling's Attack Damage by default. Does not apply on-hit effects"
+        ],
+        "talents": [
+          "Level 20 Talent Waveform Attacks Target replaced with +50% Waveform Attack Damage And Applies On Hit Effects"
+        ]
+      },
+      "furion": {
+        "hero_facet": [
+          "Ironwood Treant",
+          "Treant Health increased from 550/750/950/1150 to 750/950/1150/1350",
+          "Treant Max Damage increased from 22/34/46/58 to 30/46/62/78"
+        ],
+        "furion_sprout": [
+          "Damage increased from 60/120/180/240 to 70/140/210/280"
+        ]
+      },
+      "necrolyte": {
+        "hero_facet": [
+          "Profane Potency",
+          "AoE Bonus per kill decreased from 50 to 40"
+        ]
+      },
+      "night_stalker": {
+        "general": [
+          "Base Health Regen decreased by 0.5"
+        ],
+        "talents": [
+          "Level 15 Talent Dark Ascension Damage decreased from +30 to +25"
+        ]
+      },
+      "omniknight": {
+        "omniknight_hammer_of_purity": [
+          "Damage increased from 50/75/100/125% to 55/80/105/130",
+          "Bonus Base Damage rescaled from 60/80/100/120% to 55/80/105/130%"
+        ]
+      },
+      "obsidian_destroyer": {
+        "general": [
+          "Base Armor decreased by 1"
+        ]
+      },
+      "pangolier": {
+        "hero_facet": [
+          "Double Jump",
+          "Max Damage Increase increased from 30% to 50%",
+          "Max Barrier Increase increased from 30% to 50%"
+        ],
+        "pangolier_shield_crash": [
+          "Damage increased from 60/120/180/240 to 70/130/190/250"
+        ]
+      },
+      "phantom_assassin": {
+        "hero_facet": [
+          "Methodical",
+          "Stifling Dagger now counts as 2 attacks"
+        ]
+      },
+      "pudge": {
+        "hero_facet": [
+          "Fresh Meat",
+          "Strength Increase decreased from 3/5/7 to 1/3/5",
+          "Flayer's Hook",
+          "Distance as Damage increased from 10/15/20/25% to 12/18/24/30%"
+        ]
+      },
+      "sand_king": {
+        "hero_facet": [
+          "Dust Devil",
+          "Storm is no longer destroyed if left by Sand King, and keeps following him if he leaves it"
+        ]
+      },
+      "shadow_shaman": {
+        "shadow_shaman_shackles": [
+          "Total Damage/Heal decreased from 75/150/225/300 to 70/140/210/280"
+        ],
+        "shadow_shaman_fowl_play": [
+          "Cooldown increased from 90s to 120s"
+        ]
+      },
+      "slark": {
+        "slark_barracuda": [
+          "Bonus Movement Speed increased from 4/24/36/48% to 6/24/36/48%",
+          "Health Gained per second increased from 8/60/90/120 to 10/60/90/120"
+        ]
+      },
+      "snapfire": {
+        "general": [
+          "Base Damage increased from 48-54 to 51-57"
+        ],
+        "snapfire_lil_shredder": [
+          "Base Damage per shot increased from 15/30/45/60 to 20/35/50/65"
+        ]
+      },
+      "spectre": {
+        "hero_facet": [
+          "Forsaken",
+          "Damage when non-hero units are nearby increased from 40% to 50%"
+        ]
+      },
+      "storm_spirit": {
+        "general": [
+          "Base Mana Regen decreased from 0.6 to 0.2"
+        ],
+        "hero_facet": [
+          "Shock Collar",
+          "Debuff duration decreased from 6s to 5s"
+        ]
+      },
+      "sven": {
+        "general": [
+          "Base Strength increased by 4"
+        ],
+        "sven_gods_strength": [
+          "Bonus Damage increased from 100/140/180% to 110/150/190%"
+        ]
+      },
+      "techies": {
+        "general": [
+          "Health Regen increased from 0.25 to 1.0"
+        ]
+      },
+      "templar_assassin": {
+        "templar_assassin_refraction": [
+          "Barrier per instance decreased from 30/40/50/60 to 20/30/40/50"
+        ],
+        "templar_assassin_meld": [
+          "Bonus Damage decreased from 80/140/200/260 to 70/125/180/235"
+        ],
+        "templar_assassin_psi_blades": [
+          "Psi Blade Range decreased from 550/600/650/700/750 to 350/550/600/650/700"
+        ]
+      },
+      "terrorblade": {
+        "hero_facet": [
+          "Soul Fragment",
+          "Current HP Cost decreased from 20% to 15%"
+        ]
+      },
+      "tinker": {
+        "hero_facet": [
+          "Translocator",
+          "Now applies a Strong Dispel on Tinker before blinking",
+          "Blink random direction angle decreased from 120 to 90 degrees",
+          "Blink distance increased from 300 to 350"
+        ],
+        "tinker_eureka": [
+          "Intelligence per 1% item cooldown reduction decreased from 4 to 3"
+        ],
+        "tinker_march_of_the_machines": [
+          "Mana Cost decreased from 110/130/150/170 to 90/110/130/150",
+          "Damage increased 16/24/32/40 to 17/26/35/44"
+        ],
+        "tinker_keen_teleport": [
+          "Channel time decreased from 4.0/3.5/3.0s to 3s"
+        ],
+        "tinker_warp_grenade": [
+          "Mana Cost decreased from 100 to 80"
+        ],
+        "tinker_rearm": [
+          "Mana Cost decreased from 125/175/225 to 100/150/200"
+        ]
+      },
+      "tiny": {
+        "hero_facet": [
+          "Insurmountable",
+          "Strength to Slow Resistance decreased from 25% to 20%"
+        ],
+        "tiny_avalanche": [
+          "Mana Cost increased from 90/100/110/120 to 95/110/125/140"
+        ],
+        "tiny_toss": [
+          "Mana Cost increased from 110/120/130/140 to 110/125/140/155"
+        ]
+      },
+      "visage": {
+        "general": [
+          "Familiars now preserve their stone form alt-cast mode when re-summoned"
+        ],
+        "visage_stone_form_self_cast": [
+          "Now can be cast on Visage even when silenced or stunned (will not have effect if Familiars are silenced or stunned)",
+          "Now has immediate cast behavior by default on self and Familiars. Can be put in alt-cast mode to become point targeted"
+        ]
+      },
+      "void_spirit": {
+        "hero_facet": [
+          "Sanctuary",
+          "Base Damage Barrier decreased from 40/80/120/160 to 30/60/90/120"
+        ]
+      },
+      "warlock": {
+        "warlock_eldritch_summoning": [
+          "Imp explosion damage decreased from 25/75/125/175/225 to 25/70/115/160/205"
+        ]
+      },
+      "winter_wyvern": {
+        "hero_facet": [
+          "Dragon Sight",
+          "Damage per 10 attack range rescaled from 0.4/0.5/0.66/1.0 to 0.25/0.33/0.5/1.0"
+        ],
+        "winter_wyvern_splinter_blast": [
+          "Damage decreased from 100/180/260/340 to 80/160/240/320"
+        ]
+      },
+      "skeleton_king": {
+        "hero_facet": [
+          "Spectral Blade",
+          "Base Damage decreased from 20/40/60/80 to 15/30/45/60",
+          "Curse Damage decreased from 70% to 50%"
+        ],
+        "skeleton_king_vampiric_spirit": [
+          "Wraith Duration rescaled from 3/4/5/6s to 3.5/4/4.5/5s",
+          "Aghanim's Scepter Wraith Duration rescaled from 4/5/6/7s to 4.5/5/5.5/6s"
         ]
       }
     }
