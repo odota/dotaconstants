@@ -129,6 +129,8 @@ const heroesUrl =
   "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.txt";
 const abilitiesLoc =
   "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/abilities_english.txt";
+const abilitiesLocRussian =
+  "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/abilities_russian.txt";
 const npcAbilitiesUrl =
   "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_abilities.txt";
 const npcUnitsUrl =
@@ -138,7 +140,9 @@ const localizationUrl =
 
 let aghsAbilityValues = {};
 const heroDataUrls = [];
+const heroDataUrlsRussian = [];
 const abilitiesUrls = [abilitiesLoc, npcAbilitiesUrl];
+const abilitiesUrlsRussian = [abilitiesLocRussian, npcAbilitiesUrl];
 
 start();
 async function start() {
@@ -152,6 +156,9 @@ async function start() {
     heroDataUrls.push(
       "http://www.dota2.com/datafeed/herodata?language=english&hero_id=" + key,
     );
+    heroDataUrlsRussian.push(
+      "http://www.dota2.com/datafeed/herodata?language=russian&hero_id=" + key,
+    );
   });
   let names = Object.keys(heroesVdf.DOTAHeroes).filter(
     (name) => !badNames.has(name),
@@ -159,6 +166,11 @@ async function start() {
   names.forEach((name) => {
     // The hero abilities were moved to individual hero files, e.g. https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/heroes/npc_dota_hero_abaddon.txt
     abilitiesUrls.push(
+      "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/heroes/" +
+        name +
+        ".txt",
+    );
+    abilitiesUrlsRussian.push(
       "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/heroes/" +
         name +
         ".txt",
@@ -1009,6 +1021,149 @@ async function start() {
                     false,
                     scripts[ability.name],
                     ability.name,
+                  );
+              }
+            });
+          });
+
+          facet_abilities?.forEach((facet_ability, i) => {
+            facet_ability?.abilities?.forEach((ability) => {
+              let { description } = heroAbilities[name].facets[i];
+              if (description.includes("{s:facet_ability_name}")) {
+                description = description.replace(
+                  "{s:facet_ability_name}",
+                  ability.name_loc,
+                );
+              }
+
+              heroAbilities[name].facets[i].description = replaceSpecialAttribs(
+                description,
+                getSpecialAttrs(scripts[ability.name]),
+                false,
+                scripts[ability.name],
+                ability.name,
+              );
+            });
+          });
+
+          // Insert {s:bonus_} values. Some attributes are tied to seemingly unrelated passives, so we need all abilities
+          heroAbilities[name].facets = heroAbilities[name].facets.map(
+            ({ description, ...rest }) => {
+              const matches = description.matchAll(/{s:bonus_(\w+)}/g);
+              for ([, bonusKey] of matches) {
+                const obj =
+                  allAttribs.find((obj) => bonusKey in obj)?.[bonusKey] ?? {};
+                const facetKey = Object.keys(obj).find(
+                  (k) =>
+                    k.startsWith("special_bonus_facet") &&
+                    k.includes(rest.name),
+                );
+                if (facetKey) {
+                  description = description.replace(
+                    `{s:bonus_${bonusKey}}`,
+                    removeSigns(obj[facetKey]),
+                  );
+                }
+              }
+              return {
+                ...rest,
+                description,
+              };
+            },
+          );
+        });
+
+        return heroAbilities;
+      },
+    },
+    {
+      key: "hero_abilities_russian",
+      url: [
+        ...abilitiesUrlsRussian.slice(2, abilitiesUrlsRussian.length),
+        heroesUrl,
+        ...heroDataUrlsRussian
+      ],
+      transform: (respObj) => {
+        const heroAbils = respObj.splice(0, abilitiesUrlsRussian.length - 2);
+        const [heroObj, ...heroData] = respObj;
+        let scripts = {};
+        // Merge into scripts all the hero abilities (the rest of the array)
+        for (let i = 0; i < heroAbils.length; i++) {
+          const heroAbs = heroAbils[i].DOTAAbilities;
+          scripts = { ...scripts, ...heroAbs };
+        }
+
+        let heroes = heroObj.DOTAHeroes;
+        const heroAbilities = {};
+        Object.keys(heroes).forEach(function (heroKey) {
+          if (
+            heroKey != "Version" &&
+            heroKey != "npc_dota_hero_base" &&
+            heroKey != "npc_dota_hero_target_dummy"
+          ) {
+            const newHero = { abilities: [], talents: [], facets: [] };
+            let talentCounter = 2;
+            Object.keys(heroes[heroKey]).forEach(function (key) {
+              let talentIndexStart =
+                heroes[heroKey]["AbilityTalentStart"] != undefined
+                  ? heroes[heroKey]["AbilityTalentStart"]
+                  : 10;
+              let abilityRegexMatch = key.match(/Ability([0-9]+)/);
+              if (abilityRegexMatch && heroes[heroKey][key] != "") {
+                let abilityNum = parseInt(abilityRegexMatch[1]);
+                if (abilityNum < talentIndexStart) {
+                  newHero["abilities"].push(heroes[heroKey][key]);
+                } else {
+                  // -8 not -10 because going from 0-based index -> 1 and flooring divison result
+                  newHero["talents"].push({
+                    name: heroes[heroKey][key],
+                    level: Math.floor(talentCounter / 2),
+                  });
+                  talentCounter++;
+                }
+              }
+            });
+            heroAbilities[heroKey] = newHero;
+          }
+        });
+
+        const facetColors = [
+          "Red",
+          "Yellow",
+          "Green",
+          "Blue",
+          "Purple",
+          "Gray",
+        ];
+
+        heroData.forEach((hero) => {
+          hero = hero.result.data.heroes[0];
+          const { name, facets, abilities, facet_abilities } = hero;
+          facets?.forEach((facet) => {
+            heroAbilities[name].facets.push({
+              name: facet.name,
+              icon: facet.icon,
+              color: facetColors[facet.color],
+              gradient_id: facet.gradient_id,
+              title: facet.title_loc,
+              description: facet.description_loc || "",
+            });
+          });
+
+          const allAttribs = [];
+
+          abilities?.forEach((ability) => {
+            ability?.facets_loc?.forEach((str, i) => {
+              let specialAttrs = getSpecialAttrs(scripts[ability.name]) || [];
+              allAttribs.push(...specialAttrs);
+              if (heroAbilities[name].facets[i].description.length > 0) {
+                  heroAbilities[name].facets[i].description =
+                replaceSpecialAttribs(
+                  heroAbilities[name].facets[i].description,
+                  specialAttrs,
+                  false,
+                  scripts[ability.name],
+                  ability.name,
                   );
               }
             });
