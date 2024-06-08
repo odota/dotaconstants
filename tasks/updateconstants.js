@@ -1156,15 +1156,15 @@ async function start() {
             ability?.facets_loc?.forEach((str, i) => {
               let specialAttrs = getSpecialAttrs(scripts[ability.name]) || [];
               allAttribs.push(...specialAttrs);
-              if (heroAbilities[name].facets[i].description.length > 0) {
-                  heroAbilities[name].facets[i].description =
-                replaceSpecialAttribs(
-                  heroAbilities[name].facets[i].description,
-                  specialAttrs,
-                  false,
-                  scripts[ability.name],
-                  ability.name,
-                  );
+              if (str > 0) {
+                heroAbilities[name].facets[i].description =
+                  replaceSpecialAttribs(
+                    str,
+                    specialAttrs,
+                    false,
+                    scripts[ability.name],
+                    ability.name,
+                    );
               }
             });
           });
@@ -1178,14 +1178,14 @@ async function start() {
                   ability.name_loc,
                 );
               }
-
+              
               heroAbilities[name].facets[i].description = replaceSpecialAttribs(
                 description,
                 getSpecialAttrs(scripts[ability.name]),
                 false,
                 scripts[ability.name],
                 ability.name,
-              );
+                );
             });
           });
 
@@ -1201,6 +1201,7 @@ async function start() {
                     k.startsWith("special_bonus_facet") &&
                     k.includes(rest.name),
                 );
+                if (rest.name === 'furion_ironwood_treant') console.log(facetKey)
                 if (facetKey) {
                   description = description.replace(
                     `{s:bonus_${bonusKey}}`,
@@ -1214,6 +1215,7 @@ async function start() {
               };
             },
           );
+
         });
 
         return heroAbilities;

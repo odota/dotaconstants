@@ -363,7 +363,7 @@
         "color": "Gray",
         "gradient_id": 1,
         "title": "Vantage Point",
-        "description": "Атакуя с возвышенности, герой наносит на %amage_bonus% больше урона."
+        "description": "Атакуя с возвышенности, герой наносит на 20% больше урона."
       },
       {
         "name": "drow_ranger_sidestep",
@@ -933,7 +933,7 @@
         "color": "Blue",
         "gradient_id": 0,
         "title": "Dynamo",
-        "description": "Герой получает +1 к урону способностями за каждые 20 очков атаки."
+        "description": "Герой получает +1% к урону способностями за каждые 20 очков атаки."
       }
     ]
   },
@@ -1994,7 +1994,7 @@
         "color": "Gray",
         "gradient_id": 3,
         "title": "Event Horizon",
-        "description": "Враги в радиусе 600, удаляющиеся от владельца аспекта, замедляются на 15."
+        "description": "Враги в радиусе 600, удаляющиеся от владельца аспекта, замедляются на 15%."
       },
       {
         "name": "enigma_fragment",
@@ -2065,7 +2065,7 @@
         "color": "Yellow",
         "gradient_id": 2,
         "title": "Translocator",
-        "description": "Когда барьер от способности Self-Defense Matrix полностью расходуется на её владельце, он мгновенно перемещается в случайном направлении впереди себя.\n\nТИП РАЗВЕИВАНИЯ: сильное"
+        "description": "Когда барьер от способности Self-Defense Matrix полностью расходуется на её владельце, он мгновенно перемещается в случайном направлении впереди себя.<br><br>ТИП РАЗВЕИВАНИЯ: сильное"
       }
     ]
   },
@@ -4207,7 +4207,7 @@
         "color": "Red",
         "gradient_id": 0,
         "title": "Gluttony",
-        "description": "Заменяет перезарядку Devour на {s:bonus_AbilityCharges} заряда и улучшает полученные способности на один уровень."
+        "description": "Заменяет перезарядку Devour на 2 заряда и улучшает полученные способности на один уровень."
       },
       {
         "name": "doom_bringer_boost_selling",
@@ -4215,7 +4215,7 @@
         "color": "Yellow",
         "gradient_id": 0,
         "title": "Devil's Bargain",
-        "description": "Позволяет герою продавать предметы за %bonus_item_sellback_percent% от их стоимости, но увеличивает стоимость выкупа на %bonus_buyback_penalty%."
+        "description": "Позволяет герою продавать предметы за %bonus_item_sellback_percent% от их стоимости, но увеличивает стоимость выкупа на %bonus_buyback_penalty%%."
       }
     ]
   },
@@ -4340,7 +4340,7 @@
         "color": "Blue",
         "gradient_id": 0,
         "title": "Bear Down",
-        "description": "Отрицательные эффекты, накладываемые героем, действуют на %ebuff_amp% дольше."
+        "description": "Отрицательные эффекты, накладываемые героем, действуют на 20% дольше."
       }
     ]
   },
@@ -4597,7 +4597,7 @@
         "color": "Purple",
         "gradient_id": 0,
         "title": "Agnostic",
-        "description": "Каждый уровень сфер пассивно дарует герою периодический урон , скорость атаки и урон от атак ."
+        "description": "Каждый уровень сфер пассивно дарует герою <font color='#7998b5'>периодический урон</font>, <font color='#d671a9'>скорость атаки</font> и <font color='#cabe68'>урон от атак</font>."
       },
       {
         "name": "invoker_elitist",
@@ -4605,7 +4605,7 @@
         "color": "Gray",
         "gradient_id": 0,
         "title": "Elitist",
-        "description": "Активные сферы даруют герою вампиризм , скорость передвижения и доп. урон от заклинаний ."
+        "description": "Активные сферы даруют герою <font color='#7998b5'>вампиризм</font>, <font color='#d671a9'>скорость передвижения</font> и <font color='#cabe68'>доп. урон от заклинаний</font>."
       }
     ]
   },
@@ -6734,7 +6734,7 @@
         "color": "Red",
         "gradient_id": 2,
         "title": "Dying Light",
-        "description": "Герой каждую секунду наносит врагам в радиусе 200 магический урон в размере %amage_pct% от недостающего здоровья."
+        "description": "Герой каждую секунду наносит врагам в радиусе 450 магический урон в размере 4.5% от недостающего здоровья."
       },
       {
         "name": "phoenix_hotspot",
@@ -6796,7 +6796,7 @@
         "color": "Red",
         "gradient_id": 2,
         "title": "Clairvoyant Curse",
-        "description": "Урон от заклинаний этого героя увеличивается на 0.75 с каждым его уровнем."
+        "description": "Урон от заклинаний этого героя увеличивается на 0.75% с каждым его уровнем."
       },
       {
         "name": "oracle_facet_heal",
@@ -6804,7 +6804,7 @@
         "color": "Green",
         "gradient_id": 1,
         "title": "Clairvoyant Cure",
-        "description": "Лечение от заклинаний этого героя увеличивается на 1 с каждым его уровнем."
+        "description": "Лечение от заклинаний этого героя увеличивается на 1% с каждым его уровнем."
       }
     ]
   },
@@ -7124,7 +7124,7 @@
         "color": "Green",
         "gradient_id": 4,
         "title": "Simian Stride",
-        "description": "Tree Dance has no cooldown while Monkey King is above 90% health."
+        "description": "Tree Dance не имеет перезарядки, пока у героя больше 90% здоровья."
       }
     ]
   },

@@ -20274,12 +20274,6 @@
         "generated": true
       },
       {
-        "key": "shard_ward_duration",
-        "header": "SHARD WARD DURATION:",
-        "value": "6",
-        "generated": true
-      },
-      {
         "key": "shard_ward_spawn_distance",
         "header": "SHARD WARD SPAWN DISTANCE:",
         "value": "100",
@@ -28321,12 +28315,6 @@
         "value": "50%"
       },
       {
-        "key": "scepter_fade_duration",
-        "header": "SCEPTER FADE DURATION:",
-        "value": "0.5",
-        "generated": true
-      },
-      {
         "key": "break_on_attack",
         "header": "BREAK ON ATTACK:",
         "value": "1",
@@ -28360,7 +28348,12 @@
       {
         "key": "abilitycastrange",
         "header": "CAST RANGE:",
-        "value": "500",
+        "value": [
+          "625",
+          "550",
+          "475",
+          "400"
+        ],
         "generated": true
       },
       {
@@ -41071,7 +41064,7 @@
     "behavior": "No Target",
     "bkbpierce": "No",
     "dispellable": "No",
-    "desc": "Barathrum distorts the fabric of planar space, increasing his own magic resistance and redirecting the first targeted enemy hero spell in a radius towards him.",
+    "desc": "Barathrum distorts the fabric of planar space, increasing his own magic resistance and redirecting enemy hero spells in a radius towards him.",
     "attrib": [
       {
         "key": "radius",
@@ -53411,7 +53404,7 @@
     ],
     "bkbpierce": "No",
     "dispellable": "No",
-    "desc": "Orders the Familiar closest to Visage ot cast Stone Form in its current location, turning into stone and smashing into the ground, stunning and damaging all targets in the area. The Familiar becomes invulnerable, and will regain its health very rapidly. After 6 seconds, the Familiar will automatically leave Stone Form.\n\n Can be alt-cast to order the closest Familiar to the target location to move there and cast Stone Form.",
+    "desc": "Orders the Familiar closest to Visage to cast Stone Form in its current location, turning into stone and smashing into the ground, stunning and damaging all targets in the area. The Familiar becomes invulnerable, and will regain its health very rapidly. After 6 seconds, the Familiar will automatically leave Stone Form.\n\n Can be alt-cast to order the closest Familiar to the target location to move there and cast Stone Form.",
     "attrib": [
       {
         "key": "stun_radius",
@@ -60602,10 +60595,10 @@
         "key": "tooltip_attack_range",
         "header": "ATTACK RANGE:",
         "value": [
+          "450",
           "490",
-          "510",
           "530",
-          "550"
+          "570"
         ]
       },
       {
@@ -69848,6 +69841,17 @@
         ]
       },
       {
+        "key": "abilitycastrange",
+        "header": "CAST RANGE:",
+        "value": [
+          "450",
+          "550",
+          "650",
+          "750"
+        ],
+        "generated": true
+      },
+      {
         "key": "landing_radius",
         "header": "LANDING RADIUS:",
         "value": "275",
@@ -69954,17 +69958,6 @@
         "key": "scepter_armor",
         "header": "SCEPTER ARMOR:",
         "value": "15",
-        "generated": true
-      },
-      {
-        "key": "abilitycastrange",
-        "header": "CAST RANGE:",
-        "value": [
-          "450",
-          "550",
-          "650",
-          "750"
-        ],
         "generated": true
       },
       {
