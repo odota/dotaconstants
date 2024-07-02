@@ -493,6 +493,7 @@ async function start() {
               );
             }
 
+            ability.is_innate = scripts[key].Innate === "1";
             ability.behavior =
               formatBehavior(scripts[key].AbilityBehavior) || undefined;
             ability.dmg_type =

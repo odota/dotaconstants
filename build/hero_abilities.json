@@ -49,7 +49,7 @@
         "color": "Purple",
         "gradient_id": 1,
         "title": "Magebane's Mirror",
-        "description": "Counterspell Ally reflects spells back to their caster."
+        "description": "Counterspell Ally reflects amplified versions of spells back to their caster."
       },
       {
         "name": "antimage_mana_thirst",
@@ -620,7 +620,7 @@
         "color": "Red",
         "gradient_id": 0,
         "title": "Shadowmire",
-        "description": "Applies a stacking 10% movement speed and 10 attack speed debuff on enemies hit."
+        "description": "Applies a stacking 5% movement speed and 5 attack speed debuff on enemies hit."
       }
     ]
   },
@@ -995,7 +995,7 @@
         "color": "Yellow",
         "gradient_id": 1,
         "title": "Dust Devil",
-        "description": "Sand Storm follows Sand King at a rate of 70% of his movement speed and is still active at a distance of up to 2500 units away from Sand King. Sand Storm moves to the location of Burrowstrike when cast."
+        "description": "Sand Storm follows Sand King at a rate of 70% of his movement speed and is still active at a distance of up to 2500 units away from Sand King."
       }
     ]
   },
@@ -1078,7 +1078,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_attack_speed_15",
+        "name": "special_bonus_attack_speed_20",
         "level": 1
       },
       {
@@ -1141,7 +1141,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_strength_10",
+        "name": "special_bonus_strength_8",
         "level": 1
       },
       {
@@ -1238,7 +1238,7 @@
         "color": "Purple",
         "gradient_id": 2,
         "title": "Avenging Missile",
-        "description": "Magic Missile deals +0.75 bonus damage for every creep the enemy has killed."
+        "description": "Magic Missile deals 0.75 bonus damage for every creep the enemy has killed."
       },
       {
         "name": "vvengefulspirit_melee",
@@ -1329,7 +1329,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_hp_250",
+        "name": "special_bonus_hp_200",
         "level": 1
       },
       {
@@ -1640,7 +1640,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_shadow_shaman_hex_damage_amp",
+        "name": "special_bonus_mp_regen_175",
         "level": 1
       },
       {
@@ -1706,7 +1706,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_hp_325",
+        "name": "special_bonus_hp_275",
         "level": 2
       },
       {
@@ -1870,7 +1870,7 @@
         "color": "Red",
         "gradient_id": 2,
         "title": "Voodoo Festeration",
-        "description": "Voodoo Restoration deals damage to enemies. No longer heals."
+        "description": "Voodoo Restoration deals damage to enemies and only heals Witch Doctor."
       },
       {
         "name": "witch_doctor_cleft_death",
@@ -1940,7 +1940,7 @@
         "color": "Purple",
         "gradient_id": 2,
         "title": "Exterminator",
-        "description": "Tricks of the Trade has 3x Agility Bonus when attacking non-hero units."
+        "description": "Tricks of the Trade has 4x Agility Bonus when attacking non-hero units."
       }
     ]
   },
@@ -2030,7 +2030,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_tinker_4",
+        "name": "special_bonus_unique_tinker",
         "level": 2
       },
       {
@@ -2042,7 +2042,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_tinker",
+        "name": "special_bonus_unique_tinker_4",
         "level": 4
       },
       {
@@ -2065,7 +2065,7 @@
         "color": "Yellow",
         "gradient_id": 2,
         "title": "Translocator",
-        "description": "When a Self-Defense Matrix barrier on Tinker is fully absorbed, he blinks in a random forward direction.\n\nDISPEL TYPE: Strong Dispel"
+        "description": "When a Self-Defense Matrix barrier on Tinker is fully absorbed, he blinks in a random forward direction.\n\nDISPEL TYPE: Basic Dispel"
       }
     ]
   },
@@ -2189,7 +2189,7 @@
         "color": "Green",
         "gradient_id": 3,
         "title": "Rapid Decay",
-        "description": "Necrophos gains movement speed equal to 25% of movement speed lost by enemies."
+        "description": "Necrophos gains movement speed equal to 40% of movement speed lost by enemies."
       }
     ]
   },
@@ -2438,7 +2438,7 @@
         "color": "Yellow",
         "gradient_id": 0,
         "title": "Plague Carrier",
-        "description": "Plague Wards can be attached to allies."
+        "description": "Plague Wards can be attached to allies and have 3 charges. Attached wards give only 20% of their gold bounty when killed."
       }
     ]
   },
@@ -3123,7 +3123,7 @@
         "color": "Gray",
         "gradient_id": 2,
         "title": "Hookup",
-        "description": "When hitting an ally, Hookshot has a larger impact radius and partially refunds its cooldown."
+        "description": "When hitting an ally, Hookshot has a larger impact radius, grants Clockwerk and the hit allies a physical damage barrier, equal to the hookshot damage, and partially refunds its cooldown."
       },
       {
         "name": "rattletrap_expanded_armature",
@@ -3310,7 +3310,7 @@
         "color": "Yellow",
         "gradient_id": 3,
         "title": "Corpse Eater",
-        "description": "Lifestealer gains 2 HP whenever he kills a unit."
+        "description": "Lifestealer gains 1 HP whenever he kills a creep, and 5 whenever he kills a hero."
       },
       {
         "name": "life_stealer_rage_dispell",
@@ -3497,7 +3497,7 @@
         "color": "Gray",
         "gradient_id": 3,
         "title": "Omnipresent",
-        "description": "Omniknight's damage to a target is increased by 1% for every 0.5s they spend affected by the aura."
+        "description": "Omniknight's damage to a target is increased by 1% for every 0.3s they spend affected by the aura."
       },
       {
         "name": "omniknight_dmgheals",
@@ -3836,7 +3836,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_strength_8",
+        "name": "special_bonus_strength_7",
         "level": 1
       },
       {
@@ -4109,7 +4109,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_spectre_desolate_radius",
+        "name": "special_bonus_hp_regen_4",
         "level": 1
       },
       {
@@ -4144,7 +4144,7 @@
         "color": "Gray",
         "gradient_id": 0,
         "title": "Forsaken",
-        "description": "If an enemy has only non-hero allies nearby, it will take 50% of Desolate's damage."
+        "description": "If an enemy has only non-hero allies nearby, it will take 60% of Desolate's damage."
       },
       {
         "name": "spectre_twist_the_knife",
@@ -4215,7 +4215,7 @@
         "color": "Yellow",
         "gradient_id": 0,
         "title": "Devil's Bargain",
-        "description": "Doom can sell items for 90% of their value, but his buyback costs are increased by 15%."
+        "description": "Doom can sell items for %bonus_item_sellback_percent% of their value, but his buyback costs are increased by %bonus_buyback_penalty%%."
       }
     ]
   },
@@ -4278,7 +4278,7 @@
         "color": "Blue",
         "gradient_id": 0,
         "title": "Exposure",
-        "description": "Cold Feet applies its Death Rime damage in an area around the target."
+        "description": "Cold Feet becomes an AoE point targeted ability, with the radius depending on the current level of Ice Blast."
       }
     ]
   },
@@ -4402,7 +4402,7 @@
         "color": "Blue",
         "gradient_id": 2,
         "title": "Imbalanced",
-        "description": "Enemy targets hit by Nether Strike will be moved further by allied forced movement effects."
+        "description": "Enemy targets hit by Nether Strike will be moved further by allied knockback effects."
       }
     ]
   },
@@ -4947,7 +4947,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_lone_druid_8",
+        "name": "special_bonus_unique_lone_druid_savage_roar_aoe",
         "level": 3
       },
       {
@@ -4955,7 +4955,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_lone_druid_savage_roar_aoe",
+        "name": "special_bonus_unique_lone_druid_8",
         "level": 4
       },
       {
@@ -4978,7 +4978,7 @@
         "color": "Yellow",
         "gradient_id": 1,
         "title": "Unbearable",
-        "description": "Lone Druid morphs his Spirit Bear into an enraged form that gains bonus armor, a reduced base attack time, and a 75% cooldown on Entangling Claws."
+        "description": "Lone Druid morphs his Spirit Bear into an enraged form that gains bonus armor, attack speed, demolish damage, and a 75% cooldown on Entangling Claws."
       }
     ]
   },
@@ -5005,7 +5005,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_strength_12",
+        "name": "special_bonus_strength_10",
         "level": 2
       },
       {
@@ -5096,7 +5096,7 @@
         "color": "Blue",
         "gradient_id": 2,
         "title": "More Meepo",
-        "description": "Can now be upgraded at level 3 and every 7 levels afterwards to a max level of 4."
+        "description": "Can now be upgraded at level 3 and every 7 levels afterwards to a max level of 4. Duplicate Meepos receive 85% of the main Meepo's bonus attributes."
       },
       {
         "name": "meepo_pack_rat",
@@ -5222,7 +5222,7 @@
         "color": "Red",
         "gradient_id": 0,
         "title": "Fat Chance",
-        "description": "Multicast chance is increased by 0.05% of Ogre Magi's Strength."
+        "description": "Multicast chance is increased by 0.06% of Ogre Magi's Strength."
       },
       {
         "name": "ogre_magi_learning_curve",
@@ -5484,7 +5484,7 @@
         "color": "Red",
         "gradient_id": 2,
         "title": "Scuttle",
-        "description": "For the first 10s of Vendetta, Nyx is hasted and has unobstructed pathing."
+        "description": "For the first 15s of Vendetta, Nyx is hasted and has unobstructed pathing."
       }
     ]
   },
@@ -5604,7 +5604,7 @@
         "icon": "slow",
         "color": "Yellow",
         "gradient_id": 1,
-        "title": "Solar Bind",
+        "title": "",
         "description": "Grants the Solar Bind ability while active."
       },
       {
@@ -5864,7 +5864,7 @@
         "color": "Blue",
         "gradient_id": 1,
         "title": "Mana Pact",
-        "description": "Mana Shield can be activated, draining 4% of max mana per second to gain 3% attack speed bonus per second, up to 30%. Maximum effect reached after 10s. Buff lasts 15s and Cooldown is 35s."
+        "description": "Mana Shield can be activated, draining 3% of max mana per second to gain 3.5% attack speed bonus per second, up to 35%. Maximum effect reached after 10s. Buff lasts 15s and Cooldown is 35s."
       }
     ]
   },
@@ -5950,7 +5950,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_strength_15",
+        "name": "special_bonus_strength_12",
         "level": 2
       },
       {
@@ -6734,7 +6734,7 @@
         "color": "Red",
         "gradient_id": 2,
         "title": "Dying Light",
-        "description": "Phoenix deals 6% of his missing health as magic damage to all enemies in a 450 radius every second."
+        "description": "Phoenix deals 4.5% of his missing health as magic damage to all enemies in a 450 radius every second."
       },
       {
         "name": "phoenix_hotspot",
@@ -6796,7 +6796,7 @@
         "color": "Red",
         "gradient_id": 2,
         "title": "Clairvoyant Curse",
-        "description": "Spell amplification increased by 0.5% per hero level."
+        "description": "Spell amplification increased by 0.75% per hero level."
       },
       {
         "name": "oracle_facet_heal",
@@ -6804,7 +6804,7 @@
         "color": "Green",
         "gradient_id": 1,
         "title": "Clairvoyant Cure",
-        "description": "Heal amplification increased by 1% per hero level."
+        "description": "Heal amplification increased by 0.75% per hero level."
       }
     ]
   },
@@ -7124,7 +7124,7 @@
         "color": "Green",
         "gradient_id": 4,
         "title": "Simian Stride",
-        "description": "Tree Dance has no cooldown while Monkey King is at full health."
+        "description": "Tree Dance has no cooldown while Monkey King is above 90% health."
       }
     ]
   },
@@ -7180,7 +7180,7 @@
         "color": "Red",
         "gradient_id": 1,
         "title": "Double Jump",
-        "description": "Pangolier can double jump with Shield Crash dealing more damage and gaining more barrier."
+        "description": "Pangolier can cast Shield Crash a second time mid-flight, dealing more damage and gaining more barrier."
       },
       {
         "name": "pangolier_thunderbolt",
@@ -7242,7 +7242,7 @@
         "color": "Purple",
         "gradient_id": 1,
         "title": "Throwing Shade",
-        "description": "While in Shadow Realm, Dark Willow emits a 600 radius aura that increases damage that she deals to enemies in its area of effect by up to 25%. Damage scales based on how long she remains under the effects of Shadow Realm."
+        "description": "While in Shadow Realm, Dark Willow emits a 600 radius aura that increases damage that she deals to enemies in its area of effect by up to 30%. Damage scales based on how long she remains under the effects of Shadow Realm."
       },
       {
         "name": "dark_willow_thorny_thicket",
@@ -7250,7 +7250,7 @@
         "color": "Green",
         "gradient_id": 4,
         "title": "Thorny Thicket",
-        "description": "Creates extra brambles. These brambles last 7.5s."
+        "description": "Creates extra brambles. These brambles last 4s."
       }
     ]
   },
@@ -7367,7 +7367,7 @@
         "color": "Red",
         "gradient_id": 2,
         "title": "Victory Feast",
-        "description": "If Mars is in the Arena when an enemy dies inside of it, he restores 20% of his max health and mana and gets a 20% attack damage buff for 15s."
+        "description": "If Mars is in the Arena when an enemy dies inside of it, he restores 30% of his max health and mana and gets a 20% attack damage buff for 15s."
       },
       {
         "name": "mars_arena",
