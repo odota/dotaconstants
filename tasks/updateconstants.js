@@ -493,6 +493,8 @@ async function start() {
               );
             }
 
+            ability.is_innate = scripts[key].Innate === "1";
+
             ability.behavior =
               formatBehavior(scripts[key].AbilityBehavior) || undefined;
             ability.dmg_type =
@@ -996,36 +998,6 @@ async function start() {
           });
 
           const allAttribs = [];
-
-          heroAbilities[name].abilities = abilities.map((ability) => {
-            let specialAttrs = getSpecialAttrs(scripts[ability.name]) || [];
-            allAttribs.push(...specialAttrs);
-            return {
-              id: ability.id,
-              key: ability.name,
-              name: ability.name_loc,
-              description: ability.desc_loc || "",
-              ability_is_innate: ability.ability_is_innate || false,
-            };
-          });
-
-          abilities?.forEach((ability, i) => {
-            if (
-              Array.isArray(ability?.special_values) &&
-              ability.special_values.length > 0
-            ) {
-              heroAbilities[name].abilities[i].description =
-                replaceSpecialAttribs(
-                  heroAbilities[name].abilities[i].description,
-                  ability.special_values.map((val) => ({
-                    [val.name]: val.values_float?.[0],
-                  })),
-                  false,
-                  scripts[ability.name],
-                  ability.name
-                );
-            }
-          });
 
           abilities?.forEach((ability) => {
             ability?.facets_loc?.forEach((str, i) => {
