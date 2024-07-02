@@ -150,18 +150,18 @@ async function start() {
     .sort((a, b) => Number(a) - Number(b));
   ids.forEach((key) => {
     heroDataUrls.push(
-      "http://www.dota2.com/datafeed/herodata?language=english&hero_id=" + key
+      "http://www.dota2.com/datafeed/herodata?language=english&hero_id=" + key,
     );
   });
   let names = Object.keys(heroesVdf.DOTAHeroes).filter(
-    (name) => !badNames.has(name)
+    (name) => !badNames.has(name),
   );
   names.forEach((name) => {
     // The hero abilities were moved to individual hero files, e.g. https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/heroes/npc_dota_hero_abaddon.txt
     abilitiesUrls.push(
       "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/heroes/" +
         name +
-        ".txt"
+        ".txt",
     );
   });
 
@@ -209,13 +209,13 @@ async function start() {
                 specialAttrs,
                 true,
                 scripts[key],
-                key
+                key,
               ),
             };
             item.id = Number(idLookup[key]);
             item.img = `/apps/dota2/images/dota_react/items/${key.replace(
               /^item_/,
-              ""
+              "",
             )}.png?t=${1593393829403}`;
             if (key.includes("item_recipe")) {
               item.img = `/apps/dota2/images/dota_react/items/recipe.png?t=${1593393829403}`;
@@ -251,8 +251,8 @@ async function start() {
                   specialAttrs,
                   false,
                   scripts[key],
-                  key
-                )
+                  key,
+                ),
               );
             }
 
@@ -274,9 +274,9 @@ async function start() {
                             (strings[
                               `dota_ability_variable_${variable?.replace(
                                 "$",
-                                ""
+                                "",
                               )}`
-                            ] || "")
+                            ] || ""),
                         );
                       }
                       if (!/[a-z]/.test(string)) {
@@ -285,7 +285,7 @@ async function start() {
                           /^(%)?(.+)/,
                           (str, pct = "", rest) => {
                             return `${rest} {value}${pct}`;
-                          }
+                          },
                         );
                       }
                     }
@@ -294,7 +294,7 @@ async function start() {
                       display: display?.replace(/<[^>]*>/g, ""),
                       value: (val.value ?? val).split(" ").join(" / "),
                     };
-                  }
+                  },
                 )
               : [];
 
@@ -318,7 +318,7 @@ async function start() {
         // Load recipes
         Object.keys(scripts)
           .filter(
-            (key) => scripts[key].ItemRequirements && scripts[key].ItemResult
+            (key) => scripts[key].ItemRequirements && scripts[key].ItemResult,
           )
           .forEach((key) => {
             result_key = scripts[key].ItemResult.replace(/^item_/, "");
@@ -478,7 +478,7 @@ async function start() {
               strings[`DOTA_Tooltip_ability_${key}`] ??
                 strings[`DOTA_Tooltip_Ability_${key}`],
               specialAttr,
-              key
+              key,
             );
 
             // Check for unreplaced `s:bonus_<talent>`
@@ -489,12 +489,11 @@ async function start() {
               ability.dname = replaceBonusSValues(
                 key,
                 ability.dname,
-                scripts[scripts[key].ad_linked_abilities].AbilityValues
+                scripts[scripts[key].ad_linked_abilities].AbilityValues,
               );
             }
 
             ability.is_innate = scripts[key].Innate === "1";
-
             ability.behavior =
               formatBehavior(scripts[key].AbilityBehavior) || undefined;
             ability.dmg_type =
@@ -513,7 +512,7 @@ async function start() {
               specialAttr,
               false,
               scripts[key],
-              key
+              key,
             );
             ability.dmg =
               scripts[key].AbilityDamage &&
@@ -523,10 +522,10 @@ async function start() {
             if (specialAttr) {
               Object.entries(remapAttributes).forEach(([oldAttr, newAttr]) => {
                 const oldAttrIdx = specialAttr.findIndex(
-                  (attr) => Object.keys(attr)[0] === oldAttr
+                  (attr) => Object.keys(attr)[0] === oldAttr,
                 );
                 const newAttrIdx = specialAttr.findIndex(
-                  (attr) => Object.keys(attr)[0] === newAttr
+                  (attr) => Object.keys(attr)[0] === newAttr,
                 );
                 if (oldAttrIdx !== -1 && newAttrIdx !== -1) {
                   specialAttr.splice(oldAttrIdx, 1);
@@ -537,7 +536,7 @@ async function start() {
             ability.attrib = formatAttrib(
               specialAttr,
               strings,
-              `DOTA_Tooltip_ability_${key}_`
+              `DOTA_Tooltip_ability_${key}_`,
             );
 
             ability.lore = strings[`DOTA_Tooltip_ability_${key}_Lore`];
@@ -615,7 +614,7 @@ async function start() {
                           aghsObj[bonusKey] = rawBonus;
                           aghsObj[`${key}`] = calculateValueFromBonus(
                             val["value"],
-                            val[bonus]
+                            val[bonus],
                           );
                         }
                       }
@@ -629,12 +628,12 @@ async function start() {
                           .find(
                             (k) =>
                               k.indexOf("scepter") !== -1 ||
-                              k.indexOf("shard") !== -1
+                              k.indexOf("shard") !== -1,
                           );
                         if (bonus) {
                           aghsObj[key] = calculateValueFromBonus(
                             val["value"] ?? val[key],
-                            val[bonus]
+                            val[bonus],
                           );
                         } else {
                           aghsObj[key] = val["value"] ?? val[key];
@@ -873,7 +872,7 @@ async function start() {
       transform: (respObj) => {
         let heroes = [];
         let keys = Object.keys(respObj[1].DOTAHeroes).filter(
-          (name) => !badNames.has(name)
+          (name) => !badNames.has(name),
         );
         keys.forEach((name) => {
           let h = formatVpkHero(name, respObj[1]);
@@ -899,7 +898,7 @@ async function start() {
       ],
       transform: (respObj) => {
         let keys = Object.keys(respObj[1].DOTAHeroes).filter(
-          (name) => !badNames.has(name)
+          (name) => !badNames.has(name),
         );
         let sortedHeroes = [];
         keys.forEach((name) => {
@@ -1010,7 +1009,7 @@ async function start() {
                     specialAttrs,
                     false,
                     scripts[ability.name],
-                    ability.name
+                    ability.name,
                   );
               }
             });
@@ -1022,7 +1021,7 @@ async function start() {
               if (description.includes("{s:facet_ability_name}")) {
                 description = description.replace(
                   "{s:facet_ability_name}",
-                  ability.name_loc
+                  ability.name_loc,
                 );
               }
 
@@ -1031,7 +1030,7 @@ async function start() {
                 getSpecialAttrs(scripts[ability.name]),
                 false,
                 scripts[ability.name],
-                ability.name
+                ability.name,
               );
             });
           });
@@ -1045,12 +1044,13 @@ async function start() {
                   allAttribs.find((obj) => bonusKey in obj)?.[bonusKey] ?? {};
                 const facetKey = Object.keys(obj).find(
                   (k) =>
-                    k.startsWith("special_bonus_facet") && k.includes(rest.name)
+                    k.startsWith("special_bonus_facet") &&
+                    k.includes(rest.name),
                 );
                 if (facetKey) {
                   description = description.replace(
                     `{s:bonus_${bonusKey}}`,
-                    removeSigns(obj[facetKey])
+                    removeSigns(obj[facetKey]),
                   );
                 }
               }
@@ -1058,7 +1058,7 @@ async function start() {
                 ...rest,
                 description,
               };
-            }
+            },
           );
         });
 
@@ -1231,7 +1231,7 @@ async function start() {
                 if (!result[patch].heroes[heroName].talents)
                   result[patch].heroes[heroName].talents = [];
                 result[patch].heroes[heroName].talents.push(
-                  data[key].replace("Talent:", "").trim()
+                  data[key].replace("Talent:", "").trim(),
                 );
               } else {
                 // DOTA_Patch_7_32_shredder_shredder_chakram_2_2
@@ -1245,7 +1245,7 @@ async function start() {
                 if (!result[patch].heroes[heroName][abilityName])
                   result[patch].heroes[heroName][abilityName] = [];
                 result[patch].heroes[heroName][abilityName].push(
-                  data[key].trim()
+                  data[key].trim(),
                 );
               }
             } else {
@@ -1340,14 +1340,14 @@ async function start() {
               const values = aghsAbilityValues[scepterName];
               aghs_element.scepter_desc = aghs_element.scepter_desc.replace(
                 /%([^% ]*)%/g,
-                findAghsAbilityValue(values)
+                findAghsAbilityValue(values),
               );
             }
             if (shardName) {
               const values = aghsAbilityValues[shardName];
               aghs_element.shard_desc = aghs_element.shard_desc.replace(
                 /%([^% ]*)%/g,
-                findAghsAbilityValue(values)
+                findAghsAbilityValue(values),
               );
             }
             // clean up <br> and double % signs
@@ -1366,7 +1366,7 @@ async function start() {
                 "[" +
                 aghs_element.hero_id +
                 "]" +
-                ": Didn't find a scepter..."
+                ": Didn't find a scepter...",
             );
           }
           if (!aghs_element.has_scepter) {
@@ -1375,7 +1375,7 @@ async function start() {
                 "[" +
                 aghs_element.hero_id +
                 "]" +
-                ": Didn't find a shard..."
+                ": Didn't find a shard...",
             );
           }
           // push the current hero"s element into the array
@@ -1398,7 +1398,7 @@ async function start() {
         console.log(url);
         const resp = await axios.get(url, { responseType: "text" });
         return parseJsonOrVdf(resp.data, url);
-      })
+      }),
     );
     let final = resps;
     if (s.transform) {
@@ -1406,7 +1406,7 @@ async function start() {
     }
     fs.writeFileSync(
       "./build/" + s.key + ".json",
-      JSON.stringify(final, null, 2)
+      JSON.stringify(final, null, 2),
     );
   }
   // Copy manual json files to build
@@ -1414,7 +1414,7 @@ async function start() {
   jsons.forEach((filename) => {
     fs.writeFileSync(
       "./build/" + filename,
-      fs.readFileSync("./json/" + filename, "utf-8")
+      fs.readFileSync("./json/" + filename, "utf-8"),
     );
   });
   // Reference built files in index.js
@@ -1427,7 +1427,7 @@ ${cfs
     (filename) =>
       `${filename.split(".")[0]}: require(__dirname + "/build/${
         filename.split(".")[0]
-      }.json")`
+      }.json")`,
   )
   .join(",\n")}
 };`;
@@ -1453,7 +1453,7 @@ function parseJsonOrVdf(text, url) {
       // Fix kotl file
       fixed = fixed.replace(
         '"channel_vision_radius"	{',
-        '"channel_vision_radius"\n{'
+        '"channel_vision_radius"\n{',
       );
       fixed = fixed.replace(/\t\t"ItemRequirements"\r\n\t\t""/g, "");
       fixed = fixed.replace(/\t\t\t"has_flying_movement"\t\r\n\t\t\t""/g, "");
@@ -1551,7 +1551,7 @@ function expandItemGroup(key, items) {
       base,
       items[key].components.map(function (c) {
         return expandItemGroup(c, items);
-      })
+      }),
     );
   } else {
     return base;
@@ -1582,11 +1582,11 @@ function formatAttrib(attributes, strings, strings_prefix) {
     attributes = Object.values(attributes);
   return (attributes || [])
     .filter(
-      (attr) => !excludeAttributes.has(Object.keys(attr)[0].toLowerCase())
+      (attr) => !excludeAttributes.has(Object.keys(attr)[0].toLowerCase()),
     )
     .map((attr) => {
       let key = Object.keys(attr).find(
-        (key) => `${strings_prefix}${key.toLowerCase()}` in strings
+        (key) => `${strings_prefix}${key.toLowerCase()}` in strings,
       );
       if (!key) {
         for (item in attr) {
@@ -1663,7 +1663,7 @@ function replaceSValues(template, attribs, key) {
         if (isObj(val)) {
           values[key] = val["value"];
           const specialBonusKey = Object.keys(val).find((key) =>
-            key.startsWith("special_bonus_")
+            key.startsWith("special_bonus_"),
           );
           if (specialBonusKey) {
             const bonusKey = `bonus_${key}`;
@@ -1725,7 +1725,7 @@ function replaceSpecialAttribs(
   attribs,
   isItem = false,
   allData = {},
-  key // For error tracing
+  key, // For error tracing
 ) {
   if (!template) {
     return template;
@@ -1790,7 +1790,7 @@ function replaceSpecialAttribs(
           const newName = name.replace("bonus_", "");
           const obj = attribs.find((obj) => newName in obj)?.[newName] ?? {};
           const facetKey = Object.keys(obj).find((k) =>
-            k.startsWith("special_bonus_facet")
+            k.startsWith("special_bonus_facet"),
           );
           if (facetKey) {
             return obj[facetKey].replace("=", "");
@@ -1799,8 +1799,8 @@ function replaceSpecialAttribs(
 
         console.log(
           `cant find attribute %${name}% in %${key}% with ${attribs.map(
-            (o) => Object.keys(o)[0]
-          )}`
+            (o) => Object.keys(o)[0],
+          )}`,
         );
         return `%${name}%`;
       }
@@ -1814,7 +1814,7 @@ function replaceSpecialAttribs(
       }
 
       const facetKey = Object.keys(attr[name]).find((k) =>
-        k.startsWith("special_bonus_facet")
+        k.startsWith("special_bonus_facet"),
       );
 
       if (facetKey) {
@@ -1855,7 +1855,7 @@ function replaceSpecialAttribs(
     const desc = cleanupArray(template.split("\\n"));
     desc.forEach((line) => {
       const ability = line.match(
-        /<h1>(Use|Active|Passive|Toggle|Upgrade): (.+)<\/h1>([\S\s]+)/
+        /<h1>(Use|Active|Passive|Toggle|Upgrade): (.+)<\/h1>([\S\s]+)/,
       );
       if (ability) {
         const [str, type, name, description] = ability;
@@ -1888,7 +1888,7 @@ function formatBehavior(string) {
     .filter(
       (item) =>
         !ignoreStrings.has(item.trim()) &&
-        extraStrings.hasOwnProperty(item.trim())
+        extraStrings.hasOwnProperty(item.trim()),
     )
     .map((item) => {
       return extraStrings[item.trim()];
@@ -1931,7 +1931,7 @@ function formatVpkHero(key, vpkr) {
 
   h.base_health = Number(vpkrh.StatusHealth || baseHero.StatusHealth);
   h.base_health_regen = Number(
-    vpkrh.StatusHealthRegen || baseHero.StatusHealthRegen
+    vpkrh.StatusHealthRegen || baseHero.StatusHealthRegen,
   );
   h.base_mana = Number(vpkrh.StatusMana || baseHero.StatusMana);
   h.base_mana_regen = Number(vpkrh.StatusManaRegen || baseHero.StatusManaRegen);
@@ -1951,14 +1951,14 @@ function formatVpkHero(key, vpkr) {
 
   h.attack_range = Number(vpkrh.AttackRange);
   h.projectile_speed = Number(
-    vpkrh.ProjectileSpeed || baseHero.ProjectileSpeed
+    vpkrh.ProjectileSpeed || baseHero.ProjectileSpeed,
   );
   h.attack_rate = Number(vpkrh.AttackRate || baseHero.AttackRate);
   h.base_attack_time = Number(
-    vpkrh.BaseAttackSpeed || baseHero.BaseAttackSpeed
+    vpkrh.BaseAttackSpeed || baseHero.BaseAttackSpeed,
   );
   h.attack_point = Number(
-    vpkrh.AttackAnimationPoint || baseHero.AttackAnimationPoint
+    vpkrh.AttackAnimationPoint || baseHero.AttackAnimationPoint,
   );
 
   h.move_speed = Number(vpkrh.MovementSpeed);
@@ -1968,10 +1968,10 @@ function formatVpkHero(key, vpkr) {
   h.legs = Number(vpkrh.Adjectives.Legs || baseHero.Adjectives.Legs);
 
   h.day_vision = Number(
-    vpkrh.VisionDaytimeRange || baseHero.VisionDaytimeRange
+    vpkrh.VisionDaytimeRange || baseHero.VisionDaytimeRange,
   );
   h.night_vision = Number(
-    vpkrh.VisionNighttimeRange || baseHero.VisionNighttimeRange
+    vpkrh.VisionNighttimeRange || baseHero.VisionNighttimeRange,
   );
 
   return h;
