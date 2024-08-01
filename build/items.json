@@ -4048,13 +4048,17 @@
       },
       {
         "key": "bonus_damage",
-        "display": "+ {value} Damage",
-        "value": "3 / 6"
+        "value": "0"
       },
       {
         "key": "bonus_health_regen",
         "display": "+ {value} Health Regeneration",
         "value": "0.75 / 1.5"
+      },
+      {
+        "key": "bonus_health",
+        "display": "+ {value} Health",
+        "value": "50 / 100"
       },
       {
         "key": "clock_time",
@@ -4673,12 +4677,12 @@
       {
         "type": "active",
         "title": "Barrier",
-        "description": "Gives a magic damage barrier that absorbs 450 damage to all nearby allies. Lasts 12 seconds.\n\nRadius: 1200"
+        "description": "Gives a magic damage barrier that absorbs 450 damage to all nearby allies. Lasts 10 seconds.\n\nRadius: 1200"
       },
       {
         "type": "passive",
         "title": "Insight Aura",
-        "description": "Gives allied units 2.5 health regeneration and 10% magic resistance.\n\nRadius: 1200"
+        "description": "Gives allied units 2.5 health regeneration and 8% magic resistance.\n\nRadius: 1200"
       }
     ],
     "hint": [],
@@ -4717,7 +4721,7 @@
       },
       {
         "key": "magic_resistance_aura",
-        "value": "10"
+        "value": "8"
       },
       {
         "key": "aura_radius",
@@ -4729,7 +4733,7 @@
       },
       {
         "key": "barrier_duration",
-        "value": "12.0"
+        "value": "10.0"
       },
       {
         "key": "barrier_radius",
@@ -4760,7 +4764,7 @@
     "id": 91,
     "img": "/apps/dota2/images/dota_react/items/recipe.png?t=1593393829403",
     "dname": "Urn of Shadows Recipe",
-    "cost": 375,
+    "cost": 280,
     "behavior": false,
     "notes": "",
     "attrib": [],
@@ -4790,7 +4794,7 @@
     "dispellable": "Yes",
     "target_team": "Both",
     "target_type": "Hero",
-    "notes": "Empty urns gain 2 charges.\nIf used on a hero with Soul Release already active on them, it will refresh its duration.",
+    "notes": "Empty urns gain 2 charges.\nIf used on a hero with Soul Release already active on them, it will refresh its duration.\nDoes not trigger spell block or spell reflect.",
     "attrib": [
       {
         "key": "mana_regen",
@@ -4798,14 +4802,14 @@
         "value": "1.4"
       },
       {
-        "key": "bonus_all_stats",
-        "display": "+ {value} All Attributes",
-        "value": "2"
-      },
-      {
         "key": "bonus_armor",
         "display": "+ {value} Armor",
         "value": "2"
+      },
+      {
+        "key": "bonus_health",
+        "display": "+ {value} Health",
+        "value": "125"
       },
       {
         "key": "soul_radius",
@@ -4834,12 +4838,12 @@
     ],
     "mc": false,
     "hc": false,
-    "cd": 7,
+    "cd": 10,
     "lore": "Contains the ashes of powerful demons.",
     "components": [
       "sobi_mask",
       "ring_of_protection",
-      "circlet"
+      "fluffy_hat"
     ],
     "created": true,
     "charges": false
@@ -5122,7 +5126,7 @@
       {
         "type": "active",
         "title": "Soul Rend",
-        "description": "Silences a target for 5 seconds. At the end of the silence, an additional 60% of all damage taken during the silence will be dealt to the target as magical damage.\n\nAll attacks on the silenced target will deal 50 extra damage and have True Strike."
+        "description": "Silences a target for 5 seconds. At the end of the silence, an additional 60% of all damage taken during the silence will be dealt to the target as magical damage.\n\nAll attacks on the silenced target will deal additional damage equal to 50 if the attacker is a hero, and 25, if the attacker is a creep, and have True Strike."
       },
       {
         "type": "passive",
@@ -5188,8 +5192,12 @@
         "value": "35"
       },
       {
-        "key": "proc_damage",
+        "key": "proc_damage_heroes",
         "value": "50"
+      },
+      {
+        "key": "proc_damage_creeps",
+        "value": "25"
       },
       {
         "key": "passive_proc_damage",
@@ -5731,7 +5739,7 @@
       {
         "key": "passive_spell_lifesteal",
         "display": "+ {value}% Spell Lifesteal",
-        "value": "15"
+        "value": "15 / 16 / 17 / 18 / 19"
       },
       {
         "key": "dagon_spell_lifesteal",
@@ -5805,7 +5813,7 @@
       {
         "key": "passive_spell_lifesteal",
         "display": "+ {value}% Spell Lifesteal",
-        "value": "15"
+        "value": "15 / 16 / 17 / 18 / 19"
       },
       {
         "key": "dagon_spell_lifesteal",
@@ -5875,7 +5883,7 @@
       {
         "key": "passive_spell_lifesteal",
         "display": "+ {value}% Spell Lifesteal",
-        "value": "15"
+        "value": "15 / 16 / 17 / 18 / 19"
       },
       {
         "key": "dagon_spell_lifesteal",
@@ -5945,7 +5953,7 @@
       {
         "key": "passive_spell_lifesteal",
         "display": "+ {value}% Spell Lifesteal",
-        "value": "15"
+        "value": "15 / 16 / 17 / 18 / 19"
       },
       {
         "key": "dagon_spell_lifesteal",
@@ -6015,7 +6023,7 @@
       {
         "key": "passive_spell_lifesteal",
         "display": "+ {value}% Spell Lifesteal",
-        "value": "15"
+        "value": "15 / 16 / 17 / 18 / 19"
       },
       {
         "key": "dagon_spell_lifesteal",
@@ -6644,7 +6652,7 @@
       {
         "key": "health_regen_pct",
         "display": "+ {value}% Max Health Regen",
-        "value": "1.6"
+        "value": "1.4"
       }
     ],
     "mc": false,
@@ -6901,7 +6909,7 @@
       {
         "type": "active",
         "title": "Bloodpact",
-        "description": "Increases Bloodstone's Spell Lifesteal by 2.5x. Lasts 6 seconds."
+        "description": "Increases Bloodstone's Spell Lifesteal by 4x. Lasts 5 seconds."
       }
     ],
     "hint": [],
@@ -6934,20 +6942,21 @@
       },
       {
         "key": "bonus_mp_regen",
+        "display": "+ {value} Mana Regeneration",
         "value": "3"
       },
       {
         "key": "spell_lifesteal",
         "display": "+ {value}% Spell Lifesteal",
-        "value": "30"
+        "value": "20"
       },
       {
         "key": "buff_duration",
-        "value": "6"
+        "value": "5"
       },
       {
         "key": "lifesteal_multiplier",
-        "value": "2.5"
+        "value": "4"
       },
       {
         "key": "hp_cost",
@@ -7066,7 +7075,7 @@
       {
         "type": "active",
         "title": "Echo Shell",
-        "description": "Applies a shield to the target unit for 6 seconds which re-casts most targeted spells back to their caster.\n\nThe shielded unit will still take damage from the spell.\nDispel Type: Basic Dispel"
+        "description": "Applies a shield to the target unit for 5 seconds which re-casts most targeted spells back to their caster.\n\nThe shielded unit will still take damage from the spell.\nDispel Type: Basic Dispel"
       }
     ],
     "hint": [],
@@ -7102,7 +7111,7 @@
       },
       {
         "key": "active_duration",
-        "value": "6"
+        "value": "5"
       }
     ],
     "mc": 175,
@@ -7581,7 +7590,7 @@
     "id": 266,
     "img": "/apps/dota2/images/dota_react/items/recipe.png?t=1593393829403",
     "dname": "Spirit Vessel Recipe",
-    "cost": 1200,
+    "cost": 900,
     "behavior": false,
     "notes": "",
     "attrib": [],
@@ -7598,7 +7607,7 @@
       {
         "type": "active",
         "title": "Soul Release",
-        "description": "When used against enemies, it reduces health by 4% of current health per second, and reduces HP regeneration, healing, lifesteal and spell lifesteal by 45%. Deals 35 damage per second. \n\nWhen used on allies, it provides 40 health regeneration per second. \n\nLasts 8 seconds. \n\nGains charges every time an enemy hero dies within 1400 units. Only the closest Spirit Vessel to the dying hero will gain a charge."
+        "description": "When used against enemies, it reduces health by 4% of current health per second, and reduces HP regeneration, healing, lifesteal and spell lifesteal by 50%. Deals 25 damage per second. \n\nWhen used on allies, it provides 40 health regeneration per second. \n\nLasts 8 seconds. \n\nGains charges every time an enemy hero dies within 1400 units. Only the closest Spirit Vessel to the dying hero will gain a charge."
       }
     ],
     "hint": [],
@@ -7610,7 +7619,7 @@
     "behavior": "Unit Target",
     "target_team": "Both",
     "target_type": "Hero",
-    "notes": "",
+    "notes": "Does not trigger spell block or spell reflect.",
     "attrib": [
       {
         "key": "bonus_mana_regen",
@@ -7619,8 +7628,7 @@
       },
       {
         "key": "bonus_all_stats",
-        "display": "+ {value} All Attributes",
-        "value": "6"
+        "value": "0"
       },
       {
         "key": "bonus_armor",
@@ -7630,7 +7638,7 @@
       {
         "key": "bonus_health",
         "display": "+ {value} Health",
-        "value": "125"
+        "value": "375"
       },
       {
         "key": "soul_radius",
@@ -7650,7 +7658,7 @@
       },
       {
         "key": "soul_damage_amount",
-        "value": "35"
+        "value": "25"
       },
       {
         "key": "duration",
@@ -7658,7 +7666,7 @@
       },
       {
         "key": "hp_regen_reduction_enemy",
-        "value": "45"
+        "value": "50"
       },
       {
         "key": "enemy_hp_drain",
@@ -7667,12 +7675,11 @@
     ],
     "mc": false,
     "hc": false,
-    "cd": 7,
+    "cd": 10,
     "lore": "",
     "components": [
       "urn_of_shadows",
-      "crown",
-      "fluffy_hat"
+      "vitality_booster"
     ],
     "created": true,
     "charges": false
@@ -7748,7 +7755,7 @@
       {
         "type": "active",
         "title": "Guard",
-        "description": "For 8 seconds, grant nearby allied heroes and buildings a 100% chance to block damage equal to 70 plus 2.5% of the casters max health value from each incoming attack.\nUnits may only be affected by Guard once every 35 seconds.\n\nRadius: 1200"
+        "description": "For 8 seconds, grant nearby allied heroes and buildings a 100% chance to block damage equal to 70 plus 2.2% of the casters max health value from each incoming attack.\nUnits may only be affected by Guard once every 35 seconds.\n\nRadius: 1200"
       },
       {
         "type": "passive",
@@ -7818,12 +7825,12 @@
       },
       {
         "key": "max_hp_pct",
-        "value": "2.5"
+        "value": "2.2"
       }
     ],
     "mc": 75,
     "hc": false,
-    "cd": 35,
+    "cd": 40,
     "lore": "A cuirass originally built to protect against the dreaded Year Beast.",
     "components": [
       "vanguard",
@@ -8023,7 +8030,7 @@
       {
         "type": "passive",
         "title": "Eternal Endurance",
-        "description": "For every 300 spell damage that equipped hero receives, it gains a stack of Endurance for 5s up to a maximum of 6 charges. Each charge increases Eternal Shroud's magic resistance by 4% ."
+        "description": "For every 300 spell damage that equipped hero receives, it gains a stack of Endurance for 5s up to a maximum of 6 charges. Each charge increases Eternal Shroud's magic resistance by 3.5% ."
       }
     ],
     "hint": [],
@@ -8059,7 +8066,7 @@
       },
       {
         "key": "stack_resist",
-        "value": "4"
+        "value": "3.5"
       },
       {
         "key": "mana_restore_pct",
@@ -8561,7 +8568,7 @@
       {
         "type": "active",
         "title": "Mirror Image",
-        "description": "Creates 2 images of your hero that last 20 seconds. \n\nMelee images deal 33% damage, while Ranged images deal 28%. Illusions take 300% damage. \n\nDispel Type: Basic Dispel"
+        "description": "Creates 2 images of your hero that last 18 seconds. \n\nMelee images deal 33% damage, while Ranged images deal 28%. Illusions take 300% damage. \n\nDispel Type: Basic Dispel"
       }
     ],
     "hint": [],
@@ -8603,8 +8610,8 @@
         "value": "2"
       },
       {
-        "key": "tooltip_illusion_duration",
-        "value": "20"
+        "key": "illusion_duration",
+        "value": "18"
       },
       {
         "key": "images_do_damage_percent_melee",
@@ -10388,7 +10395,7 @@
       },
       {
         "key": "projectile_speed",
-        "value": "1275"
+        "value": "1400"
       }
     ],
     "mc": 100,
@@ -11121,7 +11128,7 @@
     "id": 227,
     "img": "/apps/dota2/images/dota_react/items/recipe.png?t=1593393829403",
     "dname": "Solar Crest Recipe",
-    "cost": 600,
+    "cost": 500,
     "behavior": false,
     "notes": "",
     "attrib": [],
@@ -11138,7 +11145,7 @@
       {
         "type": "active",
         "title": "Shine",
-        "description": "When cast on an ally, grants them 7 armor, 70 attack speed, 15% movement speed and a 400 HP Barrier. \n\nDoes not grant bonus armor, movement or attack speed if used on self. \n\nDuration: 8"
+        "description": "When cast on an ally, grants them 7 armor, 70 attack speed, 15% movement speed and a 400 physical damage barrier. \n\nDoes not grant bonus armor, movement or attack speed if used on self. \n\nDuration: 8"
       }
     ],
     "hint": [],
@@ -11146,7 +11153,7 @@
     "img": "/apps/dota2/images/dota_react/items/solar_crest.png?t=1593393829403",
     "dname": "Solar Crest",
     "qual": "rare",
-    "cost": 2700,
+    "cost": 2600,
     "behavior": [
       "Unit Target",
       "Instant Cast"
@@ -11274,7 +11281,7 @@
       {
         "key": "bonus_health",
         "display": "+ {value} Health",
-        "value": "150"
+        "value": "175"
       },
       {
         "key": "duration",
@@ -11725,7 +11732,7 @@
     ],
     "mc": false,
     "hc": false,
-    "cd": 40,
+    "cd": 45,
     "lore": "One of many holy instruments constructed to honor the Omniscience.",
     "components": [
       "mekansm",
@@ -11819,7 +11826,7 @@
       {
         "type": "active",
         "title": "Chop",
-        "description": "Targets a non-player enemy unit to remove 40% of its current HP.\n\nIf cast on a tree, instantly destroys it.\n\nUnit Tree Range: 350"
+        "description": "Targets a non-player enemy unit to remove 80% of its current HP.\n\nIf cast on a tree, instantly destroys it.\n\nUnit Tree Range: 350"
       }
     ],
     "hint": [],
@@ -11836,7 +11843,7 @@
       {
         "key": "bonus_attack_speed",
         "display": "+ {value} Attack Speed",
-        "value": "15"
+        "value": "20"
       },
       {
         "key": "quelling_range_tooltip",
@@ -11848,12 +11855,12 @@
       },
       {
         "key": "creep_damage_pct",
-        "value": "40"
+        "value": "80"
       },
       {
         "key": "bonus_armor",
         "display": "+ {value} Armor",
-        "value": "2"
+        "value": "4"
       },
       {
         "key": "alternative_cooldown",
@@ -11862,14 +11869,15 @@
     ],
     "mc": false,
     "hc": false,
-    "cd": 25,
+    "cd": 20,
     "lore": "A simple but effective weapon devised to quell a great Hellbear uprising.",
     "components": [
       "quelling_blade",
       "ring_of_protection"
     ],
     "created": true,
-    "charges": false
+    "charges": false,
+    "tier": 2
   },
   "recipe_abyssal_blade": {
     "id": 207,
@@ -12047,7 +12055,7 @@
       {
         "key": "slow_resistance",
         "display": "+ {value}% Slow Resistance",
-        "value": "20"
+        "value": "25"
       },
       {
         "key": "hp_regen_amp",
@@ -12055,7 +12063,7 @@
         "value": "25"
       }
     ],
-    "mc": 100,
+    "mc": 75,
     "hc": false,
     "cd": 18,
     "lore": "This halberd moves with the speed of a smaller weapon, allowing the bearer to win duels that a heavy edge would not.",
@@ -12209,7 +12217,7 @@
       {
         "type": "active",
         "title": "Fade",
-        "description": "Grants invisibility to you or a target allied hero as long as the target unit remains still for up to 15s. \n\nHas a 1.25 second fade time, and breaks instantly upon moving. \n\nThere is no cooldown when using this item on yourself."
+        "description": "Grants invisibility to you or a target allied hero for up to 3.5s. Movement speed during the invisibility is reduced by 35%"
       }
     ],
     "hint": [],
@@ -12221,22 +12229,28 @@
       "Instant Cast",
       "Unit Target"
     ],
+    "dispellable": "Yes",
     "target_team": "Friendly",
     "target_type": "Hero",
     "notes": "",
     "attrib": [
       {
         "key": "fade_time",
+        "display": "FADE TIME: {value}",
         "value": "1.25"
       },
       {
+        "key": "movement_speed_reduction",
+        "value": "35"
+      },
+      {
         "key": "fade_duration",
-        "value": "15"
+        "value": "3.5"
       }
     ],
     "mc": false,
     "hc": false,
-    "cd": 7,
+    "cd": 18,
     "lore": "A small talisman that clouds the senses of one's enemies when held perfectly still.",
     "components": null,
     "created": false,
@@ -12701,6 +12715,14 @@
     "charges": false
   },
   "philosophers_stone": {
+    "abilities": [
+      {
+        "type": "passive",
+        "title": "Boom Bust",
+        "description": "Has 750 charges. Depletes a charge every time it grants gold to the owner. When all charges are depleted, the item is destroyed, and the owner receives 375 gold."
+      }
+    ],
+    "hint": [],
     "id": 290,
     "img": "/apps/dota2/images/dota_react/items/philosophers_stone.png?t=1593393829403",
     "dname": "Philosopher's Stone",
@@ -12721,6 +12743,14 @@
         "key": "bonus_damage",
         "display": "- {value} Attack Damage",
         "value": "-30"
+      },
+      {
+        "key": "gold_on_expire",
+        "value": "375"
+      },
+      {
+        "key": "charges_tooltip",
+        "value": "750"
       }
     ],
     "mc": false,
@@ -12729,7 +12759,7 @@
     "lore": "A weightless charm created by an enchanter with a powerful scorn for brute force.",
     "components": null,
     "created": false,
-    "charges": false,
+    "charges": 750,
     "tier": 2
   },
   "force_boots": {
@@ -12737,7 +12767,7 @@
       {
         "type": "active",
         "title": "Force",
-        "description": "Dispels the user and pushes them 750 units in the direction they are facing.\n\nDispel Type: Basic Dispel"
+        "description": "Pushes the target 750 units in the direction they are facing. Dispels if cast on an ally.\n\nDispel Type: Basic Dispel"
       },
       {
         "type": "passive",
@@ -12758,7 +12788,7 @@
       "Hero",
       "Basic"
     ],
-    "notes": "",
+    "notes": "Does not trigger spell block or spell reflect.",
     "attrib": [
       {
         "key": "bonus_movement_speed",
@@ -13304,22 +13334,6 @@
     "charges": false,
     "tier": 5
   },
-  "recipe_ironwood_tree": {
-    "id": 303,
-    "img": "/apps/dota2/images/dota_react/items/recipe.png?t=1593393829403",
-    "dname": "Ironwood Tree Recipe",
-    "cost": 1,
-    "behavior": false,
-    "notes": "",
-    "attrib": [],
-    "mc": false,
-    "hc": false,
-    "cd": false,
-    "lore": "",
-    "components": null,
-    "created": false,
-    "charges": false
-  },
   "ironwood_tree": {
     "abilities": [
       {
@@ -13339,7 +13353,7 @@
       {
         "key": "bonus_all_stats",
         "display": "+ {value} All Attributes",
-        "value": "6"
+        "value": "5"
       },
       {
         "key": "tree_duration",
@@ -13352,7 +13366,8 @@
     "lore": "Precious. And hearty as a weed.",
     "components": null,
     "created": false,
-    "charges": false
+    "charges": false,
+    "tier": 1
   },
   "mango_tree": {
     "abilities": [
@@ -13943,9 +13958,9 @@
     "abilities": [],
     "hint": [
       "Also provides one of the following, based on the Vambrace's main attribute:",
-      " Strength: +8% Magic Resistance ",
-      " Agility: +10 Attack Speed ",
-      " Intelligence: +6% Spell Amp"
+      " Strength: +10% Magic Resistance ",
+      " Agility: +15 Attack Speed ",
+      " Intelligence: +8% Spell Amp"
     ],
     "id": 331,
     "img": "/apps/dota2/images/dota_react/items/vambrace.png?t=1593393829403",
@@ -13961,24 +13976,24 @@
       {
         "key": "bonus_primary_stat",
         "display": "+ {value} Main Vambrace Attribute",
-        "value": "8"
+        "value": "10"
       },
       {
         "key": "bonus_secondary_stat",
         "display": "+ {value} Other Attributes",
-        "value": "2"
+        "value": "4"
       },
       {
         "key": "bonus_spell_amp",
-        "value": "6"
-      },
-      {
-        "key": "bonus_magic_resistance",
         "value": "8"
       },
       {
-        "key": "bonus_attack_speed",
+        "key": "bonus_magic_resistance",
         "value": "10"
+      },
+      {
+        "key": "bonus_attack_speed",
+        "value": "15"
       }
     ],
     "mc": false,
@@ -13988,7 +14003,7 @@
     "components": null,
     "created": false,
     "charges": false,
-    "tier": 2
+    "tier": 3
   },
   "horizon": {
     "abilities": [
@@ -14171,7 +14186,7 @@
       {
         "type": "active",
         "title": "Dig",
-        "description": "Channel for 1 second. \nCan find a Bounty Rune, a Flask, an Enchanted Mango, or a Kobold."
+        "description": "Channel for 1 second. \nCan find a Bounty Rune, a Flask, an Enchanted Mango, or a Kobold. If digging in a river, always digs up a Water Rune.\n\n This item's cooldown only progresses in your hero's Neutral Item slot"
       }
     ],
     "hint": [],
@@ -15857,7 +15872,7 @@
       "Hero",
       "Basic"
     ],
-    "notes": "",
+    "notes": "Does not trigger spell block or spell reflect.",
     "attrib": [
       {
         "key": "bonus_health_regen",
@@ -15910,7 +15925,7 @@
       "Hero",
       "Basic"
     ],
-    "notes": "",
+    "notes": "Does not trigger spell block or spell reflect.",
     "attrib": [
       {
         "key": "intelligence_pct",
@@ -16055,7 +16070,7 @@
       "Hero",
       "Basic"
     ],
-    "notes": "",
+    "notes": "Does not trigger spell block or spell reflect.",
     "attrib": [
       {
         "key": "bonus_all_stats",
@@ -16301,8 +16316,7 @@
     "lore": "A small token imbued with the fortune of the fae in recognition of an intriguing display of mortal kindness.",
     "components": null,
     "created": false,
-    "charges": false,
-    "tier": 1
+    "charges": false
   },
   "assassins_dagger": {
     "id": 824,
@@ -16564,7 +16578,7 @@
       {
         "type": "active",
         "title": "Pig, Out!",
-        "description": "Turns your hero into a critter for 4 seconds and gives them +10% Movement Speed."
+        "description": "Turns your hero into a critter for 4 seconds and gives them +15% Movement Speed."
       }
     ],
     "hint": [],
@@ -16582,7 +16596,11 @@
       {
         "key": "all_stats",
         "display": "+ {value} All Attributes",
-        "value": "5"
+        "value": "4"
+      },
+      {
+        "key": "active_movespeed_pct",
+        "value": "15"
       }
     ],
     "mc": 50,
@@ -16692,7 +16710,7 @@
       "Hero",
       "Basic"
     ],
-    "notes": "",
+    "notes": "Does not trigger spell block or spell reflect.",
     "attrib": [
       {
         "key": "movespeed",
@@ -16900,7 +16918,7 @@
       {
         "type": "active",
         "title": "Ogre Seal Flop",
-        "description": "Flop forward like an ogre seal 2 times, dealing 150 damage and slowing enemies in a 275 radius by -100% for 1.5 second on each bounce. 400 bounce distance."
+        "description": "Flop forward like an ogre seal 2 times, dealing 250 damage and slowing enemies in a 275 radius by -100% for 1.5 second on each bounce. 400 bounce distance."
       }
     ],
     "hint": [],
@@ -16914,7 +16932,11 @@
       {
         "key": "bonus_strength",
         "display": "+ {value} Strength",
-        "value": "10"
+        "value": "12"
+      },
+      {
+        "key": "movement_turn_rate",
+        "value": "75"
       },
       {
         "key": "leap_distance",
@@ -16934,7 +16956,7 @@
       },
       {
         "key": "flop_damage",
-        "value": "150"
+        "value": "250"
       },
       {
         "key": "slow_duration",
@@ -16951,12 +16973,12 @@
     ],
     "mc": 25,
     "hc": false,
-    "cd": 40,
+    "cd": 35,
     "lore": "",
     "components": null,
     "created": false,
     "charges": false,
-    "tier": 3
+    "tier": 4
   },
   "wand_of_the_brine": {
     "id": 940,
@@ -18372,8 +18394,7 @@
     "lore": "",
     "components": null,
     "created": false,
-    "charges": false,
-    "tier": 4
+    "charges": false
   },
   "gossamer_cape": {
     "abilities": [
@@ -18590,7 +18611,7 @@
       },
       {
         "key": "radius",
-        "value": "600"
+        "value": "650"
       },
       {
         "key": "health",

@@ -1004,7 +1004,7 @@ async function start() {
             ability?.facets_loc?.forEach((str, i) => {
               let specialAttrs = getSpecialAttrs(scripts[ability.name]) || [];
               allAttribs.push(...specialAttrs);
-              if (str.length > 0) {
+              if (str.length > 0 && heroAbilities[name].facets[i]) {
                 heroAbilities[name].facets[i].description =
                   replaceSpecialAttribs(
                     str,
