@@ -13660,7 +13660,7 @@
     "dname": "Illusory Armaments",
     "is_innate": true,
     "behavior": "Passive",
-    "desc": "Items that grant bonus damage instead grant base damage.",
+    "desc": "Items, abilities, and auras that grant bonus damage instead grant base damage.",
     "attrib": [
       {
         "key": "bonus_to_base",
@@ -45405,7 +45405,7 @@
       },
       {
         "key": "bonus_armor",
-        "header": "ARMOR:",
+        "header": "BONUS ARMOR:",
         "value": [
           "0",
           "0",
@@ -45413,7 +45413,8 @@
           "0",
           "5",
           "10"
-        ]
+        ],
+        "generated": true
       },
       {
         "key": "bash_chance",
@@ -54284,7 +54285,7 @@
     "dname": "Lurker",
     "is_innate": true,
     "behavior": "Passive",
-    "desc": "Visage's ability cooldown durations are reduced as long as he's not taking damage.\n\nGrants a stack every 2s that Visage does not take damage. Each stack grants 2% cooldown reduction with a max of 10 stacks. Stacks fade after 2s upon taking any damage.",
+    "desc": "Visage's ability cooldown durations are accelerated as long as he's not taking damage.\n\nGrants a stack every 2s that Visage does not take damage. Each stack grants 2% cooldown acceleration with a max of 10 stacks. Stacks fade after 2s upon taking any damage.",
     "attrib": [
       {
         "key": "max_stacks",
