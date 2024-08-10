@@ -32729,7 +32729,7 @@
     "dispellable": "Yes",
     "target_team": "Enemy",
     "target_type": "Hero",
-    "desc": "Damaging energy bounces around the map, striking enemies close to the cast point that are in vision. Each enemy hit beyond the first adds damage, up to the maximum after 16 are hit.",
+    "desc": "Damaging energy bounces around the map, striking enemies that are in vision starting with those closest to the cast point. Each enemy hit beyond the first adds damage, up to the maximum after 16 are hit.",
     "attrib": [
       {
         "key": "max_targets",
@@ -33231,7 +33231,7 @@
     "dmg_type": "Physical",
     "bkbpierce": "Yes",
     "dispellable": "No",
-    "desc": "Lifestealer's attacks deal damage and provide heal for a percentage of his target's max health. Allows Lifestealer to attack allied creeps at 75% health. Lifestealer gains permanent max HP whenever he kill a creep or hero.",
+    "desc": "Lifestealer's attacks deal damage and provide heal for a percentage of his target's max health. Allows Lifestealer to attack allied creeps at 75% health. Lifestealer gains permanent max HP whenever he kills a creep or hero.",
     "attrib": [
       {
         "key": "hp_leech_percent",
@@ -36255,7 +36255,7 @@
     "dname": "+20% Life Break Damage"
   },
   "special_bonus_unique_huskar_2": {
-    "dname": "+4 Burning Spears Burn Damage"
+    "dname": "+4 Burning Spear Burn Damage"
   },
   "special_bonus_unique_huskar_3": {
     "dname": "+0.75s Inner Fire Duration"
@@ -36264,7 +36264,7 @@
     "dname": "+2s Life Break Slow Duration"
   },
   "special_bonus_unique_huskar_5": {
-    "dname": "+{s:bonus_duration}s Burning Spears Duration"
+    "dname": "+{s:bonus_duration}s Burning Spear Duration"
   },
   "special_bonus_unique_huskar_6": {
     "dname": "+30% Berserker's Blood Regen"
@@ -46301,7 +46301,7 @@
     "is_innate": true,
     "behavior": "Passive",
     "dmg_type": [],
-    "desc": "Brewmaster gains 20% bonus attack damage for 15s when he comes out of Primal Split and for 30 when he respawns.",
+    "desc": "Brewmaster gains 20% bonus attack damage for 15s when he comes out of Primal Split and for 30s when he respawns.",
     "attrib": [
       {
         "key": "damage_pct",
@@ -60393,7 +60393,7 @@
     "img": "/apps/dota2/images/dota_react/abilities/legion_commander_duel.png"
   },
   "legion_commander_outfight_them": {
-    "dname": "Outfight them!",
+    "dname": "Outfight Them!",
     "is_innate": true,
     "behavior": "Passive",
     "desc": "Attacking an enemy hero that is higher level than you increases your HP regeneration, lifesteal, and incoming heals by 50% for 4s.",
@@ -60719,7 +60719,7 @@
       },
       {
         "key": "damage",
-        "header": "DAMAGE:",
+        "header": "DPS:",
         "value": [
           "10",
           "20",
@@ -72394,7 +72394,7 @@
       },
       {
         "key": "attackspeed_bonus",
-        "header": "ATTACK SPEED:",
+        "header": "ATTACK SPEED BONUS:",
         "value": [
           "15",
           "25",
