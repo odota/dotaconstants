@@ -493,7 +493,7 @@ async function start() {
               );
             }
 
-            if(scripts[key].Innate === "1") {
+            if (scripts[key].Innate === "1") {
               ability.is_innate = true;
             }
             ability.behavior =
@@ -941,8 +941,12 @@ async function start() {
           scripts = { ...scripts, ...heroAbs };
         }
 
+        // Previous data for deprecated facets
+        const oldHeroAbilities = require("../build/hero_abilities");
+
         let heroes = heroObj.DOTAHeroes;
         const heroAbilities = {};
+        const heroFacets = {};
         Object.keys(heroes).forEach(function (heroKey) {
           if (
             heroKey != "Version" &&
@@ -973,26 +977,33 @@ async function start() {
             });
             heroAbilities[heroKey] = newHero;
           }
+
+          heroFacets[heroKey] = {};
+
+          Object.entries(heroes[heroKey].Facets ?? []).forEach(
+            ([key, value], i) => {
+              heroFacets[heroKey][key] = {
+                id: i,
+                name: key,
+                deprecated: value.Deprecated,
+                icon: value.Icon,
+                color: value.Color,
+                gradient_id: Number(value.GradientID),
+                // TODO: Abilities
+              };
+            },
+          );
         });
 
-        const facetColors = [
-          "Red",
-          "Yellow",
-          "Green",
-          "Blue",
-          "Purple",
-          "Gray",
-        ];
+        // const f = heroes.npc_dota_hero_faceless_void.Facets
 
         heroData.forEach((hero) => {
+          let newFacets = [];
           hero = hero.result.data.heroes[0];
           const { name, facets, abilities, facet_abilities } = hero;
           facets?.forEach((facet) => {
-            heroAbilities[name].facets.push({
-              name: facet.name,
-              icon: facet.icon,
-              color: facetColors[facet.color],
-              gradient_id: facet.gradient_id,
+            newFacets.push({
+              ...heroFacets[name][facet.name],
               title: facet.title_loc,
               description: facet.description_loc || "",
             });
@@ -1004,22 +1015,21 @@ async function start() {
             ability?.facets_loc?.forEach((str, i) => {
               let specialAttrs = getSpecialAttrs(scripts[ability.name]) || [];
               allAttribs.push(...specialAttrs);
-              if (str.length > 0 && heroAbilities[name].facets[i]) {
-                heroAbilities[name].facets[i].description =
-                  replaceSpecialAttribs(
-                    str,
-                    specialAttrs,
-                    false,
-                    scripts[ability.name],
-                    ability.name,
-                  );
+              if (str.length > 0 && newFacets[i]) {
+                newFacets[i].description = replaceSpecialAttribs(
+                  str,
+                  specialAttrs,
+                  false,
+                  scripts[ability.name],
+                  ability.name,
+                );
               }
             });
           });
 
           facet_abilities?.forEach((facet_ability, i) => {
             facet_ability?.abilities?.forEach((ability) => {
-              let { description } = heroAbilities[name].facets[i];
+              let { description } = newFacets[i];
               if (description.includes("{s:facet_ability_name}")) {
                 description = description.replace(
                   "{s:facet_ability_name}",
@@ -1027,7 +1037,7 @@ async function start() {
                 );
               }
 
-              heroAbilities[name].facets[i].description = replaceSpecialAttribs(
+              newFacets[i].description = replaceSpecialAttribs(
                 description,
                 getSpecialAttrs(scripts[ability.name]),
                 false,
@@ -1038,30 +1048,43 @@ async function start() {
           });
 
           // Insert {s:bonus_} values. Some attributes are tied to seemingly unrelated passives, so we need all abilities
-          heroAbilities[name].facets = heroAbilities[name].facets.map(
-            ({ description, ...rest }) => {
-              const matches = description.matchAll(/{s:bonus_(\w+)}/g);
-              for ([, bonusKey] of matches) {
-                const obj =
-                  allAttribs.find((obj) => bonusKey in obj)?.[bonusKey] ?? {};
-                const facetKey = Object.keys(obj).find(
-                  (k) =>
-                    k.startsWith("special_bonus_facet") &&
-                    k.includes(rest.name),
+          newFacets = newFacets.map(({ description, ...rest }) => {
+            const matches = description.matchAll(/{s:bonus_(\w+)}/g);
+            for ([, bonusKey] of matches) {
+              const obj =
+                allAttribs.find((obj) => bonusKey in obj)?.[bonusKey] ?? {};
+              const facetKey = Object.keys(obj).find(
+                (k) =>
+                  k.startsWith("special_bonus_facet") && k.includes(rest.name),
+              );
+              if (facetKey) {
+                description = description.replace(
+                  `{s:bonus_${bonusKey}}`,
+                  removeSigns(obj[facetKey]),
                 );
-                if (facetKey) {
-                  description = description.replace(
-                    `{s:bonus_${bonusKey}}`,
-                    removeSigns(obj[facetKey]),
-                  );
-                }
               }
-              return {
-                ...rest,
-                description,
-              };
-            },
+            }
+            return {
+              ...rest,
+              description,
+            };
+          });
+
+          // Push deprecated facets from old data
+          const deprecated = Object.values(heroFacets[name]).filter(
+            (f) => f.deprecated,
           );
+
+          deprecated.forEach((facet) => {
+            newFacets.push({
+              ...facet,
+              ...oldHeroAbilities[name].facets.find(
+                (f) => f.name === facet.name,
+              ),
+            });
+          });
+
+          heroAbilities[name].facets = newFacets.sort((a, b) => a.id - b.id);
         });
 
         return heroAbilities;
