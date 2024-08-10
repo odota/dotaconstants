@@ -995,8 +995,6 @@ async function start() {
           );
         });
 
-        // const f = heroes.npc_dota_hero_faceless_void.Facets
-
         heroData.forEach((hero) => {
           let newFacets = [];
           hero = hero.result.data.heroes[0];
