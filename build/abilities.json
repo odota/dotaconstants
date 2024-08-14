@@ -8662,7 +8662,7 @@
     "dname": "+10% Counterspell Magic Resistance"
   },
   "special_bonus_unique_antimage_5": {
-    "dname": "+10% Persecutor Max Movement Slow"
+    "dname": "+15% Persecutor Max Movement Slow"
   },
   "special_bonus_unique_antimage_6": {
     "dname": "+0.2 Mana Void Damage Multiplier"
@@ -8674,7 +8674,7 @@
     "dname": "+0.7s Mana Void Stun"
   },
   "special_bonus_unique_antimage_manavoid_aoe": {
-    "dname": "+150 Mana Void Radius"
+    "dname": "+200 Mana Void Radius"
   },
   "axe_berserkers_call": {
     "dname": "Berserker's Call",
@@ -8838,7 +8838,7 @@
       {
         "key": "radius",
         "header": "RADIUS:",
-        "value": "300"
+        "value": "275"
       },
       {
         "key": "trigger_attacks",
@@ -9005,7 +9005,7 @@
     "dname": "+100 Berserker's Call AoE"
   },
   "special_bonus_unique_axe_4": {
-    "dname": "+20 Counter Helix Damage"
+    "dname": "+25 Counter Helix Damage"
   },
   "special_bonus_unique_axe_5": {
     "dname": "+100 Culling Blade Damage"
@@ -9351,7 +9351,7 @@
     "img": "/apps/dota2/images/dota_react/abilities/bane_ichor_of_nyctasha.png"
   },
   "special_bonus_unique_bane_2": {
-    "dname": "+250 Brain Sap Damage/Heal"
+    "dname": "+275 Brain Sap Damage/Heal"
   },
   "special_bonus_unique_bane_3": {
     "dname": "+3s Fiend's Grip Duration"
@@ -11730,7 +11730,7 @@
       {
         "key": "scepter_starstorm_target_pct",
         "header": "PRIMARY HIT STARSTORM DAMAGE:",
-        "value": "75%"
+        "value": "80%"
       },
       {
         "key": "extra_arrows",
@@ -11836,7 +11836,7 @@
     "behavior": "No Target",
     "bkbpierce": "Yes",
     "dispellable": "No",
-    "desc": "Gradually increases the daytime vision range, attack speed and damage of Mirana and all allied heroes, reaching maximum power after 8s. Daytime vision bonus increases 3x faster than attack speed and damage.\n\n Allies receive 50% of the bonus.",
+    "desc": "Gradually increases the daytime vision range, attack speed and damage of Mirana and all allied heroes, reaching maximum power after 6s. Daytime vision bonus increases 3x faster than attack speed and damage.\n\n Allies receive 50% of the bonus.",
     "attrib": [
       {
         "key": "smoothness",
@@ -11846,11 +11846,21 @@
       },
       {
         "key": "increase_rate",
-        "header": "ATTACK SPEED AND DAMAGE INCREASE RATE:",
+        "header": "INCREASE RATE:",
         "value": [
           "10",
           "15",
           "20"
+        ],
+        "generated": true
+      },
+      {
+        "key": "max_total_increase",
+        "header": "MAX ATTACK SPEED/DAMAGE:",
+        "value": [
+          "80",
+          "120",
+          "160"
         ]
       },
       {
@@ -11872,7 +11882,7 @@
       {
         "key": "max_damage_time",
         "header": "MAX DAMAGE TIME:",
-        "value": "8",
+        "value": "6",
         "generated": true
       },
       {
@@ -12028,7 +12038,7 @@
     "behavior": "No Target",
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Calls down a wave of meteors to damage nearby enemy units. The closest enemy unit to Mirana in a 650 radius will be struck a second time for 75% of the damage.",
+    "desc": "Calls down a wave of meteors to damage nearby enemy units. The closest enemy unit to Mirana in a 675 radius will be struck a second time for 80% of the damage.",
     "attrib": [
       {
         "key": "starfall_radius",
@@ -12038,13 +12048,13 @@
       {
         "key": "starfall_secondary_radius",
         "header": "STARFALL SECONDARY RADIUS:",
-        "value": "650",
+        "value": "675",
         "generated": true
       },
       {
         "key": "secondary_starfall_damage_percent",
         "header": "SECONDARY STARFALL DAMAGE PERCENT:",
-        "value": "75",
+        "value": "80",
         "generated": true
       },
       {
@@ -12111,7 +12121,7 @@
     "dname": "Moonlight Shadow gives +20% Evasion"
   },
   "special_bonus_unique_mirana_6": {
-    "dname": "+125 Leap Distance"
+    "dname": "+150 Leap Distance"
   },
   "special_bonus_unique_mirana_7": {
     "dname": "+250 Starstorm Damage"
@@ -13552,13 +13562,13 @@
       {
         "key": "illusion_damage_in_pct",
         "header": "ILLUSION DAMAGE IN PCT:",
-        "value": "550",
+        "value": "525",
         "generated": true
       },
       {
         "key": "tooltip_total_illusion_damage_in_pct",
         "header": "ILLUSION DAMAGE TAKEN:",
-        "value": "650%"
+        "value": "625%"
       },
       {
         "key": "illusion_from_illusion_duration",
@@ -13665,6 +13675,11 @@
       {
         "key": "bonus_to_base",
         "header": "BONUS TO BASE DAMAGE:",
+        "value": "100%"
+      },
+      {
+        "key": "bonus_to_base_illusions",
+        "header": "BONUS TO BASE DAMAGE (ILLUSIONS):",
         "value": "65%"
       }
     ],
@@ -13825,8 +13840,20 @@
     "dname": "Puckish",
     "is_innate": true,
     "behavior": "Passive",
-    "desc": "Whenever Puck disjoints an attack, it restores 2% of its max mana and 2% of its max health. Dodging a targeted spell projectile restores 4x that amount.",
+    "desc": "Whenever Puck disjoints an attack, it restores 20 + 2% of its max mana and 20 + 2% of its max health. Dodging a targeted spell projectile restores 4x that amount.",
     "attrib": [
+      {
+        "key": "mana_restore_base",
+        "header": "MANA RESTORE BASE:",
+        "value": "20",
+        "generated": true
+      },
+      {
+        "key": "hp_restore_base",
+        "header": "HP RESTORE BASE:",
+        "value": "20",
+        "generated": true
+      },
       {
         "key": "mana_restore_pct",
         "header": "MANA RESTORE PCT:",
@@ -15997,10 +16024,10 @@
       "45"
     ],
     "cd": [
+      "40",
       "35",
       "30",
-      "25",
-      "20"
+      "25"
     ],
     "img": "/apps/dota2/images/dota_react/abilities/sven_warcry.png"
   },
@@ -17957,7 +17984,7 @@
     "dname": "+0.5s Lightning Bolt Ministun"
   },
   "special_bonus_unique_zeus_4": {
-    "dname": "+150 Thundergod's Wrath Damage"
+    "dname": "+75 Thundergod's Wrath Damage"
   },
   "special_bonus_unique_zeus_5": {
     "dname": "325 AoE Lightning Bolt"
@@ -17967,6 +17994,9 @@
   },
   "special_bonus_unique_zeus_jump_postjump_movespeed": {
     "dname": "+25 Movement Speed after Heavenly Jump"
+  },
+  "special_bonus_unique_zeus_static_field_dmg": {
+    "dname": "+1% Static Field Damage"
   },
   "kunkka_tidal_wave": {
     "dname": "Tidal Wave",
@@ -21912,6 +21942,12 @@
         "generated": true
       },
       {
+        "key": "secondary_attack_damage_pct",
+        "header": "SECONDARY ATTACK DAMAGE PCT:",
+        "value": "0",
+        "generated": true
+      },
+      {
         "key": "abilitycastrange",
         "header": "CAST RANGE:",
         "value": "500",
@@ -22018,7 +22054,7 @@
     "dname": "+45 Death Ward Damage"
   },
   "special_bonus_unique_witch_doctor_6": {
-    "dname": "+100 Maledict AoE"
+    "dname": "+125 Maledict AoE"
   },
   "special_bonus_unique_witch_doctor_7": {
     "dname": "+30% Maledict Burst Damage"
@@ -22344,9 +22380,9 @@
         "key": "agility_pct",
         "header": "AGILITY BONUS:",
         "value": [
-          "40",
-          "60",
-          "80",
+          "55",
+          "70",
+          "85",
           "100"
         ]
       },
@@ -23083,10 +23119,10 @@
       }
     ],
     "mc": [
-      "70",
       "80",
-      "90",
-      "100"
+      "95",
+      "110",
+      "125"
     ],
     "cd": "20",
     "img": "/apps/dota2/images/dota_react/abilities/tinker_defense_matrix.png"
@@ -23547,10 +23583,10 @@
     ],
     "lore": "Even though the laboratory has since been sealed off, the ability to radio in robotic drones is still in working order.",
     "mc": [
-      "90",
-      "110",
-      "130",
-      "150"
+      "100",
+      "120",
+      "140",
+      "160"
     ],
     "cd": [
       "35",
@@ -24512,9 +24548,9 @@
         "key": "damage_share_percentage",
         "header": "SHARED DAMAGE:",
         "value": [
-          "12%",
-          "16%",
-          "20%",
+          "15%",
+          "18%",
+          "21%",
           "24%"
         ]
       },
@@ -24550,9 +24586,9 @@
       "150"
     ],
     "cd": [
-      "36",
-      "30",
-      "24",
+      "42",
+      "34",
+      "26",
       "18"
     ],
     "img": "/apps/dota2/images/dota_react/abilities/warlock_fatal_bonds.png"
@@ -24606,10 +24642,10 @@
         "key": "abilitycastrange",
         "header": "CAST RANGE:",
         "value": [
-          "600",
+          "650",
           "700",
-          "800",
-          "900"
+          "750",
+          "800"
         ],
         "generated": true
       },
@@ -24622,12 +24658,17 @@
     ],
     "lore": "Demnok's arcane arts have a myriad of uses, allowing them to be powerful friendly enchantments or damaging curses.",
     "mc": [
+      "110",
       "120",
       "130",
-      "140",
-      "150"
+      "140"
     ],
-    "cd": "14",
+    "cd": [
+      "15",
+      "14",
+      "13",
+      "12"
+    ],
     "img": "/apps/dota2/images/dota_react/abilities/warlock_shadow_word.png"
   },
   "warlock_upheaval": {
@@ -24968,8 +25009,8 @@
         "header": "DAMAGE:",
         "value": [
           "30",
-          "50",
-          "70"
+          "45",
+          "60"
         ]
       },
       {
@@ -26168,7 +26209,7 @@
       {
         "key": "abilitycastpoint",
         "header": "CAST TIME:",
-        "value": "0.4",
+        "value": "0.3",
         "generated": true
       }
     ],
@@ -27186,10 +27227,10 @@
         "key": "bonus_damage",
         "header": "BONUS DAMAGE:",
         "value": [
-          "10",
-          "15",
-          "20",
-          "25"
+          "12",
+          "18",
+          "24",
+          "30"
         ]
       },
       {
@@ -27672,10 +27713,10 @@
         "key": "cursed_damage",
         "header": "BASE DAMAGE:",
         "value": [
-          "15",
-          "30",
-          "45",
-          "60"
+          "10",
+          "25",
+          "40",
+          "55"
         ]
       },
       {
@@ -29771,7 +29812,7 @@
       {
         "key": "damage_base",
         "header": "DAMAGE BASE:",
-        "value": "0.25",
+        "value": "0.15",
         "generated": true
       },
       {
@@ -29966,10 +30007,13 @@
     "dname": "+20 Corrosive Skin Attack Speed Slow"
   },
   "special_bonus_unique_viper_7": {
-    "dname": "+20% Poison Attack slow/damage"
+    "dname": "+15% Poison Attack slow/damage"
   },
   "special_bonus_unique_viper_8": {
     "dname": "-50% Viper Strike manacost/cooldown"
+  },
+  "special_bonus_unique_viper_predator_damage": {
+    "dname": "+0.2 Predator Damage Per Missing Health"
   },
   "luna_lucent_beam": {
     "dname": "Lucent Beam",
@@ -33737,7 +33781,7 @@
       {
         "key": "max_damage",
         "header": "MAX DAMAGE:",
-        "value": "450"
+        "value": "400"
       },
       {
         "key": "normal_punch_illusion_delay",
@@ -35091,7 +35135,7 @@
       {
         "key": "healing_pct_of_damage",
         "header": "DAMAGE AS HEALING:",
-        "value": "30%"
+        "value": "25%"
       },
       {
         "key": "duration",
@@ -35555,6 +35599,24 @@
         "generated": true
       },
       {
+        "key": "bonus_health",
+        "header": "BONUS HEALTH:",
+        "value": "0",
+        "generated": true
+      },
+      {
+        "key": "bonus_damage",
+        "header": "BONUS DAMAGE:",
+        "value": "0",
+        "generated": true
+      },
+      {
+        "key": "bonus_attackspeed",
+        "header": "BONUS ATTACKSPEED:",
+        "value": "0",
+        "generated": true
+      },
+      {
         "key": "abilitycastpoint",
         "header": "CAST TIME:",
         "value": "0.3",
@@ -35776,10 +35838,13 @@
     "dname": "+30 Movespeed during Nature's Attendants"
   },
   "special_bonus_unique_enchantress_enchant_health_damage": {
-    "dname": "+150 Health / +25 Damage for Enchanted Creeps"
+    "dname": "+150 Health / +25 Damage  for Enchantress and her units"
   },
   "special_bonus_unique_enchantress_enchant_armor": {
     "dname": "+10 Enchanted Creep Armor"
+  },
+  "special_bonus_unique_enchantress_enchant_attackspeed": {
+    "dname": "+30 Attack Speed for Enchantress and her units"
   },
   "huskar_inner_vitality": {
     "dname": "Inner Vitality",
@@ -36013,11 +36078,6 @@
         "key": "duration",
         "header": "DURATION:",
         "value": "9"
-      },
-      {
-        "key": "duration_for_nothl_conflagration",
-        "header": "DURATION:",
-        "value": "0"
       },
       {
         "key": "abilitycastrange",
@@ -36264,7 +36324,7 @@
     "dname": "+2s Life Break Slow Duration"
   },
   "special_bonus_unique_huskar_5": {
-    "dname": "+{s:bonus_duration}s Burning Spear Duration"
+    "dname": "+6s Burning Spear Duration"
   },
   "special_bonus_unique_huskar_6": {
     "dname": "+30% Berserker's Blood Regen"
@@ -36506,7 +36566,7 @@
       {
         "key": "shard_cooldown",
         "header": "COOLDOWN:",
-        "value": "30"
+        "value": "35"
       },
       {
         "key": "shard_cast_range",
@@ -38314,9 +38374,9 @@
         "key": "bonus_instance_damage_from_other_abilities",
         "header": "BONUS DAMAGE:",
         "value": [
-          "15",
-          "20",
-          "25",
+          "12",
+          "18",
+          "24",
           "30"
         ]
       },
@@ -38996,7 +39056,7 @@
     "dname": "+50 Flamebreak Knockback Distance"
   },
   "special_bonus_unique_batrider_4": {
-    "dname": "+10 Sticky Napalm Damage"
+    "dname": "+15 Sticky Napalm Damage"
   },
   "special_bonus_unique_batrider_5": {
     "dname": "2 Flamebreak Charges"
@@ -40727,7 +40787,7 @@
       {
         "key": "slow",
         "header": "MOVEMENT SLOW PER STACK:",
-        "value": "1.5%"
+        "value": "2%"
       },
       {
         "key": "cast_slow",
@@ -40889,7 +40949,7 @@
       {
         "key": "shard_enrage_duration",
         "header": "SHARD ENRAGE DURATION:",
-        "value": "1.5",
+        "value": "1.4",
         "generated": true
       },
       {
@@ -41130,13 +41190,18 @@
       {
         "key": "health_as_damage_pct",
         "header": "HEALTH AS DAMAGE:",
-        "value": "1.5%"
+        "value": [
+          "1.2%",
+          "1.3%",
+          "1.4%",
+          "1.5%"
+        ]
       }
     ],
     "img": "/apps/dota2/images/dota_react/abilities/ursa_maul.png"
   },
   "special_bonus_unique_ursa": {
-    "dname": "+10 Fury Swipes Damage"
+    "dname": "+7 Fury Swipes Damage"
   },
   "special_bonus_unique_ursa_2": {
     "dname": "+400 Earthshock Radius"
@@ -42114,7 +42179,7 @@
       {
         "key": "duration",
         "header": "DURATION:",
-        "value": "10"
+        "value": "15"
       },
       {
         "key": "attack_speed",
@@ -42425,12 +42490,12 @@
     "behavior": "Passive",
     "target_team": "Friendly",
     "target_type": "Hero",
-    "desc": "Alchemist synthesizes additional gold from his enemies and bounty runes. With each kill, Alchemist earns base bonus gold and extra bonus gold. If Alchemist kills another unit which yields gold within the next 36 seconds, an additional instance of Extra Bonus Gold is added to the total. Additionally, causes bounty runes to yield more gold.",
+    "desc": "Alchemist synthesizes additional gold from his enemies and bounty runes. With each kill, Alchemist earns base bonus gold and extra bonus gold. If Alchemist kills another unit which yields gold within the next 40 seconds, an additional instance of Extra Bonus Gold is added to the total. Additionally, causes bounty runes to yield more gold.",
     "attrib": [
       {
         "key": "duration",
         "header": "RECENT KILL WINDOW:",
-        "value": "36"
+        "value": "40"
       },
       {
         "key": "bonus_gold",
@@ -44640,7 +44705,7 @@
     "dname": "-5s Cold Snap Cooldown"
   },
   "special_bonus_unique_invoker_11": {
-    "dname": "+50 Forged Spirit Attack Speed"
+    "dname": "+1 Forged Spirits"
   },
   "special_bonus_unique_invoker_13": {},
   "special_bonus_unique_invoker_ice_wall_dps": {
@@ -45218,7 +45283,7 @@
       {
         "key": "scepter_max_mana_barrier_pct",
         "header": "SCEPTER MAX MANA BARRIER PCT:",
-        "value": "70",
+        "value": "65",
         "generated": true
       },
       {
@@ -50970,9 +51035,9 @@
     "lore": "Rubick's favorite spell for dispatching would-be assassins is a rather simple conjuration.",
     "mc": [
       "110",
-      "120",
-      "130",
-      "140"
+      "125",
+      "140",
+      "155"
     ],
     "cd": [
       "16",
@@ -51727,10 +51792,10 @@
       "130"
     ],
     "cd": [
-      "17",
+      "18",
       "16",
-      "15",
-      "14"
+      "14",
+      "12"
     ],
     "img": "/apps/dota2/images/dota_react/abilities/nyx_assassin_impale.png"
   },
@@ -52342,7 +52407,7 @@
       {
         "key": "duration",
         "header": "DURATION:",
-        "value": "3"
+        "value": "4"
       },
       {
         "key": "status_resistance",
@@ -54285,12 +54350,12 @@
     "dname": "Lurker",
     "is_innate": true,
     "behavior": "Passive",
-    "desc": "Visage's ability cooldown durations are accelerated as long as he's not taking damage.\n\nGrants a stack every 2s that Visage does not take damage. Each stack grants 2% cooldown acceleration with a max of 10 stacks. Stacks fade after 2s upon taking any damage.",
+    "desc": "Visage's ability cooldown durations are accelerated as long as he's not taking damage.\n\nGrants a stack every 2s that Visage does not take damage. Each stack grants 2% cooldown acceleration with a max of 8 stacks. Stacks fade after 2s upon taking any damage.",
     "attrib": [
       {
         "key": "max_stacks",
         "header": "MAX STACKS:",
-        "value": "10",
+        "value": "8",
         "generated": true
       },
       {
@@ -56176,7 +56241,7 @@
       {
         "key": "strength_to_movement_pct",
         "header": "STRENGTH TO MOVEMENT PCT:",
-        "value": "35",
+        "value": "30",
         "generated": true
       },
       {
@@ -56839,13 +56904,23 @@
     "is_innate": true,
     "behavior": "Passive",
     "dmg_type": [],
-    "desc": "Magnus suffers 50% less knockback from enemy's abilities and items.",
+    "desc": "Magnus has slow resistance and suffers 50% less knockback from enemy's abilities and items.",
     "attrib": [
       {
         "key": "knockback_reduction",
         "header": "KNOCKBACK REDUCTION:",
         "value": "50",
         "generated": true
+      },
+      {
+        "key": "slow_resistance",
+        "header": "SLOW RESISTANCE:",
+        "value": [
+          "20%",
+          "30%",
+          "40%",
+          "50%"
+        ]
       }
     ],
     "img": "/apps/dota2/images/dota_react/abilities/magnataur_solid_core.png"
@@ -58239,7 +58314,7 @@
       "Hero",
       "Basic"
     ],
-    "desc": "Tusk begins rolling into a snowball. Allies within a 350 radius can also be added to the snowball by right-clicking on them, even while the snowball is moving. Once launched, any enemies caught in the snowball's path will be stunned and take damage. Each allied Hero in the snowball will add to its damage.",
+    "desc": "Tusk begins rolling into a snowball. Allies within a 350 radius can also be added to the snowball by right-clicking on them, even while the snowball is moving. Once launched, any enemies caught in the snowball's path will be stunned and take damage. Each allied Hero in the snowball will add to its damage and stun duration.",
     "attrib": [
       {
         "key": "snowball_damage",
@@ -58280,6 +58355,11 @@
           "1",
           "1.2"
         ]
+      },
+      {
+        "key": "stun_duration_bonus",
+        "header": "STUN DURATION PER ALLY:",
+        "value": "0.2"
       },
       {
         "key": "snowball_windup_radius",
@@ -58715,7 +58795,7 @@
     "dname": "-8s Snowball Cooldown"
   },
   "special_bonus_unique_tusk_7": {
-    "dname": "+0.5s Walrus Punch Stun Duration"
+    "dname": "+0.75s Walrus Punch Stun Duration"
   },
   "skywrath_mage_arcane_bolt": {
     "dname": "Arcane Bolt",
@@ -59188,7 +59268,12 @@
       }
     ],
     "lore": "A mysterious vapor from the Font of Avernus now infuses the breath of Abaddon, who releases it at will.",
-    "mc": "50",
+    "mc": [
+      "50",
+      "55",
+      "60",
+      "65"
+    ],
     "cd": [
       "6.5",
       "6",
@@ -59381,10 +59466,10 @@
         "key": "curse_dps",
         "header": "DPS:",
         "value": [
-          "10",
-          "20",
-          "30",
-          "40"
+          "15",
+          "25",
+          "35",
+          "45"
         ]
       },
       {
@@ -59477,13 +59562,13 @@
     "dname": "+{s:bonus_damage_absorb} Aphotic Shield Barrier Amount"
   },
   "special_bonus_unique_abaddon_2": {
-    "dname": "+40 Mist Coil Heal/Damage"
+    "dname": "+35 Mist Coil Heal/Damage"
   },
   "special_bonus_unique_abaddon_3": {
     "dname": "+80 Curse of Avernus Attack Speed Bonus"
   },
   "special_bonus_unique_abaddon_4": {
-    "dname": "400 AoE Mist Coil"
+    "dname": "350 AoE Mist Coil"
   },
   "special_bonus_unique_abaddon_5": {
     "dname": "+50 Curse of Avernus DPS"
@@ -59492,7 +59577,7 @@
     "dname": "-15% Curse of Avernus Movement Slow"
   },
   "special_bonus_unique_abaddon_7": {
-    "dname": "Aphotic Shield provides +15HP Regen"
+    "dname": "Aphotic Shield provides +12HP Regen"
   },
   "special_bonus_unique_abaddon_immolation": {
     "dname": "100 Borrowed Time Immolation DPS"
@@ -60053,7 +60138,7 @@
       {
         "key": "attack_speed_penalty",
         "header": "ATTACK SPEED PENALTY:",
-        "value": "75"
+        "value": "85"
       }
     ],
     "img": "/apps/dota2/images/dota_react/abilities/elder_titan_momentum.png"
@@ -60566,10 +60651,10 @@
         "key": "abilitychargerestoretime",
         "header": "CHARGE RESTORE TIME:",
         "value": [
-          "12",
-          "10",
-          "8",
-          "6"
+          "13",
+          "11",
+          "9",
+          "7"
         ],
         "generated": true
       },
@@ -60601,10 +60686,10 @@
     "lore": "The studied warrior must whip and weave through its enemies, burning each without pause.",
     "mc": "65",
     "cd": [
-      "12",
-      "10",
-      "8",
-      "6"
+      "13",
+      "11",
+      "9",
+      "7"
     ],
     "img": "/apps/dota2/images/dota_react/abilities/ember_spirit_sleight_of_fist.png"
   },
@@ -60722,9 +60807,9 @@
         "header": "DPS:",
         "value": [
           "10",
-          "20",
-          "30",
-          "40"
+          "18",
+          "26",
+          "34"
         ]
       }
     ],
@@ -60893,7 +60978,7 @@
     "img": "/apps/dota2/images/dota_react/abilities/ember_spirit_activate_fire_remnant.png"
   },
   "special_bonus_unique_ember_spirit_1": {
-    "dname": "+200 Flame Guard Barrier Amount"
+    "dname": "+165 Flame Guard Barrier Amount"
   },
   "special_bonus_unique_ember_spirit_2": {
     "dname": "+1s Searing Chains Duration"
@@ -60908,7 +60993,7 @@
     "dname": "-12s Remnant Charge Restore Time"
   },
   "special_bonus_unique_ember_spirit_6": {
-    "dname": "+55 Sleight of Fist Hero Damage"
+    "dname": "+50 Sleight of Fist Hero Damage"
   },
   "special_bonus_unique_ember_spirit_chains_dps": {
     "dname": "+60 Searing Chains Damage"
@@ -61958,7 +62043,7 @@
     "dname": "-30s Sunder Cooldown"
   },
   "special_bonus_unique_terrorblade_2": {
-    "dname": "-4s Reflection Cooldown"
+    "dname": "-5s Reflection Cooldown"
   },
   "special_bonus_unique_terrorblade_3": {
     "dname": "+30s Metamorphosis Duration"
@@ -62890,7 +62975,7 @@
       {
         "key": "damage",
         "header": "DAMAGE/HEAL PER SECOND:",
-        "value": "40"
+        "value": "35"
       },
       {
         "key": "tick_rate",
@@ -64703,10 +64788,10 @@
     "img": "/apps/dota2/images/dota_react/abilities/arc_warden_runic_infusion.png"
   },
   "special_bonus_unique_arc_warden": {
-    "dname": "+35% Spark Wraith Damage"
+    "dname": "+40% Spark Wraith Damage"
   },
   "special_bonus_unique_arc_warden_3": {
-    "dname": "+20 Magnetic Field Attack Speed/Bonus Damage"
+    "dname": "+16 Magnetic Field Attack Speed/Bonus Damage"
   },
   "special_bonus_unique_arc_warden_4": {
     "dname": "+2.0s Flux Duration"
@@ -65739,7 +65824,7 @@
       {
         "key": "abilitychanneltime",
         "header": "CHANNEL TIME:",
-        "value": "1.5",
+        "value": "1.75",
         "generated": true
       },
       {
@@ -65927,10 +66012,10 @@
         "key": "bonus_damage",
         "header": "BONUS DAMAGE:",
         "value": [
-          "40",
-          "80",
+          "30",
+          "75",
           "120",
-          "160"
+          "165"
         ]
       },
       {
@@ -68289,13 +68374,16 @@
     "dname": "Arena Of Blood Grants Team +180 HP Regen"
   },
   "special_bonus_unique_mars_bulwark_damage_reduction": {
-    "dname": "+14%/+7% Bulwark Front/Side damage reduction"
+    "dname": "+10%/+5% Bulwark Front/Side damage reduction"
   },
   "special_bonus_unique_mars_rebuke_radius": {
     "dname": "+100 God's Rebuke Distance"
   },
   "special_bonus_unique_mars_bulwark_cooldown": {
     "dname": "-{s:bonus_AbilityCooldown}s Bulwark Cooldown"
+  },
+  "special_bonus_unique_mars_arena_cooldown": {
+    "dname": "-20s Arena Of Blood Cooldown"
   },
   "void_spirit_aether_remnant": {
     "dname": "Aether Remnant",
@@ -68940,10 +69028,10 @@
       "100"
     ],
     "cd": [
-      "16",
-      "14",
+      "18",
+      "15",
       "12",
-      "10"
+      "9"
     ],
     "img": "/apps/dota2/images/dota_react/abilities/snapfire_scatterblast.png"
   },
@@ -69157,7 +69245,7 @@
       "Hero",
       "Basic"
     ],
-    "desc": "Mortimer spits out the unit that's in his mouth, causing impact damage and stun in a large area. The glob leaves a pool of firespit that slows and applies damage over time. Spit Out has a no minimum launch range.",
+    "desc": "Mortimer spits out the unit that's in his mouth, causing impact damage and stun in a large area. The glob leaves a pool of firespit based on the current level of Mortimer Kisses, that slows and applies damage over time. Spit Out has a no minimum launch range.",
     "attrib": [
       {
         "key": "projectile_speed",
@@ -69190,18 +69278,21 @@
       },
       {
         "key": "burn_damage",
-        "header": "BURN DPS:",
-        "value": "100"
+        "header": "BURN DAMAGE:",
+        "value": "100",
+        "generated": true
       },
       {
         "key": "move_slow_pct",
-        "header": "ENEMY MOVEMENT SLOW:",
-        "value": "25%"
+        "header": "MOVE SLOW PCT:",
+        "value": "25",
+        "generated": true
       },
       {
         "key": "burn_ground_duration",
-        "header": "FIRESPIT POOL DURATION:",
-        "value": "3"
+        "header": "BURN GROUND DURATION:",
+        "value": "3",
+        "generated": true
       },
       {
         "key": "min_lob_travel_time",
@@ -69326,10 +69417,10 @@
         "key": "impact_damage",
         "header": "IMPACT DAMAGE:",
         "value": [
-          "70",
-          "145",
-          "220",
-          "295"
+          "75",
+          "150",
+          "225",
+          "300"
         ]
       },
       {
@@ -69920,10 +70011,10 @@
         "key": "duration",
         "header": "BUFF DURATION:",
         "value": [
-          "3.5",
-          "4",
-          "4.5",
-          "5"
+          "2",
+          "2.5",
+          "3",
+          "3.5"
         ]
       },
       {
@@ -70198,7 +70289,7 @@
     "dname": "+60 Bushwhack Damage"
   },
   "special_bonus_unique_hoodwink_scurry_duration": {
-    "dname": "+1s Scurry Duration"
+    "dname": "+{s:bonus_duration}s Scurry Duration"
   },
   "special_bonus_unique_hoodwink_acorn_shot_bounces": {
     "dname": "+1 Acorn Shot Bounces"
@@ -71580,19 +71671,13 @@
       },
       {
         "key": "bonus_movespeed_pct_allies",
-        "header": "BONUS MOVESPEED PCT ALLIES:",
-        "value": "0",
-        "generated": true
+        "header": "ALLIED BONUS MOVE SPEED:",
+        "value": "0%"
       },
       {
         "key": "aura_radius",
         "header": "AURA RADIUS:",
         "value": "0"
-      },
-      {
-        "key": "bonus_movespeed_pct_extra",
-        "header": "ACTIVE ADDED BONUS SPEED:",
-        "value": "0%"
       }
     ],
     "lore": "As the only member of his species to arrive on this world, locals can only speculate on the Beast's size relative to his kin. Such observation would prove easier of course if the subject didn't eat everything it sees and destroy most of what it doesn't.",
@@ -72271,10 +72356,10 @@
       }
     ],
     "mc": [
-      "145",
-      "160",
-      "175",
-      "190"
+      "140",
+      "155",
+      "170",
+      "185"
     ],
     "cd": "30",
     "img": "/apps/dota2/images/dota_react/abilities/muerta_the_calling.png"
@@ -72405,7 +72490,12 @@
       {
         "key": "effect_radius",
         "header": "EFFECT RADIUS:",
-        "value": "450"
+        "value": [
+          "400",
+          "450",
+          "500",
+          "550"
+        ]
       },
       {
         "key": "abilitycastrange",
