@@ -115,7 +115,10 @@
         "color": "Red",
         "gradient_id": 0,
         "title": "One Man Army",
-        "description": "Axe gains Strength based on his armor as long as he's away from his allies."
+        "description": "Axe gains Strength based on his armor as long as he's away from his allies.",
+        "abilities": [
+          "axe_one_man_army"
+        ]
       },
       {
         "id": 1,
@@ -374,7 +377,10 @@
         "color": "Gray",
         "gradient_id": 1,
         "title": "Vantage Point",
-        "description": "Drow deals %damage_bonus%%% more damage when attacking from high ground."
+        "description": "Drow deals 20% more damage when attacking from high ground.",
+        "abilities": [
+          "drow_ranger_vantage_point"
+        ]
       },
       {
         "id": 1,
@@ -439,7 +445,7 @@
         "color": "Red",
         "gradient_id": 1,
         "title": "Tectonic Buildup",
-        "description": "Aftershock radius is increased by {s:bonus_aftershock_range_increase_per_level_interval} every {s:bonus_aftershock_range_level_interval} hero levels."
+        "description": "Aftershock radius is increased by 50 every 10 hero levels."
       },
       {
         "id": 1,
@@ -512,7 +518,10 @@
         "color": "Red",
         "gradient_id": 2,
         "title": "Bladeform",
-        "description": "Juggernaut gains Agility and Movement Speed as long as he's not taking damage."
+        "description": "Juggernaut gains Agility and Movement Speed as long as he's not taking damage.",
+        "abilities": [
+          "juggernaut_bladeform"
+        ]
       }
     ]
   },
@@ -567,7 +576,10 @@
         "color": "Blue",
         "gradient_id": 1,
         "title": "Moonlight Shadow",
-        "description": "Mirana's Ultimate grants allies invisiblity and movement speed."
+        "description": "Mirana's Ultimate grants allies invisiblity and movement speed.",
+        "abilities": [
+          "mirana_invis"
+        ]
       },
       {
         "id": 1,
@@ -576,7 +588,10 @@
         "color": "Gray",
         "gradient_id": 3,
         "title": "Solar Flare",
-        "description": "Mirana's Ultimate grants allies increasing attack speed and damage over time."
+        "description": "Mirana's Ultimate grants allies increasing attack speed and damage over time.",
+        "abilities": [
+          "mirana_solar_flare"
+        ]
       }
     ]
   },
@@ -632,7 +647,7 @@
         "color": "Gray",
         "gradient_id": 0,
         "title": "Lasting Presence",
-        "description": "Presence of the Dark Lord temporarily reduces more armor after nearby enemy heroes are killed. Every hero kill increases Necromastery's max souls by {s:bonus_max_soul_increase_on_hero_kill} until Shadow Fiend dies."
+        "description": "Presence of the Dark Lord temporarily reduces more armor after nearby enemy heroes are killed. Every hero kill increases Necromastery's max souls by 1 until Shadow Fiend dies."
       },
       {
         "id": 1,
@@ -699,7 +714,10 @@
         "color": "Green",
         "gradient_id": 0,
         "title": "Ebb",
-        "description": "Morphling's Primary Attribute is now <font color='#9acd32'>Agility</font> and Adaptive Strike pushes enemies."
+        "description": "Morphling's Primary Attribute is now Agility and Adaptive Strike pushes enemies.",
+        "abilities": [
+          "morphling_ebb"
+        ]
       },
       {
         "id": 1,
@@ -708,7 +726,10 @@
         "color": "Red",
         "gradient_id": 0,
         "title": "Flow",
-        "description": "Morphling's Primary Attribute is now <font color='#ff0000'>Strength</font> and Attribute Shift can accelerate his cooldowns."
+        "description": "Morphling's Primary Attribute is now Strength and Attribute Shift can accelerate his cooldowns.",
+        "abilities": [
+          "morphling_flow"
+        ]
       }
     ]
   },
@@ -964,7 +985,10 @@
         "color": "Blue",
         "gradient_id": 0,
         "title": "Dynamo",
-        "description": "Razor gains %spell_amp_mult%%% spell amplification for every %spell_amp_damage_divisor% points of attack damage."
+        "description": "Razor gains 1% spell amplification for every 20 points of attack damage.",
+        "abilities": [
+          "razor_dynamo"
+        ]
       }
     ]
   },
@@ -1158,7 +1182,10 @@
         "color": "Red",
         "gradient_id": 0,
         "title": "Wrath of God",
-        "description": "Sven gains additional attack damage from Strength, but has decreased base damage."
+        "description": "Sven gains additional attack damage from Strength, but has decreased base damage.",
+        "abilities": [
+          "sven_wrath_of_god"
+        ]
       }
     ]
   },
@@ -1223,7 +1250,10 @@
         "color": "Green",
         "gradient_id": 4,
         "title": "Insurmountable",
-        "description": "Tiny gains Status and Slow Resistance from Strength."
+        "description": "Tiny gains Status and Slow Resistance from Strength.",
+        "abilities": [
+          "tiny_insurmountable"
+        ]
       }
     ]
   },
@@ -1278,7 +1308,7 @@
         "color": "Purple",
         "gradient_id": 2,
         "title": "Avenging Missile",
-        "description": "Magic Missile deals {s:bonus_damage_per_lasthit} bonus damage for every creep the enemy has killed."
+        "description": "Magic Missile deals 0.75 bonus damage for every creep the enemy has killed."
       },
       {
         "id": 1,
@@ -1287,7 +1317,10 @@
         "color": "Blue",
         "gradient_id": 1,
         "title": "Soul Strike",
-        "description": "Vengeful Spirit's ranged attacks behave as if they were melee attacks."
+        "description": "Vengeful Spirit's ranged attacks behave as if they were melee attacks.",
+        "abilities": [
+          "vengefulspirit_soul_strike"
+        ]
       }
     ]
   },
@@ -1556,7 +1589,10 @@
         "color": "Red",
         "gradient_id": 0,
         "title": "Slow Burn",
-        "description": "Lina's spells deal extra damage over time."
+        "description": "Lina's spells deal extra damage over time.",
+        "abilities": [
+          "lina_slow_burn"
+        ]
       }
     ]
   },
@@ -1675,7 +1711,7 @@
         "color": "Purple",
         "gradient_id": 2,
         "title": "Essence Eater",
-        "description": "Mana Drain mana per second increased and damage equal to {s:bonus_damage_pct}% of mana stolen."
+        "description": "Mana Drain mana per second increased and damage equal to 100% of mana stolen."
       },
       {
         "id": 1,
@@ -1748,7 +1784,7 @@
         "color": "Red",
         "gradient_id": 1,
         "title": "Massive Serpent Ward",
-        "description": "Summons a single massive Serpent Ward with {s:bonus_mega_ward_multiplier_tooltip}x damage and bounty values and {s:bonus_mega_ward_health_tooltip}x health."
+        "description": "Summons a single massive Serpent Ward with 10x damage and bounty values and 10x health."
       }
     ]
   },
@@ -1812,7 +1848,7 @@
         "color": "Purple",
         "gradient_id": 1,
         "title": "Brineguard",
-        "description": "Corrosive Haze increases Slardar's armor by {s:bonus_armor_pct}% of the total armor reduced."
+        "description": "Corrosive Haze increases Slardar's armor by 40% of the total armor reduced."
       }
     ]
   },
@@ -1877,7 +1913,10 @@
         "color": "Green",
         "gradient_id": 0,
         "title": "Krill Eater",
-        "description": "Tidehunter grows larger and gains extra bonuses per level."
+        "description": "Tidehunter grows larger and gains extra bonuses per level.",
+        "abilities": [
+          "tidehunter_krill_eater"
+        ]
       }
     ]
   },
@@ -2014,7 +2053,7 @@
         "color": "Purple",
         "gradient_id": 2,
         "title": "Exterminator",
-        "description": "Tricks of the Trade has {s:bonus_creep_agility_multiplier}x Agility Bonus when attacking non-hero units."
+        "description": "Tricks of the Trade has 4.5x Agility Bonus when attacking non-hero units."
       }
     ]
   },
@@ -2069,7 +2108,10 @@
         "color": "Gray",
         "gradient_id": 3,
         "title": "Event Horizon",
-        "description": "Units in a %radius% radius moving away from Enigma have a %speed_bonus%%% movespeed penalty."
+        "description": "Units in a 600 radius moving away from Enigma have a 9% movespeed penalty.",
+        "abilities": [
+          "enigma_event_horizon"
+        ]
       },
       {
         "id": 1,
@@ -2078,7 +2120,10 @@
         "color": "Purple",
         "gradient_id": 0,
         "title": "Splitting Image",
-        "description": "Enigma spawns Eidolons upon receiving damage."
+        "description": "Enigma spawns Eidolons upon receiving damage.",
+        "abilities": [
+          "enigma_splitting_image"
+        ]
       }
     ]
   },
@@ -2335,7 +2380,10 @@
         "color": "Gray",
         "gradient_id": 3,
         "title": "Black Grimoire",
-        "description": "Grants Warlock the item Black Grimoire, which can be consumed to gain experience for each kill Warlock participated in. Starts with 1 charge."
+        "description": "Grants Warlock the item Black Grimoire, which can be consumed to gain experience for each kill Warlock participated in. Starts with 1 charge.",
+        "abilities": [
+          "warlock_black_grimoire"
+        ]
       }
     ]
   },
@@ -2455,7 +2503,10 @@
         "color": "Blue",
         "gradient_id": 0,
         "title": "Succubus",
-        "description": "Queen of Pain gains Spell Lifesteal that increases with proximity to her enemies."
+        "description": "Queen of Pain gains Spell Lifesteal that increases with proximity to her enemies.",
+        "abilities": [
+          "queenofpain_succubus"
+        ]
       },
       {
         "id": 1,
@@ -2464,7 +2515,10 @@
         "color": "Red",
         "gradient_id": 0,
         "title": "Masochist",
-        "description": "Queen of Pain has bonus Spell Amplification but a percentage of her spell damage is reflected back to her."
+        "description": "Queen of Pain has bonus Spell Amplification but a percentage of her spell damage is reflected back to her.",
+        "abilities": [
+          "queenofpain_masochist"
+        ]
       }
     ]
   },
@@ -2593,7 +2647,10 @@
         "color": "Green",
         "gradient_id": 0,
         "title": "Chronosphere",
-        "description": "Faceless Void can cast <b color='white'>Chronosphere</b>, trapping enemies in a sphere."
+        "description": "Faceless Void can cast Chronosphere , trapping enemies in a sphere.",
+        "abilities": [
+          "faceless_void_chronosphere"
+        ]
       },
       {
         "id": 2,
@@ -2602,7 +2659,10 @@
         "color": "Purple",
         "gradient_id": 1,
         "title": "Time Zone",
-        "description": "Faceless Void can cast <b color='white'>Time Zone</b>, dramatically slowing down enemies and speeding up allies in an area."
+        "description": "Faceless Void can cast Time Zone , dramatically slowing down enemies and speeding up allies in an area.",
+        "abilities": [
+          "faceless_void_time_zone"
+        ]
       }
     ]
   },
@@ -2657,7 +2717,10 @@
         "color": "Yellow",
         "gradient_id": 0,
         "title": "Bone Guard",
-        "description": "Wraith King can summon skeletons to fight for him."
+        "description": "Wraith King can summon skeletons to fight for him.",
+        "abilities": [
+          "skeleton_king_bone_guard"
+        ]
       },
       {
         "id": 1,
@@ -2666,7 +2729,10 @@
         "color": "Red",
         "gradient_id": 0,
         "title": "Spectral Blade",
-        "description": "Wraith King's attacks curse enemies, dealing additional damage after a delay."
+        "description": "Wraith King's attacks curse enemies, dealing additional damage after a delay.",
+        "abilities": [
+          "skeleton_king_spectral_blade"
+        ]
       }
     ]
   },
@@ -2730,7 +2796,10 @@
         "color": "Green",
         "gradient_id": 1,
         "title": "Spirit Collector",
-        "description": "Hero deaths empower your next Exorcism."
+        "description": "Hero deaths empower your next Exorcism.",
+        "abilities": [
+          "death_prophet_spirit_collector"
+        ]
       },
       {
         "id": 2,
@@ -2739,7 +2808,10 @@
         "color": "Red",
         "gradient_id": 1,
         "title": "Mourning Ritual",
-        "description": "Death Prophet delays a percentage of incoming damage, taking the damage in even intervals over a short duration."
+        "description": "Death Prophet delays a percentage of incoming damage, taking the damage in even intervals over a short duration.",
+        "abilities": [
+          "death_prophet_mourning_ritual"
+        ]
       }
     ]
   },
@@ -2803,7 +2875,7 @@
         "color": "Gray",
         "gradient_id": 0,
         "title": "Methodical",
-        "description": "Coup de Grace procs every {s:bonus_attacks_to_proc} attacks on the same hero or {s:bonus_attacks_to_proc_creeps} attacks on non hero units."
+        "description": "Coup de Grace procs every 6 attacks on the same hero or 4 attacks on non hero units."
       }
     ]
   },
@@ -2867,7 +2939,7 @@
         "color": "Purple",
         "gradient_id": 2,
         "title": "Rewards of Ruin",
-        "description": "Pugna receives {s:bonus_tower_scale}% spell amplification per destroyed tower."
+        "description": "Pugna receives 1.25% spell amplification per destroyed tower."
       }
     ]
   },
@@ -3200,7 +3272,10 @@
         "color": "Red",
         "gradient_id": 1,
         "title": "Nothl Boon",
-        "description": "Dazzle's overhealing is converted into a barrier."
+        "description": "Dazzle's overhealing is converted into a barrier.",
+        "abilities": [
+          "dazzle_nothl_boon"
+        ]
       },
       {
         "id": 1,
@@ -3329,7 +3404,10 @@
         "color": "Blue",
         "gradient_id": 1,
         "title": "Chronoptic Nourishment",
-        "description": "Leshrac's attacks restore mana."
+        "description": "Leshrac's attacks restore mana.",
+        "abilities": [
+          "leshrac_chronoptic_nourishment"
+        ]
       },
       {
         "id": 1,
@@ -3402,7 +3480,7 @@
         "color": "Blue",
         "gradient_id": 2,
         "title": "Ironwood Treant",
-        "description": "Nature's Call creates only {s:bonus_max_treants} Treant that has more health, more damage, increased vision, increased movement speed, and is Reinforced."
+        "description": "Nature's Call creates only 1 =1 =1 =1 Treant that has more health, more damage, increased vision, increased movement speed, and is Reinforced."
       }
     ]
   },
@@ -3459,7 +3537,10 @@
         "color": "Yellow",
         "gradient_id": 3,
         "title": "Corpse Eater",
-        "description": "Lifestealer gains %bonus_hp_per_creep% HP whenever he kills a creep, and %bonus_hp_per_hero% whenever he kills a hero."
+        "description": "Lifestealer gains 1 HP whenever he kills a creep, and 15 whenever he kills a hero.",
+        "abilities": [
+          "life_stealer_corpse_eater"
+        ]
       },
       {
         "id": 1,
@@ -3468,7 +3549,10 @@
         "color": "Yellow",
         "gradient_id": 3,
         "title": "Rage",
-        "description": "Lifestealer can cast <b color='white'>Rage</b>, becoming Debuff Immune and increasing magic resistance."
+        "description": "Lifestealer can cast Rage , becoming Debuff Immune and increasing magic resistance.",
+        "abilities": [
+          "life_stealer_rage"
+        ]
       },
       {
         "id": 2,
@@ -3477,7 +3561,10 @@
         "color": "Red",
         "gradient_id": 0,
         "title": "Unfettered",
-        "description": "Lifestealer can cast <b color='white'>Unfettered</b> to dispel himself and become more resilient. Can cast while stunned."
+        "description": "Lifestealer can cast Unfettered to dispel himself and become more resilient. Can cast while stunned.",
+        "abilities": [
+          "life_stealer_unfettered"
+        ]
       }
     ]
   },
@@ -3532,7 +3619,10 @@
         "color": "Gray",
         "gradient_id": 3,
         "title": "Quick Wit",
-        "description": "Dark Seer also gains Attack Speed from Intelligence."
+        "description": "Dark Seer also gains Attack Speed from Intelligence.",
+        "abilities": [
+          "dark_seer_quick_wit"
+        ]
       },
       {
         "id": 1,
@@ -3541,7 +3631,10 @@
         "color": "Purple",
         "gradient_id": 2,
         "title": "Heart of Battle",
-        "description": "Dark Seer moves faster when near other heroes."
+        "description": "Dark Seer moves faster when near other heroes.",
+        "abilities": [
+          "dark_seer_heart_of_battle"
+        ]
       }
     ]
   },
@@ -3670,7 +3763,10 @@
         "color": "Yellow",
         "gradient_id": 0,
         "title": "Healing Hammer",
-        "description": "Ability damage done to enemies by Omniknight heals him over time."
+        "description": "Ability damage done to enemies by Omniknight heals him over time.",
+        "abilities": [
+          "omniknight_healing_hammer"
+        ]
       }
     ]
   },
@@ -3873,7 +3969,10 @@
         "color": "Gray",
         "gradient_id": 0,
         "title": "Night Reign",
-        "description": "The game now starts at night instead of day. Night is longer than day."
+        "description": "The game now starts at night instead of day. Night is longer than day.",
+        "abilities": [
+          "night_stalker_night_reign"
+        ]
       }
     ]
   },
@@ -4001,7 +4100,10 @@
         "color": "Yellow",
         "gradient_id": 0,
         "title": "Cutpurse",
-        "description": "Bounty Hunter steals gold when targeting enemy heroes with his abilities or items."
+        "description": "Bounty Hunter steals gold when targeting enemy heroes with his abilities or items.",
+        "abilities": [
+          "bounty_hunter_cutpurse"
+        ]
       }
     ]
   },
@@ -4121,7 +4223,10 @@
         "color": "Red",
         "gradient_id": 0,
         "title": "Liquid Fire",
-        "description": "Jakiro can imbue his attacks with Attack Speed Slow and Damage over Time in an AoE."
+        "description": "Jakiro can imbue his attacks with Attack Speed Slow and Damage over Time in an AoE.",
+        "abilities": [
+          "jakiro_liquid_fire"
+        ]
       },
       {
         "id": 1,
@@ -4130,7 +4235,10 @@
         "color": "Blue",
         "gradient_id": 1,
         "title": "Liquid Frost",
-        "description": "Jakiro can imbue his attacks with Movement Speed Slow and a debuff that amplifies damage from his other spells."
+        "description": "Jakiro can imbue his attacks with Movement Speed Slow and a debuff that amplifies damage from his other spells.",
+        "abilities": [
+          "jakiro_liquid_ice"
+        ]
       }
     ]
   },
@@ -4185,7 +4293,10 @@
         "color": "Yellow",
         "gradient_id": 1,
         "title": "Stoked",
-        "description": "Batrider gains Move Speed and Spell Amplification when displacing enemies."
+        "description": "Batrider gains Move Speed and Spell Amplification when displacing enemies.",
+        "abilities": [
+          "batrider_stoked"
+        ]
       },
       {
         "id": 1,
@@ -4406,7 +4517,7 @@
         "color": "Red",
         "gradient_id": 0,
         "title": "Gluttony",
-        "description": "Devour now has {s:bonus_AbilityCharges} charges and stolen creep abilities are upgraded by one level."
+        "description": "Devour now has 2 charges and stolen creep abilities are upgraded by one level."
       },
       {
         "id": 1,
@@ -4415,7 +4526,10 @@
         "color": "Yellow",
         "gradient_id": 0,
         "title": "Devil's Bargain",
-        "description": "Doom can sell items for %bonus_item_sellback_percent%%% of their value, but his buyback costs are increased by %bonus_buyback_penalty%%%."
+        "description": "Doom can sell items for 90% of their value, but his buyback costs are increased by 15%.",
+        "abilities": [
+          "doom_bringer_devils_bargain"
+        ]
       },
       {
         "id": 2,
@@ -4424,7 +4538,7 @@
         "color": "Gray",
         "gradient_id": 0,
         "title": "Impending Doom",
-        "description": "Every {s:bonus_upgrade_interval} minutes, Doom's duration is increased by {s:bonus_upgrade_amount}s. Doom DPS decreased."
+        "description": "Every 6.66 minutes, Doom's duration is increased by 0.66s. Doom DPS decreased."
       }
     ]
   },
@@ -4553,7 +4667,10 @@
         "color": "Blue",
         "gradient_id": 0,
         "title": "Bear Down",
-        "description": "Debuffs inflicted by Ursa last longer."
+        "description": "Debuffs inflicted by Ursa last longer.",
+        "abilities": [
+          "ursa_bear_down"
+        ]
       }
     ]
   },
@@ -4739,7 +4856,7 @@
         "color": "Yellow",
         "gradient_id": 0,
         "title": "Seed Money",
-        "description": "Alchemist starts with {s:bonus_starting_gold_bonus} more gold."
+        "description": "Alchemist starts with 250 more gold."
       },
       {
         "id": 1,
@@ -4881,7 +4998,10 @@
         "color": "Purple",
         "gradient_id": 1,
         "title": "Irrepressible",
-        "description": "Silencer cannot be silenced."
+        "description": "Silencer cannot be silenced.",
+        "abilities": [
+          "silencer_irrepressible"
+        ]
       },
       {
         "id": 1,
@@ -5092,7 +5212,7 @@
         "color": "Yellow",
         "gradient_id": 1,
         "title": "Drunken Master",
-        "description": "When brewed up, Brewmaster moves with a varying amount of movement speed, altering between {s:bonus_min_movement}% slower and {s:bonus_max_movement}% faster for the duration."
+        "description": "When brewed up, Brewmaster moves with a varying amount of movement speed, altering between 15% slower and 50% faster for the duration."
       }
     ]
   },
@@ -5157,7 +5277,10 @@
         "color": "Purple",
         "gradient_id": 0,
         "title": "Shadow Servant",
-        "description": "Shadow Demon creates illusions of heroes that die near him."
+        "description": "Shadow Demon creates illusions of heroes that die near him.",
+        "abilities": [
+          "shadow_demon_shadow_servant"
+        ]
       }
     ]
   },
@@ -5230,7 +5353,10 @@
         "color": "Gray",
         "gradient_id": 1,
         "title": "Bear Necessities",
-        "description": "Lone Druid's items are more powerful and his inventory is smaller."
+        "description": "Lone Druid's items are more powerful and his inventory is smaller.",
+        "abilities": [
+          "lone_druid_bear_necessities"
+        ]
       }
     ]
   },
@@ -5285,7 +5411,10 @@
         "color": "Red",
         "gradient_id": 1,
         "title": "Phantasmagoria",
-        "description": "All Chaos Knight Illusions are Strong Illusions and take less damage when near him."
+        "description": "All Chaos Knight Illusions are Strong Illusions and take less damage when near him.",
+        "abilities": [
+          "chaos_knight_phantasmagoria"
+        ]
       },
       {
         "id": 1,
@@ -5294,7 +5423,7 @@
         "color": "Gray",
         "gradient_id": 0,
         "title": "Irrationality",
-        "description": "Reality Rift has equal chances of applying Break, Disarm, or Silence for {s:bonus_additional_debuff_duration_percent}% of the base debuff duration in addition to its normal effects."
+        "description": "Reality Rift has equal chances of applying Break, Disarm, or Silence for 50% of the base debuff duration in addition to its normal effects."
       }
     ]
   },
@@ -5360,7 +5489,10 @@
         "color": "Yellow",
         "gradient_id": 1,
         "title": "Pack Rat",
-        "description": "All Meepos can use the item in the neutral item slot. "
+        "description": "All Meepos can use the item in the neutral item slot. ",
+        "abilities": [
+          "meepo_pack_rat"
+        ]
       }
     ]
   },
@@ -5416,7 +5548,7 @@
         "color": "Yellow",
         "gradient_id": 2,
         "title": "Primeval Power",
-        "description": "Treant gains +{s:bonus_attack_damage_per_level} base attack damage per hero level."
+        "description": "Treant gains +5 base attack damage per hero level."
       },
       {
         "id": 1,
@@ -5481,7 +5613,7 @@
         "color": "Red",
         "gradient_id": 0,
         "title": "Fat Chance",
-        "description": "Multicast chance is increased by  {s:bonus_strength_mult}% of Ogre Magi's Strength."
+        "description": "Multicast chance is increased by  0.06% of Ogre Magi's Strength."
       },
       {
         "id": 1,
@@ -5490,7 +5622,7 @@
         "color": "Blue",
         "gradient_id": 1,
         "title": "Learning Curve",
-        "description": "Level requirement of all spells and talents reduced by {s:bonus_required_level}. You get {s:bonus_level_one_ability_points} Ability Points at level one and {s:bonus_level_two_ability_points} Ability Points at level two."
+        "description": "Level requirement of all spells and talents reduced by 1. You get 0 Ability Points at level one and 3 Ability Points at level two."
       }
     ]
   },
@@ -5687,7 +5819,10 @@
         "color": "Blue",
         "gradient_id": 1,
         "title": "Kinetic Fence",
-        "description": "Replaces Kinetic Field with the ability to create impassable walls."
+        "description": "Replaces Kinetic Field with the ability to create impassable walls.",
+        "abilities": [
+          "disruptor_kinetic_fence"
+        ]
       }
     ]
   },
@@ -5743,7 +5878,10 @@
         "color": "Blue",
         "gradient_id": 3,
         "title": "Mana Burn",
-        "description": "Nyx Assassin's ability damage burns enemies' mana."
+        "description": "Nyx Assassin's ability damage burns enemies' mana.",
+        "abilities": [
+          "nyx_assassin_innate_mana_burn"
+        ]
       },
       {
         "id": 1,
@@ -5752,7 +5890,7 @@
         "color": "Red",
         "gradient_id": 2,
         "title": "Scuttle",
-        "description": "For the first {s:bonus_free_pathing_duration}s of Vendetta, Nyx is hasted and has unobstructed pathing."
+        "description": "For the first 15s of Vendetta, Nyx is hasted and has unobstructed pathing."
       }
     ]
   },
@@ -5808,7 +5946,10 @@
         "color": "Yellow",
         "gradient_id": 2,
         "title": "Rip Tide",
-        "description": "Every 6 attacks from Naga and her illusions, enemies around them are damaged and their Armor is reduced."
+        "description": "Every 6 attacks from Naga and her illusions, enemies around them are damaged and their Armor is reduced.",
+        "abilities": [
+          "naga_siren_rip_tide"
+        ]
       },
       {
         "id": 1,
@@ -5817,7 +5958,10 @@
         "color": "Green",
         "gradient_id": 2,
         "title": "Deluge",
-        "description": "Naga Siren can create a splash around herself and her illusions, damaging enemies and reducing their Status Resistance."
+        "description": "Naga Siren can create a splash around herself and her illusions, damaging enemies and reducing their Status Resistance.",
+        "abilities": [
+          "naga_siren_deluge"
+        ]
       }
     ]
   },
@@ -5876,7 +6020,10 @@
         "color": "Yellow",
         "gradient_id": 1,
         "title": "Solar Bind",
-        "description": "Grants the Solar Bind ability while active."
+        "description": "Grants the Solar Bind ability while active.",
+        "abilities": [
+          "keeper_of_the_light_radiant_bind"
+        ]
       },
       {
         "id": 1,
@@ -5885,7 +6032,10 @@
         "color": "Gray",
         "gradient_id": 3,
         "title": "Recall",
-        "description": "After a short delay, teleports the targeted friendly hero to your location.  If the targeted friendly hero takes player based damage during this time, the ability is interrupted. When cast, the teleport target's movement speed is increased. Upon teleporting, Chakra Magic and the increased movement speed buff are applied to both Keeper of the Light and the teleport target.<br><br> If alt-cast, teleports Keeper of the Light to the target Ally instead. <br><br> Ability Level increases with levels of Spirit Form."
+        "description": "After a short delay, teleports the targeted friendly hero to your location. If the targeted friendly hero takes player based damage during this time, the ability is interrupted. When cast, the teleport target's movement speed is increased. Upon teleporting, Chakra Magic and the increased movement speed buff are applied to both Keeper of the Light and the teleport target.\n\n If alt-cast, teleports Keeper of the Light to the target Ally instead. \n\n Ability Level increases with levels of Spirit Form.",
+        "abilities": [
+          "keeper_of_the_light_recall"
+        ]
       }
     ]
   },
@@ -6026,7 +6176,7 @@
         "color": "Yellow",
         "gradient_id": 0,
         "title": "Death Toll",
-        "description": "Soul Assumption kills give up to {s:bonus_gold_max_tooltip} bonus gold."
+        "description": "Soul Assumption kills give up to 105 140 175 210 bonus gold."
       }
     ]
   },
@@ -6164,7 +6314,10 @@
         "color": "Yellow",
         "gradient_id": 2,
         "title": "Venomous Volley",
-        "description": "Every %attack_count% attacks, Medusa applies poison to her arrow that briefly reduces movement speed, attack speed, and cast speed."
+        "description": "Every 5 attacks, Medusa applies poison to her arrow that briefly reduces movement speed, attack speed, and cast speed.",
+        "abilities": [
+          "medusa_venomed_volley"
+        ]
       }
     ]
   },
@@ -6228,7 +6381,7 @@
         "color": "Red",
         "gradient_id": 1,
         "title": "Bad Influence",
-        "description": "Battle Trance grants allied heroes {s:bonus_attack_speed_share_percent}% of the attack speed bonus."
+        "description": "Battle Trance grants allied heroes 40% of the attack speed bonus."
       }
     ]
   },
@@ -6293,7 +6446,10 @@
         "color": "Gray",
         "gradient_id": 3,
         "title": "Horsepower",
-        "description": "Centaur Warrunner gains Movement Speed based on his Strength."
+        "description": "Centaur Warrunner gains Movement Speed based on his Strength.",
+        "abilities": [
+          "centaur_horsepower"
+        ]
       }
     ]
   },
@@ -6434,7 +6590,10 @@
         "color": "Red",
         "gradient_id": 1,
         "title": "Twisted Chakram",
-        "description": "Launches a second independent Chakram that follows a curved path and returns to Timbersaw, damaging and slowing enemies it passes through. Enemies caught in the saw blade will move more slowly for every %slow_health_percentage%%% of health missing."
+        "description": "Launches a second independent Chakram that follows a curved path and returns to Timbersaw, damaging and slowing enemies it passes through. Enemies caught in the saw blade will move more slowly for every 5% of health missing.",
+        "abilities": [
+          "shredder_twisted_chakram"
+        ]
       }
     ]
   },
@@ -6564,7 +6723,10 @@
         "color": "Blue",
         "gradient_id": 3,
         "title": "Tag Team",
-        "description": "Tusk can cast <b color='white'>Tag Team</b> causing nearby enemies to receive bonus damage from attacks."
+        "description": "Tusk can cast Tag Team causing nearby enemies to receive bonus damage from attacks.",
+        "abilities": [
+          "tusk_tag_team"
+        ]
       },
       {
         "id": 1,
@@ -6573,7 +6735,10 @@
         "color": "Yellow",
         "gradient_id": 0,
         "title": "Drinking Buddies",
-        "description": "Tusk can cast <b color='white'>Drinking Buddies</b>, pulling him and a teammate closer and granting both bonus Movement Speed and Attack Damage."
+        "description": "Tusk can cast Drinking Buddies , pulling him and a teammate closer and granting both bonus Movement Speed and Attack Damage.",
+        "abilities": [
+          "tusk_drinking_buddies"
+        ]
       }
     ]
   },
@@ -6628,7 +6793,10 @@
         "color": "Blue",
         "gradient_id": 0,
         "title": "Shield of the Scion",
-        "description": "Skywrath Mage gains a magic damage barrier when dealing damage to heroes."
+        "description": "Skywrath Mage gains a magic damage barrier when dealing damage to heroes.",
+        "abilities": [
+          "skywrath_mage_shield_of_the_scion"
+        ]
       },
       {
         "id": 1,
@@ -6637,7 +6805,10 @@
         "color": "Yellow",
         "gradient_id": 2,
         "title": "Staff of the Scion",
-        "description": "Skywrath Mage's Cooldowns are reduced when he deals spell damage to enemy heroes."
+        "description": "Skywrath Mage's Cooldowns are reduced when he deals spell damage to enemy heroes.",
+        "abilities": [
+          "skywrath_mage_staff_of_the_scion"
+        ]
       }
     ]
   },
@@ -6692,7 +6863,10 @@
         "color": "Gray",
         "gradient_id": 0,
         "title": "The Quickening",
-        "description": "Units dying nearby Abaddon lower his cooldowns."
+        "description": "Units dying nearby Abaddon lower his cooldowns.",
+        "abilities": [
+          "abaddon_the_quickening"
+        ]
       },
       {
         "id": 1,
@@ -6767,7 +6941,10 @@
         "color": "Yellow",
         "gradient_id": 0,
         "title": "Momentum",
-        "description": "Elder Titan's Base Attack Speed is reduced but his Movement Speed also grants Attack Speed."
+        "description": "Elder Titan's Base Attack Speed is reduced but his Movement Speed also grants Attack Speed.",
+        "abilities": [
+          "elder_titan_momentum"
+        ]
       }
     ]
   },
@@ -6895,7 +7072,7 @@
         "color": "Yellow",
         "gradient_id": 1,
         "title": "Chain Gang",
-        "description": "Searing Chains affect {s:bonus_unit_count} more enemy and also spawn from Fire Remnants."
+        "description": "Searing Chains affect 1 more enemy and also spawn from Fire Remnants."
       }
     ]
   },
@@ -7091,7 +7268,10 @@
         "color": "Red",
         "gradient_id": 2,
         "title": "Dying Light",
-        "description": "Phoenix deals %damage_pct%%% of his missing health as magic damage to all enemies in a %radius% radius every second."
+        "description": "Phoenix deals 4.5% of his missing health as magic damage to all enemies in a 400 radius every second.",
+        "abilities": [
+          "phoenix_dying_light"
+        ]
       },
       {
         "id": 1,
@@ -7155,7 +7335,10 @@
         "color": "Red",
         "gradient_id": 2,
         "title": "Clairvoyant Curse",
-        "description": "Spell amplification increased by %spell_amplification%%% per hero level."
+        "description": "Spell amplification increased by 0.75% per hero level.",
+        "abilities": [
+          "oracle_clairvoyant_curse"
+        ]
       },
       {
         "id": 1,
@@ -7164,7 +7347,10 @@
         "color": "Green",
         "gradient_id": 1,
         "title": "Clairvoyant Cure",
-        "description": "Heal amplification increased by %heal_amplification%%% per hero level."
+        "description": "Heal amplification increased by 0.75% per hero level.",
+        "abilities": [
+          "oracle_clairvoyant_cure"
+        ]
       }
     ]
   },
@@ -7219,7 +7405,10 @@
         "color": "Gray",
         "gradient_id": 0,
         "title": "Squee's Scope",
-        "description": "Techies gains %attack_range_tooltip% attack range and attack projectile speed for each point of attack speed."
+        "description": "Techies gains 1 attack range and attack projectile speed for each point of attack speed.",
+        "abilities": [
+          "techies_squees_scope"
+        ]
       },
       {
         "id": 1,
@@ -7237,7 +7426,10 @@
         "color": "Blue",
         "gradient_id": 1,
         "title": "Spoon's Stash",
-        "description": "Techies can use items in their backpack as if they were in their inventory."
+        "description": "Techies can use items in their backpack as if they were in their inventory.",
+        "abilities": [
+          "techies_spoons_stash"
+        ]
       }
     ]
   },
@@ -7292,7 +7484,10 @@
         "color": "Blue",
         "gradient_id": 0,
         "title": "Essence of the Blueheart",
-        "description": "Winter Wyvern's heals also restore mana."
+        "description": "Winter Wyvern's heals also restore mana.",
+        "abilities": [
+          "winter_wyvern_essence_of_the_blueheart"
+        ]
       },
       {
         "id": 1,
@@ -7301,7 +7496,10 @@
         "color": "Gray",
         "gradient_id": 3,
         "title": "Dragon Sight",
-        "description": "Winter Wyvern gains bonus damage when her attack range is over %attack_range_min%."
+        "description": "Winter Wyvern gains bonus damage when her attack range is over 400.",
+        "abilities": [
+          "winter_wyvern_dragon_sight"
+        ]
       }
     ]
   },
@@ -7429,7 +7627,10 @@
         "color": "Yellow",
         "gradient_id": 3,
         "title": "Abyssal Horde",
-        "description": "Fiend's Gate periodically summons minions."
+        "description": "Fiend's Gate periodically summons minions.",
+        "abilities": [
+          "abyssal_underlord_abyssal_horde"
+        ]
       }
     ]
   },
@@ -7486,7 +7687,7 @@
         "color": "Red",
         "gradient_id": 2,
         "title": "Wukong's Faithful",
-        "description": "Monkey King's soldiers last longer and do not disperse unless he spends more than {s:bonus_leadership_time_buffer} seconds outside the area."
+        "description": "Monkey King's soldiers last longer and do not disperse unless he spends more than 3.0 seconds outside the area."
       },
       {
         "id": 1,
@@ -7495,7 +7696,7 @@
         "color": "Green",
         "gradient_id": 4,
         "title": "Simian Stride",
-        "description": "Tree Dance has no cooldown while Monkey King is above {s:bonus_no_cooldown_hp_threshold}% health."
+        "description": "Tree Dance has no cooldown while Monkey King is above 90% health."
       }
     ]
   },
@@ -7819,7 +8020,10 @@
         "color": "Gray",
         "gradient_id": 3,
         "title": "Symmetry",
-        "description": "Void Spirit gains a physical damage barrier when dealing magic damage to enemy heroes."
+        "description": "Void Spirit gains a physical damage barrier when dealing magic damage to enemy heroes.",
+        "abilities": [
+          "void_spirit_symmetry"
+        ]
       },
       {
         "id": 2,
@@ -7828,7 +8032,7 @@
         "color": "Gray",
         "gradient_id": 3,
         "title": "Call of the Void",
-        "description": "Upon exiting Dissimilate, Aether Remnants are created at the {s:bonus_aether_remnant_count} portals furthest from Void Spirit."
+        "description": "Upon exiting Dissimilate, Aether Remnants are created at the 3 portals furthest from Void Spirit."
       }
     ]
   },
@@ -8079,7 +8283,10 @@
         "color": "Gray",
         "gradient_id": 3,
         "title": "Sidekick",
-        "description": "Marci can protect an ally, granting them shared lifesteal and damage. Effect is stronger if she's close to the ally."
+        "description": "Marci can protect an ally, granting them shared lifesteal and damage. Effect is stronger if she's close to the ally.",
+        "abilities": [
+          "marci_guardian"
+        ]
       },
       {
         "id": 1,
@@ -8088,7 +8295,10 @@
         "color": "Blue",
         "gradient_id": 1,
         "title": "Bodyguard",
-        "description": "Marci can protect an ally, countering attacks directed towards them if she's in range of the enemy."
+        "description": "Marci can protect an ally, countering attacks directed towards them if she's in range of the enemy.",
+        "abilities": [
+          "marci_bodyguard"
+        ]
       }
     ]
   },
@@ -8220,7 +8430,10 @@
         "color": "Yellow",
         "gradient_id": 0,
         "title": "Ofrenda",
-        "description": "Muerta can place a beneficial Ofrenda on the map to respawn there instead of the fountain."
+        "description": "Muerta can place a beneficial Ofrenda on the map to respawn there instead of the fountain.",
+        "abilities": [
+          "muerta_ofrenda"
+        ]
       }
     ]
   }

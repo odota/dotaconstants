@@ -138,6 +138,7 @@ const localizationUrl =
 
 let aghsAbilityValues = {};
 const heroDataUrls = [];
+const heroDataIndex = [];
 const abilitiesUrls = [abilitiesLoc, npcAbilitiesUrl];
 
 start();
@@ -163,6 +164,7 @@ async function start() {
         name +
         ".txt",
     );
+    heroDataIndex.push(name);
   });
 
   const sources = [
@@ -926,27 +928,23 @@ async function start() {
     },
     {
       key: "hero_abilities",
-      url: [
-        ...abilitiesUrls.slice(2, abilitiesUrls.length),
-        heroesUrl,
-        ...heroDataUrls,
-      ],
+      url: [heroesUrl, ...abilitiesUrls],
       transform: (respObj) => {
-        const heroAbils = respObj.splice(0, abilitiesUrls.length - 2);
-        const [heroObj, ...heroData] = respObj;
-        let scripts = {};
-        // Merge into scripts all the hero abilities (the rest of the array)
-        for (let i = 0; i < heroAbils.length; i++) {
-          const heroAbs = heroAbils[i].DOTAAbilities;
-          scripts = { ...scripts, ...heroAbs };
-        }
+        const [heroObj, abilityLoc, _, ...heroAbils] = respObj;
 
-        // Previous data for deprecated facets
-        const oldHeroAbilities = require("../build/hero_abilities");
+        const strings = abilityLoc.lang.Tokens;
+        // Fix places where valve doesn't care about correct case
+        Object.keys(strings).forEach((key) => {
+          strings[key.toLowerCase()] = strings[key];
+        });
+
+        let scripts = {};
+        for (let i = 0; i < heroAbils.length; i++) {
+          scripts[heroDataIndex[i]] = heroAbils[i].DOTAAbilities;
+        }
 
         let heroes = heroObj.DOTAHeroes;
         const heroAbilities = {};
-        const heroFacets = {};
         Object.keys(heroes).forEach(function (heroKey) {
           if (
             heroKey != "Version" &&
@@ -978,111 +976,72 @@ async function start() {
             heroAbilities[heroKey] = newHero;
           }
 
-          heroFacets[heroKey] = {};
-
           Object.entries(heroes[heroKey].Facets ?? []).forEach(
             ([key, value], i) => {
-              heroFacets[heroKey][key] = {
+              const abilities = Object.values(value.Abilities || {}).map(
+                (a) => a.AbilityName,
+              );
+              const [ability] = abilities;
+              const title =
+                strings[`dota_tooltip_facet_${key}`] ||
+                strings[`dota_tooltip_ability_${ability}`] ||
+                "";
+              let description =
+                strings[`dota_tooltip_facet_${key}_description`] ||
+                strings[`dota_tooltip_ability_${ability}_description`] ||
+                "";
+
+              if (description.includes("{s:facet_ability_name}")) {
+                description = description.replace(
+                  "{s:facet_ability_name}",
+                  title,
+                );
+              }
+
+              const allAttribs = [];
+              Object.values(scripts[heroKey]).forEach((ability) => {
+                const specialAttribs = getSpecialAttrs(ability) || [];
+                allAttribs.push(...specialAttribs);
+              });
+
+              if (abilities.length > 0) {
+                description = replaceSpecialAttribs(
+                  description,
+                  getSpecialAttrs(scripts[heroKey][ability]) || [],
+                  false,
+                  scripts[heroKey][ability],
+                  ability,
+                );
+              }
+
+              const matches = description.matchAll(/{s:bonus_(\w+)}/g);
+              for ([, bonusKey] of matches) {
+                const obj =
+                  allAttribs.find((obj) => bonusKey in obj)?.[bonusKey] ?? {};
+                const facetKey = Object.keys(obj).find(
+                  (k) => k.startsWith("special_bonus_facet") && k.includes(key),
+                );
+                if (facetKey) {
+                  description = description.replace(
+                    `{s:bonus_${bonusKey}}`,
+                    removeSigns(obj[facetKey]),
+                  );
+                }
+              }
+
+              heroAbilities[heroKey].facets.push({
                 id: i,
                 name: key,
                 deprecated: value.Deprecated,
                 icon: value.Icon,
                 color: value.Color,
                 gradient_id: Number(value.GradientID),
-                // TODO: Abilities
-              };
+                title,
+                description,
+                abilities: abilities.length > 0 ? abilities : undefined,
+              });
             },
           );
-        });
-
-        heroData.forEach((hero) => {
-          let newFacets = [];
-          hero = hero.result.data.heroes[0];
-          const { name, facets, abilities, facet_abilities } = hero;
-          facets?.forEach((facet) => {
-            newFacets.push({
-              ...heroFacets[name][facet.name],
-              title: facet.title_loc,
-              description: facet.description_loc || "",
-            });
-          });
-
-          const allAttribs = [];
-
-          abilities?.forEach((ability) => {
-            ability?.facets_loc?.forEach((str, i) => {
-              let specialAttrs = getSpecialAttrs(scripts[ability.name]) || [];
-              allAttribs.push(...specialAttrs);
-              if (str.length > 0 && newFacets[i]) {
-                newFacets[i].description = replaceSpecialAttribs(
-                  str,
-                  specialAttrs,
-                  false,
-                  scripts[ability.name],
-                  ability.name,
-                );
-              }
-            });
-          });
-
-          facet_abilities?.forEach((facet_ability, i) => {
-            facet_ability?.abilities?.forEach((ability) => {
-              let { description } = newFacets[i];
-              if (description.includes("{s:facet_ability_name}")) {
-                description = description.replace(
-                  "{s:facet_ability_name}",
-                  ability.name_loc,
-                );
-              }
-
-              newFacets[i].description = replaceSpecialAttribs(
-                description,
-                getSpecialAttrs(scripts[ability.name]),
-                false,
-                scripts[ability.name],
-                ability.name,
-              );
-            });
-          });
-
-          // Insert {s:bonus_} values. Some attributes are tied to seemingly unrelated passives, so we need all abilities
-          newFacets = newFacets.map(({ description, ...rest }) => {
-            const matches = description.matchAll(/{s:bonus_(\w+)}/g);
-            for ([, bonusKey] of matches) {
-              const obj =
-                allAttribs.find((obj) => bonusKey in obj)?.[bonusKey] ?? {};
-              const facetKey = Object.keys(obj).find(
-                (k) =>
-                  k.startsWith("special_bonus_facet") && k.includes(rest.name),
-              );
-              if (facetKey) {
-                description = description.replace(
-                  `{s:bonus_${bonusKey}}`,
-                  removeSigns(obj[facetKey]),
-                );
-              }
-            }
-            return {
-              ...rest,
-              description,
-            };
-          });
-
-          // Push deprecated facets from old data
-          const deprecated = Object.values(heroFacets[name]).filter(
-            (f) => f.deprecated,
-          );
-
-          deprecated.forEach((facet) => {
-            newFacets.push({
-              ...facet,
-              ...oldHeroAbilities[name].facets.find(
-                (f) => f.name === facet.name,
-              ),
-            });
-          });
-
-          heroAbilities[name].facets = newFacets.sort((a, b) => a.id - b.id);
         });
 
         return heroAbilities;
@@ -1811,12 +1770,15 @@ function replaceSpecialAttribs(
         } else if (name.startsWith("bonus_")) {
           // Some facets have an extra bonus_ at the start
           const newName = name.replace("bonus_", "");
-          const obj = attribs.find((obj) => newName in obj)?.[newName] ?? {};
+          const obj = attribs.find((obj) => newName in obj) ?? {};
           const facetKey = Object.keys(obj).find((k) =>
             k.startsWith("special_bonus_facet"),
           );
           if (facetKey) {
             return obj[facetKey].replace("=", "");
+          }
+          if (newName in obj) {
+            return obj[newName];
           }
         }
 
