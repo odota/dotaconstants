@@ -9821,7 +9821,7 @@
       {
         "type": "active",
         "title": "Eternal Chains",
-        "description": "Roots all enemies in a target 375 radius for 2 seconds and deals 180 damage."
+        "description": "Roots all enemies in a target 350 radius for 2 seconds and deals 180 damage."
       },
       {
         "type": "passive",
@@ -9897,7 +9897,7 @@
       },
       {
         "key": "radius",
-        "value": "375"
+        "value": "350"
       },
       {
         "key": "active_damage",
@@ -12217,7 +12217,7 @@
       {
         "type": "active",
         "title": "Fade",
-        "description": "Grants invisibility to you or a target allied hero for up to 3.5s. Movement speed during the invisibility is reduced by 35%"
+        "description": "Grants invisibility to you or a target allied hero for 3.5s. Movement speed during the invisibility is reduced by 35%."
       }
     ],
     "hint": [],
@@ -12232,7 +12232,7 @@
     "dispellable": "Yes",
     "target_team": "Friendly",
     "target_type": "Hero",
-    "notes": "",
+    "notes": "Takes 1.25s of the 3.5s for the hero to fully fade into invisibility.",
     "attrib": [
       {
         "key": "fade_time",
