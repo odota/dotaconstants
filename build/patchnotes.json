@@ -18239,12 +18239,12 @@
         "antimage_mana_void": [
           "Mana cost rescaled from 125/200/275 to 100/200/300"
         ],
-        "antimage_blink": [
-          "Fragment Scepter illusion incoming damage reduced from 250% to 200%",
-          "Fragment Scepter illusion outgoing damage increased from 50% to 75%"
+        "antimage_mana_overload": [
+          "Scepter illusion incoming damage reduced from 250% to 200%",
+          "Scepter illusion outgoing damage increased from 50% to 75%"
         ],
         "general": [
-          "Reworked Shard upgrade. Now causes Blink to have +300 range and reduces cooldown by 2."
+          "Reworked Shard upgrade. Now causes Blink to have +300 range and reduces cooldown by 2"
         ],
         "talents": [
           "Level 15 Talent changed from +300 Blink Cast Range to +0.6% Max Mana Burn",
@@ -21043,8 +21043,8 @@
           "Strength Gain increased from 1.3 to 1.6",
           "Reworked Shard: Counterspell now also passively grants a 900 range offensive aura reducing enemies' magic damage by 10%. Grants triple the effect to enemies within 300 range"
         ],
-        "antimage_blink": [
-          "Fragment Scepter now has 3 charges (25s recharge time)"
+        "antimage_mana_overload": [
+          "Scepter now has 3 charges (25s recharge time)"
         ],
         "talents": [
           "Level 10 Talent +15 Attack Speed replaced with -1s Blink Cooldown",
@@ -27446,8 +27446,8 @@
         "antimage_counterspell": [
           "Mana Cost decreased from 45/50/55/60 to 45"
         ],
-        "general": [
-          "Scepter Blink Fragment Mana Cost decreased from 50 to 45"
+        "antimage_mana_overload": [
+          "Mana Cost decreased from 50 to 45"
         ],
         "talents": [
           "Level 15 Talent +0.7s Mana Void Stun Duration replaced with +150 Mana Void Radius"
@@ -32551,8 +32551,8 @@
         "kunkka_ghostship_info": [
           "Duration decreased as a part of the comprehensive Disables Reduction"
         ],
-        "kunkka_torrent": [
-          "Storm Now area targeted with a 900 cast range and 1100 radius"
+        "kunkka_torrent_storm": [
+          "Now area targeted with a 900 cast range and 1100 radius"
         ],
         "kunkka_tidal_wave": [
           "Duration decreased from 1.25s to 1s"
@@ -38377,9 +38377,9 @@
         "kunkka_tidal_wave": [
           "Damage decreased from 250 to 180"
         ],
-        "kunkka_torrent": [
-          "Storm Duration decreased from 5s to 4s",
-          "Storm Cooldown increased from 70s to 75s"
+        "kunkka_torrent_storm": [
+          "Duration decreased from 5s to 4s",
+          "Cooldown increased from 70s to 75s"
         ]
       },
       "leshrac": {
@@ -39295,9 +39295,9 @@
         ]
       },
       "kunkka": {
-        "kunkka_torrent": [
-          "Storm Mana Cost increased from 250 to 275",
-          "Storm Minimum spawn distance decreased from 300 to 115"
+        "kunkka_torrent_storm": [
+          "Mana Cost increased from 250 to 275",
+          "Minimum spawn distance decreased from 300 to 115"
         ],
         "talents": [
           "Level 20 Talent +65 Torrent AoE replaced with -4s Torrent Cooldown"
@@ -41364,10 +41364,7 @@
           "Grants bonus attack damage when an enemy hero within 2500 range has less than 60% mana, increasing as their mana is depleted further, up to a maximum of 20/45/70 bonus attack damage at 15% mana, in which Anti-Mage gains vision and True Sight of that hero"
         ],
         "antimage_blink": [
-          "Mana Cost increased from 45 to 50",
-          "Fragment: Mana Cost increased from 45 to 50",
-          "Fragment: Charges decreased from 3 to 2",
-          "Fragment: Base Charge Restore Time decreased from 25s to 20s"
+          "Mana Cost increased from 45 to 50"
         ],
         "antimage_counterspell": [
           "No longer reflects spells by default, only blocks them",
@@ -41376,6 +41373,11 @@
         "antimage_counterspell_ally": [
           "No longer reflects spells by default, only blocks them",
           "Mana Cost increased from 45 to 50"
+        ],
+        "antimage_mana_overload": [
+          "Mana Cost increased from 45 to 50",
+          "Charges decreased from 3 to 2",
+          "Base Charge Restore Time decreased from 25s to 20s"
         ],
         "talents": [
           "Level 10 Talent +9 Strength replaced with +10% Counterspell Magic Resistance",

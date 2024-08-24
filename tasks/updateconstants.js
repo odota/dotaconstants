@@ -1,6 +1,6 @@
 const axios = require("axios");
 const fs = require("fs");
-const simplevdf = require("simple-vdf");
+const vdfparser = require("vdf-parser");
 const { cleanupArray } = require("../utils");
 
 // Get your token from https://stratz.com/api
@@ -1432,15 +1432,11 @@ function parseJsonOrVdf(text, url) {
   } catch (err) {
     try {
       let fixed = text;
-      // Fix kotl file
-      fixed = fixed.replace(
-        '"channel_vision_radius"	{',
-        '"channel_vision_radius"\n{',
-      );
+      // Remove empty values that break parser
       fixed = fixed.replace(/\t\t"ItemRequirements"\r\n\t\t""/g, "");
       fixed = fixed.replace(/\t\t\t"has_flying_movement"\t\r\n\t\t\t""/g, "");
       fixed = fixed.replace(/\t\t\t"damage_reduction"\t\r\n\t\t\t""/g, "");
-      let vdf = simplevdf.parse(fixed);
+      let vdf = vdfparser.parse(fixed, { types: false });
       return vdf;
     } catch (e) {
       console.error("Couldn't parse JSON or VDF", url);
@@ -1867,7 +1863,9 @@ function replaceSpecialAttribs(
 
 function formatBehavior(string) {
   if (!string) return false;
-
+  if (Array.isArray(string)) {
+    string = string.join(' | ');
+  }
   let split = string
     .split(" | ")
     .filter(
@@ -1950,7 +1948,7 @@ function formatVpkHero(key, vpkr) {
   h.turn_rate = Number(vpkrh.MovementTurnRate);
 
   h.cm_enabled = vpkrh.CMEnabled === "1" ? true : false;
-  h.legs = Number(vpkrh.Adjectives.Legs || baseHero.Adjectives.Legs);
+  h.legs = Number(vpkrh.Adjectives?.Legs || baseHero.Adjectives?.Legs);
 
   h.day_vision = Number(
     vpkrh.VisionDaytimeRange || baseHero.VisionDaytimeRange,

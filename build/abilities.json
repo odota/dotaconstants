@@ -35191,9 +35191,8 @@
       },
       {
         "key": "magic_resist",
-        "header": "MAGIC RESIST:",
-        "value": "60",
-        "generated": true
+        "header": "MAGIC RESISTANCE:",
+        "value": "60%"
       },
       {
         "key": "abilitycastrange",
@@ -35505,7 +35504,7 @@
       "Hero",
       "Basic"
     ],
-    "desc": "Enchantress charms an enemy. If the enemy is a hero, they are dispelled and slowed for 5s.\n\n If the enemy is a creep, she brings it under her control and receives 50% of their experience bounty. Enchantress can control up to 1 creeps at a time for up to 30s. \n\nDISPEL TYPE: Basic Dispel",
+    "desc": "Enchantress charms an enemy. If the enemy is a hero, they are dispelled and slowed for 5s.\n\n If the enemy is a creep, she brings it under her control and receives 50% of their experience bounty. Enchantress can control creeps for up to 30s. \n\nDISPEL TYPE: Basic Dispel",
     "attrib": [
       {
         "key": "abilitycastrange",
@@ -35594,9 +35593,8 @@
       },
       {
         "key": "max_creeps",
-        "header": "MAX CREEPS:",
-        "value": "1",
-        "generated": true
+        "header": "MAX ENCHANTED CREEPS:",
+        "value": "1"
       },
       {
         "key": "bonus_health",
@@ -43571,6 +43569,20 @@
         ]
       },
       {
+        "key": "spirit_hp",
+        "header": "HEALTH (QUAS):\\n",
+        "value": [
+          "300",
+          "400",
+          "500",
+          "600",
+          "700",
+          "800",
+          "900",
+          "1000"
+        ]
+      },
+      {
         "key": "spirit_duration",
         "header": "DURATION (QUAS):\\n",
         "value": [
@@ -45889,7 +45901,10 @@
       "Autocast",
       "Attack Modifier"
     ],
-    "dmg_type": "Physical",
+    "dmg_type": [
+      "Physical",
+      "Physical"
+    ],
     "bkbpierce": "Yes",
     "target_team": "Enemy",
     "target_type": [
@@ -46162,6 +46177,11 @@
           "32%",
           "36%"
         ]
+      },
+      {
+        "key": "radius",
+        "header": "RADIUS:",
+        "value": "400"
       },
       {
         "key": "extra_duration",
@@ -48193,7 +48213,7 @@
       "Hero",
       "Basic"
     ],
-    "desc": "Grabs the Target Ally, Enemy or Rune, and uncontrollably drags them towards Lone Druid for the duration. Enemies receive damage every 0.5s. When dragging a unit, they are Rooted and the Spirit Bear is slowed by 0%. ",
+    "desc": "Grabs the Target Ally, Enemy or Rune, and uncontrollably drags them towards Lone Druid for the duration. Enemies receive damage every 0.5s. When dragging a unit, they are Rooted. ",
     "attrib": [
       {
         "key": "duration",
@@ -72654,5 +72674,975 @@
     "mc": "250",
     "cd": "45",
     "img": "/apps/dota2/images/dota_react/abilities/muerta_parting_shot.png"
+  },
+  "ringmaster_spotlight": {
+    "dname": "Spotlight",
+    "behavior": [
+      "Point Target",
+      "AOE"
+    ],
+    "dmg_type": "Magical",
+    "bkbpierce": "No",
+    "dispellable": "No",
+    "desc": "Ringmaster shines a spotlight that sweeps over an area. Enemies in the light have a chance to miss their attacks and are revealed if invisible. Illusions hit by the beam fade away, losing a percentage of their maximum health each second. These effects linger for 0.3 seconds after leaving the light.",
+    "attrib": [
+      {
+        "key": "radius",
+        "header": "RADIUS:",
+        "value": "550"
+      },
+      {
+        "key": "illusion_percent_damage",
+        "header": "ILLUSION MAX HEALTH LOSS:",
+        "value": "50%"
+      },
+      {
+        "key": "pulse_interval",
+        "header": "PULSE INTERVAL:",
+        "value": "0.1",
+        "generated": true
+      },
+      {
+        "key": "duration",
+        "header": "DURATION:",
+        "value": "8",
+        "generated": true
+      },
+      {
+        "key": "miss_chance",
+        "header": "MISS CHANCE:",
+        "value": "30%"
+      },
+      {
+        "key": "initial_speed",
+        "header": "INITIAL SPEED:",
+        "value": "3000",
+        "generated": true
+      },
+      {
+        "key": "sweep_speed",
+        "header": "SWEEP SPEED:",
+        "value": "0.785",
+        "generated": true
+      },
+      {
+        "key": "sweep_radius",
+        "header": "SWEEP RADIUS:",
+        "value": "450",
+        "generated": true
+      },
+      {
+        "key": "linger_duration",
+        "header": "LINGER DURATION:",
+        "value": "0.3",
+        "generated": true
+      },
+      {
+        "key": "abilitycastrange",
+        "header": "CAST RANGE:",
+        "value": "1500",
+        "generated": true
+      },
+      {
+        "key": "abilityduration",
+        "header": "DURATION:",
+        "value": "8",
+        "generated": true
+      },
+      {
+        "key": "abilitycastpoint",
+        "header": "CAST TIME:",
+        "value": "0.5",
+        "generated": true
+      }
+    ],
+    "lore": "Are you ready for your fifteen seconds? The limelight draws no distinction between infamy and fame.",
+    "mc": "50",
+    "cd": "30",
+    "img": "/apps/dota2/images/dota_react/abilities/ringmaster_spotlight.png"
+  },
+  "ringmaster_tame_the_beasts": {
+    "dname": "Tame the Beasts",
+    "behavior": [
+      "Point Target",
+      "AOE",
+      "Channeled"
+    ],
+    "dmg_type": "Magical",
+    "bkbpierce": "No",
+    "dispellable": "Yes",
+    "desc": "CHANNELED - Ringmaster twirls his whip for up to 1 second then cracks it. Whipped enemies are damaged and flee in fear from Ringmaster. Channel time exponentially increases damage and extends the fear duration, but reduces the radius.",
+    "attrib": [
+      {
+        "key": "start_width",
+        "header": "RADIUS START:",
+        "value": "450"
+      },
+      {
+        "key": "end_width",
+        "header": "RADIUS END:",
+        "value": "200"
+      },
+      {
+        "key": "damage_min",
+        "header": "MIN DAMAGE:",
+        "value": [
+          "45",
+          "70",
+          "95",
+          "120"
+        ]
+      },
+      {
+        "key": "damage_max",
+        "header": "MAX DAMAGE:",
+        "value": [
+          "180",
+          "280",
+          "380",
+          "480"
+        ]
+      },
+      {
+        "key": "crack_duration",
+        "header": "CRACK DURATION:",
+        "value": "0.2",
+        "generated": true
+      },
+      {
+        "key": "max_multiplier",
+        "header": "MAX MULTIPLIER:",
+        "value": "4",
+        "generated": true
+      },
+      {
+        "key": "whip_channel_reduction",
+        "header": "WHIP CHANNEL REDUCTION:",
+        "value": "0",
+        "generated": true
+      },
+      {
+        "key": "whip_cooldown_reduction",
+        "header": "WHIP COOLDOWN REDUCTION:",
+        "value": "0",
+        "generated": true
+      },
+      {
+        "key": "magic_resist",
+        "header": "MAGIC RESIST:",
+        "value": "0",
+        "generated": true
+      },
+      {
+        "key": "has_debuff_immunity",
+        "header": "HAS DEBUFF IMMUNITY:",
+        "value": "0",
+        "generated": true
+      },
+      {
+        "key": "fear_duration_min",
+        "header": "MIN FEAR DURATION:",
+        "value": [
+          "0.1",
+          "0.2",
+          "0.3",
+          "0.4"
+        ]
+      },
+      {
+        "key": "fear_duration_max",
+        "header": "MAX FEAR DURATION:",
+        "value": [
+          "0.6",
+          "0.8",
+          "1",
+          "1.2"
+        ]
+      },
+      {
+        "key": "abilitycastrange",
+        "header": "CAST RANGE:",
+        "value": [
+          "700",
+          "750",
+          "800",
+          "850"
+        ],
+        "generated": true
+      },
+      {
+        "key": "abilitychanneltime",
+        "header": "CHANNEL TIME:",
+        "value": "1",
+        "generated": true
+      },
+      {
+        "key": "abilitycastpoint",
+        "header": "CAST TIME:",
+        "value": "0",
+        "generated": true
+      }
+    ],
+    "lore": "From unhappy crowds to unruly acts, nothing persuades a pack of animals quite like the crack of the Ringmaster's whip.",
+    "mc": [
+      "90",
+      "105",
+      "120",
+      "135"
+    ],
+    "cd": [
+      "16",
+      "14",
+      "12",
+      "10"
+    ],
+    "img": "/apps/dota2/images/dota_react/abilities/ringmaster_tame_the_beasts.png"
+  },
+  "ringmaster_tame_the_beasts_crack": {
+    "dname": "Crack",
+    "behavior": [
+      "No Target",
+      "Instant Cast",
+      "Hidden"
+    ],
+    "dmg_type": "Magical",
+    "bkbpierce": "No",
+    "dispellable": "Yes",
+    "desc": "*CRACK*",
+    "attrib": [],
+    "mc": "0",
+    "cd": "0.5",
+    "img": "/apps/dota2/images/dota_react/abilities/ringmaster_tame_the_beasts_crack.png"
+  },
+  "ringmaster_the_box": {
+    "dname": "Escape Act",
+    "behavior": "Unit Target",
+    "bkbpierce": "No",
+    "dispellable": "No",
+    "target_team": "Friendly",
+    "target_type": "Hero",
+    "desc": "Ringmaster packs himself or an allied hero into a mobile, extradimensional box. Boxed units gain phased movement, slow resistance, bonus magic resistance, and bonus movement speed. They are also untargetable, muted, silenced, and disarmed. The box will pop open after the effect expires or it moves more than 500 units away.",
+    "attrib": [
+      {
+        "key": "abilitycastrange",
+        "header": "CAST RANGE:",
+        "value": "600",
+        "generated": true
+      },
+      {
+        "key": "invis_duration",
+        "header": "DURATION:",
+        "value": [
+          "2",
+          "2.4",
+          "2.8",
+          "3.2"
+        ]
+      },
+      {
+        "key": "move_speed",
+        "header": "BONUS MOVEMENT SPEED:",
+        "value": [
+          "5%",
+          "10%",
+          "15%",
+          "20%"
+        ]
+      },
+      {
+        "key": "magic_resist",
+        "header": "BONUS MAGIC RESISTANCE:",
+        "value": [
+          "50%",
+          "60%",
+          "70%",
+          "80%"
+        ]
+      },
+      {
+        "key": "slow_resist",
+        "header": "SLOW RESISTANCE:",
+        "value": "100%"
+      },
+      {
+        "key": "transform_time",
+        "header": "TRANSFORM TIME:",
+        "value": "0.5",
+        "generated": true
+      },
+      {
+        "key": "model_scale_time",
+        "header": "MODEL SCALE TIME:",
+        "value": "0.2",
+        "generated": true
+      },
+      {
+        "key": "leash_radius",
+        "header": "LEASH RADIUS:",
+        "value": "500",
+        "generated": true
+      },
+      {
+        "key": "heal_ally",
+        "header": "HEAL ALLY:",
+        "value": "0",
+        "generated": true
+      },
+      {
+        "key": "launch_daggers",
+        "header": "LAUNCH DAGGERS:",
+        "value": "0",
+        "generated": true
+      },
+      {
+        "key": "leap_distance",
+        "header": "LEAP DISTANCE:",
+        "value": "250",
+        "generated": true
+      },
+      {
+        "key": "leap_speed",
+        "header": "LEAP SPEED:",
+        "value": "1300",
+        "generated": true
+      },
+      {
+        "key": "leap_acceleration",
+        "header": "LEAP ACCELERATION:",
+        "value": "20000",
+        "generated": true
+      },
+      {
+        "key": "grant_debuff_immunity",
+        "header": "GRANT DEBUFF IMMUNITY:",
+        "value": "0",
+        "generated": true
+      },
+      {
+        "key": "strong_dispel",
+        "header": "STRONG DISPEL:",
+        "value": "0",
+        "generated": true
+      },
+      {
+        "key": "grant_flying",
+        "header": "GRANT FLYING:",
+        "value": "0",
+        "generated": true
+      },
+      {
+        "key": "abilitycastpoint",
+        "header": "CAST TIME:",
+        "value": "0.4",
+        "generated": true
+      }
+    ],
+    "lore": "An adept assistant has nothing to fear within the confines of The Box. An amateur has...much darker prospects indeed.",
+    "mc": "80",
+    "cd": [
+      "38",
+      "32",
+      "26",
+      "20"
+    ],
+    "img": "/apps/dota2/images/dota_react/abilities/ringmaster_the_box.png"
+  },
+  "ringmaster_wheel": {
+    "dname": "Wheel of Wonder",
+    "behavior": [
+      "Point Target",
+      "AOE"
+    ],
+    "dmg_type": "Magical",
+    "bkbpierce": "No",
+    "dispellable": "No",
+    "target_type": "Hero",
+    "desc": "Ringmaster rolls the Wheel of Wonder to the targeted location, knocking aside enemies along the way. After it reaches its target, enemies in range of the wheel take damage over time and are slowed by -50%.\n\nEnemy heroes who face the wheel for more than 0.5 seconds are mesmerized and drawn towards it. The first enemy to be mesmerized triggers a timer for the wheel to explode. If the timer is not triggered, it will automatically explode after 8 seconds.",
+    "attrib": [
+      {
+        "key": "min_range",
+        "header": "MINIMUM RANGE:",
+        "value": "700"
+      },
+      {
+        "key": "mesmerize_radius",
+        "header": "RADIUS:",
+        "value": "600"
+      },
+      {
+        "key": "projectile_speed",
+        "header": "PROJECTILE SPEED:",
+        "value": "1200",
+        "generated": true
+      },
+      {
+        "key": "abilitycastrange",
+        "header": "CAST RANGE:",
+        "value": "1400",
+        "generated": true
+      },
+      {
+        "key": "trap_duration",
+        "header": "TRAP DURATION:",
+        "value": "8",
+        "generated": true
+      },
+      {
+        "key": "wheel_stun",
+        "header": "TIMER DURATION:",
+        "value": [
+          "2.75",
+          "3",
+          "3.25"
+        ]
+      },
+      {
+        "key": "face_duration",
+        "header": "FACE DURATION:",
+        "value": "0.5",
+        "generated": true
+      },
+      {
+        "key": "aura_tick_interval",
+        "header": "AURA TICK INTERVAL:",
+        "value": "0.5",
+        "generated": true
+      },
+      {
+        "key": "aura_damage",
+        "header": "AURA DAMAGE PER SECOND:",
+        "value": [
+          "50",
+          "75",
+          "100"
+        ]
+      },
+      {
+        "key": "aura_slow",
+        "header": "AURA SLOW:",
+        "value": "-50",
+        "generated": true
+      },
+      {
+        "key": "explosion_damage",
+        "header": "EXPLOSION DAMAGE:",
+        "value": [
+          "300",
+          "450",
+          "600"
+        ]
+      },
+      {
+        "key": "vision_radius",
+        "header": "VISION RADIUS:",
+        "value": "400",
+        "generated": true
+      },
+      {
+        "key": "damage_per_second",
+        "header": "DAMAGE PER SECOND:",
+        "value": "0",
+        "generated": true
+      },
+      {
+        "key": "tick_rate",
+        "header": "TICK RATE:",
+        "value": "0.25",
+        "generated": true
+      },
+      {
+        "key": "vision_cone",
+        "header": "VISION CONE:",
+        "value": "0.08715",
+        "generated": true
+      },
+      {
+        "key": "knockback_radius",
+        "header": "KNOCKBACK RADIUS:",
+        "value": "100",
+        "generated": true
+      },
+      {
+        "key": "knockback_duration",
+        "header": "KNOCKBACK DURATION:",
+        "value": "0.35",
+        "generated": true
+      },
+      {
+        "key": "knockback_distance",
+        "header": "KNOCKBACK DISTANCE:",
+        "value": "100",
+        "generated": true
+      },
+      {
+        "key": "knockback_height",
+        "header": "KNOCKBACK HEIGHT:",
+        "value": "100",
+        "generated": true
+      },
+      {
+        "key": "abilitycastpoint",
+        "header": "CAST TIME:",
+        "value": "0.2",
+        "generated": true
+      }
+    ],
+    "lore": "No, brave friends, illusions are for charlatans and card sharks. What you witness today is the power of true magic. But only if you dare set your gaze upon...the mesmerizing wheel.",
+    "mc": [
+      "175",
+      "275",
+      "375"
+    ],
+    "cd": [
+      "90",
+      "80",
+      "70"
+    ],
+    "img": "/apps/dota2/images/dota_react/abilities/ringmaster_wheel.png"
+  },
+  "ringmaster_impalement": {
+    "dname": "Impalement Arts",
+    "behavior": "Point Target",
+    "dmg_type": "Magical",
+    "bkbpierce": "No",
+    "dispellable": "Yes",
+    "desc": "Ringmaster throws one of his daggers to a precise point of his choosing. If he strikes an enemy, the dagger deals impact damage, briefly slows the unit hit, and causes them to bleed. The bleeding deals a percentage of the victim's maximum health in damage every second to heroes and flat damage per second to creeps.",
+    "attrib": [
+      {
+        "key": "damage_impact",
+        "header": "IMPACT DAMAGE:",
+        "value": "75"
+      },
+      {
+        "key": "bleed_health_pct",
+        "header": "MAX HEALTH DAMAGE PER SECOND (HEROES):",
+        "value": [
+          "3.5%",
+          "4%",
+          "4.5%",
+          "5%"
+        ]
+      },
+      {
+        "key": "bleed_creep_dps",
+        "header": "DAMAGE PER SECOND (CREEPS):",
+        "value": "100"
+      },
+      {
+        "key": "bleed_duration",
+        "header": "DURATION:",
+        "value": "4"
+      },
+      {
+        "key": "slow_percent",
+        "header": "MOVEMENT SLOW:",
+        "value": "100%"
+      },
+      {
+        "key": "slow_duration",
+        "header": "SLOW DURATION:",
+        "value": "0.8"
+      },
+      {
+        "key": "dagger_speed",
+        "header": "DAGGER SPEED:",
+        "value": "1350",
+        "generated": true
+      },
+      {
+        "key": "dagger_width",
+        "header": "DAGGER WIDTH:",
+        "value": "130",
+        "generated": true
+      },
+      {
+        "key": "dagger_vision",
+        "header": "DAGGER VISION:",
+        "value": "200",
+        "generated": true
+      },
+      {
+        "key": "tick_interval",
+        "header": "TICK INTERVAL:",
+        "value": "1",
+        "generated": true
+      },
+      {
+        "key": "dagger_pass_through",
+        "header": "DAGGER PASS THROUGH:",
+        "value": "0",
+        "generated": true
+      },
+      {
+        "key": "abilitycastrange",
+        "header": "CAST RANGE:",
+        "value": "2400",
+        "generated": true
+      },
+      {
+        "key": "charge_restore_time",
+        "header": "CHARGE RESTORE TIME:",
+        "value": "17",
+        "generated": true
+      },
+      {
+        "key": "abilitycastpoint",
+        "header": "CAST TIME:",
+        "value": "0.3",
+        "generated": true
+      },
+      {
+        "key": "max_charges",
+        "header": "MAX CHARGES:",
+        "value": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "generated": true
+      }
+    ],
+    "lore": "Passed down through generations, it simply wouldn't be a Kettle Circus without the Great Cogliostro's signature trick.",
+    "mc": "80",
+    "cd": "1",
+    "img": "/apps/dota2/images/dota_react/abilities/ringmaster_impalement.png"
+  },
+  "ringmaster_empty_souvenir": {
+    "dname": "Souvenir Slot",
+    "behavior": "Passive",
+    "desc": "Gather souvenirs from kills and assists.",
+    "attrib": [],
+    "img": "/apps/dota2/images/dota_react/abilities/ringmaster_empty_souvenir.png"
+  },
+  "ringmaster_dark_carnival_souvenirs": {
+    "dname": "Dark Carnival Barker",
+    "is_innate": true,
+    "behavior": "Passive",
+    "desc": "Ringmaster receives a random single-use Dark Carnival Souvenir whenever an enemy hero dies within 925 units of him. Additional Souvenirs are held as charges.\n\nIf Ringmaster does not have a Souvenir when he respawns he will be granted one.\n\nSouvenirs of the Dark Carnival include a Funhouse Mirror, a Strongman Tonic, and a Whoopee Cushion.",
+    "attrib": [
+      {
+        "key": "souvenir_collection_range",
+        "header": "SOUVENIR COLLECTION RANGE:",
+        "value": "925",
+        "generated": true
+      }
+    ],
+    "img": "/apps/dota2/images/dota_react/abilities/ringmaster_dark_carnival_souvenirs.png"
+  },
+  "ringmaster_funhouse_mirror": {
+    "dname": "Funhouse Mirror",
+    "behavior": [
+      "No Target",
+      "Hidden"
+    ],
+    "desc": "Use: Proportion Distortion Creates 1 imperfect image of your hero that lasts 18 seconds. Your illusion deals 28% and takes 300% damage.",
+    "attrib": [
+      {
+        "key": "images_count",
+        "header": "IMAGES COUNT:",
+        "value": "1",
+        "generated": true
+      },
+      {
+        "key": "illusion_duration",
+        "header": "ILLUSION DURATION:",
+        "value": "18",
+        "generated": true
+      },
+      {
+        "key": "images_do_damage_percent_melee",
+        "header": "IMAGES DO DAMAGE PERCENT MELEE:",
+        "value": "-67",
+        "generated": true
+      },
+      {
+        "key": "tooltip_damage_outgoing_melee",
+        "header": "TOOLTIP DAMAGE OUTGOING MELEE:",
+        "value": "33",
+        "generated": true
+      },
+      {
+        "key": "images_take_damage_percent",
+        "header": "IMAGES TAKE DAMAGE PERCENT:",
+        "value": "200",
+        "generated": true
+      },
+      {
+        "key": "tooltip_damage_incoming_total_pct",
+        "header": "TOOLTIP DAMAGE INCOMING TOTAL PCT:",
+        "value": "300",
+        "generated": true
+      },
+      {
+        "key": "images_do_damage_percent_ranged",
+        "header": "IMAGES DO DAMAGE PERCENT RANGED:",
+        "value": "-72",
+        "generated": true
+      },
+      {
+        "key": "tooltip_damage_outgoing_ranged",
+        "header": "TOOLTIP DAMAGE OUTGOING RANGED:",
+        "value": "28",
+        "generated": true
+      },
+      {
+        "key": "invuln_duration",
+        "header": "INVULN DURATION:",
+        "value": "0.2",
+        "generated": true
+      },
+      {
+        "key": "vision_radius",
+        "header": "VISION RADIUS:",
+        "value": "1000",
+        "generated": true
+      },
+      {
+        "key": "num_scale_sets",
+        "header": "NUM SCALE SETS:",
+        "value": "3",
+        "generated": true
+      },
+      {
+        "key": "model_scale_animate_time",
+        "header": "MODEL SCALE ANIMATE TIME:",
+        "value": "0.05",
+        "generated": true
+      },
+      {
+        "key": "illusion_model_scale_1",
+        "header": "ILLUSION MODEL SCALE 1:",
+        "value": "0",
+        "generated": true
+      },
+      {
+        "key": "illusion_model_scale_2",
+        "header": "ILLUSION MODEL SCALE 2:",
+        "value": "0",
+        "generated": true
+      },
+      {
+        "key": "illusion_model_scale_3",
+        "header": "ILLUSION MODEL SCALE 3:",
+        "value": "50",
+        "generated": true
+      },
+      {
+        "key": "health_bar_offset_1",
+        "header": "HEALTH BAR OFFSET 1:",
+        "value": "180",
+        "generated": true
+      },
+      {
+        "key": "health_bar_offset_2",
+        "header": "HEALTH BAR OFFSET 2:",
+        "value": "220",
+        "generated": true
+      },
+      {
+        "key": "health_bar_offset_3",
+        "header": "HEALTH BAR OFFSET 3:",
+        "value": "280",
+        "generated": true
+      },
+      {
+        "key": "charge_restore_time",
+        "header": "CHARGE RESTORE TIME:",
+        "value": "0",
+        "generated": true
+      },
+      {
+        "key": "abilitycastpoint",
+        "header": "CAST TIME:",
+        "value": "0",
+        "generated": true
+      },
+      {
+        "key": "max_charges",
+        "header": "MAX CHARGES:",
+        "value": "99",
+        "generated": true
+      }
+    ],
+    "cd": "3",
+    "img": "/apps/dota2/images/dota_react/abilities/ringmaster_funhouse_mirror.png"
+  },
+  "ringmaster_whoopee_cushion": {
+    "dname": "Whoopee Cushion",
+    "behavior": [
+      "No Target",
+      "Hidden"
+    ],
+    "desc": "Use: Whoopsie Propels your hero forward 400 units. Leaves a 200 radius stink cloud behind for 3 seconds that slows enemies by -30%.",
+    "attrib": [
+      {
+        "key": "leap_distance",
+        "header": "LEAP DISTANCE:",
+        "value": "400",
+        "generated": true
+      },
+      {
+        "key": "leap_speed",
+        "header": "LEAP SPEED:",
+        "value": "1300",
+        "generated": true
+      },
+      {
+        "key": "leap_acceleration",
+        "header": "LEAP ACCELERATION:",
+        "value": "10000",
+        "generated": true
+      },
+      {
+        "key": "fart_cloud_duration",
+        "header": "FART CLOUD DURATION:",
+        "value": "3",
+        "generated": true
+      },
+      {
+        "key": "fart_cloud_slow",
+        "header": "FART CLOUD SLOW:",
+        "value": "-30",
+        "generated": true
+      },
+      {
+        "key": "fart_cloud_aura_linger_duration",
+        "header": "FART CLOUD AURA LINGER DURATION:",
+        "value": "1",
+        "generated": true
+      },
+      {
+        "key": "fart_cloud_radius",
+        "header": "FART CLOUD RADIUS:",
+        "value": "200",
+        "generated": true
+      },
+      {
+        "key": "charge_restore_time",
+        "header": "CHARGE RESTORE TIME:",
+        "value": "0",
+        "generated": true
+      },
+      {
+        "key": "abilitycastpoint",
+        "header": "CAST TIME:",
+        "value": "0",
+        "generated": true
+      },
+      {
+        "key": "max_charges",
+        "header": "MAX CHARGES:",
+        "value": "99",
+        "generated": true
+      }
+    ],
+    "cd": "3",
+    "img": "/apps/dota2/images/dota_react/abilities/ringmaster_whoopee_cushion.png"
+  },
+  "ringmaster_strongman_tonic": {
+    "dname": "Strongman Tonic",
+    "behavior": [
+      "Unit Target",
+      "Hidden"
+    ],
+    "dispellable": "Yes",
+    "target_team": "Friendly",
+    "target_type": "Hero",
+    "desc": "Use: Forcefully Imbibe Temporarily increases an allied hero's Strength by 5 plus 1.5 per Ringmaster's level for 8 seconds. The effect holds for 4 seconds and then deteriorates over the duration.",
+    "attrib": [
+      {
+        "key": "projectile_speed",
+        "header": "PROJECTILE SPEED:",
+        "value": "1400",
+        "generated": true
+      },
+      {
+        "key": "strength_bonus_base",
+        "header": "STRENGTH BONUS BASE:",
+        "value": "5",
+        "generated": true
+      },
+      {
+        "key": "strength_bonus_per_level",
+        "header": "STRENGTH BONUS PER LEVEL:",
+        "value": "1.5",
+        "generated": true
+      },
+      {
+        "key": "model_scale",
+        "header": "MODEL SCALE:",
+        "value": "30",
+        "generated": true
+      },
+      {
+        "key": "model_scale_animate_time",
+        "header": "MODEL SCALE ANIMATE TIME:",
+        "value": "0.1",
+        "generated": true
+      },
+      {
+        "key": "duration",
+        "header": "DURATION:",
+        "value": "8",
+        "generated": true
+      },
+      {
+        "key": "effect_strength_max_duration",
+        "header": "EFFECT STRENGTH MAX DURATION:",
+        "value": "4",
+        "generated": true
+      },
+      {
+        "key": "abilitycastrange",
+        "header": "CAST RANGE:",
+        "value": "750",
+        "generated": true
+      },
+      {
+        "key": "charge_restore_time",
+        "header": "CHARGE RESTORE TIME:",
+        "value": "0",
+        "generated": true
+      },
+      {
+        "key": "abilitycastpoint",
+        "header": "CAST TIME:",
+        "value": "0",
+        "generated": true
+      },
+      {
+        "key": "max_charges",
+        "header": "MAX CHARGES:",
+        "value": "99",
+        "generated": true
+      }
+    ],
+    "cd": "3",
+    "img": "/apps/dota2/images/dota_react/abilities/ringmaster_strongman_tonic.png"
+  },
+  "special_bonus_unique_ringmaster_whip_radius": {
+    "dname": "+75 Tame the Beasts Radius"
+  },
+  "special_bonus_unique_ringmaster_box_cast_range": {
+    "dname": "+200 Escape Act Cast Range"
+  },
+  "special_bonus_unique_ringmaster_the_box_strong_dispel_and_flying": {
+    "dname": "Escape Act Grants Strong Dispel and Flying"
+  },
+  "special_bonus_unique_ringmaster_whip_damage": {
+    "dname": "+75/+300 Tame the Beasts Min/Max Damage"
+  },
+  "special_bonus_unique_ringmaster_wheel_radius": {
+    "dname": "+100 Wheel Radius and Range"
+  },
+  "special_bonus_unique_ringmaster_whip_debuff_immunity": {
+    "dname": "Debuff Immunity While Channeling Tame the Beasts"
+  },
+  "special_bonus_unique_ringmaster_dagger_penetrates": {
+    "dname": "Impalement Arts Penetrates One Target"
+  },
+  "special_bonus_unique_ringmaster_dagger_bleed_and_slow_duration": {
+    "dname": "+1s Impalement Arts Bleed and Slow Duration"
   }
 }
