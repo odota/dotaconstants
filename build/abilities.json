@@ -2525,7 +2525,7 @@
         "generated": true
       }
     ],
-    "mc": "50",
+    "mc": "60",
     "cd": "4",
     "img": "/apps/dota2/images/dota_react/abilities/harpy_storm_chain_lightning.png"
   },
@@ -8305,9 +8305,9 @@
     "lore": "In his encounter with the Dead Gods, Anti-Mage learned the value of being elusive.",
     "mc": "50",
     "cd": [
-      "13.5",
-      "11",
-      "8.5",
+      "12",
+      "10",
+      "8",
       "6"
     ],
     "img": "/apps/dota2/images/dota_react/abilities/antimage_blink.png"
@@ -9291,10 +9291,10 @@
         "key": "abilitycastrange",
         "header": "CAST RANGE:",
         "value": [
-          "500",
           "550",
           "600",
-          "650"
+          "650",
+          "700"
         ],
         "generated": true
       },
@@ -10682,9 +10682,9 @@
         "key": "bonus_damage",
         "header": "BONUS PROC DAMAGE:",
         "value": [
-          "40",
-          "60",
-          "80"
+          "50",
+          "70",
+          "90"
         ]
       },
       {
@@ -11215,6 +11215,17 @@
       }
     ],
     "img": "/apps/dota2/images/dota_react/abilities/earthshaker_spirit_cairn.png"
+  },
+  "earthshaker_slugger": {
+    "dname": "Slugger",
+    "behavior": [
+      "Passive",
+      "Hidden"
+    ],
+    "dispellable": "No",
+    "desc": "Enemies killed with Enchant Totem or Earthshaker's other abilities are sent flying, dealing damage to enemies they hit.",
+    "attrib": [],
+    "img": "/apps/dota2/images/dota_react/abilities/earthshaker_slugger.png"
   },
   "special_bonus_unique_earthshaker": {
     "dname": "-1.5s Enchant Totem Cooldown"
@@ -13336,9 +13347,9 @@
         "key": "illusion_duration",
         "header": "ILLUSION DURATION:",
         "value": [
-          "2",
-          "4",
-          "6",
+          "3.5",
+          "5",
+          "6.5",
           "8"
         ]
       },
@@ -13544,9 +13555,9 @@
         "key": "illusion_damage_out_pct",
         "header": "ILLUSION DAMAGE OUT PCT:",
         "value": [
-          "-87",
           "-85",
-          "-83"
+          "-83",
+          "-81"
         ],
         "generated": true
       },
@@ -13554,9 +13565,9 @@
         "key": "tooltip_illusion_damage",
         "header": "ILLUSION DAMAGE:",
         "value": [
-          "13%",
           "15%",
-          "17%"
+          "17%",
+          "19%"
         ]
       },
       {
@@ -15093,10 +15104,10 @@
         "key": "caustic_finale_damage_base",
         "header": "BASE DAMAGE:",
         "value": [
-          "20",
-          "40",
-          "60",
-          "80"
+          "15",
+          "35",
+          "55",
+          "75"
         ]
       },
       {
@@ -15950,7 +15961,7 @@
     ],
     "bkbpierce": "Yes",
     "dispellable": "Yes",
-    "desc": "Sven's Warcry heartens his allied heroes for battle, increasing their armor and movement speed. Lasts 10 seconds.",
+    "desc": "Sven's Warcry heartens his allied heroes for battle, increasing their armor and movement speed. Lasts 8 seconds.",
     "attrib": [
       {
         "key": "movespeed",
@@ -15980,7 +15991,7 @@
       {
         "key": "duration",
         "header": "DURATION:",
-        "value": "10"
+        "value": "8"
       },
       {
         "key": "shard_passive_armor",
@@ -17482,13 +17493,13 @@
     "dname": "-15% Powershot Reduction"
   },
   "special_bonus_unique_windranger_4": {
-    "dname": "-2.5s Windrun Cooldown"
+    "dname": "-2.0s Windrun Cooldown"
   },
   "special_bonus_unique_windranger_6": {
     "dname": "+0.75s Shackleshot Duration"
   },
   "special_bonus_unique_windranger_8": {
-    "dname": "-12% Focus Fire Damage Reduction"
+    "dname": "-10% Focus Fire Damage Reduction"
   },
   "special_bonus_unique_windranger_9": {
     "dname": "-2s Shackleshot Cooldown"
@@ -17626,7 +17637,7 @@
       "Hero",
       "Basic"
     ],
-    "desc": "Hurls a bolt of lightning that leaps through nearby enemy units that deal a base damage and a percentage of their current health.",
+    "desc": "Hurls a bolt of lightning that leaps through nearby enemy units that deal damage.",
     "attrib": [
       {
         "key": "arc_damage",
@@ -17698,10 +17709,10 @@
     ],
     "desc": "Calls down a bolt of lightning to strike an enemy unit, causing damage and a mini-stun. When cast, Lightning Bolt briefly provides unobstructed vision and True Sight around the target in a 750 radius. Can be cast on the ground, affecting the closest enemy hero in 325 range.",
     "dmg": [
-      "125",
-      "200",
-      "275",
-      "350"
+      "140",
+      "220",
+      "300",
+      "380"
     ],
     "attrib": [
       {
@@ -17826,7 +17837,7 @@
         "generated": true
       }
     ],
-    "mc": "325",
+    "mc": "275",
     "cd": "45",
     "img": "/apps/dota2/images/dota_react/abilities/zuus_cloud.png"
   },
@@ -18686,9 +18697,9 @@
         "key": "light_strike_array_stun_duration",
         "header": "STUN DURATION:",
         "value": [
-          "1.3",
-          "1.6",
-          "1.9",
+          "1",
+          "1.4",
+          "1.8",
           "2.2"
         ]
       },
@@ -18967,12 +18978,12 @@
     "behavior": "Passive",
     "dmg_type": "Magical",
     "target_type": "Hero",
-    "desc": "Every 150 damage Lina does to an enemy hero causes them to overheat, doing damage to their nearby allies. This effect can trigger multiple times off a single instance of damage. Overheated illusions do less damage.",
+    "desc": "Every 175 damage Lina does to an enemy hero causes them to overheat, doing damage to their nearby allies. This effect can trigger multiple times off a single instance of damage. Overheated illusions do less damage.",
     "attrib": [
       {
         "key": "damage_threshold",
         "header": "DAMAGE THRESHOLD:",
-        "value": "150",
+        "value": "175",
         "generated": true
       },
       {
@@ -19173,13 +19184,13 @@
     "is_innate": true,
     "behavior": "Passive",
     "target_team": "Friendly",
-    "desc": "Lich cannot gain passive mana regeneration, but any unit dying within 1200 range of Lich restores 2.5% of his Max Mana (Dying heroes restore 15% of Lich's Max Mana). Instant mana restoration from items and abilities apply to Lich as normal.",
+    "desc": "Lich cannot gain passive mana regeneration, but any unit dying within 1500 range of Lich restores 2.5% of his Max Mana (Dying heroes restore 15% of Lich's Max Mana). Instant mana restoration from items and abilities apply to Lich as normal.",
     "attrib": [
       {
         "key": "radius",
         "header": "RADIUS:",
         "value": [
-          "1200",
+          "1500",
           ""
         ],
         "generated": true
@@ -19767,7 +19778,7 @@
     "dname": "Frost Shield Provides +50 HP Regen"
   },
   "special_bonus_unique_lich_2": {
-    "dname": "+0.4s Sinister Gaze Duration"
+    "dname": "+0.3s Sinister Gaze Duration"
   },
   "special_bonus_unique_lich_3": {
     "dname": "-3.5s Frost Blast Cooldown"
@@ -19919,10 +19930,10 @@
         "key": "abilitycastrange",
         "header": "CAST RANGE:",
         "value": [
-          "550",
           "575",
           "600",
-          "625"
+          "625",
+          "650"
         ],
         "generated": true
       },
@@ -20199,7 +20210,7 @@
     "dname": "+250 AoE Hex"
   },
   "special_bonus_unique_lion_5": {
-    "dname": "-2s Hex Cooldown"
+    "dname": "-2.5s Hex Cooldown"
   },
   "special_bonus_unique_lion_6": {
     "dname": "+10% Mana Drain Slow"
@@ -20547,9 +20558,9 @@
       "170"
     ],
     "cd": [
-      "16",
-      "14",
+      "13",
       "12",
+      "11",
       "10"
     ],
     "img": "/apps/dota2/images/dota_react/abilities/shadow_shaman_shackles.png"
@@ -22294,9 +22305,9 @@
         "key": "damage_multiplier",
         "header": "AGI DAMAGE MULT:",
         "value": [
-          "0.4",
-          "0.8",
-          "1.2",
+          "0.55",
+          "0.9",
+          "1.25",
           "1.6"
         ]
       },
@@ -23072,10 +23083,10 @@
         "key": "status_resistance",
         "header": "STATUS RESISTANCE:",
         "value": [
-          "10%",
+          "15%",
           "20%",
-          "30%",
-          "40%"
+          "25%",
+          "30%"
         ]
       },
       {
@@ -23103,12 +23114,7 @@
       {
         "key": "abilitycastrange",
         "header": "CAST RANGE:",
-        "value": [
-          "700",
-          "750",
-          "800",
-          "850"
-        ],
+        "value": "700",
         "generated": true
       },
       {
@@ -23721,7 +23727,7 @@
     "dname": "-0.5s Keen Conveyance Channel Time"
   },
   "special_bonus_unique_tinker_7": {
-    "dname": "+125 Defense Matrix Damage Absorbed"
+    "dname": "+75 Defense Matrix Damage Barrier"
   },
   "special_bonus_unique_tinker_rearm_magic_resistance": {
     "dname": "Rearm Grants 50% Bonus Magic Resistance"
@@ -24409,7 +24415,7 @@
       {
         "key": "bonus_damage",
         "header": "INCREASED MAGIC DAMAGE:",
-        "value": "-25%"
+        "value": "-20%"
       },
       {
         "key": "abilitycastpoint",
@@ -28375,10 +28381,10 @@
         "key": "delay_pct",
         "header": "DELAY PCT:",
         "value": [
-          "20",
-          "30",
-          "40",
-          "50"
+          "15",
+          "25",
+          "35",
+          "45"
         ],
         "generated": true
       },
@@ -29037,9 +29043,9 @@
         "key": "health_drain",
         "header": "ENEMY DRAIN PER SECOND:",
         "value": [
-          "160",
-          "240",
-          "320"
+          "150",
+          "250",
+          "350"
         ]
       },
       {
@@ -32783,11 +32789,11 @@
       },
       {
         "key": "damage",
-        "header": "DAMAGE:",
+        "header": "BASE DAMAGE:",
         "value": [
-          "120",
-          "155",
-          "190"
+          "100",
+          "140",
+          "180"
         ]
       },
       {
@@ -34829,10 +34835,10 @@
         "key": "bonus_damage",
         "header": "DAMAGE:",
         "value": [
-          "50",
-          "70",
-          "90",
-          "110"
+          "40",
+          "60",
+          "80",
+          "100"
         ]
       },
       {
@@ -35187,7 +35193,7 @@
       {
         "key": "duration",
         "header": "DURATION:",
-        "value": "6"
+        "value": "5"
       },
       {
         "key": "magic_resist",
@@ -35351,7 +35357,7 @@
     "dname": "+75% Hammer of Purity Bonus Base Damage"
   },
   "special_bonus_unique_omniknight_5": {
-    "dname": "+2s Repel Duration"
+    "dname": "+1s Repel Duration"
   },
   "special_bonus_unique_omniknight_6": {
     "dname": "-3s Purification Cooldown"
@@ -35360,7 +35366,7 @@
     "dname": "-20s Guardian Angel Cooldown"
   },
   "special_bonus_unique_omniknight_guardian_angel_duration": {
-    "dname": "+1s Guardian Angel Duration"
+    "dname": "+2s Guardian Angel Duration"
   },
   "enchantress_untouchable": {
     "dname": "Untouchable",
@@ -35504,7 +35510,7 @@
       "Hero",
       "Basic"
     ],
-    "desc": "Enchantress charms an enemy. If the enemy is a hero, they are dispelled and slowed for 5s.\n\n If the enemy is a creep, she brings it under her control and receives 50% of their experience bounty. Enchantress can control creeps for up to 30s. \n\nDISPEL TYPE: Basic Dispel",
+    "desc": "Enchantress charms an enemy. If the enemy is a hero, they are dispelled and slowed for 5s.\n\n If the enemy is a creep, she brings it under her control and receives 35% of their experience bounty. Enchantress can control creeps for up to 30s. \n\nDISPEL TYPE: Basic Dispel",
     "attrib": [
       {
         "key": "abilitycastrange",
@@ -35578,7 +35584,7 @@
       {
         "key": "xp_gain_pct",
         "header": "XP GAIN PCT:",
-        "value": "50",
+        "value": "35",
         "generated": true
       },
       {
@@ -36243,6 +36249,16 @@
         ]
       },
       {
+        "key": "abilityduration",
+        "header": "DURATION:",
+        "value": [
+          "3",
+          "4",
+          "5"
+        ],
+        "generated": true
+      },
+      {
         "key": "slow_duration_tooltip",
         "header": "SLOW DURATION:",
         "value": [
@@ -36281,16 +36297,6 @@
         "key": "abilitycastrange",
         "header": "CAST RANGE:",
         "value": "550",
-        "generated": true
-      },
-      {
-        "key": "abilityduration",
-        "header": "DURATION:",
-        "value": [
-          "3",
-          "4",
-          "5"
-        ],
         "generated": true
       },
       {
@@ -39696,10 +39702,10 @@
     ],
     "lore": "Mercurial's dagger eclipses the physical plane in shadow, a state in which mortals cower, but spectres thrive.",
     "mc": [
+      "110",
       "120",
       "130",
-      "140",
-      "150"
+      "140"
     ],
     "cd": [
       "22",
@@ -40344,12 +40350,12 @@
       "Passive",
       "Hidden"
     ],
-    "desc": "Doom can sell items for 90% of their value, but his buyback costs are increased by 15%.",
+    "desc": "Doom can sell items for 90% of their value, but his buyback costs are increased by 20%.",
     "attrib": [
       {
         "key": "buyback_penalty",
         "header": "BUYBACK PENALTY:",
-        "value": "15",
+        "value": "20",
         "generated": true
       },
       {
@@ -40713,7 +40719,11 @@
       {
         "key": "frostbite_duration",
         "header": "FROSTBITTEN DURATION:",
-        "value": "10"
+        "value": [
+          "10",
+          "11",
+          "12"
+        ]
       },
       {
         "key": "frost_stacks",
@@ -44763,9 +44773,9 @@
         "key": "movespeed",
         "header": "MOVEMENT SLOW:",
         "value": [
-          "-10%",
-          "-15%",
-          "-20%",
+          "-16%",
+          "-19%",
+          "-22%",
           "-25%"
         ]
       },
@@ -50020,10 +50030,10 @@
         "key": "bonus_attack_speed",
         "header": "BONUS ATTACK SPEED:",
         "value": [
-          "30",
-          "45",
-          "60",
-          "75"
+          "35",
+          "50",
+          "65",
+          "80"
         ]
       },
       {
@@ -52428,7 +52438,7 @@
       {
         "key": "max_movement_speed",
         "header": "MAX MOVEMENT SPEED:",
-        "value": "225"
+        "value": "240"
       },
       {
         "key": "abilitycastpoint",
@@ -56756,10 +56766,10 @@
         "key": "skewer_damage",
         "header": "DAMAGE:",
         "value": [
-          "75",
-          "150",
-          "225",
-          "300"
+          "80",
+          "160",
+          "240",
+          "320"
         ]
       },
       {
@@ -56977,7 +56987,7 @@
     "dname": "+0.8s Reverse Polarity Stun Duration"
   },
   "special_bonus_unique_magnus_6": {
-    "dname": "+0.5s Shockwave Slow Duration"
+    "dname": "+0.75s Shockwave Slow Duration"
   },
   "special_bonus_unique_magnus_7": {
     "dname": "-5s Skewer Cooldown"
@@ -60695,7 +60705,12 @@
       }
     ],
     "lore": "The studied warrior must whip and weave through its enemies, burning each without pause.",
-    "mc": "65",
+    "mc": [
+      "60",
+      "65",
+      "70",
+      "75"
+    ],
     "cd": [
       "13",
       "11",
@@ -60738,10 +60753,10 @@
         "key": "damage_per_second",
         "header": "DAMAGE PER SECOND:",
         "value": [
-          "20",
-          "30",
-          "40",
-          "50"
+          "15",
+          "25",
+          "35",
+          "45"
         ]
       },
       {
@@ -64260,7 +64275,7 @@
       {
         "key": "restore_pct",
         "header": "HEALING CONVERTED TO MANA:",
-        "value": "15%"
+        "value": "20%"
       }
     ],
     "img": "/apps/dota2/images/dota_react/abilities/winter_wyvern_essence_of_the_blueheart.png"
@@ -69864,7 +69879,7 @@
       {
         "key": "debuff_duration",
         "header": "SLOW DURATION:",
-        "value": "0.35"
+        "value": "0.3"
       },
       {
         "key": "slow",
@@ -71112,7 +71127,7 @@
     "dispellable": "Strong Dispels Only",
     "target_team": "Friendly",
     "target_type": "Hero",
-    "desc": "Marci bounds to the targeted allied unit, choosing a direction and distance she will spring away from it. Upon reaching the unit, Marci lunges to her final destination, damaging and stunning enemies where she lands.\n\n The ally receives 25% bonus movement speed for 5s.",
+    "desc": "Marci bounds to the targeted allied unit, choosing a direction and distance she will spring away from it. Upon reaching the unit, Marci lunges to her final destination, damaging and stunning enemies where she lands.\n\n The ally receives 25% bonus movement speed for 4s.",
     "attrib": [
       {
         "key": "move_speed",
@@ -71218,7 +71233,7 @@
       {
         "key": "ally_buff_duration",
         "header": "ALLY BUFF DURATION:",
-        "value": "5",
+        "value": "4",
         "generated": true
       },
       {
@@ -71482,7 +71497,7 @@
     "dname": "+100 Rebound Cast/Jump Range"
   },
   "special_bonus_unique_marci_unleash_speed": {
-    "dname": "+12% Unleash Movement Speed"
+    "dname": "+10% Unleash Movement Speed"
   },
   "special_bonus_unique_marci_grapple_damage": {
     "dname": "+100 Dispose Damage"
@@ -73057,7 +73072,7 @@
     "bkbpierce": "No",
     "dispellable": "No",
     "target_type": "Hero",
-    "desc": "Ringmaster rolls the Wheel of Wonder to the targeted location, knocking aside enemies along the way. After it reaches its target, enemies in range of the wheel take damage over time and are slowed by -50%.\n\nEnemy heroes who face the wheel for more than 0.5 seconds are mesmerized and drawn towards it. The first enemy to be mesmerized triggers a timer for the wheel to explode. If the timer is not triggered, it will automatically explode after 8 seconds.",
+    "desc": "Ringmaster rolls the Wheel of Wonder to the targeted location, knocking aside enemies along the way. After it reaches its target, enemies in range of the wheel take damage over time and are slowed by -50%.\n\nEnemy heroes who face the wheel for more than 0.5 seconds are mesmerized and drawn towards it. The first enemy to be mesmerized triggers a timer for the wheel to explode. If the timer is not triggered, it will automatically explode after 6 seconds.",
     "attrib": [
       {
         "key": "min_range",
@@ -73084,16 +73099,16 @@
       {
         "key": "trap_duration",
         "header": "TRAP DURATION:",
-        "value": "8",
+        "value": "6",
         "generated": true
       },
       {
         "key": "wheel_stun",
         "header": "TIMER DURATION:",
         "value": [
+          "2.5",
           "2.75",
-          "3",
-          "3.25"
+          "3"
         ]
       },
       {
@@ -73549,7 +73564,7 @@
     "dispellable": "Yes",
     "target_team": "Friendly",
     "target_type": "Hero",
-    "desc": "Use: Forcefully Imbibe Temporarily increases an allied hero's Strength by 5 plus 1.5 per Ringmaster's level for 8 seconds. The effect holds for 4 seconds and then deteriorates over the duration.",
+    "desc": "Use: Forcefully Imbibe Temporarily increases an allied hero's Strength by 5 plus 1 per Ringmaster's level for 8 seconds. The effect holds for 4 seconds and then deteriorates over the duration.",
     "attrib": [
       {
         "key": "projectile_speed",
@@ -73566,7 +73581,7 @@
       {
         "key": "strength_bonus_per_level",
         "header": "STRENGTH BONUS PER LEVEL:",
-        "value": "1.5",
+        "value": "1",
         "generated": true
       },
       {
