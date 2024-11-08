@@ -4016,10 +4016,6 @@
     "charges": false
   },
   "bracer": {
-    "abilities": [],
-    "hint": [
-      "Doubles its bonuses after minute 25."
-    ],
     "id": 73,
     "img": "/apps/dota2/images/dota_react/items/bracer.png?t=1593393829403",
     "dname": "Bracer",
@@ -4030,17 +4026,17 @@
       {
         "key": "bonus_strength",
         "display": "+ {value} Strength",
-        "value": "5 / 10"
+        "value": "5"
       },
       {
         "key": "bonus_agility",
         "display": "+ {value} Agility",
-        "value": "2 / 4"
+        "value": "2"
       },
       {
         "key": "bonus_intellect",
         "display": "+ {value} Intelligence",
-        "value": "2 / 4"
+        "value": "2"
       },
       {
         "key": "bonus_damage",
@@ -4049,16 +4045,12 @@
       {
         "key": "bonus_health_regen",
         "display": "+ {value} Health Regeneration",
-        "value": "0.75 / 1.5"
+        "value": "0.75"
       },
       {
         "key": "bonus_health",
         "display": "+ {value} Health",
-        "value": "50 / 100"
-      },
-      {
-        "key": "clock_time",
-        "value": "25"
+        "value": "50"
       }
     ],
     "mc": false,
@@ -4089,10 +4081,6 @@
     "charges": false
   },
   "wraith_band": {
-    "abilities": [],
-    "hint": [
-      "Doubles its bonuses after minute 25."
-    ],
     "id": 75,
     "img": "/apps/dota2/images/dota_react/items/wraith_band.png?t=1593393829403",
     "dname": "Wraith Band",
@@ -4103,31 +4091,27 @@
       {
         "key": "bonus_agility",
         "display": "+ {value} Agility",
-        "value": "5 / 10"
+        "value": "5"
       },
       {
         "key": "bonus_strength",
         "display": "+ {value} Strength",
-        "value": "2 / 4"
+        "value": "2"
       },
       {
         "key": "bonus_intellect",
         "display": "+ {value} Intelligence",
-        "value": "2 / 4"
+        "value": "2"
       },
       {
         "key": "bonus_attack_speed",
         "display": "+ {value} Attack Speed",
-        "value": "5 / 10"
+        "value": "5"
       },
       {
         "key": "bonus_armor",
         "display": "+ {value} Armor",
-        "value": "1.75 / 3.5"
-      },
-      {
-        "key": "clock_time",
-        "value": "25"
+        "value": "1.75"
       }
     ],
     "mc": false,
@@ -4158,10 +4142,6 @@
     "charges": false
   },
   "null_talisman": {
-    "abilities": [],
-    "hint": [
-      "Doubles its bonuses after minute 25."
-    ],
     "id": 77,
     "img": "/apps/dota2/images/dota_react/items/null_talisman.png?t=1593393829403",
     "dname": "Null Talisman",
@@ -4172,31 +4152,27 @@
       {
         "key": "bonus_intellect",
         "display": "+ {value} Intelligence",
-        "value": "5 / 10"
+        "value": "5"
       },
       {
         "key": "bonus_strength",
         "display": "+ {value} Strength",
-        "value": "2 / 4"
+        "value": "2"
       },
       {
         "key": "bonus_agility",
         "display": "+ {value} Agility",
-        "value": "2 / 4"
+        "value": "2"
       },
       {
         "key": "bonus_max_mana_percentage",
         "display": "+ {value}% Max Mana Bonus",
-        "value": "3 / 6"
+        "value": "3"
       },
       {
         "key": "bonus_mana_regen",
         "display": "+ {value} Mana Regeneration",
-        "value": "1.0 / 2.0"
-      },
-      {
-        "key": "clock_time",
-        "value": "25"
+        "value": "1.0"
       }
     ],
     "mc": false,
@@ -4538,7 +4514,7 @@
       {
         "key": "mana_regen",
         "display": "+ {value} Mana Regeneration",
-        "value": "0.5"
+        "value": "0.25"
       },
       {
         "key": "aura_mana_regen",
@@ -4673,7 +4649,7 @@
       {
         "type": "active",
         "title": "Barrier",
-        "description": "Gives a magic damage barrier that absorbs 425 damage to all nearby allies. Lasts 10 seconds.\n\nRadius: 1200"
+        "description": "Gives a magic damage barrier that absorbs 425 damage to all nearby allies. Lasts 8 seconds.\n\nRadius: 1200"
       },
       {
         "type": "passive",
@@ -4729,7 +4705,7 @@
       },
       {
         "key": "barrier_duration",
-        "value": "10.0"
+        "value": "8.0"
       },
       {
         "key": "barrier_radius",
@@ -4741,7 +4717,7 @@
       },
       {
         "key": "barrier_block_creep",
-        "value": "450"
+        "value": "425"
       }
     ],
     "mc": 150,
@@ -7603,7 +7579,7 @@
       {
         "type": "active",
         "title": "Soul Release",
-        "description": "When used against enemies, it reduces health by 4% of current health per second, and reduces HP regeneration, healing, lifesteal and spell lifesteal by 50%. Deals 25 damage per second. \n\nWhen used on allies, it provides 40 health regeneration per second. \n\nLasts 8 seconds. \n\nGains charges every time an enemy hero dies within 1400 units. Only the closest Spirit Vessel to the dying hero will gain a charge."
+        "description": "When used against enemies, it reduces health by 4% of current health per second, and reduces HP regeneration, healing, lifesteal and spell lifesteal by 60%. Deals 25 damage per second. \n\nWhen used on allies, it provides 40 health regeneration per second. \n\nLasts 8 seconds. \n\nGains charges every time an enemy hero dies within 1400 units or the user dies. Only the closest Spirit Vessel to the dying hero will gain a charge."
       }
     ],
     "hint": [],
@@ -7662,7 +7638,7 @@
       },
       {
         "key": "hp_regen_reduction_enemy",
-        "value": "50"
+        "value": "60"
       },
       {
         "key": "enemy_hp_drain",
@@ -7751,7 +7727,7 @@
       {
         "type": "active",
         "title": "Guard",
-        "description": "For 8 seconds, grant nearby allied heroes and buildings a 100% chance to block damage equal to 70 plus 2.2% of the casters max health value from each incoming attack.\nUnits may only be affected by Guard once every 35 seconds.\n\nRadius: 1200"
+        "description": "For 7 seconds, grant nearby allied heroes and buildings a 100% chance to block damage equal to 70 plus 2.2% of the casters max health value from each incoming attack.\nUnits may only be affected by Guard once every 35 seconds.\n\nRadius: 1200"
       },
       {
         "type": "passive",
@@ -7801,7 +7777,7 @@
       },
       {
         "key": "duration",
-        "value": "8"
+        "value": "7"
       },
       {
         "key": "bonus_aoe_radius",
@@ -8389,7 +8365,7 @@
     "dmg_type": "Physical",
     "bkbpierce": "Yes",
     "dispellable": "Strong Dispels Only",
-    "notes": "Does not stack with other sources of Bash.\nThe following heroes cannot trigger Bash on this item: Spirit Breaker, Faceless Void, and Slardar.\nDoes not grant Bash to Clones and Tempest Doubles.",
+    "notes": "Does not stack with other sources of Bash.\nThe following heroes cannot trigger Bash on this item: Spirit Breaker, Faceless Void, Slardar, and Kez while in Sai mode.\nDoes not grant Bash to Clones and Tempest Doubles.",
     "attrib": [
       {
         "key": "bonus_damage",
@@ -9800,7 +9776,7 @@
     "id": 1565,
     "img": "/apps/dota2/images/dota_react/items/recipe.png?t=1593393829403",
     "dname": "Gleipnir Recipe",
-    "cost": 250,
+    "cost": 550,
     "behavior": false,
     "notes": "",
     "attrib": [],
@@ -9822,7 +9798,7 @@
       {
         "type": "passive",
         "title": "Chain Lightning",
-        "description": "Grants a 25% chance on attack to release a bolt of electricity that leaps between 4 targets within a 650 radius, dealing 160 magical damage to each. Lightning proc pierces evasion. Deals 150% damage to illusions."
+        "description": "Grants a 25% chance on attack to release a bolt of electricity that leaps between 4 targets within a 650 radius, dealing 140 magical damage to each. Lightning proc pierces evasion. Deals 150% damage to illusions."
       }
     ],
     "hint": [],
@@ -9830,7 +9806,7 @@
     "img": "/apps/dota2/images/dota_react/items/gungir.png?t=1593393829403",
     "dname": "Gleipnir",
     "qual": "artifact",
-    "cost": 5450,
+    "cost": 5750,
     "behavior": [
       "Point Target",
       "AOE"
@@ -9846,12 +9822,12 @@
       {
         "key": "bonus_damage",
         "display": "+ {value} Damage",
-        "value": "30"
+        "value": "25"
       },
       {
         "key": "bonus_attack_speed",
         "display": "+ {value} Attack Speed",
-        "value": "30"
+        "value": "25"
       },
       {
         "key": "chain_chance",
@@ -9859,7 +9835,7 @@
       },
       {
         "key": "chain_damage",
-        "value": "160"
+        "value": "140"
       },
       {
         "key": "chain_strikes",
@@ -9885,7 +9861,7 @@
       {
         "key": "bonus_hp",
         "display": "+ {value} Health",
-        "value": "300"
+        "value": "275"
       },
       {
         "key": "duration",
@@ -10210,7 +10186,7 @@
       {
         "type": "active",
         "title": "Suppress",
-        "description": "Slows the target for 5 seconds if they are an enemy or grants bonus movespeed, applies Basic Dispel and makes them unslowable for 5 seconds if they are an ally. Caster is always granted the ally benefit on cast.\n\nBoth movement speed reduction and increase start at 100% and gradually decrease to 0% over the course of the buff duration.\nDispel Type: Basic Dispel"
+        "description": "Slows the target for 5 seconds if they are an enemy or applies a basic dispell and grants bonus movespeed and 40% slow resistance for 5 seconds if they are an ally. Caster is always granted the ally benefit on cast.\n\nBoth movement speed reduction and increase start at 100% and gradually decrease to 0% over the course of the buff duration.\nDispel Type: Basic Dispel"
       },
       {
         "type": "passive",
@@ -10285,6 +10261,10 @@
       {
         "key": "phase_movement_speed",
         "value": "100"
+      },
+      {
+        "key": "slow_resist",
+        "value": "40"
       }
     ],
     "mc": 75,
@@ -10476,7 +10456,7 @@
     "id": 179,
     "img": "/apps/dota2/images/dota_react/items/recipe.png?t=1593393829403",
     "dname": "Arcane Boots Recipe",
-    "cost": 375,
+    "cost": 475,
     "behavior": false,
     "notes": "",
     "attrib": [],
@@ -10493,7 +10473,7 @@
       {
         "type": "active",
         "title": "Replenish Mana",
-        "description": "Restores 175 mana to all nearby allies.\n\nRadius: 1200"
+        "description": "Restores 150 mana to all nearby allies.\n\nRadius: 1200"
       },
       {
         "type": "passive",
@@ -10508,7 +10488,7 @@
     "img": "/apps/dota2/images/dota_react/items/arcane_boots.png?t=1593393829403",
     "dname": "Arcane Boots",
     "qual": "rare",
-    "cost": 1300,
+    "cost": 1400,
     "behavior": [
       "Instant Cast",
       "No Target"
@@ -10523,7 +10503,7 @@
       {
         "key": "mana_regen",
         "display": "+ {value} Mana Regeneration",
-        "value": "0.5"
+        "value": "0.25"
       },
       {
         "key": "aura_mana_regen",
@@ -10535,7 +10515,7 @@
       },
       {
         "key": "replenish_amount",
-        "value": "175"
+        "value": "150"
       },
       {
         "key": "replenish_radius",
@@ -11141,7 +11121,7 @@
       {
         "type": "active",
         "title": "Shine",
-        "description": "When cast on an ally, grants them 5 armor, 70 attack speed, 15% movement speed and a 400 physical damage barrier. \n\nDoes not grant bonus armor, movement or attack speed if used on self. \n\nDuration: 8"
+        "description": "When cast on an ally, grants them 5 armor, 60 attack speed, 15% movement speed and a 350 physical damage barrier. \n\nDoes not grant bonus armor, movement or attack speed if used on self. \n\nDuration: 7"
       }
     ],
     "hint": [],
@@ -11186,7 +11166,7 @@
       {
         "key": "bonus_health",
         "display": "+ {value} Health",
-        "value": "200"
+        "value": "175"
       },
       {
         "key": "target_movement_speed",
@@ -11194,7 +11174,7 @@
       },
       {
         "key": "target_attack_speed",
-        "value": "70"
+        "value": "60"
       },
       {
         "key": "target_armor",
@@ -11202,11 +11182,11 @@
       },
       {
         "key": "duration",
-        "value": "8"
+        "value": "7"
       },
       {
         "key": "absorb_amount",
-        "value": "400"
+        "value": "350"
       }
     ],
     "mc": 100,
@@ -11242,7 +11222,7 @@
       {
         "type": "active",
         "title": "Protect",
-        "description": "When cast on an ally, grants them a physical damage barrier that absorbs 300 damage. Duration: 8s."
+        "description": "When cast on an ally, grants them a physical damage barrier that absorbs 250 damage. Duration: 7s."
       }
     ],
     "hint": [],
@@ -11281,14 +11261,14 @@
       },
       {
         "key": "duration",
-        "value": "8"
+        "value": "7"
       },
       {
         "key": "absorb_amount",
-        "value": "300"
+        "value": "250"
       }
     ],
-    "mc": 75,
+    "mc": 100,
     "hc": false,
     "cd": 16,
     "lore": "",
@@ -11655,7 +11635,7 @@
     "img": "/apps/dota2/images/dota_react/items/guardian_greaves.png?t=1593393829403",
     "dname": "Guardian Greaves",
     "qual": "rare",
-    "cost": 4950,
+    "cost": 5050,
     "behavior": [
       "Instant Cast",
       "No Target"
@@ -11922,7 +11902,7 @@
       "Hero",
       "Basic"
     ],
-    "notes": "The stun is melee range.\nDoes not stack with other bashes, and does not grant bash to Clones and Tempest Doubles.\nMultiple sources of damage block do not stack.",
+    "notes": "The stun is melee range.\nDoes not stack with other bashes, and does not grant bash to Clones and Tempest Doubles.\nMultiple sources of damage block do not stack.\nThe following heroes cannot trigger Bash on this item: Spirit Breaker, Faceless Void, Slardar, and Kez while in Sai mode.",
     "attrib": [
       {
         "key": "bonus_damage",
@@ -16735,7 +16715,7 @@
       {
         "type": "active",
         "title": "Verdurous Dale",
-        "description": "Target the ground with a 400 radius. Provides +10 health regeneration to all allied units while they are in the area of effect. Lasts 14 seconds."
+        "description": "Target the ground with a 400 radius. Provides +10 health regeneration to all allied units while they are in the area of effect. Lasts 8 seconds."
       }
     ],
     "hint": [],
@@ -16769,7 +16749,7 @@
       },
       {
         "key": "duration",
-        "value": "14"
+        "value": "8"
       }
     ],
     "mc": false,
