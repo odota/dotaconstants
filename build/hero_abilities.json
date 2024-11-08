@@ -10,7 +10,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_unique_antimage_4",
+        "name": "special_bonus_hp_regen_3",
         "level": 1
       },
       {
@@ -3247,7 +3247,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_attack_speed_80",
+        "name": "special_bonus_attack_speed_90",
         "level": 2
       },
       {
@@ -4272,7 +4272,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_batrider_1",
+        "name": "special_bonus_unique_batrider_smoldering_resin_ticks",
         "level": 3
       },
       {
@@ -5292,9 +5292,10 @@
       "lone_druid_spirit_bear",
       "lone_druid_spirit_link",
       "lone_druid_savage_roar",
-      "lone_druid_gift_bearer",
       "generic_hidden",
-      "lone_druid_true_form"
+      "generic_hidden",
+      "lone_druid_true_form",
+      "lone_druid_gift_bearer"
     ],
     "talents": [
       {
@@ -6179,7 +6180,7 @@
         "color": "Yellow",
         "gradient_id": 0,
         "title": "Death Toll",
-        "description": "Soul Assumption kills give up to 105 140 175 210 bonus gold."
+        "description": "Soul Assumption kills give bonus gold. Visage can also recall his familiars."
       }
     ]
   },
@@ -7690,7 +7691,7 @@
         "color": "Red",
         "gradient_id": 2,
         "title": "Wukong's Faithful",
-        "description": "Monkey King's soldiers last longer and do not disperse unless he spends more than 3.0 seconds outside the area."
+        "description": "Monkey King's soldiers last longer and do not disperse unless he spends more than 4.0 seconds outside the area."
       },
       {
         "id": 1,
@@ -7699,7 +7700,7 @@
         "color": "Green",
         "gradient_id": 4,
         "title": "Simian Stride",
-        "description": "Tree Dance has no cooldown while Monkey King is above 90% health."
+        "description": "Tree Dance has no cooldown while Monkey King is above 95% health."
       }
     ]
   },
@@ -8448,7 +8449,8 @@
       "ringmaster_empty_souvenir",
       "ringmaster_spotlight",
       "ringmaster_wheel",
-      "ringmaster_tame_the_beasts_crack"
+      "ringmaster_tame_the_beasts_crack",
+      "generic_hidden"
     ],
     "talents": [
       {
@@ -8509,6 +8511,66 @@
         "gradient_id": 3,
         "title": "Center Stage",
         "description": "Ringmaster is still new to the spotlight. This facet doesn't do anything... yet."
+      }
+    ]
+  },
+  "npc_dota_hero_kez": {
+    "abilities": [
+      "kez_echo_slash",
+      "kez_grappling_claw",
+      "kez_kazurai_katana",
+      "kez_switch_weapons",
+      "generic_hidden",
+      "kez_raptor_dance",
+      "kez_falcon_rush",
+      "kez_talon_toss",
+      "kez_shodo_sai",
+      "kez_ravens_veil",
+      "kez_shodo_sai_parry_cancel"
+    ],
+    "talents": [
+      {
+        "name": "special_bonus_magic_resistance_12",
+        "level": 1
+      },
+      {
+        "name": "special_bonus_mp_regen_150",
+        "level": 1
+      },
+      {
+        "name": "special_bonus_unique_kez_falcon_rush_duration",
+        "level": 2
+      },
+      {
+        "name": "special_bonus_unique_kez_raptor_dance_radius",
+        "level": 2
+      },
+      {
+        "name": "special_bonus_unique_kez_kazura_katana_bleed_damage",
+        "level": 3
+      },
+      {
+        "name": "special_bonus_unique_kez_falcon_rush_evasion",
+        "level": 3
+      },
+      {
+        "name": "special_bonus_unique_kez_mark_damage",
+        "level": 4
+      },
+      {
+        "name": "special_bonus_unique_kez_echo_slash_strike_count",
+        "level": 4
+      }
+    ],
+    "facets": [
+      {
+        "id": 0,
+        "name": "kez_default",
+        "icon": "kez",
+        "color": "Blue",
+        "gradient_id": 3,
+        "title": "Hero of the Flightless",
+        "description": "Kez always has a few fun tricks up his sleeve, but right now he's got a war to win. This facet doesn't do anything... yet."
       }
     ]
   }
