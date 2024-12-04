@@ -2120,7 +2120,7 @@
     "id": 218,
     "img": "/apps/dota2/images/dota_react/items/ward_dispenser.png?t=1593393829403",
     "dname": "Observer and Sentry Wards",
-    "qual": "common",
+    "qual": "consumable",
     "cost": 50,
     "behavior": [
       "Point Target",
@@ -3375,7 +3375,7 @@
     "id": 1807,
     "img": "/apps/dota2/images/dota_react/items/recipe.png?t=1593393829403",
     "dname": "Khanda Recipe",
-    "cost": 600,
+    "cost": 500,
     "behavior": false,
     "notes": "",
     "attrib": [],
@@ -3392,7 +3392,7 @@
       {
         "type": "passive",
         "title": "Empower Spell",
-        "description": "The next Unit Target spell you cast on an enemy deals 150 + 75% of your attack damage as bonus damage to the target, and slows them by 50% for 1.5s."
+        "description": "The next Unit Target spell you cast on an enemy deals 150 + 60% of your attack damage as bonus damage to the target, and slows them by 50% for 1.5s."
       },
       {
         "type": "passive",
@@ -3405,7 +3405,7 @@
     "img": "/apps/dota2/images/dota_react/items/angels_demise.png?t=1593393829403",
     "dname": "Khanda",
     "qual": "common",
-    "cost": 5200,
+    "cost": 5100,
     "notes": "Critical Strike does not work against buildings.",
     "attrib": [
       {
@@ -3419,7 +3419,7 @@
       },
       {
         "key": "spell_crit_multiplier",
-        "value": "75"
+        "value": "60"
       },
       {
         "key": "spell_crit_flat",
@@ -5472,7 +5472,7 @@
       {
         "type": "active",
         "title": "Force",
-        "description": "Pushes any target unit 600 units in the direction it is facing. ."
+        "description": "Pushes any target unit 600 units in the direction it is facing."
       }
     ],
     "hint": [],
