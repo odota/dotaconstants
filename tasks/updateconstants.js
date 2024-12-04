@@ -1378,20 +1378,9 @@ async function start() {
     );
   });
   // Reference built files in index.js
-  const cfs = fs.readdirSync("./build");
-  // Exports aren"t supported in Node yet, so use old export syntax for now
-  // const code = cfs.map((filename) => `export const ${filename.split(".")[0]} = require(__dirname + "/json/${filename.split(".")[0]}.json");`).join("\n";
-  const code = `module.exports = {
-${cfs
-  .map(
-    (filename) =>
-      `${filename.split(".")[0]}: require(__dirname + "/build/${
-        filename.split(".")[0]
-      }.json")`,
-  )
-  .join(",\n")}
-};`;
-  fs.writeFileSync("./index.js", code);
+  const files = fs.readdirSync("./build").filter(filename => filename.endsWith('.json'));
+  const code = files.map((filename) => `export { default as ${filename.split(".")[0]} } from './${filename.split(".")[0]}.json';`).join('\n');
+  fs.writeFileSync("./build/index.ts", code);
   process.exit(0);
 }
 

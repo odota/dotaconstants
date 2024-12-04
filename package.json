@@ -2,10 +2,10 @@
   "name": "dotaconstants",
   "version": "8.13.0",
   "description": "Constant data for Dota 2 applications",
-  "main": "index.js",
+  "main": "build/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node tasks/updateconstants",
+    "build": "node tasks/updateconstants && tsc",
     "patch": "node tasks/newpatch",
     "prettier": "prettier --write tasks"
   },
@@ -22,6 +22,7 @@
   "devDependencies": {
     "axios": "^1.6.3",
     "prettier": "^3.1.1",
+    "typescript": "^5.7.2",
     "vdf-parser": "^1.2.1"
   }
 }
