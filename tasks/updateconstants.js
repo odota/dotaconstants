@@ -1379,8 +1379,8 @@ async function start() {
   });
   // Reference built files in index.js
   const files = fs.readdirSync("./build").filter(filename => filename.endsWith('.json'));
-  const code = files.map((filename) => `export { default as ${filename.split(".")[0]} } from './${filename.split(".")[0]}.json';`).join('\n');
-  fs.writeFileSync("./build/index.ts", code);
+  const code = files.map((filename) => `export { default as ${filename.split(".")[0]} } from './build/${filename.split(".")[0]}.json';`).join('\n');
+  fs.writeFileSync("./index.ts", code);
   process.exit(0);
 }
 
