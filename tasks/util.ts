@@ -1,20 +1,20 @@
-exports.HTML_REGEX = /(<([^>]+)>)/gi;
+export const HTML_REGEX = /(<([^>]+)>)/gi;
 
-exports.mapAbilities = (tokens) => {
+export const mapAbilities = (tokens) => {
   const tokenKeys = Object.keys(tokens);
   tokenKeys.forEach(
-    (key) => (tokens[key] = tokens[key].replace(exports.HTML_REGEX, ""))
+    (key) => (tokens[key] = tokens[key].replace(HTML_REGEX, ""))
   );
   return tokens;
 };
 
-const removeExtraneousWhitespacesFromString = (string) => {
+export const removeExtraneousWhitespacesFromString = (string) => {
   if (!string) { return ''; }
 
   return string.replace(/\s+/g, ' ').trim();
 }
 
-exports.cleanupArray = (array) => {
+export const cleanupArray = (array) => {
   if (!array) { return []; }
 
   return array.filter(n => removeExtraneousWhitespacesFromString(n));

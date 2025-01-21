@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node tasks/updateconstants && tsc",
-    "patch": "node tasks/newpatch",
+    "build": "tsx tasks/updateconstants && tsc",
+    "patch": "tsx tasks/newpatch",
     "prettier": "prettier --write tasks"
   },
   "repository": {
@@ -20,8 +20,9 @@
   },
   "homepage": "https://github.com/odota/dotaconstants#readme",
   "devDependencies": {
-    "axios": "^1.6.3",
+    "@types/node": "^22.10.7",
     "prettier": "^3.1.1",
+    "tsx": "^4.19.2",
     "typescript": "^5.7.2",
     "vdf-parser": "^1.2.1"
   }

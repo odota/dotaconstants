@@ -7871,10 +7871,19 @@
     "img": "/apps/dota2/images/dota_react/abilities/seasonal_diretide2020_high_five.png"
   },
   "seasonal_party_hat": {
+    "dname": "Spirit of Frostivus",
     "behavior": [
-      "No Target",
-      "Instant Cast"
+      "Unit Target",
+      "Channeled"
     ],
+    "bkbpierce": "No",
+    "dispellable": "No",
+    "target_team": "Both",
+    "target_type": [
+      "Hero",
+      "Basic"
+    ],
+    "desc": "CHANNELED. Steals an enemy hero's stack of Frostivus hats, or gives your stack to an allied hero.",
     "dmg": "0",
     "attrib": [
       {
@@ -7882,10 +7891,28 @@
         "header": "CONTROLLED UNIT SEARCH RADIUS:",
         "value": "1000",
         "generated": true
+      },
+      {
+        "key": "abilitycastrange",
+        "header": "CAST RANGE:",
+        "value": "850",
+        "generated": true
+      },
+      {
+        "key": "abilitychanneltime",
+        "header": "CHANNEL TIME:",
+        "value": "1.5",
+        "generated": true
+      },
+      {
+        "key": "abilitycastpoint",
+        "header": "CAST TIME:",
+        "value": "0",
+        "generated": true
       }
     ],
     "mc": "0",
-    "cd": "420",
+    "cd": "1",
     "img": "/apps/dota2/images/dota_react/abilities/seasonal_party_hat.png"
   },
   "plus_high_five": {
@@ -74334,11 +74361,13 @@
     "img": "/apps/dota2/images/dota_react/abilities/kez_shodo_sai_ad.png"
   },
   "kez_shodo_sai_parry_cancel": {
+    "dname": "Cancel",
     "behavior": [
       "No Target",
       "Instant Cast",
       "Hidden"
     ],
+    "desc": "Stop blocking physical attacks.",
     "attrib": [],
     "cd": "0",
     "img": "/apps/dota2/images/dota_react/abilities/kez_shodo_sai_parry_cancel.png"

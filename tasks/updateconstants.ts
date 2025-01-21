@@ -1,10 +1,6 @@
-const axios = require("axios");
-const fs = require("fs");
-const vdfparser = require("vdf-parser");
-const { cleanupArray } = require("../utils");
-
-// Get your token from https://stratz.com/api
-const STRATZ_TOKEN = process.env.STRATZ_TOKEN || "";
+import fs from 'node:fs';
+import vdfparser from 'vdf-parser';
+import { cleanupArray } from './util';
 
 const extraStrings = {
   DOTA_ABILITY_BEHAVIOR_NONE: "None",
@@ -137,14 +133,14 @@ const localizationUrl =
   "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/dota_english.txt";
 
 let aghsAbilityValues = {};
-const heroDataUrls = [];
-const heroDataIndex = [];
+const heroDataUrls: string[] = [];
+const heroDataIndex: string[] = [];
 const abilitiesUrls = [abilitiesLoc, npcAbilitiesUrl];
 
 start();
 async function start() {
-  const resp = await axios.get(heroesUrl, { responseType: "text" });
-  const heroesVdf = parseJsonOrVdf(resp.data);
+  const resp = await fetch(heroesUrl);
+  const heroesVdf = parseJsonOrVdf(await resp.text(), heroesUrl);
   let ids = Object.keys(heroesVdf.DOTAHeroes)
     .filter((name) => !badNames.has(name))
     .map((key) => heroesVdf.DOTAHeroes[key].HeroID)
@@ -241,7 +237,7 @@ async function start() {
             item.target_type =
               formatBehavior(scripts[key].AbilityUnitTargetType) || undefined;
 
-            let notes = [];
+            let notes: any[] = [];
             for (
               let i = 0;
               strings[`DOTA_Tooltip_ability_${key}_Note${i}`];
@@ -262,7 +258,7 @@ async function start() {
 
             item.attrib = scripts[key].AbilityValues
               ? Object.entries(scripts[key].AbilityValues).map(
-                  ([abilityKey, val]) => {
+                  ([abilityKey, val]: [string, any]) => {
                     let display;
                     const tooltipKey = `DOTA_Tooltip_ability_${key}_${abilityKey}`;
                     const string = strings[tooltipKey];
@@ -323,7 +319,7 @@ async function start() {
             (key) => scripts[key].ItemRequirements && scripts[key].ItemResult,
           )
           .forEach((key) => {
-            result_key = scripts[key].ItemResult.replace(/^item_/, "");
+            const result_key = scripts[key].ItemResult.replace(/^item_/, "");
             items[result_key].components = scripts[key].ItemRequirements["01"]
               ?.split(";")
               .map((item) => item.replace(/^item_/, "").replace("*", ""));
@@ -424,7 +420,7 @@ async function start() {
         const data = respObj.DOTAAbilityIDs.ItemAbilities.Locked;
         // Flip the keys and values
         const itemIds = {};
-        Object.entries(data).forEach(([key, val]) => {
+        Object.entries(data).forEach(([key, val]: [string, any]) => {
           // Remove item_ prefix
           itemIds[val] = key.replace("item_", "");
         });
@@ -450,7 +446,7 @@ async function start() {
         Object.keys(scripts)
           .filter((key) => !notAbilities.has(key))
           .forEach((key) => {
-            let ability = {};
+            let ability: any = {};
 
             let specialAttr = getSpecialAttrs(scripts[key]);
 
@@ -651,7 +647,7 @@ async function start() {
         const data = respObj.DOTAAbilityIDs.UnitAbilities.Locked;
         // Flip the keys and values
         const abilityIds = {};
-        Object.entries(data).forEach(([key, val]) => {
+        Object.entries(data).forEach(([key, val]: [string, any]) => {
           abilityIds[val] = key;
         });
         return abilityIds;
@@ -852,12 +848,12 @@ async function start() {
       key: "heroes",
       url: [localizationUrl, heroesUrl],
       transform: (respObj) => {
-        let heroes = [];
+        let heroes: any = [];
         let keys = Object.keys(respObj[1].DOTAHeroes).filter(
           (name) => !badNames.has(name),
         );
         keys.forEach((name) => {
-          let h = formatVpkHero(name, respObj[1]);
+          let h: any = formatVpkHero(name, respObj[1]);
           h.localized_name =
             respObj[1].DOTAHeroes[name].workshop_guide_name ??
             respObj[0].lang.Tokens[name + ":n"];
@@ -865,7 +861,7 @@ async function start() {
         });
         heroes = heroes.sort((a, b) => a.id - b.id);
         let heroesObj = {};
-        for (hero of heroes) {
+        for (let hero of heroes) {
           hero.id = Number(hero.id);
           heroesObj[hero.id] = hero;
         }
@@ -882,7 +878,7 @@ async function start() {
         let keys = Object.keys(respObj[1].DOTAHeroes).filter(
           (name) => !badNames.has(name),
         );
-        let sortedHeroes = [];
+        let sortedHeroes: { name: string, id: number }[] = [];
         keys.forEach((name) => {
           const hero = respObj[1].DOTAHeroes[name];
           sortedHeroes.push({ name, id: hero.HeroID });
@@ -929,7 +925,7 @@ async function start() {
             heroKey != "npc_dota_hero_base" &&
             heroKey != "npc_dota_hero_target_dummy"
           ) {
-            const newHero = { abilities: [], talents: [], facets: [] };
+            const newHero = { abilities: [] as any[], talents: [] as any[], facets: [] };
             let talentCounter = 2;
             Object.keys(heroes[heroKey]).forEach(function (key) {
               let talentIndexStart =
@@ -955,9 +951,9 @@ async function start() {
           }
 
           Object.entries(heroes[heroKey].Facets ?? []).forEach(
-            ([key, value], i) => {
+            ([key, value]: [string, any], i) => {
               const abilities = Object.values(value.Abilities || {}).map(
-                (a) => a.AbilityName,
+                (a: any) => a.AbilityName,
               );
               const [ability] = abilities;
               const title =
@@ -976,7 +972,7 @@ async function start() {
                 );
               }
 
-              const allAttribs = [];
+              const allAttribs: any[] = [];
               Object.values(scripts[heroKey]).forEach((ability) => {
                 const specialAttribs = getSpecialAttrs(ability) || [];
                 allAttribs.push(...specialAttribs);
@@ -993,7 +989,7 @@ async function start() {
               }
 
               const matches = description.matchAll(/{s:bonus_(\w+)}/g);
-              for ([, bonusKey] of matches) {
+              for (let [, bonusKey] of matches) {
                 const obj =
                   allAttribs.find((obj) => bonusKey in obj)?.[bonusKey] ?? {};
                 const facetKey = Object.keys(obj).find(
@@ -1025,24 +1021,24 @@ async function start() {
         return heroAbilities;
       },
     },
-    {
-      key: "region",
-      url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/regions.txt",
-      transform: (respObj) => {
-        const region = {};
-        const regions = respObj.regions;
-        for (const key in regions) {
-          if (Number(regions[key].region) > 0) {
-            region[regions[key].region] = regions[key].display_name
-              .slice("#dota_region_".length)
-              .split("_")
-              .map((s) => s.toUpperCase())
-              .join(" ");
-          }
-        }
-        return region;
-      },
-    },
+    // {
+    //   key: "region",
+    //   url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/regions.txt",
+    //   transform: (respObj) => {
+    //     const region = {};
+    //     const regions = respObj.regions;
+    //     for (const key in regions) {
+    //       if (Number(regions[key].region) > 0) {
+    //         region[regions[key].region] = regions[key].display_name
+    //           .slice("#dota_region_".length)
+    //           .split("_")
+    //           .map((s) => s.toUpperCase())
+    //           .join(" ");
+    //       }
+    //     }
+    //     return region;
+    //   },
+    // },
     // {
     //   key: "cluster",
     //   url: "https://api.stratz.com/api/v1/Cluster",
@@ -1103,6 +1099,7 @@ async function start() {
             message: localize(message.message),
             image: message.image,
             badge_tier: message.unlock_hero_badge_tier,
+            sound_ext: undefined as string | undefined,
           };
           if (message.sound) {
             if (/^soundboard\./.test(message.sound) || /^wisp_/.test(key)) {
@@ -1224,7 +1221,7 @@ async function start() {
       url: heroDataUrls,
       transform: (respObj) => {
         const herodata = respObj;
-        const aghs_desc_arr = [];
+        const aghs_desc_arr: any[] = [];
 
         // for every hero
         herodata.forEach((hd_hero) => {
@@ -1351,16 +1348,16 @@ async function start() {
     const s = sources[i];
     const url = s.url;
     // Make all urls into array
-    const arr = [].concat(url);
+    const arr = Array.isArray(url) ? url : [url];
     // console.log(arr);
     const resps = await Promise.all(
       arr.map(async (url) => {
         console.log(url);
-        const resp = await axios.get(url, { responseType: "text" });
-        return parseJsonOrVdf(resp.data, url);
+        const resp = await fetch(url);
+        return parseJsonOrVdf(await resp.text(), url);
       }),
     );
-    let final = resps;
+    let final: any = resps;
     if (s.transform) {
       final = s.transform(resps.length === 1 ? resps[0] : resps);
     }
@@ -1393,7 +1390,7 @@ function isObj(obj) {
   );
 }
 
-function parseJsonOrVdf(text, url) {
+function parseJsonOrVdf(text: string, url: string) {
   try {
     return JSON.parse(text);
   } catch (err) {
@@ -1403,7 +1400,7 @@ function parseJsonOrVdf(text, url) {
       fixed = fixed.replace(/\t\t"ItemRequirements"\r\n\t\t""/g, "");
       fixed = fixed.replace(/\t\t\t"has_flying_movement"\t\r\n\t\t\t""/g, "");
       fixed = fixed.replace(/\t\t\t"damage_reduction"\t\r\n\t\t\t""/g, "");
-      let vdf = vdfparser.parse(fixed, { types: false });
+      let vdf = vdfparser.parse(fixed, { types: false, arrayify: true });
       return vdf;
     } catch (e) {
       console.error("Couldn't parse JSON or VDF", url);
@@ -1422,7 +1419,7 @@ function getSpecialAttrs(entity) {
       }));
     }
   } else {
-    specialAttr = Object.entries(specialAttr).map(([key, val]) => {
+    specialAttr = Object.entries(specialAttr).map(([key, val]: [string, any]) => {
       // val looks like the following, so just take the value of the second key
       /*
       {
@@ -1534,9 +1531,12 @@ function formatAttrib(attributes, strings, strings_prefix) {
         (key) => `${strings_prefix}${key.toLowerCase()}` in strings,
       );
       if (!key) {
-        for (item in attr) {
+        for (let item in attr) {
           key = item;
           break;
+        }
+        if (!key) {
+          return null;
         }
         if (attr[key] === null) {
           return null;
@@ -1555,7 +1555,7 @@ function formatAttrib(attributes, strings, strings_prefix) {
         };
       }
 
-      let final = { key: key };
+      let final: any = { key: key };
       let header = strings[`${strings_prefix}${key.toLowerCase()}`];
       let match = header.match(/(%)?(\+\$)?(.*)/);
       header = match[3];
@@ -1798,8 +1798,8 @@ function replaceSpecialAttribs(
   }
 
   if (isItem) {
-    const hint = [];
-    const abilities = [];
+    const hint: string[] = [];
+    const abilities: { type: string, title: string, description: string}[] = [];
     const desc = cleanupArray(template.split("\\n"));
     desc.forEach((line) => {
       const ability = line.match(
@@ -1852,7 +1852,7 @@ function formatBehavior(string) {
 }
 
 function formatVpkHero(key, vpkr) {
-  let h = {};
+  let h: any = {};
 
   let vpkrh = vpkr.DOTAHeroes[key];
   let baseHero = vpkr.DOTAHeroes.npc_dota_hero_base;
@@ -1928,7 +1928,7 @@ function formatVpkHero(key, vpkr) {
 }
 
 function parseNameFromArray(array, names) {
-  let final = [];
+  let final: string[] = [];
   for (let i = 1; i <= array.length; i++) {
     let name = array.slice(0, i).join("_");
     if (names.includes(name)) {
