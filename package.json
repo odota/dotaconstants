@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsx tasks/updateconstants && tsc",
     "patch": "tsx tasks/newpatch",
-    "prettier": "prettier --write tasks"
+    "prettier": "prettier --write tasks",
+    "build_node": "node --experimental-strip-types tasks/updateconstants.ts"
   },
   "repository": {
     "type": "git",

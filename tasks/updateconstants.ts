@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import vdfparser from 'vdf-parser';
-import { cleanupArray } from './util';
+import { cleanupArray } from './util.ts';
 
 const extraStrings = {
   DOTA_ABILITY_BEHAVIOR_NONE: "None",
@@ -1133,8 +1133,9 @@ async function start() {
       key: "patchnotes",
       url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/patchnotes/patchnotes_english.txt",
       transform: (respObj) => {
-        let items = Object.keys(require("../build/items.json"));
-        let heroes = Object.keys(require("../build/hero_lore.json"));
+
+        let items = Object.keys(JSON.parse(fs.readFileSync("./build/items.json").toString()));
+        let heroes = Object.keys(JSON.parse(fs.readFileSync("./build/hero_lore.json").toString()));
         const data = respObj.patch;
 
         let result = {};
