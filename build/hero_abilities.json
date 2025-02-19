@@ -50,7 +50,7 @@
         "color": "Purple",
         "gradient_id": 1,
         "title": "Magebane's Mirror",
-        "description": "Counterspell and Counterspell Ally reflect spells back at their caster instead of just blocking."
+        "description": "Spells countered by Counterspell or Counterspell Ally will immediately burn a percentage of its mana cost from the enemy and deal damage based on the burned mana cost."
       },
       {
         "id": 1,
@@ -202,7 +202,7 @@
       "bloodseeker_bloodrage",
       "bloodseeker_blood_bath",
       "bloodseeker_thirst",
-      "bloodseeker_blood_mist",
+      "generic_hidden",
       "bloodseeker_sanguivore",
       "bloodseeker_rupture"
     ],
@@ -228,7 +228,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_spell_lifesteal_15",
+        "name": "special_bonus_unique_bloodseeker",
         "level": 3
       },
       {
@@ -277,7 +277,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_crystal_maiden_6",
+        "name": "special_bonus_intelligence_12",
         "level": 1
       },
       {
@@ -309,6 +309,7 @@
       {
         "id": 0,
         "name": "crystal_maiden_frozen_expanse",
+        "deprecated": "true",
         "icon": "area_of_effect",
         "color": "Gray",
         "gradient_id": 1,
@@ -318,11 +319,30 @@
       {
         "id": 1,
         "name": "crystal_maiden_cold_comfort",
+        "deprecated": "true",
         "icon": "mana",
         "color": "Blue",
         "gradient_id": 2,
         "title": "Cold Comfort",
         "description": "Crystal Maiden restores her allies' Mana when casting spells. Increases innate Mana Regen Amplification."
+      },
+      {
+        "id": 2,
+        "name": "crystal_maiden_glacial_guard",
+        "icon": "armor",
+        "color": "Gray",
+        "gradient_id": 3,
+        "title": "Glacial Guard",
+        "description": "Crystal Nova has increased radius and grants allied heroes a physical damage barrier. Barrier is increased for Crystal Maiden."
+      },
+      {
+        "id": 3,
+        "name": "crystal_maiden_arcane_overflow",
+        "icon": "mana",
+        "color": "Blue",
+        "gradient_id": 2,
+        "title": "Arcane Overflow",
+        "description": "Activating Arcane Aura temporarily increases Crystal Maiden's spell amplification and mana costs. During the duration, Crystal Maiden restores her allies' Mana when casting spells."
       }
     ]
   },
@@ -377,7 +397,7 @@
         "color": "Gray",
         "gradient_id": 1,
         "title": "Vantage Point",
-        "description": "Drow deals 20% more damage when attacking from high ground.",
+        "description": "Drow deals 30% more damage when attacking from high ground.",
         "abilities": [
           "drow_ranger_vantage_point"
         ]
@@ -405,7 +425,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_attack_base_damage_30",
+        "name": "special_bonus_attack_base_damage_25",
         "level": 1
       },
       {
@@ -488,7 +508,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_juggernaut_blade_dance_lifesteal",
+        "name": "special_bonus_unique_juggernaut_2",
         "level": 3
       },
       {
@@ -500,7 +520,7 @@
         "level": 4
       },
       {
-        "name": "special_bonus_unique_juggernaut_2",
+        "name": "special_bonus_unique_juggernaut_blade_dance_lifesteal",
         "level": 4
       }
     ],
@@ -535,7 +555,7 @@
       "mirana_leap",
       "mirana_selemenes_faithful",
       "generic_hidden",
-      "generic_hidden"
+      "mirana_invis"
     ],
     "talents": [
       {
@@ -559,7 +579,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_20_crit_2",
+        "name": "special_bonus_attack_base_damage_35",
         "level": 3
       },
       {
@@ -575,10 +595,11 @@
       {
         "id": 0,
         "name": "mirana_moonlight",
+        "deprecated": "true",
         "icon": "moon",
         "color": "Blue",
         "gradient_id": 1,
-        "title": "Moonlight Shadow",
+        "title": "Moonlight Shadow Facet",
         "description": "Mirana's Ultimate grants allies invisiblity and movement speed.",
         "abilities": [
           "mirana_invis"
@@ -587,6 +608,7 @@
       {
         "id": 1,
         "name": "mirana_sunlight",
+        "deprecated": "true",
         "icon": "sun",
         "color": "Gray",
         "gradient_id": 3,
@@ -595,6 +617,24 @@
         "abilities": [
           "mirana_solar_flare"
         ]
+      },
+      {
+        "id": 2,
+        "name": "mirana_starstruck",
+        "icon": "no_vision",
+        "color": "Blue",
+        "gradient_id": 1,
+        "title": "Starstruck",
+        "description": "Starstorm's second meteor deals more damage and blinds the target."
+      },
+      {
+        "id": 3,
+        "name": "mirana_leaps_and_bounds",
+        "icon": "slow",
+        "color": "Gray",
+        "gradient_id": 3,
+        "title": "Leaps and Bounds",
+        "description": "Upon landing, Leap roots targets in a 250 radius for 1.1 =1.4 =1.7 =2.0s."
       }
     ]
   },
@@ -667,12 +707,12 @@
     "abilities": [
       "morphling_waveform",
       "morphling_adaptive_strike_agi",
-      "morphling_adaptive_strike_str",
+      "generic_hidden",
       "morphling_morph_agi",
       "morphling_morph_str",
       "morphling_replicate",
       "morphling_morph_replicate",
-      "morphling_morph",
+      "generic_hidden",
       "morphling_accumulation"
     ],
     "talents": [
@@ -681,23 +721,23 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_morphling_1",
+        "name": "special_bonus_unique_morphling_8",
         "level": 1
       },
       {
-        "name": "special_bonus_unique_morphling_8",
+        "name": "special_bonus_unique_morphling_1",
         "level": 2
       },
       {
-        "name": "special_bonus_agility_15",
+        "name": "special_bonus_attack_range_75",
         "level": 2
       },
       {
-        "name": "special_bonus_unique_morphling_4",
+        "name": "special_bonus_unique_morphling_7",
         "level": 3
       },
       {
-        "name": "special_bonus_unique_morphling_10",
+        "name": "special_bonus_agility_20",
         "level": 3
       },
       {
@@ -717,7 +757,7 @@
         "color": "Green",
         "gradient_id": 0,
         "title": "Ebb",
-        "description": "Morphling's Primary Attribute is now Agility and Adaptive Strike pushes enemies.",
+        "description": "Morphling's Primary Attribute is now Agility . Waveform attacks enemies in his path.",
         "abilities": [
           "morphling_ebb"
         ]
@@ -729,7 +769,7 @@
         "color": "Red",
         "gradient_id": 0,
         "title": "Flow",
-        "description": "Morphling's Primary Attribute is now Strength and Attribute Shift can accelerate his cooldowns.",
+        "description": "Morphling's Primary Attribute is now Strength . Adaptive Strike stuns based on Morphling's strength. Morphling gains 1% Spell Amp per 4 Agility.",
         "abilities": [
           "morphling_flow"
         ]
@@ -747,7 +787,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_unique_phantom_lancer_lance_damage",
+        "name": "special_bonus_unique_phantom_lancer_lance_slow_duration",
         "level": 1
       },
       {
@@ -783,9 +823,10 @@
       {
         "id": 0,
         "name": "phantom_lancer_convergence",
+        "deprecated": "true",
         "icon": "illusion",
         "color": "Yellow",
-        "gradient_id": 1,
+        "gradient_id": 0,
         "title": "Convergence",
         "description": "Doppelganger spawns additional illusions, with the amount depending on Phantom Lancer's current health."
       },
@@ -797,6 +838,15 @@
         "gradient_id": 2,
         "title": "Divergence",
         "description": "Juxtapose Illusions spawn on random nearby units and deal more damage but can't be controlled."
+      },
+      {
+        "id": 2,
+        "name": "phantom_lancer_lancelot",
+        "icon": "phantom_lance",
+        "color": "Yellow",
+        "gradient_id": 1,
+        "title": "Lancelot",
+        "description": "Spirit Lances from Phantom Lancer's illusions deal 25% Lance Damage."
       }
     ]
   },
@@ -869,7 +919,7 @@
       "pudge_meat_hook",
       "pudge_rot",
       "pudge_flesh_heap",
-      "pudge_eject",
+      "generic_hidden",
       "pudge_innate_graft_flesh",
       "pudge_dismember"
     ],
@@ -912,19 +962,29 @@
         "id": 0,
         "name": "pudge_fresh_meat",
         "icon": "meat",
-        "color": "Green",
-        "gradient_id": 3,
+        "color": "Red",
+        "gradient_id": 0,
         "title": "Fresh Meat",
         "description": "Dismember increases Strength when dealing damage to heroes."
       },
       {
         "id": 1,
         "name": "pudge_flayers_hook",
+        "deprecated": "true",
         "icon": "pudge_hook",
         "color": "Red",
         "gradient_id": 0,
         "title": "Flayer's Hook",
         "description": "Meat Hook deals bonus damage based on the distance pulled, but base damage is reduced."
+      },
+      {
+        "id": 2,
+        "name": "pudge_rotten_core",
+        "icon": "fist",
+        "color": "Green",
+        "gradient_id": 3,
+        "title": "Rotten Core",
+        "description": "While Rot is activated, Pudge gains bonus attack damage every second."
       }
     ]
   },
@@ -1010,7 +1070,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_sand_king_burrowstrike_stun",
+        "name": "special_bonus_unique_sand_king_caustic_finale_radius",
         "level": 1
       },
       {
@@ -1140,7 +1200,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_attack_speed_20",
+        "name": "special_bonus_unique_sven",
         "level": 1
       },
       {
@@ -1185,7 +1245,7 @@
         "color": "Red",
         "gradient_id": 0,
         "title": "Wrath of God",
-        "description": "Sven gains additional attack damage from Strength, but has decreased base damage.",
+        "description": "Sven gains additional attack damage from Strength.",
         "abilities": [
           "sven_wrath_of_god"
         ]
@@ -1253,7 +1313,7 @@
         "color": "Green",
         "gradient_id": 4,
         "title": "Insurmountable",
-        "description": "Tiny gains Status and Slow Resistance from Strength.",
+        "description": "Tiny gains Status and Slow Resistance from Strength. Slow Resistance also reduces the impact of Attack Speed slows.",
         "abilities": [
           "tiny_insurmountable"
         ]
@@ -1385,6 +1445,7 @@
       {
         "id": 1,
         "name": "windrunner_focusfire",
+        "deprecated": "true",
         "icon": "focus_fire",
         "color": "Yellow",
         "gradient_id": 2,
@@ -1394,11 +1455,30 @@
       {
         "id": 2,
         "name": "windrunner_whirlwind",
+        "deprecated": "true",
         "icon": "multi_arrow",
         "color": "Green",
         "gradient_id": 0,
         "title": "Whirlwind",
         "description": "Focus Fire randomly attacks enemies within range."
+      },
+      {
+        "id": 3,
+        "name": "windrunner_tangled",
+        "icon": "tree",
+        "color": "Yellow",
+        "gradient_id": 2,
+        "title": "Tangled",
+        "description": "Shackleshot affects more enemies and grants damage per unit shackled."
+      },
+      {
+        "id": 4,
+        "name": "windrunner_killshot",
+        "icon": "execute",
+        "color": "Green",
+        "gradient_id": 0,
+        "title": "Killshot",
+        "description": "Powershot executes low health enemy heroes."
       }
     ]
   },
@@ -1483,7 +1563,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_kunkka_6",
+        "name": "special_bonus_unique_kunkka_3",
         "level": 1
       },
       {
@@ -1638,7 +1718,7 @@
         "level": 4
       },
       {
-        "name": "special_bonus_unique_lich_5",
+        "name": "special_bonus_unique_lich_jump_damage",
         "level": 4
       }
     ],
@@ -1678,7 +1758,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_lion_3",
+        "name": "special_bonus_movement_speed_20",
         "level": 1
       },
       {
@@ -1774,6 +1854,7 @@
       {
         "id": 0,
         "name": "shadow_shaman_cluster_cluck",
+        "deprecated": "true",
         "icon": "chicken",
         "color": "Yellow",
         "gradient_id": 1,
@@ -1782,6 +1863,18 @@
       },
       {
         "id": 1,
+        "name": "shadow_shaman_voodoo_hands",
+        "icon": "chicken",
+        "color": "Yellow",
+        "gradient_id": 1,
+        "title": "Chicken Fingers",
+        "description": "Shadow Shaman's attacks can transform enemies into a chicken.",
+        "abilities": [
+          "shadow_shaman_voodoo_hands"
+        ]
+      },
+      {
+        "id": 2,
         "name": "shadow_shaman_massive_serpent_ward",
         "icon": "snake",
         "color": "Red",
@@ -1806,7 +1899,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_slardar_slithereen_crush_stun",
+        "name": "special_bonus_unique_slardar_6",
         "level": 1
       },
       {
@@ -1851,7 +1944,7 @@
         "color": "Purple",
         "gradient_id": 1,
         "title": "Brineguard",
-        "description": "Corrosive Haze increases Slardar's armor by 40% of the total armor reduced."
+        "description": "Corrosive Haze increases Slardar's armor by 50% of the total armor reduced."
       }
     ]
   },
@@ -1954,11 +2047,11 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_witch_doctor_7",
+        "name": "special_bonus_unique_witch_doctor_2",
         "level": 3
       },
       {
-        "name": "special_bonus_unique_witch_doctor_2",
+        "name": "special_bonus_unique_witch_doctor_7",
         "level": 4
       },
       {
@@ -1979,6 +2072,7 @@
       {
         "id": 1,
         "name": "witch_doctor_voodoo_festeration",
+        "deprecated": "1",
         "icon": "nuke",
         "color": "Red",
         "gradient_id": 2,
@@ -2056,7 +2150,7 @@
         "color": "Purple",
         "gradient_id": 2,
         "title": "Exterminator",
-        "description": "Tricks of the Trade has 4.5x Agility Bonus when attacking non-hero units."
+        "description": "Tricks of the Trade has 4.5x Agility Bonus when attacking non-hero units. When Riki kills a non-hero unit during Tricks of the Trade, the cooldown is reduced by 0.75s."
       }
     ]
   },
@@ -2111,7 +2205,7 @@
         "color": "Gray",
         "gradient_id": 3,
         "title": "Event Horizon",
-        "description": "Units in a 600 radius moving away from Enigma have a 9% movespeed penalty.",
+        "description": "Units in a 600 radius moving away from Enigma have a 8% movespeed penalty.",
         "abilities": [
           "enigma_event_horizon"
         ]
@@ -2170,7 +2264,7 @@
         "level": 4
       },
       {
-        "name": "special_bonus_unique_tinker_rearm_magic_resistance",
+        "name": "special_bonus_unique_tinker_3",
         "level": 4
       }
     ],
@@ -2214,15 +2308,15 @@
         "level": 1
       },
       {
-        "name": "special_bonus_attack_speed_30",
+        "name": "special_bonus_unique_sniper_6",
+        "level": 2
+      },
+      {
+        "name": "special_bonus_unique_sniper_1",
         "level": 2
       },
       {
         "name": "special_bonus_unique_sniper_4",
-        "level": 2
-      },
-      {
-        "name": "special_bonus_unique_sniper_take_aim_armor",
         "level": 3
       },
       {
@@ -2319,7 +2413,7 @@
         "color": "Green",
         "gradient_id": 3,
         "title": "Rapid Decay",
-        "description": "Ghost Shroud steals speed from his enemies."
+        "description": "Ghost Shroud steals speed from his enemies and decreases their restorative powers."
       }
     ]
   },
@@ -2460,7 +2554,7 @@
       "queenofpain_shadow_strike",
       "queenofpain_blink",
       "queenofpain_scream_of_pain",
-      "queenofpain_bondage",
+      "queenofpain_succubus",
       "generic_hidden",
       "queenofpain_sonic_wave"
     ],
@@ -2502,11 +2596,12 @@
       {
         "id": 0,
         "name": "queenofpain_lifesteal",
+        "deprecated": "true",
         "icon": "healing",
         "color": "Blue",
         "gradient_id": 0,
-        "title": "Succubus",
-        "description": "Queen of Pain gains Spell Lifesteal that increases with proximity to her enemies.",
+        "title": "Succubus Facet",
+        "description": "All sources of Spell Lifesteal also apply to Pure Damage. Queen of Pain gains Spell Lifesteal that increases with proximity to her enemies. Lifesteal is at its maximum when the enemy is 300 units or closer to her and at its minimum when the enemy is 800 units or further from her.",
         "abilities": [
           "queenofpain_succubus"
         ]
@@ -2521,6 +2616,18 @@
         "description": "Queen of Pain has bonus Spell Amplification but a percentage of her spell damage is reflected back to her.",
         "abilities": [
           "queenofpain_masochist"
+        ]
+      },
+      {
+        "id": 2,
+        "name": "queenofpain_facet_bondage",
+        "icon": "twin_hearts",
+        "color": "Blue",
+        "gradient_id": 0,
+        "title": "Bondage",
+        "description": "Queen of Pain returns spell damage back to enemies.",
+        "abilities": [
+          "queenofpain_bondage"
         ]
       }
     ]
@@ -2684,7 +2791,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_wraith_king_3",
+        "name": "special_bonus_unique_wraith_king_facet_1",
         "level": 1
       },
       {
@@ -2696,11 +2803,11 @@
         "level": 2
       },
       {
-        "name": "special_bonus_cleave_40",
+        "name": "special_bonus_attack_speed_60",
         "level": 3
       },
       {
-        "name": "special_bonus_attack_speed_60",
+        "name": "special_bonus_unique_wraith_king_facet_3",
         "level": 3
       },
       {
@@ -2786,6 +2893,7 @@
       {
         "id": 0,
         "name": "death_prophet_suppress",
+        "deprecated": "true",
         "icon": "slow",
         "color": "Purple",
         "gradient_id": 2,
@@ -2841,11 +2949,11 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_phantom_assassin_6",
+        "name": "special_bonus_unique_phantom_assassin_5",
         "level": 2
       },
       {
-        "name": "special_bonus_unique_phantom_assassin_5",
+        "name": "special_bonus_unique_phantom_assassin_6",
         "level": 3
       },
       {
@@ -2865,6 +2973,7 @@
       {
         "id": 0,
         "name": "phantom_assassin_veiled_one",
+        "deprecated": "1",
         "icon": "mana",
         "color": "Blue",
         "gradient_id": 3,
@@ -2874,11 +2983,20 @@
       {
         "id": 1,
         "name": "phantom_assassin_methodical",
-        "icon": "damage",
+        "icon": "skull",
         "color": "Gray",
         "gradient_id": 0,
         "title": "Methodical",
         "description": "Coup de Grace procs every 6 attacks on the same hero or 4 attacks on non hero units."
+      },
+      {
+        "id": 2,
+        "name": "phantom_assassin_sweet_release",
+        "icon": "phantom_ass_dagger",
+        "color": "Red",
+        "gradient_id": 0,
+        "title": "Sweet Release",
+        "description": "Stifling Dagger re-casts when an enemy dies."
       }
     ]
   },
@@ -2958,7 +3076,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_unique_templar_assassin_refraction_damage",
+        "name": "special_bonus_unique_templar_assassin_meld_duration",
         "level": 1
       },
       {
@@ -2978,7 +3096,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_templar_assassin_2",
+        "name": "special_bonus_unique_templar_assassin_refraction_damage",
         "level": 3
       },
       {
@@ -2998,7 +3116,7 @@
         "color": "Gray",
         "gradient_id": 3,
         "title": "Voidblades",
-        "description": "Attacking a target with Meld also applies the bonus damage and debuff to enemies hit by the Psi Blades spill."
+        "description": "Meld bonus damage and armor reductions are applied to all enemies in the Psi Blades split range."
       },
       {
         "id": 1,
@@ -3008,6 +3126,15 @@
         "gradient_id": 0,
         "title": "Refractor",
         "description": "Refraction gains a damage charge every time a shield charge gets consumed."
+      },
+      {
+        "id": 2,
+        "name": "templar_assassin_hidden_reach",
+        "icon": "range",
+        "color": "Blue",
+        "gradient_id": 1,
+        "title": "Hidden Reach",
+        "description": "When in Meld, Templar increases her attack range by up to an additional 400 range over 1s."
       }
     ]
   },
@@ -3046,7 +3173,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_viper_5",
+        "name": "special_bonus_unique_viper_nethertoxin_radius",
         "level": 4
       },
       {
@@ -3202,7 +3329,7 @@
         "color": "Red",
         "gradient_id": 1,
         "title": "Fire Dragon",
-        "description": "Dragon Knight has Splash Damage on his attacks that get stronger when in Elder Dragon Form."
+        "description": "Dragon Knight deals additional Magic Damage with his attacks. Dragon Knight's abilities have increased Area of Effect that get stronger when in Elder Dragon Form."
       },
       {
         "id": 1,
@@ -3211,7 +3338,7 @@
         "color": "Green",
         "gradient_id": 0,
         "title": "Corrosive Dragon",
-        "description": "Dragon Knight has Corrosive Powers on his attacks that get stronger when in Elder Dragon Form."
+        "description": "Dragon Knight has Corrosive Powers on his attacks that get stronger when in Elder Dragon Form. All of his abilities deal Physical damage."
       },
       {
         "id": 2,
@@ -3231,7 +3358,8 @@
       "dazzle_shadow_wave",
       "dazzle_innate_weave",
       "generic_hidden",
-      "dazzle_bad_juju"
+      "dazzle_nothl_projection",
+      "dazzle_nothl_projection_end"
     ],
     "talents": [
       {
@@ -3251,7 +3379,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_dazzle_5",
+        "name": "special_bonus_unique_dazzle_shallow_grave_cooldown",
         "level": 3
       },
       {
@@ -3275,7 +3403,7 @@
         "color": "Red",
         "gradient_id": 1,
         "title": "Nothl Boon",
-        "description": "Dazzle's overhealing is converted into a barrier.",
+        "description": "Dazzle's overhealing is converted into a barrier. Weave is stronger on allies.",
         "abilities": [
           "dazzle_nothl_boon"
         ]
@@ -3287,7 +3415,7 @@
         "color": "Purple",
         "gradient_id": 0,
         "title": "Poison Bloom",
-        "description": "Dazzle can refresh and spread his Poison Touch when attacking enemies."
+        "description": "Dazzle can spread his Poison Touch when attacking enemies. Weave is stronger on enemies."
       }
     ]
   },
@@ -3343,7 +3471,7 @@
         "color": "Gray",
         "gradient_id": 2,
         "title": "Hookup",
-        "description": "When hitting an ally, Hookshot has a larger impact radius, grants armor, and partially refunds its cooldown and manacost."
+        "description": "If there's another allied hero within 350 of Hookshot's hit target, Clockwerk and all allies in the area receive bonus armor, while refunding a portion of Hookshot's cooldown and manacost."
       },
       {
         "id": 1,
@@ -3379,11 +3507,11 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_leshrac_7",
+        "name": "special_bonus_unique_leshrac_4",
         "level": 2
       },
       {
-        "name": "special_bonus_unique_leshrac_4",
+        "name": "special_bonus_unique_leshrac_7",
         "level": 3
       },
       {
@@ -3489,7 +3617,7 @@
   },
   "npc_dota_hero_life_stealer": {
     "abilities": [
-      "generic_hidden",
+      "life_stealer_rage",
       "life_stealer_open_wounds",
       "life_stealer_ghoul_frenzy",
       "life_stealer_feast",
@@ -3499,7 +3627,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_unique_lifestealer_infest_damage",
+        "name": "special_bonus_all_stats_4",
         "level": 1
       },
       {
@@ -3548,6 +3676,7 @@
       {
         "id": 1,
         "name": "life_stealer_rage",
+        "deprecated": "true",
         "icon": "lifestealer_rage",
         "color": "Yellow",
         "gradient_id": 3,
@@ -3560,6 +3689,7 @@
       {
         "id": 2,
         "name": "life_stealer_rage_dispell",
+        "deprecated": "true",
         "icon": "broken_chain",
         "color": "Red",
         "gradient_id": 0,
@@ -3568,6 +3698,24 @@
         "abilities": [
           "life_stealer_unfettered"
         ]
+      },
+      {
+        "id": 3,
+        "name": "life_stealer_fleshfeast",
+        "icon": "full_heart",
+        "color": "Gray",
+        "gradient_id": 0,
+        "title": "Fleshfeast",
+        "description": "Feast's max HP per hero kill is increased. Open Wounds' cooldown is refreshed if a unit dies while afflicted by Open Wounds."
+      },
+      {
+        "id": 4,
+        "name": "life_stealer_gorestorm",
+        "icon": "area_of_effect",
+        "color": "Red",
+        "gradient_id": 0,
+        "title": "Gorestorm",
+        "description": "Consuming a creep with Infest drenches enemies in blood which deals damage over time based on the host's remaining health. Infest can be used on Ancient creeps."
       }
     ]
   },
@@ -3577,7 +3725,7 @@
       "dark_seer_ion_shell",
       "dark_seer_surge",
       "dark_seer_normal_punch",
-      "dark_seer_mental_fortitude",
+      "dark_seer_aggrandize",
       "dark_seer_wall_of_replica"
     ],
     "talents": [
@@ -3885,6 +4033,7 @@
       {
         "id": 0,
         "name": "huskar_bloodbath",
+        "deprecated": "1",
         "icon": "area_of_effect",
         "color": "Red",
         "gradient_id": 0,
@@ -3894,6 +4043,7 @@
       {
         "id": 1,
         "name": "huskar_nothl_transfusion",
+        "deprecated": "1",
         "icon": "healing",
         "color": "Blue",
         "gradient_id": 2,
@@ -3902,12 +4052,21 @@
       },
       {
         "id": 2,
+        "name": "huskar_cauterize",
+        "icon": "broken_chain",
+        "color": "Red",
+        "gradient_id": 0,
+        "title": "Cauterize",
+        "description": "Berserker's Blood can be activated for a health cost. Dispels Huskar, then after a delay, heals for the amount of health consumed plus an additional bonus per debuff dispelled."
+      },
+      {
+        "id": 3,
         "name": "huskar_nothl_conflagration",
         "icon": "damage",
         "color": "Yellow",
         "gradient_id": 0,
         "title": "Incendiary",
-        "description": "Burning Spears also burns enemies for a percentage of their max health. Costs Max Health instead of Current Health. Reduces burn duration."
+        "description": "Burning Spears also burns enemies for a percentage of their max health. Costs Max Health instead of Current Health."
       }
     ]
   },
@@ -3959,6 +4118,7 @@
       {
         "id": 0,
         "name": "night_stalker_blinding_void",
+        "deprecated": "True",
         "icon": "no_vision",
         "color": "Blue",
         "gradient_id": 0,
@@ -3972,10 +4132,19 @@
         "color": "Gray",
         "gradient_id": 0,
         "title": "Night Reign",
-        "description": "The game now starts at night instead of day. Night is longer than day.",
+        "description": "The game now starts at night instead of day. Night is longer than day. Night Stalker starts with a bonus level of Hunter in the Night.",
         "abilities": [
           "night_stalker_night_reign"
         ]
+      },
+      {
+        "id": 2,
+        "name": "night_stalker_voidbringer",
+        "icon": "area_of_effect",
+        "color": "Blue",
+        "gradient_id": 0,
+        "title": "Voidbringer",
+        "description": "Increases the max level of Void. Level 5 Void at night becomes ground targeted and applies to an area."
       }
     ]
   },
@@ -4026,7 +4195,7 @@
       {
         "id": 0,
         "name": "broodmother_necrotic_webs",
-        "icon": "debuff",
+        "icon": "web",
         "color": "Gray",
         "gradient_id": 0,
         "title": "Necrotic Webs",
@@ -4058,7 +4227,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_bounty_hunter_4",
+        "name": "special_bonus_attack_damage_20",
         "level": 1
       },
       {
@@ -4179,8 +4348,8 @@
     "abilities": [
       "jakiro_dual_breath",
       "jakiro_ice_path",
-      "generic_hidden",
-      "generic_hidden",
+      "jakiro_liquid_fire",
+      "jakiro_liquid_ice",
       "jakiro_double_trouble",
       "jakiro_macropyre"
     ],
@@ -4222,10 +4391,11 @@
       {
         "id": 0,
         "name": "jakiro_fire",
+        "deprecated": "true",
         "icon": "nuke",
         "color": "Red",
         "gradient_id": 0,
-        "title": "Liquid Fire",
+        "title": "Liquid Fire Facet",
         "description": "Jakiro can imbue his attacks with Attack Speed Slow and Damage over Time in an AoE.",
         "abilities": [
           "jakiro_liquid_fire"
@@ -4234,13 +4404,35 @@
       {
         "id": 1,
         "name": "jakiro_ice",
+        "deprecated": "true",
         "icon": "snowflake",
         "color": "Blue",
         "gradient_id": 1,
-        "title": "Liquid Frost",
+        "title": "Liquid Frost Facet",
         "description": "Jakiro can imbue his attacks with Movement Speed Slow and a debuff that amplifies damage from his other spells.",
         "abilities": [
           "jakiro_liquid_ice"
+        ]
+      },
+      {
+        "id": 2,
+        "name": "jakiro_twin_terror",
+        "icon": "damage",
+        "color": "Red",
+        "gradient_id": 0,
+        "title": "Twin Terror",
+        "description": "Jakiro deals more damage with his double attacks."
+      },
+      {
+        "id": 3,
+        "name": "jakiro_ice_breaker",
+        "icon": "snowflake",
+        "color": "Blue",
+        "gradient_id": 1,
+        "title": "Ice Breaker",
+        "description": "Ice Path lasts longer and detonates upon expiration, dealing damage and stunning enemies a second time. Ice Path can be manually detonated early.",
+        "abilities": [
+          "jakiro_ice_path_detonate"
         ]
       }
     ]
@@ -4360,7 +4552,7 @@
         "id": 0,
         "name": "chen_centaur_convert",
         "icon": "area_of_effect",
-        "color": "Blue",
+        "color": "Yellow",
         "gradient_id": 3,
         "title": "Centaur Convert",
         "description": "Summon Convert calls forth either a Centaur Courser or Centaur Conqueror."
@@ -4368,6 +4560,7 @@
       {
         "id": 1,
         "name": "chen_wolf_convert",
+        "deprecated": "true",
         "icon": "damage",
         "color": "Yellow",
         "gradient_id": 2,
@@ -4400,6 +4593,15 @@
         "gradient_id": 1,
         "title": "Satyr Convert",
         "description": "Summon Convert calls forth either a Satyr Mindstealer or Satyr Tormenter."
+      },
+      {
+        "id": 5,
+        "name": "chen_frog_convert",
+        "icon": "bubbles",
+        "color": "Blue",
+        "gradient_id": 3,
+        "title": "Marshmage Convert",
+        "description": "Summon Convert calls forth either a Marshmage Apprentice or a Marshmage."
       }
     ]
   },
@@ -4455,7 +4657,7 @@
         "color": "Gray",
         "gradient_id": 0,
         "title": "Forsaken",
-        "description": "Desolate can deal partial damage to enemies and is applied by Spectral Dagger."
+        "description": "Spectre deals 1.75x damage with Desolate. Spectre's illusions no longer have Desolate."
       },
       {
         "id": 1,
@@ -4464,7 +4666,7 @@
         "color": "Purple",
         "gradient_id": 2,
         "title": "Twist the Knife",
-        "description": "Reality also casts Spectral Dagger on the target and has a decreased cooldown."
+        "description": "Reality also casts Spectral Dagger on the target."
       }
     ]
   },
@@ -4541,7 +4743,7 @@
         "color": "Gray",
         "gradient_id": 0,
         "title": "Impending Doom",
-        "description": "Every 6.66 minutes, Doom's duration is increased by 0.66s. Doom DPS decreased."
+        "description": "Every 6.66 minutes, Doom's duration is increased by 0.66s."
       }
     ]
   },
@@ -4733,11 +4935,21 @@
       {
         "id": 1,
         "name": "spirit_breaker_imbalanced",
+        "deprecated": "true",
         "icon": "movement",
         "color": "Blue",
         "gradient_id": 2,
         "title": "Imbalanced",
         "description": "Enemy targets hit by Nether Strike will be moved further by allied forced movement effects."
+      },
+      {
+        "id": 2,
+        "name": "spirit_breaker_bulls_hit",
+        "icon": "rng",
+        "color": "Blue",
+        "gradient_id": 2,
+        "title": "Bull's Hit",
+        "description": "Greater Bash chance is increased if you've bashed more than one hero recently."
       }
     ]
   },
@@ -4869,6 +5081,15 @@
         "gradient_id": 2,
         "title": "Mixologist",
         "description": "Unstable Concoction and Berserk Potion recharge faster when in Chemical Rage."
+      },
+      {
+        "id": 2,
+        "name": "alchemist_dividends",
+        "icon": "aghs",
+        "color": "Green",
+        "gradient_id": 2,
+        "title": "Dividends",
+        "description": "Alchemist gains +75 GPM for each Aghanim's Scepter he has granted to allies."
       }
     ]
   },
@@ -4893,16 +5114,12 @@
     ],
     "talents": [
       {
-        "name": "invoker_mastermind",
-        "level": 1
-      },
-      {
         "name": "special_bonus_unique_invoker_ice_wall_dps",
         "level": 1
       },
       {
         "name": "special_bonus_unique_invoker_3",
-        "level": 2
+        "level": 1
       },
       {
         "name": "special_bonus_unique_invoker_11",
@@ -4910,7 +5127,7 @@
       },
       {
         "name": "special_bonus_unique_invoker_9",
-        "level": 3
+        "level": 2
       },
       {
         "name": "special_bonus_unique_invoker_additional_chaos_meteors",
@@ -4918,7 +5135,7 @@
       },
       {
         "name": "special_bonus_unique_invoker_5",
-        "level": 4
+        "level": 3
       },
       {
         "name": "special_bonus_unique_invoker_2",
@@ -4926,13 +5143,14 @@
       },
       {
         "name": "special_bonus_unique_invoker_13",
-        "level": 5
+        "level": 4
       }
     ],
     "facets": [
       {
         "id": 0,
         "name": "invoker_agnostic",
+        "deprecated": "true",
         "icon": "invoker_passive",
         "color": "Purple",
         "gradient_id": 0,
@@ -4942,11 +5160,39 @@
       {
         "id": 1,
         "name": "invoker_elitist",
+        "deprecated": "true",
         "icon": "invoker_active",
         "color": "Gray",
         "gradient_id": 0,
         "title": "Elitist",
         "description": "Your active orbs grant <font color='#7998b5'>Lifesteal</font>, <font color='#d671a9'>Movespeed</font> and <font color='#cabe68'>Spell Amplification</font>."
+      },
+      {
+        "id": 2,
+        "name": "invoker_quas_focus",
+        "icon": "invoker_quas",
+        "color": "Blue",
+        "gradient_id": 0,
+        "title": "Scholar of Koryx",
+        "description": "<font color='#7998b5'>Quas</font> gains an additional max level. When Invoker reaches level 6, <font color='#7998b5'>Quas</font> gains an additional level.<br><br>When <b>Cold Snap</b> triggers, Invoker is healed.<br><br><font color='#92acf5'>Aghanim's Scepter</font> upgrades <b>Ghost Walk</b> and grants 2 current and max levels to <font color='#7998b5'>Quas</font>, increasing it to 10.<br><br><font color='#92acf5'>Aghanim's Shard</font> upgrades <b>Ice Wall</b>."
+      },
+      {
+        "id": 3,
+        "name": "invoker_wex_focus",
+        "icon": "invoker_wex",
+        "color": "Purple",
+        "gradient_id": 0,
+        "title": "Mind of Tornarus",
+        "description": "<font color='#d671a9'>Wex</font> gains an additional max level. When Invoker reaches level 6, <font color='#d671a9'>Wex</font> gains an additional level.<br><br><b>Alacrity</b> grants bonus attack range when used on Invoker or range units under his control.</b><br><br><font color='#92acf5'>Aghanim's Scepter</font> upgrades <b>Tornado</b> and grants 2 current and max levels to <font color='#d671a9'>Wex</font>, increasing it to 10.<br><br><font color='#92acf5'>Aghanim's Shard</font> upgrades <b>E.M.P.</b>"
+      },
+      {
+        "id": 4,
+        "name": "invoker_exort_focus",
+        "icon": "invoker_exort",
+        "color": "Yellow",
+        "gradient_id": 0,
+        "title": "Agent of Gallaron",
+        "description": "<font color='#cabe68'>Exort</font> gains an additional max level. When Invoker reaches level 6, <font color='#cabe68'>Exort</font> gains an additional level.<br><br><b>Chaos Meteor</b>'s radius and travel distance is increased.<br><br><font color='#92acf5'>Aghanim's Scepter</font> upgrades <b>Sun Strike</b> and grants 2 current and max levels to <font color='#cabe68'>Exort</font>, increasing it to 10.<br><br><font color='#92acf5'>Aghanim's Shard</font> upgrades <b>Sun Strike</b>."
       }
     ]
   },
@@ -5028,7 +5274,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_hp_200",
+        "name": "special_bonus_unique_outworld_devourer_astral_castrange",
         "level": 1
       },
       {
@@ -5036,7 +5282,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_outworld_devourer_astral_castrange",
+        "name": "special_bonus_unique_outworld_devourer_2",
         "level": 2
       },
       {
@@ -5044,7 +5290,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_spell_lifesteal_20",
+        "name": "special_bonus_hp_450",
         "level": 3
       },
       {
@@ -5186,7 +5432,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_attack_speed_90",
+        "name": "special_bonus_attack_speed_100",
         "level": 3
       },
       {
@@ -5344,6 +5590,7 @@
       {
         "id": 1,
         "name": "lone_druid_unbearable",
+        "deprecated": "1",
         "icon": "overshadow",
         "color": "Yellow",
         "gradient_id": 1,
@@ -5411,6 +5658,7 @@
       {
         "id": 0,
         "name": "chaos_knight_strong_illusions",
+        "deprecated": "1",
         "icon": "illusion",
         "color": "Red",
         "gradient_id": 1,
@@ -5428,6 +5676,27 @@
         "gradient_id": 0,
         "title": "Irrationality",
         "description": "Reality Rift has equal chances of applying Break, Disarm, or Silence for 50% of the base debuff duration in addition to its normal effects."
+      },
+      {
+        "id": 2,
+        "name": "chaos_knight_facet_fundamental_forging",
+        "icon": "item",
+        "color": "Yellow",
+        "gradient_id": 1,
+        "title": "Fundamental Forging",
+        "description": "Chaos Knight can craft artifacts from the next tier when making a Neutral Item.",
+        "abilities": [
+          "chaos_knight_fundamental_forging"
+        ]
+      },
+      {
+        "id": 3,
+        "name": "chaos_knight_cloven_chaos",
+        "icon": "ricochet",
+        "color": "Red",
+        "gradient_id": 0,
+        "title": "Cloven Chaos",
+        "description": "Chaos Bolt splits in half upon striking its target, stunning one additional enemy and damaging another."
       }
     ]
   },
@@ -5488,7 +5757,17 @@
       },
       {
         "id": 1,
+        "name": "meepo_codependent",
+        "icon": "illusion",
+        "color": "Yellow",
+        "gradient_id": 1,
+        "title": "Codependent",
+        "description": "Meepos increase other Meepos' attack speed and armor."
+      },
+      {
+        "id": 2,
         "name": "meepo_pack_rat",
+        "deprecated": "1",
         "icon": "item",
         "color": "Yellow",
         "gradient_id": 1,
@@ -5774,7 +6053,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_unique_disruptor_2",
+        "name": "special_bonus_movement_speed_20",
         "level": 1
       },
       {
@@ -5842,15 +6121,15 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_unique_nyx_vendetta_damage",
-        "level": 1
-      },
-      {
         "name": "special_bonus_unique_nyx_4",
         "level": 1
       },
       {
-        "name": "special_bonus_unique_nyx_carapace_reflect_duration",
+        "name": "special_bonus_unique_nyx_3",
+        "level": 1
+      },
+      {
+        "name": "special_bonus_unique_nyx_vendetta_damage",
         "level": 2
       },
       {
@@ -5882,10 +6161,7 @@
         "color": "Blue",
         "gradient_id": 3,
         "title": "Mana Burn",
-        "description": "Nyx Assassin's ability damage burns enemies' mana.",
-        "abilities": [
-          "nyx_assassin_innate_mana_burn"
-        ]
+        "description": "Mind Flare burns a percentage of the target's max mana."
       },
       {
         "id": 1,
@@ -5910,7 +6186,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_unique_naga_siren_net_cooldown",
+        "name": "special_bonus_unique_naga_siren_reel_in_speed",
         "level": 1
       },
       {
@@ -5978,7 +6254,7 @@
       "keeper_of_the_light_will_o_wisp",
       "keeper_of_the_light_spirit_form",
       "keeper_of_the_light_illuminate_end",
-      "keeper_of_the_light_mana_magnifier",
+      "keeper_of_the_light_special_reserve",
       "generic_hidden",
       "generic_hidden"
     ],
@@ -6056,7 +6332,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_unique_wisp_11",
+        "name": "special_bonus_unique_wisp_overcharge_duration",
         "level": 1
       },
       {
@@ -6244,7 +6520,7 @@
         "color": "Blue",
         "gradient_id": 2,
         "title": "Dark Reef Renegade",
-        "description": "Barracuda lingers after being revealed to the enemy if Slark is not nearby allied heroes."
+        "description": "Barracuda lingers after being revealed to the enemy if Slark is not nearby allied heroes. Slark's attacks reduce the target's armor while Slark is under the effects of Barracuda."
       }
     ]
   },
@@ -6259,7 +6535,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_unique_medusa_snake_damage",
+        "name": "special_bonus_unique_medusa_gorgons_grasp_radius",
         "level": 1
       },
       {
@@ -6283,11 +6559,11 @@
         "level": 3
       },
       {
-        "name": "special_bonus_special_bonus_unique_medusa_gorgons_grasp_volleys",
+        "name": "special_bonus_unique_medusa_gorgons_grasp_volleys",
         "level": 4
       },
       {
-        "name": "special_bonus_unique_medusa_4",
+        "name": "special_bonus_intelligence_40",
         "level": 4
       }
     ],
@@ -6321,6 +6597,18 @@
         "description": "Every 5 attacks, Medusa applies poison to her arrow that briefly reduces movement speed, attack speed, and cast speed.",
         "abilities": [
           "medusa_venomed_volley"
+        ]
+      },
+      {
+        "id": 3,
+        "name": "medusa_undulation",
+        "icon": "speed",
+        "color": "Red",
+        "gradient_id": 0,
+        "title": "Undulation",
+        "description": "Medusa's movement speed is fixed at 310 (465 during Stone Gaze). Medusa is unslowable and does not benefit from movement speed increases.",
+        "abilities": [
+          "medusa_undulation"
         ]
       }
     ]
@@ -6385,7 +6673,7 @@
         "color": "Red",
         "gradient_id": 1,
         "title": "Bad Influence",
-        "description": "Battle Trance grants allied heroes 40% of the attack speed bonus."
+        "description": "During Battle Trance, Troll Warlord has increased max Fervor stacks and no attack speed limit. Battle Trance grants allied heroes 50% of the attack speed bonus. "
       }
     ]
   },
@@ -6405,7 +6693,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_movement_speed_20",
+        "name": "special_bonus_movement_speed_15",
         "level": 1
       },
       {
@@ -6468,7 +6756,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_unique_magnus_4",
+        "name": "special_bonus_mp_regen_150",
         "level": 1
       },
       {
@@ -6488,7 +6776,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_magnus_3",
+        "name": "special_bonus_unique_magnus_skewer_damage_distance",
         "level": 3
       },
       {
@@ -6514,6 +6802,7 @@
       {
         "id": 1,
         "name": "magnataur_reverse_polarity",
+        "deprecated": "true",
         "icon": "vortex_in",
         "color": "Gray",
         "gradient_id": 3,
@@ -6522,7 +6811,26 @@
       },
       {
         "id": 2,
+        "name": "magnataur_eternal_empowerment",
+        "icon": "empower",
+        "color": "Gray",
+        "gradient_id": 1,
+        "title": "Eternal Empowerment",
+        "description": "Empower is always on Magnus. Each subsequent attack increases its power."
+      },
+      {
+        "id": 3,
+        "name": "magnataur_diminishing_return",
+        "icon": "ricochet",
+        "color": "Blue",
+        "gradient_id": 2,
+        "title": "Diminishing Return",
+        "description": "Increases the max level of Shockwave. Level 5 Shockwave causes it to return towards Magnus's location."
+      },
+      {
+        "id": 4,
         "name": "magnataur_reverse_reverse_polarity",
+        "deprecated": "true",
         "icon": "vortex_out",
         "color": "Gray",
         "gradient_id": 0,
@@ -6561,7 +6869,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_magic_resistance_20",
+        "name": "special_bonus_unique_timbersaw_exposure_therapy_health",
         "level": 3
       },
       {
@@ -6649,6 +6957,7 @@
       {
         "id": 0,
         "name": "bristleback_berserk",
+        "deprecated": "true",
         "icon": "damage",
         "color": "Yellow",
         "gradient_id": 0,
@@ -6671,7 +6980,7 @@
         "color": "Red",
         "gradient_id": 0,
         "title": "Seeing Red",
-        "description": "Warpath can be activated to gain extra bonuses. While Seeing Red, Bristleback's vision is limited and he does not share vision with his allies."
+        "description": "Warpath can be activated to gain extra bonuses. While Seeing Red, Bristleback's vision is limited and he does not receive vision from his allies."
       }
     ]
   },
@@ -6912,7 +7221,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_cleave_100",
+        "name": "special_bonus_unique_elder_titan_4",
         "level": 3
       },
       {
@@ -6924,7 +7233,7 @@
         "level": 4
       },
       {
-        "name": "special_bonus_unique_elder_titan_4",
+        "name": "special_bonus_cleave_100",
         "level": 4
       }
     ],
@@ -7012,7 +7321,7 @@
         "color": "Red",
         "gradient_id": 0,
         "title": "Spoils of War",
-        "description": "When a Duel is won, units that damaged the loser during the Duel will receive a small amount of permanent damage."
+        "description": "When a Duel is won, units that damaged the loser during the Duel will gain permanent bonus damage. If Legion Commander won the Duel, she will automatically cast Press the Attack on herself and assisting allies."
       }
     ]
   },
@@ -7076,7 +7385,7 @@
         "color": "Yellow",
         "gradient_id": 1,
         "title": "Chain Gang",
-        "description": "Searing Chains affect 1 more enemy and also spawn from Fire Remnants."
+        "description": "Searing Chains can affect an additional enemy. When Searing Chains are cast, they are also cast around each Fire Remnant."
       }
     ]
   },
@@ -7095,23 +7404,23 @@
         "level": 1
       },
       {
-        "name": "special_bonus_spell_amplify_8",
+        "name": "special_bonus_unique_earth_spirit_4",
         "level": 1
       },
       {
-        "name": "special_bonus_unique_earth_spirit_8",
-        "level": 2
-      },
-      {
-        "name": "special_bonus_unique_earth_spirit",
+        "name": "special_bonus_unique_earth_spirit_3",
         "level": 2
       },
       {
         "name": "special_bonus_unique_earth_spirit_6",
+        "level": 2
+      },
+      {
+        "name": "special_bonus_unique_earth_spirit_8",
         "level": 3
       },
       {
-        "name": "special_bonus_unique_earth_spirit_4",
+        "name": "special_bonus_unique_earth_spirit",
         "level": 3
       },
       {
@@ -7119,7 +7428,7 @@
         "level": 4
       },
       {
-        "name": "special_bonus_unique_earth_spirit_3",
+        "name": "special_bonus_unique_earth_spirit_7",
         "level": 4
       }
     ],
@@ -7214,7 +7523,7 @@
         "color": "Blue",
         "gradient_id": 2,
         "title": "Soul Fragment",
-        "description": "Conjure Image illusions always spawn at full health, but has an additional health cost."
+        "description": "Conjure Image illusions always spawn at full health and cost health instead of mana."
       }
     ]
   },
@@ -7236,7 +7545,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_phoenix_dive_damage",
+        "name": "special_bonus_unique_phoenix_blinding_sun_misschance",
         "level": 1
       },
       {
@@ -7284,7 +7593,7 @@
         "color": "Red",
         "gradient_id": 1,
         "title": "Hotspot",
-        "description": "Sun Ray deals more damage towards the tip of the ray."
+        "description": "Sun Ray deals more damage and applies more Blinding Sun stacks towards the tip of the ray."
       }
     ]
   },
@@ -7339,7 +7648,7 @@
         "color": "Red",
         "gradient_id": 2,
         "title": "Clairvoyant Curse",
-        "description": "Spell amplification increased by 0.75% per hero level.",
+        "description": "Spell amplification increased by 1% per hero level.",
         "abilities": [
           "oracle_clairvoyant_curse"
         ]
@@ -7430,7 +7739,7 @@
         "color": "Blue",
         "gradient_id": 1,
         "title": "Spoon's Stash",
-        "description": "Techies can use items in their backpack as if they were in their inventory.",
+        "description": "Techies stack all previously selected Enchantments onto newly crafted Neutral Items.",
         "abilities": [
           "techies_spoons_stash"
         ]
@@ -7484,6 +7793,7 @@
       {
         "id": 0,
         "name": "winter_wyvern_heal_mana",
+        "deprecated": "True",
         "icon": "mana",
         "color": "Blue",
         "gradient_id": 0,
@@ -7496,6 +7806,7 @@
       {
         "id": 1,
         "name": "winter_wyvern_atk_range",
+        "deprecated": "True",
         "icon": "damage",
         "color": "Gray",
         "gradient_id": 3,
@@ -7504,6 +7815,24 @@
         "abilities": [
           "winter_wyvern_dragon_sight"
         ]
+      },
+      {
+        "id": 2,
+        "name": "winter_wyvern_winterproof",
+        "icon": "tower",
+        "color": "Blue",
+        "gradient_id": 2,
+        "title": "Winterproof",
+        "description": "Cold Embrace can be cast on buildings. Does not heal buildings. Allied units and buildings gain bonus attack damage when emerging from the icy cocoon."
+      },
+      {
+        "id": 3,
+        "name": "winter_wyvern_recursive",
+        "icon": "ricochet",
+        "color": "Blue",
+        "gradient_id": 0,
+        "title": "Recursive",
+        "description": "Winter's Curse is recast on the lowest health enemy hero if the primary target dies. Cursed enemies take 125% physical, magical, and pure damage from Winter Wyvern."
       }
     ]
   },
@@ -7546,7 +7875,7 @@
         "level": 4
       },
       {
-        "name": "special_bonus_unique_arc_warden_flux_silences",
+        "name": "special_bonus_unique_arc_warden_7",
         "level": 4
       }
     ],
@@ -7554,20 +7883,40 @@
       {
         "id": 0,
         "name": "arc_warden_order",
+        "deprecated": "true",
         "icon": "arc_warden",
         "color": "Gray",
         "gradient_id": 3,
         "title": "Order",
-        "description": "Arc Warden and Tempest Double have their respective ability effects."
+        "description": ""
       },
       {
         "id": 1,
         "name": "arc_warden_disorder",
+        "deprecated": "true",
         "icon": "arc_warden_alt",
         "color": "Gray",
         "gradient_id": 0,
         "title": "Disorder",
-        "description": "Arc Warden and Tempest Double have their ability effects swapped."
+        "description": ""
+      },
+      {
+        "id": 2,
+        "name": "arc_warden_runed_replica",
+        "icon": "arc_warden_alt",
+        "color": "Blue",
+        "gradient_id": 1,
+        "title": "Runed Replica",
+        "description": "The Tempest Double is infused with the bonuses of Power Runes for 10s when created.<br><br>Level 1 - Invisibility Rune.<br><br>Level 2 - Invisibility and Arcane Runes.<br><br>Level 3 - Invisibility, Arcane, and Haste Runes."
+      },
+      {
+        "id": 3,
+        "name": "arc_warden_power_capture",
+        "icon": "rune",
+        "color": "Yellow",
+        "gradient_id": 1,
+        "title": "Power Capture",
+        "description": "Magnetic Field pulls runes. Arc Warden gains +1.5 all attributes permanently upon activating a Power Rune."
       }
     ]
   },
@@ -7700,7 +8049,7 @@
         "color": "Green",
         "gradient_id": 4,
         "title": "Simian Stride",
-        "description": "Tree Dance has no cooldown while Monkey King is above 95% health."
+        "description": "Increases the max level of Tree Dance. Level 5 Tree Dance reduces the cooldown to zero."
       }
     ]
   },
@@ -7725,7 +8074,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_pangolier_6",
+        "name": "special_bonus_unique_pangolier_3",
         "level": 2
       },
       {
@@ -7733,7 +8082,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_pangolier_3",
+        "name": "special_bonus_unique_pangolier_6",
         "level": 3
       },
       {
@@ -7785,7 +8134,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_dark_willow_5",
+        "name": "special_bonus_intelligence_10",
         "level": 1
       },
       {
@@ -7826,11 +8175,21 @@
       {
         "id": 1,
         "name": "dark_willow_thorny_thicket",
+        "deprecated": "true",
         "icon": "area_of_effect",
         "color": "Green",
         "gradient_id": 4,
         "title": "Thorny Thicket",
         "description": "Bramble Maze creates extra brambles."
+      },
+      {
+        "id": 2,
+        "name": "dark_willow_shattering_crown",
+        "icon": "barrier",
+        "color": "Green",
+        "gradient_id": 4,
+        "title": "Shattering Crown",
+        "description": "Cursed Crown accumulates all damage dealt by Dark Willow and attack damage dealt by her allies. A percentage of that damage is dealt again as magical damage to the whole area when the counter expires."
       }
     ]
   },
@@ -7914,7 +8273,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_mars_bulwark_damage_reduction",
+        "name": "special_bonus_unique_mars_dauntless_hpregen",
         "level": 1
       },
       {
@@ -7950,7 +8309,7 @@
         "color": "Red",
         "gradient_id": 2,
         "title": "Victory Feast",
-        "description": "Mars gains health, mana, and attack damage when an enemy inside his Arena of Blood dies."
+        "description": "Mars and his allies gain health, mana, and attack damage when an enemy inside his Arena of Blood dies."
       },
       {
         "id": 1,
@@ -8118,11 +8477,11 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_unique_hoodwink_scurry_duration",
+        "name": "special_bonus_unique_hoodwink_scurry_charges",
         "level": 1
       },
       {
-        "name": "special_bonus_unique_hoodwink_bushwhack_cooldown",
+        "name": "special_bonus_mp_regen_150",
         "level": 1
       },
       {
@@ -8134,7 +8493,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_hoodwink_sharpshooter_damage",
+        "name": "special_bonus_unique_hoodwink_sharpshooter_vision",
         "level": 3
       },
       {
@@ -8146,7 +8505,7 @@
         "level": 4
       },
       {
-        "name": "special_bonus_unique_hoodwink_sharpshooter_pure_damage",
+        "name": "special_bonus_unique_hoodwink_sharpshooter_damage",
         "level": 4
       }
     ],
@@ -8163,11 +8522,21 @@
       {
         "id": 1,
         "name": "hoodwink_treebounce_trickshot",
+        "deprecated": "true",
         "icon": "tree",
         "color": "Green",
         "gradient_id": 0,
         "title": "Treebounce Trickshot",
         "description": "Acorn Shot can bounce once on trees."
+      },
+      {
+        "id": 2,
+        "name": "hoodwink_hipshot",
+        "icon": "cooldown",
+        "color": "Green",
+        "gradient_id": 0,
+        "title": "Hipshot",
+        "description": "Sharpshooter has a greatly reduced cooldown. Damage, debuff duration, turn time, and wind-up times are also reduced."
       }
     ]
   },
@@ -8183,7 +8552,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_unique_dawnbreaker_fire_wreath_swipe",
+        "name": "special_bonus_attack_damage_12",
         "level": 1
       },
       {
@@ -8228,11 +8597,30 @@
       {
         "id": 1,
         "name": "dawnbreaker_gleaming_hammer",
+        "deprecated": "true",
         "icon": "dawnbreaker_hammer",
         "color": "Yellow",
         "gradient_id": 1,
         "title": "Gleaming Hammer",
         "description": "Celestial Hammer heals allies and damages enemies when on the ground."
+      },
+      {
+        "id": 2,
+        "name": "dawnbreaker_blaze",
+        "icon": "fist",
+        "color": "Red",
+        "gradient_id": 1,
+        "title": "Starsurge",
+        "description": "Dawnbreaker and nearby allies gain bonus attack speed at the end of Starbreaker for each swipe that hit enemy heroes."
+      },
+      {
+        "id": 3,
+        "name": "dawnbreaker_hearthfire",
+        "icon": "Speed",
+        "color": "Yellow",
+        "gradient_id": 1,
+        "title": "Trailblazer",
+        "description": "Walking along Celestial Hammer's fire trail gives bonus movespeed."
       }
     ]
   },
@@ -8240,18 +8628,18 @@
     "abilities": [
       "marci_grapple",
       "marci_companion_run",
-      "generic_hidden",
+      "marci_bodyguard",
       "marci_special_delivery",
       "generic_hidden",
       "marci_unleash"
     ],
     "talents": [
       {
-        "name": "special_bonus_unique_marci_lunge_range",
+        "name": "special_bonus_unique_marci_dispose_slow",
         "level": 1
       },
       {
-        "name": "special_bonus_unique_marci_guardian_lifesteal",
+        "name": "special_bonus_unique_marci_rebound_radius",
         "level": 1
       },
       {
@@ -8283,6 +8671,7 @@
       {
         "id": 0,
         "name": "marci_sidekick",
+        "deprecated": "true",
         "icon": "healing",
         "color": "Gray",
         "gradient_id": 3,
@@ -8295,14 +8684,42 @@
       {
         "id": 1,
         "name": "marci_bodyguard",
+        "deprecated": "true",
         "icon": "ricochet",
         "color": "Blue",
         "gradient_id": 1,
-        "title": "Bodyguard",
+        "title": "Bodyguard Facet",
         "description": "Marci can protect an ally, countering attacks directed towards them if she's in range of the enemy.",
         "abilities": [
           "marci_bodyguard"
         ]
+      },
+      {
+        "id": 2,
+        "name": "marci_buddy_system",
+        "icon": "twin_hearts",
+        "color": "Blue",
+        "gradient_id": 1,
+        "title": "Buddy System",
+        "description": "While bodyguarded, Marci and her partner share a portion of health healed by this ability with each other."
+      },
+      {
+        "id": 3,
+        "name": "marci_pickmeup",
+        "icon": "ricochet",
+        "color": "Purple",
+        "gradient_id": 0,
+        "title": "Pick-me-up",
+        "description": "Rebound can be alt-cast to bring Marci's ally with her after the jump."
+      },
+      {
+        "id": 4,
+        "name": "marci_fleeting_fury",
+        "icon": "fist",
+        "color": "Yellow",
+        "gradient_id": 0,
+        "title": "Fleeting Fury",
+        "description": "Upon landing with Rebound, Marci gains a Fury combo. "
       }
     ]
   },
@@ -8318,7 +8735,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_unique_primal_beast_onslaught_damage",
+        "name": "special_bonus_attack_damage_20",
         "level": 1
       },
       {
@@ -8354,6 +8771,7 @@
       {
         "id": 0,
         "name": "primal_beast_romp_n_stomp",
+        "deprecated": "true",
         "icon": "speed",
         "color": "Red",
         "gradient_id": 0,
@@ -8362,12 +8780,21 @@
       },
       {
         "id": 1,
+        "name": "primal_beast_provoke_the_beast",
+        "icon": "broken_chain",
+        "color": "Red",
+        "gradient_id": 0,
+        "title": "Provoke the Beast",
+        "description": "Gain 2 Uproar stacks upon being disabled by an enemy hero."
+      },
+      {
+        "id": 2,
         "name": "primal_beast_ferocity",
         "icon": "area_of_effect",
         "color": "Yellow",
         "gradient_id": 3,
         "title": "Ferocity",
-        "description": "Each Pulverize hit increases the AoE bonuses of Primal Beast's abilities and items."
+        "description": "Each Pulverize slam increase Primal Beast's AoE."
       }
     ]
   },
@@ -8376,7 +8803,7 @@
       "muerta_dead_shot",
       "muerta_the_calling",
       "muerta_gunslinger",
-      "muerta_parting_shot",
+      "generic_hidden",
       "generic_hidden",
       "muerta_pierce_the_veil",
       "muerta_supernatural",
@@ -8389,11 +8816,11 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_muerta_calling_hp_regen",
+        "name": "special_bonus_hp_150",
         "level": 1
       },
       {
-        "name": "special_bonus_unique_muerta_dead_shot_damage",
+        "name": "special_bonus_unique_muerta_calling_hp_regen",
         "level": 2
       },
       {
@@ -8489,15 +8916,15 @@
         "level": 5
       },
       {
-        "name": "ringmaster_funhouse_mirror",
+        "name": "generic_hidden",
         "level": 5
       },
       {
-        "name": "ringmaster_strongman_tonic",
+        "name": "generic_hidden",
         "level": 6
       },
       {
-        "name": "ringmaster_whoopee_cushion",
+        "name": "generic_hidden",
         "level": 6
       }
     ],
@@ -8505,11 +8932,40 @@
       {
         "id": 0,
         "name": "ringmaster_default",
+        "deprecated": "true",
         "icon": "item",
         "color": "Gray",
         "gradient_id": 3,
         "title": "Center Stage",
         "description": "Ringmaster is still new to the spotlight. This facet doesn't do anything... yet."
+      },
+      {
+        "id": 1,
+        "name": "ringmaster_carny_classics",
+        "icon": "whoopee_cushion",
+        "color": "Yellow",
+        "gradient_id": 1,
+        "title": "Carny Classics",
+        "description": "Ringmaster's Souvenirs are Funhouse Mirror , Strongman Tonic , and Whoopee Cushion .",
+        "abilities": [
+          "ringmaster_funhouse_mirror",
+          "ringmaster_strongman_tonic",
+          "ringmaster_whoopee_cushion"
+        ]
+      },
+      {
+        "id": 2,
+        "name": "ringmaster_sideshow_secrets",
+        "icon": "pie",
+        "color": "Red",
+        "gradient_id": 0,
+        "title": "Sideshow Secrets",
+        "description": "Ringmaster's Souvenirs are Crystal Ball , Unicycle , and Weighted Pie .",
+        "abilities": [
+          "ringmaster_crystal_ball",
+          "ringmaster_summon_unicycle",
+          "ringmaster_weighted_pie"
+        ]
       }
     ]
   },
@@ -8564,12 +9020,21 @@
     "facets": [
       {
         "id": 0,
-        "name": "kez_default",
-        "icon": "kez",
+        "name": "kez_flutter",
+        "icon": "kez_flutter",
+        "color": "Yellow",
+        "gradient_id": 1,
+        "title": "Flutter",
+        "description": "Kez deals extra damage on the first attack or ability after switching to Katana, and gains bonus movement speed after switching to Sai."
+      },
+      {
+        "id": 1,
+        "name": "kez_shadowhawk",
+        "icon": "kez_shadowhawk",
         "color": "Blue",
         "gradient_id": 3,
-        "title": "Hero of the Flightless",
-        "description": "Kez always has a few fun tricks up his sleeve, but right now he's got a war to win. This facet doesn't do anything... yet."
+        "title": "Shadowhawk",
+        "description": "Triggering a Shodo Sai Mark from invisibility deals bonus critical damage.  When Kez triggers a Shodo Sai Mark, reduce the cooldown of Shodo Sai and Kazurai Katana."
       }
     ]
   }
