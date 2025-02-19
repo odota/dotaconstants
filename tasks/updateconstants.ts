@@ -1,6 +1,6 @@
-import fs from 'node:fs';
-import vdfparser from 'vdf-parser';
-import { cleanupArray } from './util.ts';
+import fs from "node:fs";
+import vdfparser from "vdf-parser";
+import { cleanupArray } from "./util.ts";
 
 const extraStrings = {
   DOTA_ABILITY_BEHAVIOR_NONE: "None",
@@ -878,7 +878,7 @@ async function start() {
         let keys = Object.keys(respObj[1].DOTAHeroes).filter(
           (name) => !badNames.has(name),
         );
-        let sortedHeroes: { name: string, id: number }[] = [];
+        let sortedHeroes: { name: string; id: number }[] = [];
         keys.forEach((name) => {
           const hero = respObj[1].DOTAHeroes[name];
           sortedHeroes.push({ name, id: hero.HeroID });
@@ -925,7 +925,11 @@ async function start() {
             heroKey != "npc_dota_hero_base" &&
             heroKey != "npc_dota_hero_target_dummy"
           ) {
-            const newHero = { abilities: [] as any[], talents: [] as any[], facets: [] };
+            const newHero = {
+              abilities: [] as any[],
+              talents: [] as any[],
+              facets: [],
+            };
             let talentCounter = 2;
             Object.keys(heroes[heroKey]).forEach(function (key) {
               let talentIndexStart =
@@ -1133,9 +1137,12 @@ async function start() {
       key: "patchnotes",
       url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/patchnotes/patchnotes_english.txt",
       transform: (respObj) => {
-
-        let items = Object.keys(JSON.parse(fs.readFileSync("./build/items.json").toString()));
-        let heroes = Object.keys(JSON.parse(fs.readFileSync("./build/hero_lore.json").toString()));
+        let items = Object.keys(
+          JSON.parse(fs.readFileSync("./build/items.json").toString()),
+        );
+        let heroes = Object.keys(
+          JSON.parse(fs.readFileSync("./build/hero_lore.json").toString()),
+        );
         const data = respObj.patch;
 
         let result = {};
@@ -1376,8 +1383,17 @@ async function start() {
     );
   });
   // Reference built files in index.js
-  const files = fs.readdirSync("./build").filter(filename => filename.endsWith('.json'));
-  const code = files.map((filename) => `export { default as ${filename.split(".")[0]} } from './build/${filename.split(".")[0]}.json';`).join('\n');
+  const files = fs
+    .readdirSync("./build")
+    .filter((filename) => filename.endsWith(".json"));
+  const code = files
+    .map(
+      (filename) =>
+        `export { default as ${filename.split(".")[0]} } from './build/${
+          filename.split(".")[0]
+        }.json';`,
+    )
+    .join("\n");
   fs.writeFileSync("./index.ts", code);
   process.exit(0);
 }
@@ -1420,16 +1436,18 @@ function getSpecialAttrs(entity) {
       }));
     }
   } else {
-    specialAttr = Object.entries(specialAttr).map(([key, val]: [string, any]) => {
-      // val looks like the following, so just take the value of the second key
-      /*
+    specialAttr = Object.entries(specialAttr).map(
+      ([key, val]: [string, any]) => {
+        // val looks like the following, so just take the value of the second key
+        /*
       {
 				"var_type"				"FIELD_INTEGER"
 				"bonus_movement"			"20"
       }
 			*/
-      return { [Object.keys(val)[1]]: val[Object.keys(val)[1]] };
-    });
+        return { [Object.keys(val)[1]]: val[Object.keys(val)[1]] };
+      },
+    );
   }
   return specialAttr;
 }
@@ -1615,12 +1633,18 @@ function replaceSValues(template, attribs, key) {
             const bonusKey = `bonus_${key}`;
             // Get the bonus value, handling both string and object cases
             let specialBonusVal;
-            if (typeof val[specialBonusKey] === 'string') {
+            if (typeof val[specialBonusKey] === "string") {
               specialBonusVal = val[specialBonusKey];
-            } else if (typeof val[specialBonusKey] === 'object' && val[specialBonusKey].special_bonus_scepter) {
+            } else if (
+              typeof val[specialBonusKey] === "object" &&
+              val[specialBonusKey].special_bonus_scepter
+            ) {
               specialBonusVal = val[specialBonusKey].special_bonus_scepter;
             } else {
-              console.warn(`Unexpected special bonus value type for ${key}:`, val[specialBonusKey]);
+              console.warn(
+                `Unexpected special bonus value type for ${key}:`,
+                val[specialBonusKey],
+              );
               continue;
             }
 
@@ -1812,7 +1836,8 @@ function replaceSpecialAttribs(
 
   if (isItem) {
     const hint: string[] = [];
-    const abilities: { type: string, title: string, description: string}[] = [];
+    const abilities: { type: string; title: string; description: string }[] =
+      [];
     const desc = cleanupArray(template.split("\\n"));
     desc.forEach((line) => {
       const ability = line.match(
@@ -1844,7 +1869,7 @@ function replaceSpecialAttribs(
 function formatBehavior(string) {
   if (!string) return false;
   if (Array.isArray(string)) {
-    string = string.join(' | ');
+    string = string.join(" | ");
   }
   let split = string
     .split(" | ")
@@ -1954,7 +1979,6 @@ function parseNameFromArray(array, names) {
 const getNeutralItemNameTierMap = (neutrals) => {
   let ret = {};
   Object.keys(neutrals.neutral_tiers).forEach((tier) => {
-
     let items = neutrals.neutral_tiers[tier].items;
     Object.keys(items).forEach((itemName) => {
       ret[itemName] = ret[itemName.replace(/recipe_/gi, "")] = parseInt(tier);
