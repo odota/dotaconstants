@@ -1613,12 +1613,24 @@ function replaceSValues(template, attribs, key) {
           );
           if (specialBonusKey) {
             const bonusKey = `bonus_${key}`;
-            // remove redundant signs
-            const specialBonusVal = val[specialBonusKey]
+            // Get the bonus value, handling both string and object cases
+            let specialBonusVal;
+            if (typeof val[specialBonusKey] === 'string') {
+              specialBonusVal = val[specialBonusKey];
+            } else if (typeof val[specialBonusKey] === 'object' && val[specialBonusKey].special_bonus_scepter) {
+              specialBonusVal = val[specialBonusKey].special_bonus_scepter;
+            } else {
+              console.warn(`Unexpected special bonus value type for ${key}:`, val[specialBonusKey]);
+              continue;
+            }
+
+            // Clean up the value by removing signs
+            specialBonusVal = specialBonusVal
               .replace("+", "")
               .replace("-", "")
               .replace("x", "")
               .replace("%", "");
+
             if (specialBonusKey in specialBonusLookup) {
               specialBonusLookup[specialBonusKey][bonusKey] = specialBonusVal;
             } else {
@@ -1941,8 +1953,9 @@ function parseNameFromArray(array, names) {
 
 const getNeutralItemNameTierMap = (neutrals) => {
   let ret = {};
-  Object.keys(neutrals).forEach((tier) => {
-    let items = neutrals[tier].items;
+  Object.keys(neutrals.neutral_tiers).forEach((tier) => {
+
+    let items = neutrals.neutral_tiers[tier].items;
     Object.keys(items).forEach((itemName) => {
       ret[itemName] = ret[itemName.replace(/recipe_/gi, "")] = parseInt(tier);
     });
