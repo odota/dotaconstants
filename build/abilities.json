@@ -13039,7 +13039,7 @@
     "dname": "+250 Starstorm Damage"
   },
   "special_bonus_unique_mirana_arrow_damage": {
-    "dname": "+180 Sacred Arrow Bonus Damage"
+    "dname": "+{s:bonus_arrow_bonus_damage} Sacred Arrow Bonus Damage"
   },
   "nevermore_shadowraze1": {
     "dname": "Shadowraze",
@@ -16246,7 +16246,7 @@
     "dname": "+150 Burrowstrike Cast Range"
   },
   "special_bonus_unique_sand_king_burrowstrike_stun": {
-    "dname": "+0.3s Burrowstrike Stun"
+    "dname": "+{s:bonus_burrow_duration}s Burrowstrike Stun"
   },
   "special_bonus_unique_sand_king_scorpion_strike_damage": {
     "dname": "+40 Stinger Damage"
@@ -38575,10 +38575,7 @@
       "No Target",
       "Instant Cast"
     ],
-    "bkbpierce": [],
     "dispellable": "No",
-    "target_team": "Friendly",
-    "target_type": "Hero",
     "desc": "Bounty Hunter becomes invisible and gains the ability to move through other units until he attacks or uses an ability. If he breaks the invisibility with an attack, that attack will stun the target for a short duration.",
     "attrib": [
       {
@@ -38632,12 +38629,6 @@
         "key": "damage_reduction_pct",
         "header": "DAMAGE REDUCTION PCT:",
         "value": "0",
-        "generated": true
-      },
-      {
-        "key": "abilitycastrange",
-        "header": "CAST RANGE:",
-        "value": "650",
         "generated": true
       },
       {
@@ -38856,7 +38847,7 @@
     "dname": "+50 Track Gold"
   },
   "special_bonus_unique_bounty_hunter_4": {
-    "dname": "+30 Jinada Damage"
+    "dname": "+{s:bonus_bonus_damage} Jinada Damage"
   },
   "special_bonus_unique_bounty_hunter_5": {
     "dname": "+0.6s Shuriken Toss Slow"
@@ -43189,8 +43180,7 @@
       {
         "key": "bonus_night_vision",
         "header": "BONUS NIGHT VISION:",
-        "value": "200",
-        "generated": true
+        "value": "200"
       },
       {
         "key": "sidegunner_fire_rate",
@@ -43384,7 +43374,7 @@
     "dname": "+25% Homing Missile Damage"
   },
   "special_bonus_unique_gyrocopter_flak_cannon_range": {
-    "dname": "+175 Flak Cannon Attack Radius"
+    "dname": "+{s:bonus_radius} Flak Cannon Attack Radius"
   },
   "alchemist_berserk_potion": {
     "dname": "Berserk Potion",
@@ -61779,7 +61769,7 @@
     "dname": "+100 Natural Order Radius"
   },
   "special_bonus_unique_elder_titan_spirit_damage": {
-    "dname": "+50 Astral Spirit Damage"
+    "dname": "+{s:bonus_pass_damage} Astral Spirit Damage"
   },
   "legion_commander_overwhelming_odds": {
     "dname": "Overwhelming Odds",
@@ -64254,7 +64244,7 @@
     "dname": "+25% Icarus Dive Slow"
   },
   "special_bonus_unique_phoenix_dive_damage": {
-    "dname": "+20 Icarus Dive Damage Per Second"
+    "dname": "+{s:bonus_damage_per_second} Icarus Dive Damage Per Second"
   },
   "special_bonus_unique_phoenix_blinding_sun_misschance": {
     "dname": "+0.5% Blinding Sun Miss Chance"

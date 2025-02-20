@@ -50194,7 +50194,8 @@
         "Empower Spell bonus damage increased from 150 to 250",
         "Empower Spell now applies Break to the target, disabling their passive abilities for the duration",
         "Empower Spell movement Slow decreased from 50% to 30%",
-        "Empower Spell debuff Duration increased from 1.5s to 3s"
+        "Empower Spell debuff Duration increased from 1.5s to 3s",
+        "Empower Spell cooldown increased from 6s to 12s"
       ],
       "revenants_brooch": [
         "Item Reworked",
@@ -50445,7 +50446,7 @@
       "enhancement_feverish": [
         "Available at Tier 5",
         "+15% Cooldown Reduction",
-        "+15% Mana Cost/Mana Loss Increase"
+        "+10% Mana Cost/Mana Loss Increase"
       ],
       "enhancement_wise": [
         "Available at Tier 5",
@@ -50839,7 +50840,7 @@
         ],
         "beastmaster_call_of_the_wild_hawk": [
           "Dive Damage decreased from 60/90/120/150 to 50/80/110/140",
-          "Aghanim's Shard no longer decreases cooldown by 5s",
+          "Aghanim's Shard no longer decreases cooldown by 10s",
           "Aghanim's Shard now increases Summon Duration by 5s (from 25s to 30s)"
         ],
         "talents": [
@@ -52070,9 +52071,6 @@
         ],
         "monkey_king_jingu_mastery": [
           "Now follows global Lifesteal rules (as a result, gained 40% creep penalty)"
-        ],
-        "talents": [
-          "Level 10 Talent +0.2s Boundless Strike Stun Duration replaced with +10 Damage"
         ]
       },
       "morphling": {
@@ -52082,6 +52080,7 @@
         "hero_facet": [
           "Now attacks all targets it goes through with 50% of Morphling's Attack Damage. Does not apply on-hit effects",
           "No longer knocks back enemies (moved to base spell)",
+          "No longer affects Morphling's Cooldowns",
           "Changes Morphling's Primary Attribute to Strength. Morphling gains +1% Spell Amp per 4 Agility. Spell Amplification effect is breakable",
           "Stuns enemy target for 0.5-2.4s depending on Morphling's Strength. Has the same rules as a knockback effect",
           "Maximum effect is reached when Morphling's Strength is 50% higher than his Agility"
@@ -52098,7 +52097,8 @@
           "Now knocks back enemies by default",
           "Distance is between 50-350 units, based on Morphling's Strength. Maximum effect is reached when Morphling's Strength is 50% higher than his Agility",
           "No longer stuns enemies by default",
-          "Cooldown decreased from 19/16/13/10s to 17/14/11/8s"
+          "Cooldown decreased from 19/16/13/10s to 17/14/11/8s",
+          "Base damage rescaled from 55/65/75/85 to 25/50/75/100"
         ],
         "morphling_morph_agi": [
           "Mana Cost rescaled from 5/10/15/20 to 10"
@@ -52737,7 +52737,7 @@
       },
       "storm_spirit": {
         "talents": [
-          "Level 10 Talent +20 Overload Damage replaced with +25 Overload Attack/Movement Speed Slow"
+          "Level 10 Talent +20 Overload Damage replaced with +20 Overload Attack/Movement Speed Slow"
         ]
       },
       "sven": {
@@ -53041,7 +53041,7 @@
         ],
         "talents": [
           "Level 10 Talent -2s Shackleshot Cooldown replaced with +25 Easy Breezy Min/Max Movespeed",
-          "Level 10 Talent +75 Powershot Damage replaced with +1s Powershot Slow Duration"
+          "Level 10 Talent +20% Powershot Slow replaced with +1s Powershot Slow Duration"
         ]
       },
       "winter_wyvern": {
