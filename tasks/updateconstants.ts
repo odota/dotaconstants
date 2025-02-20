@@ -219,7 +219,7 @@ async function start() {
               item.img = `/apps/dota2/images/dota_react/items/recipe.png?t=${1593393829403}`;
             }
 
-            item.dname = strings[`DOTA_Tooltip_ability_${key}`];
+            item.dname = strings[`DOTA_Tooltip_ability_${key}`] || strings[`DOTA_Tooltip_ability_${key}:n`];
             item.qual = itemQualOverrides[key] ?? scripts[key].ItemQuality;
             item.cost = parseInt(scripts[key].ItemCost);
 
