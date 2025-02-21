@@ -50175,7 +50175,7 @@
         "Item Reworked",
         "Requires Orb of Frost (250), Orb of Blight (300) and Band of Elvenskin (450). Total cost: 1000",
         "Provides +8 Agility",
-        "Passive: Corrosion. On attack, slows the enemy by 16% if the target is ranged and by 6% if the target is melee. Also reduces the target's incoming healing by 20% and their armor by 3. Duration: 3s",
+        "Passive: Corrosion. On attack, slows the enemy by 16% if the target is ranged and by 6% if the target is melee. Also reduces the target's incoming healing by 16% and their armor by 3. Duration: 3s",
         "Armor reduction does not stack with its components, Desolator, or Stygian Desolator"
       ],
       "phylactery": [
@@ -50569,7 +50569,7 @@
         "290 Movement Speed and 250 Attack Range",
         "2 Armor and 0% Magic Resistance",
         "25-29 Gold and 42 XP Bounty",
-        "Water Bubble (Small): Creates a barrier bubble that protects the target from 100/120/140/160 magical damage for 10s. Cast Range: 550, Mana Cost: 90, Cooldown: 16s",
+        "Water Bubble (Small): Active. Creates a barrier bubble that protects the target from 100/120/140/160 magical damage for 10s. Cast Range: 550, Mana Cost: 90, Cooldown: 16s",
         "Water Bubble (Small): Neutrals will cast this ability on a random ally that is below 50% health",
         "Riverborn Aura: Passive. All allies within a 1200 range receive a 10/12/14/16% movement speed and outgoing damage bonus, as long as the aura owner is in water",
         "New Level 4 Melee Creep",
@@ -50587,7 +50587,7 @@
         "300 Movement Speed and 250 Attack Range",
         "3 Armor and 0% Magic Resistance",
         "37-41 Gold and 55 XP Bounty",
-        "Water Bubble (Medium): Creates a barrier bubble that protects the target from 150/180/210/240 magical damage for 10s. After the bubble bursts, heals the target for 50% of that amount. Cast Range: 550, Mana Cost: 100, Cooldown: 16s",
+        "Water Bubble (Medium): Active. Creates a barrier bubble that protects the target from 150/180/210/240 magical damage for 10s. After the bubble bursts, heals the target for 50% of that amount. Cast Range: 550, Mana Cost: 100, Cooldown: 16s",
         "Water Bubble (Medium): Neutrals will cast this ability on a random ally that is below 50% health",
         "Riverborn Aura: Passive. All allies within a 1200 range receive a 10/12/14/16% movement speed and outgoing damage bonus, as long as the aura owner is in water",
         "New Level 5 Ancient Melee Creep",
@@ -50597,7 +50597,7 @@
         "5 Armor and 30% Magic Resistance",
         "53-56 Gold and 104 XP Bounty",
         "Congregations of the Deep: Active. Sends out tentacles in 6 directions around itself, stunning enemies for 1.4s and dealing 250/275/300/325 damage. Range: 300. Mana Cost: 70. Cooldown: 20s",
-        "Congregation of the Deep: Neutrals will cast this ability if there are three or more enemies within 600 (2x the ability's range) radius and at least one unit is within cast range. After that all copies of this ability on other neutral Ancient Croakers within 1200 range are put on 5s cooldown",
+        "Congregations of the Deep: Neutrals will cast this ability if there are three or more enemies within 600 (2x the ability's range) radius and at least one unit is within cast range. After that all copies of this ability on other neutral Ancient Croakers within 1200 range are put on 5s cooldown",
         "Riverborn Aura: Passive. All allies within a 1200 range receive a 10/12/14/16% movement speed and outgoing damage bonus, as long as the aura owner is in water",
         "New Level 5 Ancient Ranged Creep",
         "1250 Health and 450 Mana",
@@ -50605,7 +50605,7 @@
         "300 Movement Speed and 500 Attack Range",
         "5 Armor and 30% Magic Resistance",
         "53-56 Gold and 104 XP Bounty",
-        "Water Bubble (Large): Creates a barrier bubble that protects the target from 210/240/270/300 magic damage for 10s. After the bubble bursts, heals the target and all allies in a 675 radius for 50% of that amount. Cast Range: 550, Mana Cost: 110, Cooldown: 16s",
+        "Water Bubble (Large): Active. Creates a barrier bubble that protects the target from 210/240/270/300 magic damage for 10s. After the bubble bursts, heals the target and all allies in a 675 radius for 50% of that amount. Cast Range: 550, Mana Cost: 110, Cooldown: 16s",
         "Water Bubble (Large): Neutrals will cast this ability on a random ally that is below 50% health",
         "Riverborn Aura: Passive. All allies within a 1200 range receive a 10/12/14/16% movement speed and outgoing damage bonus, as long as the aura owner is in water",
         "Ancient Prowlers",
@@ -52441,7 +52441,7 @@
           "Strike Damage is now classified as reflection damage"
         ],
         "talents": [
-          "Level 10 Talent +30 Plasma Field Damage replaced with +0.5s Plasma Field Slow Duration"
+          "Level 10 Talent +30 Plasma Field Damage replaced with +0.75s Plasma Field Slow Duration"
         ]
       },
       "riki": {
@@ -52853,7 +52853,8 @@
       },
       "tiny": {
         "hero_facet": [
-          "Bonus Landing Damage decreased from 20/25/30/35% to 20%"
+          "Bonus Landing Damage decreased from 20/25/30/35% to 20%",
+          "Slow Resistance also reduces the impact of Attack Speed slows"
         ],
         "tiny_avalanche": [
           "No longer deals bonus damage to tossed units",
@@ -53050,7 +53051,7 @@
           "Base Damage increased by 15-17",
           "Damage spread increased from 5 to 7",
           "Base Strength increased from 20 to 22",
-          "Damage at level 1 decreased by 1 (42-47 to 40-47)",
+          "Damage at level 1 decreased from 42-47 to 40-47",
           "Strength gain increased from 2.2 to 2.5",
           "Agility gain increased from 1.5 to 1.7",
           "Intelligence gain increased from 2.8 to 3.6",
