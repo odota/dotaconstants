@@ -637,6 +637,19 @@ async function start() {
               aghsAbilityValues[key] = aghsObj;
             }
           });
+        // Some unique talents don't show up in each hero data file
+        // e.g. special_bonus_unique_axe_8
+        // Do a pass through the strings and if any are missing, add them with just basic description
+        Object.keys(strings).forEach(str => {
+          if (str.startsWith('DOTA_Tooltip_ability_special_bonus_unique') && !str.endsWith('Description')) {
+            const abName = str.slice('DOTA_Tooltip_ability_'.length);
+            if (!abilities[abName]) {
+              abilities[abName] = {
+                dname: strings[str],
+              };
+            }
+          }
+        });
         return abilities;
       },
     },
