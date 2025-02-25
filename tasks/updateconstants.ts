@@ -1024,11 +1024,11 @@ async function start() {
                 id: i,
                 name: key,
                 deprecated: value.Deprecated,
-                icon: value.Icon,
+                icon: value.Icon?.toLowerCase(),
                 color: value.Color,
                 gradient_id: Number(value.GradientID),
                 title,
-                description,
+                description: removeHTML(description),
                 abilities: abilities.length > 0 ? abilities : undefined,
               });
             },
@@ -1692,6 +1692,16 @@ function replaceSValues(template, attribs, key) {
   return template;
 }
 
+function removeHTML(string = "") {
+  if (string.includes(":")) console.log(string);
+  return string
+      .replace(/<br>/gi, "\n")
+      // replace h1 close tags with a space, but not open tags
+      .replace(/(<\/h1>)/gi, " ")
+      .replace(/(<(\/[^>]+)>)/gi, "")
+      .replace(/(<([^>]+)>)/gi, "");
+}
+
 function replaceBonusSValues(key, template, attribs) {
   if (template && attribs) {
     Object.keys(attribs).forEach((bonus) => {
@@ -1839,10 +1849,7 @@ function replaceSpecialAttribs(
 
   // Remove html tags and double spaces from a string
   function formatTemplate(template = "") {
-    // replace close tags with a space, but not open tags
-    template = template
-      .replace(/(<(\/[^>]+)>)/gi, " ")
-      .replace(/(<([^>]+)>)/gi, "");
+    template = removeHTML(template);
     // replace double spaces
     return template.replace(/  +/g, " ");
   }
