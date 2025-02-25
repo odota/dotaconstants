@@ -1693,7 +1693,6 @@ function replaceSValues(template, attribs, key) {
 }
 
 function removeHTML(string = "") {
-  if (string.includes(":")) console.log(string);
   return string
       .replace(/<br>/gi, "\n")
       // replace h1 close tags with a space, but not open tags
