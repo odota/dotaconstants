@@ -13875,7 +13875,7 @@
       "Passive",
       "Hidden"
     ],
-    "desc": "Morphling's Primary Attribute is now Agility .",
+    "desc": "Morphling's Primary Attribute is now Agility.",
     "attrib": [],
     "img": "/apps/dota2/images/dota_react/abilities/morphling_ebb.png"
   },
@@ -13885,7 +13885,7 @@
       "Passive",
       "Hidden"
     ],
-    "desc": "Morphling's Primary Attribute is now Strength . Adaptive Strike stuns based on Morphling's strength. Morphling gains 1% Spell Amp per 4 Agility.",
+    "desc": "Morphling's Primary Attribute is now Strength. Adaptive Strike stuns based on Morphling's strength. Morphling gains 1% Spell Amp per 4 Agility.",
     "attrib": [
       {
         "key": "agi_per_one_spell_amp",
@@ -31682,7 +31682,7 @@
     "behavior": "No Target",
     "dmg_type": "Physical",
     "dispellable": "No",
-    "desc": "Dragon Knight takes the form of one of three powerful elder dragons. Increases movement speed and attack damage, applying Wyrm's Wrath on-hit effects and a percentage of the attack damage to all enemies near the target. Increases Dragon Tail range. Increases health regeneration and armor bonuses from Dragon Blood. ",
+    "desc": "Dragon Knight takes the form of one of three powerful elder dragons. Increases movement speed, attack damage, and Wyrm's Wrath effects. Attacks apply Wyrm's Wrath on-hit effects and a percentage of the attack damage to all enemies near the target. Increases Dragon Tail range. Increases health regeneration and armor bonuses from Dragon Blood.",
     "attrib": [
       {
         "key": "duration",
@@ -43916,7 +43916,7 @@
       "Instant Cast"
     ],
     "dispellable": "Yes",
-    "desc": "Allows manipulation of ice elements. Active Quas instances imbue Invoker with bonus hp regeneration. Passively grants bonus strength per level of Quas .",
+    "desc": "Allows manipulation of ice elements. Active Quas instances imbue Invoker with bonus hp regeneration. Passively grants bonus strength per level of Quas.",
     "attrib": [
       {
         "key": "max_level",
@@ -43969,7 +43969,7 @@
       "Instant Cast"
     ],
     "dispellable": "No",
-    "desc": "Allows manipulation of storm elements. Active Wex instances imbue Invoker with bonus movement speed. Passively grants bonus agility per level of Wex .",
+    "desc": "Allows manipulation of storm elements. Active Wex instances imbue Invoker with bonus movement speed. Passively grants bonus agility per level of Wex.",
     "attrib": [
       {
         "key": "max_level",
@@ -44022,7 +44022,7 @@
       "Instant Cast"
     ],
     "dispellable": "No",
-    "desc": "Allows manipulation of fire elements. Active Exort instances imbue Invoker with bonus attack damage. Passively grants bonus intelligence per level of Exort .",
+    "desc": "Allows manipulation of fire elements. Active Exort instances imbue Invoker with bonus attack damage. Passively grants bonus intelligence per level of Exort.",
     "attrib": [
       {
         "key": "max_level",
@@ -44071,14 +44071,14 @@
   "invoker_empty1": {
     "dname": "Invoked Spell",
     "behavior": "Passive",
-    "desc": "Casting Invoke will replace this slot with one of ten unique spells based on Invoker's currently active Quas , Wex , and Exort buffs.",
+    "desc": "Casting Invoke will replace this slot with one of ten unique spells based on Invoker's currently active Quas, Wex, and Exort buffs.",
     "attrib": [],
     "img": "/apps/dota2/images/dota_react/abilities/invoker_empty1.png"
   },
   "invoker_empty2": {
     "dname": "Invoked Spell",
     "behavior": "Passive",
-    "desc": "Casting Invoke will replace this slot with one of ten unique spells based on Invoker's currently active Quas , Wex , and Exort buffs.",
+    "desc": "Casting Invoke will replace this slot with one of ten unique spells based on Invoker's currently active Quas, Wex, and Exort buffs.",
     "attrib": [],
     "img": "/apps/dota2/images/dota_react/abilities/invoker_empty2.png"
   },
@@ -44135,7 +44135,7 @@
       "Hero",
       "Basic"
     ],
-    "desc": "Invoker draws the heat from an enemy, chilling them to their very core for a duration based on the level of Quas . The enemy will take damage and be briefly frozen. Further damage taken in this state will freeze the enemy again, dealing bonus damage. The enemy can only be frozen so often, but the freeze cooldown decreases based on the level of Quas .",
+    "desc": "Invoker draws the heat from an enemy, chilling them to their very core for a duration based on the level of Quas. The enemy will take damage and be briefly frozen. Further damage taken in this state will freeze the enemy again, dealing bonus damage. The enemy can only be frozen so often, but the freeze cooldown decreases based on the level of Quas.",
     "attrib": [
       {
         "key": "duration",
@@ -44228,7 +44228,7 @@
     ],
     "bkbpierce": "No",
     "dispellable": "No",
-    "desc": "Invoker manipulates the ice and electrical energies around him, rendering his body invisible and gaining health and mana regen. The elemental imbalance created as a consequence slows nearby enemies based on the level of Quas , and slows Invoker as well based on the level of Wex .",
+    "desc": "Invoker manipulates the ice and electrical energies around him, rendering his body invisible and gaining health and mana regen. The elemental imbalance created as a consequence slows nearby enemies based on the level of Quas, and slows Invoker as well based on the level of Wex.",
     "attrib": [
       {
         "key": "duration",
@@ -44354,7 +44354,7 @@
     "dmg_type": "Magical",
     "bkbpierce": "No",
     "dispellable": "Yes",
-    "desc": "Unleashes a fast moving tornado that picks up enemy units in its path, suspending them helplessly in the air shortly before allowing them to plummet to their doom. Travels further based on the level of Wex . Holds enemies in the air for a duration based on the level of Quas . Deals base damage plus added damage based on levels in Wex .\n\nDISPEL TYPE: Basic Dispel",
+    "desc": "Unleashes a fast moving tornado that picks up enemy units in its path, suspending them helplessly in the air shortly before allowing them to plummet to their doom. Travels further based on the level of Wex. Holds enemies in the air for a duration based on the level of Quas. Deals base damage plus added damage based on levels in Wex.\n\nDISPEL TYPE: Basic Dispel",
     "attrib": [
       {
         "key": "travel_distance",
@@ -44495,7 +44495,7 @@
     ],
     "dmg_type": "Magical",
     "bkbpierce": "No",
-    "desc": "Invoker builds up a charge of electromagnetic energy at a targeted location which automatically detonates after 2.9 seconds. The detonation covers an area, draining mana based on the level of Wex . Deals damage for each point of mana drained. If EMP drains mana from an enemy hero, Invoker gains 25% of the mana drained.",
+    "desc": "Invoker builds up a charge of electromagnetic energy at a targeted location which automatically detonates after 2.9 seconds. The detonation covers an area, draining mana based on the level of Wex. Deals damage for each point of mana drained. If EMP drains mana from an enemy hero, Invoker gains 25% of the mana drained.",
     "attrib": [
       {
         "key": "delay",
@@ -44574,7 +44574,7 @@
     "dispellable": "Yes",
     "target_team": "Friendly",
     "target_type": "Hero",
-    "desc": "Invoker infuses an ally with an immense surge of energy, increasing their attack speed based on the level of Wex and their damage based on the level of Exort .",
+    "desc": "Invoker infuses an ally with an immense surge of energy, increasing their attack speed based on the level of Wex and their damage based on the level of Exort.",
     "attrib": [
       {
         "key": "bonus_attack_speed",
@@ -44645,7 +44645,7 @@
     "dmg_type": "Magical",
     "bkbpierce": "No",
     "dispellable": "Yes",
-    "desc": "Invoker pulls a flaming meteor from space onto the targeted location. Upon landing, the meteor rolls forward, constantly dealing damage based on the level of Exort , and rolling further based on the level of Wex . Units hit by the meteor will also be set on fire for a short time, receiving additional damage based on the level of Exort .",
+    "desc": "Invoker pulls a flaming meteor from space onto the targeted location. Upon landing, the meteor rolls forward, constantly dealing damage based on the level of Exort, and rolling further based on the level of Wex. Units hit by the meteor will also be set on fire for a short time, receiving additional damage based on the level of Exort.",
     "attrib": [
       {
         "key": "land_time",
@@ -44771,7 +44771,7 @@
     ],
     "dmg_type": "Pure",
     "bkbpierce": "Yes",
-    "desc": "Sends a catastrophic ray of fierce energy from the sun at any targeted location, incinerating all enemies standing beneath it once it reaches the earth. Deals damage based on the level of Exort , however this damage is spread evenly over all enemies hit.",
+    "desc": "Sends a catastrophic ray of fierce energy from the sun at any targeted location, incinerating all enemies standing beneath it once it reaches the earth. Deals damage based on the level of Exort, however this damage is spread evenly over all enemies hit.",
     "attrib": [
       {
         "key": "delay",
@@ -44872,7 +44872,7 @@
       "Hidden"
     ],
     "bkbpierce": "No",
-    "desc": "Invoker forges a spirit embodying the strength of fire and fortitude of ice. Damage and armor are based on the level of Exort while attack range, health, and duration are based on the level of Quas . The elemental's scorching attack is capable of melting the armor of enemy heroes. The number of spirits spawned is determined by the lower level of Quas and Exort .",
+    "desc": "Invoker forges a spirit embodying the strength of fire and fortitude of ice. Damage and armor are based on the level of Exort while attack range, health, and duration are based on the level of Quas. The elemental's scorching attack is capable of melting the armor of enemy heroes. The number of spirits spawned is determined by the lower level of Quas and Exort.",
     "attrib": [
       {
         "key": "spirit_damage",
@@ -45077,7 +45077,7 @@
     "dmg_type": "Magical",
     "bkbpierce": "No",
     "dispellable": "No",
-    "desc": "Generates a wall of solid ice directly in front of Invoker for a duration based on the level of Quas . The bitter cold emanating from it greatly slows nearby enemies based on the level of Quas and deals damage each second based on the level of Exort .",
+    "desc": "Generates a wall of solid ice directly in front of Invoker for a duration based on the level of Quas. The bitter cold emanating from it greatly slows nearby enemies based on the level of Quas and deals damage each second based on the level of Exort.",
     "attrib": [
       {
         "key": "duration",
@@ -45229,7 +45229,7 @@
     "dmg_type": "Magical",
     "bkbpierce": "No",
     "dispellable": "No",
-    "desc": "Invoker unleashes a mighty sonic wave in front of him, dealing damage to any enemy unit it collides with based on the level of Exort . The sheer impact from the blast is enough to knock those enemy units back for a duration based on the level of Quas , then disarm their attacks for a duration based on the level of Wex .",
+    "desc": "Invoker unleashes a mighty sonic wave in front of him, dealing damage to any enemy unit it collides with based on the level of Exort. The sheer impact from the blast is enough to knock those enemy units back for a duration based on the level of Quas, then disarm their attacks for a duration based on the level of Wex.",
     "attrib": [
       {
         "key": "travel_distance",
@@ -53336,7 +53336,7 @@
       "Hero",
       "Basic"
     ],
-    "desc": "Deals damages to the enemy equal to a percentage of its Max Mana. Additionally deals damage equal to a percentage of damage the target received from Nyx Assassin in the past 15s. ",
+    "desc": "Deals damages to the enemy equal to a percentage of its Max Mana. Deals additional damage equal to a percentage of the damage the target has taken from Nyx Assassin in the last 15s. Resets accumulated damage before applying damage.",
     "attrib": [
       {
         "key": "max_mana_as_damage_pct",
@@ -73671,6 +73671,12 @@
       {
         "key": "bonus_aoe_pct_per_hit",
         "header": "BONUS AOE PCT PER HIT:",
+        "value": "0",
+        "generated": true
+      },
+      {
+        "key": "max_stacks",
+        "header": "MAX STACKS:",
         "value": "0",
         "generated": true
       },
