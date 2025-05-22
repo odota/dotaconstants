@@ -1615,7 +1615,10 @@ function formatAttrib(attributes, strings, strings_prefix) {
     .filter((a) => a);
 }
 
-function removeSigns(template) {
+function removeSigns(template: string) {
+  if (!template.replace) {
+    return template;
+  }
   return template
     .replace("+", "")
     .replace("-", "")
