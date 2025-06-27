@@ -8,7 +8,7 @@
     "build": "tsx tasks/updateconstants && tsc",
     "patch": "tsx tasks/newpatch",
     "prettier": "prettier --write tasks",
-    "build_node": "node --experimental-strip-types tasks/updateconstants.ts"
+    "build_node": "node tasks/updateconstants.ts"
   },
   "repository": {
     "type": "git",
