@@ -1408,6 +1408,7 @@ async function start() {
     )
     .join("\n");
   fs.writeFileSync("./index.js", code);
+  fs.writeFileSync("./index.ts", code);
   process.exit(0);
 }
 
