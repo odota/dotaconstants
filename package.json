@@ -2,14 +2,13 @@
   "name": "dotaconstants",
   "version": "9.5.0",
   "description": "Constant data for Dota 2 applications",
-  "main": "index.js",
+  "exports": "./index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsx tasks/updateconstants && tsc",
-    "patch": "tsx tasks/newpatch",
+    "patch": "node tasks/newpatch.ts",
     "prettier": "prettier --write tasks",
-    "build_node": "node tasks/updateconstants.ts"
+    "build": "node tasks/updateconstants.ts"
   },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/odota/dotaconstants.git"
@@ -23,8 +22,6 @@
   "devDependencies": {
     "@types/node": "^22.10.7",
     "prettier": "^3.1.1",
-    "tsx": "^4.19.2",
-    "typescript": "^5.7.2",
     "vdf-parser": "^1.2.1"
   }
 }

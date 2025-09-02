@@ -1407,7 +1407,7 @@ async function start() {
         }.json';`,
     )
     .join("\n");
-  fs.writeFileSync("./index.ts", code);
+  fs.writeFileSync("./index.js", code);
   process.exit(0);
 }
 
@@ -1427,9 +1427,13 @@ function parseJsonOrVdf(text: string, url: string) {
     try {
       let fixed = text;
       // Remove empty values that break parser
-      fixed = fixed.replace(/\t\t"ItemRequirements"\r\n\t\t""/g, "");
-      fixed = fixed.replace(/\t\t\t"has_flying_movement"\t\r\n\t\t\t""/g, "");
-      fixed = fixed.replace(/\t\t\t"damage_reduction"\t\r\n\t\t\t""/g, "");
+      fixed = fixed.replaceAll(`\t\t"ItemRequirements"\r\n\t\t""`, `\t\t"ItemRequirements"\t\t""`);
+      fixed = fixed.replaceAll(`\t\t\t"has_flying_movement"\t\r\n\t\t\t""`, `\t\t\t"has_flying_movement"\t\t""`);
+      fixed = fixed.replaceAll(`\t\t\t"damage_reduction"\t\r\n\t\t\t""`, `\t\t\t"damage_reduction"\t\t""`);
+      fixed = fixed.replaceAll(`\t"default_attack"\r\n\t""`, `\t"default_attack"\t\t""`);
+      fixed = fixed.replaceAll(`\t\t"AbilityValues"\r\n\t\t""`, `\t\t"AbilityValues"\t\t""`);
+      fixed = fixed.replaceAll(`\t\t\t\t"spill_movement_slow_pct"\r\n\t\t\t\t""`, `\t\t\t\t"default_attack"\r\n\t\t\t\t{}`);
+      // fs.writeFileSync('./test.txt', fixed);
       let vdf = vdfparser.parse(fixed, { types: false, arrayify: true });
       return vdf;
     } catch (e) {

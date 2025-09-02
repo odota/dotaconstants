@@ -3247,7 +3247,7 @@
     "id": 1106,
     "img": "/apps/dota2/images/dota_react/items/recipe.png?t=1593393829403",
     "dname": "Phylactery Recipe",
-    "cost": 400,
+    "cost": 300,
     "behavior": false,
     "notes": "",
     "attrib": [],
@@ -3272,7 +3272,7 @@
     "img": "/apps/dota2/images/dota_react/items/phylactery.png?t=1593393829403",
     "dname": "Phylactery",
     "qual": "common",
-    "cost": 2600,
+    "cost": 2500,
     "notes": "",
     "attrib": [
       {
@@ -3317,7 +3317,7 @@
     ],
     "mc": false,
     "hc": false,
-    "cd": 10,
+    "cd": 9,
     "lore": "An amulet overflowing with powerful magics.",
     "components": [
       "point_booster",
@@ -3355,8 +3355,8 @@
     "img": "/apps/dota2/images/dota_react/items/angels_demise.png?t=1593393829403",
     "dname": "Khanda",
     "qual": "common",
-    "cost": 5700,
-    "notes": "",
+    "cost": 5600,
+    "notes": "The slow debuff is dispellable.\nThe break debuff is not dispellable.",
     "attrib": [
       {
         "key": "bonus_mana_regen",
@@ -3393,7 +3393,7 @@
     ],
     "mc": false,
     "hc": false,
-    "cd": 10,
+    "cd": 9,
     "lore": "A blade sharp enough to slice through magic itself.",
     "components": [
       "phylactery",
@@ -3746,7 +3746,7 @@
       {
         "key": "bonus_armor",
         "display": "+ {value} Armor",
-        "value": "6"
+        "value": "5"
       },
       {
         "key": "int_damage_multiplier",
@@ -5483,7 +5483,7 @@
       {
         "key": "base_attack_range",
         "display": "+ {value} Attack Range (Ranged Only)",
-        "value": "150"
+        "value": "140"
       },
       {
         "key": "push_length",
@@ -7729,7 +7729,7 @@
       {
         "type": "passive",
         "title": "Damage Return",
-        "description": "Everytime you are attacked, you return 20 damage plus 20% of the attack damage dealt to you."
+        "description": "Everytime you are attacked, you return 10 damage plus 15% of the attack damage dealt to you."
       }
     ],
     "hint": [],
@@ -7747,12 +7747,12 @@
       {
         "key": "bonus_damage",
         "display": "+ {value} Damage",
-        "value": "18"
+        "value": "15"
       },
       {
         "key": "bonus_armor",
         "display": "+ {value} Armor",
-        "value": "7"
+        "value": "6"
       },
       {
         "key": "bonus_intellect",
@@ -7764,11 +7764,11 @@
       },
       {
         "key": "passive_reflection_constant",
-        "value": "20"
+        "value": "10"
       },
       {
         "key": "passive_reflection_pct",
-        "value": "20"
+        "value": "15"
       },
       {
         "key": "active_reflection_pct",
@@ -8627,7 +8627,7 @@
       {
         "key": "base_attack_range",
         "display": "+ {value} Attack Range (Ranged Only)",
-        "value": "150"
+        "value": "140"
       }
     ],
     "mc": false,
@@ -9141,7 +9141,7 @@
       {
         "type": "passive",
         "title": "Chain Lightning",
-        "description": "Grants a 25% chance on attack to release a bolt of electricity that leaps between 12 targets within a 650 radius, dealing 180 magical damage to each. Lightning proc pierces evasion. Deals 150% damage to illusions."
+        "description": "Grants a 25% chance on attack to release a bolt of electricity that leaps between 12 targets within a 650 radius, dealing 180 magical damage to each. Lightning proc pierces evasion."
       }
     ],
     "hint": [],
@@ -9231,7 +9231,7 @@
       },
       {
         "key": "illusion_multiplier_pct",
-        "value": "150"
+        "value": "100"
       }
     ],
     "mc": 50,
@@ -9581,7 +9581,7 @@
       {
         "type": "passive",
         "title": "Chain Lightning",
-        "description": "Grants a 25% chance on attack to release a bolt of electricity that leaps between 4 targets within a 650 radius, dealing 110 magical damage to each. Lightning proc pierces evasion. Deals 150% damage to illusions."
+        "description": "Grants a 25% chance on attack to release a bolt of electricity that leaps between 4 targets within a 650 radius, dealing 110 magical damage to each. Lightning proc pierces evasion."
       }
     ],
     "hint": [],
@@ -9628,7 +9628,7 @@
       },
       {
         "key": "illusion_multiplier_pct",
-        "value": "150"
+        "value": "100"
       }
     ],
     "mc": false,
@@ -9846,7 +9846,7 @@
       {
         "type": "active",
         "title": "Berserk",
-        "description": "Gives 110 attack speed and 25 movement speed, but reduces your armor by 8 and silences you. Lasts 6 seconds."
+        "description": "Gives 100 attack speed and 25 movement speed, but reduces your armor by 8 and silences you. Lasts 6 seconds."
       },
       {
         "type": "passive",
@@ -9879,7 +9879,7 @@
       },
       {
         "key": "berserk_bonus_attack_speed",
-        "value": "110"
+        "value": "100"
       },
       {
         "key": "berserk_bonus_movement_speed",
@@ -10395,12 +10395,12 @@
       {
         "key": "bonus_health",
         "display": "+ {value} Health",
-        "value": "500"
+        "value": "450"
       },
       {
         "key": "bonus_mana",
         "display": "+ {value} Mana",
-        "value": "500"
+        "value": "450"
       },
       {
         "key": "bonus_health_regen",
@@ -11126,7 +11126,7 @@
         "value": "250"
       }
     ],
-    "mc": 100,
+    "mc": 60,
     "hc": false,
     "cd": 16,
     "lore": "Devised by a wizard who made one too many enemies.",
@@ -11416,7 +11416,7 @@
       {
         "key": "bonus_armor",
         "display": "+ {value} Armor",
-        "value": "8"
+        "value": "7"
       },
       {
         "key": "bonus_mana_regen",
@@ -11834,7 +11834,7 @@
       {
         "type": "active",
         "title": "Disarm",
-        "description": "Prevents a target from attacking for 3 seconds on melee targets, and 4 seconds on ranged targets."
+        "description": "Prevents a target from attacking for 3.5 seconds on melee targets, and 4.5 seconds on ranged targets."
       },
       {
         "type": "passive",
@@ -11885,11 +11885,11 @@
       },
       {
         "key": "disarm_range",
-        "value": "4.0"
+        "value": "4.5"
       },
       {
         "key": "disarm_melee",
-        "value": "3.0"
+        "value": "3.5"
       }
     ],
     "mc": 25,
@@ -12155,7 +12155,7 @@
     ],
     "mc": 125,
     "hc": false,
-    "cd": 14,
+    "cd": 15,
     "lore": "The stolen cape of a master illusionist.",
     "components": [
       "shadow_amulet",
@@ -13665,7 +13665,7 @@
       {
         "type": "passive",
         "title": "Death Delay",
-        "description": "Survive for an extra 5 seconds after receiving a killing blow. If any enemy heroes dies within 1200 units, the death delay effect is extended by 5 seconds."
+        "description": "Survive for an extra 6 seconds after receiving a killing blow. If any enemy heroes dies within 1200 units, the death delay effect is extended by 5 seconds. The hero cannot attack buildings during Death Delay."
       }
     ],
     "hint": [],
@@ -13677,7 +13677,7 @@
     "attrib": [
       {
         "key": "duration",
-        "value": "5"
+        "value": "6"
       },
       {
         "key": "bonus_kill_duration",
@@ -13690,7 +13690,7 @@
     ],
     "mc": false,
     "hc": false,
-    "cd": 50,
+    "cd": 100,
     "lore": "The price for wearing it is paid in the afterlife.",
     "components": null,
     "created": false,
@@ -14991,7 +14991,7 @@
       {
         "type": "passive",
         "title": "Chipper",
-        "description": "Everytime you are attacked, you return 30 damage to heroes and 20 damage to creeps."
+        "description": "Every time you are attacked, you return 30 damage to heroes and 20 damage to creeps."
       }
     ],
     "hint": [],
@@ -15578,7 +15578,7 @@
     ],
     "mc": false,
     "hc": false,
-    "cd": 20,
+    "cd": 15,
     "lore": "A failed experiment in finer telekinetic control, still fit for other ends.",
     "components": null,
     "created": false,
@@ -18429,7 +18429,7 @@
       {
         "key": "mana_regen",
         "display": "+ {value} Mana Regeneration",
-        "value": "1 / 1.75 / 2.5 / 3.25"
+        "value": "0.8 / 1.6 / 2.4 / 3.2"
       },
       {
         "key": "magic_res",
@@ -18496,7 +18496,7 @@
       {
         "key": "health_regen",
         "display": "+ {value} Health Regeneration",
-        "value": "0 / 4 / 8 / 12"
+        "value": "0 / 3 / 6 / 9"
       },
       {
         "key": "slow_resist",
@@ -18600,7 +18600,7 @@
       {
         "key": "health_restoration",
         "display": "+ {value}% Health Restoration",
-        "value": "20 / 30"
+        "value": "30 / 40"
       },
       {
         "key": "bat_reduce",
@@ -18610,7 +18610,7 @@
       {
         "key": "intelligence_pct",
         "display": "- {value}% Intelligence",
-        "value": "-8"
+        "value": "-5"
       }
     ],
     "mc": false,
@@ -18744,7 +18744,7 @@
       {
         "key": "spell_lifesteal",
         "display": "+ {value}% Spell Lifesteal",
-        "value": "8 / 10 / 12"
+        "value": "6 / 8 / 10"
       },
       {
         "key": "bonus_night_vision",
@@ -18888,7 +18888,7 @@
       {
         "type": "active",
         "title": "Bottoms Up",
-        "description": "Restores 60 + 4% of the caster's maximum mana over 6 seconds. If the hero is attacked by an enemy hero or Roshan, the effect is lost.\n\nHold Control to use on an allied hero."
+        "description": "Restores 70 + 3% of the caster's maximum mana over 6 seconds. If the hero is attacked by an enemy hero or Roshan, the effect is lost.\n\nHold Control to use on an allied hero."
       },
       {
         "type": "passive",
@@ -18911,11 +18911,11 @@
     "attrib": [
       {
         "key": "mana_restore",
-        "value": "60"
+        "value": "70"
       },
       {
         "key": "mana_restore_pct",
-        "value": "4"
+        "value": "3"
       },
       {
         "key": "heal_duration",
@@ -19040,7 +19040,7 @@
       {
         "type": "active",
         "title": "Cyclonic Shield",
-        "description": "Envelops the caster in an all damage barrier that absorbs 75% of incoming damage up to a max of 250. Lasts for up to 10 seconds and while the barrier is active you have 50% Slow Resistance."
+        "description": "Envelops the caster in an all damage barrier that absorbs 75% of incoming damage up to a max of 225. Lasts for up to 10 seconds and while the barrier is active you have 50% Slow Resistance."
       }
     ],
     "hint": [],
@@ -19060,7 +19060,7 @@
       },
       {
         "key": "barrier_amount",
-        "value": "250"
+        "value": "225"
       },
       {
         "key": "barrier_pct",
@@ -19130,7 +19130,7 @@
     "img": "/apps/dota2/images/dota_react/items/searing_signet.png?t=1593393829403",
     "dname": "Searing Signet",
     "cost": 0,
-    "notes": "",
+    "notes": "Will not ignite enemies that are more than 2000 range away.",
     "attrib": [
       {
         "key": "damage_threshold",
@@ -19147,6 +19147,10 @@
       {
         "key": "burn_tickrate",
         "value": ".25"
+      },
+      {
+        "key": "max_range",
+        "value": "2000"
       }
     ],
     "mc": false,
@@ -19246,7 +19250,7 @@
       {
         "type": "passive",
         "title": "Keen Eye",
-        "description": "Increases cast range by 125 and attack range by 100 (Melee & Ranged). Taking over 25 damage from a player controlled source or Roshan disables this effect for 3 seconds."
+        "description": "Increases cast range by 100 and attack range by 100 (Melee & Ranged). Taking over 25 damage from a player controlled source or Roshan disables this effect for 6 seconds."
       }
     ],
     "hint": [],
@@ -19262,11 +19266,11 @@
       },
       {
         "key": "bonus_cast_range",
-        "value": "125"
+        "value": "100"
       },
       {
         "key": "damage_disable",
-        "value": "3"
+        "value": "6"
       },
       {
         "key": "damage_threshold",
@@ -19533,7 +19537,7 @@
     "img": "/apps/dota2/images/dota_react/items/dormant_curio.png?t=1593393829403",
     "dname": "Dormant Curio",
     "cost": 0,
-    "notes": "Will amplify a stat on the next artifact by 30% other than cooldown, mana cost, or cast range.",
+    "notes": "Certain stats on the next artifact will be amplified. Will not amplify cooldown, mana cost, or cast range.",
     "attrib": [
       {
         "key": "item_potency",
@@ -19554,7 +19558,7 @@
       {
         "type": "passive",
         "title": "Veiled",
-        "description": "When falling below 50% HP, gain 200% evasion for 8 seconds. While active, dodging an attack decreases the evasion bonus by 75% of its current value."
+        "description": "When falling below 50% HP, gain 150% evasion for 5 seconds. While active, dodging an attack decreases the evasion bonus by 75% of its current value."
       },
       {
         "type": "passive",
@@ -19575,7 +19579,7 @@
       },
       {
         "key": "evasion_max",
-        "value": "200"
+        "value": "150"
       },
       {
         "key": "evasion_loss",
@@ -19583,7 +19587,7 @@
       },
       {
         "key": "max_duration",
-        "value": "8"
+        "value": "5"
       }
     ],
     "mc": false,
@@ -19617,7 +19621,7 @@
       {
         "key": "health_regen_loss",
         "display": "HEALTH RESTORATION LOSS: {value}%",
-        "value": "20"
+        "value": "30"
       },
       {
         "key": "hp_damage",
@@ -19676,7 +19680,7 @@
         "value": "5"
       }
     ],
-    "mc": 40,
+    "mc": 65,
     "hc": false,
     "cd": 30,
     "lore": "Proof that the lone sentinel was not always so.",
@@ -19690,7 +19694,7 @@
       {
         "type": "passive",
         "title": "Blood Invocation",
-        "description": "Spells have a 15% larger Area of Effect, but now additionally cost health equal to 35% of their mana cost."
+        "description": "Spells have a 12% larger Area of Effect, but now additionally cost health equal to 35% of their mana cost."
       }
     ],
     "hint": [],
@@ -19706,7 +19710,7 @@
       },
       {
         "key": "aoe_pct",
-        "value": "15"
+        "value": "12"
       }
     ],
     "mc": false,
@@ -19756,7 +19760,7 @@
       {
         "key": "debuff_duration",
         "display": "DURATION: {value}",
-        "value": "4"
+        "value": "3"
       }
     ],
     "mc": false,

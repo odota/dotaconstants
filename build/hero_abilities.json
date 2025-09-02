@@ -1443,7 +1443,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_windranger_9",
+        "name": "special_bonus_all_stats_4",
         "level": 1
       },
       {
@@ -2661,7 +2661,7 @@
         "color": "Blue",
         "gradient_id": 0,
         "title": "Succubus Facet",
-        "description": "All sources of Spell Lifesteal also apply to Pure Damage. Queen of Pain gains Spell Lifesteal that increases with proximity to her enemies. Lifesteal is at its maximum when the enemy is 300 units or closer to her and at its minimum when the enemy is 800 units or further from her.",
+        "description": "All sources of Spell Lifesteal also apply to Pure Damage. Queen of Pain gains Spell Lifesteal that increases with proximity to her enemies. Lifesteal is at its maximum when the enemy is 150 units or closer to her and at its minimum when the enemy is 800 units or further from her.",
         "abilities": [
           "queenofpain_succubus"
         ]
@@ -2917,7 +2917,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_attack_speed_40",
+        "name": "special_bonus_attack_speed_30",
         "level": 1
       },
       {
@@ -3671,7 +3671,7 @@
         "color": "Green",
         "gradient_id": 0,
         "title": "Soothing Saplings",
-        "description": "After Sprout is cast, all trees in a 1200 radius heal nearby allies."
+        "description": "After Sprout is cast, all trees in a 900 radius heal nearby allies."
       },
       {
         "id": 1,
@@ -4281,7 +4281,7 @@
         "color": "Gray",
         "gradient_id": 0,
         "title": "Necrotic Webs",
-        "description": "Reduces health regeneration of enemies on webs."
+        "description": "Reduces health restoration of enemies on webs."
       },
       {
         "id": 1,
@@ -4745,7 +4745,7 @@
         "color": "Purple",
         "gradient_id": 2,
         "title": "Twist the Knife",
-        "description": "Reality also casts Spectral Dagger on the target."
+        "description": "Reality also casts Spectral Dagger on the Haunt illusion's target."
       }
     ]
   },
@@ -5049,7 +5049,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_hp_175",
+        "name": "special_bonus_hp_150",
         "level": 1
       },
       {
@@ -5980,7 +5980,7 @@
         "color": "Red",
         "gradient_id": 0,
         "title": "Fat Chance",
-        "description": "Multicast chance is increased by  0.06% of Ogre Magi's Strength."
+        "description": "Each point of Ogre Magi's Strength adds 0.06% to Ogre Magi's Multicast chance."
       },
       {
         "id": 1,
@@ -6020,7 +6020,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_undying_3",
+        "name": "special_bonus_unique_undying_5",
         "level": 3
       },
       {
@@ -6032,7 +6032,7 @@
         "level": 4
       },
       {
-        "name": "special_bonus_unique_undying_5",
+        "name": "special_bonus_unique_undying_3",
         "level": 4
       }
     ],
@@ -6205,7 +6205,7 @@
         "icon": "vortex_out",
         "color": "Gray",
         "gradient_id": 0,
-        "title": "Transferrence",
+        "title": "Transference",
         "description": "Electromagnetic Repulsion can be activated manually, be cast on allies and deals damage equal to a percentage of Disruptor's current health."
       }
     ]
@@ -6783,8 +6783,8 @@
       "centaur_hoof_stomp",
       "centaur_double_edge",
       "centaur_return",
-      "centaur_mount",
       "centaur_work_horse",
+      "centaur_mount",
       "centaur_stampede",
       "centaur_rawhide"
     ],
@@ -7783,9 +7783,10 @@
       "techies_sticky_bomb",
       "techies_reactive_tazer",
       "techies_suicide",
-      "techies_reactive_tazer_stop",
+      "generic_hidden",
       "techies_minefield_sign",
-      "techies_land_mines"
+      "techies_land_mines",
+      "techies_reactive_tazer_stop"
     ],
     "talents": [
       {
@@ -8182,11 +8183,12 @@
       "pangolier_swashbuckle",
       "pangolier_shield_crash",
       "pangolier_lucky_shot",
-      "pangolier_fortune_favors_the_bold",
+      "generic_hidden",
       "pangolier_rollup",
       "pangolier_gyroshell",
       "pangolier_gyroshell_stop",
-      "pangolier_rollup_stop"
+      "pangolier_rollup_stop",
+      "pangolier_fortune_favors_the_bold"
     ],
     "talents": [
       {
@@ -8859,7 +8861,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_attack_damage_20",
+        "name": "special_bonus_attack_damage_30",
         "level": 1
       },
       {
