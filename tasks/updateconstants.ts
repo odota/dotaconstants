@@ -1410,7 +1410,7 @@ async function start() {
   lines.push(`export default all;`);
   const code = lines.join("\n");
   fs.writeFileSync("./index.js", code);
-  fs.writeFileSync("./index.d.ts", code);
+  fs.writeFileSync("./index.ts", code);
   process.exit(0);
 }
 
