@@ -219,7 +219,9 @@ async function start() {
               item.img = `/apps/dota2/images/dota_react/items/recipe.png?t=${1593393829403}`;
             }
 
-            item.dname = strings[`DOTA_Tooltip_ability_${key}`] || strings[`DOTA_Tooltip_ability_${key}:n`];
+            item.dname =
+              strings[`DOTA_Tooltip_ability_${key}`] ||
+              strings[`DOTA_Tooltip_ability_${key}:n`];
             item.qual = itemQualOverrides[key] ?? scripts[key].ItemQuality;
             item.cost = parseInt(scripts[key].ItemCost);
 
@@ -640,9 +642,12 @@ async function start() {
         // Some unique talents don't show up in each hero data file
         // e.g. special_bonus_unique_axe_8
         // Do a pass through the strings and if any are missing, add them with just basic description
-        Object.keys(strings).forEach(str => {
-          if (str.startsWith('DOTA_Tooltip_ability_special_bonus_unique') && !str.endsWith('Description')) {
-            const abName = str.slice('DOTA_Tooltip_ability_'.length);
+        Object.keys(strings).forEach((str) => {
+          if (
+            str.startsWith("DOTA_Tooltip_ability_special_bonus_unique") &&
+            !str.endsWith("Description")
+          ) {
+            const abName = str.slice("DOTA_Tooltip_ability_".length);
             if (!abilities[abName]) {
               abilities[abName] = {
                 dname: strings[str],
@@ -1399,13 +1404,12 @@ async function start() {
   const files = fs
     .readdirSync("./build")
     .filter((filename) => filename.endsWith(".json"));
-  const lines = files
-    .map(
-      (filename) =>
-        `export { default as ${filename.split(".")[0]} } from './build/${
-          filename.split(".")[0]
-        }.json' with { type: 'json' };`
-    );
+  const lines = files.map(
+    (filename) =>
+      `export { default as ${filename.split(".")[0]} } from './build/${
+        filename.split(".")[0]
+      }.json' with { type: 'json' };`,
+  );
   lines.push(`export * as default from './index.js';`);
   const code = lines.join("\n");
   fs.writeFileSync("./index.js", code);
@@ -1429,12 +1433,30 @@ function parseJsonOrVdf(text: string, url: string) {
     try {
       let fixed = text;
       // Remove empty values that break parser
-      fixed = fixed.replaceAll(`\t\t"ItemRequirements"\r\n\t\t""`, `\t\t"ItemRequirements"\t\t""`);
-      fixed = fixed.replaceAll(`\t\t\t"has_flying_movement"\t\r\n\t\t\t""`, `\t\t\t"has_flying_movement"\t\t""`);
-      fixed = fixed.replaceAll(`\t\t\t"damage_reduction"\t\r\n\t\t\t""`, `\t\t\t"damage_reduction"\t\t""`);
-      fixed = fixed.replaceAll(`\t"default_attack"\r\n\t""`, `\t"default_attack"\t\t""`);
-      fixed = fixed.replaceAll(`\t\t"AbilityValues"\r\n\t\t""`, `\t\t"AbilityValues"\t\t""`);
-      fixed = fixed.replaceAll(`\t\t\t\t"spill_movement_slow_pct"\r\n\t\t\t\t""`, `\t\t\t\t"default_attack"\r\n\t\t\t\t{}`);
+      fixed = fixed.replaceAll(
+        `\t\t"ItemRequirements"\r\n\t\t""`,
+        `\t\t"ItemRequirements"\t\t""`,
+      );
+      fixed = fixed.replaceAll(
+        `\t\t\t"has_flying_movement"\t\r\n\t\t\t""`,
+        `\t\t\t"has_flying_movement"\t\t""`,
+      );
+      fixed = fixed.replaceAll(
+        `\t\t\t"damage_reduction"\t\r\n\t\t\t""`,
+        `\t\t\t"damage_reduction"\t\t""`,
+      );
+      fixed = fixed.replaceAll(
+        `\t"default_attack"\r\n\t""`,
+        `\t"default_attack"\t\t""`,
+      );
+      fixed = fixed.replaceAll(
+        `\t\t"AbilityValues"\r\n\t\t""`,
+        `\t\t"AbilityValues"\t\t""`,
+      );
+      fixed = fixed.replaceAll(
+        `\t\t\t\t"spill_movement_slow_pct"\r\n\t\t\t\t""`,
+        `\t\t\t\t"default_attack"\r\n\t\t\t\t{}`,
+      );
       // fs.writeFileSync('./test.txt', fixed);
       let vdf = vdfparser.parse(fixed, { types: false, arrayify: true });
       return vdf;
@@ -1702,12 +1724,14 @@ function replaceSValues(template, attribs, key) {
 }
 
 function removeHTML(string = "") {
-  return string
+  return (
+    string
       .replace(/<br>/gi, "\n")
       // replace h1 close tags with a space, but not open tags
       .replace(/(<\/h1>)/gi, " ")
       .replace(/(<(\/[^>]+)>)/gi, "")
-      .replace(/(<([^>]+)>)/gi, "");
+      .replace(/(<([^>]+)>)/gi, "")
+  );
 }
 
 function replaceBonusSValues(key, template, attribs) {

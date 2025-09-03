@@ -5,7 +5,7 @@
   "exports": "./index.js",
   "scripts": {
     "patch": "node tasks/newpatch.ts",
-    "prettier": "prettier --write tasks",
+    "prettier": "npx prettier --write tasks",
     "build": "node tasks/updateconstants.ts"
   },
   "type": "module",
@@ -20,8 +20,7 @@
   },
   "homepage": "https://github.com/odota/dotaconstants#readme",
   "devDependencies": {
-    "@types/node": "^22.10.7",
-    "prettier": "^3.1.1",
+    "@types/node": "^24.3.0",
     "vdf-parser": "^1.2.1"
   }
 }
