@@ -22,3 +22,5 @@ export { default as player_colors } from './build/player_colors.json';
 export { default as region } from './build/region.json';
 export { default as skillshots } from './build/skillshots.json';
 export { default as xp_level } from './build/xp_level.json';
+import * as all from '.';
+export default all;

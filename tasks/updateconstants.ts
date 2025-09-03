@@ -1399,16 +1399,18 @@ async function start() {
   const files = fs
     .readdirSync("./build")
     .filter((filename) => filename.endsWith(".json"));
-  const code = files
+  const lines = files
     .map(
       (filename) =>
         `export { default as ${filename.split(".")[0]} } from './build/${
           filename.split(".")[0]
         }.json';`,
-    )
-    .join("\n");
+    );
+  lines.push(`import * as all from '.';`);
+  lines.push(`export default all;`);
+  const code = lines.join("\n");
   fs.writeFileSync("./index.js", code);
-  fs.writeFileSync("./index.ts", code);
+  fs.writeFileSync("./index.d.ts", code);
   process.exit(0);
 }
 
