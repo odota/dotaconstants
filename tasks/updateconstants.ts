@@ -1404,7 +1404,7 @@ async function start() {
       (filename) =>
         `export { default as ${filename.split(".")[0]} } from './build/${
           filename.split(".")[0]
-        }.json';`
+        }.json' with { type: 'json' };`
     );
   lines.push(`export * as default from './index.js';`);
   const code = lines.join("\n");
