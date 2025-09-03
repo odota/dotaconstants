@@ -1402,11 +1402,11 @@ async function start() {
   const lines = files
     .map(
       (filename) =>
-        `import ${filename.split(".")[0]} from './build/${
+        `export { default as ${filename.split(".")[0]} } from './build/${
           filename.split(".")[0]
-        }.json';`,
+        }.json';`
     );
-  lines.push(`export default {${files.map(filename => filename.split(".")[0]).join(', ')}};`);
+  lines.push(`export * as default from './index.js';`);
   const code = lines.join("\n");
   fs.writeFileSync("./index.js", code);
   fs.writeFileSync("./index.ts", code);
