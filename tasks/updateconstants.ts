@@ -172,7 +172,7 @@ async function start() {
         "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/neutral_items.txt",
         idsUrl,
       ],
-      transform: (respObj) => {
+      transform: (respObj: any) => {
         const strings = respObj[0].lang.Tokens;
         const scripts = respObj[1].DOTAAbilities;
         const neutrals = respObj[2].neutral_items;
@@ -418,10 +418,10 @@ async function start() {
     {
       key: "item_ids",
       url: idsUrl,
-      transform: (respObj) => {
+      transform: (respObj: any) => {
         const data = respObj.DOTAAbilityIDs.ItemAbilities.Locked;
         // Flip the keys and values
-        const itemIds = {};
+        const itemIds: any = {};
         Object.entries(data).forEach(([key, val]: [string, any]) => {
           // Remove item_ prefix
           itemIds[val] = key.replace("item_", "");
@@ -434,7 +434,7 @@ async function start() {
     {
       key: "abilities",
       url: abilitiesUrls,
-      transform: (respObj) => {
+      transform: (respObj: any) => {
         const strings = respObj[0].lang.Tokens;
         let scripts = respObj[1].DOTAAbilities;
         // Merge into scripts all the hero abilities (the rest of the array)
@@ -661,7 +661,7 @@ async function start() {
     {
       key: "ability_ids",
       url: idsUrl,
-      transform: (respObj) => {
+      transform: (respObj: any) => {
         const data = respObj.DOTAAbilityIDs.UnitAbilities.Locked;
         // Flip the keys and values
         const abilityIds = {};
@@ -674,7 +674,7 @@ async function start() {
     {
       key: "neutral_abilities",
       url: npcUnitsUrl,
-      transform: (respObj) => {
+      transform: (respObj: any) => {
         const abilitySlots = [
           "Ability1",
           "Ability2",
@@ -783,7 +783,7 @@ async function start() {
     {
       key: "ancients",
       url: npcUnitsUrl,
-      transform: (respObj) => {
+      transform: (respObj: any) => {
         // filter out attachable units, couriers, buildings and siege creeps
         const badUnitRelationships = new Set([
           "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_ATTACHED",
@@ -865,7 +865,7 @@ async function start() {
     {
       key: "heroes",
       url: [localizationUrl, heroesUrl],
-      transform: (respObj) => {
+      transform: (respObj: any) => {
         let heroes: any = [];
         let keys = Object.keys(respObj[1].DOTAHeroes).filter(
           (name) => !badNames.has(name),
@@ -892,7 +892,7 @@ async function start() {
         "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/hero_lore_english.txt",
         heroesUrl,
       ],
-      transform: (respObj) => {
+      transform: (respObj: any) => {
         let keys = Object.keys(respObj[1].DOTAHeroes).filter(
           (name) => !badNames.has(name),
         );
@@ -921,7 +921,7 @@ async function start() {
     {
       key: "hero_abilities",
       url: [heroesUrl, ...abilitiesUrls],
-      transform: (respObj) => {
+      transform: (respObj: any) => {
         const [heroObj, abilityLoc, _, ...heroAbils] = respObj;
 
         const strings = abilityLoc.lang.Tokens;
@@ -1046,7 +1046,7 @@ async function start() {
     // {
     //   key: "region",
     //   url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/regions.txt",
-    //   transform: (respObj) => {
+    //   transform: (respObj: any) => {
     //     const region = {};
     //     const regions = respObj.regions;
     //     for (const key in regions) {
@@ -1064,7 +1064,7 @@ async function start() {
     // {
     //   key: "cluster",
     //   url: "https://api.stratz.com/api/v1/Cluster",
-    //   transform: (respObj) => {
+    //   transform: (respObj: any) => {
     //     const cluster = {};
     //     respObj.forEach(({ id, regionId }) => {
     //       cluster[id] = regionId;
@@ -1075,10 +1075,10 @@ async function start() {
     {
       key: "countries",
       url: "https://raw.githubusercontent.com/mledoze/countries/master/countries.json",
-      transform: (respObj) => {
+      transform: (respObj: any) => {
         const countries = {};
         respObj
-          .map((c) => ({
+          .map((c: any) => ({
             name: {
               common: c.name.common,
             },
@@ -1097,7 +1097,7 @@ async function start() {
         localizationUrl,
         "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/hero_chat_wheel_english.txt",
       ],
-      transform: (respObj) => {
+      transform: (respObj: any) => {
         const chat_wheel = respObj[0].chat_wheel;
         const lang = respObj[1].lang.Tokens;
         const chat_wheel_lang = respObj[2].hero_chat_wheel;
@@ -1154,7 +1154,7 @@ async function start() {
     {
       key: "patchnotes",
       url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/patchnotes/patchnotes_english.txt",
-      transform: (respObj) => {
+      transform: (respObj: any) => {
         let items = Object.keys(
           JSON.parse(fs.readFileSync("./build/items.json").toString()),
         );
@@ -1163,7 +1163,7 @@ async function start() {
         );
         const data = respObj.patch;
 
-        let result = {};
+        let result: any = {};
         let keys = Object.keys(data);
         for (let key of keys) {
           let keyArr = key.replace("DOTA_Patch_", "").split("_");
@@ -1245,7 +1245,7 @@ async function start() {
     {
       key: "aghs_desc",
       url: heroDataUrls,
-      transform: (respObj) => {
+      transform: (respObj: any) => {
         const herodata = respObj;
         const aghs_desc_arr: any[] = [];
 
@@ -1417,7 +1417,7 @@ async function start() {
   process.exit(0);
 }
 
-function isObj(obj) {
+function isObj(obj: any) {
   return (
     obj !== null &&
     obj !== undefined &&
@@ -1467,7 +1467,7 @@ function parseJsonOrVdf(text: string, url: string) {
   }
 }
 
-function getSpecialAttrs(entity) {
+function getSpecialAttrs(entity: any) {
   let specialAttr = entity.AbilitySpecial;
   if (!specialAttr) {
     specialAttr = entity.AbilityValues;
@@ -1493,7 +1493,7 @@ function getSpecialAttrs(entity) {
   return specialAttr;
 }
 
-function calculateValueFromBonus(value, bonus) {
+function calculateValueFromBonus(value: string, bonus: string) {
   const rawBonus = bonus
     .replace("+", "")
     .replace("-", "")
@@ -1535,7 +1535,7 @@ function calculateValueFromBonus(value, bonus) {
   return ret;
 }
 
-function findAghsAbilityValue(values) {
+function findAghsAbilityValue(values: any) {
   return function (str, name) {
     if (name == "") {
       return "%";
@@ -1546,7 +1546,7 @@ function findAghsAbilityValue(values) {
   };
 }
 
-function expandItemGroup(key, items) {
+function expandItemGroup(key: string, items: any) {
   let base = [key];
   if (items[key] && items[key].components) {
     return [].concat.apply(
@@ -1560,12 +1560,12 @@ function expandItemGroup(key, items) {
   }
 }
 
-function replaceUselessDecimals(strToReplace) {
+function replaceUselessDecimals(strToReplace: string) {
   return strToReplace.replace(/\.0+(\D)/, "$1");
 }
 
 // Formats something like "20 21 22" or [ 20, 21, 22 ] to be "20 / 21 / 22"
-function formatValues(value, percent = false, separator = " / ") {
+function formatValues(value: string[] | string, percent = false, separator = " / ") {
   let values = Array.isArray(value) ? value : String(value).split(" ");
   if (values.every((v) => v == values[0])) {
     values = [values[0]];
@@ -1579,7 +1579,7 @@ function formatValues(value, percent = false, separator = " / ") {
 }
 
 // Formats AbilitySpecial for the attrib value for abilities and items
-function formatAttrib(attributes, strings, strings_prefix) {
+function formatAttrib(attributes: any, strings: string[], strings_prefix: string) {
   if (attributes && !Array.isArray(attributes))
     attributes = Object.values(attributes);
   return (attributes || [])
@@ -1656,7 +1656,7 @@ function removeSigns(template: string) {
 
 let specialBonusLookup = {};
 
-function replaceSValues(template, attribs, key) {
+function replaceSValues(template: string, attribs: any[], key: string) {
   let values = specialBonusLookup[key] ?? {};
   if (
     template &&
@@ -1758,11 +1758,11 @@ function replaceBonusSValues(key, template, attribs) {
 // Formats templates like "Storm"s movement speed is %storm_move_speed%" with "Storm"s movement speed is 32"
 // args are the template, and a list of attribute dictionaries, like the ones in AbilitySpecial for each ability in the npc_abilities from the vpk
 function replaceSpecialAttribs(
-  template,
-  attribs,
+  template: string,
+  attribs: any[],
   isItem = false,
   allData = {},
-  key, // For error tracing
+  key: string, // For error tracing
 ) {
   if (!template) {
     return template;
@@ -1802,7 +1802,7 @@ function replaceSpecialAttribs(
       template = template.replace(/[ a-zA-Z]+: %\w+%/g, "");
     }
 
-    template = template.replace(/%([^% ]*)%/g, function (str, name) {
+    template = template.replace(/%([^% ]*)%/g, function (str: string, name: string) {
       if (name == "") {
         return "%";
       }
@@ -1818,14 +1818,14 @@ function replaceSpecialAttribs(
       if (!attr) {
         if (name === "lifesteal") {
           //special cases, in terms of template context and dota2 gamepedia
-          return attribs.find((obj) => "lifesteal_percent" in obj)
+          return attribs.find((obj: any) => "lifesteal_percent" in obj)
             .lifesteal_percent;
         } else if (name === "movement_slow") {
-          return attribs.find((obj) => "damage_pct" in obj).damage_pct;
+          return attribs.find((obj: any) => "damage_pct" in obj).damage_pct;
         } else if (name.startsWith("bonus_")) {
           // Some facets have an extra bonus_ at the start
           const newName = name.replace("bonus_", "");
-          const obj = attribs.find((obj) => newName in obj) ?? {};
+          const obj = attribs.find((obj: any) => newName in obj) ?? {};
           const facetKey = Object.keys(obj).find((k) =>
             k.startsWith("special_bonus_facet"),
           );
@@ -1918,7 +1918,7 @@ function replaceSpecialAttribs(
   return template;
 }
 
-function formatBehavior(string) {
+function formatBehavior(string: string) {
   if (!string) return false;
   if (Array.isArray(string)) {
     string = string.join(" | ");
@@ -1926,11 +1926,11 @@ function formatBehavior(string) {
   let split = string
     .split(" | ")
     .filter(
-      (item) =>
+      (item: string) =>
         !ignoreStrings.has(item.trim()) &&
         extraStrings.hasOwnProperty(item.trim()),
     )
-    .map((item) => {
+    .map((item: string) => {
       return extraStrings[item.trim()];
     });
 
@@ -1941,7 +1941,7 @@ function formatBehavior(string) {
   }
 }
 
-function formatVpkHero(key, vpkr) {
+function formatVpkHero(key: string, vpkr: any) {
   let h: any = {};
 
   let vpkrh = vpkr.DOTAHeroes[key];
@@ -2017,7 +2017,7 @@ function formatVpkHero(key, vpkr) {
   return h;
 }
 
-function parseNameFromArray(array, names) {
+function parseNameFromArray(array: string[], names: string[]) {
   let final: string[] = [];
   for (let i = 1; i <= array.length; i++) {
     let name = array.slice(0, i).join("_");

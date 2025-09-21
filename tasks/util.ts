@@ -1,6 +1,6 @@
 export const HTML_REGEX = /(<([^>]+)>)/gi;
 
-export const mapAbilities = (tokens) => {
+export const mapAbilities = (tokens: any) => {
   const tokenKeys = Object.keys(tokens);
   tokenKeys.forEach(
     (key) => (tokens[key] = tokens[key].replace(HTML_REGEX, "")),
@@ -8,7 +8,7 @@ export const mapAbilities = (tokens) => {
   return tokens;
 };
 
-export const removeExtraneousWhitespacesFromString = (string) => {
+export const removeExtraneousWhitespacesFromString = (string: string) => {
   if (!string) {
     return "";
   }
@@ -16,7 +16,7 @@ export const removeExtraneousWhitespacesFromString = (string) => {
   return string.replace(/\s+/g, " ").trim();
 };
 
-export const cleanupArray = (array) => {
+export const cleanupArray = (array: string[]) => {
   if (!array) {
     return [];
   }

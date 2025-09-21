@@ -1,5 +1,5 @@
 import fs from "node:fs";
-import patches from "../json/patch.json";
+import patches from "../json/patch.json" with { type: 'json' };
 
 const last = patches.slice(-1)[0];
 
