@@ -8,6 +8,10 @@
     "prettier": "npx prettier --write tasks",
     "build": "node tasks/updateconstants.ts"
   },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "vdf-parser": "^1.2.1"
+  },
   "type": "module",
   "repository": {
     "type": "git",
@@ -18,9 +22,5 @@
   "bugs": {
     "url": "https://github.com/odota/dotaconstants/issues"
   },
-  "homepage": "https://github.com/odota/dotaconstants#readme",
-  "devDependencies": {
-    "@types/node": "^24.3.0",
-    "vdf-parser": "^1.2.1"
-  }
+  "homepage": "https://github.com/odota/dotaconstants#readme"
 }
