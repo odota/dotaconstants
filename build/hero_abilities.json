@@ -4,7 +4,7 @@
       "antimage_mana_break",
       "antimage_blink",
       "antimage_counterspell",
-      "antimage_counterspell_ally",
+      "generic_hidden",
       "antimage_persectur",
       "antimage_mana_void"
     ],
@@ -50,7 +50,7 @@
         "color": "Purple",
         "gradient_id": 1,
         "title": "Magebane's Mirror",
-        "description": "Spells countered by Counterspell or Counterspell Ally will immediately burn a percentage of its mana cost from the enemy and deal damage based on the burned mana cost."
+        "description": "Spells countered by Counterspell will immediately burn a percentage of its mana cost from the enemy and deal damage based on the burned mana cost."
       },
       {
         "id": 1,
@@ -83,7 +83,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_axe_6",
+        "name": "special_bonus_unique_axe",
         "level": 2
       },
       {
@@ -91,7 +91,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_axe_5",
+        "name": "special_bonus_strength_15",
         "level": 3
       },
       {
@@ -103,7 +103,7 @@
         "level": 4
       },
       {
-        "name": "special_bonus_unique_axe",
+        "name": "special_bonus_unique_axe_5",
         "level": 4
       }
     ],
@@ -212,11 +212,11 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_bloodseeker_6",
+        "name": "special_bonus_unique_bloodseeker_5",
         "level": 1
       },
       {
-        "name": "special_bonus_unique_bloodseeker_7",
+        "name": "special_bonus_unique_bloodseeker",
         "level": 2
       },
       {
@@ -228,11 +228,11 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_bloodseeker",
+        "name": "special_bonus_agility_20",
         "level": 3
       },
       {
-        "name": "special_bonus_unique_bloodseeker_rupture_charges",
+        "name": "special_bonus_unique_bloodseeker_7",
         "level": 4
       },
       {
@@ -475,7 +475,7 @@
         "color": "Red",
         "gradient_id": 1,
         "title": "Tectonic Buildup",
-        "description": "Aftershock radius is increased by 40 for every level of Echo Slam."
+        "description": "Aftershock radius is increased by 30 for every level of Echo Slam."
       },
       {
         "id": 1,
@@ -595,7 +595,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_mirana_4",
+        "name": "special_bonus_unique_mirana_7",
         "level": 3
       },
       {
@@ -607,7 +607,7 @@
         "level": 4
       },
       {
-        "name": "special_bonus_unique_mirana_7",
+        "name": "special_bonus_unique_mirana_4",
         "level": 4
       }
     ],
@@ -620,7 +620,7 @@
         "color": "Blue",
         "gradient_id": 1,
         "title": "Moonlight Shadow Facet",
-        "description": "Mirana's Ultimate grants allies invisiblity and movement speed.",
+        "description": "Mirana's Ultimate grants allies invisibility and movement speed.",
         "abilities": [
           "mirana_invis"
         ]
@@ -789,7 +789,7 @@
         "color": "Red",
         "gradient_id": 0,
         "title": "Flow",
-        "description": "Morphling's Primary Attribute is now Strength. Adaptive Strike stuns based on Morphling's strength. Morphling gains 1% Spell Amp per 4 Agility.",
+        "description": "Morphling's Primary Attribute is now Strength. Morphling gains 1% Spell Amp per 4 Agility.",
         "abilities": [
           "morphling_flow"
         ]
@@ -811,23 +811,23 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_phantom_lancer_phantom_rush_agility",
+        "name": "special_bonus_unique_phantom_lancer_juxtapose_illusio_proc_chance",
         "level": 1
       },
       {
-        "name": "special_bonus_unique_phantom_lancer_2",
+        "name": "special_bonus_unique_phantom_lancer_illusion_lances",
         "level": 2
       },
       {
-        "name": "special_bonus_unique_phantom_lancer_5",
+        "name": "special_bonus_unique_phantom_lancer_doppelwalk_cast_range",
         "level": 2
       },
       {
-        "name": "special_bonus_unique_phantom_lancer_lance_illusion_damage",
+        "name": "special_bonus_unique_phantom_lancer_lance_damage",
         "level": 3
       },
       {
-        "name": "special_bonus_unique_phantom_lancer_6",
+        "name": "special_bonus_unique_phantom_lancer_juxtapose_damage_in",
         "level": 3
       },
       {
@@ -835,7 +835,7 @@
         "level": 4
       },
       {
-        "name": "special_bonus_unique_phantom_lancer_illusory_armaments_dmg",
+        "name": "special_bonus_unique_phantom_lancer_illusory_armaments_duration",
         "level": 4
       }
     ],
@@ -853,6 +853,7 @@
       {
         "id": 1,
         "name": "phantom_lancer_divergence",
+        "deprecated": "true",
         "icon": "summons",
         "color": "Blue",
         "gradient_id": 2,
@@ -862,11 +863,21 @@
       {
         "id": 2,
         "name": "phantom_lancer_lancelot",
+        "deprecated": "true",
         "icon": "phantom_lance",
         "color": "Yellow",
         "gradient_id": 1,
         "title": "Lancelot",
-        "description": "Spirit Lances from Phantom Lancer's illusions deal 25% Lance Damage."
+        "description": "Spirit Lances from Phantom Lancer's illusions deal {s:bonus_illusion_lance_damage_pct}% Lance Damage."
+      },
+      {
+        "id": 3,
+        "name": "phantom_lancer_lancer",
+        "icon": "phantom_lance",
+        "color": "Yellow",
+        "gradient_id": 2,
+        "title": "Fractured",
+        "description": "This facet doesn't do anything. Azwraith is out spear fishing..."
       }
     ]
   },
@@ -1930,7 +1941,7 @@
         "color": "Red",
         "gradient_id": 1,
         "title": "Massive Serpent Ward",
-        "description": "Summons a single massive Serpent Ward with 12x damage and 10x health and bounty values."
+        "description": "Summons a single massive Serpent Ward with 12x damage and 9x health and bounty values."
       }
     ]
   },
@@ -2010,7 +2021,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_unique_tidehunter_9",
+        "name": "special_bonus_unique_tidehunter_3",
         "level": 1
       },
       {
@@ -2022,11 +2033,11 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_tidehunter_3",
+        "name": "special_bonus_unique_tidehunter_ravage_cooldown",
         "level": 2
       },
       {
-        "name": "special_bonus_unique_tidehunter_10",
+        "name": "special_bonus_unique_tidehunter_smash_on_blubber",
         "level": 3
       },
       {
@@ -2038,7 +2049,7 @@
         "level": 4
       },
       {
-        "name": "special_bonus_unique_tidehunter_8",
+        "name": "special_bonus_unique_tidehunter_10",
         "level": 4
       }
     ],
@@ -2089,7 +2100,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_witch_doctor_6",
+        "name": "special_bonus_unique_witch_doctor_7",
         "level": 2
       },
       {
@@ -2101,7 +2112,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_witch_doctor_7",
+        "name": "special_bonus_unique_witch_doctor_6",
         "level": 4
       },
       {
@@ -2169,7 +2180,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_riki_2",
+        "name": "special_bonus_unique_riki_tricks_dmg",
         "level": 2
       },
       {
@@ -2181,7 +2192,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_riki_9",
+        "name": "special_bonus_unique_riki_5",
         "level": 3
       },
       {
@@ -2189,7 +2200,7 @@
         "level": 4
       },
       {
-        "name": "special_bonus_unique_riki_5",
+        "name": "special_bonus_unique_riki_9",
         "level": 4
       }
     ],
@@ -2197,6 +2208,7 @@
       {
         "id": 0,
         "name": "riki_contract_killer",
+        "deprecated": "true",
         "icon": "xp",
         "color": "Gray",
         "gradient_id": 3,
@@ -2206,11 +2218,21 @@
       {
         "id": 1,
         "name": "riki_exterminator",
+        "deprecated": "true",
         "icon": "agility",
         "color": "Purple",
         "gradient_id": 2,
         "title": "Exterminator",
         "description": "Tricks of the Trade has 4.5x Agility Bonus when attacking non-hero units. When Riki kills a non-hero unit during Tricks of the Trade, the cooldown is reduced by 0.75s."
+      },
+      {
+        "id": 2,
+        "name": "riki_riki",
+        "icon": "execute",
+        "color": "Purple",
+        "gradient_id": 2,
+        "title": "Cutthroat",
+        "description": "This facet doesn't do anything. Riki is still looking to avenge the House of Tahlin..."
       }
     ]
   },
@@ -2300,7 +2322,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_mana_reduction_8",
+        "name": "special_bonus_mana_reduction_10",
         "level": 1
       },
       {
@@ -2324,7 +2346,7 @@
         "level": 4
       },
       {
-        "name": "special_bonus_unique_tinker_3",
+        "name": "special_bonus_intelligence_40",
         "level": 4
       }
     ],
@@ -2504,7 +2526,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_warlock_4",
+        "name": "special_bonus_unique_warlock_1",
         "level": 3
       },
       {
@@ -2512,11 +2534,11 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_warlock_2",
+        "name": "special_bonus_unique_warlock_4",
         "level": 4
       },
       {
-        "name": "special_bonus_unique_warlock_1",
+        "name": "special_bonus_unique_warlock_fatal_bonds_count",
         "level": 4
       }
     ],
@@ -2859,11 +2881,11 @@
         "level": 2
       },
       {
-        "name": "special_bonus_hp_400",
+        "name": "special_bonus_hp_350",
         "level": 2
       },
       {
-        "name": "special_bonus_attack_speed_60",
+        "name": "special_bonus_attack_speed_50",
         "level": 3
       },
       {
@@ -3083,7 +3105,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_hp_350",
+        "name": "special_bonus_hp_300",
         "level": 2
       },
       {
@@ -3286,11 +3308,11 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_luna_6",
+        "name": "special_bonus_unique_luna_1",
         "level": 2
       },
       {
-        "name": "special_bonus_unique_luna_1",
+        "name": "special_bonus_unique_luna_6",
         "level": 3
       },
       {
@@ -3487,7 +3509,8 @@
       "rattletrap_overclocking",
       "rattletrap_jetpack",
       "rattletrap_hookshot",
-      "rattletrap_armor_power"
+      "rattletrap_armor_power",
+      "rattletrap_jetpack_toggle"
     ],
     "talents": [
       {
@@ -3874,12 +3897,12 @@
   "npc_dota_hero_clinkz": {
     "abilities": [
       "clinkz_strafe",
-      "clinkz_tar_bomb",
+      "clinkz_searing_arrows",
       "clinkz_death_pact",
       "clinkz_burning_barrage",
       "clinkz_burning_army",
       "clinkz_wind_walk",
-      "clinkz_bone_and_arrow"
+      "clinkz_infernal_shred"
     ],
     "talents": [
       {
@@ -3919,6 +3942,7 @@
       {
         "id": 0,
         "name": "clinkz_suppressive_fire",
+        "deprecated": "1",
         "icon": "no_vision",
         "color": "Gray",
         "gradient_id": 3,
@@ -3928,11 +3952,21 @@
       {
         "id": 1,
         "name": "clinkz_engulfing_step",
+        "deprecated": "1",
         "icon": "teleport",
         "color": "Yellow",
         "gradient_id": 0,
         "title": "Engulfing Step",
         "description": "Death Pact teleports Clinkz towards his victim. Reduces Death Pact cooldown."
+      },
+      {
+        "id": 2,
+        "name": "clinkz_clinkz",
+        "icon": "nuke",
+        "color": "Yellow",
+        "gradient_id": 0,
+        "title": "Trial By Pyre",
+        "description": "This facet doesn't do anything. Clinkz is still burning with revenge..."
       }
     ]
   },
@@ -4031,7 +4065,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_enchantress_3",
+        "name": "special_bonus_unique_enchantress_2",
         "level": 3
       },
       {
@@ -4043,7 +4077,7 @@
         "level": 4
       },
       {
-        "name": "special_bonus_unique_enchantress_2",
+        "name": "special_bonus_unique_enchantress_3",
         "level": 4
       }
     ],
@@ -4261,7 +4295,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_attack_speed_35",
+        "name": "special_bonus_unique_broodmother_4",
         "level": 3
       },
       {
@@ -4269,7 +4303,7 @@
         "level": 4
       },
       {
-        "name": "special_bonus_unique_broodmother_4",
+        "name": "special_bonus_unique_broodmother_web_speed",
         "level": 4
       }
     ],
@@ -4437,19 +4471,19 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_attack_range_150",
-        "level": 1
-      },
-      {
-        "name": "special_bonus_unique_jakiro_dualbreath_cooldown",
-        "level": 1
-      },
-      {
         "name": "special_bonus_unique_jakiro_4",
-        "level": 2
+        "level": 1
       },
       {
         "name": "special_bonus_unique_jakiro_6",
+        "level": 1
+      },
+      {
+        "name": "special_bonus_attack_range_175",
+        "level": 2
+      },
+      {
+        "name": "special_bonus_unique_jakiro_dualbreath_cooldown",
         "level": 2
       },
       {
@@ -4687,12 +4721,11 @@
   "npc_dota_hero_spectre": {
     "abilities": [
       "spectre_spectral_dagger",
-      "spectre_desolate",
+      "spectre_shadow_step",
       "spectre_dispersion",
       "spectre_reality",
-      "spectre_haunt",
-      "spectre_haunt_single",
-      "spectre_spectral"
+      "spectre_desolate",
+      "spectre_haunt"
     ],
     "talents": [
       {
@@ -4700,11 +4733,11 @@
         "level": 1
       },
       {
-        "name": "special_bonus_hp_regen_5",
+        "name": "special_bonus_unique_spectre_2",
         "level": 1
       },
       {
-        "name": "special_bonus_unique_spectre_2",
+        "name": "special_bonus_unique_spectre_shadow_step_duration",
         "level": 2
       },
       {
@@ -4732,20 +4765,31 @@
       {
         "id": 0,
         "name": "spectre_forsaken",
+        "deprecated": "true",
         "icon": "spectre",
         "color": "Gray",
         "gradient_id": 0,
         "title": "Forsaken",
-        "description": "Spectre deals 2x damage with Desolate. Spectre's illusions no longer have Desolate."
+        "description": "Spectre deals {s:bonus_bonus_damage_multiplier_tooltip}x damage with Desolate. Spectre's illusions no longer have Desolate."
       },
       {
         "id": 1,
         "name": "spectre_twist_the_knife",
+        "deprecated": "true",
         "icon": "nuke",
         "color": "Purple",
         "gradient_id": 2,
         "title": "Twist the Knife",
         "description": "Reality also casts Spectral Dagger on the Haunt illusion's target."
+      },
+      {
+        "id": 2,
+        "name": "spectre_spectre",
+        "icon": "spirit",
+        "color": "Gray",
+        "gradient_id": 0,
+        "title": "Ephemeral",
+        "description": "This facet doesn't do anything. Spectre is still transcending between Planes..."
       }
     ]
   },
@@ -4806,6 +4850,7 @@
       {
         "id": 1,
         "name": "doom_bringer_boost_selling",
+        "deprecated": "true",
         "icon": "gold",
         "color": "Yellow",
         "gradient_id": 0,
@@ -4922,7 +4967,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_ursa_earthshock_furyswipes",
+        "name": "special_bonus_unique_ursa_maul_health",
         "level": 3
       },
       {
@@ -5487,10 +5532,9 @@
       "brewmaster_thunder_clap",
       "brewmaster_cinder_brew",
       "brewmaster_drunken_brawler",
-      "brewmaster_primal_companion",
+      "brewmaster_liquid_courage",
       "generic_hidden",
-      "brewmaster_primal_split",
-      "brewmaster_belligerent"
+      "brewmaster_primal_split"
     ],
     "talents": [
       {
@@ -5498,7 +5542,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_brewmaster_7",
+        "name": "special_bonus_unique_brewmaster_brewed_up_duration",
         "level": 1
       },
       {
@@ -5506,11 +5550,11 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_brewmaster_8",
+        "name": "special_bonus_unique_brewmaster",
         "level": 2
       },
       {
-        "name": "special_bonus_unique_brewmaster",
+        "name": "special_bonus_unique_brewmaster_primal_split_cooldown",
         "level": 3
       },
       {
@@ -5518,7 +5562,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_brewmaster_6",
+        "name": "special_bonus_unique_brewmaster_drunken_brawler_stance_bonus",
         "level": 4
       },
       {
@@ -5530,6 +5574,7 @@
       {
         "id": 0,
         "name": "brewmaster_roll_out_the_barrel",
+        "deprecated": "True",
         "icon": "nuke",
         "color": "Red",
         "gradient_id": 1,
@@ -5539,11 +5584,21 @@
       {
         "id": 1,
         "name": "brewmaster_drunken_master",
+        "deprecated": "True",
         "icon": "speed",
         "color": "Yellow",
         "gradient_id": 1,
         "title": "Drunken Master",
-        "description": "When brewed up, Brewmaster moves with a varying amount of movement speed, altering between 15% slower and 50% faster for the duration."
+        "description": "When brewed up, Brewmaster moves with a varying amount of movement speed, altering between {s:bonus_min_movement}% slower and {s:bonus_max_movement}% faster for the duration."
+      },
+      {
+        "id": 2,
+        "name": "brewmaster_brewmaster",
+        "icon": "bubbles",
+        "color": "Yellow",
+        "gradient_id": 1,
+        "title": "Hungover",
+        "description": "This facet doesn't do anything. Brewmaster is still recovering from a drunken stupor..."
       }
     ]
   },
@@ -5617,21 +5672,21 @@
   },
   "npc_dota_hero_lone_druid": {
     "abilities": [
-      "lone_druid_spirit_bear",
+      "lone_druid_entangle",
       "lone_druid_spirit_link",
       "lone_druid_savage_roar",
-      "generic_hidden",
+      "lone_druid_spirit_bear",
       "generic_hidden",
       "lone_druid_true_form",
-      "lone_druid_gift_bearer"
+      "generic_hidden"
     ],
     "talents": [
       {
-        "name": "special_bonus_hp_200",
+        "name": "special_bonus_unique_lone_druid_2",
         "level": 1
       },
       {
-        "name": "special_bonus_unique_lone_druid_11",
+        "name": "special_bonus_unique_lone_druid_1",
         "level": 1
       },
       {
@@ -5639,7 +5694,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_lone_druid_2",
+        "name": "special_bonus_agility_12",
         "level": 2
       },
       {
@@ -5647,7 +5702,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_lone_druid_entangle_dps",
+        "name": "special_bonus_attack_speed_55",
         "level": 3
       },
       {
@@ -5655,7 +5710,7 @@
         "level": 4
       },
       {
-        "name": "special_bonus_unique_lone_druid_spirit_link_attack_speed",
+        "name": "special_bonus_unique_lone_druid_entangle_duration",
         "level": 4
       }
     ],
@@ -5663,6 +5718,7 @@
       {
         "id": 0,
         "name": "lone_druid_bear_with_me",
+        "deprecated": "1",
         "icon": "healing",
         "color": "Green",
         "gradient_id": 1,
@@ -5682,6 +5738,7 @@
       {
         "id": 2,
         "name": "lone_druid_bear_necessities",
+        "deprecated": "1",
         "icon": "item",
         "color": "Gray",
         "gradient_id": 1,
@@ -5690,6 +5747,15 @@
         "abilities": [
           "lone_druid_bear_necessities"
         ]
+      },
+      {
+        "id": 3,
+        "name": "lone_druid_lone_druid",
+        "icon": "overshadow",
+        "color": "Green",
+        "gradient_id": 1,
+        "title": "Forbearance",
+        "description": "This facet doesn't do anything. Lone Druid is still attuning to nature..."
       }
     ]
   },
@@ -5732,7 +5798,7 @@
         "level": 4
       },
       {
-        "name": "special_bonus_unique_chaos_knight_4",
+        "name": "special_bonus_unique_chaos_knight_7",
         "level": 4
       }
     ],
@@ -5876,7 +5942,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_treant_12",
+        "name": "special_bonus_attack_base_damage_50",
         "level": 1
       },
       {
@@ -5908,6 +5974,7 @@
       {
         "id": 0,
         "name": "treant_primeval_power",
+        "deprecated": "1",
         "icon": "damage",
         "color": "Yellow",
         "gradient_id": 2,
@@ -5920,11 +5987,21 @@
       {
         "id": 1,
         "name": "treant_sapling",
+        "deprecated": "1",
         "icon": "tree",
         "color": "Green",
         "gradient_id": 2,
         "title": "Sapling",
         "description": "Leech Seed can be ground targeted to plant a tree."
+      },
+      {
+        "id": 2,
+        "name": "treant_treant",
+        "icon": "tree",
+        "color": "Green",
+        "gradient_id": 2,
+        "title": "Uprooted",
+        "description": "This facet doesn't do anything. Treant Protector is still finding his roots..."
       }
     ]
   },
@@ -6185,7 +6262,7 @@
         "color": "Red",
         "gradient_id": 1,
         "title": "Thunderstorm",
-        "description": "Thunder Strike additionally hits all enemies within Kinetic Field. Thunder Strike Slow duration is doubled."
+        "description": "Thunder Strike additionally hits all enemies within Kinetic Field. Thunder Strike Slow duration is increased."
       },
       {
         "id": 1,
@@ -6437,7 +6514,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_wisp_8",
+        "name": "special_bonus_strength_7",
         "level": 1
       },
       {
@@ -6457,7 +6534,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_wisp_9",
+        "name": "special_bonus_unique_wisp_relocate_delay",
         "level": 4
       },
       {
@@ -6523,7 +6600,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_visage_5",
+        "name": "special_bonus_unique_visage_cloak_recovery_time",
         "level": 4
       },
       {
@@ -6565,9 +6642,9 @@
     "abilities": [
       "slark_dark_pact",
       "slark_pounce",
-      "slark_essence_shift",
+      "slark_saltwater_shiv",
       "slark_depth_shroud",
-      "slark_barracuda",
+      "slark_essence_shift",
       "slark_shadow_dance"
     ],
     "talents": [
@@ -6608,6 +6685,7 @@
       {
         "id": 0,
         "name": "slark_leeching_leash",
+        "deprecated": "true",
         "icon": "agility",
         "color": "Green",
         "gradient_id": 2,
@@ -6617,11 +6695,21 @@
       {
         "id": 1,
         "name": "slark_dark_reef_renegade",
+        "deprecated": "true",
         "icon": "cooldown",
         "color": "Blue",
         "gradient_id": 2,
         "title": "Dark Reef Renegade",
         "description": "Barracuda lingers after being revealed to the enemy if Slark is not nearby allied heroes. Slark's attacks reduce the target's armor while Slark is under the effects of Barracuda."
+      },
+      {
+        "id": 2,
+        "name": "slark_slark",
+        "icon": "broken_chain",
+        "color": "Blue",
+        "gradient_id": 2,
+        "title": "Fugitive",
+        "description": "This facet doesn't do anything. Slark is still reeling from nightmares about Dark Reef..."
       }
     ]
   },
@@ -6656,11 +6744,11 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_medusa",
+        "name": "special_bonus_unique_medusa_gorgons_grasp_volleys",
         "level": 3
       },
       {
-        "name": "special_bonus_unique_medusa_gorgons_grasp_volleys",
+        "name": "special_bonus_unique_medusa",
         "level": 4
       },
       {
@@ -7511,7 +7599,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_unique_earth_spirit_5",
+        "name": "special_bonus_unique_earth_spirit_7",
         "level": 1
       },
       {
@@ -7519,7 +7607,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_earth_spirit_3",
+        "name": "special_bonus_unique_earth_spirit_rolling_boulder_stun",
         "level": 2
       },
       {
@@ -7539,7 +7627,7 @@
         "level": 4
       },
       {
-        "name": "special_bonus_unique_earth_spirit_7",
+        "name": "special_bonus_unique_earth_spirit_5",
         "level": 4
       }
     ],
@@ -7547,6 +7635,7 @@
       {
         "id": 0,
         "name": "earth_spirit_resonance",
+        "deprecated": "true",
         "icon": "damage",
         "color": "Green",
         "gradient_id": 0,
@@ -7556,6 +7645,7 @@
       {
         "id": 1,
         "name": "earth_spirit_stepping_stone",
+        "deprecated": "true",
         "icon": "cooldown",
         "color": "Gray",
         "gradient_id": 2,
@@ -7565,11 +7655,21 @@
       {
         "id": 2,
         "name": "earth_spirit_ready_to_roll",
+        "deprecated": "true",
         "icon": "spinning",
         "color": "Yellow",
         "gradient_id": 1,
         "title": "Ready to Roll",
         "description": "Rolling Boulder can roll over allied heroes for additional bonuses."
+      },
+      {
+        "id": 3,
+        "name": "earth_spirit_earth_spirit",
+        "icon": "spinning",
+        "color": "Green",
+        "gradient_id": 0,
+        "title": "Reformation",
+        "description": "This facet doesn't do anything. Earth Spirit is still not fully grounded..."
       }
     ]
   },
@@ -7664,7 +7764,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_hp_regen_20",
+        "name": "special_bonus_hp_regen_25",
         "level": 2
       },
       {
@@ -8200,7 +8300,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_pangolier_3",
+        "name": "special_bonus_unique_pangolier_4",
         "level": 2
       },
       {
@@ -8212,11 +8312,11 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_pangolier_shield_crash_radius",
+        "name": "special_bonus_unique_pangolier_shield_crash_cooldown",
         "level": 3
       },
       {
-        "name": "special_bonus_unique_pangolier_4",
+        "name": "special_bonus_unique_pangolier_3",
         "level": 4
       },
       {
@@ -8228,6 +8328,7 @@
       {
         "id": 0,
         "name": "pangolier_double_jump",
+        "deprecated": "true",
         "icon": "double_bounce",
         "color": "Red",
         "gradient_id": 1,
@@ -8237,11 +8338,21 @@
       {
         "id": 1,
         "name": "pangolier_thunderbolt",
+        "deprecated": "true",
         "icon": "speed",
         "color": "Yellow",
         "gradient_id": 1,
         "title": "Thunderbolt",
         "description": "Rolling Thunder movement and turn speed increased, but duration is decreased."
+      },
+      {
+        "id": 2,
+        "name": "pangolier_pangolier",
+        "icon": "cooldown",
+        "color": "Blue",
+        "gradient_id": 1,
+        "title": "Dangerous Liaisons",
+        "description": "This facet doesn't do anything. Pangolier is still recovering from a heroic exploit..."
       }
     ]
   },
@@ -8597,21 +8708,21 @@
       "hoodwink_scurry",
       "hoodwink_decoy",
       "hoodwink_hunters_boomerang",
-      "hoodwink_mistwoods_wayfarer",
       "hoodwink_sharpshooter",
-      "hoodwink_sharpshooter_release"
+      "hoodwink_sharpshooter_release",
+      "hoodwink_mistwoods_wayfarer"
     ],
     "talents": [
       {
-        "name": "special_bonus_unique_hoodwink_scurry_charges",
-        "level": 1
-      },
-      {
-        "name": "special_bonus_mp_regen_150",
-        "level": 1
-      },
-      {
         "name": "special_bonus_unique_hoodwink_bushwhack_damage",
+        "level": 1
+      },
+      {
+        "name": "special_bonus_hp_150",
+        "level": 1
+      },
+      {
+        "name": "special_bonus_unique_hoodwink_scurry_charges",
         "level": 2
       },
       {
@@ -8678,7 +8789,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_attack_damage_12",
+        "name": "special_bonus_unique_dawnbreaker_break_of_dawn_damage",
         "level": 1
       },
       {
@@ -8841,6 +8952,7 @@
       {
         "id": 4,
         "name": "marci_fleeting_fury",
+        "deprecated": "true",
         "icon": "fist",
         "color": "Yellow",
         "gradient_id": 0,
@@ -8942,7 +9054,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_hp_150",
+        "name": "special_bonus_attack_speed_20",
         "level": 1
       },
       {
@@ -9141,7 +9253,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_kez_talon_toss_attack_factor",
+        "name": "special_bonus_unique_kez_falcon_rush_attack_speed",
         "level": 3
       },
       {
@@ -9161,7 +9273,7 @@
         "color": "Yellow",
         "gradient_id": 1,
         "title": "Flutter",
-        "description": "Kez deals extra damage on the first attack or ability after switching to Katana, and gains bonus movement speed after switching to Sai."
+        "description": "Kez deals extra damage on the first attack after switching to Katana, and gains bonus movement speed after switching to Sai."
       },
       {
         "id": 1,
@@ -9174,6 +9286,69 @@
         "abilities": [
           "kez_shadowhawk_passive"
         ]
+      }
+    ]
+  },
+  "npc_dota_hero_largo": {
+    "abilities": [
+      "largo_catchy_lick",
+      "largo_frogstomp",
+      "largo_croak_of_genius",
+      "largo_encore",
+      "generic_hidden",
+      "largo_amphibian_rhapsody",
+      "generic_hidden",
+      "largo_song_fight_song",
+      "largo_song_double_time",
+      "largo_song_good_vibrations",
+      "generic_hidden",
+      "generic_hidden",
+      "generic_hidden",
+      "generic_hidden"
+    ],
+    "talents": [
+      {
+        "name": "special_bonus_unique_largo_1",
+        "level": 1
+      },
+      {
+        "name": "special_bonus_unique_largo_2",
+        "level": 1
+      },
+      {
+        "name": "special_bonus_unique_largo_3",
+        "level": 2
+      },
+      {
+        "name": "special_bonus_unique_largo_4",
+        "level": 2
+      },
+      {
+        "name": "special_bonus_unique_largo_5",
+        "level": 3
+      },
+      {
+        "name": "special_bonus_unique_largo_6",
+        "level": 3
+      },
+      {
+        "name": "special_bonus_unique_largo_7",
+        "level": 4
+      },
+      {
+        "name": "special_bonus_unique_largo_8",
+        "level": 4
+      }
+    ],
+    "facets": [
+      {
+        "id": 0,
+        "name": "largo_largo",
+        "icon": "guitar",
+        "color": "Green",
+        "gradient_id": 1,
+        "title": "Musical pilgrimmage",
+        "description": "This facet doesn't do anything. Largo just arrived from the island of Velu'Mar..."
       }
     ]
   }

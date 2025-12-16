@@ -1785,6 +1785,9 @@ function replaceSpecialAttribs(
         let abilityValue = isObj(allData[abilitykey])
           ? allData[abilitykey].value
           : allData[abilitykey];
+        if (Array.isArray(allData[abilitykey])) {
+          abilityValue = allData[abilitykey][0];
+        }
         let value = abilityValue.split(" "); //can have multiple values
         value =
           value.length === 1 ? Number(value[0]) : value.map((v) => Number(v));
