@@ -10164,7 +10164,7 @@
     "dmg_type": "Pure",
     "bkbpierce": "Yes",
     "dispellable": "Yes",
-    "desc": "Drives Bloodseeker into a bloodthirsty rage which causes him to attack faster and gain base attack damage at the cost of a percentage of his health per second.",
+    "desc": "Drives Bloodseeker into a bloodthirsty rage which causes him to attack faster and deal more spell damage at the cost of a percentage of his health per second.",
     "attrib": [
       {
         "key": "duration",
@@ -49605,7 +49605,7 @@
       "Basic",
       "Building"
     ],
-    "desc": "Infuses the target hero or structure with a protective coating which heals the target and blocks damage from player-controlled sources. Every time damage is blocked this way, the damage block amount is decreased.",
+    "desc": "Infuses the target hero or structure with a protective coating which heals the target and blocks damage from player-controlled sources. Each time this spell blocks damage, the block amount is decreased. If the damage block is decreased to 0, the buff is removed early.",
     "attrib": [
       {
         "key": "heal_per_second",
@@ -58050,13 +58050,12 @@
     "dmg_type": "Physical",
     "bkbpierce": "No",
     "dispellable": "Yes",
-    "desc": "Bristleback has 4.5% damage and debuff duration amp against enemy heroes that are behind him.",
+    "desc": "Bristleback has bonus damage and debuff duration amp against enemy heroes that are behind him.",
     "attrib": [
       {
         "key": "amp_pct",
-        "header": "AMP PCT:",
-        "value": "4.5",
-        "generated": true
+        "header": "DAMAGE AND DEBUFF DURATION AMP:",
+        "value": "4.5%"
       },
       {
         "key": "angle",

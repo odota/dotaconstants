@@ -60446,7 +60446,7 @@
       "<span class=\\\"Subtitle\\\">Health Restoration</span>",
       "Health Restoration now applies to all forms of life gain ",
       "Previously, it did not apply to incoming heals",
-      "Incoming Heal Amplification now stacks diminishingly with Health Restoration instead of additively with Outgoing Heal Amplfication",
+      "Incoming Heal Amplification now stacks diminishingly with Health Restoration instead of additively with Outgoing Heal Amplification",
       "Spells that previously had a separate value for incoming heal reduction now only modify Health Restoration ",
       "* Eye of Skadi's Cold Attack<br>* Spirit Vessel's Soul Release<br>* Omniknight's Guardian Angel with Aghanim's Scepter<br>* Pudge's Rot with Aghanim's Scepter",
       "As a result of the changes, spells that only modified Health Restoration will now additionally affect incoming heals ",
@@ -60632,7 +60632,7 @@
       "boots": [
         "No longer provides +8 Intelligence",
         "Swiftness Aura now also provides +2.5 Health Regen",
-        "Endurance now shares cooldown with Drums of Endurance"
+        "Endurance now shares cooldown with Drum of Endurance"
       ],
       "eternal_shroud": [
         "Item removed from the game"
@@ -60642,7 +60642,7 @@
       ],
       "gungir": [
         "Recipe changed",
-        "Now also requires Chasm Stone",
+        "Now also requires Chasm Stone (800)",
         "Recipe cost decreased from 1100 to 400. Total cost increased from 4550g to 4650g",
         "Area of Effect bonuses from multiple Chasm Stones or its upgrades do not stack"
       ],
@@ -60812,6 +60812,7 @@
         "Arctic Blast damage increased from 200 to 260",
         "Arctic Blast radius decreased from 900 to 825 ",
         "Effective spell radius unchanged due to item's built-in Area of Effect bonus",
+        "Arctic Blast no longer increases damage taken from spells",
         "Freezing Aura no longer reduces Health Restoration and Incoming Heal Amplification by 25%",
         "Freezing Aura now pierces debuff immunity"
       ],
@@ -61356,7 +61357,8 @@
         "bounty_hunter_big_game_hunter": [
           "Ability reworked",
           "Bounty Hunter receives 15% more kill and assist gold if the dying enemy hero is Big Game. An enemy hero is considered Big Game if they are one of the top 3 net worth heroes on the enemy team",
-          "These heroes will have a debuff, that points out that they're among these three heroes. Debuff is visible only to Bounty Hunter and his allies"
+          "Bounty Hunter has a list of heroes that are currently considered a big game, accessible by pressing special button over the innate",
+          "These heroes will also have a debuff, that points out that they're among these three heroes. Debuff is visible only to Bounty Hunter and his allies"
         ],
         "bounty_hunter_jinada": [
           "Gold Steal increased from 12/20/28/36 to 15/22/29/36"
@@ -61456,13 +61458,13 @@
         ],
         "chen_zealot": [
           "New innate ability, has both passive and active components. Improves with game's time",
-          "When Chen respawns, he is joined in battle by a Zealot, a melee creep warrior with the Martyrdom ability which allows him to sacrifice himself to deal damage or heal an ally. Zealot has the same stats as the current melee creeps on his team, including super or mega form, but has 125 attack range, base damage increased by 2 per Chen's level, base health regen increased from 0.5 to 2.5, and doesn't have Runty attack type",
+          "When Chen respawns, he is joined in battle by a Zealot, a melee creep warrior with the Martyrdom ability which allows him to sacrifice himself to deal damage or heal an ally. Zealot has the same stats as the current melee creeps on his team, including super or mega form, but has 125 attack range, base damage increased by 2 per Chen's level, base health regen increased from 0.5 to 2.5, and doesn't have Runty attack type. Zealot respawns after 60s dead",
           "Martyrdom ability: 500 range unit-targeted ability on the Zealot creep, targeting either an enemy or ally unit. When cast, the creep sacrifices itself, firing a projectile at 1000 speed at the target unit, dealing damage if it's an enemy or healing if it's an ally. Damage is 25 + 20% of the Zealot's health at the moment of the cast, and healing is 50% of these values",
           "This ability can be cast on a controlled unit to teleport it to Chen after a 6 second delay. Self-targeting will teleport all controlled units. Mana Cost: 50. Cooldown: 10s",
           "Mechanics moved from Divine Favor without any changes"
         ],
         "chen_holy_persuasion": [
-          "Lane creeps targeted by Holy Persuasion are upgraded into Zealots, and Zealots receive the benefits from Holy Persuasion",
+          "Zealots receive the benefits from Holy Persuasion",
           "Now may be cast on existing persuaded creeps that have not been damaged in the last 3 seconds to unsummon them",
           "Unsummoning a unit has a global cast range, costs no mana and sets ability to a 3s cooldown",
           "Now increases all of creature's outgoing damage by 0/6/12/18% instead of only increasing attack damage by 4/8/12/16"
@@ -61507,7 +61509,7 @@
           "Now also increases Power Cogs radius to 330 and provides 25% bonus armor to Clockwerk while he is near cogs",
           "No longer increases Clockwerk's attack speed while inside Power Cogs",
           "Now increases Rocket Flare damage, vision and slow duration by 35%",
-          "No longer decreases Rocket Flare cooldown by 3.5s"
+          "No longer decreases Rocket Flare cooldown to 3.5s"
         ],
         "talents": [
           "Level 10 Talent +0.4s Rocket Flare Slow Duration replaced with +1.5 Mana Regen",
@@ -61638,7 +61640,7 @@
       "doom_bringer": {
         "doom_bringer_lvl_pain": [
           "Ability slightly reworked",
-          "When Doom attacks enemy heroes, he applies a curse upon them. After 2.5s, the cursed hero bursts with a pillar of fire, damaging itself and all enemy units in a 66 AoE for 15% of the damage taken from Doom over this duration, including damage from the attack that applied the curse. If the cursed hero's level is a multiple of 6, the curse damage and radius will be increased by 66%"
+          "When Doom attacks enemy heroes, he applies a curse upon them. After 2.5s, the cursed hero bursts with a pillar of fire, damaging itself and all enemy units in a 66 AoE for 15% of the damage taken from Doom (the hero) over this duration, including damage from the attack that applied the curse. If the cursed hero's level is a multiple of 6, the curse damage and radius will be increased by 66%"
         ],
         "doom_bringer_devour": [
           "Now the default cast gained on learning Devour is the one that grants abilities of devoured creeps, and alt-cast state keeps the ones that Doom currently has",
@@ -62578,7 +62580,7 @@
         ],
         "talents": [
           "Level 20 Talent +15% Ghost Shroud Self Restoration Amp replaced with +75 Spell AoE",
-          "Level 25 Talent +0.5% Heartstopper Aura Damage replaced with +0.3 Reaper's Scythe Damage Per Health Missing"
+          "Level 25 Talent +0.5% Heartstopper Aura Damage replaced with +0.3 Reaper's Scythe Damage Per Missing HP"
         ]
       },
       "night_stalker": {
@@ -63103,7 +63105,7 @@
           "Active Bonus Attack Range rescaled from 100/150/200/250 to 75/150/225/300"
         ],
         "sniper_assassinate": [
-          "No longer increases attack damage by 100/110/120%"
+          "No longer amplifies attack damage to 100/110/120%"
         ],
         "talents": [
           "Level 10 Talent +55 Take Aim Attack Range Bonus replaced with +50 Take Aim Passive Attack Range"
@@ -63199,7 +63201,7 @@
           "Increases mana regen by a portion of Techies' max mana equal to 0.08% + 0.02% per level",
           "When Techies die, they leave behind a barrel that explodes after 1.5s, dealing magical damage equal to 50 + 30% of their max mana to enemies in a 400 area of effect. The barrel provides 400 obstructed vision until it explodes",
           "Upgraded with Aghanim's Shard",
-          "Increases mana to damage by 10%. Adds an active component. Techies plant the M.A.D. barrel, and detonate it later by using a sub-ability. The M.A.D. barrel is invisible and can be destroyed before the detonation process begins. Detonating the barrel makes it visible and immortal, and then it explodes after the same 1.5s delay. Only one M.A.D. can exist via the active cast at one time. Barrel is planted via a 1s channel. Barrel Health: 200. Cast Range: 450. No Mana Cost. Cooldown: 30s. Cast Point: 1s"
+          "Increases mana to damage by 10%. Adds an active component. Techies plant the M.A.D. barrel, and detonate it later by using a sub-ability. The M.A.D. barrel is invisible and can be destroyed before the detonation process begins. Detonating the barrel makes it visible and immortal, and then it explodes after the same 1.5s delay. Only one M.A.D. can exist via the active cast at one time. Barrel Health: 200. Cast Range: 450. No Mana Cost. Cooldown: 30s. Cast Point: 1s"
         ],
         "techies_reactive_tazer": [
           "Can now always be cast on allies",
@@ -63440,7 +63442,6 @@
       },
       "undying": {
         "general": [
-          "Base Health Regen increased from -0.25 to 0.25",
           "Base Agility increased from 10 to 13",
           "Base Armor decreased by 1"
         ],
@@ -63516,8 +63517,8 @@
           "Aghanim's Scepter now also gradually increases Corrosive Skin's magic resistance and damage per second while he is in Nethertoxin, up to 50% increased effect after 4s"
         ],
         "talents": [
-          "Level 10 Talent +10% Poison Attack slow/damage replaced with +15 Corrosive Skin Damage",
-          "Level 15 Talent +20 Corrosive Skin Damage replaced with +15% Poison Attack Slow / Damage",
+          "Level 10 Talent +10% Poison Attack slow/damage replaced with +15 Corrosive Skin Damage Per Second",
+          "Level 15 Talent +20 Corrosive Skin Damage Per Second replaced with +15% Poison Attack Slow / Damage",
           "Level 15 Talent +30 Nethertoxin Min/Max Damage replaced with +20/40 Nethertoxin Min/Max Damage",
           "Level 20 Talent Predator Damage Per Missing Health increased from +0.3 to +0.35"
         ]
