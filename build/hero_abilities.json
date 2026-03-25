@@ -18,15 +18,15 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_antimage_7",
-        "level": 2
-      },
-      {
         "name": "special_bonus_unique_antimage_5",
         "level": 2
       },
       {
         "name": "special_bonus_unique_antimage_6",
+        "level": 2
+      },
+      {
+        "name": "special_bonus_unique_antimage_3",
         "level": 3
       },
       {
@@ -34,7 +34,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_antimage_3",
+        "name": "special_bonus_unique_antimage",
         "level": 4
       },
       {
@@ -46,6 +46,7 @@
       {
         "id": 0,
         "name": "antimage_magebanes_mirror",
+        "deprecated": "true",
         "icon": "ricochet",
         "color": "Purple",
         "gradient_id": 1,
@@ -55,6 +56,7 @@
       {
         "id": 1,
         "name": "antimage_mana_thirst",
+        "deprecated": "true",
         "icon": "mana",
         "color": "Blue",
         "gradient_id": 3,
@@ -71,7 +73,7 @@
       "generic_hidden",
       "generic_hidden",
       "axe_culling_blade",
-      "axe_coat_of_blood"
+      "axe_one_man_army"
     ],
     "talents": [
       {
@@ -111,18 +113,17 @@
       {
         "id": 0,
         "name": "axe_one_man_army",
+        "deprecated": "true",
         "icon": "strength",
         "color": "Red",
         "gradient_id": 0,
-        "title": "One Man Army",
-        "description": "Axe gains Strength based on his armor as long as he's away from his allies.",
-        "abilities": [
-          "axe_one_man_army"
-        ]
+        "title": "",
+        "description": ""
       },
       {
         "id": 1,
         "name": "axe_call_out",
+        "deprecated": "true",
         "icon": "armor",
         "color": "Red",
         "gradient_id": 2,
@@ -180,6 +181,7 @@
       {
         "id": 0,
         "name": "bane_dream_stalker",
+        "deprecated": "true",
         "icon": "damage",
         "color": "Gray",
         "gradient_id": 0,
@@ -189,6 +191,7 @@
       {
         "id": 1,
         "name": "bane_sleepwalk",
+        "deprecated": "true",
         "icon": "movement",
         "color": "Purple",
         "gradient_id": 1,
@@ -208,7 +211,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_hp_175",
+        "name": "special_bonus_hp_200",
         "level": 1
       },
       {
@@ -228,7 +231,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_agility_20",
+        "name": "special_bonus_agility_15",
         "level": 3
       },
       {
@@ -244,6 +247,7 @@
       {
         "id": 0,
         "name": "bloodseeker_arterial_spray",
+        "deprecated": "true",
         "icon": "movement",
         "color": "Red",
         "gradient_id": 1,
@@ -263,6 +267,7 @@
       {
         "id": 2,
         "name": "bloodseeker_old_blood",
+        "deprecated": "true",
         "icon": "debuff",
         "color": "Gray",
         "gradient_id": 1,
@@ -277,7 +282,7 @@
       "crystal_maiden_frostbite",
       "crystal_maiden_brilliance_aura",
       "crystal_maiden_crystal_clone",
-      "crystal_maiden_blueheart_floe",
+      "crystal_maiden_glacial_guard",
       "crystal_maiden_freezing_field",
       "crystal_maiden_freezing_field_stop"
     ],
@@ -299,7 +304,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_attack_speed_225",
+        "name": "special_bonus_unique_crystal_maiden_glacial_guard_mana_multiplier",
         "level": 3
       },
       {
@@ -333,12 +338,13 @@
         "icon": "mana",
         "color": "Blue",
         "gradient_id": 2,
-        "title": "Cold Comfort",
-        "description": "Crystal Maiden restores her allies' Mana when casting spells. Increases innate Mana Regen Amplification."
+        "title": "",
+        "description": ""
       },
       {
         "id": 2,
         "name": "crystal_maiden_glacial_guard",
+        "deprecated": "true",
         "icon": "armor",
         "color": "Gray",
         "gradient_id": 3,
@@ -348,6 +354,7 @@
       {
         "id": 3,
         "name": "crystal_maiden_arcane_overflow",
+        "deprecated": "true",
         "icon": "mana",
         "color": "Blue",
         "gradient_id": 2,
@@ -383,11 +390,11 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_drow_ranger_1",
+        "name": "special_bonus_unique_drow_ranger_gust_selfmovespeed",
         "level": 3
       },
       {
-        "name": "special_bonus_unique_drow_ranger_gust_selfmovespeed",
+        "name": "special_bonus_unique_drow_ranger_1",
         "level": 3
       },
       {
@@ -403,18 +410,17 @@
       {
         "id": 0,
         "name": "drow_ranger_high_ground",
+        "deprecated": "true",
         "icon": "damage",
         "color": "Gray",
         "gradient_id": 1,
-        "title": "Vantage Point",
-        "description": "Drow deals 30% more damage when attacking from high ground.",
-        "abilities": [
-          "drow_ranger_vantage_point"
-        ]
+        "title": "",
+        "description": ""
       },
       {
         "id": 1,
         "name": "drow_ranger_sidestep",
+        "deprecated": "true",
         "icon": "multi_arrow",
         "color": "Blue",
         "gradient_id": 1,
@@ -471,11 +477,12 @@
       {
         "id": 0,
         "name": "earthshaker_tectonic_buildup",
+        "deprecated": "true",
         "icon": "area_of_effect",
         "color": "Red",
         "gradient_id": 1,
         "title": "Tectonic Buildup",
-        "description": "Aftershock radius is increased by 30 for every level of Echo Slam."
+        "description": "Aftershock radius is increased by {s:bonus_aftershock_range_increase_per_level_interval} for every level of Echo Slam."
       },
       {
         "id": 1,
@@ -493,6 +500,7 @@
       {
         "id": 2,
         "name": "earthshaker_reverberating_ridge",
+        "deprecated": "true",
         "icon": "ricochet",
         "color": "Gray",
         "gradient_id": 2,
@@ -507,7 +515,7 @@
       "juggernaut_healing_ward",
       "juggernaut_blade_dance",
       "juggernaut_swift_slash",
-      "juggernaut_duelist",
+      "juggernaut_bladeform",
       "juggernaut_omni_slash"
     ],
     "talents": [
@@ -520,7 +528,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_juggernaut_healing_ward_heal",
+        "name": "special_bonus_unique_juggernaut_omnislash_cooldown",
         "level": 2
       },
       {
@@ -528,7 +536,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_juggernaut_2",
+        "name": "special_bonus_unique_juggernaut_4",
         "level": 3
       },
       {
@@ -548,6 +556,7 @@
       {
         "id": 0,
         "name": "juggernaut_bladestorm",
+        "deprecated": "true",
         "icon": "spinning",
         "color": "Yellow",
         "gradient_id": 1,
@@ -557,11 +566,12 @@
       {
         "id": 1,
         "name": "juggernaut_agigain",
+        "deprecated": "true",
         "icon": "agility",
         "color": "Red",
         "gradient_id": 2,
         "title": "Bladeform",
-        "description": "Juggernaut gains Agility and Movement Speed as long as he's not taking damage.",
+        "description": "Juggernaut gains a stack of Bladeform every 2s that Juggernaut does not take damage. Each stack grants bonus base Agility and Movement Speed. Stacks fade after 2s upon taking any damage.",
         "abilities": [
           "juggernaut_bladeform"
         ]
@@ -573,7 +583,7 @@
       "mirana_starfall",
       "mirana_arrow",
       "mirana_leap",
-      "mirana_selemenes_faithful",
+      "mirana_celestial_quiver",
       "generic_hidden",
       "mirana_invis"
     ],
@@ -599,7 +609,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_attack_base_damage_35",
+        "name": "special_bonus_unique_mirana_quiver_damage",
         "level": 3
       },
       {
@@ -620,7 +630,7 @@
         "color": "Blue",
         "gradient_id": 1,
         "title": "Moonlight Shadow Facet",
-        "description": "Mirana's Ultimate grants allies invisibility and movement speed.",
+        "description": "Mirana's Ultimate grants allies invisiblity and movement speed.",
         "abilities": [
           "mirana_invis"
         ]
@@ -641,6 +651,7 @@
       {
         "id": 2,
         "name": "mirana_starstruck",
+        "deprecated": "true",
         "icon": "no_vision",
         "color": "Blue",
         "gradient_id": 1,
@@ -650,11 +661,12 @@
       {
         "id": 3,
         "name": "mirana_leaps_and_bounds",
+        "deprecated": "true",
         "icon": "slow",
         "color": "Gray",
         "gradient_id": 3,
         "title": "Leaps and Bounds",
-        "description": "Upon landing, Leap roots targets in a 250 radius for 1.5 =1.75 =2.0 =2.25s."
+        "description": "Upon landing, Leap roots targets in a {s:bonus_root_radius} radius for {s:bonus_root_duration}s."
       }
     ]
   },
@@ -682,7 +694,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_nevermore_2",
+        "name": "special_bonus_unique_nevermore_frenzy_max_collection_count",
         "level": 2
       },
       {
@@ -706,15 +718,17 @@
       {
         "id": 0,
         "name": "nevermore_lasting_presence",
+        "deprecated": "true",
         "icon": "armor_broken",
         "color": "Gray",
         "gradient_id": 0,
         "title": "Lasting Presence",
-        "description": "Presence of the Dark Lord temporarily reduces more armor after nearby enemy heroes are killed. Every hero kill increases Necromastery's max souls by 1 until Shadow Fiend dies."
+        "description": "Presence of the Dark Lord temporarily reduces more armor after nearby enemy heroes are killed."
       },
       {
         "id": 1,
         "name": "nevermore_shadowmire",
+        "deprecated": "true",
         "icon": "slow",
         "color": "Red",
         "gradient_id": 0,
@@ -727,13 +741,13 @@
     "abilities": [
       "morphling_waveform",
       "morphling_adaptive_strike_agi",
-      "generic_hidden",
+      "morphling_ebb_and_flow",
       "morphling_morph_agi",
       "morphling_morph_str",
       "morphling_replicate",
       "morphling_morph_replicate",
       "generic_hidden",
-      "morphling_accumulation"
+      "generic_hidden"
     ],
     "talents": [
       {
@@ -773,6 +787,7 @@
       {
         "id": 0,
         "name": "morphling_agi",
+        "deprecated": "true",
         "icon": "agility",
         "color": "Green",
         "gradient_id": 0,
@@ -785,11 +800,12 @@
       {
         "id": 1,
         "name": "morphling_str",
+        "deprecated": "true",
         "icon": "strength",
         "color": "Red",
         "gradient_id": 0,
         "title": "Flow",
-        "description": "Morphling's Primary Attribute is now Strength. Morphling gains 1% Spell Amp per 4 Agility.",
+        "description": "Morphling's Primary Attribute is now Strength. Adaptive Strike stuns based on Morphling's strength. Morphling gains 1% Spell Amp per 4 Agility.",
         "abilities": [
           "morphling_flow"
         ]
@@ -873,6 +889,7 @@
       {
         "id": 3,
         "name": "phantom_lancer_lancer",
+        "deprecated": "true",
         "icon": "phantom_lance",
         "color": "Yellow",
         "gradient_id": 2,
@@ -928,6 +945,7 @@
       {
         "id": 0,
         "name": "puck_jostling_rift",
+        "deprecated": "true",
         "icon": "movement",
         "color": "Purple",
         "gradient_id": 0,
@@ -937,6 +955,7 @@
       {
         "id": 1,
         "name": "puck_curveball",
+        "deprecated": "true",
         "icon": "curve_ball",
         "color": "Blue",
         "gradient_id": 2,
@@ -992,6 +1011,7 @@
       {
         "id": 0,
         "name": "pudge_fresh_meat",
+        "deprecated": "true",
         "icon": "meat",
         "color": "Red",
         "gradient_id": 0,
@@ -1011,6 +1031,7 @@
       {
         "id": 2,
         "name": "pudge_rotten_core",
+        "deprecated": "true",
         "icon": "fist",
         "color": "Green",
         "gradient_id": 3,
@@ -1034,7 +1055,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_spell_lifesteal_10",
+        "name": "special_bonus_armor_4",
         "level": 1
       },
       {
@@ -1066,6 +1087,7 @@
       {
         "id": 0,
         "name": "razor_thunderhead",
+        "deprecated": "true",
         "icon": "barrier",
         "color": "Gray",
         "gradient_id": 0,
@@ -1075,6 +1097,7 @@
       {
         "id": 1,
         "name": "razor_spellamp",
+        "deprecated": "true",
         "icon": "nuke",
         "color": "Blue",
         "gradient_id": 0,
@@ -1117,11 +1140,11 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_sand_king_5",
+        "name": "special_bonus_unique_sand_king",
         "level": 3
       },
       {
-        "name": "special_bonus_unique_sand_king",
+        "name": "special_bonus_unique_sand_king_scorpion_strike_damage",
         "level": 4
       },
       {
@@ -1153,6 +1176,7 @@
       {
         "id": 2,
         "name": "sand_king_obscurity",
+        "deprecated": "true",
         "icon": "no_vision",
         "color": "Yellow",
         "gradient_id": 3,
@@ -1162,6 +1186,7 @@
       {
         "id": 3,
         "name": "sand_king_pinpoint",
+        "deprecated": "true",
         "icon": "area_of_effect",
         "color": "Red",
         "gradient_id": 1,
@@ -1218,6 +1243,7 @@
       {
         "id": 0,
         "name": "storm_spirit_shock_collar",
+        "deprecated": "1",
         "icon": "nuke",
         "color": "Blue",
         "gradient_id": 1,
@@ -1227,6 +1253,7 @@
       {
         "id": 1,
         "name": "storm_spirit_static_slide",
+        "deprecated": "1",
         "icon": "movement",
         "color": "Gray",
         "gradient_id": 3,
@@ -1243,7 +1270,7 @@
       "generic_hidden",
       "generic_hidden",
       "sven_gods_strength",
-      "sven_vanquisher"
+      "sven_wrath_of_god"
     ],
     "talents": [
       {
@@ -1251,7 +1278,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_sven",
+        "name": "special_bonus_unique_sven_gods_strength_slow_resist",
         "level": 1
       },
       {
@@ -1263,7 +1290,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_sven_gods_strength_slow_resist",
+        "name": "special_bonus_unique_sven_stormhammer_cooldown",
         "level": 3
       },
       {
@@ -1283,6 +1310,7 @@
       {
         "id": 0,
         "name": "sven_heavy_plate",
+        "deprecated": "true",
         "icon": "armor",
         "color": "Blue",
         "gradient_id": 0,
@@ -1292,6 +1320,7 @@
       {
         "id": 1,
         "name": "sven_strscaling",
+        "deprecated": "true",
         "icon": "strength",
         "color": "Red",
         "gradient_id": 0,
@@ -1309,7 +1338,7 @@
       "tiny_toss",
       "tiny_tree_grab",
       "tiny_tree_channel",
-      "tiny_craggy_exterior",
+      "tiny_insurmountable",
       "tiny_grow",
       "tiny_toss_tree"
     ],
@@ -1351,6 +1380,7 @@
       {
         "id": 0,
         "name": "tiny_crash_landing",
+        "deprecated": "true",
         "icon": "nuke",
         "color": "Gray",
         "gradient_id": 2,
@@ -1360,6 +1390,7 @@
       {
         "id": 1,
         "name": "tiny_insurmountable",
+        "deprecated": "true",
         "icon": "armor",
         "color": "Green",
         "gradient_id": 4,
@@ -1398,11 +1429,11 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_vengeful_spirit_5",
+        "name": "special_bonus_unique_vengeful_spirit_wave_of_terror_steal",
         "level": 3
       },
       {
-        "name": "special_bonus_unique_vengeful_spirit_wave_of_terror_steal",
+        "name": "special_bonus_unique_vengeful_spirit_5",
         "level": 3
       },
       {
@@ -1418,6 +1449,7 @@
       {
         "id": 0,
         "name": "vengefulspirit_avenging_missile",
+        "deprecated": "true",
         "icon": "nuke",
         "color": "Purple",
         "gradient_id": 2,
@@ -1427,6 +1459,7 @@
       {
         "id": 1,
         "name": "vvengefulspirit_melee",
+        "deprecated": "true",
         "icon": "fist",
         "color": "Blue",
         "gradient_id": 1,
@@ -1446,7 +1479,7 @@
       "windrunner_gale_force",
       "windrunner_focusfire_cancel",
       "windrunner_focusfire",
-      "windrunner_easy_breezy"
+      "windrunner_tailwind"
     ],
     "talents": [
       {
@@ -1454,11 +1487,11 @@
         "level": 1
       },
       {
-        "name": "special_bonus_all_stats_4",
+        "name": "special_bonus_unique_windranger_4",
         "level": 1
       },
       {
-        "name": "special_bonus_unique_windranger_4",
+        "name": "special_bonus_unique_windranger_5",
         "level": 2
       },
       {
@@ -1474,7 +1507,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_windranger_windrun_undispellable",
+        "name": "special_bonus_unique_windranger_7",
         "level": 4
       },
       {
@@ -1516,6 +1549,7 @@
       {
         "id": 3,
         "name": "windrunner_tangled",
+        "deprecated": "true",
         "icon": "tree",
         "color": "Yellow",
         "gradient_id": 2,
@@ -1525,6 +1559,7 @@
       {
         "id": 4,
         "name": "windrunner_killshot",
+        "deprecated": "true",
         "icon": "execute",
         "color": "Green",
         "gradient_id": 0,
@@ -1573,7 +1608,7 @@
         "level": 4
       },
       {
-        "name": "special_bonus_unique_zeus_static_field_dmg",
+        "name": "special_bonus_unique_zeus_jump_charges",
         "level": 4
       }
     ],
@@ -1581,6 +1616,7 @@
       {
         "id": 0,
         "name": "zuus_livewire",
+        "deprecated": "true",
         "icon": "range",
         "color": "Blue",
         "gradient_id": 1,
@@ -1590,6 +1626,7 @@
       {
         "id": 1,
         "name": "zuus_divine_rampage",
+        "deprecated": "true",
         "icon": "nuke",
         "color": "Gray",
         "gradient_id": 3,
@@ -1610,11 +1647,11 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_unique_kunkka_tidebringer_slow",
+        "name": "special_bonus_unique_kunkka_rum_duration",
         "level": 1
       },
       {
-        "name": "special_bonus_unique_kunkka_3",
+        "name": "special_bonus_unique_kunkka_tidebringer_slow",
         "level": 1
       },
       {
@@ -1630,7 +1667,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_kunkka_rum",
+        "name": "special_bonus_unique_kunkka_4",
         "level": 3
       },
       {
@@ -1638,7 +1675,7 @@
         "level": 4
       },
       {
-        "name": "special_bonus_unique_kunkka_4",
+        "name": "special_bonus_unique_kunkka_tidebringer_armor_pierce",
         "level": 4
       }
     ],
@@ -1646,6 +1683,7 @@
       {
         "id": 0,
         "name": "kunkka_high_tide",
+        "deprecated": "true",
         "icon": "cooldown",
         "color": "Blue",
         "gradient_id": 2,
@@ -1655,6 +1693,7 @@
       {
         "id": 1,
         "name": "kunkka_grog",
+        "deprecated": "true",
         "icon": "armor",
         "color": "Yellow",
         "gradient_id": 2,
@@ -1669,7 +1708,7 @@
       "lina_light_strike_array",
       "lina_fiery_soul",
       "lina_flame_cloak",
-      "lina_combustion",
+      "lina_slow_burn",
       "lina_laguna_blade"
     ],
     "talents": [
@@ -1710,6 +1749,7 @@
       {
         "id": 0,
         "name": "lina_supercharge",
+        "deprecated": "true",
         "icon": "damage",
         "color": "Yellow",
         "gradient_id": 0,
@@ -1719,6 +1759,7 @@
       {
         "id": 1,
         "name": "lina_dot",
+        "deprecated": "true",
         "icon": "nuke",
         "color": "Red",
         "gradient_id": 0,
@@ -1757,11 +1798,11 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_lich_7",
+        "name": "special_bonus_unique_lich_4",
         "level": 3
       },
       {
-        "name": "special_bonus_unique_lich_4",
+        "name": "special_bonus_unique_lich_7",
         "level": 3
       },
       {
@@ -1769,7 +1810,7 @@
         "level": 4
       },
       {
-        "name": "special_bonus_unique_lich_jump_damage",
+        "name": "special_bonus_unique_lich_5",
         "level": 4
       }
     ],
@@ -1787,6 +1828,7 @@
       {
         "id": 1,
         "name": "lich_growing_cold",
+        "deprecated": "1",
         "icon": "cooldown",
         "color": "Gray",
         "gradient_id": 0,
@@ -1796,6 +1838,7 @@
       {
         "id": 2,
         "name": "lich_cryophobia",
+        "deprecated": "1",
         "icon": "vision",
         "color": "Red",
         "gradient_id": 0,
@@ -1839,11 +1882,11 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_lion_2",
+        "name": "special_bonus_unique_lion_4",
         "level": 4
       },
       {
-        "name": "special_bonus_unique_lion_4",
+        "name": "special_bonus_unique_lion_2",
         "level": 4
       }
     ],
@@ -1851,15 +1894,17 @@
       {
         "id": 0,
         "name": "lion_essence_eater",
+        "deprecated": "true",
         "icon": "nuke",
         "color": "Purple",
         "gradient_id": 2,
         "title": "Essence Eater",
-        "description": "Mana Drain deals damage equal to 100% of mana stolen."
+        "description": "Mana Drain deals damage equal to {s:bonus_damage_pct}% of mana stolen."
       },
       {
         "id": 1,
         "name": "lion_fist_of_death",
+        "deprecated": "true",
         "icon": "fist",
         "color": "Red",
         "gradient_id": 2,
@@ -1874,7 +1919,7 @@
       "shadow_shaman_voodoo",
       "shadow_shaman_shackles",
       "shadow_shaman_fowl_play",
-      "generic_hidden",
+      "shadow_shaman_urnaconda",
       "shadow_shaman_mass_serpent_ward"
     ],
     "talents": [
@@ -1925,6 +1970,7 @@
       {
         "id": 1,
         "name": "shadow_shaman_voodoo_hands",
+        "deprecated": "true",
         "icon": "chicken",
         "color": "Yellow",
         "gradient_id": 1,
@@ -1937,11 +1983,12 @@
       {
         "id": 2,
         "name": "shadow_shaman_massive_serpent_ward",
+        "deprecated": "true",
         "icon": "snake",
         "color": "Red",
         "gradient_id": 1,
         "title": "Massive Serpent Ward",
-        "description": "Summons a single massive Serpent Ward with 12x damage and 9x health and bounty values."
+        "description": "Summons a single massive Serpent Ward with {s:bonus_mega_ward_multiplier_damage}x damage and {s:bonus_mega_ward_multiplier_health}x health and bounty values."
       }
     ]
   },
@@ -1960,15 +2007,15 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_slardar_6",
+        "name": "special_bonus_unique_slardar_2",
         "level": 1
       },
       {
-        "name": "special_bonus_hp_300",
+        "name": "special_bonus_hp_250",
         "level": 2
       },
       {
-        "name": "special_bonus_unique_slardar_2",
+        "name": "special_bonus_unique_slardar_5",
         "level": 2
       },
       {
@@ -1976,7 +2023,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_slardar_5",
+        "name": "special_bonus_unique_slardar_6",
         "level": 3
       },
       {
@@ -1992,6 +2039,7 @@
       {
         "id": 0,
         "name": "slardar_leg_day",
+        "deprecated": "true",
         "icon": "speed",
         "color": "Red",
         "gradient_id": 2,
@@ -2001,6 +2049,7 @@
       {
         "id": 1,
         "name": "slardar_brineguard",
+        "deprecated": "true",
         "icon": "armor",
         "color": "Purple",
         "gradient_id": 1,
@@ -2017,7 +2066,7 @@
       "tidehunter_dead_in_the_water",
       "generic_hidden",
       "tidehunter_ravage",
-      "tidehunter_blubber"
+      "tidehunter_krill_eater"
     ],
     "talents": [
       {
@@ -2057,6 +2106,7 @@
       {
         "id": 0,
         "name": "tidehunter_kraken_swell",
+        "deprecated": "1",
         "icon": "armor",
         "color": "Green",
         "gradient_id": 2,
@@ -2066,6 +2116,7 @@
       {
         "id": 1,
         "name": "tidehunter_sizescale",
+        "deprecated": "1",
         "icon": "overshadow",
         "color": "Green",
         "gradient_id": 0,
@@ -2096,7 +2147,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_witch_doctor_3",
+        "name": "special_bonus_unique_witch_doctor_6",
         "level": 2
       },
       {
@@ -2104,7 +2155,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_witch_doctor_1",
+        "name": "special_bonus_unique_witch_doctor_maledict_spread",
         "level": 3
       },
       {
@@ -2112,7 +2163,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_witch_doctor_6",
+        "name": "special_bonus_unique_witch_doctor_3",
         "level": 4
       },
       {
@@ -2144,6 +2195,7 @@
       {
         "id": 2,
         "name": "witch_doctor_cleft_death",
+        "deprecated": "1",
         "icon": "death_ward",
         "color": "Purple",
         "gradient_id": 0,
@@ -2153,6 +2205,7 @@
       {
         "id": 3,
         "name": "witch_doctor_malpractice",
+        "deprecated": "1",
         "icon": "nuke",
         "color": "Red",
         "gradient_id": 2,
@@ -2228,6 +2281,7 @@
       {
         "id": 2,
         "name": "riki_riki",
+        "deprecated": "true",
         "icon": "execute",
         "color": "Purple",
         "gradient_id": 2,
@@ -2241,7 +2295,7 @@
       "enigma_malefice",
       "enigma_demonic_conversion",
       "enigma_midnight_pulse",
-      "enigma_gravity_well",
+      "enigma_event_horizon",
       "generic_hidden",
       "enigma_black_hole"
     ],
@@ -2283,11 +2337,12 @@
       {
         "id": 0,
         "name": "enigma_gravity",
+        "deprecated": "true",
         "icon": "slow",
         "color": "Gray",
         "gradient_id": 3,
         "title": "Event Horizon",
-        "description": "Units in a 600 radius moving away from Enigma have a 8% movespeed penalty.",
+        "description": "Units in a 600 radius moving away from Enigma have a movespeed penalty.",
         "abilities": [
           "enigma_event_horizon"
         ]
@@ -2295,6 +2350,7 @@
       {
         "id": 1,
         "name": "enigma_fragment",
+        "deprecated": "true",
         "icon": "summons",
         "color": "Purple",
         "gradient_id": 0,
@@ -2310,7 +2366,7 @@
     "abilities": [
       "tinker_laser",
       "tinker_march_of_the_machines",
-      "tinker_defense_matrix",
+      "tinker_deploy_turrets",
       "tinker_warp_grenade",
       "tinker_keen_teleport",
       "tinker_rearm",
@@ -2326,7 +2382,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_tinker_7",
+        "name": "special_bonus_unique_tinker_deploy_turrets_knockback",
         "level": 2
       },
       {
@@ -2334,7 +2390,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_tinker_defense_matrix_status_resistance",
+        "name": "special_bonus_unique_tinker_deploy_turrets_missile_damage",
         "level": 3
       },
       {
@@ -2346,7 +2402,7 @@
         "level": 4
       },
       {
-        "name": "special_bonus_intelligence_40",
+        "name": "special_bonus_unique_tinker_rearm_channel_time",
         "level": 4
       }
     ],
@@ -2354,6 +2410,7 @@
       {
         "id": 0,
         "name": "tinker_repair_bots",
+        "deprecated": "true",
         "icon": "healing",
         "color": "Blue",
         "gradient_id": 2,
@@ -2363,6 +2420,7 @@
       {
         "id": 1,
         "name": "tinker_translocator",
+        "deprecated": "true",
         "icon": "movement",
         "color": "Yellow",
         "gradient_id": 2,
@@ -2418,6 +2476,7 @@
       {
         "id": 0,
         "name": "sniper_ghillie_suit",
+        "deprecated": "true",
         "icon": "vision",
         "color": "Yellow",
         "gradient_id": 0,
@@ -2427,6 +2486,7 @@
       {
         "id": 1,
         "name": "sniper_scattershot",
+        "deprecated": "true",
         "icon": "nuke",
         "color": "Red",
         "gradient_id": 0,
@@ -2462,7 +2522,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_necrophos_sadist_heal_bonus",
+        "name": "special_bonus_spell_aoe_75",
         "level": 3
       },
       {
@@ -2470,7 +2530,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_necrophos_2",
+        "name": "special_bonus_unique_necrophos_reaper_scythe_damage_per_health",
         "level": 4
       },
       {
@@ -2482,6 +2542,7 @@
       {
         "id": 0,
         "name": "necrolyte_profane_potency",
+        "deprecated": "true",
         "icon": "area_of_effect",
         "color": "Yellow",
         "gradient_id": 2,
@@ -2491,6 +2552,7 @@
       {
         "id": 1,
         "name": "necrolyte_rapid_decay",
+        "deprecated": "true",
         "icon": "speed",
         "color": "Green",
         "gradient_id": 3,
@@ -2546,6 +2608,7 @@
       {
         "id": 0,
         "name": "warlock_golem",
+        "deprecated": "true",
         "icon": "summons",
         "color": "Red",
         "gradient_id": 0,
@@ -2555,6 +2618,7 @@
       {
         "id": 1,
         "name": "warlock_grimoire",
+        "deprecated": "true",
         "icon": "xp",
         "color": "Gray",
         "gradient_id": 3,
@@ -2569,16 +2633,16 @@
   "npc_dota_hero_beastmaster": {
     "abilities": [
       "beastmaster_wild_axes",
-      "beastmaster_call_of_the_wild_boar",
-      "beastmaster_call_of_the_wild_hawk",
+      "beastmaster_summon_razorback",
+      "beastmaster_summon_raptor",
       "beastmaster_inner_beast",
       "beastmaster_drums_of_slom",
       "beastmaster_primal_roar",
-      "beastmaster_rugged"
+      "generic_hidden"
     ],
     "talents": [
       {
-        "name": "special_bonus_unique_beastmaster_3",
+        "name": "special_bonus_armor_5",
         "level": 1
       },
       {
@@ -2614,6 +2678,7 @@
       {
         "id": 0,
         "name": "beastmaster_wild_hunt",
+        "deprecated": "true",
         "icon": "summons",
         "color": "Red",
         "gradient_id": 1,
@@ -2623,6 +2688,7 @@
       {
         "id": 1,
         "name": "beastmaster_beast_mode",
+        "deprecated": "true",
         "icon": "damage",
         "color": "Yellow",
         "gradient_id": 1,
@@ -2691,6 +2757,7 @@
       {
         "id": 1,
         "name": "queenofpain_selfdmg",
+        "deprecated": "true",
         "icon": "nuke",
         "color": "Red",
         "gradient_id": 0,
@@ -2703,6 +2770,7 @@
       {
         "id": 2,
         "name": "queenofpain_facet_bondage",
+        "deprecated": "true",
         "icon": "twin_hearts",
         "color": "Blue",
         "gradient_id": 0,
@@ -2717,9 +2785,9 @@
   "npc_dota_hero_venomancer": {
     "abilities": [
       "venomancer_venomous_gale",
-      "venomancer_poison_sting",
+      "venomancer_snakebite",
       "venomancer_plague_ward",
-      "venomancer_sepsis",
+      "venomancer_poison_sting",
       "generic_hidden",
       "venomancer_noxious_plague"
     ],
@@ -2733,7 +2801,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_venomancer_8",
+        "name": "special_bonus_unique_venomancer_plague_spread",
         "level": 2
       },
       {
@@ -2745,7 +2813,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_attack_base_damage_50",
+        "name": "special_bonus_unique_venomancer_8",
         "level": 3
       },
       {
@@ -2761,6 +2829,7 @@
       {
         "id": 0,
         "name": "venomancer_patient_zero",
+        "deprecated": "true",
         "icon": "snot",
         "color": "Green",
         "gradient_id": 0,
@@ -2770,11 +2839,12 @@
       {
         "id": 1,
         "name": "venomancer_plague_carrier",
+        "deprecated": "true",
         "icon": "summons",
         "color": "Yellow",
         "gradient_id": 0,
         "title": "Plague Carrier",
-        "description": "When Venomous Gale impacts enemy heroes, 2 Plague Wards are created around them. Plague Wards also deal Septic Shock damage based on their attack damage."
+        "description": "When Venomous Gale impacts enemy heroes, {s:bonus_num_created_wards_tooltip} Plague Wards are created around them. Plague Wards also deal Septic Shock damage based on their attack damage."
       }
     ]
   },
@@ -2785,7 +2855,7 @@
       "faceless_void_time_lock",
       "faceless_void_time_walk_reverse",
       "faceless_void_distortion_field",
-      "generic_hidden"
+      "faceless_void_chronosphere"
     ],
     "talents": [
       {
@@ -2835,6 +2905,7 @@
       {
         "id": 1,
         "name": "faceless_void_chronosphere",
+        "deprecated": "true",
         "icon": "area_of_effect",
         "color": "Green",
         "gradient_id": 0,
@@ -2847,6 +2918,7 @@
       {
         "id": 2,
         "name": "faceless_void_time_zone",
+        "deprecated": "true",
         "icon": "chrono_cube",
         "color": "Purple",
         "gradient_id": 1,
@@ -2861,7 +2933,7 @@
   "npc_dota_hero_skeleton_king": {
     "abilities": [
       "skeleton_king_hellfire_blast",
-      "generic_hidden",
+      "skeleton_king_bone_guard",
       "skeleton_king_mortal_strike",
       "skeleton_king_vampiric_spirit",
       "generic_hidden",
@@ -2905,6 +2977,7 @@
       {
         "id": 0,
         "name": "skeleton_king_facet_bone_guard",
+        "deprecated": "true",
         "icon": "summons",
         "color": "Yellow",
         "gradient_id": 0,
@@ -2917,6 +2990,7 @@
       {
         "id": 1,
         "name": "skeleton_king_facet_cursed_blade",
+        "deprecated": "true",
         "icon": "damage",
         "color": "Red",
         "gradient_id": 0,
@@ -2939,15 +3013,15 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_attack_speed_30",
-        "level": 1
-      },
-      {
-        "name": "special_bonus_magic_resistance_12",
-        "level": 1
-      },
-      {
         "name": "special_bonus_unique_death_prophet_silence_aoe",
+        "level": 1
+      },
+      {
+        "name": "special_bonus_hp_200",
+        "level": 1
+      },
+      {
+        "name": "special_bonus_attack_speed_50",
         "level": 2
       },
       {
@@ -2955,7 +3029,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_hp_400",
+        "name": "special_bonus_unique_death_prophet",
         "level": 3
       },
       {
@@ -2967,7 +3041,7 @@
         "level": 4
       },
       {
-        "name": "special_bonus_unique_death_prophet",
+        "name": "special_bonus_unique_death_prophet_exorcism_duration_on_kill",
         "level": 4
       }
     ],
@@ -2985,6 +3059,7 @@
       {
         "id": 1,
         "name": "death_prophet_ghosts",
+        "deprecated": "true",
         "icon": "spirit",
         "color": "Green",
         "gradient_id": 1,
@@ -2997,6 +3072,7 @@
       {
         "id": 2,
         "name": "death_prophet_delayed_damage",
+        "deprecated": "true",
         "icon": "healing",
         "color": "Red",
         "gradient_id": 1,
@@ -3065,6 +3141,7 @@
       {
         "id": 1,
         "name": "phantom_assassin_methodical",
+        "deprecated": "1",
         "icon": "skull",
         "color": "Gray",
         "gradient_id": 0,
@@ -3074,6 +3151,7 @@
       {
         "id": 2,
         "name": "phantom_assassin_sweet_release",
+        "deprecated": "1",
         "icon": "phantom_ass_dagger",
         "color": "Red",
         "gradient_id": 0,
@@ -3105,7 +3183,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_hp_300",
+        "name": "special_bonus_hp_250",
         "level": 2
       },
       {
@@ -3129,6 +3207,7 @@
       {
         "id": 0,
         "name": "pugna_siphoning_ward",
+        "deprecated": "true",
         "icon": "healing",
         "color": "Green",
         "gradient_id": 0,
@@ -3138,11 +3217,12 @@
       {
         "id": 1,
         "name": "pugna_rewards_of_ruin",
+        "deprecated": "true",
         "icon": "siege",
         "color": "Purple",
         "gradient_id": 2,
         "title": "Rewards of Ruin",
-        "description": "Pugna receives 1.5% spell amplification per destroyed tower."
+        "description": "Pugna receives {s:bonus_tower_scale}% spell amplification per destroyed tower."
       }
     ]
   },
@@ -3154,7 +3234,7 @@
       "templar_assassin_trap",
       "templar_assassin_trap_teleport",
       "templar_assassin_psionic_trap",
-      "templar_assassin_third_eye"
+      "templar_assassin_inner_peace"
     ],
     "talents": [
       {
@@ -3166,11 +3246,11 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_templar_assassin_refraction_disable_cast",
+        "name": "special_bonus_unique_templar_assassin_meld_attack_range_bonus",
         "level": 2
       },
       {
-        "name": "special_bonus_unique_templar_assassin_8",
+        "name": "special_bonus_unique_templar_assassin_6",
         "level": 2
       },
       {
@@ -3178,7 +3258,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_templar_assassin_refraction_damage",
+        "name": "special_bonus_unique_templar_assassin_8",
         "level": 3
       },
       {
@@ -3194,6 +3274,7 @@
       {
         "id": 0,
         "name": "templar_assassin_voidblades",
+        "deprecated": "true",
         "icon": "ricochet",
         "color": "Gray",
         "gradient_id": 3,
@@ -3203,6 +3284,7 @@
       {
         "id": 1,
         "name": "templar_assassin_refractor",
+        "deprecated": "true",
         "icon": "damage",
         "color": "Purple",
         "gradient_id": 0,
@@ -3212,11 +3294,12 @@
       {
         "id": 2,
         "name": "templar_assassin_hidden_reach",
+        "deprecated": "true",
         "icon": "range",
         "color": "Blue",
         "gradient_id": 1,
         "title": "Hidden Reach",
-        "description": "When in Meld, Templar increases her attack range by up to an additional 400 range over 1s."
+        "description": "When in Meld, Templar increases her attack range by up to an additional {s:bonus_attack_range_increase_max} range over {s:bonus_attack_range_increase_time}s."
       }
     ]
   },
@@ -3267,6 +3350,7 @@
       {
         "id": 0,
         "name": "viper_poison_burst",
+        "deprecated": "1",
         "icon": "area_of_effect",
         "color": "Green",
         "gradient_id": 0,
@@ -3276,6 +3360,7 @@
       {
         "id": 1,
         "name": "viper_caustic_bath",
+        "deprecated": "1",
         "icon": "armor",
         "color": "Yellow",
         "gradient_id": 2,
@@ -3316,7 +3401,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_luna_2",
+        "name": "special_bonus_unique_luna_lunar_orbit_speed_damage",
         "level": 3
       },
       {
@@ -3342,6 +3427,7 @@
       {
         "id": 1,
         "name": "luna_moonshield",
+        "deprecated": "true",
         "icon": "armor",
         "color": "Gray",
         "gradient_id": 3,
@@ -3351,6 +3437,7 @@
       {
         "id": 2,
         "name": "luna_moonstorm",
+        "deprecated": "true",
         "icon": "damage",
         "color": "Blue",
         "gradient_id": 1,
@@ -3363,11 +3450,10 @@
     "abilities": [
       "dragon_knight_breathe_fire",
       "dragon_knight_dragon_tail",
-      "dragon_knight_dragon_blood",
+      "dragon_knight_wyrms_wrath",
       "dragon_knight_fireball",
-      "generic_hidden",
-      "dragon_knight_elder_dragon_form",
-      "dragon_knight_inherited_vigor"
+      "dragon_knight_dragon_blood",
+      "dragon_knight_elder_dragon_form"
     ],
     "talents": [
       {
@@ -3399,7 +3485,7 @@
         "level": 4
       },
       {
-        "name": "special_bonus_unique_dragon_knight_8",
+        "name": "special_bonus_unique_dragon_knight_wyrms_wrath_damage",
         "level": 4
       }
     ],
@@ -3407,6 +3493,7 @@
       {
         "id": 0,
         "name": "dragon_knight_fire_dragon",
+        "deprecated": "true",
         "icon": "dragon_fire",
         "color": "Red",
         "gradient_id": 1,
@@ -3416,6 +3503,7 @@
       {
         "id": 1,
         "name": "dragon_knight_corrosive_dragon",
+        "deprecated": "true",
         "icon": "dragon_poison",
         "color": "Green",
         "gradient_id": 0,
@@ -3425,6 +3513,7 @@
       {
         "id": 2,
         "name": "dragon_knight_frost_dragon",
+        "deprecated": "true",
         "icon": "dragon_frost",
         "color": "Blue",
         "gradient_id": 0,
@@ -3481,6 +3570,7 @@
       {
         "id": 0,
         "name": "dazzle_facet_nothl_boon",
+        "deprecated": "true",
         "icon": "armor",
         "color": "Red",
         "gradient_id": 1,
@@ -3493,6 +3583,7 @@
       {
         "id": 1,
         "name": "dazzle_poison_bloom",
+        "deprecated": "true",
         "icon": "ricochet",
         "color": "Purple",
         "gradient_id": 0,
@@ -3514,7 +3605,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_unique_clockwerk_7",
+        "name": "special_bonus_mp_regen_150",
         "level": 1
       },
       {
@@ -3538,7 +3629,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_clockwerk_6",
+        "name": "special_bonus_unique_clockwerk_rocket_flare_charges",
         "level": 4
       },
       {
@@ -3550,15 +3641,17 @@
       {
         "id": 0,
         "name": "rattletrap_hookup",
+        "deprecated": "true",
         "icon": "cooldown",
         "color": "Gray",
         "gradient_id": 2,
         "title": "Hookup",
-        "description": "If there's another allied hero within 350 of Hookshot's hit target, Clockwerk and all allies in the area receive bonus armor, while refunding a portion of Hookshot's cooldown and manacost."
+        "description": "If there's another allied hero within {s:bonus_radius_ally} of Hookshot's hit target, Clockwerk and all allies in the area receive bonus armor, while refunding a portion of Hookshot's cooldown and manacost."
       },
       {
         "id": 1,
         "name": "rattletrap_expanded_armature",
+        "deprecated": "true",
         "icon": "area_of_effect",
         "color": "Red",
         "gradient_id": 2,
@@ -3568,11 +3661,12 @@
       {
         "id": 2,
         "name": "rattletrap_junk_mail",
+        "deprecated": "true",
         "icon": "armor",
         "color": "Yellow",
         "gradient_id": 1,
         "title": "Chainmeal",
-        "description": "Clockwerk can consume Chainmails to permanently gain +4 armor."
+        "description": "Clockwerk can consume Chainmails to permanently gain +{s:bonus_armor_per_chainmail} armor."
       }
     ]
   },
@@ -3611,11 +3705,11 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_leshrac_pulse_nova_lightning",
+        "name": "special_bonus_unique_leshrac_1",
         "level": 4
       },
       {
-        "name": "special_bonus_unique_leshrac_1",
+        "name": "special_bonus_unique_leshrac_pulse_nova_lightning",
         "level": 4
       }
     ],
@@ -3623,6 +3717,7 @@
       {
         "id": 0,
         "name": "leshrac_attacks_mana",
+        "deprecated": "true",
         "icon": "mana",
         "color": "Blue",
         "gradient_id": 1,
@@ -3635,6 +3730,7 @@
       {
         "id": 1,
         "name": "leshrac_misanthropy",
+        "deprecated": "true",
         "icon": "nuke",
         "color": "Purple",
         "gradient_id": 0,
@@ -3666,7 +3762,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_furion_8",
+        "name": "special_bonus_unique_furion_teleportation_barrier",
         "level": 2
       },
       {
@@ -3690,11 +3786,12 @@
       {
         "id": 0,
         "name": "furion_soothing_saplings",
+        "deprecated": "true",
         "icon": "healing",
         "color": "Green",
         "gradient_id": 0,
         "title": "Soothing Saplings",
-        "description": "After Sprout is cast, all trees in a 900 radius heal nearby allies."
+        "description": "After Sprout is cast, all trees in a {s:bonus_healing_radius} radius heal nearby allies."
       },
       {
         "id": 1,
@@ -3704,11 +3801,12 @@
         "color": "Blue",
         "gradient_id": 2,
         "title": "Ironwood Treant",
-        "description": "Nature's Call creates only 1 =1 =1 =1 Treant that has more health, more damage, increased vision, increased movement speed, and is Reinforced."
+        "description": "Nature's Call creates only {s:bonus_max_treants} Treant that has more health, more damage, increased vision, increased movement speed, and is Reinforced."
       },
       {
         "id": 2,
         "name": "furion_natures_profit",
+        "deprecated": "true",
         "icon": "gold",
         "color": "Yellow",
         "gradient_id": 2,
@@ -3724,8 +3822,8 @@
     "abilities": [
       "life_stealer_rage",
       "life_stealer_open_wounds",
-      "life_stealer_ghoul_frenzy",
       "life_stealer_feast",
+      "life_stealer_ghoul_frenzy",
       "generic_hidden",
       "life_stealer_infest",
       "life_stealer_consume"
@@ -3736,11 +3834,11 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_lifestealer_2",
+        "name": "special_bonus_movement_speed_20",
         "level": 1
       },
       {
-        "name": "special_bonus_unique_lifestealer_5",
+        "name": "special_bonus_unique_lifestealer_infest_damage",
         "level": 2
       },
       {
@@ -3807,6 +3905,7 @@
       {
         "id": 3,
         "name": "life_stealer_fleshfeast",
+        "deprecated": "true",
         "icon": "full_heart",
         "color": "Gray",
         "gradient_id": 0,
@@ -3816,6 +3915,7 @@
       {
         "id": 4,
         "name": "life_stealer_gorestorm",
+        "deprecated": "true",
         "icon": "area_of_effect",
         "color": "Red",
         "gradient_id": 0,
@@ -3871,11 +3971,12 @@
       {
         "id": 0,
         "name": "dark_seer_atkspd",
+        "deprecated": "true",
         "icon": "damage",
         "color": "Gray",
         "gradient_id": 3,
         "title": "Quick Wit",
-        "description": "Dark Seer also gains Attack Speed from Intelligence.",
+        "description": "Dark Seer gains 1 Attack Speed from each point of Intelligence.",
         "abilities": [
           "dark_seer_quick_wit"
         ]
@@ -3883,6 +3984,7 @@
       {
         "id": 1,
         "name": "dark_seer_movespd",
+        "deprecated": "true",
         "icon": "speed",
         "color": "Purple",
         "gradient_id": 2,
@@ -3914,7 +4016,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_attack_range_60",
+        "name": "special_bonus_attack_range_50",
         "level": 2
       },
       {
@@ -3922,11 +4024,11 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_clinkz_8",
+        "name": "special_bonus_unique_clinkz_7",
         "level": 3
       },
       {
-        "name": "special_bonus_unique_clinkz_7",
+        "name": "special_bonus_unique_clinkz_8",
         "level": 3
       },
       {
@@ -3942,7 +4044,7 @@
       {
         "id": 0,
         "name": "clinkz_suppressive_fire",
-        "deprecated": "1",
+        "deprecated": "true",
         "icon": "no_vision",
         "color": "Gray",
         "gradient_id": 3,
@@ -3952,7 +4054,7 @@
       {
         "id": 1,
         "name": "clinkz_engulfing_step",
-        "deprecated": "1",
+        "deprecated": "true",
         "icon": "teleport",
         "color": "Yellow",
         "gradient_id": 0,
@@ -3962,6 +4064,7 @@
       {
         "id": 2,
         "name": "clinkz_clinkz",
+        "deprecated": "true",
         "icon": "nuke",
         "color": "Yellow",
         "gradient_id": 0,
@@ -3981,15 +4084,15 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_unique_omniknight_5",
-        "level": 1
-      },
-      {
-        "name": "special_bonus_attack_base_damage_35",
-        "level": 1
-      },
-      {
         "name": "special_bonus_unique_omniknight_2",
+        "level": 1
+      },
+      {
+        "name": "special_bonus_attack_base_damage_30",
+        "level": 1
+      },
+      {
+        "name": "special_bonus_unique_omniknight_3",
         "level": 2
       },
       {
@@ -3997,7 +4100,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_omniknight_guardian_angel_duration",
+        "name": "special_bonus_unique_omniknight_degen_aura_radius",
         "level": 3
       },
       {
@@ -4017,6 +4120,7 @@
       {
         "id": 0,
         "name": "omniknight_omnipresent",
+        "deprecated": "true",
         "icon": "damage",
         "color": "Gray",
         "gradient_id": 3,
@@ -4026,6 +4130,7 @@
       {
         "id": 1,
         "name": "omniknight_dmgheals",
+        "deprecated": "true",
         "icon": "healing",
         "color": "Yellow",
         "gradient_id": 0,
@@ -4085,6 +4190,7 @@
       {
         "id": 0,
         "name": "enchantress_overprotective_wisps",
+        "deprecated": "true",
         "icon": "healing",
         "color": "Green",
         "gradient_id": 0,
@@ -4094,6 +4200,7 @@
       {
         "id": 1,
         "name": "enchantress_spellbound",
+        "deprecated": "true",
         "icon": "range",
         "color": "Yellow",
         "gradient_id": 2,
@@ -4125,7 +4232,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_lifesteal_15",
+        "name": "special_bonus_lifesteal_12",
         "level": 2
       },
       {
@@ -4137,11 +4244,11 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_huskar",
+        "name": "special_bonus_unique_huskar_5",
         "level": 4
       },
       {
-        "name": "special_bonus_unique_huskar_5",
+        "name": "special_bonus_unique_huskar",
         "level": 4
       }
     ],
@@ -4169,6 +4276,7 @@
       {
         "id": 2,
         "name": "huskar_cauterize",
+        "deprecated": "1",
         "icon": "broken_chain",
         "color": "Red",
         "gradient_id": 0,
@@ -4178,6 +4286,7 @@
       {
         "id": 3,
         "name": "huskar_nothl_conflagration",
+        "deprecated": "1",
         "icon": "damage",
         "color": "Yellow",
         "gradient_id": 0,
@@ -4190,11 +4299,11 @@
     "abilities": [
       "night_stalker_void",
       "night_stalker_crippling_fear",
+      "night_stalker_midnight_feast",
       "night_stalker_hunter_in_the_night",
       "generic_hidden",
-      "generic_hidden",
       "night_stalker_darkness",
-      "night_stalker_heart_of_darkness"
+      "generic_hidden"
     ],
     "talents": [
       {
@@ -4202,7 +4311,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_night_stalker_7",
+        "name": "special_bonus_unique_night_stalker_crippling_fear_damage",
         "level": 1
       },
       {
@@ -4214,7 +4323,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_night_stalker_crippling_fear_damage",
+        "name": "special_bonus_unique_night_stalker_crippling_fear_radius",
         "level": 3
       },
       {
@@ -4244,11 +4353,12 @@
       {
         "id": 1,
         "name": "night_stalker_dayswap",
+        "deprecated": "True",
         "icon": "moon",
         "color": "Gray",
         "gradient_id": 0,
         "title": "Night Reign",
-        "description": "The game now starts at night instead of day. Night is longer than day. Night Stalker starts with a bonus level of Hunter in the Night.",
+        "description": "The game now starts at night instead of day. Night is longer than day.",
         "abilities": [
           "night_stalker_night_reign"
         ]
@@ -4256,6 +4366,7 @@
       {
         "id": 2,
         "name": "night_stalker_voidbringer",
+        "deprecated": "True",
         "icon": "area_of_effect",
         "color": "Blue",
         "gradient_id": 0,
@@ -4311,6 +4422,7 @@
       {
         "id": 0,
         "name": "broodmother_necrotic_webs",
+        "deprecated": "true",
         "icon": "web",
         "color": "Gray",
         "gradient_id": 0,
@@ -4320,6 +4432,7 @@
       {
         "id": 1,
         "name": "broodmother_feeding_frenzy",
+        "deprecated": "true",
         "icon": "summons",
         "color": "Red",
         "gradient_id": 0,
@@ -4343,7 +4456,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_attack_damage_25",
+        "name": "special_bonus_attack_damage_30",
         "level": 1
       },
       {
@@ -4375,20 +4488,22 @@
       {
         "id": 0,
         "name": "bounty_hunter_shuriken",
+        "deprecated": "true",
         "icon": "nuke",
         "color": "Red",
         "gradient_id": 0,
-        "title": "Through and Through",
-        "description": "Shuriken Toss applies its damage and slow to all enemies it passes through."
+        "title": "",
+        "description": ""
       },
       {
         "id": 1,
         "name": "bounty_hunter_mugging",
+        "deprecated": "true",
         "icon": "gold",
         "color": "Yellow",
         "gradient_id": 0,
         "title": "Cutpurse",
-        "description": "Bounty Hunter steals gold when targeting enemy heroes with his abilities or items.",
+        "description": "Bounty Hunter steals 4 gold when targeting enemy heroes with his abilities or items.",
         "abilities": [
           "bounty_hunter_cutpurse"
         ]
@@ -4403,11 +4518,11 @@
       "generic_hidden",
       "generic_hidden",
       "weaver_time_lapse",
-      "weaver_rewoven"
+      "weaver_threads_of_fate"
     ],
     "talents": [
       {
-        "name": "special_bonus_unique_weaver_1",
+        "name": "special_bonus_unique_weaver_shukuchi_movespeed",
         "level": 1
       },
       {
@@ -4415,7 +4530,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_mana_break_20",
+        "name": "special_bonus_unique_weaver_1",
         "level": 2
       },
       {
@@ -4443,6 +4558,7 @@
       {
         "id": 0,
         "name": "weaver_skitterstep",
+        "deprecated": "true",
         "icon": "speed",
         "color": "Red",
         "gradient_id": 0,
@@ -4452,6 +4568,7 @@
       {
         "id": 1,
         "name": "weaver_hivemind",
+        "deprecated": "true",
         "icon": "xp",
         "color": "Blue",
         "gradient_id": 1,
@@ -4533,6 +4650,7 @@
       {
         "id": 2,
         "name": "jakiro_twin_terror",
+        "deprecated": "true",
         "icon": "damage",
         "color": "Red",
         "gradient_id": 0,
@@ -4542,6 +4660,7 @@
       {
         "id": 3,
         "name": "jakiro_ice_breaker",
+        "deprecated": "true",
         "icon": "snowflake",
         "color": "Blue",
         "gradient_id": 1,
@@ -4564,23 +4683,23 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_unique_batrider_7",
-        "level": 1
-      },
-      {
         "name": "special_bonus_unique_batrider_3",
         "level": 1
       },
       {
-        "name": "special_bonus_movement_speed_20",
+        "name": "special_bonus_unique_batrider_smoldering_resin_ticks",
+        "level": 1
+      },
+      {
+        "name": "special_bonus_unique_batrider_4",
+        "level": 2
+      },
+      {
+        "name": "special_bonus_unique_batrider_7",
         "level": 2
       },
       {
         "name": "special_bonus_unique_batrider_6",
-        "level": 2
-      },
-      {
-        "name": "special_bonus_unique_batrider_smoldering_resin_ticks",
         "level": 3
       },
       {
@@ -4588,7 +4707,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_batrider_4",
+        "name": "special_bonus_unique_batrider_1",
         "level": 4
       },
       {
@@ -4600,15 +4719,17 @@
       {
         "id": 0,
         "name": "batrider_buff_on_displacement",
+        "deprecated": "true",
         "icon": "nuke",
         "color": "Red",
         "gradient_id": 0,
         "title": "Stoked",
-        "description": "Firefly also lights Batrider on fire. He gains increasingly more Move Speed and Spell Amplification and burns away a portion of his max health each second."
+        "description": "Firefly also lights Batrider on fire. He gains increasingly more Move Speed and burns away a portion of his max health each second."
       },
       {
         "id": 1,
         "name": "batrider_arsonist",
+        "deprecated": "true",
         "icon": "damage",
         "color": "Yellow",
         "gradient_id": 1,
@@ -4622,7 +4743,7 @@
       "chen_penitence",
       "chen_holy_persuasion",
       "chen_divine_favor",
-      "chen_summon_convert",
+      "chen_zealot",
       "generic_hidden",
       "chen_hand_of_god"
     ],
@@ -4632,7 +4753,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_chen_3",
+        "name": "special_bonus_unique_chen_zealot",
         "level": 1
       },
       {
@@ -4664,6 +4785,7 @@
       {
         "id": 0,
         "name": "chen_centaur_convert",
+        "deprecated": "true",
         "icon": "area_of_effect",
         "color": "Yellow",
         "gradient_id": 3,
@@ -4673,7 +4795,10 @@
       {
         "id": 1,
         "name": "chen_wolf_convert",
-        "deprecated": "true",
+        "deprecated": [
+          "true",
+          "true"
+        ],
         "icon": "damage",
         "color": "Yellow",
         "gradient_id": 2,
@@ -4683,6 +4808,7 @@
       {
         "id": 2,
         "name": "chen_hellbear_convert",
+        "deprecated": "true",
         "icon": "slow",
         "color": "Red",
         "gradient_id": 0,
@@ -4692,6 +4818,7 @@
       {
         "id": 3,
         "name": "chen_troll_convert",
+        "deprecated": "true",
         "icon": "summons",
         "color": "Green",
         "gradient_id": 0,
@@ -4701,6 +4828,7 @@
       {
         "id": 4,
         "name": "chen_satyr_convert",
+        "deprecated": "true",
         "icon": "mana",
         "color": "Purple",
         "gradient_id": 1,
@@ -4710,6 +4838,7 @@
       {
         "id": 5,
         "name": "chen_frog_convert",
+        "deprecated": "true",
         "icon": "bubbles",
         "color": "Blue",
         "gradient_id": 3,
@@ -4745,7 +4874,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_hp_350",
+        "name": "special_bonus_hp_325",
         "level": 3
       },
       {
@@ -4785,6 +4914,7 @@
       {
         "id": 2,
         "name": "spectre_spectre",
+        "deprecated": "true",
         "icon": "spirit",
         "color": "Gray",
         "gradient_id": 0,
@@ -4817,7 +4947,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_doom_2",
+        "name": "special_bonus_attack_damage_66",
         "level": 2
       },
       {
@@ -4841,21 +4971,25 @@
       {
         "id": 0,
         "name": "doom_bringer_gluttony",
+        "deprecated": "true",
         "icon": "meat",
         "color": "Red",
         "gradient_id": 0,
         "title": "Gluttony",
-        "description": "Devour now has 2 charges and stolen creep abilities are upgraded by one level."
+        "description": "Devour now has {s:bonus_AbilityCharges} charges and stolen creep abilities are upgraded by one level."
       },
       {
         "id": 1,
         "name": "doom_bringer_boost_selling",
-        "deprecated": "true",
+        "deprecated": [
+          "true",
+          "true"
+        ],
         "icon": "gold",
         "color": "Yellow",
         "gradient_id": 0,
         "title": "Devil's Bargain",
-        "description": "Doom can sell items for 85% of their value, but his buyback costs are increased by 20%.",
+        "description": "Temporarily Disabled",
         "abilities": [
           "doom_bringer_devils_bargain"
         ]
@@ -4863,11 +4997,12 @@
       {
         "id": 2,
         "name": "doom_bringer_impending_doom",
+        "deprecated": "true",
         "icon": "cooldown",
         "color": "Gray",
         "gradient_id": 0,
         "title": "Impending Doom",
-        "description": "Every 6.66 minutes, Doom's duration is increased by 0.66s."
+        "description": "Every {s:bonus_upgrade_interval} minutes, Doom's duration is increased by {s:bonus_upgrade_amount}s."
       }
     ]
   },
@@ -4876,7 +5011,7 @@
       "ancient_apparition_cold_feet",
       "ancient_apparition_ice_vortex",
       "ancient_apparition_chilling_touch",
-      "ancient_apparition_death_rime",
+      "ancient_apparition_bone_chill",
       "generic_hidden",
       "ancient_apparition_ice_blast",
       "ancient_apparition_ice_blast_release"
@@ -4887,7 +5022,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_ancient_apparition_8",
+        "name": "special_bonus_unique_ancient_apparition_cold_feet_dps",
         "level": 1
       },
       {
@@ -4895,7 +5030,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_ancient_apparition_1",
+        "name": "special_bonus_unique_ancient_apparition_cold_feet_distance",
         "level": 2
       },
       {
@@ -4907,7 +5042,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_ancient_apparition_6",
+        "name": "special_bonus_unique_ancient_apparition_1",
         "level": 4
       },
       {
@@ -4919,6 +5054,7 @@
       {
         "id": 0,
         "name": "ancient_apparition_bone_chill",
+        "deprecated": "true",
         "icon": "debuff",
         "color": "Gray",
         "gradient_id": 3,
@@ -4928,6 +5064,7 @@
       {
         "id": 1,
         "name": "ancient_apparition_exposure",
+        "deprecated": "true",
         "icon": "area_of_effect",
         "color": "Blue",
         "gradient_id": 0,
@@ -4955,7 +5092,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_ursa",
+        "name": "special_bonus_unique_ursa_maul_health",
         "level": 2
       },
       {
@@ -4967,7 +5104,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_ursa_maul_health",
+        "name": "special_bonus_unique_ursa",
         "level": 3
       },
       {
@@ -4983,6 +5120,7 @@
       {
         "id": 0,
         "name": "ursa_grudge_bearer",
+        "deprecated": "true",
         "icon": "damage",
         "color": "Red",
         "gradient_id": 0,
@@ -4992,6 +5130,7 @@
       {
         "id": 1,
         "name": "ursa_debuff_reduce",
+        "deprecated": "true",
         "icon": "cooldown",
         "color": "Blue",
         "gradient_id": 0,
@@ -5009,7 +5148,7 @@
       "spirit_breaker_bulldoze",
       "spirit_breaker_greater_bash",
       "spirit_breaker_planar_pocket",
-      "spirit_breaker_herd_mentality",
+      "spirit_breaker_bull_rush",
       "spirit_breaker_nether_strike"
     ],
     "talents": [
@@ -5026,11 +5165,11 @@
         "level": 2
       },
       {
-        "name": "special_bonus_attack_damage_45",
+        "name": "special_bonus_unique_spirit_breaker_increased_charge_speed",
         "level": 2
       },
       {
-        "name": "special_bonus_unique_spirit_breaker_1",
+        "name": "special_bonus_unique_bull_rush_movement_increase",
         "level": 3
       },
       {
@@ -5050,6 +5189,7 @@
       {
         "id": 0,
         "name": "spirit_breaker_bull_rush",
+        "deprecated": "true",
         "icon": "speed",
         "color": "Red",
         "gradient_id": 1,
@@ -5069,6 +5209,7 @@
       {
         "id": 2,
         "name": "spirit_breaker_bulls_hit",
+        "deprecated": "true",
         "icon": "rng",
         "color": "Blue",
         "gradient_id": 2,
@@ -5082,8 +5223,8 @@
       "gyrocopter_rocket_barrage",
       "gyrocopter_homing_missile",
       "gyrocopter_flak_cannon",
-      "gyrocopter_chop_shop",
-      "generic_hidden",
+      "gyrocopter_afterburner",
+      "gyrocopter_side_gunner_spawn_ability",
       "gyrocopter_call_down",
       "generic_hidden",
       "generic_hidden"
@@ -5126,6 +5267,7 @@
       {
         "id": 0,
         "name": "gyrocopter_secondary_strikes",
+        "deprecated": "true",
         "icon": "nuke",
         "color": "Red",
         "gradient_id": 0,
@@ -5135,6 +5277,7 @@
       {
         "id": 1,
         "name": "gyrocopter_afterburner",
+        "deprecated": "true",
         "icon": "speed",
         "color": "Yellow",
         "gradient_id": 1,
@@ -5163,7 +5306,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_alchemist_3",
+        "name": "special_bonus_unique_alchemist_weaponry_power",
         "level": 2
       },
       {
@@ -5191,15 +5334,17 @@
       {
         "id": 0,
         "name": "alchemist_seed_money",
+        "deprecated": "true",
         "icon": "gold",
         "color": "Yellow",
         "gradient_id": 0,
         "title": "Seed Money",
-        "description": "Alchemist starts with 250 more gold."
+        "description": "Alchemist starts with {s:bonus_starting_gold_bonus} more gold."
       },
       {
         "id": 1,
         "name": "alchemist_mixologist",
+        "deprecated": "true",
         "icon": "cooldown",
         "color": "Purple",
         "gradient_id": 2,
@@ -5209,11 +5354,12 @@
       {
         "id": 2,
         "name": "alchemist_dividends",
+        "deprecated": "true",
         "icon": "aghs",
         "color": "Green",
         "gradient_id": 2,
         "title": "Dividends",
-        "description": "Alchemist gains +70 GPM for each Aghanim's Scepter he has granted to allies."
+        "description": "Alchemist gains +{s:bonus_gpm_increase_per_stack} GPM for each Aghanim's Scepter he has granted to allies."
       }
     ]
   },
@@ -5246,7 +5392,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_invoker_facet_orb_level",
+        "name": "special_bonus_unique_invoker_5",
         "level": 2
       },
       {
@@ -5258,7 +5404,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_invoker_5",
+        "name": "special_bonus_unique_invoker_orb_levels",
         "level": 3
       },
       {
@@ -5274,6 +5420,7 @@
       {
         "id": 0,
         "name": "invoker_quas_focus",
+        "deprecated": "true",
         "icon": "invoker_quas",
         "color": "Blue",
         "gradient_id": 0,
@@ -5283,6 +5430,7 @@
       {
         "id": 1,
         "name": "invoker_wex_focus",
+        "deprecated": "true",
         "icon": "invoker_wex",
         "color": "Purple",
         "gradient_id": 0,
@@ -5292,6 +5440,7 @@
       {
         "id": 2,
         "name": "invoker_exort_focus",
+        "deprecated": "true",
         "icon": "invoker_exort",
         "color": "Yellow",
         "gradient_id": 0,
@@ -5307,15 +5456,16 @@
       "silencer_last_word",
       "silencer_brain_drain",
       "generic_hidden",
-      "silencer_global_silence"
+      "silencer_global_silence",
+      "silencer_oppressive_silence"
     ],
     "talents": [
       {
-        "name": "special_bonus_unique_silencer",
+        "name": "special_bonus_attack_speed_25",
         "level": 1
       },
       {
-        "name": "special_bonus_attack_speed_20",
+        "name": "special_bonus_unique_silencer_brain_drain_damage",
         "level": 1
       },
       {
@@ -5339,7 +5489,7 @@
         "level": 4
       },
       {
-        "name": "special_bonus_unique_silencer_arcane_curse_charges",
+        "name": "special_bonus_unique_silencer_global_duration",
         "level": 4
       }
     ],
@@ -5370,15 +5520,17 @@
       {
         "id": 2,
         "name": "silencer_spread_the_knowledge",
+        "deprecated": "1",
         "icon": "ricochet",
         "color": "Purple",
         "gradient_id": 1,
         "title": "Synaptic Split",
-        "description": "Increases the max level of Glaives of Wisdom. Level 5 Glaives of Wisdom bounce 1 time to a random target within 450 range."
+        "description": "Increases the max level of Glaives of Wisdom. Level {s:bonus_max_level_tooltip} Glaives of Wisdom bounce {s:bonus_bounce_count_tooltip} time to a random target within {s:bonus_bounce_range_tooltip} range."
       },
       {
         "id": 3,
         "name": "silencer_oppressive_silence",
+        "deprecated": "1",
         "icon": "debuff",
         "color": "Gray",
         "gradient_id": 3,
@@ -5394,9 +5546,9 @@
     "abilities": [
       "obsidian_destroyer_arcane_orb",
       "obsidian_destroyer_astral_imprisonment",
-      "obsidian_destroyer_equilibrium",
+      "obsidian_destroyer_objurgation",
       "generic_hidden",
-      "obsidian_destroyer_ominous_discernment",
+      "obsidian_destroyer_equilibrium",
       "obsidian_destroyer_sanity_eclipse"
     ],
     "talents": [
@@ -5409,7 +5561,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_outworld_devourer_2",
+        "name": "special_bonus_unique_outworld_devourer_flux_restore",
         "level": 2
       },
       {
@@ -5417,7 +5569,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_hp_450",
+        "name": "special_bonus_unique_outworld_devourer_barrier",
         "level": 3
       },
       {
@@ -5437,6 +5589,7 @@
       {
         "id": 0,
         "name": "obsidian_destroyer_obsidian_decimator",
+        "deprecated": "true",
         "icon": "mana",
         "color": "Blue",
         "gradient_id": 0,
@@ -5446,6 +5599,7 @@
       {
         "id": 1,
         "name": "obsidian_destroyer_overwhelming_devourer",
+        "deprecated": "true",
         "icon": "healing",
         "color": "Blue",
         "gradient_id": 2,
@@ -5501,6 +5655,7 @@
       {
         "id": 0,
         "name": "lycan_pack_leader",
+        "deprecated": "true",
         "icon": "summons",
         "color": "Gray",
         "gradient_id": 1,
@@ -5510,6 +5665,7 @@
       {
         "id": 1,
         "name": "lycan_spirit_wolves",
+        "deprecated": "true",
         "icon": "spirit",
         "color": "Red",
         "gradient_id": 0,
@@ -5519,6 +5675,7 @@
       {
         "id": 2,
         "name": "lycan_alpha_wolves",
+        "deprecated": "true",
         "icon": "wolf",
         "color": "Green",
         "gradient_id": 2,
@@ -5594,6 +5751,7 @@
       {
         "id": 2,
         "name": "brewmaster_brewmaster",
+        "deprecated": "True",
         "icon": "bubbles",
         "color": "Yellow",
         "gradient_id": 1,
@@ -5618,7 +5776,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_strength_10",
+        "name": "special_bonus_strength_8",
         "level": 1
       },
       {
@@ -5634,11 +5792,11 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_shadow_demon_1",
+        "name": "special_bonus_unique_shadow_demon_9",
         "level": 3
       },
       {
-        "name": "special_bonus_unique_shadow_demon_9",
+        "name": "special_bonus_unique_shadow_demon_purge_poison",
         "level": 4
       },
       {
@@ -5650,6 +5808,7 @@
       {
         "id": 0,
         "name": "shadow_demon_promulgate",
+        "deprecated": "true",
         "icon": "nuke",
         "color": "Gray",
         "gradient_id": 0,
@@ -5659,11 +5818,12 @@
       {
         "id": 1,
         "name": "shadow_demon_facet_soul_mastery",
+        "deprecated": "true",
         "icon": "illusion",
         "color": "Purple",
         "gradient_id": 0,
-        "title": "Shadow Servant",
-        "description": "Shadow Demon creates illusions of heroes that die near him.",
+        "title": "Soul Catcher",
+        "description": "Shadow Demon and his illusions' attacks reduce the current health of the target by 1% per stack. When the effect expires, the target regains 50% of the lost health.\n\nIf an enemy Hero dies under this effect, Shadow Demon creates an illusion of them that lasts until the Hero respawns or Shadow Demon dies.",
         "abilities": [
           "shadow_demon_shadow_servant"
         ]
@@ -5751,6 +5911,7 @@
       {
         "id": 3,
         "name": "lone_druid_lone_druid",
+        "deprecated": "true",
         "icon": "overshadow",
         "color": "Green",
         "gradient_id": 1,
@@ -5765,7 +5926,7 @@
       "chaos_knight_reality_rift",
       "chaos_knight_chaos_strike",
       "generic_hidden",
-      "chaos_knight_reins_of_chaos",
+      "chaos_knight_fundamental_forging",
       "chaos_knight_phantasm"
     ],
     "talents": [
@@ -5819,15 +5980,17 @@
       {
         "id": 1,
         "name": "chaos_knight_irrationality",
+        "deprecated": "true",
         "icon": "rng",
         "color": "Gray",
         "gradient_id": 0,
         "title": "Irrationality",
-        "description": "Reality Rift has equal chances of applying Break, Disarm, or Silence for 50% of the base debuff duration in addition to its normal effects."
+        "description": "Reality Rift has equal chances of applying Break, Disarm, or Silence for {s:bonus_additional_debuff_duration_percent}% of the base debuff duration in addition to its normal effects."
       },
       {
         "id": 2,
         "name": "chaos_knight_facet_fundamental_forging",
+        "deprecated": "true",
         "icon": "item",
         "color": "Yellow",
         "gradient_id": 1,
@@ -5840,6 +6003,7 @@
       {
         "id": 3,
         "name": "chaos_knight_cloven_chaos",
+        "deprecated": "true",
         "icon": "ricochet",
         "color": "Red",
         "gradient_id": 0,
@@ -5856,8 +6020,8 @@
       "meepo_petrify",
       "meepo_megameepo",
       "meepo_divided_we_stand",
-      "meepo_megameepo_fling",
-      "meepo_sticky_fingers"
+      "meepo_geomancy",
+      "meepo_megameepo_fling"
     ],
     "talents": [
       {
@@ -5885,7 +6049,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_hp_350",
+        "name": "special_bonus_hp_400",
         "level": 4
       },
       {
@@ -5897,6 +6061,7 @@
       {
         "id": 0,
         "name": "meepo_more_meepo",
+        "deprecated": "true",
         "icon": "summons",
         "color": "Blue",
         "gradient_id": 2,
@@ -5906,6 +6071,7 @@
       {
         "id": 1,
         "name": "meepo_codependent",
+        "deprecated": "true",
         "icon": "illusion",
         "color": "Yellow",
         "gradient_id": 1,
@@ -5997,11 +6163,12 @@
       {
         "id": 2,
         "name": "treant_treant",
+        "deprecated": "1",
         "icon": "tree",
         "color": "Green",
         "gradient_id": 2,
-        "title": "Uprooted",
-        "description": "This facet doesn't do anything. Treant Protector is still finding his roots..."
+        "title": "",
+        "description": ""
       }
     ]
   },
@@ -6021,7 +6188,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_ogre_magi_5",
+        "name": "special_bonus_unique_ogre_magi_dumb_luck_mana",
         "level": 1
       },
       {
@@ -6029,7 +6196,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_ogre_magi_dumb_luck_mana",
+        "name": "special_bonus_unique_ogre_magi",
         "level": 2
       },
       {
@@ -6037,7 +6204,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_ogre_magi",
+        "name": "special_bonus_unique_ogre_magi_2",
         "level": 3
       },
       {
@@ -6045,7 +6212,7 @@
         "level": 4
       },
       {
-        "name": "special_bonus_unique_ogre_magi_2",
+        "name": "special_bonus_unique_ogre_magi_multicast_chance",
         "level": 4
       }
     ],
@@ -6053,15 +6220,17 @@
       {
         "id": 0,
         "name": "ogre_magi_fat_chance",
+        "deprecated": "true",
         "icon": "rng",
         "color": "Red",
         "gradient_id": 0,
         "title": "Fat Chance",
-        "description": "Each point of Ogre Magi's Strength adds 0.06% to Ogre Magi's Multicast chance."
+        "description": "Each point of Ogre Magi's Strength adds {s:bonus_strength_mult}% to Ogre Magi's Multicast chance."
       },
       {
         "id": 1,
         "name": "ogre_magi_learning_curve",
+        "deprecated": "true",
         "icon": "ogre",
         "color": "Blue",
         "gradient_id": 1,
@@ -6089,19 +6258,19 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_undying",
-        "level": 2
-      },
-      {
         "name": "special_bonus_unique_undying_6",
         "level": 2
       },
       {
-        "name": "special_bonus_unique_undying_5",
-        "level": 3
+        "name": "special_bonus_unique_undying",
+        "level": 2
       },
       {
         "name": "special_bonus_unique_undying_2",
+        "level": 3
+      },
+      {
+        "name": "special_bonus_unique_undying_5",
         "level": 3
       },
       {
@@ -6117,6 +6286,7 @@
       {
         "id": 0,
         "name": "undying_rotting_mitts",
+        "deprecated": "true",
         "icon": "summons",
         "color": "Green",
         "gradient_id": 4,
@@ -6126,6 +6296,7 @@
       {
         "id": 1,
         "name": "undying_ripped",
+        "deprecated": "true",
         "icon": "strength",
         "color": "Red",
         "gradient_id": 1,
@@ -6145,16 +6316,16 @@
       "rubick_telekinesis_land",
       "rubick_hidden1",
       "rubick_hidden2",
-      "rubick_might_and_magus",
+      "rubick_curiosity",
       "rubick_telekinesis_land_self"
     ],
     "talents": [
       {
-        "name": "special_bonus_unique_rubick_8",
+        "name": "special_bonus_unique_rubick_4",
         "level": 1
       },
       {
-        "name": "special_bonus_unique_rubick_2",
+        "name": "special_bonus_hp_200",
         "level": 1
       },
       {
@@ -6162,19 +6333,19 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_rubick_7",
+        "name": "special_bonus_unique_rubick_3",
         "level": 2
       },
       {
-        "name": "special_bonus_unique_rubick_3",
+        "name": "special_bonus_unique_rubick_fade_bolt_spell_reduction",
         "level": 3
       },
       {
-        "name": "special_bonus_unique_rubick_4",
+        "name": "special_bonus_unique_rubick_8",
         "level": 3
       },
       {
-        "name": "special_bonus_unique_rubick",
+        "name": "special_bonus_unique_rubick_curiosity_factor",
         "level": 4
       },
       {
@@ -6194,6 +6365,7 @@
       {
         "id": 0,
         "name": "rubick_frugal_filch",
+        "deprecated": "true",
         "icon": "mana",
         "color": "Purple",
         "gradient_id": 2,
@@ -6203,6 +6375,7 @@
       {
         "id": 1,
         "name": "rubick_arcane_accumulation",
+        "deprecated": "true",
         "icon": "area_of_effect",
         "color": "Green",
         "gradient_id": 0,
@@ -6216,8 +6389,8 @@
       "disruptor_thunder_strike",
       "disruptor_glimpse",
       "disruptor_kinetic_field",
+      "disruptor_kinetic_fence",
       "disruptor_electromagnetic_repulsion",
-      "generic_hidden",
       "disruptor_static_storm"
     ],
     "talents": [
@@ -6242,7 +6415,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_disruptor_7",
+        "name": "special_bonus_unique_disruptor_8",
         "level": 3
       },
       {
@@ -6250,7 +6423,7 @@
         "level": 4
       },
       {
-        "name": "special_bonus_unique_disruptor_8",
+        "name": "special_bonus_unique_disruptor_thunder_strike_strikes",
         "level": 4
       }
     ],
@@ -6258,6 +6431,7 @@
       {
         "id": 0,
         "name": "disruptor_thunderstorm",
+        "deprecated": "true",
         "icon": "area_of_effect",
         "color": "Red",
         "gradient_id": 1,
@@ -6267,6 +6441,7 @@
       {
         "id": 1,
         "name": "disruptor_line_walls",
+        "deprecated": "true",
         "icon": "fence",
         "color": "Blue",
         "gradient_id": 1,
@@ -6279,6 +6454,7 @@
       {
         "id": 2,
         "name": "disruptor_conduit",
+        "deprecated": "true",
         "icon": "vortex_out",
         "color": "Gray",
         "gradient_id": 0,
@@ -6293,7 +6469,7 @@
       "nyx_assassin_jolt",
       "nyx_assassin_spiked_carapace",
       "nyx_assassin_burrow",
-      "nyx_assassin_nyxth_sense",
+      "nyx_assassin_neuro_sting",
       "nyx_assassin_vendetta",
       "nyx_assassin_unburrow"
     ],
@@ -6335,6 +6511,7 @@
       {
         "id": 0,
         "name": "nyx_assassin_burn_mana",
+        "deprecated": "true",
         "icon": "nuke",
         "color": "Blue",
         "gradient_id": 3,
@@ -6344,11 +6521,12 @@
       {
         "id": 1,
         "name": "nyx_assassin_scuttle",
+        "deprecated": "true",
         "icon": "speed",
         "color": "Red",
         "gradient_id": 2,
         "title": "Scuttle",
-        "description": "For the first 15s of Vendetta, Nyx Assassin is hasted and has unobstructed pathing."
+        "description": "For the first {s:bonus_free_pathing_duration}s of Vendetta, Nyx Assassin is hasted and has unobstructed pathing."
       }
     ]
   },
@@ -6356,7 +6534,7 @@
     "abilities": [
       "naga_siren_mirror_image",
       "naga_siren_ensnare",
-      "generic_hidden",
+      "naga_siren_rip_tide",
       "naga_siren_reel_in",
       "naga_siren_eelskin",
       "naga_siren_song_of_the_siren",
@@ -6400,6 +6578,7 @@
       {
         "id": 0,
         "name": "naga_siren_passive_riptide",
+        "deprecated": "true",
         "icon": "armor_broken",
         "color": "Yellow",
         "gradient_id": 2,
@@ -6412,6 +6591,7 @@
       {
         "id": 1,
         "name": "naga_siren_active_riptide",
+        "deprecated": "true",
         "icon": "nuke",
         "color": "Green",
         "gradient_id": 2,
@@ -6428,12 +6608,11 @@
       "keeper_of_the_light_illuminate",
       "keeper_of_the_light_blinding_light",
       "keeper_of_the_light_chakra_magic",
-      "generic_hidden",
+      "keeper_of_the_light_radiant_bind",
       "keeper_of_the_light_will_o_wisp",
       "keeper_of_the_light_spirit_form",
       "keeper_of_the_light_illuminate_end",
-      "keeper_of_the_light_special_reserve",
-      "generic_hidden",
+      "keeper_of_the_light_bright_speed",
       "generic_hidden"
     ],
     "talents": [
@@ -6446,7 +6625,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_keeper_of_the_light_7",
+        "name": "special_bonus_unique_keeper_of_the_light_11",
         "level": 2
       },
       {
@@ -6454,11 +6633,11 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_keeper_of_the_light_11",
+        "name": "special_bonus_unique_keeper_of_the_light_2",
         "level": 3
       },
       {
-        "name": "special_bonus_unique_keeper_of_the_light_2",
+        "name": "special_bonus_unique_keeper_of_the_light_3",
         "level": 3
       },
       {
@@ -6474,6 +6653,7 @@
       {
         "id": 0,
         "name": "keeper_of_the_light_facet_solar_bind",
+        "deprecated": "true",
         "icon": "slow",
         "color": "Yellow",
         "gradient_id": 1,
@@ -6486,6 +6666,7 @@
       {
         "id": 1,
         "name": "keeper_of_the_light_facet_recall",
+        "deprecated": "true",
         "icon": "teleport",
         "color": "Gray",
         "gradient_id": 3,
@@ -6506,7 +6687,7 @@
       "wisp_spirits_out",
       "wisp_relocate",
       "wisp_tether_break",
-      "wisp_essence_conduction"
+      "wisp_equilibrium"
     ],
     "talents": [
       {
@@ -6514,7 +6695,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_strength_7",
+        "name": "special_bonus_strength_8",
         "level": 1
       },
       {
@@ -6546,6 +6727,7 @@
       {
         "id": 0,
         "name": "wisp_kritzkrieg",
+        "deprecated": "true",
         "icon": "damage",
         "color": "Blue",
         "gradient_id": 3,
@@ -6555,6 +6737,7 @@
       {
         "id": 1,
         "name": "wisp_medigun",
+        "deprecated": "true",
         "icon": "armor",
         "color": "Gray",
         "gradient_id": 3,
@@ -6571,12 +6754,11 @@
       "visage_stone_form_self_cast",
       "visage_silent_as_the_grave",
       "visage_summon_familiars",
-      "visage_summon_familiars_stone_form",
-      "visage_lurker"
+      "visage_summon_familiars_stone_form"
     ],
     "talents": [
       {
-        "name": "special_bonus_unique_visage_8",
+        "name": "special_bonus_unique_visage_soul_assumption_cooldown",
         "level": 1
       },
       {
@@ -6612,6 +6794,7 @@
       {
         "id": 0,
         "name": "visage_sepulchre",
+        "deprecated": "true",
         "icon": "area_of_effect",
         "color": "Gray",
         "gradient_id": 0,
@@ -6621,6 +6804,7 @@
       {
         "id": 1,
         "name": "visage_faithful_followers",
+        "deprecated": "true",
         "icon": "summons",
         "color": "Blue",
         "gradient_id": 2,
@@ -6630,6 +6814,7 @@
       {
         "id": 2,
         "name": "visage_gold_assumption",
+        "deprecated": "true",
         "icon": "gold",
         "color": "Yellow",
         "gradient_id": 0,
@@ -6705,6 +6890,7 @@
       {
         "id": 2,
         "name": "slark_slark",
+        "deprecated": "true",
         "icon": "broken_chain",
         "color": "Blue",
         "gradient_id": 2,
@@ -6732,7 +6918,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_medusa_2",
+        "name": "special_bonus_unique_medusa_gorgons_grasp_volleys",
         "level": 2
       },
       {
@@ -6740,11 +6926,11 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_medusa_3",
+        "name": "special_bonus_unique_medusa_snake_damage",
         "level": 3
       },
       {
-        "name": "special_bonus_unique_medusa_gorgons_grasp_volleys",
+        "name": "special_bonus_unique_medusa_2",
         "level": 3
       },
       {
@@ -6760,6 +6946,7 @@
       {
         "id": 0,
         "name": "medusa_engorged",
+        "deprecated": "true",
         "icon": "snake",
         "color": "Green",
         "gradient_id": 1,
@@ -6779,18 +6966,17 @@
       {
         "id": 2,
         "name": "medusa_slow_attacks",
+        "deprecated": "true",
         "icon": "slow",
         "color": "Yellow",
         "gradient_id": 2,
-        "title": "Venomous Volley",
-        "description": "Every 6 attacks, Medusa applies poison to her arrow that briefly reduces movement speed and attack speed.",
-        "abilities": [
-          "medusa_venomed_volley"
-        ]
+        "title": "",
+        "description": ""
       },
       {
         "id": 3,
         "name": "medusa_undulation",
+        "deprecated": "true",
         "icon": "speed",
         "color": "Red",
         "gradient_id": 0,
@@ -6825,7 +7011,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_troll_warlord_3",
+        "name": "special_bonus_unique_troll_warlord",
         "level": 2
       },
       {
@@ -6833,7 +7019,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_troll_warlord",
+        "name": "special_bonus_unique_troll_warlord_3",
         "level": 3
       },
       {
@@ -6849,6 +7035,7 @@
       {
         "id": 0,
         "name": "troll_warlord_insensitive",
+        "deprecated": "true",
         "icon": "armor",
         "color": "Blue",
         "gradient_id": 2,
@@ -6858,11 +7045,12 @@
       {
         "id": 1,
         "name": "troll_warlord_bad_influence",
+        "deprecated": "true",
         "icon": "damage",
         "color": "Red",
         "gradient_id": 1,
         "title": "Bad Influence",
-        "description": "During Battle Trance, Troll Warlord has increased max Fervor stacks and no attack speed limit. Battle Trance grants allied heroes 50% of the attack speed bonus. "
+        "description": "During Battle Trance, Troll Warlord has increased max Fervor stacks and no attack speed limit. Battle Trance grants allied heroes {s:bonus_attack_speed_share_percent}% of the attack speed bonus. "
       }
     ]
   },
@@ -6874,7 +7062,7 @@
       "centaur_work_horse",
       "centaur_mount",
       "centaur_stampede",
-      "centaur_rawhide"
+      "centaur_horsepower"
     ],
     "talents": [
       {
@@ -6886,7 +7074,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_strength_12",
+        "name": "special_bonus_strength_10",
         "level": 2
       },
       {
@@ -6914,6 +7102,7 @@
       {
         "id": 0,
         "name": "centaur_counter_strike",
+        "deprecated": "true",
         "icon": "nuke",
         "color": "Red",
         "gradient_id": 1,
@@ -6923,11 +7112,12 @@
       {
         "id": 1,
         "name": "centaur_horsepower",
+        "deprecated": "true",
         "icon": "speed",
         "color": "Gray",
         "gradient_id": 3,
         "title": "Horsepower",
-        "description": "Centaur Warrunner gains Movement Speed based on his Strength.",
+        "description": "Centaur Warrunner gains 30% of his strength as bonus movement speed.\n\n This Movement speed bonus does not stack with bonuses from boots.",
         "abilities": [
           "centaur_horsepower"
         ]
@@ -6995,12 +7185,13 @@
         "icon": "vortex_in",
         "color": "Gray",
         "gradient_id": 3,
-        "title": "Reverse Polarity",
+        "title": "Reverse Polarity Facet",
         "description": "Reverse Polarity pulls all nearby enemies in."
       },
       {
         "id": 2,
         "name": "magnataur_eternal_empowerment",
+        "deprecated": "true",
         "icon": "empower",
         "color": "Gray",
         "gradient_id": 1,
@@ -7010,11 +7201,12 @@
       {
         "id": 3,
         "name": "magnataur_diminishing_return",
+        "deprecated": "true",
         "icon": "ricochet",
         "color": "Blue",
         "gradient_id": 2,
         "title": "Diminishing Return",
-        "description": "Increases the max level of Shockwave. Level 5 Shockwave causes it to return towards Magnus's location."
+        "description": "Increases the max level of Shockwave. Level {s:bonus_max_level_tooltip} Shockwave causes it to return towards Magnus's location."
       },
       {
         "id": 4,
@@ -7037,8 +7229,8 @@
       "shredder_flamethrower",
       "shredder_chakram",
       "shredder_return_chakram",
-      "shredder_return_chakram_2",
-      "shredder_exposure_therapy"
+      "shredder_exposure_therapy",
+      "generic_hidden"
     ],
     "talents": [
       {
@@ -7078,6 +7270,7 @@
       {
         "id": 0,
         "name": "shredder_shredder",
+        "deprecated": "true",
         "icon": "tree",
         "color": "Green",
         "gradient_id": 0,
@@ -7087,6 +7280,7 @@
       {
         "id": 1,
         "name": "shredder_second_chakram",
+        "deprecated": "true",
         "icon": "spinning",
         "color": "Red",
         "gradient_id": 1,
@@ -7134,7 +7328,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_spell_lifesteal_12",
+        "name": "special_bonus_unique_bristleback",
         "level": 4
       },
       {
@@ -7156,6 +7350,7 @@
       {
         "id": 1,
         "name": "bristleback_snot_rocket",
+        "deprecated": "true",
         "icon": "snot",
         "color": "Green",
         "gradient_id": 0,
@@ -7165,6 +7360,7 @@
       {
         "id": 2,
         "name": "bristleback_seeing_red",
+        "deprecated": "true",
         "icon": "no_vision",
         "color": "Red",
         "gradient_id": 0,
@@ -7177,11 +7373,12 @@
     "abilities": [
       "tusk_ice_shards",
       "tusk_snowball",
-      "generic_hidden",
+      "tusk_tag_team",
+      "tusk_drinking_buddies",
       "tusk_walrus_kick",
-      "tusk_bitter_chill",
       "tusk_walrus_punch",
-      "tusk_launch_snowball"
+      "tusk_launch_snowball",
+      "tusk_bitter_chill"
     ],
     "talents": [
       {
@@ -7201,7 +7398,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_tusk_5",
+        "name": "special_bonus_unique_tusk_6",
         "level": 3
       },
       {
@@ -7209,11 +7406,11 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_tusk_4",
+        "name": "special_bonus_unique_tusk_shard_dps",
         "level": 4
       },
       {
-        "name": "special_bonus_unique_tusk_6",
+        "name": "special_bonus_unique_tusk_4",
         "level": 4
       }
     ],
@@ -7221,6 +7418,7 @@
       {
         "id": 0,
         "name": "tusk_facet_tag_team",
+        "deprecated": "true",
         "icon": "damage",
         "color": "Blue",
         "gradient_id": 3,
@@ -7233,6 +7431,7 @@
       {
         "id": 1,
         "name": "tusk_facet_fist_bump",
+        "deprecated": "true",
         "icon": "movement",
         "color": "Yellow",
         "gradient_id": 0,
@@ -7250,7 +7449,7 @@
       "skywrath_mage_concussive_shot",
       "skywrath_mage_ancient_seal",
       "generic_hidden",
-      "skywrath_mage_ruin_and_restoration",
+      "skywrath_mage_shield_of_the_scion",
       "skywrath_mage_mystic_flare"
     ],
     "talents": [
@@ -7291,6 +7490,7 @@
       {
         "id": 0,
         "name": "skywrath_mage_shield",
+        "deprecated": "true",
         "icon": "armor",
         "color": "Blue",
         "gradient_id": 0,
@@ -7303,6 +7503,7 @@
       {
         "id": 1,
         "name": "skywrath_mage_staff",
+        "deprecated": "true",
         "icon": "cooldown",
         "color": "Yellow",
         "gradient_id": 2,
@@ -7325,7 +7526,7 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_unique_abaddon_6",
+        "name": "special_bonus_unique_abaddon_5",
         "level": 1
       },
       {
@@ -7333,7 +7534,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_abaddon_5",
+        "name": "special_bonus_unique_abaddon_borrowed_time_cd",
         "level": 2
       },
       {
@@ -7361,14 +7562,12 @@
       {
         "id": 0,
         "name": "abaddon_death_dude",
+        "deprecated": "true",
         "icon": "cooldown",
         "color": "Gray",
         "gradient_id": 0,
-        "title": "The Quickening",
-        "description": "Units dying nearby Abaddon lower his cooldowns.",
-        "abilities": [
-          "abaddon_the_quickening"
-        ]
+        "title": "",
+        "description": ""
       },
       {
         "id": 1,
@@ -7383,11 +7582,12 @@
       {
         "id": 2,
         "name": "abaddon_mists_of_fate",
+        "deprecated": "true",
         "icon": "phantom_ass_dagger",
         "color": "Blue",
         "gradient_id": 1,
         "title": "Malignant Mist",
-        "description": "Mist Coil also deals 40 =60 =80 =100% attack damage and applies effects from items and abilities. Self Damage increased when targeting enemies."
+        "description": "Mist Coil also deals {s:bonus_damage_percentage_on_perform_attack}% attack damage and applies effects from items and abilities. Self Damage increased when targeting enemies."
       }
     ]
   },
@@ -7396,11 +7596,10 @@
       "elder_titan_echo_stomp",
       "elder_titan_ancestral_spirit",
       "elder_titan_natural_order",
+      "elder_titan_momentum",
       "elder_titan_move_spirit",
-      "generic_hidden",
       "elder_titan_earth_splitter",
-      "elder_titan_return_spirit",
-      "elder_titan_tip_the_scales"
+      "elder_titan_return_spirit"
     ],
     "talents": [
       {
@@ -7408,7 +7607,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_attack_speed_25",
+        "name": "special_bonus_unique_elder_titan_4",
         "level": 1
       },
       {
@@ -7416,11 +7615,11 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_elder_titan",
+        "name": "special_bonus_unique_elder_titan_momentum_attack_speed",
         "level": 2
       },
       {
-        "name": "special_bonus_unique_elder_titan_4",
+        "name": "special_bonus_unique_elder_titan",
         "level": 3
       },
       {
@@ -7440,6 +7639,7 @@
       {
         "id": 0,
         "name": "elder_titan_deconstruction",
+        "deprecated": "true",
         "icon": "armor_broken",
         "color": "Blue",
         "gradient_id": 2,
@@ -7449,11 +7649,12 @@
       {
         "id": 1,
         "name": "elder_titan_boost_atkspd",
+        "deprecated": "true",
         "icon": "damage",
         "color": "Yellow",
         "gradient_id": 0,
         "title": "Momentum",
-        "description": "Elder Titan's Base Attack Speed is reduced but his Movement Speed also grants Attack Speed.",
+        "description": "Elder Titan gains armor equal to a percentage of his bonus movement speed.",
         "abilities": [
           "elder_titan_momentum"
         ]
@@ -7475,7 +7676,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_legion_commander_pta_movespeed",
+        "name": "special_bonus_unique_legion_commander_outfight_them_armor",
         "level": 1
       },
       {
@@ -7487,7 +7688,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_legion_commander_5",
+        "name": "special_bonus_unique_legion_commander_duel_duration",
         "level": 3
       },
       {
@@ -7499,7 +7700,7 @@
         "level": 4
       },
       {
-        "name": "special_bonus_unique_legion_commander_8",
+        "name": "special_bonus_unique_legion_commander_duel_refresh_on_victory",
         "level": 4
       }
     ],
@@ -7507,6 +7708,7 @@
       {
         "id": 0,
         "name": "legion_commander_stonehall_plate",
+        "deprecated": "true",
         "icon": "armor",
         "color": "Yellow",
         "gradient_id": 1,
@@ -7516,6 +7718,7 @@
       {
         "id": 1,
         "name": "legion_commander_spoils_of_war",
+        "deprecated": "true",
         "icon": "damage",
         "color": "Red",
         "gradient_id": 0,
@@ -7551,11 +7754,11 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_ember_spirit_chains_dps",
+        "name": "special_bonus_unique_ember_spirit_6",
         "level": 3
       },
       {
-        "name": "special_bonus_unique_ember_spirit_6",
+        "name": "special_bonus_unique_ember_spirit_chains_dps",
         "level": 3
       },
       {
@@ -7571,6 +7774,7 @@
       {
         "id": 0,
         "name": "ember_spirit_double_impact",
+        "deprecated": "true",
         "icon": "fist",
         "color": "Red",
         "gradient_id": 0,
@@ -7580,6 +7784,7 @@
       {
         "id": 1,
         "name": "ember_spirit_chain_gang",
+        "deprecated": "true",
         "icon": "debuff",
         "color": "Yellow",
         "gradient_id": 1,
@@ -7665,6 +7870,7 @@
       {
         "id": 3,
         "name": "earth_spirit_earth_spirit",
+        "deprecated": "true",
         "icon": "spinning",
         "color": "Green",
         "gradient_id": 0,
@@ -7697,7 +7903,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_terrorblade_6",
+        "name": "special_bonus_unique_terrorblade_sunder_hp_threshold",
         "level": 2
       },
       {
@@ -7721,6 +7927,7 @@
       {
         "id": 0,
         "name": "terrorblade_condemned",
+        "deprecated": "true",
         "icon": "twin_hearts",
         "color": "Gray",
         "gradient_id": 0,
@@ -7730,6 +7937,7 @@
       {
         "id": 1,
         "name": "terrorblade_soul_fragment",
+        "deprecated": "true",
         "icon": "illusion",
         "color": "Blue",
         "gradient_id": 2,
@@ -7744,7 +7952,7 @@
       "phoenix_fire_spirits",
       "phoenix_sun_ray",
       "phoenix_sun_ray_toggle_move",
-      "phoenix_blinding_sun",
+      "phoenix_dying_light",
       "phoenix_supernova",
       "phoenix_launch_fire_spirit",
       "phoenix_icarus_dive_stop",
@@ -7756,7 +7964,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_phoenix_blinding_sun_misschance",
+        "name": "special_bonus_unique_phoenix_dying_light_damage",
         "level": 1
       },
       {
@@ -7788,11 +7996,12 @@
       {
         "id": 0,
         "name": "phoenix_facet_immolate",
+        "deprecated": "true",
         "icon": "barrier",
         "color": "Red",
         "gradient_id": 2,
         "title": "Dying Light",
-        "description": "Phoenix deals 4.5% of his missing health as magic damage to all enemies in a 400 radius every second.",
+        "description": "Phoenix deals 4% of its missing health as magic damage to all enemies in a 400 radius every second.",
         "abilities": [
           "phoenix_dying_light"
         ]
@@ -7800,6 +8009,7 @@
       {
         "id": 1,
         "name": "phoenix_hotspot",
+        "deprecated": "true",
         "icon": "nuke",
         "color": "Red",
         "gradient_id": 1,
@@ -7814,8 +8024,9 @@
       "oracle_fates_edict",
       "oracle_purifying_flames",
       "oracle_rain_of_destiny",
-      "oracle_prognosticate",
-      "oracle_false_promise"
+      "oracle_diviners_deck",
+      "oracle_false_promise",
+      "oracle_prognosticate"
     ],
     "talents": [
       {
@@ -7827,7 +8038,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_oracle_damage_per_purge",
+        "name": "special_bonus_unique_oracle_3",
         "level": 2
       },
       {
@@ -7855,6 +8066,7 @@
       {
         "id": 0,
         "name": "oracle_facet_dmg",
+        "deprecated": "True",
         "icon": "nuke",
         "color": "Red",
         "gradient_id": 2,
@@ -7867,6 +8079,7 @@
       {
         "id": 1,
         "name": "oracle_facet_heal",
+        "deprecated": "True",
         "icon": "healing",
         "color": "Green",
         "gradient_id": 1,
@@ -7883,10 +8096,11 @@
       "techies_sticky_bomb",
       "techies_reactive_tazer",
       "techies_suicide",
-      "generic_hidden",
+      "techies_mutually_assured_destruction",
       "techies_minefield_sign",
       "techies_land_mines",
-      "techies_reactive_tazer_stop"
+      "techies_reactive_tazer_stop",
+      "techies_focused_detonate"
     ],
     "talents": [
       {
@@ -7902,7 +8116,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_mp_regen_3",
+        "name": "special_bonus_unique_techies_tazer_duration",
         "level": 2
       },
       {
@@ -7914,7 +8128,7 @@
         "level": 3
       },
       {
-        "name": "special_bonus_attack_damage_252",
+        "name": "special_bonus_attack_damage_253",
         "level": 4
       },
       {
@@ -7926,6 +8140,7 @@
       {
         "id": 0,
         "name": "techies_atk_range",
+        "deprecated": "True",
         "icon": "range",
         "color": "Gray",
         "gradient_id": 0,
@@ -7938,6 +8153,7 @@
       {
         "id": 1,
         "name": "techies_spleens_secret_sauce",
+        "deprecated": "True",
         "icon": "nuke",
         "color": "Red",
         "gradient_id": 0,
@@ -7947,6 +8163,7 @@
       {
         "id": 2,
         "name": "techies_backpack",
+        "deprecated": "True",
         "icon": "item",
         "color": "Blue",
         "gradient_id": 1,
@@ -7963,7 +8180,7 @@
       "winter_wyvern_arctic_burn",
       "winter_wyvern_splinter_blast",
       "winter_wyvern_cold_embrace",
-      "winter_wyvern_eldwurm_scholar",
+      "winter_wyvern_eldwurms_edda",
       "generic_hidden",
       "winter_wyvern_winters_curse"
     ],
@@ -8031,6 +8248,7 @@
       {
         "id": 2,
         "name": "winter_wyvern_winterproof",
+        "deprecated": "True",
         "icon": "tower",
         "color": "Blue",
         "gradient_id": 2,
@@ -8040,6 +8258,7 @@
       {
         "id": 3,
         "name": "winter_wyvern_recursive",
+        "deprecated": "True",
         "icon": "ricochet",
         "color": "Blue",
         "gradient_id": 0,
@@ -8115,20 +8334,22 @@
       {
         "id": 2,
         "name": "arc_warden_runed_replica",
+        "deprecated": "true",
         "icon": "arc_warden_alt",
         "color": "Blue",
         "gradient_id": 1,
         "title": "Runed Replica",
-        "description": "The Tempest Double is infused with the bonuses of Power Runes for 12s when created.\n\nLevel 1 - Arcane Rune.\n\nLevel 2 - Arcane and Invisibility Runes.\n\nLevel 3 - Arcane, Invisibility, and Haste Runes."
+        "description": "The Tempest Double is infused with the bonuses of Power Runes for {s:bonus_rune_duration}s when created.\n\nLevel 1 - Arcane Rune.\n\nLevel 2 - Arcane and Invisibility Runes.\n\nLevel 3 - Arcane, Invisibility, and Haste Runes."
       },
       {
         "id": 3,
         "name": "arc_warden_power_capture",
+        "deprecated": "true",
         "icon": "rune",
         "color": "Yellow",
         "gradient_id": 1,
         "title": "Power Capture",
-        "description": "Magnetic Field pulls runes. Arc Warden gains +1.5 all attributes permanently upon activating a Power Rune."
+        "description": "Magnetic Field pulls runes. Arc Warden gains +{s:bonus_all_attribute_bonus_per_stack} all attributes permanently upon activating a Power Rune."
       }
     ]
   },
@@ -8179,6 +8400,7 @@
       {
         "id": 0,
         "name": "abyssal_underlord_demons_reach",
+        "deprecated": "true",
         "icon": "area_of_effect",
         "color": "Green",
         "gradient_id": 0,
@@ -8188,6 +8410,7 @@
       {
         "id": 1,
         "name": "abyssal_underlord_summons",
+        "deprecated": "True",
         "icon": "summons",
         "color": "Yellow",
         "gradient_id": 3,
@@ -8208,11 +8431,14 @@
       "monkey_king_mischief",
       "monkey_king_wukongs_command",
       "monkey_king_primal_spring_early",
-      "monkey_king_untransform"
+      [
+        "monkey_king_untransform",
+        "monkey_king_transfiguration"
+      ]
     ],
     "talents": [
       {
-        "name": "special_bonus_unique_monkey_king_3",
+        "name": "special_bonus_unique_monkey_king_7",
         "level": 1
       },
       {
@@ -8220,7 +8446,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_monkey_king_7",
+        "name": "special_bonus_unique_monkey_king_8",
         "level": 2
       },
       {
@@ -8228,7 +8454,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_monkey_king_8",
+        "name": "special_bonus_unique_monkey_king_3",
         "level": 3
       },
       {
@@ -8258,6 +8484,7 @@
       {
         "id": 1,
         "name": "monkey_king_simian_stride",
+        "deprecated": "true",
         "icon": "tree",
         "color": "Green",
         "gradient_id": 4,
@@ -8267,6 +8494,7 @@
       {
         "id": 2,
         "name": "monkey_king_transfiguration",
+        "deprecated": "true",
         "icon": "summons",
         "color": "Red",
         "gradient_id": 2,
@@ -8348,6 +8576,7 @@
       {
         "id": 2,
         "name": "pangolier_pangolier",
+        "deprecated": "true",
         "icon": "cooldown",
         "color": "Blue",
         "gradient_id": 1,
@@ -8371,7 +8600,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_intelligence_10",
+        "name": "special_bonus_intelligence_12",
         "level": 1
       },
       {
@@ -8391,11 +8620,11 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_dark_willow_2",
+        "name": "special_bonus_unique_dark_willow_bedlam_targets",
         "level": 4
       },
       {
-        "name": "special_bonus_unique_dark_willow_bedlam_targets",
+        "name": "special_bonus_unique_dark_willow_2",
         "level": 4
       }
     ],
@@ -8403,6 +8632,7 @@
       {
         "id": 0,
         "name": "dark_willow_throwing_shade",
+        "deprecated": "true",
         "icon": "damage",
         "color": "Purple",
         "gradient_id": 1,
@@ -8422,6 +8652,7 @@
       {
         "id": 2,
         "name": "dark_willow_shattering_crown",
+        "deprecated": "true",
         "icon": "barrier",
         "color": "Green",
         "gradient_id": 4,
@@ -8436,7 +8667,7 @@
       "grimstroke_ink_creature",
       "grimstroke_spirit_walk",
       "grimstroke_dark_portrait",
-      "grimstroke_return",
+      "generic_hidden",
       "grimstroke_soul_chain",
       "grimstroke_ink_trail"
     ],
@@ -8478,6 +8709,7 @@
       {
         "id": 0,
         "name": "grimstroke_inkstigate",
+        "deprecated": "true",
         "icon": "area_of_effect",
         "color": "Gray",
         "gradient_id": 0,
@@ -8487,6 +8719,7 @@
       {
         "id": 1,
         "name": "grimstroke_fine_art",
+        "deprecated": "true",
         "icon": "brush",
         "color": "Red",
         "gradient_id": 1,
@@ -8510,7 +8743,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_unique_mars_dauntless_hpregen",
+        "name": "special_bonus_mp_regen_150",
         "level": 1
       },
       {
@@ -8522,7 +8755,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_mars_arena_cooldown",
+        "name": "special_bonus_unique_mars_arena_of_blood_damage",
         "level": 3
       },
       {
@@ -8542,6 +8775,7 @@
       {
         "id": 0,
         "name": "mars_victory_feast",
+        "deprecated": "true",
         "icon": "healing",
         "color": "Red",
         "gradient_id": 2,
@@ -8551,6 +8785,7 @@
       {
         "id": 1,
         "name": "mars_arena",
+        "deprecated": "true",
         "icon": "no_vision",
         "color": "Yellow",
         "gradient_id": 0,
@@ -8606,6 +8841,7 @@
       {
         "id": 0,
         "name": "void_spirit_sanctuary",
+        "deprecated": "true",
         "icon": "armor",
         "color": "Purple",
         "gradient_id": 1,
@@ -8628,6 +8864,7 @@
       {
         "id": 2,
         "name": "void_spirit_aether_artifice",
+        "deprecated": "true",
         "icon": "illusion",
         "color": "Gray",
         "gradient_id": 3,
@@ -8644,7 +8881,7 @@
       "snapfire_gobble_up",
       "snapfire_spit_creep",
       "snapfire_mortimer_kisses",
-      "snapfire_buckshot"
+      "snapfire_boomstick"
     ],
     "talents": [
       {
@@ -8684,6 +8921,7 @@
       {
         "id": 0,
         "name": "snapfire_ricochet_ii",
+        "deprecated": "true",
         "icon": "ricochet",
         "color": "Gray",
         "gradient_id": 3,
@@ -8693,6 +8931,7 @@
       {
         "id": 1,
         "name": "snapfire_full_bore",
+        "deprecated": "true",
         "icon": "range",
         "color": "Red",
         "gradient_id": 0,
@@ -8718,7 +8957,7 @@
         "level": 1
       },
       {
-        "name": "special_bonus_hp_150",
+        "name": "special_bonus_hp_175",
         "level": 1
       },
       {
@@ -8726,7 +8965,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_hoodwink_acorn_shot_bounces",
+        "name": "special_bonus_agility_10",
         "level": 2
       },
       {
@@ -8734,15 +8973,15 @@
         "level": 3
       },
       {
-        "name": "special_bonus_corruption_3",
+        "name": "special_bonus_unique_hoodwink_acorn_shot_bounces",
         "level": 3
       },
       {
-        "name": "special_bonus_unique_hoodwink_acorn_shot_charges",
+        "name": "special_bonus_unique_hoodwink_sharpshooter_damage",
         "level": 4
       },
       {
-        "name": "special_bonus_unique_hoodwink_sharpshooter_damage",
+        "name": "special_bonus_unique_hoodwink_acorn_shot_charges",
         "level": 4
       }
     ],
@@ -8750,6 +8989,7 @@
       {
         "id": 0,
         "name": "hoodwink_hunter",
+        "deprecated": "true",
         "icon": "range",
         "color": "Yellow",
         "gradient_id": 0,
@@ -8769,6 +9009,7 @@
       {
         "id": 2,
         "name": "hoodwink_hipshot",
+        "deprecated": "true",
         "icon": "cooldown",
         "color": "Green",
         "gradient_id": 0,
@@ -8789,15 +9030,15 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_unique_dawnbreaker_break_of_dawn_damage",
-        "level": 1
-      },
-      {
-        "name": "special_bonus_unique_dawnbreaker_celestial_hammer_slow",
-        "level": 1
-      },
-      {
         "name": "special_bonus_unique_dawnbreaker_luminosity_crit",
+        "level": 1
+      },
+      {
+        "name": "special_bonus_unique_dawnbreaker_celestial_hammer_targets_allies",
+        "level": 1
+      },
+      {
+        "name": "special_bonus_unique_dawnbreaker_celestial_hammer_damage",
         "level": 2
       },
       {
@@ -8825,6 +9066,7 @@
       {
         "id": 0,
         "name": "dawnbreaker_solar_charged",
+        "deprecated": "true",
         "icon": "cooldown",
         "color": "Gray",
         "gradient_id": 3,
@@ -8844,6 +9086,7 @@
       {
         "id": 2,
         "name": "dawnbreaker_blaze",
+        "deprecated": "true",
         "icon": "fist",
         "color": "Red",
         "gradient_id": 1,
@@ -8853,6 +9096,7 @@
       {
         "id": 3,
         "name": "dawnbreaker_hearthfire",
+        "deprecated": "true",
         "icon": "speed",
         "color": "Yellow",
         "gradient_id": 1,
@@ -8884,7 +9128,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_marci_lunge_movespeed",
+        "name": "special_bonus_unique_marci_guardian_damage",
         "level": 2
       },
       {
@@ -8900,7 +9144,7 @@
         "level": 4
       },
       {
-        "name": "special_bonus_unique_marci_guardian_damage",
+        "name": "special_bonus_unique_marci_guardian_strong_dispel",
         "level": 4
       }
     ],
@@ -8934,6 +9178,7 @@
       {
         "id": 2,
         "name": "marci_buddy_system",
+        "deprecated": "true",
         "icon": "twin_hearts",
         "color": "Blue",
         "gradient_id": 1,
@@ -8943,6 +9188,7 @@
       {
         "id": 3,
         "name": "marci_pickmeup",
+        "deprecated": "true",
         "icon": "ricochet",
         "color": "Purple",
         "gradient_id": 0,
@@ -8985,7 +9231,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_primal_beast_roar_dispells",
+        "name": "special_bonus_unique_primal_beast_uproar_armor",
         "level": 2
       },
       {
@@ -8993,11 +9239,11 @@
         "level": 3
       },
       {
-        "name": "special_bonus_unique_primal_beast_uproar_armor",
+        "name": "special_bonus_unique_primal_beast_roar_dispells",
         "level": 3
       },
       {
-        "name": "special_bonus_unique_primal_beast_trample_unslowable",
+        "name": "special_bonus_unique_primal_beast_colossal_trample",
         "level": 4
       },
       {
@@ -9019,15 +9265,17 @@
       {
         "id": 1,
         "name": "primal_beast_provoke_the_beast",
+        "deprecated": "true",
         "icon": "broken_chain",
         "color": "Red",
         "gradient_id": 0,
         "title": "Provoke the Beast",
-        "description": "Gain 3 Uproar stacks upon being disabled by an enemy hero."
+        "description": "Gain {s:bonus_stack_count_increase_on_disable} Uproar stacks upon being disabled by an enemy hero."
       },
       {
         "id": 2,
         "name": "primal_beast_ferocity",
+        "deprecated": "true",
         "icon": "area_of_effect",
         "color": "Yellow",
         "gradient_id": 3,
@@ -9041,7 +9289,7 @@
       "muerta_dead_shot",
       "muerta_the_calling",
       "muerta_gunslinger",
-      "generic_hidden",
+      "muerta_spectral_slug",
       "generic_hidden",
       "muerta_pierce_the_veil",
       "muerta_supernatural",
@@ -9062,7 +9310,7 @@
         "level": 2
       },
       {
-        "name": "special_bonus_unique_muerta_gunslinger_bonus_damage",
+        "name": "special_bonus_intelligence_15",
         "level": 2
       },
       {
@@ -9086,6 +9334,7 @@
       {
         "id": 0,
         "name": "muerta_dance_of_the_dead",
+        "deprecated": "true",
         "icon": "spirit",
         "color": "Green",
         "gradient_id": 1,
@@ -9108,6 +9357,7 @@
       {
         "id": 2,
         "name": "muerta_slingshot",
+        "deprecated": "true",
         "icon": "ricochet",
         "color": "Red",
         "gradient_id": 1,
@@ -9128,11 +9378,11 @@
     ],
     "talents": [
       {
-        "name": "special_bonus_unique_ringmaster_whip_radius",
+        "name": "special_bonus_unique_ringmaster_dagger_charge",
         "level": 1
       },
       {
-        "name": "special_bonus_unique_ringmaster_dagger_impact_damage",
+        "name": "special_bonus_unique_ringmaster_whip_radius",
         "level": 1
       },
       {
@@ -9164,16 +9414,20 @@
         "level": 5
       },
       {
-        "name": "generic_hidden",
+        "name": "ringmaster_funhouse_mirror",
         "level": 5
       },
       {
-        "name": "generic_hidden",
+        "name": "ringmaster_strongman_tonic",
         "level": 6
       },
       {
-        "name": "generic_hidden",
+        "name": "ringmaster_whoopee_cushion",
         "level": 6
+      },
+      {
+        "name": "ringmaster_summon_unicycle",
+        "level": 7
       }
     ],
     "facets": [
@@ -9190,6 +9444,7 @@
       {
         "id": 1,
         "name": "ringmaster_carny_classics",
+        "deprecated": "true",
         "icon": "whoopee_cushion",
         "color": "Yellow",
         "gradient_id": 1,
@@ -9204,6 +9459,7 @@
       {
         "id": 2,
         "name": "ringmaster_sideshow_secrets",
+        "deprecated": "true",
         "icon": "pie",
         "color": "Red",
         "gradient_id": 0,
@@ -9269,20 +9525,22 @@
       {
         "id": 0,
         "name": "kez_flutter",
+        "deprecated": "true",
         "icon": "kez_flutter",
         "color": "Yellow",
         "gradient_id": 1,
-        "title": "Flutter",
-        "description": "Kez deals extra damage on the first attack after switching to Katana, and gains bonus movement speed after switching to Sai."
+        "title": "",
+        "description": ""
       },
       {
         "id": 1,
         "name": "kez_shadowhawk",
+        "deprecated": "true",
         "icon": "kez_shadowhawk",
         "color": "Blue",
         "gradient_id": 3,
-        "title": "Shadowhawk",
-        "description": "Triggering a Shodo Sai Mark from invisibility deals bonus critical damage. Increases Raven's Veil invisibility duration.",
+        "title": "",
+        "description": "",
         "abilities": [
           "kez_shadowhawk_passive"
         ]
@@ -9344,10 +9602,11 @@
       {
         "id": 0,
         "name": "largo_largo",
-        "icon": "guitar",
+        "deprecated": "true",
+        "icon": "no_facet",
         "color": "Green",
         "gradient_id": 1,
-        "title": "Musical pilgrimmage",
+        "title": "Musical pilgrimage",
         "description": "This facet doesn't do anything. Largo just arrived from the island of Velu'Mar..."
       }
     ]
