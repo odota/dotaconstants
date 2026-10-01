@@ -296,7 +296,7 @@ async function start() {
                       value: (val.value ?? val).split(" ").join(" / "),
                     };
                   },
-                )
+                ).filter((attr) => Number(attr.value) !== 0)
               : [];
 
             item.mc = parseInt(scripts[key].AbilityManaCost) || false;
