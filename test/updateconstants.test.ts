@@ -3,6 +3,8 @@ import test from "node:test";
 
 import fs from "node:fs";
 import fixture from "./fixtures/talent-values-6942.json" with { type: "json" };
+import { analyzeSpecialBonusValues } from "../tasks/util.ts";
+import { applyLegacyTalentNames } from "../tasks/legacytalents.ts";
 import {
   abilityNameStrings,
   buildAbilityIds,
@@ -14,7 +16,8 @@ import {
 test("resolves a talent placeholder after its linked ability is processed", () => {
   const abilities = {
     special_bonus_unique_axe_culling_blade_speed_duration: {
-      dname: "+{s:bonus_speed_duration}s Culling Blade Kill Buff Bonus Duration",
+      dname:
+        "+{s:bonus_speed_duration}s Culling Blade Kill Buff Bonus Duration",
     },
   };
   const lookup = {
@@ -71,6 +74,10 @@ test("real client templates resolve percent, decimal, repeated, multiple and mix
       "+2s/+1s Arcane Curse Base/Penalty Duration",
     special_bonus_unique_sniper_shrapnel_damage: "+30% Shrapnel Damage",
     special_bonus_unique_meepo_poof_cast_point: "-.75s Poof Cast Duration",
+    special_bonus_unique_ancient_apparition_6: "+50% Death Rime Slow/Damage",
+    special_bonus_unique_ancient_apparition_8:
+      "+1.0 Death Rime Strength Reduction",
+    special_bonus_unique_windranger_8: "-10% Focus Fire Damage Reduction",
   };
   const strings = abilityNameStrings(fixture.tokens);
   const abilities = Object.fromEntries(
@@ -231,10 +238,284 @@ test("keeps a placeholder when the current source data has no value for it", () 
     },
   };
 
-  resolveSpecialBonusPlaceholders(abilities, {});
+  resolveSpecialBonusPlaceholders(
+    abilities,
+    buildSpecialBonusLookup(fixture.scripts),
+  );
 
   assert.equal(
     abilities.special_bonus_unique_juggernaut_2.dname,
     "+{s:bonus_healing_ward_bonus_health} Healing Ward Hits to Kill",
   );
+});
+
+test("modifier objects keep explicit base values and diagnose conditional-only values in both formats", () => {
+  for (const format of ["AbilityValues", "AbilitySpecial"]) {
+    const values = {
+      damage: {
+        value: "100",
+        special_bonus_string: "+10",
+        special_bonus_object: { value: "+12", special_bonus_scepter: "+20" },
+        special_bonus_conditional: { special_bonus_scepter: "+10" },
+        special_bonus_bad: { mystery: "+99" },
+        special_bonus_empty: {},
+        special_bonus_array: ["+10"],
+      },
+    };
+    const scripts = {
+      spell: {
+        [format]:
+          format === "AbilityValues"
+            ? values
+            : { "01": { var_type: "FIELD_INTEGER", ...values } },
+      },
+    };
+    const original = structuredClone(scripts);
+    const result = analyzeSpecialBonusValues(scripts);
+    assert.equal(result.lookup.special_bonus_string.bonus_damage, "10");
+    assert.equal(result.lookup.special_bonus_object.bonus_damage, "12");
+    assert.equal(
+      result.lookup.special_bonus_conditional?.bonus_damage,
+      undefined,
+    );
+    assert.equal(result.lookup.special_bonus_scepter, undefined);
+    assert.ok(
+      result.candidates.some(
+        (c) =>
+          c.talent === "special_bonus_conditional" &&
+          c.condition === "base/special_bonus_scepter" &&
+          c.display === "10",
+      ),
+    );
+    for (const talent of [
+      "special_bonus_bad",
+      "special_bonus_empty",
+      "special_bonus_array",
+    ])
+      assert.ok(result.candidates.some((c) => c.talent === talent && c.reason));
+    assert.deepEqual(scripts, original);
+  }
+});
+
+test("repeated AbilitySpecial attributes collect all modifiers without overwriting entries", () => {
+  const lookup = buildSpecialBonusLookup({
+    spell: {
+      AbilitySpecial: {
+        "01": { damage: { special_bonus_first: "+10" } },
+        "02": { damage: { special_bonus_second: "+20" } },
+      },
+    },
+  });
+  assert.equal(lookup.special_bonus_first.bonus_damage, "10");
+  assert.equal(lookup.special_bonus_second.bonus_damage, "20");
+});
+
+const twoCandidates = (first: unknown, second: unknown) => ({
+  first: { AbilityValues: { damage: { special_bonus_demo: first } } },
+  second: { AbilityValues: { damage: { special_bonus_demo: second } } },
+});
+
+test("equivalent numeric spellings resolve deterministically with positional multivalues", () => {
+  for (const [a, b, expected] of [
+    ["+10", "+10.0", "10"],
+    ["+.50%", "+0.500%", ".50"],
+    ["+1.0 -2.00 +.5", "+1 -2 +0.50", "1 2 0.50"],
+    ["+-0.1", "+-0.10", "-0.1"],
+    ["=0010", "=10.0", "0010"],
+  ]) {
+    for (const scripts of [twoCandidates(a, b), twoCandidates(b, a)]) {
+      const result = analyzeSpecialBonusValues(scripts);
+      assert.equal(result.lookup.special_bonus_demo.bonus_damage, expected);
+      assert.equal(result.conflicts.length, 0);
+      assert.ok(result.equivalents.length > 0);
+    }
+  }
+});
+
+test("equivalent values and object field traversal produce the same lookup", () => {
+  const entries = [
+    [
+      "damage",
+      { special_bonus_demo: { value: "+10.0", special_bonus_scepter: "+15" } },
+    ],
+    [
+      "DAMAGE",
+      { special_bonus_demo: { special_bonus_scepter: "+15", value: "+10" } },
+    ],
+  ];
+  const forward = buildSpecialBonusLookup({
+    spell: { AbilityValues: Object.fromEntries(entries) },
+  });
+  const reverse = buildSpecialBonusLookup({
+    spell: { AbilityValues: Object.fromEntries(entries.toReversed()) },
+  });
+  assert.deepEqual(forward, reverse);
+  assert.equal(forward.special_bonus_demo.bonus_damage, "10");
+});
+
+test("distinct numbers, operation, unit, sequence positions and precise decimals remain conflicts", () => {
+  for (const [a, b] of [
+    ["+10", "+15"],
+    ["+10", "-10"],
+    ["+10", "=10"],
+    ["x10", "10"],
+    ["+10%", "+10"],
+    ["+1 +2", "+2 +1"],
+    ["+9007199254740992", "+9007199254740993"],
+    ["+.100000000000000001", "+.1"],
+  ]) {
+    for (const scripts of [twoCandidates(a, b), twoCandidates(b, a)]) {
+      const result = analyzeSpecialBonusValues(scripts);
+      assert.equal(result.lookup.special_bonus_demo.bonus_damage, undefined);
+      assert.ok(result.conflicts.length > 0);
+    }
+  }
+});
+
+test("invalid values cannot silently discard a competing candidate", () => {
+  for (const invalid of [
+    "10junk",
+    "10%0",
+    "++10",
+    "--10",
+    "NaN",
+    "Infinity",
+    "1e2",
+    "",
+    "10 20x",
+    null,
+    10,
+  ]) {
+    const result = analyzeSpecialBonusValues(twoCandidates("+10", invalid));
+    assert.equal(result.lookup.special_bonus_demo.bonus_damage, undefined);
+    assert.ok(result.candidates.some((c) => c.reason === "invalid-value"));
+  }
+});
+
+test("conditional-only values never merge with base values or reveal a lower-priority obsolete base", () => {
+  const scripts = twoCandidates("+10", { special_bonus_scepter: "+10.0" });
+  for (const preferred of [new Set<string>(), new Set(["second"])]) {
+    const result = analyzeSpecialBonusValues(scripts, preferred);
+    assert.equal(result.lookup.special_bonus_demo?.bonus_damage, undefined);
+    assert.ok(result.candidates.some((c) => c.reason === "conditional-only"));
+  }
+});
+
+test("own definition beats preferred hero spells and other spells in either order", () => {
+  const scripts = {
+    special_bonus_demo: { AbilityValues: { bonus_damage: { value: "7" } } },
+    ...twoCandidates("+10", "+15"),
+  };
+  for (const input of [
+    scripts,
+    Object.fromEntries(Object.entries(scripts).toReversed()),
+  ])
+    assert.equal(
+      buildSpecialBonusLookup(input, new Set(["first"])).special_bonus_demo
+        .bonus_damage,
+      "7",
+    );
+});
+
+test("current names reject missing, blank and invalid types without altering normal contents", () => {
+  for (const dname of [undefined, "", " \t ", null, 10, [], {}])
+    assert.deepEqual(
+      validateCurrentTalents(
+        new Set(["talent"]),
+        { talent: { dname } },
+        { 1: "talent" },
+      ),
+      ["Missing talent name: talent"],
+    );
+  const abilities = { talent: { dname: " +10 Damage " } };
+  assert.deepEqual(
+    validateCurrentTalents(new Set(["talent"]), abilities, { 1: "talent" }),
+    [],
+  );
+  assert.equal(abilities.talent.dname, " +10 Damage ");
+});
+
+test("placeholder prefix and keys are case-insensitive and repeated occurrences resolve", () => {
+  const abilities = { talent: { dname: "{S:VaLuE}s +{s:VALUE}s" } };
+  resolveSpecialBonusPlaceholders(abilities, { talent: { value: "1.5" } });
+  assert.equal(abilities.talent.dname, "1.5s +1.5s");
+});
+
+test("real signed operands from client 6942 retain negative modifier values", () => {
+  const abilities = {
+    special_bonus_unique_pudge_4: { dname: "+{s:bonus_rot_slow}% Rot Slow" },
+    special_bonus_unique_razor_2: {
+      dname: "-{s:bonus_strike_interval}s Eye of the Storm Strike Interval",
+    },
+    special_bonus_unique_vengeful_spirit_4: {
+      dname: "-{s:bonus_armor_reduction} Wave of Terror Armor",
+    },
+  };
+  resolveSpecialBonusPlaceholders(
+    abilities,
+    buildSpecialBonusLookup(fixture.scripts),
+  );
+  assert.equal(abilities.special_bonus_unique_pudge_4.dname, "+10% Rot Slow");
+  assert.equal(
+    abilities.special_bonus_unique_razor_2.dname,
+    "-0.1s Eye of the Storm Strike Interval",
+  );
+  assert.equal(
+    abilities.special_bonus_unique_vengeful_spirit_4.dname,
+    "-3 Wave of Terror Armor",
+  );
+});
+
+test("real historical conflicts retain published labels only as legacy fallbacks", () => {
+  const abilities = {
+    special_bonus_unique_kunkka_rum: {
+      dname: "+{s:bonus_ghostship_absorb}% Admiral's Rum Damage Delayed",
+    },
+    special_bonus_unique_disruptor_kinetic_damage: {
+      dname: "+{s:bonus_damage_per_second} Kinetic Field Touch DPS",
+    },
+  };
+  resolveSpecialBonusPlaceholders(
+    abilities,
+    buildSpecialBonusLookup(fixture.scripts),
+  );
+  const report = applyLegacyTalentNames(abilities, new Set());
+  assert.equal(report.length, 2);
+  assert.ok(report.every((entry) => entry.sourceName?.includes("{s:")));
+  assert.equal(
+    abilities.special_bonus_unique_kunkka_rum.dname,
+    "+8% Admiral's Rum Damage Delayed",
+  );
+  assert.equal(
+    abilities.special_bonus_unique_disruptor_kinetic_damage.dname,
+    "+60 Kinetic Field Touch DPS",
+  );
+});
+
+test("legacy policy applies to any inactive record, preserves reliable names and excludes current talents", () => {
+  const abilities = {
+    special_bonus_current: { dname: "+{s:value}%" },
+    special_bonus_conflict: { dname: "+{s:value} Damage" },
+    special_bonus_missing: {},
+    special_bonus_unresolved: { dname: "+{s:value} Speed" },
+    special_bonus_reliable: { dname: "+20 Armor" },
+  };
+  const labels = {
+    special_bonus_current: "+10%",
+    special_bonus_conflict: "+10 Damage",
+    special_bonus_missing: "+5 Speed",
+    special_bonus_unresolved: "+{s:value} Speed",
+    special_bonus_reliable: "+10 Armor",
+  };
+  assert.deepEqual(
+    applyLegacyTalentNames(
+      abilities,
+      new Set(["special_bonus_current"]),
+      labels,
+    ).map((entry) => entry.name),
+    ["special_bonus_conflict", "special_bonus_missing"],
+  );
+  assert.equal(abilities.special_bonus_current.dname, "+{s:value}%");
+  assert.equal(abilities.special_bonus_reliable.dname, "+20 Armor");
+  assert.equal(abilities.special_bonus_unresolved.dname, "+{s:value} Speed");
 });

@@ -1,4 +1,5 @@
 import fs from "node:fs";
+import { applyLegacyTalentNames } from "./legacytalents.ts";
 import {
   describeGameSource,
   fetchAndParse,
@@ -9,7 +10,7 @@ import {
   cleanupArray,
   abilityNameStrings,
   buildAbilityIds,
-  buildSpecialBonusLookup,
+  analyzeSpecialBonusValues,
   getReferencedHeroTalents,
   validateCurrentTalents,
   resolveSpecialBonusPlaceholders,
@@ -458,10 +459,17 @@ async function start() {
           respObj[1].DOTAAbilities,
           ...Object.values(heroAbilityScripts),
         );
-        const talentLookup = buildSpecialBonusLookup(
+        const talentAnalysis = analyzeSpecialBonusValues(
           scripts,
           preferredAbilities,
         );
+        const talentLookup = talentAnalysis.lookup;
+        for (const candidate of talentAnalysis.candidates) {
+          if (candidate.reason || candidate.condition !== "base")
+            console.warn(
+              `Talent value diagnostic: ${JSON.stringify(candidate)}`,
+            );
+        }
         const nameStrings = abilityNameStrings(strings);
         let abilities = {};
 
@@ -685,6 +693,7 @@ async function start() {
           talentIds,
         );
         if (errors.length) throw new Error(errors.join("\n"));
+        applyLegacyTalentNames(abilities, currentTalents);
         return abilities;
       },
     },

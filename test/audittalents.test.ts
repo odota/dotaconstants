@@ -3,7 +3,10 @@ import test from "node:test";
 import {
   auditHeroTalentLists,
   findUnnamedInactiveTalents,
+  scanTalentStructures,
+  classifyTalentName,
 } from "../tasks/auditutil.ts";
+import { analyzeSpecialBonusValues } from "../tasks/util.ts";
 import fixture from "./fixtures/talent-values-6942.json" with { type: "json" };
 
 const hero = "npc_dota_hero_antimage";
@@ -26,6 +29,7 @@ test("inactive missing-name diagnostics include absent and blank names without t
     special_bonus_missing: {},
     special_bonus_empty: { dname: "" },
     special_bonus_blank: { dname: " \t " },
+    special_bonus_invalid: { dname: 42 },
     special_bonus_template: { dname: "+{s:value}%" },
     special_bonus_named: { dname: "+10 Damage" },
     special_bonus_current: {},
@@ -37,7 +41,75 @@ test("inactive missing-name diagnostics include absent and blank names without t
       { name: "special_bonus_missing" },
       { name: "special_bonus_empty" },
       { name: "special_bonus_blank" },
+      { name: "special_bonus_invalid" },
     ],
+  );
+});
+
+test("audit scans all modifiers and separates adjacency, nested objects and missing evidence", () => {
+  const scripts = {
+    spell: {
+      AbilityValues: {
+        damage: {
+          special_bonus_facet_demo: "=100",
+          special_bonus_first: "+10",
+          special_bonus_second: { special_bonus_scepter: "+20" },
+        },
+      },
+    },
+  };
+  const classes = scanTalentStructures(scripts);
+  assert.equal(classes.multiple.length, 1);
+  assert.equal(classes.adjacent.length, 1);
+  assert.equal(classes.objects.length, 1);
+  const analysis = analyzeSpecialBonusValues(scripts);
+  assert.deepEqual(
+    classifyTalentName(
+      "special_bonus_second",
+      "+{s:bonus_damage}",
+      analysis.candidates,
+      scripts,
+      new Set(),
+    ),
+    ["absent-definition", "conditional-only"],
+  );
+  assert.deepEqual(
+    classifyTalentName(
+      "special_bonus_deleted",
+      "+{s:value}",
+      analysis.candidates,
+      scripts,
+      new Set(["special_bonus_deleted"]),
+    ),
+    ["commented-definition", "missing-source-value"],
+  );
+  assert.deepEqual(
+    classifyTalentName(
+      "special_bonus_template",
+      undefined,
+      analysis.candidates,
+      scripts,
+      new Set(),
+    ),
+    ["missing-template"],
+  );
+});
+
+test("audit reports conflicts and malformed source candidates rather than calling them resolved", () => {
+  const scripts = {
+    first: { AbilityValues: { damage: { special_bonus_demo: "+10" } } },
+    second: { AbilityValues: { damage: { special_bonus_demo: "+15" } } },
+  };
+  const analysis = analyzeSpecialBonusValues(scripts);
+  assert.deepEqual(
+    classifyTalentName(
+      "special_bonus_demo",
+      "+{s:bonus_damage}",
+      analysis.candidates,
+      scripts,
+      new Set(),
+    ),
+    ["absent-definition", "conflicting-source-values"],
   );
 });
 

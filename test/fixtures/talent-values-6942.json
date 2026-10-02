@@ -172,6 +172,66 @@
           "special_bonus_unique_disruptor_kinetic_damage": "+60"
         }
       }
+    },
+    "pudge_rot": {
+      "AbilityValues": {
+        "rot_slow": {
+          "value": "-14 -20 -26 -32",
+          "special_bonus_unique_pudge_4": "+-10"
+        }
+      }
+    },
+    "razor_eye_of_the_storm": {
+      "AbilityValues": {
+        "strike_interval": {
+          "value": "0.7 0.6 0.5",
+          "special_bonus_unique_razor_2": "+-0.1"
+        }
+      }
+    },
+    "vengefulspirit_wave_of_terror": {
+      "AbilityValues": {
+        "armor_reduction": {
+          "value": "-3 -4 -5 -6",
+          "special_bonus_unique_vengeful_spirit_4": "+-3"
+        }
+      }
+    },
+    "juggernaut_healing_ward": {
+      "AbilityValues": {
+        "healing_ward_bonus_health": {
+          "value": "0",
+          "special_bonus_shard": "+1"
+        }
+      }
+    },
+    "ancient_apparition_death_rime": {
+      "AbilityValues": {
+        "damage": {
+          "value": "10",
+          "special_bonus_unique_ancient_apparition_6": "+50%"
+        },
+        "slow": {
+          "value": "2",
+          "special_bonus_unique_ancient_apparition_6": "+50%",
+          "display_type": "kDebuffPercentage"
+        },
+        "strength_decrease": {
+          "value": "0",
+          "special_bonus_unique_ancient_apparition_8": "+1.0"
+        }
+      }
+    },
+    "windrunner_focusfire": {
+      "AbilityValues": {
+        "focusfire_damage_reduction": {
+          "value": "-25",
+          "special_bonus_facet_windrunner_whirlwind": "-5",
+          "special_bonus_unique_windranger_8": "+10",
+          "CalculateSpellDamageTooltip": "0",
+          "DamageTypeTooltip": "DAMAGE_TYPE_NONE"
+        }
+      }
     }
   },
   "tokens": {
@@ -189,10 +249,27 @@
     "DOTA_Tooltip_ability_special_bonus_unique_sniper_shrapnel_damage": "+{s:bonus_shrapnel_damage}% Shrapnel Damage",
     "DOTA_Tooltip_ability_special_bonus_unique_meepo_poof_cast_point": "-{s:bonus_cast_duration}s Poof Cast Duration",
     "DOTA_Tooltip_ability_special_bonus_unique_kunkka_rum": "+{s:bonus_ghostship_absorb}% Admiral's Rum Damage Delayed",
-    "DOTA_Tooltip_ability_special_bonus_unique_disruptor_kinetic_damage": "+{s:bonus_damage_per_second} Kinetic Field Touch DPS"
+    "DOTA_Tooltip_ability_special_bonus_unique_disruptor_kinetic_damage": "+{s:bonus_damage_per_second} Kinetic Field Touch DPS",
+    "DOTA_Tooltip_ability_special_bonus_unique_ancient_apparition_6": "+{s:bonus_damage}% Death Rime Slow/Damage",
+    "DOTA_Tooltip_ability_special_bonus_unique_ancient_apparition_8": "+{s:bonus_strength_decrease} Death Rime Strength Reduction",
+    "DOTA_Tooltip_ability_special_bonus_unique_windranger_8": "-{s:bonus_focusfire_damage_reduction}% Focus Fire Damage Reduction"
   },
   "historicalConflictSources": [
     "https://github.com/dotabuff/d2vpkr/blob/cf0d37a32c8df338a7832fd32a282747969e9a5f/dota/scripts/npc/heroes/npc_dota_hero_kunkka.txt",
     "https://github.com/dotabuff/d2vpkr/blob/cf0d37a32c8df338a7832fd32a282747969e9a5f/dota/scripts/npc/heroes/npc_dota_hero_disruptor.txt"
-  ]
+  ],
+  "additionalSources": [
+    "https://github.com/dotabuff/d2vpkr/blob/cf0d37a32c8df338a7832fd32a282747969e9a5f/dota/scripts/npc/heroes/npc_dota_hero_pudge.txt",
+    "https://github.com/dotabuff/d2vpkr/blob/cf0d37a32c8df338a7832fd32a282747969e9a5f/dota/scripts/npc/heroes/npc_dota_hero_razor.txt",
+    "https://github.com/dotabuff/d2vpkr/blob/cf0d37a32c8df338a7832fd32a282747969e9a5f/dota/scripts/npc/heroes/npc_dota_hero_vengefulspirit.txt",
+    "https://github.com/dotabuff/d2vpkr/blob/cf0d37a32c8df338a7832fd32a282747969e9a5f/dota/scripts/npc/heroes/npc_dota_hero_ancient_apparition.txt",
+    "https://github.com/dotabuff/d2vpkr/blob/cf0d37a32c8df338a7832fd32a282747969e9a5f/dota/scripts/npc/heroes/npc_dota_hero_windrunner.txt",
+    "https://github.com/dotabuff/d2vpkr/blob/cf0d37a32c8df338a7832fd32a282747969e9a5f/dota/scripts/npc/heroes/npc_dota_hero_juggernaut.txt"
+  ],
+  "commentedSourceEvidence": {
+    "file": "dota/scripts/npc/heroes/npc_dota_hero_juggernaut.txt",
+    "line": 527,
+    "text": "//\"special_bonus_unique_juggernaut_2\" \"+2\"",
+    "meaning": "Commented out; excluded from parsed source, never used as a verified value"
+  }
 }
