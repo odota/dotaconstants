@@ -5,6 +5,7 @@ import {
   findUnnamedInactiveTalents,
   scanTalentStructures,
   classifyTalentName,
+  findTalentLocalizationMetadata,
 } from "./auditutil.ts";
 import { applyLegacyTalentNames, legacyTalentSource } from "./legacytalents.ts";
 import {
@@ -80,6 +81,13 @@ resolveSpecialBonusPlaceholders(expected, analysis.lookup);
 const readBuild = (key: string) =>
   JSON.parse(fs.readFileSync(`build/${key}.json`, "utf8"));
 const abilities = readBuild("abilities");
+const localizationMetadata = findTalentLocalizationMetadata(
+  abilities,
+  talents,
+  scripts,
+  names,
+);
+const metadataNames = new Set(localizationMetadata.map((entry) => entry.name));
 const abilityIds = readBuild("ability_ids");
 const heroAbilities = readBuild("hero_abilities");
 const errors = validateCurrentTalents(talents, abilities, abilityIds);
@@ -93,7 +101,9 @@ const sourceNames = Object.fromEntries(
 );
 resolveSpecialBonusPlaceholders(sourceNames, analysis.lookup);
 const compatibleNames = structuredClone(sourceNames);
-const legacyFallbacks = applyLegacyTalentNames(compatibleNames, talents);
+const legacyFallbacks = applyLegacyTalentNames(compatibleNames, talents).filter(
+  (entry) => !metadataNames.has(entry.name),
+);
 for (const [name, data] of Object.entries(compatibleNames))
   if (data.dname !== abilities[name]?.dname)
     errors.push(
@@ -129,7 +139,7 @@ const commentedReferences = new Set(
   commentedSourceReferences.map((entry) => entry.name),
 );
 const nonCurrent = Object.entries(sourceNames)
-  .filter(([name]) => !talents.has(name))
+  .filter(([name]) => !talents.has(name) && !metadataNames.has(name))
   .map(([name, data]) => ({
     name,
     status: legacyFallbacks.some((entry) => entry.name === name)
@@ -191,6 +201,7 @@ const inactiveTalents = Object.entries(abilities)
     ([name, data]: [string, any]) =>
       name.startsWith("special_bonus") &&
       !talents.has(name) &&
+      !metadataNames.has(name) &&
       hasTalentPlaceholder(data.dname),
   )
   .map(([name, data]: [string, any]) => ({ name, dname: data.dname }));
@@ -218,7 +229,11 @@ const report = {
     ),
     errors: errors.filter((error) => /talent/i.test(error)),
     unresolvedInactiveTalents: inactiveTalents,
-    unnamedInactiveTalents: findUnnamedInactiveTalents(abilities, talents),
+    unnamedInactiveTalents: findUnnamedInactiveTalents(
+      abilities,
+      talents,
+      metadataNames,
+    ),
     currentMissingNames: [...talents].filter(
       (name) => !hasTalentName(abilities[name]?.dname),
     ),
@@ -226,6 +241,9 @@ const report = {
       hasTalentPlaceholder(abilities[name]?.dname),
     ),
     nonCurrent,
+    nonCurrentMeaning:
+      "Non-current special_bonus exports excluding identified localization metadata; not authenticated historical talents",
+    localizationMetadata,
     legacyFallbacks: { source: legacyTalentSource, entries: legacyFallbacks },
     sourceUnresolvedInactive: nonCurrent.filter((entry) =>
       hasTalentPlaceholder(entry.sourceName),
@@ -306,6 +324,7 @@ console.log(
       inactiveConflicts: nonCurrent.filter((entry) =>
         entry.reasons.includes("conflicting-source-values"),
       ).length,
+      localizationMetadata: localizationMetadata.length,
       errors,
     },
     null,

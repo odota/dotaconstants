@@ -12,6 +12,14 @@ The old collector flattened a nested `special_bonus_scepter` value regardless of
 
 Missing names use one type-safe rule: absent, empty, whitespace-only and non-string names fail. Valid name contents are preserved.
 
+## Localization metadata and audit scope
+
+The legacy localization supplement also exports tooltip descriptions and notes as independent `special_bonus` keys: its case-sensitive `Description` filter misses lowercase `_description` and does not exclude `_Note0`. This behavior predates the PR. The audit now separates `_description` and `_note<digits>` suffixes case-insensitively when a matching localization token exists, the key has no ability definition, and it is not referenced as a current talent. Actual definitions and current references take precedence over suffixes.
+
+Five records in client 6942 are identified as localization metadata: four descriptions and one note. Three descriptions contain placeholders; two records contain complete text. They are listed separately with their parent names and localization keys, rather than labeled source-resolved talents or missing historical values. Existing public keys and texts are preserved; filtering or removing these legacy exports needs a separate compatibility decision. This audit correction changes no generated data.
+
+Other non-current diagnostics concern exported records, not authenticated historical talents. A missing definition or candidate is evidence about the pinned source only; it does not establish that a historical game value is lost. Complete historical-data cleanup is outside this PR's scope.
+
 ## Historical display policy
 
 Current talent failures always fail generation. Historical display compatibility cannot repair or conceal a current failure.
@@ -65,15 +73,18 @@ The integration verifier uses fresh directories for base `b4b5a82`, PR start `fc
 | Current unresolved names               |    6 |           0 |     0 |
 | Current missing IDs                    |    0 |           0 |     0 |
 | Non-current missing names              |    3 |           3 |     3 |
-| Non-current displayed unresolved names |  316 |         316 |   314 |
+| Non-current displayed unresolved names |  313 |         313 |   311 |
+| Localization metadata records          |    5 |           5 |     5 |
+
+The same metadata classification is applied to all three revisions. Earlier totals included three unresolved descriptions (316 at base/start, 314 at final); separating them produces 313 and 311 without resolving additional values. The five metadata exports remain unchanged.
 
 The final audit covers 127 heroes and 1,016 current slots. It reports no current ID, name, list-length, duplicate-entry, declaration-order or export-level errors. One historical ID alias exists: 323 belongs to current Luna's glaive-count talent and also to an inactive Vengeful Spirit name; the current mapping is correct. The existing `level` tiers remain 1, 1, 2, 2, etc.; these checks do not establish actual in-game learning levels.
 
-Final non-current statuses are 486 source-resolved, 2 legacy fallbacks, 314 unresolved, and 3 missing names. Current-source resolution still leaves **316** non-current templates unresolved before fallbacks. The 314 displayed unresolved names comprise:
+Excluding the five metadata records, final non-current statuses are 484 source-resolved, 2 legacy fallbacks, 311 unresolved, and 3 missing names. Current-source resolution still leaves **313** non-current templates unresolved before fallbacks. The 311 displayed unresolved names comprise:
 
 | Evidence class                                                  | Count | Example                          |
 | --------------------------------------------------------------- | ----: | -------------------------------- |
-| No active definition and no source value                        |   281 | Spectre Haunt cooldown           |
+| No active definition and no source value                        |   278 | Spectre Haunt cooldown           |
 | No active definition/value, with a commented modifier reference |    16 | Brewmaster Primal Split duration |
 | Existing definition but requested value missing                 |    12 | Mirana Arrow damage              |
 | Existing definition but value missing, with commented reference |     5 | Juggernaut Healing Ward hits     |
@@ -82,8 +93,8 @@ Commented references are evidence of excluded text, not usable numeric definitio
 
 The scan covers 1,957 merged scripts and 1,216 real modifier entries. It finds 15 attributes with adjacent upgrade/facet fields, one localization name requiring broader case handling, 227 mixed-case placeholder records, and seven modifiers on abilities without their own localization. All 1,216 modifiers were found in the collector; reversing all object traversal preserved the lookup and left source objects unchanged. No attribute has multiple real talent modifiers in this snapshot; no modifier is object-valued; no `AbilitySpecial` occurs; no equally preferred numerically equivalent but textually different candidates occur. Those compatibility cases have direct implementation tests, not claimed real-data fixes. Of 77 conflicting candidate groups, mostly unused `value` aliases over different attributes, only the two historical templates above request conflicting groups. No current template requires a conflicting group.
 
-39 tests passed (24 at PR start). Attributed fixtures assert explicit expected labels for actual pinned definitions. A separate raw-definition/template numeric oracle checks all 973 current labels, including 916 templated names and 937 placeholder occurrences, without the generator's collector or resolver. It compares numeric meaning, not decimal spelling. This adds evidence beyond the shared audit algorithm; it does not prove every modifier behaves correctly in-game.
+42 tests passed (24 at PR start, 39 before the audit correction). Attributed fixtures assert explicit expected labels for actual pinned definitions and the five metadata tokens. Boundary tests require localization evidence and protect actual definitions and current references from suffix-based exclusion. A separate raw-definition/template numeric oracle checks all 973 current labels, including 916 templated names and 937 placeholder occurrences, without the generator's collector or resolver. It compares numeric meaning, not decimal spelling. This adds evidence beyond the shared audit algorithm; it does not prove every modifier behaves correctly in-game.
 
-The isolated comparisons change only `abilities.json`: two non-current labels relative to PR start; ten labels relative to base (eight current and two Ancient Apparition non-current resolutions). All 24 files are byte-identical across repeat generation and mocked local/remote parity. A separate **real remote audit** passed with matching fingerprints and talent diagnostics. A complete isolated build with real external hero/countries feeds also exited 0; all 24 JSON outputs semantically matched the final checkout. Its unrelated missing-attribute/shard warnings are outside talent validation. Stub-produced `aghs_desc.json` was never copied into the checkout.
+The isolated comparisons change only `abilities.json`: two non-current labels relative to PR start; ten labels relative to base (eight current and two Ancient Apparition non-current resolutions). The audit correction changes no public generated files. Fresh isolated builds, the raw-definition oracle, repeat generation and mocked local/remote parity were rerun after the correction; all 24 generated files also match the preceding verification. A separate **real remote audit** was rerun and passed with matching fingerprints, metadata classification and talent diagnostics. A complete isolated build with real external hero/countries feeds previously exited 0 at `74bb4a0`; all 24 JSON outputs semantically matched the final checkout. Those live external feeds were not rerun for this audit-only correction. Its unrelated missing-attribute/shard warnings are outside talent validation. Stub-produced `aghs_desc.json` was never copied into the checkout.
 
-TypeScript 5.9.3 against the strict `tsconfig.json` reports the same 79 pre-existing errors in `tasks/updateconstants.ts` at PR start and final; no new diagnostics remain after normalizing line/column positions. This is not a passing repository typecheck. Changed/new helper files pass formatting and syntax checks; unchanged generator formatting is preserved. Package exports and `git diff --check` pass. Web rendering, historical patch reconstruction and in-game verification were not executed.
+TypeScript 5.9.3 against the same strict `tsconfig.json` and dependencies reports 83 errors at the actual PR base `b4b5a82`, and 79 at PR start, `74bb4a0`, and after the audit correction. Comparing diagnostic multisets after normalizing only line/column positions finds no added diagnostics and four removed diagnostics relative to base. The remaining diagnostics are in `tasks/updateconstants.ts`; the repository typecheck still fails. Changed/new helper files pass formatting and syntax checks; unchanged generator formatting is preserved. Package exports and `git diff --check` pass. Web rendering, historical patch reconstruction and in-game verification were not executed.

@@ -5,8 +5,12 @@ import {
   findUnnamedInactiveTalents,
   scanTalentStructures,
   classifyTalentName,
+  findTalentLocalizationMetadata,
 } from "../tasks/auditutil.ts";
-import { analyzeSpecialBonusValues } from "../tasks/util.ts";
+import {
+  abilityNameStrings,
+  analyzeSpecialBonusValues,
+} from "../tasks/util.ts";
 import fixture from "./fixtures/talent-values-6942.json" with { type: "json" };
 
 const hero = "npc_dota_hero_antimage";
@@ -23,6 +27,112 @@ const talents = [
 ];
 const audit = (entries: unknown) =>
   auditHeroTalentLists(fixture.heroes, { [hero]: { talents: entries } });
+
+test("pinned tooltip descriptions and notes are metadata, not missing historical values", () => {
+  const abilities = Object.fromEntries(
+    Object.entries(fixture.localizationMetadata.strings).map(([key, dname]) => [
+      key.slice("DOTA_Tooltip_ability_".length),
+      { dname },
+    ]),
+  );
+  const before = structuredClone(abilities);
+  const metadata = findTalentLocalizationMetadata(
+    abilities,
+    new Set(),
+    {},
+    abilityNameStrings(fixture.localizationMetadata.strings),
+  );
+  assert.deepEqual(
+    metadata.map(({ name, kind, parent }) => ({ name, kind, parent })),
+    [
+      {
+        name: "special_bonus_unique_clinkz_2_Note0",
+        kind: "note",
+        parent: "special_bonus_unique_clinkz_2",
+      },
+      {
+        name: "special_bonus_unique_tidehunter_10_description",
+        kind: "description",
+        parent: "special_bonus_unique_tidehunter_10",
+      },
+      {
+        name: "special_bonus_unique_tidehunter_smash_on_blubber_description",
+        kind: "description",
+        parent: "special_bonus_unique_tidehunter_smash_on_blubber",
+      },
+      {
+        name: "special_bonus_unique_tinker_deploy_turrets_splash_radius_description",
+        kind: "description",
+        parent: "special_bonus_unique_tinker_deploy_turrets_splash_radius",
+      },
+      {
+        name: "special_bonus_unique_chen_2_description",
+        kind: "description",
+        parent: "special_bonus_unique_chen_2",
+      },
+    ],
+  );
+  assert.equal(
+    metadata.filter((entry) => /\{s:/.test(entry.sourceName)).length,
+    3,
+  );
+  assert.deepEqual(abilities, before);
+});
+
+test("metadata suffixes are case-insensitive and require localization evidence without overriding talent references or definitions", () => {
+  const abilities = {
+    special_bonus_demo_Description: { dname: "Description" },
+    special_bonus_demo_nOtE12: { dname: "Note" },
+    special_bonus_current_description: { dname: "Current talent" },
+    special_bonus_defined_note0: { dname: "Defined talent" },
+    special_bonus_unlocalized_description: { dname: "No source token" },
+    special_bonus_demo_description_extra: { dname: "Different suffix" },
+    ordinary_spell_description: { dname: "Ordinary tooltip" },
+  };
+  const names = Object.fromEntries(
+    Object.entries(abilities)
+      .filter(([name]) => name !== "special_bonus_unlocalized_description")
+      .map(([name, data]) => [
+        `dota_tooltip_ability_${name}`.toLowerCase(),
+        data.dname,
+      ]),
+  );
+  assert.deepEqual(
+    findTalentLocalizationMetadata(
+      abilities,
+      new Set(["special_bonus_current_description"]),
+      { special_bonus_defined_note0: {} },
+      names,
+    ).map((entry) => entry.name),
+    ["special_bonus_demo_Description", "special_bonus_demo_nOtE12"],
+  );
+});
+
+test("missing-name diagnostics exclude identified metadata but retain actual inactive records", () => {
+  const abilities = {
+    special_bonus_demo_description: {},
+    special_bonus_missing: {},
+    special_bonus_current: {},
+  };
+  const current = new Set(["special_bonus_current"]);
+  const metadata = findTalentLocalizationMetadata(
+    abilities,
+    current,
+    {},
+    {
+      dota_tooltip_ability_special_bonus_demo_description:
+        "Tooltip description",
+    },
+  );
+  assert.deepEqual(
+    findUnnamedInactiveTalents(
+      abilities,
+      current,
+      new Set(metadata.map((entry) => entry.name)),
+    ),
+    [{ name: "special_bonus_missing" }],
+  );
+});
 
 test("inactive missing-name diagnostics include absent and blank names without treating unresolved names as missing", () => {
   const abilities = {

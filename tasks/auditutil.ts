@@ -54,12 +54,14 @@ export function auditHeroTalentLists(
 export function findUnnamedInactiveTalents(
   abilities: Record<string, { dname?: unknown }>,
   currentTalents: Set<string>,
+  localizationMetadataNames = new Set<string>(),
 ) {
   return Object.entries(abilities)
     .filter(
       ([name, data]) =>
         name.startsWith("special_bonus") &&
         !currentTalents.has(name) &&
+        !localizationMetadataNames.has(name) &&
         !hasTalentName(data.dname),
     )
     .map(([name]) => ({ name }));
@@ -71,6 +73,37 @@ import {
   talentValueEntries,
   type TalentValueCandidate,
 } from "./util.ts";
+
+// Preserve legacy exports, but do not count tooltip metadata as talent records.
+// An actual definition or current reference takes precedence over a suffix.
+export function findTalentLocalizationMetadata(
+  abilities: Record<string, { dname?: unknown }>,
+  currentTalents: Set<string>,
+  scripts: Record<string, any>,
+  nameStrings: Record<string, string>,
+) {
+  return Object.entries(abilities).flatMap(([name, data]) => {
+    const match = /^(special_bonus.+)_(description|note\d+)$/i.exec(name);
+    const localizationKey = `dota_tooltip_ability_${name}`.toLowerCase();
+    if (
+      !match ||
+      currentTalents.has(name) ||
+      Object.hasOwn(scripts, name) ||
+      !Object.hasOwn(nameStrings, localizationKey)
+    )
+      return [];
+    return [
+      {
+        name,
+        kind: match[2].toLowerCase() === "description" ? "description" : "note",
+        parent: match[1],
+        localizationKey,
+        sourceName: nameStrings[localizationKey],
+        dname: data.dname,
+      },
+    ];
+  });
+}
 
 export function scanTalentStructures(scripts: Record<string, any>) {
   const multiple: any[] = [];

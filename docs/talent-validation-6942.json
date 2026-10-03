@@ -10,7 +10,8 @@
     "base": "b4b5a8299de5f3e0704e62fdd04a6a54c4d4548e",
     "start": "fc5d817b6d619747afaaa931c627f793f44c8ebf",
     "round": ["abilities.json"],
-    "total": ["abilities.json"]
+    "total": ["abilities.json"],
+    "auditCorrectionBase": "74bb4a008c426b7cd36e7617197f83bbc4e04166"
   },
   "input": {
     "sourceRef": "cf0d37a32c8df338a7832fd32a282747969e9a5f",
@@ -739,9 +740,14 @@
         "missingIds": 0
       },
       "nonCurrent": {
-        "total": 805,
+        "total": 800,
         "missingNames": 3,
-        "unresolved": 316
+        "unresolved": 313
+      },
+      "localizationMetadata": {
+        "total": 5,
+        "unresolved": 3,
+        "missingNames": 0
       }
     },
     "start": {
@@ -752,9 +758,14 @@
         "missingIds": 0
       },
       "nonCurrent": {
-        "total": 805,
+        "total": 800,
         "missingNames": 3,
-        "unresolved": 316
+        "unresolved": 313
+      },
+      "localizationMetadata": {
+        "total": 5,
+        "unresolved": 3,
+        "missingNames": 0
       }
     },
     "final": {
@@ -765,12 +776,17 @@
         "missingIds": 0
       },
       "nonCurrent": {
-        "total": 805,
+        "total": 800,
         "missingNames": 3,
-        "unresolved": 314
+        "unresolved": 311
+      },
+      "localizationMetadata": {
+        "total": 5,
+        "unresolved": 3,
+        "missingNames": 0
       }
     },
-    "sourceUnresolvedNonCurrent": 316,
+    "sourceUnresolvedNonCurrent": 313,
     "legacyFallbacks": [
       {
         "name": "special_bonus_unique_kunkka_rum",
@@ -785,10 +801,11 @@
     ],
     "nonCurrentStatusCounts": {
       "missing-name": 3,
-      "source-resolved": 486,
-      "unresolved": 314,
+      "source-resolved": 484,
+      "unresolved": 311,
       "legacy-fallback": 2
-    }
+    },
+    "nonCurrentMeaning": "Non-current special_bonus exports excluding identified localization metadata; not authenticated historical talents"
   },
   "coverage": {
     "scripts": 1957,
@@ -1702,7 +1719,7 @@
     "missing-template": 3,
     "commented-source-reference+missing-source-value": 5,
     "missing-source-value": 12,
-    "absent-definition+missing-source-value": 281,
+    "absent-definition+missing-source-value": 278,
     "absent-definition+commented-source-reference+missing-source-value": 16
   },
   "remaining": [
@@ -3134,20 +3151,6 @@
       ]
     },
     {
-      "name": "special_bonus_unique_tidehunter_10_description",
-      "status": "unresolved",
-      "sourceName": "Deals {s:bonus_building_pct_damage}% damage to buildings.",
-      "dname": "Deals {s:bonus_building_pct_damage}% damage to buildings.",
-      "reasons": ["absent-definition", "missing-source-value"]
-    },
-    {
-      "name": "special_bonus_unique_tidehunter_smash_on_blubber_description",
-      "status": "unresolved",
-      "sourceName": "Triggered attack has {s:bonus_smash_on_purge}% damage and is reflected damage.",
-      "dname": "Triggered attack has {s:bonus_smash_on_purge}% damage and is reflected damage.",
-      "reasons": ["absent-definition", "missing-source-value"]
-    },
-    {
       "name": "special_bonus_unique_tinker_2",
       "status": "unresolved",
       "sourceName": "+{s:value} March of the Machines Damage",
@@ -3201,13 +3204,6 @@
       "status": "unresolved",
       "sourceName": "+{s:bonus_drop_damage} Deploy Turrets Impact Damage",
       "dname": "+{s:bonus_drop_damage} Deploy Turrets Impact Damage",
-      "reasons": ["absent-definition", "missing-source-value"]
-    },
-    {
-      "name": "special_bonus_unique_tinker_deploy_turrets_splash_radius_description",
-      "status": "unresolved",
-      "sourceName": "Missiles deal {s:bonus_splash_pct}% splash damage in a {s:bonus_radius_explosion} AoE",
-      "dname": "Missiles deal {s:bonus_splash_pct}% splash damage in a {s:bonus_radius_explosion} AoE",
       "reasons": ["absent-definition", "missing-source-value"]
     },
     {
@@ -3987,7 +3983,8 @@
   "validation": {
     "tests": {
       "start": 24,
-      "final": 39,
+      "beforeAuditCorrection": 39,
+      "final": 42,
       "fail": 0
     },
     "currentIndependent": {
@@ -4004,21 +4001,116 @@
     },
     "repeatedGeneration": "All 24 files byte-identical after poisoning 22 regenerated files",
     "localRemoteParity": "All 24 files byte-identical; remote transport returns the same local bytes (mock)",
-    "realRemoteAudit": "Zero errors; fixed remote URLs, all 134 input fingerprints and non-current talent diagnostics match local",
+    "realRemoteAudit": "Zero errors; all 134 fixed-input fingerprints, talent diagnostics and localization metadata match local after the audit correction",
     "liveBuild": "npm run build completed using local fixed game inputs and real external feeds; all 24 JSON outputs semantically match the final checkout",
     "typecheck": {
+      "baseErrors": 83,
       "startErrors": 79,
+      "beforeAuditCorrectionErrors": 79,
       "finalErrors": 79,
       "newDiagnostics": 0,
-      "note": "Existing strict typecheck failure in tasks/updateconstants.ts; compared diagnostics after removing line/column positions"
+      "removedDiagnostics": [
+        {
+          "diagnostic": "tasks/updateconstants.ts(location): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.",
+          "count": 1
+        },
+        {
+          "diagnostic": "tasks/updateconstants.ts(location): error TS7006: Parameter 'key' implicitly has an 'any' type.",
+          "count": 1
+        },
+        {
+          "diagnostic": "tasks/updateconstants.ts(location): error TS7006: Parameter 'template' implicitly has an 'any' type.",
+          "count": 1
+        },
+        {
+          "diagnostic": "tasks/updateconstants.ts(location): error TS7006: Parameter 'attribs' implicitly has an 'any' type.",
+          "count": 1
+        }
+      ],
+      "note": "Same TypeScript 5.9.3, strict tsconfig and dependencies; compared diagnostic multisets after removing only line/column positions. Remaining errors are in tasks/updateconstants.ts; strict typecheck fails."
     },
-    "webIntegration": "Not executed"
+    "webIntegration": "Not executed",
+    "liveBuildRevision": "74bb4a008c426b7cd36e7617197f83bbc4e04166",
+    "liveBuildRerunForAuditCorrection": false,
+    "auditCorrection": {
+      "previousNonCurrent": {
+        "total": 805,
+        "missingNames": 3,
+        "unresolved": 314,
+        "statusCounts": {
+          "missing-name": 3,
+          "source-resolved": 486,
+          "unresolved": 314,
+          "legacy-fallback": 2
+        }
+      },
+      "correctedNonCurrent": {
+        "total": 800,
+        "missingNames": 3,
+        "unresolved": 311,
+        "statusCounts": {
+          "missing-name": 3,
+          "source-resolved": 484,
+          "unresolved": 311,
+          "legacy-fallback": 2
+        }
+      },
+      "generatedDataChanges": [],
+      "generatedHashesMatchPreviousVerification": true,
+      "note": "Three unresolved descriptions and two complete metadata texts were separated, not newly resolved; public exports are unchanged"
+    }
   },
   "limits": [
     "source-resolved means consistent with the pinned definition/template, not independently verified in-game behavior",
     "legacy-fallback preserves a public label, not a verified historical numeric game value",
     "Deleted definitions cannot be reconstructed from current localization alone",
     "The audit shares the generator collector; fixed explicit fixture assertions and a separate raw-definition numeric oracle provide additional evidence",
-    "Candidate-level value-alias conflicts may be unused by actual templates; only two inactive labels require conflicting values in this snapshot"
-  ]
+    "Candidate-level value-alias conflicts may be unused by actual templates; only two inactive labels require conflicting values in this snapshot",
+    "Non-current diagnostics are exported records, not authenticated historical talents; identified localization metadata is reported separately without removing existing exports"
+  ],
+  "localizationMetadata": {
+    "meaning": "Legacy tooltip description/note exports preserved for compatibility; excluded from talent status and missing-source-value classifications",
+    "entries": [
+      {
+        "name": "special_bonus_unique_clinkz_2_Note0",
+        "kind": "note",
+        "parent": "special_bonus_unique_clinkz_2",
+        "localizationKey": "dota_tooltip_ability_special_bonus_unique_clinkz_2_note0",
+        "sourceName": "Only steals the first ability",
+        "dname": "Only steals the first ability"
+      },
+      {
+        "name": "special_bonus_unique_tidehunter_10_description",
+        "kind": "description",
+        "parent": "special_bonus_unique_tidehunter_10",
+        "localizationKey": "dota_tooltip_ability_special_bonus_unique_tidehunter_10_description",
+        "sourceName": "Deals {s:bonus_building_pct_damage}% damage to buildings.",
+        "dname": "Deals {s:bonus_building_pct_damage}% damage to buildings."
+      },
+      {
+        "name": "special_bonus_unique_tidehunter_smash_on_blubber_description",
+        "kind": "description",
+        "parent": "special_bonus_unique_tidehunter_smash_on_blubber",
+        "localizationKey": "dota_tooltip_ability_special_bonus_unique_tidehunter_smash_on_blubber_description",
+        "sourceName": "Triggered attack has {s:bonus_smash_on_purge}% damage and is reflected damage.",
+        "dname": "Triggered attack has {s:bonus_smash_on_purge}% damage and is reflected damage."
+      },
+      {
+        "name": "special_bonus_unique_tinker_deploy_turrets_splash_radius_description",
+        "kind": "description",
+        "parent": "special_bonus_unique_tinker_deploy_turrets_splash_radius",
+        "localizationKey": "dota_tooltip_ability_special_bonus_unique_tinker_deploy_turrets_splash_radius_description",
+        "sourceName": "Missiles deal {s:bonus_splash_pct}% splash damage in a {s:bonus_radius_explosion} AoE",
+        "dname": "Missiles deal {s:bonus_splash_pct}% splash damage in a {s:bonus_radius_explosion} AoE"
+      },
+      {
+        "name": "special_bonus_unique_chen_2_description",
+        "kind": "description",
+        "parent": "special_bonus_unique_chen_2",
+        "localizationKey": "dota_tooltip_ability_special_bonus_unique_chen_2_description",
+        "sourceName": "Initial Heal fully heals. Heal over time is still applied.",
+        "dname": "Initial Heal fully heals. Heal over time is still applied."
+      }
+    ]
+  }
 }
