@@ -1,0 +1,285 @@
+{
+  "source": "https://github.com/dotabuff/d2vpkr/tree/cf0d37a32c8df338a7832fd32a282747969e9a5f/dota",
+  "copyright": "Dota 2 game-data and localization excerpts are copyright Valve Corporation. The repository's MIT license applies to its original code, not Valve game data.",
+  "copyrightSource": "https://github.com/dotabuff/d2vpkr/blob/cf0d37a32c8df338a7832fd32a282747969e9a5f/README.md#license",
+  "heroSource": "https://github.com/dotabuff/d2vpkr/blob/cf0d37a32c8df338a7832fd32a282747969e9a5f/dota/scripts/npc/heroes/npc_dota_hero_antimage.txt",
+  "heroes": {
+    "npc_dota_hero_antimage": {
+      "Ability10": "special_bonus_hp_regen_3",
+      "Ability11": "special_bonus_unique_antimage_manavoid_aoe",
+      "Ability12": "special_bonus_unique_antimage_5",
+      "Ability13": "special_bonus_unique_antimage_6",
+      "Ability14": "special_bonus_unique_antimage_3",
+      "Ability15": "special_bonus_unique_antimage_8",
+      "Ability16": "special_bonus_unique_antimage",
+      "Ability17": "special_bonus_unique_antimage_2"
+    }
+  },
+  "scripts": {
+    "bristleback_warpath": {
+      "AbilityValues": {
+        "damage_per_stack": {
+          "value": "12 16 20",
+          "special_bonus_facet_bristleback_berserk": "=5",
+          "special_bonus_unique_bristleback_3": "+18",
+          "CalculateSpellDamageTooltip": "0",
+          "DamageTypeTooltip": "DAMAGE_TYPE_PHYSICAL"
+        }
+      }
+    },
+    "clinkz_death_pact": {
+      "AbilityValues": {
+        "AbilityChargeRestoreTime": {
+          "value": "40",
+          "special_bonus_facet_clinkz_engulfing_step": "-10",
+          "special_bonus_unique_clinkz_9": "-10"
+        }
+      }
+    },
+    "kunkka_tidebringer": {
+      "AbilityValues": {
+        "movespeed_slow": {
+          "value": "0",
+          "special_bonus_unique_kunkka_tidebringer_slow": "-60"
+        },
+        "movespeed_slow_duration": {
+          "value": "0",
+          "special_bonus_unique_kunkka_tidebringer_slow": "+1"
+        }
+      }
+    },
+    "largo_frogstomp": {
+      "AbilityValues": {
+        "damage_per_stomp": {
+          "value": "36 48 60 72",
+          "special_bonus_unique_largo_1": "+15"
+        }
+      }
+    },
+    "lycan_summon_wolves": {
+      "AbilityValues": {
+        "wolf_bat": {
+          "value": "1.2 1.1 1.0 0.9 0.9 0.9",
+          "special_bonus_facet_lycan_spirit_wolves": "=0 =0 =0 =0 =0 =0",
+          "special_bonus_unique_lycan_2": "-25%"
+        }
+      }
+    },
+    "meepo_poof": {
+      "AbilityValues": {
+        "cast_duration": {
+          "value": "1.5",
+          "special_bonus_unique_meepo_poof_cast_point": "-.75"
+        }
+      }
+    },
+    "primal_beast_colossal": {
+      "AbilityValues": {
+        "trample_bonus": {
+          "value": "0",
+          "special_bonus_unique_primal_beast_colossal_trample": "2"
+        }
+      }
+    },
+    "pudge_meat_hook": {
+      "AbilityValues": {
+        "damage": {
+          "value": "150 220 290 360",
+          "special_bonus_facet_pudge_flayers_hook": "=80 =120 =160 =200",
+          "special_bonus_unique_pudge_7": "+150"
+        }
+      }
+    },
+    "silencer_curse_of_the_silent": {
+      "AbilityValues": {
+        "duration": {
+          "value": "6",
+          "special_bonus_unique_silencer_arcane_curse_duration": "+2",
+          "dynamic_value": "true"
+        },
+        "penalty_duration": {
+          "value": "2",
+          "special_bonus_unique_silencer_arcane_curse_duration": "+1"
+        }
+      }
+    },
+    "slark_essence_shift": {
+      "AbilityValues": {
+        "duration": {
+          "value": "10",
+          "hero_levelup": "+2.5",
+          "special_bonus_unique_slark_4": "+20"
+        }
+      }
+    },
+    "sniper_shrapnel": {
+      "AbilityValues": {
+        "shrapnel_damage": {
+          "value": "30 45 60 75",
+          "special_bonus_facet_sniper_scattershot": "=90 =160 =230 =300",
+          "special_bonus_unique_sniper_shrapnel_damage": "+30%"
+        }
+      }
+    },
+    "storm_spirit_overload": {
+      "AbilityValues": {
+        "overload_move_slow": {
+          "value": "-80",
+          "special_bonus_unique_storm_spirit_overload_aspd": "-25.0"
+        },
+        "overload_attack_slow": {
+          "value": "-90",
+          "special_bonus_unique_storm_spirit_overload_aspd": "-25.0"
+        }
+      }
+    },
+    "venomancer_poison_sting": {
+      "AbilityValues": {
+        "movement_speed": {
+          "value": "8",
+          "special_bonus_unique_venomancer_2": "10"
+        }
+      }
+    },
+    "kunkka_x_marks_the_spot": {
+      "AbilityValues": {
+        "ghostship_absorb": {
+          "value": "35",
+          "special_bonus_unique_kunkka_rum": "+15"
+        }
+      }
+    },
+    "kunkka_admirals_rum": {
+      "AbilityValues": {
+        "ghostship_absorb": {
+          "value": "18",
+          "special_bonus_unique_kunkka_rum": "+8"
+        }
+      }
+    },
+    "disruptor_kinetic_field": {
+      "AbilityValues": {
+        "damage_per_second": {
+          "value": "0",
+          "special_bonus_unique_disruptor_kinetic_damage": "+50"
+        }
+      }
+    },
+    "disruptor_kinetic_fence": {
+      "AbilityValues": {
+        "damage_per_second": {
+          "value": "0",
+          "special_bonus_unique_disruptor_kinetic_damage": "+60"
+        }
+      }
+    },
+    "pudge_rot": {
+      "AbilityValues": {
+        "rot_slow": {
+          "value": "-14 -20 -26 -32",
+          "special_bonus_unique_pudge_4": "+-10"
+        }
+      }
+    },
+    "razor_eye_of_the_storm": {
+      "AbilityValues": {
+        "strike_interval": {
+          "value": "0.7 0.6 0.5",
+          "special_bonus_unique_razor_2": "+-0.1"
+        }
+      }
+    },
+    "vengefulspirit_wave_of_terror": {
+      "AbilityValues": {
+        "armor_reduction": {
+          "value": "-3 -4 -5 -6",
+          "special_bonus_unique_vengeful_spirit_4": "+-3"
+        }
+      }
+    },
+    "juggernaut_healing_ward": {
+      "AbilityValues": {
+        "healing_ward_bonus_health": {
+          "value": "0",
+          "special_bonus_shard": "+1"
+        }
+      }
+    },
+    "ancient_apparition_death_rime": {
+      "AbilityValues": {
+        "damage": {
+          "value": "10",
+          "special_bonus_unique_ancient_apparition_6": "+50%"
+        },
+        "slow": {
+          "value": "2",
+          "special_bonus_unique_ancient_apparition_6": "+50%",
+          "display_type": "kDebuffPercentage"
+        },
+        "strength_decrease": {
+          "value": "0",
+          "special_bonus_unique_ancient_apparition_8": "+1.0"
+        }
+      }
+    },
+    "windrunner_focusfire": {
+      "AbilityValues": {
+        "focusfire_damage_reduction": {
+          "value": "-25",
+          "special_bonus_facet_windrunner_whirlwind": "-5",
+          "special_bonus_unique_windranger_8": "+10",
+          "CalculateSpellDamageTooltip": "0",
+          "DamageTypeTooltip": "DAMAGE_TYPE_NONE"
+        }
+      }
+    }
+  },
+  "tokens": {
+    "DOTA_Tooltip_Ability_special_bonus_unique_primal_beast_colossal_trample": "Colossal {s:bonus_trample_bonus}x Bonuses During Trample",
+    "DOTA_Tooltip_Ability_special_bonus_unique_largo_1": "+{s:bonus_damage_per_stomp} Frogstomp Damage",
+    "DOTA_Tooltip_ability_special_bonus_unique_pudge_7": "+{s:bonus_damage} Meat Hook Damage",
+    "DOTA_Tooltip_ability_special_bonus_unique_venomancer_2": "+{s:bonus_movement_speed}% Poison Sting Slow",
+    "DOTA_Tooltip_ability_special_bonus_unique_bristleback_3": "+{s:bonus_damage_per_stack} Warpath Damage Per Stack",
+    "DOTA_Tooltip_ability_special_bonus_unique_kunkka_tidebringer_slow": "Tidebringer applies {s:bonus_movespeed_slow}% slow for {s:bonus_movespeed_slow_duration}s",
+    "DOTA_Tooltip_ability_special_bonus_unique_clinkz_9": "-{s:bonus_AbilityChargeRestoreTime}s Death Pact Charge Restore Time",
+    "DOTA_Tooltip_ability_special_bonus_unique_lycan_2": "-{s:bonus_wolf_bat}% Summon Wolves BAT",
+    "DOTA_Tooltip_ability_special_bonus_unique_slark_4": "+{s:bonus_duration}s Essence Shift Duration",
+    "DOTA_Tooltip_ability_special_bonus_unique_storm_spirit_overload_aspd": "+{s:bonus_overload_move_slow}/{s:bonus_overload_move_slow}% Overload Attack/Movement Speed Slow",
+    "Dota_Tooltip_ability_special_bonus_unique_silencer_arcane_curse_duration": "+{s:bonus_duration}s/+{s:bonus_penalty_duration}s Arcane Curse Base/Penalty Duration",
+    "DOTA_Tooltip_ability_special_bonus_unique_sniper_shrapnel_damage": "+{s:bonus_shrapnel_damage}% Shrapnel Damage",
+    "DOTA_Tooltip_ability_special_bonus_unique_meepo_poof_cast_point": "-{s:bonus_cast_duration}s Poof Cast Duration",
+    "DOTA_Tooltip_ability_special_bonus_unique_kunkka_rum": "+{s:bonus_ghostship_absorb}% Admiral's Rum Damage Delayed",
+    "DOTA_Tooltip_ability_special_bonus_unique_disruptor_kinetic_damage": "+{s:bonus_damage_per_second} Kinetic Field Touch DPS",
+    "DOTA_Tooltip_ability_special_bonus_unique_ancient_apparition_6": "+{s:bonus_damage}% Death Rime Slow/Damage",
+    "DOTA_Tooltip_ability_special_bonus_unique_ancient_apparition_8": "+{s:bonus_strength_decrease} Death Rime Strength Reduction",
+    "DOTA_Tooltip_ability_special_bonus_unique_windranger_8": "-{s:bonus_focusfire_damage_reduction}% Focus Fire Damage Reduction"
+  },
+  "localizationMetadata": {
+    "source": "https://github.com/dotabuff/d2vpkr/blob/cf0d37a32c8df338a7832fd32a282747969e9a5f/dota/resource/localization/abilities_english.txt",
+    "strings": {
+      "DOTA_Tooltip_ability_special_bonus_unique_clinkz_2_Note0": "Only steals the first ability",
+      "DOTA_Tooltip_ability_special_bonus_unique_tidehunter_10_description": "Deals {s:bonus_building_pct_damage}% damage to buildings.",
+      "DOTA_Tooltip_ability_special_bonus_unique_tidehunter_smash_on_blubber_description": "Triggered attack has {s:bonus_smash_on_purge}% damage and is reflected damage.",
+      "DOTA_Tooltip_ability_special_bonus_unique_tinker_deploy_turrets_splash_radius_description": "Missiles deal {s:bonus_splash_pct}% splash damage in a {s:bonus_radius_explosion} AoE",
+      "DOTA_Tooltip_ability_special_bonus_unique_chen_2_description": "Initial Heal fully heals. Heal over time is still applied."
+    }
+  },
+  "historicalConflictSources": [
+    "https://github.com/dotabuff/d2vpkr/blob/cf0d37a32c8df338a7832fd32a282747969e9a5f/dota/scripts/npc/heroes/npc_dota_hero_kunkka.txt",
+    "https://github.com/dotabuff/d2vpkr/blob/cf0d37a32c8df338a7832fd32a282747969e9a5f/dota/scripts/npc/heroes/npc_dota_hero_disruptor.txt"
+  ],
+  "additionalSources": [
+    "https://github.com/dotabuff/d2vpkr/blob/cf0d37a32c8df338a7832fd32a282747969e9a5f/dota/scripts/npc/heroes/npc_dota_hero_pudge.txt",
+    "https://github.com/dotabuff/d2vpkr/blob/cf0d37a32c8df338a7832fd32a282747969e9a5f/dota/scripts/npc/heroes/npc_dota_hero_razor.txt",
+    "https://github.com/dotabuff/d2vpkr/blob/cf0d37a32c8df338a7832fd32a282747969e9a5f/dota/scripts/npc/heroes/npc_dota_hero_vengefulspirit.txt",
+    "https://github.com/dotabuff/d2vpkr/blob/cf0d37a32c8df338a7832fd32a282747969e9a5f/dota/scripts/npc/heroes/npc_dota_hero_ancient_apparition.txt",
+    "https://github.com/dotabuff/d2vpkr/blob/cf0d37a32c8df338a7832fd32a282747969e9a5f/dota/scripts/npc/heroes/npc_dota_hero_windrunner.txt",
+    "https://github.com/dotabuff/d2vpkr/blob/cf0d37a32c8df338a7832fd32a282747969e9a5f/dota/scripts/npc/heroes/npc_dota_hero_juggernaut.txt"
+  ],
+  "commentedSourceEvidence": {
+    "file": "dota/scripts/npc/heroes/npc_dota_hero_juggernaut.txt",
+    "line": 527,
+    "text": "//\"special_bonus_unique_juggernaut_2\" \"+2\"",
+    "meaning": "Commented out; excluded from parsed source, never used as a verified value"
+  }
+}

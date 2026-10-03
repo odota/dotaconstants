@@ -1,0 +1,4116 @@
+{
+  "runtime": {
+    "node": "v24.18.0",
+    "npm": "11.16.0",
+    "platform": "Windows",
+    "prettier": "3.9.9",
+    "typescript": "5.9.3"
+  },
+  "revisions": {
+    "base": "b4b5a8299de5f3e0704e62fdd04a6a54c4d4548e",
+    "start": "fc5d817b6d619747afaaa931c627f793f44c8ebf",
+    "round": ["abilities.json"],
+    "total": ["abilities.json"],
+    "auditCorrectionBase": "74bb4a008c426b7cd36e7617197f83bbc4e04166"
+  },
+  "input": {
+    "sourceRef": "cf0d37a32c8df338a7832fd32a282747969e9a5f",
+    "clientVersion": 6942,
+    "mode": "local",
+    "verification": "Git blob hashes compared with supplied fixed-commit GitHub tree",
+    "files": [
+      {
+        "file": "steam.inf",
+        "gitBlob": "84fa0a6836b34e6ca7103921317536b90102d981",
+        "sha256": "8bc1fa9d63d3e347f62e1c3f94c13c277cd32c70fe279e3eb3b3648e2a085a30"
+      },
+      {
+        "file": "scripts/chat_wheel.txt",
+        "gitBlob": "cd28a66df197472d0c4ca1b6ee04784c170a8a9c",
+        "sha256": "657793024d36b26168a61132a2b40b99902589fa75e0df0a14347cecdb85e48e"
+      },
+      {
+        "file": "resource/localization/abilities_english.txt",
+        "gitBlob": "d268cd40d450385112b98f516c4d2b08ef80d76a",
+        "sha256": "562494850a6a660994fcfe7ea39ce0b04ada85f30311a34635fa4a4e7e0cc5d0"
+      },
+      {
+        "file": "resource/localization/dota_english.txt",
+        "gitBlob": "4d21d7860057e7e85df680c7fb32965318ee2f7a",
+        "sha256": "19132a0d5dfee808942d81370abc2ca2814b9ed75c20fd295923fd0c9bdf2307"
+      },
+      {
+        "file": "resource/localization/hero_chat_wheel_english.txt",
+        "gitBlob": "6cff72b3c7cc3432987d034f42d06849ce4912c5",
+        "sha256": "9bb1e885484969b19c680b797546e057a8c62c92694dd3cc4015ac483d1f60bc"
+      },
+      {
+        "file": "resource/localization/hero_lore_english.txt",
+        "gitBlob": "4a1f6de84dbd7c910d4425f117dbda37dfba23f0",
+        "sha256": "7c175a0c5e5c4f15e17e215c39125a87c00ac82c1bbdfc0cf1bdd34e8d51d35c"
+      },
+      {
+        "file": "scripts/npc/items.txt",
+        "gitBlob": "c06f54f5a818bc0b738445cd71b951e00fe077fc",
+        "sha256": "3b0e786b5e3c1dbedf9fc51fd6507937654f8e6f7be9d702c3b7c544804baf33"
+      },
+      {
+        "file": "scripts/npc/neutral_items.txt",
+        "gitBlob": "8486df8324ff6728c92f27cc60e8dc75303839fb",
+        "sha256": "0935ad39d72909cd2800d62d083e55406b2a8eb85049373c1a4392bcf907a8d5"
+      },
+      {
+        "file": "scripts/npc/npc_abilities.txt",
+        "gitBlob": "788d630c6aa37a35f4a9b80b1117a1c3ce278dde",
+        "sha256": "040b8075832a8c5767bb2ad50ca5eb1dfda024a9c45d1d5b857d2911f2d97ab8"
+      },
+      {
+        "file": "scripts/npc/npc_ability_ids.txt",
+        "gitBlob": "c7f799264fc6f3e00af75356657874e2d9cebe13",
+        "sha256": "a4709374a249dcd9e98b1d996d53e44a944581c04b5d65c5afd36d40973de598"
+      },
+      {
+        "file": "scripts/npc/npc_heroes.txt",
+        "gitBlob": "c63e31fc073b6cdeef43cc077adf29e616f48afb",
+        "sha256": "03a201c16c98a1c2b7f26717f95b55d860d01affa8a9b7b283a243961ff7ceff"
+      },
+      {
+        "file": "scripts/npc/npc_units.txt",
+        "gitBlob": "4b5b7ab5761bd05a88b8bbad0c7b059f3f9a8220",
+        "sha256": "cbffa0e75f7802bae9d6dccff7d06821588f38e9a51ad53d6a643d75385bb4f4"
+      },
+      {
+        "file": "resource/localization/patchnotes/patchnotes_english.txt",
+        "gitBlob": "8d381ac77856f14fe44be815b09b55fe8b856493",
+        "sha256": "71ec97de5562f4d4fc83561586a4b360ba4a1e14b3f9b2d3ad0f249a2f6a26cf"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_abaddon.txt",
+        "gitBlob": "e368af543aea4a24509aa39d6cb5e766fc7f05bd",
+        "sha256": "11675d9923948833b336123ba5aa5ef8667e65dd6663a2e07934d557363419ad"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_abyssal_underlord.txt",
+        "gitBlob": "99fe80e14244132469ad214cfd66979078421e25",
+        "sha256": "31060e5fdf53b01592b172f9f40a1113f9b8af09b3494750bbe881f34461a5d8"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_alchemist.txt",
+        "gitBlob": "caaed0260e643774bbce5ae20b033214787cbf41",
+        "sha256": "865e2108c580ac9ea8819c4378d16bf49031d71b2fe9dbdd64a7f5951e1a6ba3"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_ancient_apparition.txt",
+        "gitBlob": "b32af788e3db0d4fe57042d930d6486e09fa0867",
+        "sha256": "cf50b6f14b62e4c62d9419b84569d22dbb046625ac126da43ca4a8aa1515cc91"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_antimage.txt",
+        "gitBlob": "4437937e3094d2c1c8623a47214e457c7b718293",
+        "sha256": "b70ba50c837db7379329dc1c515847dfa25a256b6252a115f39d2d7530579b11"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_arc_warden.txt",
+        "gitBlob": "7fb38b3f614938d28b08f1726eed490cf11fc73a",
+        "sha256": "9eff62939f7cc439a0a90359ced120628eea70bd677ed624a23cda9674337298"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_axe.txt",
+        "gitBlob": "ae581abb70f58d97ec21eb2b27cbb51ed49435cb",
+        "sha256": "c91a8721a951d45c5c010769f68a650474d512819bae6a191306b652c71b999f"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_bane.txt",
+        "gitBlob": "057a46edd8369b57928a91884f71931d5dad892d",
+        "sha256": "08156714cc63132d9beb80f54237b687652603e543658ae173fc2314b35d51d8"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_base.txt",
+        "gitBlob": "df52922ebd61b9e060123214d67cf14ed94aa76a",
+        "sha256": "f10e8783ee56c816db606cb14d61dc9909ef852846b1b03b1f0c8eb22f7827e7"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_batrider.txt",
+        "gitBlob": "bc0001e220c504e0fd38936ebf2693492e533740",
+        "sha256": "8d253dc40baad8501940fbf185e99f91ed242256a7931bca589fd0265b1b0313"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_beastmaster.txt",
+        "gitBlob": "1a3769c686008ab8494d333bd2509a655aeac63c",
+        "sha256": "b03b2f69c23df5889473952e0b2e86b1b4c453b973169625430229b7b504768b"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_bloodseeker.txt",
+        "gitBlob": "239f161c48c2f156b5bb77169d30240104466066",
+        "sha256": "9cb2d954bea2e0f7ad47e0d1833e6ed8a4679eba5d8fa8bd6c93ada412d227c5"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_bounty_hunter.txt",
+        "gitBlob": "12b8583504e6be329e398794fa3744d8c9b52d07",
+        "sha256": "92e67485426f711ee9c1563e9d4675b34f0cebed416267de616d2894f6b2eb3e"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_brewmaster.txt",
+        "gitBlob": "161612f883fe7a7890c3e766ea4f8b2b8c99931c",
+        "sha256": "f02e14baf4a85b34c1b04809b06972285a66f4c8435de1d6375b78a2a9d37dd5"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_bristleback.txt",
+        "gitBlob": "3f4932a7d1ed94499635cf4c216588ac00aa4cba",
+        "sha256": "2d8ca6edbae9a580a2faa49f798848d7beef87109dbac8c00e59f34bd68f7a34"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_broodmother.txt",
+        "gitBlob": "af8749632ed8f14cadd8d1eee056b48bbd5781ff",
+        "sha256": "5a4b3b2d76847fffc9256e96af16ecb43caef698eef7b0649ed0b74032f56627"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_centaur.txt",
+        "gitBlob": "7c44d0d0ae5c4d6d3ae6da8af4f038356774182b",
+        "sha256": "33c8ac9381898217373bea1d5deea95c33504e9e40505d64c64f3b8f0bac6404"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_chaos_knight.txt",
+        "gitBlob": "242fd3ac4d47eaa7f2682cb177abdf727d2acfb1",
+        "sha256": "d0288fc845f81f0445018401e8d35e4b615ce95656f9024078e1643f083aab47"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_chen.txt",
+        "gitBlob": "3bca2d9ff592f197263d91c4f4082b7609acd6f5",
+        "sha256": "81f0702a568829e578a059acc18a7982c1e42728940507c6b57ba9e06f3e7383"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_clinkz.txt",
+        "gitBlob": "2ee3cbfb12535014ef3223aded05da98785287ae",
+        "sha256": "8ec8b4e009b38fccf305d3303575cc9bef7c564856b7a12572c94bf64379b4af"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_crystal_maiden.txt",
+        "gitBlob": "29e1ef0473019aa077aa2d02764fb436ca706180",
+        "sha256": "b4b1bddb3448471cbeecc2e625264954ac7705b1e110b9d17e1514a5183f9151"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_dark_seer.txt",
+        "gitBlob": "00e11e1c9ab70058967626a84ee1bbcb94c20d8d",
+        "sha256": "36ae05c637f1dfabb457ae45510f73e52cfff890897329114eae2934c6a98ba3"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_dark_willow.txt",
+        "gitBlob": "4f11200948593ebdfc8083dadc65c2fa2e286a3c",
+        "sha256": "a98d88b30e37f3eb1c41b9758f5e2211aad7acc078be3bd7a490f8438efea97f"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_dawnbreaker.txt",
+        "gitBlob": "25255579250810f194c99df93cace40fa06783e3",
+        "sha256": "e48cc34a54eba8f94f49c31b39b40f81f93be5e4e20dd714dda6a8755f015419"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_dazzle.txt",
+        "gitBlob": "adde470f460f601cc3976d7cafa7f01a9a400b64",
+        "sha256": "63068fe4bb9160f4f325ed30aa675a3506f8a6c4396cb7fc2fee3a7ce595a8b0"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_death_prophet.txt",
+        "gitBlob": "52b985ce70bfa5a73be2d114c92aaafa45b4b4fd",
+        "sha256": "02e82c1b71d8720f090f1ce8462d9db6dc09bc6cc97a7f147c0837aa700fd5ec"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_disruptor.txt",
+        "gitBlob": "24d629b0a7de60b3b9fedfaaf9867721b79aa526",
+        "sha256": "cdb3a0cd22ba230b6114f0de07e35afd74dd292f8b71a49896b9d0bf13947b52"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_doom_bringer.txt",
+        "gitBlob": "0d21a97111f00eccec18a14c126e06686874139d",
+        "sha256": "fcfd0f36839a30217b482a7e9aa12d21b18482c0fcc3a3a5dba9c19c6d473b64"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_dragon_knight.txt",
+        "gitBlob": "a440b9bf5238a4083ed25a2683ff252eafababe9",
+        "sha256": "3dcfc11fbe634effac91207ead048537ffdda6b22ad030c7c097c1d43b3b2043"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_drow_ranger.txt",
+        "gitBlob": "495d35b28c94f31ffee449722f451bf1e9f38220",
+        "sha256": "6b39eaee2c9b731438cb89105a6edfc254c38b56286bb0e6ca17d72ede3afd7b"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_earthshaker.txt",
+        "gitBlob": "000e6d96e9f786b843a4d873beb8329a50a44a03",
+        "sha256": "9186c356dd2d69773164329a87835fba0797394a26342ff93a9d9ada53c7c797"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_earth_spirit.txt",
+        "gitBlob": "f817ea2c32ec8dac79fc72f9582cc98f74df6b87",
+        "sha256": "c2aebda190fbc46d113e26cfd11517c218da8f89df0db1a3890c2336c9ea9f65"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_elder_titan.txt",
+        "gitBlob": "262dddd9425087018b61626785e8dbbd61c68bdb",
+        "sha256": "8b14ccca63907596520a2c549886df5b2a1e617fc367f48e05e7ea03ec198295"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_ember_spirit.txt",
+        "gitBlob": "d26cf26be74e8695f9d2b96a71d4c391e42d3064",
+        "sha256": "00c8e8281c82609ad774b05197c1ff354f11df953de1bc197dacd5fa91eea650"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_enchantress.txt",
+        "gitBlob": "666500d1eb405bdab61cb92dc1d4256a43e1d3ea",
+        "sha256": "21d188f1df0d31bb713229dcabfc1f29b651d10a7580270881855802bbab8a23"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_enigma.txt",
+        "gitBlob": "81b27c997199e81631b43d69545b3159c57c8dd0",
+        "sha256": "82b1997cef2722aed8a519723a1379d6cf90ca4fc3c07c4202aa992a350d643a"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_faceless_void.txt",
+        "gitBlob": "a890d8a9b419c8bf241b5d50dfffa2f94e691642",
+        "sha256": "8813f14acfc6a229872961dba2c9997feae3fbb84644b83b1b983e9b8e1b4117"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_furion.txt",
+        "gitBlob": "a33e0798a8d82ee32bf365bcb7f8ffd2d25ecda7",
+        "sha256": "15643ed715f694ea69ab16d70bd2e76021948c51582f5827386a2606275b725d"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_grimstroke.txt",
+        "gitBlob": "cc3d1110bbe913996d45fc083dd8e5eda80f8595",
+        "sha256": "3bc0e0e3b97fdc40e856730b4a9deb79a69693551922130999976380573c970e"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_gyrocopter.txt",
+        "gitBlob": "f1063db710c5c9d881e96ad2c686a89e7ccaf5e7",
+        "sha256": "6f9d2f5a1ffecda0a80da2d2ffb7643453258f0259898dd213d99ab588aa414b"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_hoodwink.txt",
+        "gitBlob": "91406eb16aa1546c748d82f7116b8c5a048bfc02",
+        "sha256": "812803376feade46b4dbde73e7141f738f938a39917cd5cf84e5dc2c83d6191a"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_huskar.txt",
+        "gitBlob": "1956d8c5721c5813a37ab9038135fb00fbcfb114",
+        "sha256": "08a9a56368395aa482cf4bb69b5b1d87e01b0e9ea0a3795e9ed2ef3ef809b308"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_invoker.txt",
+        "gitBlob": "2386afba4e3743034ab36f16b21ce42baa41b53a",
+        "sha256": "72046fa3d6f49ce24e6c126ff93983ae859900039799b30895c95df9a8b17229"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_jakiro.txt",
+        "gitBlob": "909df468935716cb751d2efd02803235319d97aa",
+        "sha256": "da0a519bfad3795e143cd0f8e595d83ed20ea1354a8391beed27400aadcc0f34"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_juggernaut.txt",
+        "gitBlob": "c4916b7982bcca3144e27a8f9bd66eaca664248d",
+        "sha256": "00260da4289144a9cda71ff0fceffddde5df7d2f86c9edb063fbd5dbafc02469"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_keeper_of_the_light.txt",
+        "gitBlob": "2eaee50d998007679d7418cc0fcae4e82a468dba",
+        "sha256": "1c5a920a22c5f0c16c4d58430b0ae34504a241be27cbabbd824eecdd738f367b"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_kez.txt",
+        "gitBlob": "abc3045d658ccc458ae36a45c86d970fbc0d3ac9",
+        "sha256": "24928e5081473724824eec0381f4404c44cc7bf069ab86d1cc1259bc13d73f7f"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_kunkka.txt",
+        "gitBlob": "3d4c2644e10a9a41e3cd2186c7297f271e3a78ed",
+        "sha256": "485e9962fe1fbbc1e59986924f4c6692630309296de25e4eaf1ed77883c0c8fe"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_largo.txt",
+        "gitBlob": "442a3a0db8b3cb4aec28a414e2b34ab66049f1e2",
+        "sha256": "df497f4f7f5ead7bdd9ce28902006ed117ca0872ddc40c754d745c7dd633438e"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_legion_commander.txt",
+        "gitBlob": "00ee3dece5b3d92408282e544fbcae5f65c43e08",
+        "sha256": "07961ff69f2c14b83212b33e8f8013b012c9cf26245d6c01f804b0b81f66644b"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_leshrac.txt",
+        "gitBlob": "2d2f29a7d9baa00f305a818165b62bf08059c44e",
+        "sha256": "d28c42a4598c5a75717569cb970ade97839c4d07dc98ecee8b8d09d861df8b5f"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_lich.txt",
+        "gitBlob": "3325e27f38a7a5f27beee086ef58c296a7522b4d",
+        "sha256": "b2ec9e1aa401185354c4f685e5db97994b00816a8a915bbf52f63dbe9128be75"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_life_stealer.txt",
+        "gitBlob": "f76a738b9910050abf5b69fb35f3d1fe0caed476",
+        "sha256": "719ac762a3a40c9d5c99ada3b38759b9a0bc6666497f9938e9e8928c215fafe9"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_lina.txt",
+        "gitBlob": "bfab38cbd704a6a2124e59c2f0c03c44e789b719",
+        "sha256": "f360660bedce58d9561e0bd92422b1ecef48ba9b9a5c152793f3670b9430c504"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_lion.txt",
+        "gitBlob": "4955e5c54a03661c3dc6bc6479330c28183df213",
+        "sha256": "8734daf1360ea784a2cb81a3afcac9f4e3d3d128f5ed0dabe47897a80e01c1c6"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_lone_druid.txt",
+        "gitBlob": "df10398e7ac03f3e74369bee6c30e8f907da70d7",
+        "sha256": "22c9b0cc64dc7a9036fb905ef1f22e58973e987a4e694e565c3b8ea45ffeb926"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_luna.txt",
+        "gitBlob": "1e0ee3e27d1e0e5d56b8d7eb6032de94c1f2f88e",
+        "sha256": "96f7fb3388afcc02ac071da9beeb97f53ae5ea2ae41b95c172c16434fa60e747"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_lycan.txt",
+        "gitBlob": "36e06f43e3e4a2f18bf525865612a63c7dbd7f27",
+        "sha256": "ac015ee69c0123f0051d40fb934b13ec3dea38f19fcc485d2aac9fbcd0f97b38"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_magnataur.txt",
+        "gitBlob": "15ebb319cf5f10c6f0c88c662c124d6d0afa0ae3",
+        "sha256": "4438a73d05d4d3fdb257b90ae5678077555c581886c092713f9fbcf3b8b9aa96"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_marci.txt",
+        "gitBlob": "7442fc1aac8ab967cdce4f90c8013050c16e9841",
+        "sha256": "40ab8769ae90c5e68d6dabb52a9fb7205ccfa620540ca0cc537e72bec7471a10"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_mars.txt",
+        "gitBlob": "ba2a6284498d289c7fc2cd54bd77f54395c8c3ff",
+        "sha256": "56f70cf9f7b6086ee1155d3868113b65ab310b1567326ff80c2aa36deaf89423"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_medusa.txt",
+        "gitBlob": "1f051ffbcb315d61563d4d1c31c715a85505103e",
+        "sha256": "2e0ca286f7164f1160c2295eaa10dabffe7101f628c06c16b84a044ea63c6f53"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_meepo.txt",
+        "gitBlob": "a60c6c23c9f99d81e025905f4ca78ef414ae7d07",
+        "sha256": "bb58f171042bc0a686ceae28d52a051f197cf7f043349d49846389890decc67f"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_mirana.txt",
+        "gitBlob": "2206bf9d9040ae58472adc956f2866b283b0a1ea",
+        "sha256": "e73af694e0b980fdcbfbf15c6c47379069be062b39eb9c09956f37beb22748b8"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_monkey_king.txt",
+        "gitBlob": "2376c4c4b1048e440f61b02313e9169093c6e138",
+        "sha256": "6d7a10c3601871804fe1a69420f26192f09ff2267e138eb9799371bd448313a6"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_morphling.txt",
+        "gitBlob": "05f4756ea0ba1067564b5bc2cca69658dd2e5649",
+        "sha256": "f45b2aa29db738a48e50f6d345913f609a74068bf14bb93818159121543741bb"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_muerta.txt",
+        "gitBlob": "6692abac0a48bf6c12add035ca9affb60e1ac0db",
+        "sha256": "1829b058cd7b681db9cf1e044c676bcfc854c16b6e5f812329512afca0585b0c"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_naga_siren.txt",
+        "gitBlob": "53696d44f5da8a1efa120d349974da28764535de",
+        "sha256": "d92fae03aab80e520c37b53e82102e54cb5df74d8438547acd22168704825ef9"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_necrolyte.txt",
+        "gitBlob": "5c4018fa485726acffecf6a37cd40be0a9539855",
+        "sha256": "bf947f0cd4fbf34360751a57ba0196dcb5ac22ece9e52456822d55c41111854c"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_nevermore.txt",
+        "gitBlob": "28fd3e0f351ad748b8e5ccd84beb086aca970eb5",
+        "sha256": "67de2fc73b3bddf8c2b3bf7943aa1c9c10d3de5e8c9e219a6762cbe37dae3371"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_night_stalker.txt",
+        "gitBlob": "2f62186fb3e6659cafb0bef87bb5c291462798ab",
+        "sha256": "84d87307cbfa65fa2ad11da4de879bab64440197e9697afaa9f3ed8e3bc7e0b4"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_nyx_assassin.txt",
+        "gitBlob": "d85fb12a44f22e38eb45b6b644c664db5f90760a",
+        "sha256": "e91be5a2672c0f4915f756366973e2af4ad04e5d8293a23c46fe4ad3f848c068"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_obsidian_destroyer.txt",
+        "gitBlob": "6eccbd2ce5aea21dcc9574fad451e10f012f06cd",
+        "sha256": "e17b41eabff8bf88724d79dfaab93b7d71f7fdfb7585e5fe11a415d642d89e78"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_ogre_magi.txt",
+        "gitBlob": "9484020195ec197cab543b58c24153d161762a8b",
+        "sha256": "764bd9e0e3b357f09ef25c8af1118aaee40cac48a8b31a4349c292fb80b71ad6"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_omniknight.txt",
+        "gitBlob": "382a78292b9c4554b5b12bacb4154d0449b0347c",
+        "sha256": "c8f030c542ace2c12940d6e7c768557f23be9962051569014db4009d4108ceab"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_oracle.txt",
+        "gitBlob": "54da15ec6daf373a8dbfb8409fa59b808a9362c9",
+        "sha256": "7549120a705d6d8a7c8d02d5dd96f21955d5a9716702bfb42bf422e2082b5982"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_pangolier.txt",
+        "gitBlob": "b6287228150fe27ecd1e94da2c073b15682e60b3",
+        "sha256": "5ae02ae8296de9b5b2395dd0f3b3209c952d58a2cdba767ecbea4e16b1348e54"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_phantom_assassin.txt",
+        "gitBlob": "72d14d2d825abaf6223e8eb5eb49b042506382f1",
+        "sha256": "78f9c1ae238b3ecd2e41288478fb9c545fd8ab8476f2309b6a0a4c46a70b4b88"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_phantom_lancer.txt",
+        "gitBlob": "dc368797aa0554543fba562dcea064e2e0595339",
+        "sha256": "14eeb5b8335bc9c506ed87836724d9c240ef9c6e0f8f95e1726d9dd4a16988d3"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_phoenix.txt",
+        "gitBlob": "3e35c3e963d02171cca557a15f9d3192f790acc3",
+        "sha256": "543777021974e6f751f62484457fb9c9345fe9b3d9dd3cded762883af425fe8f"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_primal_beast.txt",
+        "gitBlob": "b05fd7414378e3a555bb474a7918d1b3ee666a2b",
+        "sha256": "8a29f29fd3de71ef580be8347d5e6893714fb5f88aaa653c7f5017f80a66b325"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_puck.txt",
+        "gitBlob": "8203c92b4769094502172eab4416109a58041509",
+        "sha256": "f46e4f17fb0fab23f7d39ff60ea11a7e0dc61cfda5c6b60e30bc20313a4f3b62"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_pudge.txt",
+        "gitBlob": "dc4d0635108626dbc9e206c3e256745f7a13d8f6",
+        "sha256": "01ac9e175c2127bb00839ef8356fdb09b89fbff81e16d80fded83664adc975fa"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_pugna.txt",
+        "gitBlob": "7667f7797bd98eb0c4b64e10e9738b131de5a94a",
+        "sha256": "a15342f72afec6b2344247496e323865a50b44b45a4090f23dad52069ce795df"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_queenofpain.txt",
+        "gitBlob": "ec3fa162374d1acbaf16d6368a00067364eda6a0",
+        "sha256": "f8030278b45490cb471c96f102c6412e29bd79850cbca7a8cbf85f52bf3ebe25"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_rattletrap.txt",
+        "gitBlob": "ef3ef0821f735246d97cbcb1e130a63790aeb08a",
+        "sha256": "f02ec8cb68002dd8f95b8b01c16f70748148cce1e93f2e08459e2f1f3f4f1980"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_razor.txt",
+        "gitBlob": "18fb195be98555a8324977543d94614adeb41e8a",
+        "sha256": "3ea4b82a81217cd4851343215ef5b7254e768cef3190c27ecef7ece5cb3d2dab"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_riki.txt",
+        "gitBlob": "43efbbf739272708b21f21098a576b9e909881f8",
+        "sha256": "e3a04044357727cc923c8eeac1d4b1d9ced4b8f9cb03a86d4ba33ca4e68e80c8"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_ringmaster.txt",
+        "gitBlob": "6d57fd0ddfcb11331168094ffacb7b12b0541e45",
+        "sha256": "fa3b8bd3692fbe4b7616d30bb8acdc75eae621a74fad2139e3094d480d33e270"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_rubick.txt",
+        "gitBlob": "94ccdf175c3a2c87f242f987bd9fb8eaeb2fe8fc",
+        "sha256": "71355bd507105b5ecf11b42019c452e43a4fdbb2cb4fa1745e1f73cb6cd9b7ba"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_sand_king.txt",
+        "gitBlob": "d4208862e74075c33b71cf880bc3f0a042bde658",
+        "sha256": "afac0562cc1f4f06da37cc4d95ce39591cc69867765985e331a5d2ae74c7521a"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_shadow_demon.txt",
+        "gitBlob": "c6c9ccc4ceea2fe1c7700f314e46aa52e4d76526",
+        "sha256": "c8fd2fc5e3d43052feb85d7a09a4ebd026857ce7c615088bc9f45a7134e4cecc"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_shadow_shaman.txt",
+        "gitBlob": "d4ddc49cfdc1315c8eb9de8cb0822236658e5387",
+        "sha256": "762dfd6468712a21ed5c0e8bb16b23580e7da8edbbf35f5f0654313b143a4539"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_shredder.txt",
+        "gitBlob": "b914ade56a988ae9ff2b9538c91f29a5270ecc6e",
+        "sha256": "7eb19bdbb9e681ee0191405e4539174d79ff52526df665e3d9af989a185c75df"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_silencer.txt",
+        "gitBlob": "e5ae58df6bfa11b5091d028ad120e1d0325afb12",
+        "sha256": "fd08daf8692f57bc35f654b055c4cc95496e7ea2a75853fdd22e37bb190d0bb1"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_skeleton_king.txt",
+        "gitBlob": "59b0995f760c1227d40a81c5f8668d746406e0cc",
+        "sha256": "dea472e68d3c6b427b7342a5798afa66a19b3be3a8272a9ee29c74071d4d409d"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_skywrath_mage.txt",
+        "gitBlob": "e68bd4cb1a023036bcff6d235adb671874e4c3d9",
+        "sha256": "789359b121f3035323319a0bccb9ca97b49cd068540846cd3aadbea31abb54f9"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_slardar.txt",
+        "gitBlob": "3f77c59be82478d6468366d26c644b76286ead50",
+        "sha256": "06b818604122f6e18c88cd01a52ce9c766aa5b0b1b2e622897ba49a6388c0619"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_slark.txt",
+        "gitBlob": "c33b8fa62c75fd724333be5707cb6957e03a6575",
+        "sha256": "c3bf34ff95deb386eaa918b14920ecd76b5a2a6060d7c07868ac39b8047cc752"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_snapfire.txt",
+        "gitBlob": "e4dd8ec47947d0865c2fa33ae06cd0bca2e397da",
+        "sha256": "dd46946d21a9bcdbf2c606ab276c5a1721ed62d28f7d3089344caab73225caf2"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_sniper.txt",
+        "gitBlob": "4204bbfbed6e067862510abdc7f3c30c6c4296bf",
+        "sha256": "ffa8d1a8132d40f3c48e4a0ff093ee3973dc5b627a9bd370e7273b53afe900db"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_spectre.txt",
+        "gitBlob": "6f869f2be9b4c879af5f4f910ba9df930dab5f8b",
+        "sha256": "9584e0d51320a6032595c8b808593815dcc7591f350e060d6c0b70a08048daba"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_spirit_breaker.txt",
+        "gitBlob": "0cbc6ea2cf1eb8b70005e318f02b45f5cd8de3b3",
+        "sha256": "5b906de593730ec8d1b906af62f6b916ea115a08e241fb32b76a3037d6db278e"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_storm_spirit.txt",
+        "gitBlob": "ee74aa69f9a7490ecbe129118173f86d963c30cb",
+        "sha256": "02996ee5b413c86b193d109253e723ed3dabe87cbbe5002362f863b1b02c823c"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_sven.txt",
+        "gitBlob": "ccb29ab461cc41ac8e9983c9650897ce1cdf5983",
+        "sha256": "2e82f619775e4b747282ec4150126e56dfbbf898687869c012c2c93c0dac527c"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_target_dummy.txt",
+        "gitBlob": "b4a3c531b0641f598589b6dfc607814739f826f8",
+        "sha256": "ce72c0ce6575970d6d4cbedf3c74da6ffe09d83291a55ed311c462e5e7cef2c2"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_techies.txt",
+        "gitBlob": "7b759cd74647e62911f62d5f7da1db9b9188d542",
+        "sha256": "d5971d8c271433460e11b696f0dc123cf1eb9815cf2c14f98a7f1ab0a951cc60"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_templar_assassin.txt",
+        "gitBlob": "d16bf0638d38cf995ad75fbc066f47f1195b24f5",
+        "sha256": "2ca248e87d7ee36084946e53795a25d6c8e849725db5d6799deec8d8991d7c63"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_terrorblade.txt",
+        "gitBlob": "1cf9c68ca5b8d4281d44c94c2249a3edc76f8f25",
+        "sha256": "4b597ba8251d4eed9cb1a3170e21e5708faec0a5018964010b384f99732343d5"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_tidehunter.txt",
+        "gitBlob": "18a5c51b04aa3b177a5fb94f51f4b41066abee2f",
+        "sha256": "8c96be768e85e8d845bc6ef04f99ad261c0f9bd5c0e45503aedb6ab4c5c78cda"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_tinker.txt",
+        "gitBlob": "7db5c3e0dcbb4bb10ba6a8445d0b3a1ffd612c16",
+        "sha256": "8f0eba9be66697dd5a8486e8eee630fc98fb2d20d9253011221b677f8f380c02"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_tiny.txt",
+        "gitBlob": "a212c010a19920aa345ed65f955c5f586eb68f4e",
+        "sha256": "ce12f32f1f9d1888c94d531d74064ead5ffc465780ef1b0c8ae0a4b7436152dd"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_treant.txt",
+        "gitBlob": "b73eee5faa89ce4011d7808ac898dfa3c0769af4",
+        "sha256": "00c26fea42a34dad6a22d7d88d65dc1a9662d80dcbdabb6d24f24730cdae18cf"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_troll_warlord.txt",
+        "gitBlob": "c48d5982d0d926c1d37b2b1b7c31225394f978a0",
+        "sha256": "e0ee0f9b42f07cc6924e422f831d85dde557cb40dccbd4a9eea1c058c894f722"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_tusk.txt",
+        "gitBlob": "6a901afed3b01c2d6ef085baedf1785e71d964b1",
+        "sha256": "d3da9432175b268fafe3e0e74be0a8152c9a3659de85ae4a2ab7d51524ccce37"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_undying.txt",
+        "gitBlob": "ea805e1d6f273af6c863a37bbad15d8bcf5a3547",
+        "sha256": "1fb91721511593859efa376bd6adc7bc90ff9e0033dd6e6607ca8bd743628deb"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_ursa.txt",
+        "gitBlob": "c911eae4a8f719fb510c6c2e6bfa7ab0ea4f2860",
+        "sha256": "613c2cefe0a70e0a5582c5dd9def317fb93da2a346d0da650070a147b4faad9a"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_vengefulspirit.txt",
+        "gitBlob": "0ffc799da80420bd7a52efbc8e5d9f119c7b4608",
+        "sha256": "3853993f2cdf388a31d6c5e4bdf60a6904a0431496ffef278995e5a40298739b"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_venomancer.txt",
+        "gitBlob": "8f75b6ede2f4a21b66315bedb5de83371144f28f",
+        "sha256": "f2255c29b367754b84424d560763568f9688d8453711b8f19aec028ee766f4a7"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_viper.txt",
+        "gitBlob": "08651981f71869b526eec4bdca3e05f32ded8e0f",
+        "sha256": "1b8df453d84e4107199dde0f13a4107e6030ebad56f6f259beceded88ac056ca"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_visage.txt",
+        "gitBlob": "69ae47b91bcd4640a09f69e3d3a8a716825fad50",
+        "sha256": "a4f1e1932a55cce670298791e4d2c6d1ee65310550f963bfdd8db8f865115123"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_void_spirit.txt",
+        "gitBlob": "83b9aae10f64bed2a9505eea9a1a22ec54bde71e",
+        "sha256": "25fa3af6f39a93b4aa1a964dfdd7596f813da3a6827c370b6152c3d714134a3b"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_warlock.txt",
+        "gitBlob": "f47e00f5332e9c4ac66fc5a80bf82cda2a7d8e0e",
+        "sha256": "175304bf3cb299f8dd67429f44a44ad411e2005e827c3eddd8c7317f3b77553c"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_weaver.txt",
+        "gitBlob": "8a3fbbe9f359a6b18c2e70b0f3845ee56613b8f4",
+        "sha256": "e2579ede6833706e48202a7c84889f979a8dbf7c4d75de83b2dcfe6d8b5c0d28"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_windrunner.txt",
+        "gitBlob": "33f25c2337248afb0d3ae8a12c4a8388c6f47a54",
+        "sha256": "16ee6d99ff21c90328a04e04d16f7bbb4bc9d281ba853454d58b2d3b4fed0263"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_winter_wyvern.txt",
+        "gitBlob": "26bd55d87fdeb3c9141cc15f4d27ab1697a4debd",
+        "sha256": "fc42a7c61ac296cfa85936c12b8402aa6d23c85dd4e1edd071523db41fff6f4f"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_wisp.txt",
+        "gitBlob": "f7228b0efd98c446423ec90455b56f21812b3767",
+        "sha256": "8686a091ec2739935175691a8606fbf75ffb0b67dfb6d2d620c02530cc2dfdab"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_witch_doctor.txt",
+        "gitBlob": "bd3789c6e7df378c8ea8490c230dad3e01897389",
+        "sha256": "9bf79ef6a42ed2f24f5b26e558799eb54a5ef048e82a5fda063ed99f3561f213"
+      },
+      {
+        "file": "scripts/npc/heroes/npc_dota_hero_zuus.txt",
+        "gitBlob": "27c325c0d930c6107f9b4b41d1b4adfeef296faf",
+        "sha256": "e1a5d9c91fa66a70c233912115244d4ec8c0e388b76770d54a81404c3733a15c"
+      }
+    ]
+  },
+  "counts": {
+    "base": {
+      "current": {
+        "total": 973,
+        "missingNames": 1,
+        "unresolved": 6,
+        "missingIds": 0
+      },
+      "nonCurrent": {
+        "total": 800,
+        "missingNames": 3,
+        "unresolved": 313
+      },
+      "localizationMetadata": {
+        "total": 5,
+        "unresolved": 3,
+        "missingNames": 0
+      }
+    },
+    "start": {
+      "current": {
+        "total": 973,
+        "missingNames": 0,
+        "unresolved": 0,
+        "missingIds": 0
+      },
+      "nonCurrent": {
+        "total": 800,
+        "missingNames": 3,
+        "unresolved": 313
+      },
+      "localizationMetadata": {
+        "total": 5,
+        "unresolved": 3,
+        "missingNames": 0
+      }
+    },
+    "final": {
+      "current": {
+        "total": 973,
+        "missingNames": 0,
+        "unresolved": 0,
+        "missingIds": 0
+      },
+      "nonCurrent": {
+        "total": 800,
+        "missingNames": 3,
+        "unresolved": 311
+      },
+      "localizationMetadata": {
+        "total": 5,
+        "unresolved": 3,
+        "missingNames": 0
+      }
+    },
+    "sourceUnresolvedNonCurrent": 313,
+    "legacyFallbacks": [
+      {
+        "name": "special_bonus_unique_kunkka_rum",
+        "sourceName": "+{s:bonus_ghostship_absorb}% Admiral's Rum Damage Delayed",
+        "dname": "+8% Admiral's Rum Damage Delayed"
+      },
+      {
+        "name": "special_bonus_unique_disruptor_kinetic_damage",
+        "sourceName": "+{s:bonus_damage_per_second} Kinetic Field Touch DPS",
+        "dname": "+60 Kinetic Field Touch DPS"
+      }
+    ],
+    "nonCurrentStatusCounts": {
+      "missing-name": 3,
+      "source-resolved": 484,
+      "unresolved": 311,
+      "legacy-fallback": 2
+    },
+    "nonCurrentMeaning": "Non-current special_bonus exports excluding identified localization metadata; not authenticated historical talents"
+  },
+  "coverage": {
+    "scripts": 1957,
+    "modifiers": 1216,
+    "multipleTalentsPerAttribute": [],
+    "adjacentUpgradeFields": [
+      {
+        "ability": "pudge_meat_hook",
+        "attribute": "damage",
+        "talents": ["special_bonus_unique_pudge_7"]
+      },
+      {
+        "ability": "tiny_toss_tree",
+        "attribute": "bonus_damage",
+        "talents": ["special_bonus_unique_tiny_7"]
+      },
+      {
+        "ability": "windrunner_focusfire",
+        "attribute": "focusfire_damage_reduction",
+        "talents": ["special_bonus_unique_windranger_8"]
+      },
+      {
+        "ability": "witch_doctor_death_ward",
+        "attribute": "damage",
+        "talents": ["special_bonus_unique_witch_doctor_5"]
+      },
+      {
+        "ability": "sniper_shrapnel",
+        "attribute": "shrapnel_damage",
+        "talents": ["special_bonus_unique_sniper_shrapnel_damage"]
+      },
+      {
+        "ability": "phantom_assassin_coup_de_grace",
+        "attribute": "crit_chance",
+        "talents": ["special_bonus_unique_phantom_assassin_2"]
+      },
+      {
+        "ability": "phantom_assassin_coup_de_grace",
+        "attribute": "dagger_crit_chance",
+        "talents": ["special_bonus_unique_phantom_assassin_2"]
+      },
+      {
+        "ability": "clinkz_death_pact",
+        "attribute": "AbilityChargeRestoreTime",
+        "talents": ["special_bonus_unique_clinkz_9"]
+      },
+      {
+        "ability": "lycan_summon_wolves",
+        "attribute": "wolf_bat",
+        "talents": ["special_bonus_unique_lycan_2"]
+      },
+      {
+        "ability": "shadow_demon_demonic_purge",
+        "attribute": "charge_restore_time",
+        "talents": ["special_bonus_unique_shadow_demon_9"]
+      },
+      {
+        "ability": "bristleback_warpath",
+        "attribute": "damage_per_stack",
+        "talents": ["special_bonus_unique_bristleback_3"]
+      },
+      {
+        "ability": "phoenix_supernova",
+        "attribute": "max_hero_attacks_scepter",
+        "talents": ["special_bonus_unique_phoenix_1"]
+      },
+      {
+        "ability": "pangolier_gyroshell",
+        "attribute": "duration",
+        "talents": ["special_bonus_unique_pangolier_6"]
+      },
+      {
+        "ability": "hoodwink_sharpshooter",
+        "attribute": "max_damage",
+        "talents": ["special_bonus_unique_hoodwink_sharpshooter_damage"]
+      },
+      {
+        "ability": "largo_song_fight_song",
+        "attribute": "damage_per_stack",
+        "talents": ["special_bonus_unique_largo_7"]
+      }
+    ],
+    "objectModifiers": [],
+    "numericEquivalents": [],
+    "caseInsensitiveNameMatches": [
+      "special_bonus_unique_silencer_arcane_curse_duration"
+    ],
+    "mixedCasePlaceholderRecords": 227,
+    "unlocalizedAbilityModifiers": [
+      {
+        "talent": "special_bonus_unique_furion_arboreal_might_trees",
+        "key": "bonus_max_trees",
+        "ability": "furion_arboreal_might",
+        "attribute": "max_trees",
+        "raw": "+8",
+        "priority": 1,
+        "condition": "base",
+        "semantic": "[\"[\\\"+\\\",\\\"8\\\",\\\"\\\"]\"]",
+        "display": "8"
+      },
+      {
+        "talent": "special_bonus_unique_ancient_apparition_6",
+        "key": "bonus_damage",
+        "ability": "ancient_apparition_death_rime",
+        "attribute": "damage",
+        "raw": "+50%",
+        "priority": 1,
+        "condition": "base",
+        "semantic": "[\"[\\\"+\\\",\\\"50\\\",\\\"%\\\"]\"]",
+        "display": "50"
+      },
+      {
+        "talent": "special_bonus_unique_ancient_apparition_6",
+        "key": "bonus_slow",
+        "ability": "ancient_apparition_death_rime",
+        "attribute": "slow",
+        "raw": "+50%",
+        "priority": 1,
+        "condition": "base",
+        "semantic": "[\"[\\\"+\\\",\\\"50\\\",\\\"%\\\"]\"]",
+        "display": "50"
+      },
+      {
+        "talent": "special_bonus_unique_ancient_apparition_8",
+        "key": "bonus_strength_decrease",
+        "ability": "ancient_apparition_death_rime",
+        "attribute": "strength_decrease",
+        "raw": "+1.0",
+        "priority": 1,
+        "condition": "base",
+        "semantic": "[\"[\\\"+\\\",\\\"1\\\",\\\"\\\"]\"]",
+        "display": "1.0"
+      },
+      {
+        "talent": "special_bonus_unique_timbersaw_4",
+        "key": "bonus_slow",
+        "ability": "shredder_chakram_2",
+        "attribute": "slow",
+        "raw": "+6",
+        "priority": 1,
+        "condition": "base",
+        "semantic": "[\"[\\\"+\\\",\\\"6\\\",\\\"\\\"]\"]",
+        "display": "6"
+      },
+      {
+        "talent": "special_bonus_unique_marci_guardian_lifesteal",
+        "key": "bonus_lifesteal_pct",
+        "ability": "marci_guardian",
+        "attribute": "lifesteal_pct",
+        "raw": "+10",
+        "priority": 1,
+        "condition": "base",
+        "semantic": "[\"[\\\"+\\\",\\\"10\\\",\\\"\\\"]\"]",
+        "display": "10"
+      },
+      {
+        "talent": "special_bonus_unique_marci_guardian_damage",
+        "key": "bonus_bonus_damage",
+        "ability": "marci_guardian",
+        "attribute": "bonus_damage",
+        "raw": "+20",
+        "priority": 1,
+        "condition": "base",
+        "semantic": "[\"[\\\"+\\\",\\\"20\\\",\\\"\\\"]\"]",
+        "display": "20"
+      }
+    ],
+    "allCandidateConflicts": 77,
+    "conflictsUsedByTemplates": [
+      {
+        "talent": "special_bonus_unique_disruptor_kinetic_damage",
+        "key": "bonus_damage_per_second",
+        "candidates": [
+          {
+            "talent": "special_bonus_unique_disruptor_kinetic_damage",
+            "key": "bonus_damage_per_second",
+            "ability": "disruptor_kinetic_field",
+            "attribute": "damage_per_second",
+            "raw": "+50",
+            "priority": 2,
+            "condition": "base",
+            "semantic": "[\"[\\\"+\\\",\\\"50\\\",\\\"\\\"]\"]",
+            "display": "50"
+          },
+          {
+            "talent": "special_bonus_unique_disruptor_kinetic_damage",
+            "key": "bonus_damage_per_second",
+            "ability": "disruptor_kinetic_fence",
+            "attribute": "damage_per_second",
+            "raw": "+60",
+            "priority": 2,
+            "condition": "base",
+            "semantic": "[\"[\\\"+\\\",\\\"60\\\",\\\"\\\"]\"]",
+            "display": "60"
+          }
+        ]
+      },
+      {
+        "talent": "special_bonus_unique_kunkka_rum",
+        "key": "bonus_ghostship_absorb",
+        "candidates": [
+          {
+            "talent": "special_bonus_unique_kunkka_rum",
+            "key": "bonus_ghostship_absorb",
+            "ability": "kunkka_x_marks_the_spot",
+            "attribute": "ghostship_absorb",
+            "raw": "+15",
+            "priority": 2,
+            "condition": "base",
+            "semantic": "[\"[\\\"+\\\",\\\"15\\\",\\\"\\\"]\"]",
+            "display": "15"
+          },
+          {
+            "talent": "special_bonus_unique_kunkka_rum",
+            "key": "bonus_ghostship_absorb",
+            "ability": "kunkka_admirals_rum",
+            "attribute": "ghostship_absorb",
+            "raw": "+8",
+            "priority": 2,
+            "condition": "base",
+            "semantic": "[\"[\\\"+\\\",\\\"8\\\",\\\"\\\"]\"]",
+            "display": "8"
+          }
+        ]
+      }
+    ],
+    "commentedDefinitions": ["special_bonus_unique_invoker_chaos_meteor_size"],
+    "commentedSourceReferences": [
+      {
+        "name": "special_bonus_unique_juggernaut_blade_fury_cooldown",
+        "raw": "-3",
+        "file": "scripts/npc/heroes/npc_dota_hero_juggernaut.txt",
+        "line": 440
+      },
+      {
+        "name": "special_bonus_unique_juggernaut_healing_ward_heal",
+        "raw": "+1",
+        "file": "scripts/npc/heroes/npc_dota_hero_juggernaut.txt",
+        "line": 505
+      },
+      {
+        "name": "special_bonus_unique_juggernaut_2",
+        "raw": "+2",
+        "file": "scripts/npc/heroes/npc_dota_hero_juggernaut.txt",
+        "line": 527
+      },
+      {
+        "name": "special_bonus_unique_juggernaut_2",
+        "raw": "+2",
+        "file": "scripts/npc/heroes/npc_dota_hero_juggernaut.txt",
+        "line": 533
+      },
+      {
+        "name": "special_bonus_unique_juggernaut_blade_form_agility_per_stack",
+        "raw": "+1",
+        "file": "scripts/npc/heroes/npc_dota_hero_juggernaut.txt",
+        "line": 699
+      },
+      {
+        "name": "special_bonus_unique_nevermore_2",
+        "raw": "+120",
+        "file": "scripts/npc/heroes/npc_dota_hero_nevermore.txt",
+        "line": 337
+      },
+      {
+        "name": "special_bonus_unique_nevermore_2",
+        "raw": "+120",
+        "file": "scripts/npc/heroes/npc_dota_hero_nevermore.txt",
+        "line": 413
+      },
+      {
+        "name": "special_bonus_unique_nevermore_2",
+        "raw": "+120",
+        "file": "scripts/npc/heroes/npc_dota_hero_nevermore.txt",
+        "line": 490
+      },
+      {
+        "name": "special_bonus_unique_nevermore_1",
+        "raw": "+2",
+        "file": "scripts/npc/heroes/npc_dota_hero_nevermore.txt",
+        "line": 556
+      },
+      {
+        "name": "special_bonus_facet_nevermore_lasting_presence",
+        "raw": "+2",
+        "file": "scripts/npc/heroes/npc_dota_hero_nevermore.txt",
+        "line": 628
+      },
+      {
+        "name": "special_bonus_facet_nevermore_lasting_presence",
+        "raw": "+60",
+        "file": "scripts/npc/heroes/npc_dota_hero_nevermore.txt",
+        "line": 633
+      },
+      {
+        "name": "special_bonus_scepter",
+        "raw": "+5",
+        "file": "scripts/npc/heroes/npc_dota_hero_nevermore.txt",
+        "line": 784
+      },
+      {
+        "name": "special_bonus_unique_razor_3",
+        "raw": "-1",
+        "file": "scripts/npc/heroes/npc_dota_hero_razor.txt",
+        "line": 537
+      },
+      {
+        "name": "special_bonus_scepter",
+        "raw": "3",
+        "file": "scripts/npc/heroes/npc_dota_hero_vengefulspirit.txt",
+        "line": 433
+      },
+      {
+        "name": "special_bonus_scepter",
+        "raw": "=10",
+        "file": "scripts/npc/heroes/npc_dota_hero_vengefulspirit.txt",
+        "line": 438
+      },
+      {
+        "name": "special_bonus_scepter",
+        "raw": "120",
+        "file": "scripts/npc/heroes/npc_dota_hero_vengefulspirit.txt",
+        "line": 443
+      },
+      {
+        "name": "special_bonus_unique_tidehunter_9",
+        "raw": "+40",
+        "file": "scripts/npc/heroes/npc_dota_hero_tidehunter.txt",
+        "line": 486
+      },
+      {
+        "name": "special_bonus_unique_witch_doctor_1",
+        "raw": "+75",
+        "file": "scripts/npc/heroes/npc_dota_hero_witch_doctor.txt",
+        "line": 607
+      },
+      {
+        "name": "special_bonus_unique_witch_doctor_1",
+        "raw": "+75",
+        "file": "scripts/npc/heroes/npc_dota_hero_witch_doctor.txt",
+        "line": 612
+      },
+      {
+        "name": "special_bonus_scepter",
+        "raw": "700",
+        "file": "scripts/npc/heroes/npc_dota_hero_tinker.txt",
+        "line": 503
+      },
+      {
+        "name": "special_bonus_unique_tinker_deploy_turrets_splash_radius",
+        "raw": "+250",
+        "file": "scripts/npc/heroes/npc_dota_hero_tinker.txt",
+        "line": 943
+      },
+      {
+        "name": "special_bonus_unique_tinker_deploy_turrets_splash_radius",
+        "raw": "+50",
+        "file": "scripts/npc/heroes/npc_dota_hero_tinker.txt",
+        "line": 948
+      },
+      {
+        "name": "special_bonus_unique_warlock_1",
+        "raw": "+80",
+        "file": "scripts/npc/heroes/npc_dota_hero_warlock.txt",
+        "line": 617
+      },
+      {
+        "name": "special_bonus_unique_wraith_king_facet_2",
+        "raw": "+23",
+        "file": "scripts/npc/heroes/npc_dota_hero_skeleton_king.txt",
+        "line": 494
+      },
+      {
+        "name": "special_bonus_unique_wraith_king_facet_2",
+        "raw": "-1",
+        "file": "scripts/npc/heroes/npc_dota_hero_skeleton_king.txt",
+        "line": 554
+      },
+      {
+        "name": "special_bonus_facet_templar_assassin_hidden_reach",
+        "raw": "400",
+        "file": "scripts/npc/heroes/npc_dota_hero_templar_assassin.txt",
+        "line": 356
+      },
+      {
+        "name": "special_bonus_facet_templar_assassin_hidden_reach",
+        "raw": "1",
+        "file": "scripts/npc/heroes/npc_dota_hero_templar_assassin.txt",
+        "line": 360
+      },
+      {
+        "name": "special_bonus_shard",
+        "raw": "+2",
+        "file": "scripts/npc/heroes/npc_dota_hero_rattletrap.txt",
+        "line": 497
+      },
+      {
+        "name": "special_bonus_unique_omniknight_guardian_angel_duration",
+        "raw": "+2",
+        "file": "scripts/npc/heroes/npc_dota_hero_omniknight.txt",
+        "line": 702
+      },
+      {
+        "name": "special_bonus_scepter",
+        "raw": "+1",
+        "file": "scripts/npc/heroes/npc_dota_hero_omniknight.txt",
+        "line": 734
+      },
+      {
+        "name": "special_bonus_scepter",
+        "raw": "=0",
+        "file": "scripts/npc/heroes/npc_dota_hero_night_stalker.txt",
+        "line": 384
+      },
+      {
+        "name": "special_bonus_scepter",
+        "raw": "=0",
+        "file": "scripts/npc/heroes/npc_dota_hero_night_stalker.txt",
+        "line": 390
+      },
+      {
+        "name": "special_bonus_scepter",
+        "raw": "6",
+        "file": "scripts/npc/heroes/npc_dota_hero_night_stalker.txt",
+        "line": 396
+      },
+      {
+        "name": "special_bonus_scepter",
+        "raw": "1",
+        "file": "scripts/npc/heroes/npc_dota_hero_night_stalker.txt",
+        "line": 404
+      },
+      {
+        "name": "special_bonus_unique_jakiro_3",
+        "raw": "+1",
+        "file": "scripts/npc/heroes/npc_dota_hero_jakiro.txt",
+        "line": 593
+      },
+      {
+        "name": "special_bonus_unique_jakiro_3",
+        "raw": "+1",
+        "file": "scripts/npc/heroes/npc_dota_hero_jakiro.txt",
+        "line": 669
+      },
+      {
+        "name": "special_bonus_shard",
+        "raw": "1.3",
+        "file": "scripts/npc/heroes/npc_dota_hero_ursa.txt",
+        "line": 264
+      },
+      {
+        "name": "special_bonus_scepter",
+        "raw": "+70",
+        "file": "scripts/npc/heroes/npc_dota_hero_alchemist.txt",
+        "line": 585
+      },
+      {
+        "name": "special_bonus_unique_invoker_orb_levels",
+        "raw": "+1",
+        "file": "scripts/npc/heroes/npc_dota_hero_invoker.txt",
+        "line": 476
+      },
+      {
+        "name": "special_bonus_unique_invoker_orb_levels",
+        "raw": "+1",
+        "file": "scripts/npc/heroes/npc_dota_hero_invoker.txt",
+        "line": 539
+      },
+      {
+        "name": "special_bonus_unique_invoker_orb_levels",
+        "raw": "+1",
+        "file": "scripts/npc/heroes/npc_dota_hero_invoker.txt",
+        "line": 606
+      },
+      {
+        "name": "special_bonus_facet_invoker_wex_focus",
+        "raw": "1",
+        "file": "scripts/npc/heroes/npc_dota_hero_invoker.txt",
+        "line": 1110
+      },
+      {
+        "name": "special_bonus_facet_invoker_wex_focus",
+        "raw": "+60 70 80 90 100 110 120 130 140 150",
+        "file": "scripts/npc/heroes/npc_dota_hero_invoker.txt",
+        "line": 1198
+      },
+      {
+        "name": "special_bonus_unique_silencer_arcane_curse_charges",
+        "raw": "2",
+        "file": "scripts/npc/heroes/npc_dota_hero_silencer.txt",
+        "line": 313
+      },
+      {
+        "name": "special_bonus_unique_silencer",
+        "raw": "+0.25",
+        "file": "scripts/npc/heroes/npc_dota_hero_silencer.txt",
+        "line": 341
+      },
+      {
+        "name": "special_bonus_unique_brewmaster_primal_split_duration",
+        "raw": "+4",
+        "file": "scripts/npc/heroes/npc_dota_hero_brewmaster.txt",
+        "line": 618
+      },
+      {
+        "name": "special_bonus_unique_ogre_magi_5",
+        "raw": "-1",
+        "file": "scripts/npc/heroes/npc_dota_hero_ogre_magi.txt",
+        "line": 450
+      },
+      {
+        "name": "special_bonus_unique_keeper_of_the_light_7",
+        "raw": "-2",
+        "file": "scripts/npc/heroes/npc_dota_hero_keeper_of_the_light.txt",
+        "line": 526
+      },
+      {
+        "name": "special_bonus_unique_wisp_11",
+        "raw": "+15",
+        "file": "scripts/npc/heroes/npc_dota_hero_wisp.txt",
+        "line": 245
+      },
+      {
+        "name": "special_bonus_unique_visage_grave_chill_aoe",
+        "raw": "+300",
+        "file": "scripts/npc/heroes/npc_dota_hero_visage.txt",
+        "line": 267
+      },
+      {
+        "name": "special_bonus_unique_visage_grave_chill_aoe",
+        "raw": "+70",
+        "file": "scripts/npc/heroes/npc_dota_hero_visage.txt",
+        "line": 273
+      },
+      {
+        "name": "special_bonus_shard",
+        "raw": "+99999",
+        "file": "scripts/npc/heroes/npc_dota_hero_magnataur.txt",
+        "line": 460
+      },
+      {
+        "name": "special_bonus_shard",
+        "raw": "+1",
+        "file": "scripts/npc/heroes/npc_dota_hero_magnataur.txt",
+        "line": 465
+      },
+      {
+        "name": "special_bonus_shard",
+        "raw": "+400",
+        "file": "scripts/npc/heroes/npc_dota_hero_magnataur.txt",
+        "line": 499
+      },
+      {
+        "name": "special_bonus_unique_tusk_5",
+        "raw": "-4",
+        "file": "scripts/npc/heroes/npc_dota_hero_tusk.txt",
+        "line": 330
+      },
+      {
+        "name": "special_bonus_unique_earth_spirit_3",
+        "raw": "+2.0",
+        "file": "scripts/npc/heroes/npc_dota_hero_earth_spirit.txt",
+        "line": 326
+      },
+      {
+        "name": "special_bonus_unique_earth_spirit_8",
+        "raw": "0",
+        "file": "scripts/npc/heroes/npc_dota_hero_earth_spirit.txt",
+        "line": 653
+      },
+      {
+        "name": "special_bonus_unique_techies",
+        "raw": "+15",
+        "file": "scripts/npc/heroes/npc_dota_hero_techies.txt",
+        "line": 575
+      },
+      {
+        "name": "special_bonus_scepter",
+        "raw": "4",
+        "file": "scripts/npc/heroes/npc_dota_hero_mars.txt",
+        "line": 469
+      },
+      {
+        "name": "special_bonus_scepter",
+        "raw": "150",
+        "file": "scripts/npc/heroes/npc_dota_hero_mars.txt",
+        "line": 473
+      },
+      {
+        "name": "special_bonus_scepter",
+        "raw": "30",
+        "file": "scripts/npc/heroes/npc_dota_hero_mars.txt",
+        "line": 477
+      },
+      {
+        "name": "special_bonus_scepter",
+        "raw": "1.0",
+        "file": "scripts/npc/heroes/npc_dota_hero_mars.txt",
+        "line": 481
+      },
+      {
+        "name": "special_bonus_scepter",
+        "raw": "75",
+        "file": "scripts/npc/heroes/npc_dota_hero_mars.txt",
+        "line": 485
+      },
+      {
+        "name": "special_bonus_scepter",
+        "raw": "0.0",
+        "file": "scripts/npc/heroes/npc_dota_hero_mars.txt",
+        "line": 489
+      },
+      {
+        "name": "special_bonus_scepter",
+        "raw": "325",
+        "file": "scripts/npc/heroes/npc_dota_hero_mars.txt",
+        "line": 493
+      },
+      {
+        "name": "special_bonus_scepter",
+        "raw": "275",
+        "file": "scripts/npc/heroes/npc_dota_hero_mars.txt",
+        "line": 497
+      },
+      {
+        "name": "special_bonus_unique_snapfire_3",
+        "raw": "-3",
+        "file": "scripts/npc/heroes/npc_dota_hero_snapfire.txt",
+        "line": 571
+      },
+      {
+        "name": "special_bonus_unique_snapfire_3",
+        "raw": "-3",
+        "file": "scripts/npc/heroes/npc_dota_hero_snapfire.txt",
+        "line": 583
+      },
+      {
+        "name": "special_bonus_unique_dawnbreaker_celestial_hammer_slow",
+        "raw": "+15",
+        "file": "scripts/npc/heroes/npc_dota_hero_dawnbreaker.txt",
+        "line": 406
+      },
+      {
+        "name": "special_bonus_unique_muerta_dead_shot_damage",
+        "raw": "+80",
+        "file": "scripts/npc/heroes/npc_dota_hero_muerta.txt",
+        "line": 281
+      },
+      {
+        "name": "special_bonus_unique_kez_ravens_dispel",
+        "raw": "+1",
+        "file": "scripts/npc/heroes/npc_dota_hero_kez.txt",
+        "line": 772
+      },
+      {
+        "name": "special_bonus_shard",
+        "raw": "+0.5",
+        "file": "scripts/npc/heroes/npc_dota_hero_largo.txt",
+        "line": 367
+      },
+      {
+        "name": "special_bonus_unique_largo_3",
+        "raw": "=2",
+        "file": "scripts/npc/heroes/npc_dota_hero_largo.txt",
+        "line": 630
+      }
+    ]
+  },
+  "roundChanges": [
+    {
+      "name": "special_bonus_unique_kunkka_rum",
+      "current": false,
+      "before": "+{s:bonus_ghostship_absorb}% Admiral's Rum Damage Delayed",
+      "after": "+8% Admiral's Rum Damage Delayed",
+      "reasons": ["legacy-fallback-for-equal-priority-source-conflict"],
+      "template": "+{s:bonus_ghostship_absorb}% Admiral's Rum Damage Delayed",
+      "localizationFile": "resource/localization/abilities_english.txt",
+      "inputs": [
+        {
+          "ability": "kunkka_x_marks_the_spot",
+          "attribute": "ghostship_absorb",
+          "raw": "+15",
+          "file": "scripts/npc/heroes/npc_dota_hero_kunkka.txt"
+        },
+        {
+          "ability": "kunkka_admirals_rum",
+          "attribute": "ghostship_absorb",
+          "raw": "+8",
+          "file": "scripts/npc/heroes/npc_dota_hero_kunkka.txt"
+        }
+      ]
+    },
+    {
+      "name": "special_bonus_unique_disruptor_kinetic_damage",
+      "current": false,
+      "before": "+{s:bonus_damage_per_second} Kinetic Field Touch DPS",
+      "after": "+60 Kinetic Field Touch DPS",
+      "reasons": ["legacy-fallback-for-equal-priority-source-conflict"],
+      "template": "+{s:bonus_damage_per_second} Kinetic Field Touch DPS",
+      "localizationFile": "resource/localization/abilities_english.txt",
+      "inputs": [
+        {
+          "ability": "disruptor_kinetic_field",
+          "attribute": "damage_per_second",
+          "raw": "+50",
+          "file": "scripts/npc/heroes/npc_dota_hero_disruptor.txt"
+        },
+        {
+          "ability": "disruptor_kinetic_fence",
+          "attribute": "damage_per_second",
+          "raw": "+60",
+          "file": "scripts/npc/heroes/npc_dota_hero_disruptor.txt"
+        }
+      ]
+    }
+  ],
+  "totalChanges": [
+    {
+      "name": "special_bonus_unique_ancient_apparition_6",
+      "current": false,
+      "before": "+{s:bonus_damage}% Death Rime Slow/Damage",
+      "after": "+50% Death Rime Slow/Damage",
+      "reasons": ["collect-from-ability-without-its-own-localization"],
+      "template": "+{s:bonus_damage}% Death Rime Slow/Damage",
+      "localizationFile": "resource/localization/abilities_english.txt",
+      "inputs": [
+        {
+          "ability": "ancient_apparition_death_rime",
+          "attribute": "damage",
+          "raw": "+50%",
+          "file": "scripts/npc/heroes/npc_dota_hero_ancient_apparition.txt"
+        },
+        {
+          "ability": "ancient_apparition_death_rime",
+          "attribute": "slow",
+          "raw": "+50%",
+          "file": "scripts/npc/heroes/npc_dota_hero_ancient_apparition.txt"
+        }
+      ]
+    },
+    {
+      "name": "special_bonus_unique_ancient_apparition_8",
+      "current": false,
+      "before": "+{s:bonus_strength_decrease} Death Rime Strength Reduction",
+      "after": "+1.0 Death Rime Strength Reduction",
+      "reasons": ["collect-from-ability-without-its-own-localization"],
+      "template": "+{s:bonus_strength_decrease} Death Rime Strength Reduction",
+      "localizationFile": "resource/localization/abilities_english.txt",
+      "inputs": [
+        {
+          "ability": "ancient_apparition_death_rime",
+          "attribute": "strength_decrease",
+          "raw": "+1.0",
+          "file": "scripts/npc/heroes/npc_dota_hero_ancient_apparition.txt"
+        }
+      ]
+    },
+    {
+      "name": "special_bonus_unique_lone_druid_savage_roar_aoe",
+      "current": true,
+      "before": "+150 Savage Roar Radius",
+      "after": "+125 Savage Roar Radius",
+      "reasons": ["prefer-equipped-hero-ability-over-summon-variant"],
+      "template": "+{s:bonus_radius} Savage Roar Radius",
+      "localizationFile": "resource/localization/abilities_english.txt",
+      "inputs": [
+        {
+          "ability": "lone_druid_savage_roar",
+          "attribute": "radius",
+          "raw": "+125",
+          "file": "scripts/npc/heroes/npc_dota_hero_lone_druid.txt"
+        },
+        {
+          "ability": "lone_druid_savage_roar_bear",
+          "attribute": "radius",
+          "raw": "+150",
+          "file": "scripts/npc/heroes/npc_dota_hero_lone_druid.txt"
+        }
+      ]
+    },
+    {
+      "name": "special_bonus_unique_pudge_7",
+      "current": true,
+      "before": "+{s:bonus_damage} Meat Hook Damage",
+      "after": "+150 Meat Hook Damage",
+      "reasons": ["collect-talent-despite-adjacent-upgrade-or-facet"],
+      "template": "+{s:bonus_damage} Meat Hook Damage",
+      "localizationFile": "resource/localization/abilities_english.txt",
+      "inputs": [
+        {
+          "ability": "pudge_meat_hook",
+          "attribute": "damage",
+          "raw": "+150",
+          "file": "scripts/npc/heroes/npc_dota_hero_pudge.txt"
+        }
+      ]
+    },
+    {
+      "name": "special_bonus_unique_windranger_8",
+      "current": true,
+      "before": "-{s:bonus_focusfire_damage_reduction}% Focus Fire Damage Reduction",
+      "after": "-10% Focus Fire Damage Reduction",
+      "reasons": ["collect-talent-despite-adjacent-upgrade-or-facet"],
+      "template": "-{s:bonus_focusfire_damage_reduction}% Focus Fire Damage Reduction",
+      "localizationFile": "resource/localization/abilities_english.txt",
+      "inputs": [
+        {
+          "ability": "windrunner_focusfire",
+          "attribute": "focusfire_damage_reduction",
+          "raw": "+10",
+          "file": "scripts/npc/heroes/npc_dota_hero_windrunner.txt"
+        }
+      ]
+    },
+    {
+      "name": "special_bonus_unique_sniper_shrapnel_damage",
+      "current": true,
+      "before": "+{s:bonus_shrapnel_damage}% Shrapnel Damage",
+      "after": "+30% Shrapnel Damage",
+      "reasons": ["collect-talent-despite-adjacent-upgrade-or-facet"],
+      "template": "+{s:bonus_shrapnel_damage}% Shrapnel Damage",
+      "localizationFile": "resource/localization/abilities_english.txt",
+      "inputs": [
+        {
+          "ability": "sniper_shrapnel",
+          "attribute": "shrapnel_damage",
+          "raw": "+30%",
+          "file": "scripts/npc/heroes/npc_dota_hero_sniper.txt"
+        }
+      ]
+    },
+    {
+      "name": "special_bonus_unique_clinkz_9",
+      "current": true,
+      "before": "-{s:bonus_AbilityChargeRestoreTime}s Death Pact Charge Restore Time",
+      "after": "-10s Death Pact Charge Restore Time",
+      "reasons": [
+        "collect-talent-despite-adjacent-upgrade-or-facet",
+        "case-insensitive-placeholder-key"
+      ],
+      "template": "-{s:bonus_AbilityChargeRestoreTime}s Death Pact Charge Restore Time",
+      "localizationFile": "resource/localization/abilities_english.txt",
+      "inputs": [
+        {
+          "ability": "clinkz_death_pact",
+          "attribute": "AbilityChargeRestoreTime",
+          "raw": "-10",
+          "file": "scripts/npc/heroes/npc_dota_hero_clinkz.txt"
+        }
+      ]
+    },
+    {
+      "name": "special_bonus_unique_silencer_arcane_curse_duration",
+      "current": true,
+      "after": "+2s/+1s Arcane Curse Base/Penalty Duration",
+      "before": null,
+      "reasons": ["case-insensitive-localization-name"],
+      "template": "+{s:bonus_duration}s/+{s:bonus_penalty_duration}s Arcane Curse Base/Penalty Duration",
+      "localizationFile": "resource/localization/abilities_english.txt",
+      "inputs": [
+        {
+          "ability": "silencer_curse_of_the_silent",
+          "attribute": "duration",
+          "raw": "+2",
+          "file": "scripts/npc/heroes/npc_dota_hero_silencer.txt"
+        },
+        {
+          "ability": "silencer_curse_of_the_silent",
+          "attribute": "penalty_duration",
+          "raw": "+1",
+          "file": "scripts/npc/heroes/npc_dota_hero_silencer.txt"
+        }
+      ]
+    },
+    {
+      "name": "special_bonus_unique_lycan_2",
+      "current": true,
+      "before": "-{s:bonus_wolf_bat}% Summon Wolves BAT",
+      "after": "-25% Summon Wolves BAT",
+      "reasons": ["collect-talent-despite-adjacent-upgrade-or-facet"],
+      "template": "-{s:bonus_wolf_bat}% Summon Wolves BAT",
+      "localizationFile": "resource/localization/abilities_english.txt",
+      "inputs": [
+        {
+          "ability": "lycan_summon_wolves",
+          "attribute": "wolf_bat",
+          "raw": "-25%",
+          "file": "scripts/npc/heroes/npc_dota_hero_lycan.txt"
+        }
+      ]
+    },
+    {
+      "name": "special_bonus_unique_bristleback_3",
+      "current": true,
+      "before": "+{s:bonus_damage_per_stack} Warpath Damage Per Stack",
+      "after": "+18 Warpath Damage Per Stack",
+      "reasons": ["collect-talent-despite-adjacent-upgrade-or-facet"],
+      "template": "+{s:bonus_damage_per_stack} Warpath Damage Per Stack",
+      "localizationFile": "resource/localization/abilities_english.txt",
+      "inputs": [
+        {
+          "ability": "bristleback_warpath",
+          "attribute": "damage_per_stack",
+          "raw": "+18",
+          "file": "scripts/npc/heroes/npc_dota_hero_bristleback.txt"
+        }
+      ]
+    }
+  ],
+  "remainingReasonCounts": {
+    "missing-template": 3,
+    "commented-source-reference+missing-source-value": 5,
+    "missing-source-value": 12,
+    "absent-definition+missing-source-value": 278,
+    "absent-definition+commented-source-reference+missing-source-value": 16
+  },
+  "remaining": [
+    {
+      "name": "special_bonus_attributes",
+      "status": "missing-name",
+      "reasons": ["missing-template"]
+    },
+    {
+      "name": "special_bonus_unique_juggernaut_2",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_healing_ward_bonus_health} Healing Ward Hits to Kill",
+      "dname": "+{s:bonus_healing_ward_bonus_health} Healing Ward Hits to Kill",
+      "reasons": ["commented-source-reference", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_juggernaut_blade_fury_cooldown",
+      "status": "unresolved",
+      "sourceName": "-{s:bonus_AbilityCooldown}s Blade Fury Cooldown",
+      "dname": "-{s:bonus_AbilityCooldown}s Blade Fury Cooldown",
+      "reasons": ["commented-source-reference", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_juggernaut_healing_ward_heal",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_healing_ward_heal_amount}% Healing Ward Heal",
+      "dname": "+{s:bonus_healing_ward_heal_amount}% Healing Ward Heal",
+      "reasons": ["commented-source-reference", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_mirana_arrow_damage",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_arrow_bonus_damage} Sacred Arrow Bonus Damage",
+      "dname": "+{s:bonus_arrow_bonus_damage} Sacred Arrow Bonus Damage",
+      "reasons": ["missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_lina_dragon_slave_crits",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_target_crit_multiplier}% Crit On Targets Affected By Dragon Slave",
+      "dname": "+{s:bonus_target_crit_multiplier}% Crit On Targets Affected By Dragon Slave",
+      "reasons": ["missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_furion_8",
+      "status": "missing-name",
+      "reasons": ["missing-template"]
+    },
+    {
+      "name": "special_bonus_unique_omniknight_guardian_angel_duration",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_duration}s Guardian Angel Duration",
+      "dname": "+{s:bonus_duration}s Guardian Angel Duration",
+      "reasons": ["commented-source-reference", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_lone_druid_11",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_bear_movespeed} Spirit Bear Movement Speed",
+      "dname": "+{s:bonus_bear_movespeed} Spirit Bear Movement Speed",
+      "reasons": ["missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_lone_druid_entangle_hits",
+      "status": "missing-name",
+      "reasons": ["missing-template"]
+    },
+    {
+      "name": "special_bonus_unique_lone_druid_entangle_cd",
+      "status": "unresolved",
+      "sourceName": "-{s:bonus_AbilityCooldown}s Lone Druid Entangling Claws Cooldown",
+      "dname": "-{s:bonus_AbilityCooldown}s Lone Druid Entangling Claws Cooldown",
+      "reasons": ["missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_lone_druid_spirit_bear_return_channel",
+      "status": "unresolved",
+      "sourceName": "-{s:bonus_AbilityChannelTime}s Return Channel Time",
+      "dname": "-{s:bonus_AbilityChannelTime}s Return Channel Time",
+      "reasons": ["missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_disruptor_7",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_effect_radius} Electromagnetic Repulsion Radius/Knockback",
+      "dname": "+{s:bonus_effect_radius} Electromagnetic Repulsion Radius/Knockback",
+      "reasons": ["missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_disruptor_fence_charge",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_AbilityCharges} Kinetic Fence Charge",
+      "dname": "+{s:bonus_AbilityCharges} Kinetic Fence Charge",
+      "reasons": ["missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_abaddon_6",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_heal_reduction_pct}% Withering Mist Health Restoration Reduction",
+      "dname": "+{s:bonus_heal_reduction_pct}% Withering Mist Health Restoration Reduction",
+      "reasons": ["missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_earth_spirit_3",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_stun_duration}s Boulder Smash Remnant Stun Duration",
+      "dname": "+{s:bonus_stun_duration}s Boulder Smash Remnant Stun Duration",
+      "reasons": ["commented-source-reference", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_phoenix_dive_damage",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_damage_per_second} Icarus Dive Damage Per Second",
+      "dname": "+{s:bonus_damage_per_second} Icarus Dive Damage Per Second",
+      "reasons": ["missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_dawnbreaker_break_of_dawn_damage",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_max_dmg_pct}% Break of Dawn Damage",
+      "dname": "+{s:bonus_max_dmg_pct}% Break of Dawn Damage",
+      "reasons": ["missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_marci_lunge_movespeed",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_ally_movespeed_pct}% Rebound Movement Speed Bonus",
+      "dname": "+{s:bonus_ally_movespeed_pct}% Rebound Movement Speed Bonus",
+      "reasons": ["missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_ringmaster_box_cast_range",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_AbilityCastRange} Escape Act Cast Range",
+      "dname": "+{s:bonus_AbilityCastRange} Escape Act Cast Range",
+      "reasons": ["missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_spectre_haunt_cooldown",
+      "status": "unresolved",
+      "sourceName": "-{s:bonus_AbilityCooldown}s Haunt Cooldown",
+      "dname": "-{s:bonus_AbilityCooldown}s Haunt Cooldown",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_silencer_glaive_int_steal",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_int_steal} Glaives of Wisdom Intelligence Steal",
+      "dname": "+{s:bonus_int_steal} Glaives of Wisdom Intelligence Steal",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_brewmaster_primal_split_duration",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_duration}s Primal Split Duration",
+      "dname": "+{s:bonus_duration}s Primal Split Duration",
+      "reasons": [
+        "absent-definition",
+        "commented-source-reference",
+        "missing-source-value"
+      ]
+    },
+    {
+      "name": "special_bonus_unique_rubick_fade_bolt_attack_reduction",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_attack_damage_reduction}% Fade Bolt Attack Damage Steal",
+      "dname": "+{s:bonus_attack_damage_reduction}% Fade Bolt Attack Damage Steal",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_mars_spear_cooldown",
+      "status": "unresolved",
+      "sourceName": "-{s:value}s Spear Cooldown",
+      "dname": "-{s:value}s Spear Cooldown",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_mars_rebuke_slow",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_knockback_slow_duration}s God's Rebuke Slow",
+      "dname": "+{s:bonus_knockback_slow_duration}s God's Rebuke Slow",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_mars_bulwark_speed",
+      "status": "unresolved",
+      "sourceName": "-{s:bonus_redirect_speed_penatly}% Bulwark Movespeed Penalty",
+      "dname": "-{s:bonus_redirect_speed_penatly}% Bulwark Movespeed Penalty",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_mars_bulwark_cooldown",
+      "status": "unresolved",
+      "sourceName": "-{s:bonus_AbilityCooldown}s Bulwark Cooldown",
+      "dname": "-{s:bonus_AbilityCooldown}s Bulwark Cooldown",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_mars_arena_cooldown",
+      "status": "unresolved",
+      "sourceName": "-{s:bonus_AbilityCooldown}s Arena Of Blood Cooldown",
+      "dname": "-{s:bonus_AbilityCooldown}s Arena Of Blood Cooldown",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_void_spirit_5",
+      "status": "unresolved",
+      "sourceName": "{s:value}% Larger Dissimilate Portals",
+      "dname": "{s:value}% Larger Dissimilate Portals",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_void_spirit_6",
+      "status": "unresolved",
+      "sourceName": "Dissimilate Grants {s:value}s Invisibility",
+      "dname": "Dissimilate Grants {s:value}s Invisibility",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_void_spirit_7",
+      "status": "unresolved",
+      "sourceName": "Remnant Provides {s:value} True Sight",
+      "dname": "Remnant Provides {s:value} True Sight",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_void_spirit_9",
+      "status": "unresolved",
+      "sourceName": "+{s:value} Astral Step Charges",
+      "dname": "+{s:value} Astral Step Charges",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_snapfire_3",
+      "status": "unresolved",
+      "sourceName": "-{s:bonus_AbilityCooldown}s Firesnap Cookie Cooldown",
+      "dname": "-{s:bonus_AbilityCooldown}s Firesnap Cookie Cooldown",
+      "reasons": [
+        "absent-definition",
+        "commented-source-reference",
+        "missing-source-value"
+      ]
+    },
+    {
+      "name": "special_bonus_unique_snapfire_mortimer_kisses_impact_damage",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_damage_per_impact} Mortimer Kisses Impact Damage",
+      "dname": "+{s:bonus_damage_per_impact} Mortimer Kisses Impact Damage",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_hoodwink_sharpshooter_speed",
+      "status": "unresolved",
+      "sourceName": "{s:pct_change}% Sharpshooter Faster Projectile / Charge Time",
+      "dname": "{s:pct_change}% Sharpshooter Faster Projectile / Charge Time",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_hoodwink_bushwhack_radius",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_trap_radius} Bushwhack Radius",
+      "dname": "+{s:bonus_trap_radius} Bushwhack Radius",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_hoodwink_scurry_evasion",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_bonus_active_evasion}% Scurry Evasion When Active",
+      "dname": "+{s:bonus_bonus_active_evasion}% Scurry Evasion When Active",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_marci_lunge_ally_absorb",
+      "status": "unresolved",
+      "sourceName": "+{s:value} Rebound Ally Shield Absorb",
+      "dname": "+{s:value} Rebound Ally Shield Absorb",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_marci_lunge_damage",
+      "status": "unresolved",
+      "sourceName": "+{s:value} Rebound Damage",
+      "dname": "+{s:value} Rebound Damage",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_marci_guardian_magic_immune",
+      "status": "unresolved",
+      "sourceName": "{s:value}s Sidekick Debuff Immunity",
+      "dname": "{s:value}s Sidekick Debuff Immunity",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_marci_unleash_pulse_damage",
+      "status": "unresolved",
+      "sourceName": "+{s:value} Unleash Pulse Damage",
+      "dname": "+{s:value} Unleash Pulse Damage",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_marci_unleash_silence",
+      "status": "unresolved",
+      "sourceName": "{s:value}s Unleash Pulse Silence",
+      "dname": "{s:value}s Unleash Pulse Silence",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_marci_guardian_lifesteal_variant_marci_bodyguard",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_lifesteal_pct}% Bodyguard Lifesteal",
+      "dname": "+{s:bonus_lifesteal_pct}% Bodyguard Lifesteal",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_marci_lunge_cooldown",
+      "status": "unresolved",
+      "sourceName": "-{s:bonus_AbilityCooldown}s Rebound Cooldown",
+      "dname": "-{s:bonus_AbilityCooldown}s Rebound Cooldown",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_marci_guardian_damage_facet_marci_bodyguard",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_bonus_damage}% Bodyguard Damage",
+      "dname": "+{s:bonus_bonus_damage}% Bodyguard Damage",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_muerta_dead_shot_damage",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_damage} Dead Shot Damage",
+      "dname": "+{s:bonus_damage} Dead Shot Damage",
+      "reasons": [
+        "absent-definition",
+        "commented-source-reference",
+        "missing-source-value"
+      ]
+    },
+    {
+      "name": "special_bonus_unique_kez_grapple_cast_range",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_AbilityCastRange} Grappling Claw Cast Range",
+      "dname": "+{s:bonus_AbilityCastRange} Grappling Claw Cast Range",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_kez_parry_bonus",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_parry_bonus_crit}% Parry Bonuses",
+      "dname": "+{s:bonus_parry_bonus_crit}% Parry Bonuses",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_kez_ravens_veil_duration",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_buff_duration}s Raven's Veil Duration",
+      "dname": "+{s:bonus_buff_duration}s Raven's Veil Duration",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_kez_ultimate_cooldown",
+      "status": "unresolved",
+      "sourceName": "-{s:bonus_AbilityCooldown}s Raptor Dance / Raven's Veil Cooldown",
+      "dname": "-{s:bonus_AbilityCooldown}s Raptor Dance / Raven's Veil Cooldown",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_kez_falcon_rush_evasion",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_buff_evasion_pct}% Falcon Rush Evasion",
+      "dname": "+{s:bonus_buff_evasion_pct}% Falcon Rush Evasion",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_kez_katana_impale_lifesteal",
+      "status": "unresolved",
+      "sourceName": "{s:bonus_lifesteal_pct}% Katana Impale Lifesteal",
+      "dname": "{s:bonus_lifesteal_pct}% Katana Impale Lifesteal",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_kez_talon_toss_attack_factor",
+      "status": "unresolved",
+      "sourceName": "Add {s:bonus_attack_factor}% of Attack Damage to Talon Toss",
+      "dname": "Add {s:bonus_attack_factor}% of Attack Damage to Talon Toss",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_kez_falcon_rush_damage",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_base_echo_damage}% Falcon Rush Echo Damage",
+      "dname": "+{s:bonus_base_echo_damage}% Falcon Rush Echo Damage",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_clockwerk_8",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_mana_burn} Power Cogs Mana Burn",
+      "dname": "+{s:bonus_mana_burn} Power Cogs Mana Burn",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_clockwerk_flare_damage",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_damage} Rocket Flare Damage",
+      "dname": "+{s:bonus_damage} Rocket Flare Damage",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_centaur_6",
+      "status": "unresolved",
+      "sourceName": "+{s:value}% Stampede Damage Reduction",
+      "dname": "+{s:value}% Stampede Damage Reduction",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_centaur_7",
+      "status": "unresolved",
+      "sourceName": "+{s:value}s Stampede Duration",
+      "dname": "+{s:value}s Stampede Duration",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_witch_doctor_1",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_bonus_attack_range} Death Ward Attack Range",
+      "dname": "+{s:bonus_bonus_attack_range} Death Ward Attack Range",
+      "reasons": [
+        "absent-definition",
+        "commented-source-reference",
+        "missing-source-value"
+      ]
+    },
+    {
+      "name": "special_bonus_unique_witch_doctor_2_facet_witch_doctor_voodoo_festeration",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_bonus_heal_percent}% Target Max Health Voodoo Restoration Damage",
+      "dname": "+{s:bonus_bonus_heal_percent}% Target Max Health Voodoo Restoration Damage",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_necrophos_sadist_heal_bonus",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_heal_bonus}% Ghost Shroud Self Restoration Amp",
+      "dname": "+{s:bonus_heal_bonus}% Ghost Shroud Self Restoration Amp",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_queen_of_pain",
+      "status": "unresolved",
+      "sourceName": "{s:value} AoE Shadow Strike",
+      "dname": "{s:value} AoE Shadow Strike",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_queen_of_pain_5",
+      "status": "unresolved",
+      "sourceName": "-{s:bonus_AbilityCooldown}s Scream of Pain Cooldown",
+      "dname": "-{s:bonus_AbilityCooldown}s Scream of Pain Cooldown",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_queen_of_pain_strike_heal",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_duration_heal} Shadow Strike Heal Per Tick",
+      "dname": "+{s:bonus_duration_heal} Shadow Strike Heal Per Tick",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_antimage_4",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_magic_resistance}% Counterspell Magic Resistance",
+      "dname": "+{s:bonus_magic_resistance}% Counterspell Magic Resistance",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_antimage_7",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_mana_per_hit_pct}% Max Mana Mana Burn",
+      "dname": "+{s:bonus_mana_per_hit_pct}% Max Mana Mana Burn",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_mirana_4_facet_mirana_sunlight",
+      "status": "unresolved",
+      "sourceName": "-{s:bonus_AbilityCooldown}s Solar Flare Cooldown",
+      "dname": "-{s:bonus_AbilityCooldown}s Solar Flare Cooldown",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_mirana_5_facet_mirana_sunlight",
+      "status": "unresolved",
+      "sourceName": "Solar Flare gives +{s:bonus_evasion}% Evasion",
+      "dname": "Solar Flare gives +{s:bonus_evasion}% Evasion",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_bounty_hunter_4",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_bonus_damage} Jinada Damage",
+      "dname": "+{s:bonus_bonus_damage} Jinada Damage",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_bounty_hunter_7",
+      "status": "unresolved",
+      "sourceName": "{s:value} Shuriken Toss Charges",
+      "dname": "{s:value} Shuriken Toss Charges",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_underlord_2",
+      "status": "unresolved",
+      "sourceName": "+{s:value} Firestorm Wave Damage",
+      "dname": "+{s:value} Firestorm Wave Damage",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_pudge_2",
+      "status": "unresolved",
+      "sourceName": "+{s:value} Rot Damage",
+      "dname": "+{s:value} Rot Damage",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_treant",
+      "status": "unresolved",
+      "sourceName": "+{s:value} Living Armor Block Instances",
+      "dname": "+{s:value} Living Armor Block Instances",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_treant_5",
+      "status": "unresolved",
+      "sourceName": "+{s:value} Eyes and Overgrowth AoE",
+      "dname": "+{s:value} Eyes and Overgrowth AoE",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_razor_3",
+      "status": "unresolved",
+      "sourceName": "-{s:bonus_strike_internal_cd}s Storm Surge Strike Cooldown",
+      "dname": "-{s:bonus_strike_internal_cd}s Storm Surge Strike Cooldown",
+      "reasons": [
+        "absent-definition",
+        "commented-source-reference",
+        "missing-source-value"
+      ]
+    },
+    {
+      "name": "special_bonus_unique_razor_5",
+      "status": "unresolved",
+      "sourceName": "+{s:value}% Storm Surge Move Speed",
+      "dname": "+{s:value}% Storm Surge Move Speed",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_razor_6",
+      "status": "unresolved",
+      "sourceName": "{s:value} Static Link Charges",
+      "dname": "{s:value} Static Link Charges",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_visage_2",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_bonus_movement_speed} Visage and Familiars Movement Speed",
+      "dname": "+{s:bonus_bonus_movement_speed} Visage and Familiars Movement Speed",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_visage_5",
+      "status": "unresolved",
+      "sourceName": "Gravekeeper's Cloak  grants +{s:bonus_armor} Armor",
+      "dname": "Gravekeeper's Cloak  grants +{s:bonus_armor} Armor",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_visage_grave_chill_aoe",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_target_radius} AOE Grave Chill",
+      "dname": "+{s:bonus_target_radius} AOE Grave Chill",
+      "reasons": [
+        "absent-definition",
+        "commented-source-reference",
+        "missing-source-value"
+      ]
+    },
+    {
+      "name": "special_bonus_unique_earthshaker_5",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_aftershock_range} Aftershock Range",
+      "dname": "+{s:bonus_aftershock_range} Aftershock Range",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_rubick",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_max_land_distance} Telekinesis Land Distance",
+      "dname": "+{s:bonus_max_land_distance} Telekinesis Land Distance",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_rubick_2",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_bonus_damage_pct_tooltip}% Might And Magus Damage/Resistance",
+      "dname": "+{s:bonus_bonus_damage_pct_tooltip}% Might And Magus Damage/Resistance",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_rubick_7",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_attack_damage_reduction}% Fade Bolt Damage Reduction",
+      "dname": "+{s:bonus_attack_damage_reduction}% Fade Bolt Damage Reduction",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_sven_6",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_movespeed}% Warcry Movement Speed",
+      "dname": "+{s:bonus_movespeed}% Warcry Movement Speed",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_dark_seer_8",
+      "status": "unresolved",
+      "sourceName": "-{s:value}s Vacuum Cooldown",
+      "dname": "-{s:value}s Vacuum Cooldown",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_dark_seer_9",
+      "status": "unresolved",
+      "sourceName": "{s:value} Surge Charges",
+      "dname": "{s:value} Surge Charges",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_dark_seer_10",
+      "status": "unresolved",
+      "sourceName": "+{s:value}s Wall of Replica Stun",
+      "dname": "+{s:value}s Wall of Replica Stun",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_dark_seer_11",
+      "status": "unresolved",
+      "sourceName": "+{s:value} Wall of Replica Length",
+      "dname": "+{s:value} Wall of Replica Length",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_dark_seer_12",
+      "status": "unresolved",
+      "sourceName": "+{s:value}s Wall of Replica Slow",
+      "dname": "+{s:value}s Wall of Replica Slow",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_dark_seer_15",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_duration}s Ion Shell Duration",
+      "dname": "+{s:bonus_duration}s Ion Shell Duration",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_shadow_shaman_5",
+      "status": "unresolved",
+      "sourceName": "-{s:value}s Hex Cooldown",
+      "dname": "-{s:value}s Hex Cooldown",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_warlock_6",
+      "status": "unresolved",
+      "sourceName": "{s:value} Shadow Word AoE",
+      "dname": "{s:value} Shadow Word AoE",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_warlock_8",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_duration}s Shadow Word Duration",
+      "dname": "+{s:bonus_duration}s Shadow Word Duration",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_warlock_9",
+      "status": "unresolved",
+      "sourceName": "+{s:value} Fatal Bond Targets",
+      "dname": "+{s:value} Fatal Bond Targets",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_warlock_shadow_word_duration",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_duration}s Shadow Word Duration",
+      "dname": "+{s:bonus_duration}s Shadow Word Duration",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_vengeful_spirit_6",
+      "status": "unresolved",
+      "sourceName": "-{s:value}s Wave of Terror Cooldown",
+      "dname": "-{s:value}s Wave of Terror Cooldown",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_vengeful_spirit_8",
+      "status": "unresolved",
+      "sourceName": "+{s:value} Vengeance Aura Attack Range",
+      "dname": "+{s:value} Vengeance Aura Attack Range",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_vengeful_spirit_swap_damage_reduction",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_damage_reduction}% Nether Swap Damage Reduction",
+      "dname": "+{s:bonus_damage_reduction}% Nether Swap Damage Reduction",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_venomancer_6",
+      "status": "unresolved",
+      "sourceName": "+{s:value} Poison Nova AoE",
+      "dname": "+{s:value} Poison Nova AoE",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_venomancer_7",
+      "status": "unresolved",
+      "sourceName": "+{s:value}s Plague Ward Duration",
+      "dname": "+{s:value}s Plague Ward Duration",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_morphling_2",
+      "status": "unresolved",
+      "sourceName": "-{s:value} Morph Cooldown",
+      "dname": "-{s:value} Morph Cooldown",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_morphling_3",
+      "status": "unresolved",
+      "sourceName": "+{s:value} Multishot Adaptive Strike",
+      "dname": "+{s:value} Multishot Adaptive Strike",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_morphling_4",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_pct_damage}% Waveform Attack Damage And Applies On Hit Effects",
+      "dname": "+{s:bonus_pct_damage}% Waveform Attack Damage And Applies On Hit Effects",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_morphling_6",
+      "status": "unresolved",
+      "sourceName": "{s:bonus_AbilityCharges} Waveform Charges",
+      "dname": "{s:bonus_AbilityCharges} Waveform Charges",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_morphling_9",
+      "status": "unresolved",
+      "sourceName": "-{s:value} Adaptive Strike Armor Reduction",
+      "dname": "-{s:value} Adaptive Strike Armor Reduction",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_morphling_10",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_stun_max}s Adaptive Strike Stun Duration",
+      "dname": "+{s:bonus_stun_max}s Adaptive Strike Stun Duration",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_leshrac_2",
+      "status": "unresolved",
+      "sourceName": "{s:bonus_mana_pct_per_hit}% of Damage Dealt by Attacks Restored As Mana",
+      "dname": "{s:bonus_mana_pct_per_hit}% of Damage Dealt by Attacks Restored As Mana",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_leshrac_5",
+      "status": "unresolved",
+      "sourceName": "+{s:value} Split Earth Radius",
+      "dname": "+{s:value} Split Earth Radius",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_jakiro_5",
+      "status": "unresolved",
+      "sourceName": "+{s:value} Dual Breath Range",
+      "dname": "+{s:value} Dual Breath Range",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_jakiro_8",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_damage} Liquid Fire Damage",
+      "dname": "+{s:bonus_damage} Liquid Fire Damage",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_jakiro_dualbreath_slow",
+      "status": "unresolved",
+      "sourceName": "-{s:bonus_slow_movement_speed_pct}%/{s:bonus_slow_attack_speed_pct} Dual Breath Movement/Attack Speed Slow",
+      "dname": "-{s:bonus_slow_movement_speed_pct}%/{s:bonus_slow_attack_speed_pct} Dual Breath Movement/Attack Speed Slow",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_enigma_7",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_eidelon_max_health} Eidolon Health",
+      "dname": "+{s:bonus_eidelon_max_health} Eidolon Health",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_enigma_8",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_duration}s Midnight Pulse Duration",
+      "dname": "+{s:bonus_duration}s Midnight Pulse Duration",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_bane_1",
+      "status": "unresolved",
+      "sourceName": "+{s:value} Enfeeble Attack Speed Reduction",
+      "dname": "+{s:value} Enfeeble Attack Speed Reduction",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_bane_6",
+      "status": "unresolved",
+      "sourceName": "-{s:value}% Enfeeble Regen Reduction",
+      "dname": "-{s:value}% Enfeeble Regen Reduction",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_nevermore_2",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_shadowraze_damage} Shadowraze Damage",
+      "dname": "+{s:bonus_shadowraze_damage} Shadowraze Damage",
+      "reasons": [
+        "absent-definition",
+        "commented-source-reference",
+        "missing-source-value"
+      ]
+    },
+    {
+      "name": "special_bonus_unique_nevermore_5",
+      "status": "unresolved",
+      "sourceName": "{s:value} Presence Aura Armor",
+      "dname": "{s:value} Presence Aura Armor",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_nevermore_shadowraze_cooldown",
+      "status": "unresolved",
+      "sourceName": "-{s:bonus_AbilityCooldown}s Shadowraze Cooldown",
+      "dname": "-{s:bonus_AbilityCooldown}s Shadowraze Cooldown",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_templar_assassin_2",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_bonus_armor} Meld Armor Reduction",
+      "dname": "+{s:bonus_bonus_armor} Meld Armor Reduction",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_templar_assassin_refraction_damage",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_bonus_damage} Refraction Damage",
+      "dname": "+{s:bonus_bonus_damage} Refraction Damage",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_crystal_maiden_4",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_base_mana_regen} Arcane Aura Base Mana Regeneration",
+      "dname": "+{s:bonus_base_mana_regen} Arcane Aura Base Mana Regeneration",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_crystal_maiden_6",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_radius} Crystal Nova AoE",
+      "dname": "+{s:bonus_radius} Crystal Nova AoE",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_doom_3",
+      "status": "unresolved",
+      "sourceName": "Devour grants {s:bonus_magic_resist}% Magic Resistance",
+      "dname": "Devour grants {s:bonus_magic_resist}% Magic Resistance",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_doom_5",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_damage} Doom DPS",
+      "dname": "+{s:bonus_damage} Doom DPS",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_doom_7",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_duration}s Doom Duration",
+      "dname": "+{s:bonus_duration}s Doom Duration",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_brewmaster_3",
+      "status": "unresolved",
+      "sourceName": "+{s:value}s Thunder Clap Slow",
+      "dname": "+{s:value}s Thunder Clap Slow",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_brewmaster_7",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_duration}s Thunder Clap Duration",
+      "dname": "+{s:bonus_duration}s Thunder Clap Duration",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_brewmaster_8",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_active_multiplier}% Brewed Up Multiplier for Drunken Brawler",
+      "dname": "+{s:bonus_active_multiplier}% Brewed Up Multiplier for Drunken Brawler",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_bristleback_4",
+      "status": "unresolved",
+      "sourceName": "-{s:bonus_armor_per_stack} Goo Armor Per Stack",
+      "dname": "-{s:bonus_armor_per_stack} Goo Armor Per Stack",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_furion_8_facet_furion_soothing_saplings",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_sprout_heal_per_second}% Sprout Heal Per Second",
+      "dname": "+{s:bonus_sprout_heal_per_second}% Sprout Heal Per Second",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_furion_8_facet_furion_natures_profit",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_bags_per_tick} Nature's Profit Gold Bags Per Tick",
+      "dname": "+{s:bonus_bags_per_tick} Nature's Profit Gold Bags Per Tick",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_furion_sprout_treant_duration",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_treant_duration}s Treant Duration",
+      "dname": "+{s:bonus_treant_duration}s Treant Duration",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_phoenix_8",
+      "status": "unresolved",
+      "sourceName": "+{s:value}% Sun Ray Slow",
+      "dname": "+{s:value}% Sun Ray Slow",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_wraith_king_3",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_blast_dot_damage}% Wraithfire Blast Impact Damage/DPS",
+      "dname": "+{s:bonus_blast_dot_damage}% Wraithfire Blast Impact Damage/DPS",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_wraith_king_5",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_min_skeleton_spawn} Minimum Skeletons Spawned",
+      "dname": "+{s:bonus_min_skeleton_spawn} Minimum Skeletons Spawned",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_wraith_king_6",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_talent_skeleton_damage} Skeletons Attack Damage",
+      "dname": "+{s:bonus_talent_skeleton_damage} Skeletons Attack Damage",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_wraith_king_7",
+      "status": "unresolved",
+      "sourceName": "+{s:value}s Wraithfire Blast Slow Duration",
+      "dname": "+{s:value}s Wraithfire Blast Slow Duration",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_wraith_king_8",
+      "status": "unresolved",
+      "sourceName": "+{s:value}% Skeletons Spawned",
+      "dname": "+{s:value}% Skeletons Spawned",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_wraith_king_9",
+      "status": "unresolved",
+      "sourceName": "-{s:value}s Wraithfire Blast Cooldown",
+      "dname": "-{s:value}s Wraithfire Blast Cooldown",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_wraith_king_facet_2",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_talent_skeleton_damage} Bone Guard Skeleton Damage",
+      "dname": "+{s:bonus_talent_skeleton_damage} Bone Guard Skeleton Damage",
+      "reasons": [
+        "absent-definition",
+        "commented-source-reference",
+        "missing-source-value"
+      ]
+    },
+    {
+      "name": "special_bonus_unique_wraith_king_vampiric_skeleton_duration",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_skeleton_duration}% Summon Skeleton Duration/-{s:bonus_AbilityCooldown}% Cooldown",
+      "dname": "+{s:bonus_skeleton_duration}% Summon Skeleton Duration/-{s:bonus_AbilityCooldown}% Cooldown",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_kunkka",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_radius} Torrent AoE",
+      "dname": "+{s:bonus_radius} Torrent AoE",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_kunkka_ghostship_cooldown",
+      "status": "unresolved",
+      "sourceName": "-{s:bonus_AbilityCooldown} Ghostship Cooldown",
+      "dname": "-{s:bonus_AbilityCooldown} Ghostship Cooldown",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_kunkka_3",
+      "status": "unresolved",
+      "sourceName": "-{s:bonus_AbilityCooldown}s Admiral's Rum Cooldown",
+      "dname": "-{s:bonus_AbilityCooldown}s Admiral's Rum Cooldown",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_kunkka_5",
+      "status": "unresolved",
+      "sourceName": "-{s:bonus_AbilityCooldown}s Tidebringer Cooldown",
+      "dname": "-{s:bonus_AbilityCooldown}s Tidebringer Cooldown",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_kunkka_6",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_ally_ms}% X Marks the Spot Move Speed",
+      "dname": "+{s:bonus_ally_ms}% X Marks the Spot Move Speed",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_kunkka_tidebringer_cooldown_per_hit",
+      "status": "unresolved",
+      "sourceName": "-{s:bonus_cooldown_reduction_per_hero_hit}s Tidebringer cooldown per enemy Hero hit",
+      "dname": "-{s:bonus_cooldown_reduction_per_hero_hit}s Tidebringer cooldown per enemy Hero hit",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_kunkka_admirals_rum_delay",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_delay_time}s Admiral's Rum Delay Time",
+      "dname": "+{s:bonus_delay_time}s Admiral's Rum Delay Time",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_dragon_knight_5",
+      "status": "unresolved",
+      "sourceName": "+{s:value}% Frost Breath Slow",
+      "dname": "+{s:value}% Frost Breath Slow",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_dragon_knight_6",
+      "status": "unresolved",
+      "sourceName": "+{s:value}% Splash Attack Damage",
+      "dname": "+{s:value}% Splash Attack Damage",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_dragon_knight_8",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_outgoing_damage_per_stack}% Wyrm's Wrath Damage Per Stack",
+      "dname": "+{s:bonus_outgoing_damage_per_stack}% Wyrm's Wrath Damage Per Stack",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_invoker_1",
+      "status": "unresolved",
+      "sourceName": "{s:bonus_spirit_count} Forged Spirits Summoned",
+      "dname": "{s:bonus_spirit_count} Forged Spirits Summoned",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_invoker_6",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_main_damage}% Chaos Meteor Damage",
+      "dname": "+{s:bonus_main_damage}% Chaos Meteor Damage",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_invoker_7",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_duration}s Cold Snap Duration",
+      "dname": "+{s:bonus_duration}s Cold Snap Duration",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_invoker_8",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_lift_duration}s Tornado Lift Time",
+      "dname": "+{s:bonus_lift_duration}s Tornado Lift Time",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_invoker_10",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_damage_per_mana_pct}% E.M.P. Mana Burnt",
+      "dname": "+{s:bonus_damage_per_mana_pct}% E.M.P. Mana Burnt",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_invoker_13_facet_invoker_agnostic",
+      "status": "unresolved",
+      "sourceName": "{s:bonus_intrinsic_attack_speed}x Quas/Wex/Exort passive effects",
+      "dname": "{s:bonus_intrinsic_attack_speed}x Quas/Wex/Exort passive effects",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_axe_3",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_armor_per_stack} Bonus Armor per Culling Blade Stack",
+      "dname": "+{s:bonus_armor_per_stack} Bonus Armor per Culling Blade Stack",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_axe_6",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_slow}% Battle Hunger Slow",
+      "dname": "+{s:bonus_slow}% Battle Hunger Slow",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_invoker_facet_orb_level",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_facet_bonus_levels} Facet Orb Level",
+      "dname": "+{s:bonus_facet_bonus_levels} Facet Orb Level",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_clinkz_5",
+      "status": "unresolved",
+      "sourceName": "-{s:value}s Burning Army Cooldown",
+      "dname": "-{s:value}s Burning Army Cooldown",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_clinkz_6",
+      "status": "unresolved",
+      "sourceName": "+{s:value} Death Pact Health",
+      "dname": "+{s:value} Death Pact Health",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_clinkz_12",
+      "status": "unresolved",
+      "sourceName": "+{s:value} Burning Barrage arrows",
+      "dname": "+{s:value} Burning Barrage arrows",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_juggernaut_omnislash_cast_range",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_AbilityCastRange} Omnislash Cast Range",
+      "dname": "+{s:bonus_AbilityCastRange} Omnislash Cast Range",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_juggernaut_blade_form_agility_per_stack",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_agi_bonus_pct_per_stack}% Bladeform Base Agility Per Stack",
+      "dname": "+{s:bonus_agi_bonus_pct_per_stack}% Bladeform Base Agility Per Stack",
+      "reasons": [
+        "absent-definition",
+        "commented-source-reference",
+        "missing-source-value"
+      ]
+    },
+    {
+      "name": "special_bonus_unique_night_stalker_5",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_bonus_movement_speed_pct_night}% Hunter In The Night Movement Speed",
+      "dname": "+{s:bonus_bonus_movement_speed_pct_night}% Hunter In The Night Movement Speed",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_night_stalker_6",
+      "status": "unresolved",
+      "sourceName": "-{s:value}s Crippling Fear Cooldown",
+      "dname": "-{s:value}s Crippling Fear Cooldown",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_night_stalker_7",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_duration}s Dark Ascension Duration",
+      "dname": "+{s:bonus_duration}s Dark Ascension Duration",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_night_stalker_midnight_feast_duration",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_heal_duration}s Midnight Feast Duration",
+      "dname": "+{s:bonus_heal_duration}s Midnight Feast Duration",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_nyx_carapace_reflect_duration",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_reflect_duration}s Spiked Carapace Reflect Duration",
+      "dname": "+{s:bonus_reflect_duration}s Spiked Carapace Reflect Duration",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_ursa_5",
+      "status": "unresolved",
+      "sourceName": "+{s:value} AoE Earthshock",
+      "dname": "+{s:value} AoE Earthshock",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_ursa_6",
+      "status": "unresolved",
+      "sourceName": "Enrage gains {s:value}% Status Resistance",
+      "dname": "Enrage gains {s:value}% Status Resistance",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_ursa_enrage_radius",
+      "status": "unresolved",
+      "sourceName": "Enrage provides half benefits to allies in a {s:bonus_aoe_radius} radius",
+      "dname": "Enrage provides half benefits to allies in a {s:bonus_aoe_radius} radius",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_ursa_earthshock_furyswipes",
+      "status": "unresolved",
+      "sourceName": "Earthshock Applies {s:bonus_fury_swipe_stacks_on_hit} Fury Swipes",
+      "dname": "Earthshock Applies {s:bonus_fury_swipe_stacks_on_hit} Fury Swipes",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_chaos_knight_4",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_illusion_duration}s Phantasm Duration",
+      "dname": "+{s:bonus_illusion_duration}s Phantasm Duration",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_lycan_3_facet_lycan_spirit_wolves",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_damage_per_wolf} Summon Wolves Damage Per Wolf",
+      "dname": "+{s:bonus_damage_per_wolf} Summon Wolves Damage Per Wolf",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_lycan_6",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_attack_damage_reduction}% Howl Attack Damage Reduction",
+      "dname": "+{s:bonus_attack_damage_reduction}% Howl Attack Damage Reduction",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_lycan_7_facet_lycan_spirit_wolves",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_health_per_wolf} Summon Wolves Health Per Wolf",
+      "dname": "+{s:bonus_health_per_wolf} Summon Wolves Health Per Wolf",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_windranger",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_radius} Windrun Radius",
+      "dname": "+{s:bonus_radius} Windrun Radius",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_windranger_9",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_min_movespeed} Easy Breezy Min/Max Movespeed",
+      "dname": "+{s:bonus_min_movespeed} Easy Breezy Min/Max Movespeed",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_windranger_10",
+      "status": "unresolved",
+      "sourceName": "+{s:value} Windrun HP Regen",
+      "dname": "+{s:value} Windrun HP Regen",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_windranger_powershot_dmg",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_powershot_damage} Powershot Damage",
+      "dname": "+{s:bonus_powershot_damage} Powershot Damage",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_phantom_lancer",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_max_distance} Phantom Rush Range",
+      "dname": "+{s:bonus_max_distance} Phantom Rush Range",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_phantom_lancer_2",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_agility_duration}s Phantom Rush Bonus Agility Duration",
+      "dname": "+{s:bonus_agility_duration}s Phantom Rush Bonus Agility Duration",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_phantom_lancer_3",
+      "status": "unresolved",
+      "sourceName": "+{s:value} Max Juxtapose Illusions",
+      "dname": "+{s:value} Max Juxtapose Illusions",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_phantom_lancer_6",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_tooltip_illusion_damage}% Juxtapose Damage",
+      "dname": "+{s:bonus_tooltip_illusion_damage}% Juxtapose Damage",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_phantom_lancer_7",
+      "status": "unresolved",
+      "sourceName": "+{s:value} Spirit Lance Multishot",
+      "dname": "+{s:value} Spirit Lance Multishot",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_phantom_lancer_doppel_illusion2_amt",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_illusion_2_amount} Doppelganger Illusion",
+      "dname": "+{s:bonus_illusion_2_amount} Doppelganger Illusion",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_phantom_lancer_phantom_rush_duration",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_duration}s Phantom Rush Debuff Duration",
+      "dname": "+{s:bonus_duration}s Phantom Rush Debuff Duration",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_phantom_lancer_phantom_rush_agility",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_bonus_agility} Phantom Rush Agility",
+      "dname": "+{s:bonus_bonus_agility} Phantom Rush Agility",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_phantom_lancer_lance_illusion_damage",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_tooltip_illusion_damage}% Spirit Lance Illusion Damage",
+      "dname": "+{s:bonus_tooltip_illusion_damage}% Spirit Lance Illusion Damage",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_spectre_desolate_radius",
+      "status": "unresolved",
+      "sourceName": "-{s:bonus_radius} Desolate Ally Radius",
+      "dname": "-{s:bonus_radius} Desolate Ally Radius",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_storm_spirit_2",
+      "status": "unresolved",
+      "sourceName": "+{s:value} Ball Lightning Damage",
+      "dname": "+{s:value} Ball Lightning Damage",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_storm_spirit_6",
+      "status": "unresolved",
+      "sourceName": "+{s:value} Overload Damage",
+      "dname": "+{s:value} Overload Damage",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_tidehunter_4",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_bonus_reduction_per_stack} Kraken Shell Damage Block per Anchor Smash Kill",
+      "dname": "+{s:bonus_bonus_reduction_per_stack} Kraken Shell Damage Block per Anchor Smash Kill",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_tidehunter_6",
+      "status": "unresolved",
+      "sourceName": "-{s:bonus_damage_cleanse} Kraken Shell Damage Threshold",
+      "dname": "-{s:bonus_damage_cleanse} Kraken Shell Damage Threshold",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_tidehunter_9",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_attack_damage} Anchor Smash Damage",
+      "dname": "+{s:bonus_attack_damage} Anchor Smash Damage",
+      "reasons": [
+        "absent-definition",
+        "commented-source-reference",
+        "missing-source-value"
+      ]
+    },
+    {
+      "name": "special_bonus_unique_tinker_2",
+      "status": "unresolved",
+      "sourceName": "+{s:value} March of the Machines Damage",
+      "dname": "+{s:value} March of the Machines Damage",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_tinker_3",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_barrier_duration}s Defense Matrix Duration",
+      "dname": "+{s:bonus_barrier_duration}s Defense Matrix Duration",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_tinker_6",
+      "status": "unresolved",
+      "sourceName": "+{s:value} Heat-Seeking Missile Count",
+      "dname": "+{s:value} Heat-Seeking Missile Count",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_tinker_7",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_damage_absorb} Defense Matrix Damage Barrier",
+      "dname": "+{s:bonus_damage_absorb} Defense Matrix Damage Barrier",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_tinker_defense_matrix_cdr",
+      "status": "unresolved",
+      "sourceName": "Defense Matrix Grants {s:bonus_cooldown_reduction}%  Cooldown Reduction",
+      "dname": "Defense Matrix Grants {s:bonus_cooldown_reduction}%  Cooldown Reduction",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_tinker_defense_matrix_status_resistance",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_status_resistance}% Defense Matrix Status Resistance",
+      "dname": "+{s:bonus_status_resistance}% Defense Matrix Status Resistance",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_tinker_turret_duration",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_duration}s Deploy Turrets Duration",
+      "dname": "+{s:bonus_duration}s Deploy Turrets Duration",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_tinker_deploy_turrets_drop_damage",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_drop_damage} Deploy Turrets Impact Damage",
+      "dname": "+{s:bonus_drop_damage} Deploy Turrets Impact Damage",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_tinker_rearm_magic_resistance",
+      "status": "unresolved",
+      "sourceName": "Rearm Grants {s:bonus_magic_resistance}% Bonus Magic Resistance",
+      "dname": "Rearm Grants {s:bonus_magic_resistance}% Bonus Magic Resistance",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_tiny_tree_attacks",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_attack_count} Tree Grab Attacks",
+      "dname": "+{s:bonus_attack_count} Tree Grab Attacks",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_troll_warlord_7",
+      "status": "unresolved",
+      "sourceName": "-{s:value}s Battle Trance Cooldown",
+      "dname": "-{s:value}s Battle Trance Cooldown",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_undying_flesh_golem_cooldown",
+      "status": "unresolved",
+      "sourceName": "-{s:bonus_AbilityCooldown} Flesh Golem Cooldown",
+      "dname": "-{s:bonus_AbilityCooldown} Flesh Golem Cooldown",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_viper_6",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_bonus_attack_speed} Corrosive Skin Attack Speed Slow",
+      "dname": "+{s:bonus_bonus_attack_speed} Corrosive Skin Attack Speed Slow",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_elder_titan_spirit_damage",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_pass_damage} Astral Spirit Damage",
+      "dname": "+{s:bonus_pass_damage} Astral Spirit Damage",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_ember_spirit_7",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_unit_count} Searing Chains Target",
+      "dname": "+{s:bonus_unit_count} Searing Chains Target",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_lifestealer_Facet_life_stealer_rage_dispell",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_duration}s Unfettered Duration",
+      "dname": "+{s:bonus_duration}s Unfettered Duration",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_lifestealer_2",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_movement_speed_bonus}% Ghoul Frenzy Movement Speed",
+      "dname": "+{s:bonus_movement_speed_bonus}% Ghoul Frenzy Movement Speed",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_lifestealer_5",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_attack_speed_bonus} Ghoul Frenzy Attack Speed",
+      "dname": "+{s:bonus_attack_speed_bonus} Ghoul Frenzy Attack Speed",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_lifestealer_7",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_attack_speed_bonus} Ghoul Frenzy Attack Speed",
+      "dname": "+{s:bonus_attack_speed_bonus} Ghoul Frenzy Attack Speed",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_lifestealer_ghoul_frenzy_miss",
+      "status": "unresolved",
+      "sourceName": "{s:bonus_miss_pct}% Miss Chance on Ghoul Frenzy",
+      "dname": "{s:bonus_miss_pct}% Miss Chance on Ghoul Frenzy",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_lifestealer_rage_armor",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_bonus_armor} Armor during Rage",
+      "dname": "+{s:bonus_bonus_armor} Armor during Rage",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_lion",
+      "status": "unresolved",
+      "sourceName": "+{s:value} Mana Drain Multi Target",
+      "dname": "+{s:value} Mana Drain Multi Target",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_lion_7",
+      "status": "unresolved",
+      "sourceName": "-{s:value}s Earth Spike Cooldown",
+      "dname": "-{s:value}s Earth Spike Cooldown",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_lion_9",
+      "status": "unresolved",
+      "sourceName": "-{s:value} Mana Drain Attack Speed",
+      "dname": "-{s:value} Mana Drain Attack Speed",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_lion_manadrain_damage",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_damage_pct}% Mana Drain Damage",
+      "dname": "+{s:bonus_damage_pct}% Mana Drain Damage",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_skywrath_7",
+      "status": "unresolved",
+      "sourceName": "{s:value} AoE Ancient Seal",
+      "dname": "{s:value} AoE Ancient Seal",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_medusa_6",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_damage_per_mana} Mana Shield Damage per Mana",
+      "dname": "+{s:bonus_damage_per_mana} Mana Shield Damage per Mana",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_medusa_7",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_movement_slow}% Mystic Snake Turn and Movement Speed Slow",
+      "dname": "+{s:bonus_movement_slow}% Mystic Snake Turn and Movement Speed Slow",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_ogre_magi_5",
+      "status": "unresolved",
+      "sourceName": "-{s:bonus_AbilityCooldown}s Fireblast Cooldown",
+      "dname": "-{s:bonus_AbilityCooldown}s Fireblast Cooldown",
+      "reasons": [
+        "absent-definition",
+        "commented-source-reference",
+        "missing-source-value"
+      ]
+    },
+    {
+      "name": "special_bonus_unique_silencer",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_penalty_multiplier} Arcane Curse Silenced Multiplier",
+      "dname": "+{s:bonus_penalty_multiplier} Arcane Curse Silenced Multiplier",
+      "reasons": [
+        "absent-definition",
+        "commented-source-reference",
+        "missing-source-value"
+      ]
+    },
+    {
+      "name": "special_bonus_unique_silencer_6",
+      "status": "unresolved",
+      "sourceName": "+{s:value}% Arcane Curse Slow",
+      "dname": "+{s:value}% Arcane Curse Slow",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_silencer_glaives_bounces",
+      "status": "unresolved",
+      "sourceName": "{s:bonus_bounce_count} Glaives of Wisdom Bounce",
+      "dname": "{s:bonus_bounce_count} Glaives of Wisdom Bounce",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_silencer_arcane_curse_charges",
+      "status": "unresolved",
+      "sourceName": "{s:bonus_AbilityCharges} Arcane Curse Charges",
+      "dname": "{s:bonus_AbilityCharges} Arcane Curse Charges",
+      "reasons": [
+        "absent-definition",
+        "commented-source-reference",
+        "missing-source-value"
+      ]
+    },
+    {
+      "name": "special_bonus_unique_death_prophet_4",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_max_moveslow}% Spirit Siphon Max Move Speed Slow",
+      "dname": "+{s:bonus_max_moveslow}% Spirit Siphon Max Move Speed Slow",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_death_prophet_crypt_swarm_slow",
+      "status": "unresolved",
+      "sourceName": "Crypt Swarm applies {s:bonus_slow_percent}% slow for {s:bonus_slow_duration}s",
+      "dname": "Crypt Swarm applies {s:bonus_slow_percent}% slow for {s:bonus_slow_duration}s",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_death_prophet_silence_slow",
+      "status": "unresolved",
+      "sourceName": "-{s:bonus_movement_slow}% Silence Move Speed Slow",
+      "dname": "-{s:bonus_movement_slow}% Silence Move Speed Slow",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_phantom_assassin_2_facet_phantom_assassin_methodical",
+      "status": "unresolved",
+      "sourceName": "-{s:bonus_attacks_to_proc} Attacks to Trigger Coup de Grace",
+      "dname": "-{s:bonus_attacks_to_proc} Attacks to Trigger Coup de Grace",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_phantom_assassin_8",
+      "status": "unresolved",
+      "sourceName": "+{s:value} Range and Ground Target Stifling Dagger",
+      "dname": "+{s:value} Range and Ground Target Stifling Dagger",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_phantom_assassin_9",
+      "status": "unresolved",
+      "sourceName": "{s:value} Phantom Strike Charges",
+      "dname": "{s:value} Phantom Strike Charges",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_riki_2",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_agility_pct} Tricks of the Trade Agility Increase",
+      "dname": "+{s:bonus_agility_pct} Tricks of the Trade Agility Increase",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_riki_4",
+      "status": "unresolved",
+      "sourceName": "+{s:value} Tricks of the Trade Radius",
+      "dname": "+{s:value} Tricks of the Trade Radius",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_tusk_3_facet_tusk_facet_fist_bump",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_buff_duration}s Drinking Buddies Duration",
+      "dname": "+{s:bonus_buff_duration}s Drinking Buddies Duration",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_tusk_5",
+      "status": "unresolved",
+      "sourceName": "-{s:bonus_AbilityCooldown}s Ice Shards Cooldown",
+      "dname": "-{s:bonus_AbilityCooldown}s Ice Shards Cooldown",
+      "reasons": [
+        "absent-definition",
+        "commented-source-reference",
+        "missing-source-value"
+      ]
+    },
+    {
+      "name": "special_bonus_unique_tusk_tag_team_armor_reduction",
+      "status": "unresolved",
+      "sourceName": "-{s:bonus_armor_reduction} Tag Team Armor Reduction",
+      "dname": "-{s:bonus_armor_reduction} Tag Team Armor Reduction",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_sniper_take_aim_armor",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_bonus_armor} Take Aim Armor",
+      "dname": "+{s:bonus_bonus_armor} Take Aim Armor",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_sniper_grenade_range",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_AbilityCastRange} Concussive Grenade Cast Range",
+      "dname": "+{s:bonus_AbilityCastRange} Concussive Grenade Cast Range",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_magnus_3",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_range} Skewer Range",
+      "dname": "+{s:bonus_range} Skewer Range",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_earth_spirit_rolling_boulder_cooldown",
+      "status": "unresolved",
+      "sourceName": "-{s:bonus_AbilityCooldown} Rolling Boulder Cooldown",
+      "dname": "-{s:bonus_AbilityCooldown} Rolling Boulder Cooldown",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_naga_siren_2_facet_naga_siren_active_riptide",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_damage}% Deluge Damage",
+      "dname": "+{s:bonus_damage}% Deluge Damage",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_naga_siren_7",
+      "status": "unresolved",
+      "sourceName": "Song of the Siren heals allies {s:value}% Max HP/s",
+      "dname": "Song of the Siren heals allies {s:value}% Max HP/s",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_oracle_fortunes_end_damage",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_damage} Fortune's End Damage",
+      "dname": "+{s:bonus_damage} Fortune's End Damage",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_oracle_damage_per_purge",
+      "status": "unresolved",
+      "sourceName": "Fortune's End Heals/Damages for {s:bonus_damage_per_buff} Per Effect Dispelled",
+      "dname": "Fortune's End Heals/Damages for {s:bonus_damage_per_buff} Per Effect Dispelled",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_sand_king_5",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_epicenter_radius_base}/{s:bonus_epicenter_radius_increment} Base/Incremental Radius of Epicenter",
+      "dname": "+{s:bonus_epicenter_radius_base}/{s:bonus_epicenter_radius_increment} Base/Incremental Radius of Epicenter",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_sand_king_6",
+      "status": "unresolved",
+      "sourceName": "+{s:value}% Caustic Finale Slow",
+      "dname": "+{s:value}% Caustic Finale Slow",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_sand_king_burrowstrike_stun",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_burrow_duration}s Burrowstrike Stun",
+      "dname": "+{s:bonus_burrow_duration}s Burrowstrike Stun",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_sand_king_epicenter_passive_proc",
+      "status": "unresolved",
+      "sourceName": "Create {s:bonus_shard_radius} AoE Epicenter Pulse around Sand King every 3s",
+      "dname": "Create {s:bonus_shard_radius} AoE Epicenter Pulse around Sand King every 3s",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_shadow_demon_2",
+      "status": "unresolved",
+      "sourceName": "-{s:value}s Soul Catcher Cooldown",
+      "dname": "-{s:value}s Soul Catcher Cooldown",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_shadow_demon_5",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_disruption_duration}s Disruption Banish Duration",
+      "dname": "+{s:bonus_disruption_duration}s Disruption Banish Duration",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_shadow_demon_8",
+      "status": "unresolved",
+      "sourceName": "+{s:value}s Soul Catcher Duration",
+      "dname": "+{s:value}s Soul Catcher Duration",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_drow_ranger_4",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_wave_width} Gust Width",
+      "dname": "+{s:bonus_wave_width} Gust Width",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_drow_ranger_5",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_miss_chance}% Gust Blind",
+      "dname": "+{s:bonus_miss_chance}% Gust Blind",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_slardar_8",
+      "status": "unresolved",
+      "sourceName": "+{s:value}% Slithereen Crush Attack/Move Slow",
+      "dname": "+{s:value}% Slithereen Crush Attack/Move Slow",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_lina_5",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_damage} Laguna Blade Damage",
+      "dname": "+{s:bonus_damage} Laguna Blade Damage",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_lina_8",
+      "status": "unresolved",
+      "sourceName": "Spells deal {s:bonus_bonus_spell_damage} more damage for each Fiery Soul Charge.",
+      "dname": "Spells deal {s:bonus_bonus_spell_damage} more damage for each Fiery Soul Charge.",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_lina_supercharge_stacks",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_supercharge_stacks} Laguna Blade Supercharge Stacks",
+      "dname": "+{s:bonus_supercharge_stacks} Laguna Blade Supercharge Stacks",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_lina_supercharge_duration",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_supercharge_duration}s Laguna Blade Supercharge Duration",
+      "dname": "+{s:bonus_supercharge_duration}s Laguna Blade Supercharge Duration",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_ancient_apparition_4",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_movement_speed_pct}% Ice Vortex Slow/Increased Magic Damage",
+      "dname": "+{s:bonus_movement_speed_pct}% Ice Vortex Slow/Increased Magic Damage",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_disruptor_2_Facet_disruptor_line_walls",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_AbilityChargeRestoreTime}s Kinetic Fence Charge Restore Time",
+      "dname": "+{s:bonus_AbilityChargeRestoreTime}s Kinetic Fence Charge Restore Time",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_disruptor_3",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_radius} Thunder Strike Radius",
+      "dname": "+{s:bonus_radius} Thunder Strike Radius",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_disruptor_5_Facet_disruptor_line_walls",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_AbilityCharges} Kinetic Fence Charge",
+      "dname": "+{s:bonus_AbilityCharges} Kinetic Fence Charge",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_gyrocopter_4",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_bonus_movement_speed} Movement Speed during Rocket Barrage",
+      "dname": "+{s:bonus_bonus_movement_speed} Movement Speed during Rocket Barrage",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_gyrocopter_flak_cannon_range",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_radius} Flak Cannon Attack Radius",
+      "dname": "+{s:bonus_radius} Flak Cannon Attack Radius",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_keeper_of_the_light_4",
+      "status": "unresolved",
+      "sourceName": "+{s:value} Will-O-Wisp Health Count",
+      "dname": "+{s:value} Will-O-Wisp Health Count",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_keeper_of_the_light_6",
+      "status": "unresolved",
+      "sourceName": "+{s:value} Will-O-Wisp AoE",
+      "dname": "+{s:value} Will-O-Wisp AoE",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_keeper_of_the_light_7",
+      "status": "unresolved",
+      "sourceName": "-{s:bonus_AbilityCooldown}s Chakra Magic Cooldown",
+      "dname": "-{s:bonus_AbilityCooldown}s Chakra Magic Cooldown",
+      "reasons": [
+        "absent-definition",
+        "commented-source-reference",
+        "missing-source-value"
+      ]
+    },
+    {
+      "name": "special_bonus_unique_keeper_of_the_light_9",
+      "status": "unresolved",
+      "sourceName": "+{s:value}% Illuminate Daytime Heal",
+      "dname": "+{s:value}% Illuminate Daytime Heal",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_keeper_of_the_light_10",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_stun_duration}s Solar Bind Stun when target is fully slowed",
+      "dname": "+{s:bonus_stun_duration}s Solar Bind Stun when target is fully slowed",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_keeper_of_the_light_10_facet_keeper_of_the_light_facet_recall",
+      "status": "unresolved",
+      "sourceName": "-{s:bonus_teleport_delay}s Recall Teleport Delay",
+      "dname": "-{s:bonus_teleport_delay}s Recall Teleport Delay",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_keeper_of_the_light_12",
+      "status": "unresolved",
+      "sourceName": "{s:value} Blinding Light Charges",
+      "dname": "{s:value} Blinding Light Charges",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_keeper_of_the_light_13",
+      "status": "unresolved",
+      "sourceName": "{s:value} Solar Bind Charges",
+      "dname": "{s:value} Solar Bind Charges",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_keeper_of_the_light_13_facet_keeper_of_the_light_facet_recall",
+      "status": "unresolved",
+      "sourceName": "{s:value} Recall Charges",
+      "dname": "{s:value} Recall Charges",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_legion_commander",
+      "status": "unresolved",
+      "sourceName": "+{s:value} Duel Bonus Damage",
+      "dname": "+{s:value} Duel Bonus Damage",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_legion_commander_2",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_radius} Overwhelming Odds Radius",
+      "dname": "+{s:bonus_radius} Overwhelming Odds Radius",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_legion_commander_5",
+      "status": "unresolved",
+      "sourceName": "{s:bonus_radius} AoE Press The Attack",
+      "dname": "{s:bonus_radius} AoE Press The Attack",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_legion_commander_pta_movespeed",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_move_speed}% Press The Attack Movement Speed",
+      "dname": "+{s:bonus_move_speed}% Press The Attack Movement Speed",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_puck_4",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_coil_stun_duration}s Dream Coil Stun Duration",
+      "dname": "+{s:bonus_coil_stun_duration}s Dream Coil Stun Duration",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_puck_8",
+      "status": "unresolved",
+      "sourceName": "-{s:bonus_AbilityCooldown}s Illusory Orb Cooldown",
+      "dname": "-{s:bonus_AbilityCooldown}s Illusory Orb Cooldown",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_bloodseeker_6",
+      "status": "unresolved",
+      "sourceName": "{s:bonus_spell_amp}% Bloodrage Spell Amplification",
+      "dname": "{s:bonus_spell_amp}% Bloodrage Spell Amplification",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_bloodseeker_6_facet_bloodseeker_old_blood",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_base_damage_amp}% Bloodrage Base Damage Amp",
+      "dname": "+{s:bonus_base_damage_amp}% Bloodrage Base Damage Amp",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_bloodseeker_rupture_charges",
+      "status": "unresolved",
+      "sourceName": "{s:bonus_AbilityCharges} Rupture Charges",
+      "dname": "{s:bonus_AbilityCharges} Rupture Charges",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_outworld_devourer_prison_duration",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_prison_duration}s Astral Imprisonment Prison",
+      "dname": "+{s:bonus_prison_duration}s Astral Imprisonment Prison",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_broodmother_web_hpregen",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_health_regen} Spin Web Health Regeneration",
+      "dname": "+{s:bonus_health_regen} Spin Web Health Regeneration",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_chen_1",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_AbilityCharges} Holy Persuasion Max Units and Charges",
+      "dname": "+{s:bonus_AbilityCharges} Holy Persuasion Max Units and Charges",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_chen_3",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_attack_speed} Convert Attack Speed",
+      "dname": "+{s:bonus_attack_speed} Convert Attack Speed",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_chen_6",
+      "status": "unresolved",
+      "sourceName": "-{s:value}s Divine Favor Cooldown",
+      "dname": "-{s:value}s Divine Favor Cooldown",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_chen_7",
+      "status": "unresolved",
+      "sourceName": "-{s:value}s Hand of God Cooldown",
+      "dname": "-{s:value}s Hand of God Cooldown",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_lone_druid_3",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_bonus_building_damage} Demolish Building Armor Reduction",
+      "dname": "+{s:bonus_bonus_building_damage} Demolish Building Armor Reduction",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_lone_druid_5",
+      "status": "unresolved",
+      "sourceName": "+{s:value}% Spirit Bear Magic Resistance",
+      "dname": "+{s:value}% Spirit Bear Magic Resistance",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_lone_druid_6",
+      "status": "unresolved",
+      "sourceName": "+{s:value} Spirit Link Attack Speed",
+      "dname": "+{s:value} Spirit Link Attack Speed",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_lone_druid_7",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_bonus_bear_hp} True Form and Spirit Bear Health",
+      "dname": "+{s:bonus_bonus_bear_hp} True Form and Spirit Bear Health",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_lone_druid_10",
+      "status": "unresolved",
+      "sourceName": "-{s:bonus_bear_bat} Spirit Bear Base Attack Time",
+      "dname": "-{s:bonus_bear_bat} Spirit Bear Base Attack Time",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_lone_druid_spirit_link_attack_speed",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_bonus_attack_speed} Spirit Link Attack Speed",
+      "dname": "+{s:bonus_bonus_attack_speed} Spirit Link Attack Speed",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_wisp_11",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_slow}% Tether Enemy Move/Attack Slow",
+      "dname": "+{s:bonus_slow}% Tether Enemy Move/Attack Slow",
+      "reasons": [
+        "absent-definition",
+        "commented-source-reference",
+        "missing-source-value"
+      ]
+    },
+    {
+      "name": "special_bonus_unique_arc_warden_2",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_damage_per_second} Flux Damage",
+      "dname": "+{s:bonus_damage_per_second} Flux Damage",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_arc_warden_6",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_duration}s Tempest Double Duration",
+      "dname": "+{s:bonus_duration}s Tempest Double Duration",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_meepo",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_slow}% Poof Slow",
+      "dname": "+{s:bonus_slow}% Poof Slow",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_meepo_5",
+      "status": "unresolved",
+      "sourceName": "+{s:value} Divided We Stand Clone",
+      "dname": "+{s:value} Divided We Stand Clone",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_meepo_8",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_slow_duration}s Poof Slow Duration",
+      "dname": "+{s:bonus_slow_duration}s Poof Slow Duration",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_monkey_king",
+      "status": "unresolved",
+      "sourceName": "+{s:value}% Boundless Strike Crit",
+      "dname": "+{s:value}% Boundless Strike Crit",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_monkey_king_4",
+      "status": "unresolved",
+      "sourceName": "+{s:value} Armor Wukong's Command",
+      "dname": "+{s:value} Armor Wukong's Command",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_monkey_king_5",
+      "status": "unresolved",
+      "sourceName": "+{s:value}% Tree Dance Vision AoE",
+      "dname": "+{s:value}% Tree Dance Vision AoE",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_monkey_king_12",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_invul_duration}s Mischief Invulnerability Duration",
+      "dname": "+{s:bonus_invul_duration}s Mischief Invulnerability Duration",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_pangolier_2",
+      "status": "unresolved",
+      "sourceName": "{s:bonus_rolling_thunder_cooldown}s Shield Crash CD in Ball",
+      "dname": "{s:bonus_rolling_thunder_cooldown}s Shield Crash CD in Ball",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_pangolier_7",
+      "status": "unresolved",
+      "sourceName": "+{s:bonus_strikes} Swashbuckle Strike",
+      "dname": "+{s:bonus_strikes} Swashbuckle Strike",
+      "reasons": ["absent-definition", "missing-source-value"]
+    },
+    {
+      "name": "special_bonus_unique_grimstroke_5",
+      "status": "unresolved",
+      "sourceName": "+{s:value} Ink Swell Max Damage",
+      "dname": "+{s:value} Ink Swell Max Damage",
+      "reasons": ["absent-definition", "missing-source-value"]
+    }
+  ],
+  "validation": {
+    "tests": {
+      "start": 24,
+      "beforeAuditCorrection": 39,
+      "final": 42,
+      "fail": 0
+    },
+    "currentIndependent": {
+      "talents": 973,
+      "templated": 916,
+      "placeholders": 937,
+      "errors": 0
+    },
+    "fullCollection": {
+      "modifierEntries": 1216,
+      "missingCandidates": 0,
+      "inputMutation": false,
+      "reversedTraversal": "Identical lookup"
+    },
+    "repeatedGeneration": "All 24 files byte-identical after poisoning 22 regenerated files",
+    "localRemoteParity": "All 24 files byte-identical; remote transport returns the same local bytes (mock)",
+    "realRemoteAudit": "Zero errors; all 134 fixed-input fingerprints, talent diagnostics and localization metadata match local after the audit correction",
+    "liveBuild": "npm run build completed using local fixed game inputs and real external feeds; all 24 JSON outputs semantically match the final checkout",
+    "typecheck": {
+      "baseErrors": 83,
+      "startErrors": 79,
+      "beforeAuditCorrectionErrors": 79,
+      "finalErrors": 79,
+      "newDiagnostics": 0,
+      "removedDiagnostics": [
+        {
+          "diagnostic": "tasks/updateconstants.ts(location): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.",
+          "count": 1
+        },
+        {
+          "diagnostic": "tasks/updateconstants.ts(location): error TS7006: Parameter 'key' implicitly has an 'any' type.",
+          "count": 1
+        },
+        {
+          "diagnostic": "tasks/updateconstants.ts(location): error TS7006: Parameter 'template' implicitly has an 'any' type.",
+          "count": 1
+        },
+        {
+          "diagnostic": "tasks/updateconstants.ts(location): error TS7006: Parameter 'attribs' implicitly has an 'any' type.",
+          "count": 1
+        }
+      ],
+      "note": "Same TypeScript 5.9.3, strict tsconfig and dependencies; compared diagnostic multisets after removing only line/column positions. Remaining errors are in tasks/updateconstants.ts; strict typecheck fails."
+    },
+    "webIntegration": "Not executed",
+    "liveBuildRevision": "74bb4a008c426b7cd36e7617197f83bbc4e04166",
+    "liveBuildRerunForAuditCorrection": false,
+    "auditCorrection": {
+      "previousNonCurrent": {
+        "total": 805,
+        "missingNames": 3,
+        "unresolved": 314,
+        "statusCounts": {
+          "missing-name": 3,
+          "source-resolved": 486,
+          "unresolved": 314,
+          "legacy-fallback": 2
+        }
+      },
+      "correctedNonCurrent": {
+        "total": 800,
+        "missingNames": 3,
+        "unresolved": 311,
+        "statusCounts": {
+          "missing-name": 3,
+          "source-resolved": 484,
+          "unresolved": 311,
+          "legacy-fallback": 2
+        }
+      },
+      "generatedDataChanges": [],
+      "generatedHashesMatchPreviousVerification": true,
+      "note": "Three unresolved descriptions and two complete metadata texts were separated, not newly resolved; public exports are unchanged"
+    }
+  },
+  "limits": [
+    "source-resolved means consistent with the pinned definition/template, not independently verified in-game behavior",
+    "legacy-fallback preserves a public label, not a verified historical numeric game value",
+    "Deleted definitions cannot be reconstructed from current localization alone",
+    "The audit shares the generator collector; fixed explicit fixture assertions and a separate raw-definition numeric oracle provide additional evidence",
+    "Candidate-level value-alias conflicts may be unused by actual templates; only two inactive labels require conflicting values in this snapshot",
+    "Non-current diagnostics are exported records, not authenticated historical talents; identified localization metadata is reported separately without removing existing exports"
+  ],
+  "localizationMetadata": {
+    "meaning": "Legacy tooltip description/note exports preserved for compatibility; excluded from talent status and missing-source-value classifications",
+    "entries": [
+      {
+        "name": "special_bonus_unique_clinkz_2_Note0",
+        "kind": "note",
+        "parent": "special_bonus_unique_clinkz_2",
+        "localizationKey": "dota_tooltip_ability_special_bonus_unique_clinkz_2_note0",
+        "sourceName": "Only steals the first ability",
+        "dname": "Only steals the first ability"
+      },
+      {
+        "name": "special_bonus_unique_tidehunter_10_description",
+        "kind": "description",
+        "parent": "special_bonus_unique_tidehunter_10",
+        "localizationKey": "dota_tooltip_ability_special_bonus_unique_tidehunter_10_description",
+        "sourceName": "Deals {s:bonus_building_pct_damage}% damage to buildings.",
+        "dname": "Deals {s:bonus_building_pct_damage}% damage to buildings."
+      },
+      {
+        "name": "special_bonus_unique_tidehunter_smash_on_blubber_description",
+        "kind": "description",
+        "parent": "special_bonus_unique_tidehunter_smash_on_blubber",
+        "localizationKey": "dota_tooltip_ability_special_bonus_unique_tidehunter_smash_on_blubber_description",
+        "sourceName": "Triggered attack has {s:bonus_smash_on_purge}% damage and is reflected damage.",
+        "dname": "Triggered attack has {s:bonus_smash_on_purge}% damage and is reflected damage."
+      },
+      {
+        "name": "special_bonus_unique_tinker_deploy_turrets_splash_radius_description",
+        "kind": "description",
+        "parent": "special_bonus_unique_tinker_deploy_turrets_splash_radius",
+        "localizationKey": "dota_tooltip_ability_special_bonus_unique_tinker_deploy_turrets_splash_radius_description",
+        "sourceName": "Missiles deal {s:bonus_splash_pct}% splash damage in a {s:bonus_radius_explosion} AoE",
+        "dname": "Missiles deal {s:bonus_splash_pct}% splash damage in a {s:bonus_radius_explosion} AoE"
+      },
+      {
+        "name": "special_bonus_unique_chen_2_description",
+        "kind": "description",
+        "parent": "special_bonus_unique_chen_2",
+        "localizationKey": "dota_tooltip_ability_special_bonus_unique_chen_2_description",
+        "sourceName": "Initial Heal fully heals. Heal over time is still applied.",
+        "dname": "Initial Heal fully heals. Heal over time is still applied."
+      }
+    ]
+  }
+}
