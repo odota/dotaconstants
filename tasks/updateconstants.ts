@@ -1,19 +1,10 @@
 import fs from "node:fs";
-import { applyLegacyTalentNames } from "./legacytalents.ts";
-import {
-  describeGameSource,
-  fetchAndParse,
-  loadHeroes,
-  resolveGameSourceRef,
-} from "./source.ts";
+import vdfparser from "vdf-parser";
 import {
   cleanupArray,
-  abilityNameStrings,
-  buildAbilityIds,
-  analyzeSpecialBonusValues,
-  getReferencedHeroTalents,
-  validateCurrentTalents,
   resolveSpecialBonusPlaceholders,
+  abilityNameStrings,
+  buildSpecialBonusLookup,
 } from "./util.ts";
 
 const extraStrings = {
@@ -133,15 +124,20 @@ const itemQualOverrides = {
   revenants_brooch: "epic",
 };
 
-const gameSourceRef = await resolveGameSourceRef();
-console.log(
-  `Game source: ${JSON.stringify(describeGameSource(gameSourceRef, []))}`,
-);
-const idsUrl = `https://raw.githubusercontent.com/dotabuff/d2vpkr/${gameSourceRef}/dota/scripts/npc/npc_ability_ids.txt`;
-const abilitiesLoc = `https://raw.githubusercontent.com/dotabuff/d2vpkr/${gameSourceRef}/dota/resource/localization/abilities_english.txt`;
-const npcAbilitiesUrl = `https://raw.githubusercontent.com/dotabuff/d2vpkr/${gameSourceRef}/dota/scripts/npc/npc_abilities.txt`;
-const npcUnitsUrl = `https://raw.githubusercontent.com/dotabuff/d2vpkr/${gameSourceRef}/dota/scripts/npc/npc_units.txt`;
-const localizationUrl = `https://raw.githubusercontent.com/dotabuff/d2vpkr/${gameSourceRef}/dota/resource/localization/dota_english.txt`;
+const idsUrl =
+  "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_ability_ids.txt";
+const heroesUrl =
+  "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.txt";
+const heroesDirUrl =
+  "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/heroes/";
+const abilitiesLoc =
+  "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/abilities_english.txt";
+const npcAbilitiesUrl =
+  "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_abilities.txt";
+const npcUnitsUrl =
+  "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_units.txt";
+const localizationUrl =
+  "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/dota_english.txt";
 
 let aghsAbilityValues = {};
 const heroDataUrls: string[] = [];
@@ -150,20 +146,9 @@ start();
 async function start() {
   // Hero data (and each hero's abilities) lives in per-hero files, fetched once
   // here and shared by every source transform below.
-  const heroesVdf = await loadHeroes(gameSourceRef);
+  const heroesVdf = await fetchHeroes();
   const heroNames = Object.keys(heroesVdf.DOTAHeroes).filter(
     (name) => !badNames.has(name),
-  );
-  const currentHeroes = Object.fromEntries(
-    heroNames.map((name) => [name, heroesVdf.DOTAHeroes[name]]),
-  );
-  const currentTalents = getReferencedHeroTalents(currentHeroes);
-  const preferredAbilities = new Set<string>(
-    Object.values(currentHeroes).flatMap((hero: any) =>
-      Object.entries(hero)
-        .filter(([key]) => /^Ability\d+$/.test(key))
-        .map(([, value]) => String(value)),
-    ),
   );
   const ids = heroNames
     .map((name) => heroesVdf.DOTAHeroes[name].HeroID)
@@ -185,8 +170,8 @@ async function start() {
       key: "items",
       url: [
         abilitiesLoc,
-        `https://raw.githubusercontent.com/dotabuff/d2vpkr/${gameSourceRef}/dota/scripts/npc/items.txt`,
-        `https://raw.githubusercontent.com/dotabuff/d2vpkr/${gameSourceRef}/dota/scripts/npc/neutral_items.txt`,
+        "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/items.txt",
+        "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/neutral_items.txt",
         idsUrl,
       ],
       transform: (respObj: any) => {
@@ -450,7 +435,7 @@ async function start() {
     },
     {
       key: "abilities",
-      url: [abilitiesLoc, npcAbilitiesUrl, idsUrl],
+      url: [abilitiesLoc, npcAbilitiesUrl],
       transform: (respObj: any) => {
         const strings = respObj[0].lang.Tokens;
         // Merge into the generic scripts all the hero abilities
@@ -459,17 +444,7 @@ async function start() {
           respObj[1].DOTAAbilities,
           ...Object.values(heroAbilityScripts),
         );
-        const talentAnalysis = analyzeSpecialBonusValues(
-          scripts,
-          preferredAbilities,
-        );
-        const talentLookup = talentAnalysis.lookup;
-        for (const candidate of talentAnalysis.candidates) {
-          if (candidate.reason || candidate.condition !== "base")
-            console.warn(
-              `Talent value diagnostic: ${JSON.stringify(candidate)}`,
-            );
-        }
+        const talentLookup = buildSpecialBonusLookup(scripts);
         const nameStrings = abilityNameStrings(strings);
         let abilities = {};
 
@@ -480,10 +455,20 @@ async function start() {
 
             let specialAttr = getSpecialAttrs(scripts[key]);
 
-            const template = nameStrings[`dota_tooltip_ability_${key}`];
-            ability.dname = key.startsWith("special_bonus")
-              ? template
-              : replaceSValues(template, specialAttr, key);
+            ability.dname = replaceSValues(
+              nameStrings[`dota_tooltip_ability_${key}`],
+              specialAttr,
+              key,
+            );
+
+            // Resolve explicit links before the global modifier fallback.
+            const linkedAbility = scripts[scripts[key].ad_linked_abilities];
+            if (linkedAbility) {
+              resolveSpecialBonusPlaceholders(
+                { [key]: ability },
+                buildSpecialBonusLookup({ linkedAbility }),
+              );
+            }
 
             if (scripts[key].Innate === "1") {
               ability.is_innate = true;
@@ -657,7 +642,7 @@ async function start() {
         // their own DOTAAbilities block in the corresponding hero file. Add
         // localized entries for those talents without pulling in unreferenced
         // legacy talent strings.
-        currentTalents.forEach((talent) => {
+        getReferencedHeroTalents(heroesVdf.DOTAHeroes).forEach((talent) => {
           if (abilities[talent]) {
             return;
           }
@@ -683,17 +668,6 @@ async function start() {
           }
         });
         resolveSpecialBonusPlaceholders(abilities, talentLookup);
-        const talentIds = buildAbilityIds(
-          respObj[2].DOTAAbilityIDs.UnitAbilities.Locked,
-          currentTalents,
-        );
-        const errors = validateCurrentTalents(
-          currentTalents,
-          abilities,
-          talentIds,
-        );
-        if (errors.length) throw new Error(errors.join("\n"));
-        applyLegacyTalentNames(abilities, currentTalents);
         return abilities;
       },
     },
@@ -702,7 +676,12 @@ async function start() {
       url: idsUrl,
       transform: (respObj: any) => {
         const data = respObj.DOTAAbilityIDs.UnitAbilities.Locked;
-        return buildAbilityIds(data, currentTalents);
+        // Flip the keys and values
+        const abilityIds = {};
+        Object.entries(data).forEach(([key, val]: [string, any]) => {
+          abilityIds[val] = key;
+        });
+        return abilityIds;
       },
     },
     {
@@ -919,7 +898,7 @@ async function start() {
     },
     {
       key: "hero_lore",
-      url: `https://raw.githubusercontent.com/dotabuff/d2vpkr/${gameSourceRef}/dota/resource/localization/hero_lore_english.txt`,
+      url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/hero_lore_english.txt",
       transform: (respObj: any) => {
         let sortedHeroes: { name: string; id: number }[] = [];
         heroNames.forEach((name) => {
@@ -1112,9 +1091,9 @@ async function start() {
     {
       key: "chat_wheel",
       url: [
-        `https://raw.githubusercontent.com/dotabuff/d2vpkr/${gameSourceRef}/dota/scripts/chat_wheel.txt`,
+        "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/chat_wheel.txt",
         localizationUrl,
-        `https://raw.githubusercontent.com/dotabuff/d2vpkr/${gameSourceRef}/dota/resource/localization/hero_chat_wheel_english.txt`,
+        "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/hero_chat_wheel_english.txt",
       ],
       transform: (respObj: any) => {
         const chat_wheel = respObj[0].chat_wheel;
@@ -1172,7 +1151,7 @@ async function start() {
     // Requires items and hero names so needs to run after
     {
       key: "patchnotes",
-      url: `https://raw.githubusercontent.com/dotabuff/d2vpkr/${gameSourceRef}/dota/resource/localization/patchnotes/patchnotes_english.txt`,
+      url: "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/patchnotes/patchnotes_english.txt",
       transform: (respObj: any) => {
         let items = Object.keys(
           JSON.parse(fs.readFileSync("./build/items.json").toString()),
@@ -1395,9 +1374,7 @@ async function start() {
     // Make all urls into array
     const arr = Array.isArray(url) ? url : [url];
     // console.log(arr);
-    const resps = await Promise.all(
-      arr.map((url) => fetchAndParse(gameSourceRef, url)),
-    );
+    const resps = await Promise.all(arr.map(fetchAndParse));
     let final: any = resps;
     if (s.transform) {
       final = s.transform(resps.length === 1 ? resps[0] : resps);
@@ -1418,8 +1395,7 @@ async function start() {
   // Reference built files in index.js
   const files = fs
     .readdirSync("./build")
-    .filter((filename) => filename.endsWith(".json"))
-    .sort();
+    .filter((filename) => filename.endsWith(".json"));
   const lines = files.map(
     (filename) =>
       `export { default as ${filename.split(".")[0]} } from './build/${
@@ -1433,6 +1409,40 @@ async function start() {
   process.exit(0);
 }
 
+async function fetchAndParse(url: string) {
+  console.log(url);
+  const resp = await fetch(url);
+  return parseJsonOrVdf(await resp.text(), url);
+}
+
+// npc_heroes.txt no longer holds the hero data itself, it only #base-includes
+// one file per hero from scripts/npc/heroes/, e.g.
+// https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/heroes/npc_dota_hero_abaddon.txt
+// Each of those files has a DOTAHeroes block with the hero and its abilities
+// (under AbilityDefinitions). Merge them all back into a single DOTAHeroes.
+async function fetchHeroes() {
+  console.log(heroesUrl);
+  const resp = await fetch(heroesUrl);
+  const text = await resp.text();
+  const baseRegex = /^#base\s+"heroes\/([^"]+)"/gm;
+  const heroFiles = [...text.matchAll(baseRegex)].map((m) => m[1]);
+  if (heroFiles.length === 0) {
+    throw new Error(`No #base hero includes found in ${heroesUrl}`);
+  }
+  // The parser can't handle #base directives, strip them and keep the rest
+  // (e.g. Version) as the starting point
+  const heroesVdf = parseJsonOrVdf(text.replace(baseRegex, ""), heroesUrl);
+  heroesVdf.DOTAHeroes ??= {};
+  const heroVdfs = await Promise.all(
+    heroFiles.map((file) => fetchAndParse(heroesDirUrl + file)),
+  );
+  // Same order as the #base includes, which is the in-game hero order
+  heroVdfs.forEach((vdf) => {
+    Object.assign(heroesVdf.DOTAHeroes, vdf.DOTAHeroes);
+  });
+  return heroesVdf;
+}
+
 function isObj(obj: any) {
   return (
     obj !== null &&
@@ -1440,6 +1450,47 @@ function isObj(obj: any) {
     typeof obj === "object" &&
     !Array.isArray(obj)
   );
+}
+
+function parseJsonOrVdf(text: string, url: string) {
+  try {
+    return JSON.parse(text);
+  } catch (err) {
+    try {
+      let fixed = text;
+      // Remove empty values that break parser
+      fixed = fixed.replaceAll(
+        `\t\t"ItemRequirements"\r\n\t\t""`,
+        `\t\t"ItemRequirements"\t\t""`,
+      );
+      fixed = fixed.replaceAll(
+        `\t\t\t"has_flying_movement"\t\r\n\t\t\t""`,
+        `\t\t\t"has_flying_movement"\t\t""`,
+      );
+      fixed = fixed.replaceAll(
+        `\t\t\t"damage_reduction"\t\r\n\t\t\t""`,
+        `\t\t\t"damage_reduction"\t\t""`,
+      );
+      fixed = fixed.replaceAll(
+        `\t"default_attack"\r\n\t""`,
+        `\t"default_attack"\t\t""`,
+      );
+      fixed = fixed.replaceAll(
+        `\t\t"AbilityValues"\r\n\t\t""`,
+        `\t\t"AbilityValues"\t\t""`,
+      );
+      fixed = fixed.replaceAll(
+        `\t\t\t\t"spill_movement_slow_pct"\r\n\t\t\t\t""`,
+        `\t\t\t\t"default_attack"\r\n\t\t\t\t{}`,
+      );
+      // fs.writeFileSync('./test.txt', fixed);
+      let vdf = vdfparser.parse(fixed, { types: false, arrayify: true });
+      return vdf;
+    } catch (e) {
+      console.error("Couldn't parse JSON or VDF", url);
+      throw e;
+    }
+  }
 }
 
 function getSpecialAttrs(entity: any) {
@@ -1629,6 +1680,25 @@ function removeSigns(template: string) {
     .replace("=", "");
 }
 
+function getReferencedHeroTalents(heroes: Record<string, any>) {
+  const talents = new Set<string>();
+  Object.values(heroes).forEach((hero) => {
+    const talentStart = Number(hero.AbilityTalentStart ?? 10);
+    Object.entries(hero).forEach(([key, value]) => {
+      const match = key.match(/^Ability(\d+)$/);
+      if (
+        match &&
+        Number(match[1]) >= talentStart &&
+        typeof value === "string" &&
+        value.startsWith("special_bonus")
+      ) {
+        talents.add(value);
+      }
+    });
+  });
+  return talents;
+}
+
 function replaceSValues(template: string, attribs: any[], key: string) {
   const values = Object.assign(
     {},
@@ -1642,7 +1712,7 @@ function replaceSValues(template: string, attribs: any[], key: string) {
     ),
   );
   const abilities = { [key]: { dname: template } };
-  resolveSpecialBonusPlaceholders(abilities, { [key]: values });
+  resolveSpecialBonusPlaceholders(abilities, { [key]: values }, false);
   return abilities[key].dname;
 }
 
