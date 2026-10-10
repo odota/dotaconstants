@@ -150,6 +150,22 @@ async function start() {
   const heroNames = Object.keys(heroesVdf.DOTAHeroes).filter(
     (name) => !badNames.has(name),
   );
+  const currentHeroes = Object.fromEntries(
+    heroNames.map((name) => [name, heroesVdf.DOTAHeroes[name]]),
+  );
+  const currentTalents = getReferencedHeroTalents(currentHeroes);
+  const preferredAbilities = new Set<string>(
+    Object.values(currentHeroes).flatMap((hero: any) =>
+      Object.entries(hero)
+        .filter(
+          ([key, value]) =>
+            /^Ability\d+$/.test(key) &&
+            typeof value === "string" &&
+            !value.startsWith("special_bonus"),
+        )
+        .map(([, value]) => String(value)),
+    ),
+  );
   const ids = heroNames
     .map((name) => heroesVdf.DOTAHeroes[name].HeroID)
     .sort((a, b) => Number(a) - Number(b));
@@ -444,7 +460,10 @@ async function start() {
           respObj[1].DOTAAbilities,
           ...Object.values(heroAbilityScripts),
         );
-        const talentLookup = buildSpecialBonusLookup(scripts);
+        const talentLookup = buildSpecialBonusLookup(scripts, {
+          currentTalents,
+          preferredAbilities,
+        });
         const nameStrings = abilityNameStrings(strings);
         let abilities = {};
 
@@ -642,7 +661,7 @@ async function start() {
         // their own DOTAAbilities block in the corresponding hero file. Add
         // localized entries for those talents without pulling in unreferenced
         // legacy talent strings.
-        getReferencedHeroTalents(heroesVdf.DOTAHeroes).forEach((talent) => {
+        currentTalents.forEach((talent) => {
           if (abilities[talent]) {
             return;
           }
