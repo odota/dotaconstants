@@ -3,7 +3,8 @@ import vdfparser from "vdf-parser";
 import {
   cleanupArray,
   resolveSpecialBonusPlaceholders,
-  type SpecialBonusLookup,
+  abilityNameStrings,
+  buildSpecialBonusLookup,
 } from "./util.ts";
 
 const extraStrings = {
@@ -443,6 +444,8 @@ async function start() {
           respObj[1].DOTAAbilities,
           ...Object.values(heroAbilityScripts),
         );
+        const talentLookup = buildSpecialBonusLookup(scripts);
+        const nameStrings = abilityNameStrings(strings);
         let abilities = {};
 
         Object.keys(scripts)
@@ -453,21 +456,17 @@ async function start() {
             let specialAttr = getSpecialAttrs(scripts[key]);
 
             ability.dname = replaceSValues(
-              strings[`DOTA_Tooltip_ability_${key}`] ??
-                strings[`DOTA_Tooltip_Ability_${key}`],
+              nameStrings[`dota_tooltip_ability_${key}`],
               specialAttr,
               key,
             );
 
-            // Check for unreplaced `s:bonus_<talent>`
-            if (
-              scripts[key].ad_linked_abilities &&
-              scripts[scripts[key].ad_linked_abilities]
-            ) {
-              ability.dname = replaceBonusSValues(
-                key,
-                ability.dname,
-                scripts[scripts[key].ad_linked_abilities].AbilityValues,
+            // Resolve explicit links before the global modifier fallback.
+            const linkedAbility = scripts[scripts[key].ad_linked_abilities];
+            if (linkedAbility) {
+              resolveSpecialBonusPlaceholders(
+                { [key]: ability },
+                buildSpecialBonusLookup({ linkedAbility }),
               );
             }
 
@@ -647,9 +646,7 @@ async function start() {
           if (abilities[talent]) {
             return;
           }
-          const dname =
-            strings[`DOTA_Tooltip_ability_${talent}`] ??
-            strings[`DOTA_Tooltip_Ability_${talent}`];
+          const dname = nameStrings[`dota_tooltip_ability_${talent}`];
           if (dname) {
             abilities[talent] = { dname };
           }
@@ -670,7 +667,7 @@ async function start() {
             }
           }
         });
-        resolveSpecialBonusPlaceholders(abilities, specialBonusLookup);
+        resolveSpecialBonusPlaceholders(abilities, talentLookup);
         return abilities;
       },
     },
@@ -1702,69 +1699,21 @@ function getReferencedHeroTalents(heroes: Record<string, any>) {
   return talents;
 }
 
-let specialBonusLookup: SpecialBonusLookup = {};
-
 function replaceSValues(template: string, attribs: any[], key: string) {
-  let values = specialBonusLookup[key] ?? {};
-  if (
-    template &&
-    ((attribs && Array.isArray(attribs)) || Object.keys(values).length)
-  ) {
-    (attribs || []).forEach((attrib) => {
-      for (const key of Object.keys(attrib)) {
-        let val = attrib[key];
-        if (val === null) {
-          continue;
-        }
-        if (isObj(val)) {
-          values[key] = val["value"];
-          const specialBonusKey = Object.keys(val).find((key) =>
-            key.startsWith("special_bonus_"),
-          );
-          if (specialBonusKey) {
-            const bonusKey = `bonus_${key}`;
-            // Get the bonus value, handling both string and object cases
-            let specialBonusVal;
-            if (typeof val[specialBonusKey] === "string") {
-              specialBonusVal = val[specialBonusKey];
-            } else if (
-              typeof val[specialBonusKey] === "object" &&
-              val[specialBonusKey].special_bonus_scepter
-            ) {
-              specialBonusVal = val[specialBonusKey].special_bonus_scepter;
-            } else {
-              console.warn(
-                `Unexpected special bonus value type for ${key}:`,
-                val[specialBonusKey],
-              );
-              continue;
-            }
-
-            // Clean up the value by removing signs
-            specialBonusVal = removeSigns(specialBonusVal).replace("%", "");
-
-            if (specialBonusKey in specialBonusLookup) {
-              specialBonusLookup[specialBonusKey][bonusKey] = specialBonusVal;
-            } else {
-              // sometimes special bonuses look up by the value key rather than the bonus name.
-              specialBonusLookup[specialBonusKey] = {
-                [bonusKey]: specialBonusVal,
-                value: specialBonusVal,
-              };
-            }
-          }
-        } else {
-          values[key] = val;
-        }
-      }
-    });
-    Object.keys(values).forEach((key) => {
-      if (typeof values[key] != "object") {
-        template = template.replace(`{s:${key}}`, values[key]);
-      }
-    });
-  }
-  return template;
+  const values = Object.assign(
+    {},
+    ...(attribs || []).map((attr) =>
+      Object.fromEntries(
+        Object.entries(attr).map(([name, value]: [string, any]) => [
+          name.toLowerCase(),
+          isObj(value) ? value.value : value,
+        ]),
+      ),
+    ),
+  );
+  const abilities = { [key]: { dname: template } };
+  resolveSpecialBonusPlaceholders(abilities, { [key]: values }, false);
+  return abilities[key].dname;
 }
 
 function removeHTML(string = "") {
@@ -1776,27 +1725,6 @@ function removeHTML(string = "") {
       .replace(/(<(\/[^>]+)>)/gi, "")
       .replace(/(<([^>]+)>)/gi, "")
   );
-}
-
-function replaceBonusSValues(key, template, attribs) {
-  if (template && attribs) {
-    Object.keys(attribs).forEach((bonus) => {
-      if (
-        typeof attribs[bonus] == "object" &&
-        attribs[bonus]?.hasOwnProperty(key)
-      ) {
-        // remove redundant signs
-        let bonus_value = removeSigns(attribs[bonus][key]);
-
-        template = template
-          // Most of the time, the bonus value template is named bonus_<bonus_key>
-          .replace(`{s:bonus_${bonus}}`, bonus_value)
-          // But sometimes, it"s just value
-          .replace(`{s:value}`, bonus_value);
-      }
-    });
-  }
-  return template;
 }
 
 // Formats templates like "Storm"s movement speed is %storm_move_speed%" with "Storm"s movement speed is 32"
