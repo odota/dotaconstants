@@ -245,6 +245,163 @@ test("keeps linked values consistent across repeated mixed-case percent placehol
       linkedAbility: scripts.linkedAbility,
     }),
   );
-  resolveSpecialBonusPlaceholders(abilities, buildSpecialBonusLookup(scripts));
+  resolveSpecialBonusPlaceholders(
+    abilities,
+    buildSpecialBonusLookup(scripts, {
+      currentTalents: new Set(["special_bonus_linked"]),
+      preferredAbilities: new Set(["otherAbility"]),
+    }),
+  );
   assert.equal(abilities.special_bonus_linked.dname, "+10% / +10%");
+});
+
+// Valve definition excerpts from d2vpkr client 6957:
+// https://github.com/dotabuff/d2vpkr/tree/a82aa955f4f41e5021d7d5dad95fe2f6e09c8efd/dota
+// Both current talents must choose the hero-slot skill in either traversal order.
+test("prefers current hero skills over bear and obsolete Marci definitions", () => {
+  const scripts = {
+    lone_druid_savage_roar: {
+      AbilityValues: {
+        radius: {
+          value: "350",
+          special_bonus_unique_lone_druid_savage_roar_aoe: "+125",
+        },
+      },
+    },
+    lone_druid_savage_roar_bear: {
+      AbilityValues: {
+        radius: {
+          value: "375",
+          special_bonus_unique_lone_druid_savage_roar_aoe: "+150",
+        },
+      },
+    },
+    marci_guardian: {
+      AbilityValues: {
+        bonus_damage: {
+          value: "10 15 20 25",
+          special_bonus_unique_marci_guardian_damage: "+20",
+        },
+      },
+    },
+    marci_bodyguard: {
+      AbilityValues: {
+        bonus_damage: {
+          value: "12 18 24 30",
+          special_bonus_unique_marci_guardian_damage: "+12",
+        },
+      },
+    },
+  };
+  const original = structuredClone(scripts);
+  const selection = {
+    currentTalents: new Set([
+      "special_bonus_unique_lone_druid_savage_roar_aoe",
+      "special_bonus_unique_marci_guardian_damage",
+    ]),
+    preferredAbilities: new Set(["lone_druid_savage_roar", "marci_bodyguard"]),
+  };
+  for (const input of [
+    scripts,
+    Object.fromEntries(Object.entries(scripts).reverse()),
+  ]) {
+    const abilities = {
+      special_bonus_unique_lone_druid_savage_roar_aoe: {
+        dname: "+{s:bonus_radius} Savage Roar Radius",
+      },
+      special_bonus_unique_marci_guardian_damage: {
+        dname: "+{s:bonus_bonus_damage}% Bodyguard Damage",
+      },
+    };
+    const lookup = buildSpecialBonusLookup(input, selection);
+    resolveSpecialBonusPlaceholders(abilities, lookup);
+    assert.equal(
+      abilities.special_bonus_unique_lone_druid_savage_roar_aoe.dname,
+      "+125 Savage Roar Radius",
+    );
+    assert.equal(
+      abilities.special_bonus_unique_marci_guardian_damage.dname,
+      "+12% Bodyguard Damage",
+    );
+    assert.equal(
+      lookup.special_bonus_unique_lone_druid_savage_roar_aoe.value,
+      "125",
+    );
+    assert.equal(lookup.special_bonus_unique_marci_guardian_damage.value, "12");
+  }
+  assert.deepEqual(scripts, original);
+});
+
+test("ranks each requested attribute independently and retains missing-attribute fallbacks", () => {
+  const lookup = buildSpecialBonusLookup(
+    {
+      other: {
+        AbilityValues: {
+          damage: { special_bonus_test: "+20" },
+          duration: { special_bonus_test: "+3" },
+        },
+      },
+      hero: { AbilityValues: { damage: { special_bonus_test: "+10" } } },
+    },
+    {
+      currentTalents: new Set(["special_bonus_test"]),
+      preferredAbilities: new Set(["hero"]),
+    },
+  );
+  assert.equal(lookup.special_bonus_test.bonus_damage, "10");
+  assert.equal(lookup.special_bonus_test.bonus_duration, "3");
+  assert.equal(lookup.special_bonus_test.value, "10");
+});
+
+test("keeps talent-owned values above preferred modifier candidates", () => {
+  const lookup = buildSpecialBonusLookup(
+    {
+      hero: { AbilityValues: { damage: { special_bonus_test: "+10" } } },
+      special_bonus_test: {
+        AbilityValues: { value: "75", bonus_damage: "80" },
+      },
+    },
+    {
+      currentTalents: new Set(["special_bonus_test"]),
+      preferredAbilities: new Set(["hero"]),
+    },
+  );
+  assert.equal(lookup.special_bonus_test.value, "75");
+  assert.equal(lookup.special_bonus_test.bonus_damage, "80");
+});
+
+test("preserves legacy labels and equal-priority overwrite behavior", () => {
+  const scripts = {
+    first: {
+      AbilityValues: {
+        damage: {
+          special_bonus_current: "+10",
+          special_bonus_legacy: "+50",
+        },
+      },
+    },
+    second: {
+      AbilityValues: {
+        damage: {
+          special_bonus_current: "+20",
+          special_bonus_legacy: "+60",
+        },
+      },
+    },
+  };
+  const selection = {
+    currentTalents: new Set(["special_bonus_current"]),
+    preferredAbilities: new Set(["first", "second"]),
+  };
+  assert.deepEqual(
+    buildSpecialBonusLookup(scripts, selection),
+    buildSpecialBonusLookup(scripts),
+  );
+  assert.deepEqual(
+    buildSpecialBonusLookup(scripts, {
+      ...selection,
+      preferredAbilities: new Set(["first"]),
+    }).special_bonus_legacy,
+    { value: "50", bonus_damage: "60" },
+  );
 });

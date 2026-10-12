@@ -32,18 +32,27 @@ export const abilityNameStrings = (tokens: Record<string, string>) =>
   );
 
 // Collect before formatting so missing localization or adjacent upgrades cannot
-// hide modifiers. Keep the existing last-definition precedence for bonus keys.
+// hide modifiers. For current talents, prefer hero-slot skills over other sources.
+// Equal-priority and non-current candidates retain the existing tie behavior.
 export const buildSpecialBonusLookup = (
   scripts: Record<string, any>,
+  {
+    currentTalents = new Set<string>(),
+    preferredAbilities = new Set<string>(),
+  }: {
+    currentTalents?: Set<string>;
+    preferredAbilities?: Set<string>;
+  } = {},
 ): SpecialBonusLookup => {
   const lookup: SpecialBonusLookup = {};
+  const priorities: Record<string, number> = {};
   const entries = (script: any): [string, any][] =>
     script.AbilitySpecial
       ? Object.values(script.AbilitySpecial).flatMap((entry: any) =>
           Object.entries(entry).filter(([key]) => key !== "var_type"),
         )
       : Object.entries(script.AbilityValues ?? {});
-  for (const script of Object.values(scripts)) {
+  for (const [ability, script] of Object.entries(scripts)) {
     for (const [attribute, value] of entries(script)) {
       if (!value || typeof value !== "object") continue;
       for (const [talent, modifier] of Object.entries(value)) {
@@ -63,8 +72,21 @@ export const buildSpecialBonusLookup = (
           .split(/\s+/)
           .map((part) => part.replace(/^[+=x-]/, "").replace(/%$/, ""))
           .join(" ");
-        lookup[talent] ??= { value: display };
-        lookup[talent][`bonus_${attribute.toLowerCase()}`] = display;
+        const priority =
+          currentTalents.has(talent) && preferredAbilities.has(ability) ? 1 : 0;
+        lookup[talent] ??= {};
+        for (const key of ["value", `bonus_${attribute.toLowerCase()}`]) {
+          const group = `${talent}/${key}`;
+          const previous = priorities[group] ?? -1;
+          // The value alias keeps its first candidate; named bonuses keep their last.
+          if (
+            priority > previous ||
+            (priority === previous && key !== "value")
+          ) {
+            lookup[talent][key] = display;
+            priorities[group] = priority;
+          }
+        }
       }
     }
   }
