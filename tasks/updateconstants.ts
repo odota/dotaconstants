@@ -5,6 +5,7 @@ import {
   resolveSpecialBonusPlaceholders,
   abilityNameStrings,
   buildSpecialBonusLookup,
+  parseNameAliases,
 } from "./util.ts";
 
 const extraStrings = {
@@ -2007,6 +2008,8 @@ function formatVpkHero(key: string, vpkr: any) {
   h.night_vision = Number(
     vpkrh.VisionNighttimeRange || baseHero.VisionNighttimeRange,
   );
+
+  h.aliases = parseNameAliases(vpkrh.NameAliases);
 
   return h;
 }
