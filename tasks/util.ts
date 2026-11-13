@@ -24,6 +24,17 @@ export const cleanupArray = (array: string[]) => {
   return array.filter((n) => removeExtraneousWhitespacesFromString(n));
 };
 
+// NameAliases from a hero's npc file, the short names the game's own hero
+// search accepts, e.g. "wr;Lyralei" or "sf,nevermore". A few heroes (Tusk,
+// Skywrath Mage) repeat the key, which the vdf parser turns into an array
+export const parseNameAliases = (value?: string | string[]) =>
+  ([] as string[])
+    .concat(value || [])
+    .join(";")
+    .split(/[,;]/)
+    .map((alias) => alias.trim())
+    .filter(Boolean);
+
 export type SpecialBonusLookup = Record<string, Record<string, string>>;
 
 export const abilityNameStrings = (tokens: Record<string, string>) =>

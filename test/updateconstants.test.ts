@@ -4,8 +4,21 @@ import test from "node:test";
 import {
   abilityNameStrings,
   buildSpecialBonusLookup,
+  parseNameAliases,
   resolveSpecialBonusPlaceholders,
 } from "../tasks/util.ts";
+
+test("splits hero name aliases on both separators the game uses", () => {
+  assert.deepEqual(parseNameAliases("wr;Lyralei"), ["wr", "Lyralei"]);
+  assert.deepEqual(parseNameAliases("sf,nevermore"), ["sf", "nevermore"]);
+  assert.deepEqual(parseNameAliases("bs"), ["bs"]);
+  assert.deepEqual(parseNameAliases(["dragonus", "sm;Dragonus"]), [
+    "dragonus",
+    "sm",
+    "Dragonus",
+  ]);
+  assert.deepEqual(parseNameAliases(undefined), []);
+});
 
 test("resolves a talent placeholder after its linked ability is processed", () => {
   const abilities = {
