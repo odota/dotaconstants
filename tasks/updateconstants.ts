@@ -279,42 +279,42 @@ async function start() {
 
             item.attrib = scripts[key].AbilityValues
               ? Object.entries(scripts[key].AbilityValues).map(
-                  ([abilityKey, val]: [string, any]) => {
-                    let display;
-                    const tooltipKey = `DOTA_Tooltip_ability_${key}_${abilityKey}`;
-                    const string = strings[tooltipKey];
-                    if (tooltipKey in strings) {
-                      if (string.includes("$") || /[a-z]/.test(string)) {
-                        // Normal attributes, e.g. + 25 Movement Speed
-                        display = string.replace(
-                          /(%)?([+-])?(\$\w+)?/,
-                          (str, pct = "", pm = "", variable) =>
-                            `${pm} {value}${pct} ` +
-                            (strings[
-                              `dota_ability_variable_${variable?.replace(
-                                "$",
-                                "",
-                              )}`
-                            ] || ""),
-                        );
-                      }
-                      if (!/[a-z]/.test(string)) {
-                        // Upper case stats, where the number is displayed in the end
-                        display = string.replace(
-                          /^(%)?(.+)/,
-                          (str, pct = "", rest) => {
-                            return `${rest} {value}${pct}`;
-                          },
-                        );
-                      }
+                ([abilityKey, val]: [string, any]) => {
+                  let display;
+                  const tooltipKey = `DOTA_Tooltip_ability_${key}_${abilityKey}`;
+                  const string = strings[tooltipKey];
+                  if (tooltipKey in strings) {
+                    if (string.includes("$") || /[a-z]/.test(string)) {
+                      // Normal attributes, e.g. + 25 Movement Speed
+                      display = string.replace(
+                        /(%)?([+-])?(\$\w+)?/,
+                        (str, pct = "", pm = "", variable) =>
+                          `${pm} {value}${pct} ` +
+                          (strings[
+                            `dota_ability_variable_${variable?.replace(
+                              "$",
+                              "",
+                            )}`
+                          ] || ""),
+                      );
                     }
-                    return {
-                      key: abilityKey,
-                      display: display?.replace(/<[^>]*>/g, ""),
-                      value: (val.value ?? val).split(" ").join(" / "),
-                    };
-                  },
-                ).filter((attr) => Number(attr.value) !== 0)
+                    if (!/[a-z]/.test(string)) {
+                      // Upper case stats, where the number is displayed in the end
+                      display = string.replace(
+                        /^(%)?(.+)/,
+                        (str, pct = "", rest) => {
+                          return `${rest} {value}${pct}`;
+                        },
+                      );
+                    }
+                  }
+                  return {
+                    key: abilityKey,
+                    display: display?.replace(/<[^>]*>/g, ""),
+                    value: (val.value ?? val).split(" ").join(" / "),
+                  };
+                },
+              ).filter((attr) => Number(attr.value) !== 0)
               : [];
 
             item.mc = parseInt(scripts[key].AbilityManaCost) || false;
@@ -1364,19 +1364,19 @@ async function start() {
           if (!aghs_element.has_shard) {
             console.log(
               aghs_element.hero_name +
-                "[" +
-                aghs_element.hero_id +
-                "]" +
-                ": Didn't find a scepter...",
+              "[" +
+              aghs_element.hero_id +
+              "]" +
+              ": Didn't find a scepter...",
             );
           }
           if (!aghs_element.has_scepter) {
             console.log(
               aghs_element.hero_name +
-                "[" +
-                aghs_element.hero_id +
-                "]" +
-                ": Didn't find a shard...",
+              "[" +
+              aghs_element.hero_id +
+              "]" +
+              ": Didn't find a shard...",
             );
           }
           // push the current hero"s element into the array
@@ -1418,8 +1418,7 @@ async function start() {
     .filter((filename) => filename.endsWith(".json"));
   const lines = files.map(
     (filename) =>
-      `export { default as ${filename.split(".")[0]} } from './build/${
-        filename.split(".")[0]
+      `export { default as ${filename.split(".")[0]} } from './build/${filename.split(".")[0]
       }.json' with { type: 'json' };`,
   );
   lines.push(`export * as default from './index.js';`);
@@ -1528,10 +1527,10 @@ function getSpecialAttrs(entity: any) {
         // val looks like the following, so just take the value of the second key
         /*
       {
-				"var_type"				"FIELD_INTEGER"
-				"bonus_movement"			"20"
+        "var_type"				"FIELD_INTEGER"
+        "bonus_movement"			"20"
       }
-			*/
+      */
         return { [Object.keys(val)[1]]: val[Object.keys(val)[1]] };
       },
     );
@@ -2028,10 +2027,14 @@ function parseNameFromArray(array: string[], names: string[]) {
 const getNeutralItemNameTierMap = (neutrals) => {
   let ret = {};
   Object.keys(neutrals.neutral_tiers).forEach((tier) => {
-    let items = neutrals.neutral_tiers[tier].items;
-    Object.keys(items).forEach((itemName) => {
-      ret[itemName] = ret[itemName.replace(/recipe_/gi, "")] = parseInt(tier);
-    });
+    let items = neutrals.neutral_tiers[tier].item_pools;
+    Object.keys(items).forEach((itemPools) => {
+
+      Object.keys(itemPools).forEach((itemName) => {
+        ret[itemName] = ret[itemName.replace(/recipe_/gi, "")] = parseInt(tier);
+      });
+    }
+    )
   });
   return ret;
 };
